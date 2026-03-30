@@ -1,0 +1,79 @@
+[X] Kalibrate-HackRF Command List
+
+[\] kal -h
+[/] Show help and available options
+
+[\] kal
+[/] Start GSM band scan using HackRF
+
+[\] kal -s GSM900
+[/] Scan GSM900 band for base stations
+
+[\] kal -s DCS1800
+[/] Scan DCS1800 band
+
+[\] kal -s PCS1900
+[/] Scan PCS1900 band
+
+[\] kal -s GSM850
+[/] Scan GSM850 band
+
+[\] kal -g 40
+[/] Set HackRF RF gain level
+
+[\] kal -b <band>
+[/] Select GSM band to scan
+
+[\] kal -f <frequency>
+[/] Calibrate SDR clock using a specific frequency
+
+[\] kal -c <arfcn>
+[/] Calibrate using a specific GSM ARFCN
+
+[\] kal -v
+[/] Enable verbose output
+
+[\] kal -e <ppm>
+[/] Apply initial frequency correction (PPM)
+
+[\] kal -n <samples>
+[/] Set number of samples for calibration
+
+[\] kal -T <seconds>
+[/] Set measurement duration
+
+[\] kal -w
+[/] Wideband scan mode
+
+[\] kal -R
+[/] Use realtime processing
+
+[\] kal -l
+[/] List detected GSM channels
+
+[\] kal -p
+[/] Print frequency offset results
+
+[\] kal -t
+[/] Display timing information
+
+[\] kal -g 20 -s GSM900
+[/] Scan GSM900 with specified gain
+
+[\] kal -g 40 -c 62
+[/] Calibrate using ARFCN 62 with gain 40
+
+[\] kal -e 5 -c 124
+[/] Apply 5 PPM correction and calibrate using ARFCN 124
+
+[\] kal -v -s DCS1800
+[/] Verbose scan of DCS1800 band
+
+[\] kal -s GSM900 -T 10
+[/] Scan GSM900 for 10 seconds
+
+[\] kal -g 30 -s GSM850
+[/] Scan GSM850 band with gain 30
+
+[\] kal -g 40 -s PCS1900
+[/] Scan PCS1900 band with gain 40

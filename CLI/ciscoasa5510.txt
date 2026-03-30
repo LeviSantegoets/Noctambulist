@@ -1,0 +1,399 @@
+Format: [\] command [/] description [X] menutitlename
+
+[X] Cisco ASA 5510 Full Command List
+
+[\] confreg
+[/] Show current configuration register
+
+[\] confreg 0x41
+[/] Set normal boot configuration register
+
+[\] confreg 0x0
+[/] Ignore startup-config (password recovery)
+
+[\] sync
+[/] Save ROMMON settings
+
+[\] dir flash:
+[/] List flash contents
+
+[\] boot flash:asa.bin
+[/] Boot ASA image manually
+
+[\] address 192.168.1.2
+[/] Set ASA IP for TFTP recovery
+
+[\] server 192.168.1.1
+[/] Set TFTP server IP
+
+[\] gateway 192.168.1.1
+[/] Set default gateway in ROMMON
+
+[\] file asa.bin
+[/] Set TFTP filename
+
+[\] tftp
+[/] Start TFTP transfer
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] configure terminal
+[/] Enter global configuration mode
+
+[\] write memory
+[/] Save running configuration
+
+[\] copy run start
+[/] Save configuration
+
+[\] show version
+[/] Display ASA version and hardware info
+
+[\] show running-config
+[/] Show active configuration
+
+[\] show startup-config
+[/] Show saved configuration
+
+[\] reload
+[/] Reboot ASA
+
+[\] show inventory
+[/] Show hardware inventory
+
+[\] show interface ip brief
+[/] Show interface status and IPs
+
+[\] interface GigabitEthernet0/0
+[/] Enter interface config mode
+
+[\] nameif outside
+[/] Assign interface name
+
+[\] security-level 0
+[/] Set security level (0–100)
+
+[\] ip address 192.168.1.1 255.255.255.0
+[/] Assign IP address
+
+[\] no shutdown
+[/] Enable interface
+
+[\] duplex auto
+[/] Set duplex to auto
+
+[\] speed auto
+[/] Set speed to auto
+
+[\] show interface
+[/] Detailed interface info
+
+[\] route outside 0.0.0.0 0.0.0.0 203.0.113.1
+[/] Default route
+
+[\] route inside 10.0.0.0 255.255.255.0 10.0.0.1
+[/] Static route
+
+[\] show route
+[/] Show routing table
+
+[\] show arp
+[/] Show ARP table
+
+[\] clear arp
+[/] Clear ARP cache
+
+[\] access-list OUTSIDE-IN extended permit tcp any host 192.168.1.10 eq 80
+[/] Allow inbound HTTP
+
+[\] access-list OUTSIDE-IN extended deny ip any any
+[/] Deny all other inbound traffic
+
+[\] access-group OUTSIDE-IN in interface outside
+[/] Apply ACL to interface
+
+[\] show access-list
+[/] Display ACLs
+
+[\] clear access-list counters
+[/] Reset ACL hit counters
+
+[\] object network WEB
+[/] Create network object
+
+[\] host 192.168.1.10
+[/] Define internal host
+
+[\] nat (inside,outside) static 203.0.113.10
+[/] Static NAT
+
+[\] nat (inside,outside) dynamic interface
+[/] PAT overload
+
+[\] nat (inside,outside) dynamic 203.0.113.50
+[/] Dynamic NAT pool
+
+[\] show nat
+[/] Show NAT rules
+
+[\] show xlate
+[/] Show NAT translations
+
+[\] clear xlate
+[/] Clear NAT table
+
+[\] object-group network SERVERS
+[/] Create network object group
+
+[\] network-object host 192.168.1.10
+[/] Add host to group
+
+[\] network-object 192.168.1.0 255.255.255.0
+[/] Add subnet to group
+
+[\] object-group service WEB-PORTS tcp
+[/] Create service group
+
+[\] port-object eq 80
+[/] Add port to group
+
+[\] port-object eq 443
+[/] Add port to group
+
+[\] username admin password MyPass privilege 15
+[/] Create admin user
+
+[\] enable password MyEnablePass
+[/] Set enable password
+
+[\] aaa authentication ssh console LOCAL
+[/] SSH login using local users
+
+[\] aaa authentication http console LOCAL
+[/] ASDM login using local users
+
+[\] show aaa
+[/] Show AAA configuration
+
+[\] crypto key generate rsa modulus 2048
+[/] Generate RSA keys
+
+[\] ssh 192.168.1.0 255.255.255.0 inside
+[/] Allow SSH from inside
+
+[\] ssh timeout 30
+[/] SSH idle timeout
+
+[\] telnet 10.0.0.0 255.255.255.0 inside
+[/] Allow Telnet (not recommended)
+
+[\] show ssh sessions
+[/] View SSH sessions
+
+[\] dhcpd address 192.168.1.50-192.168.1.100 inside
+[/] DHCP pool
+
+[\] dhcpd dns 8.8.8.8
+[/] DNS server
+
+[\] dhcpd enable inside
+[/] Enable DHCP on interface
+
+[\] dhcprelay server 10.0.0.5 inside
+[/] DHCP relay
+
+[\] show dhcpd binding
+[/] Show DHCP leases
+
+[\] show service-policy
+[/] Show inspection policies
+
+[\] policy-map global_policy
+[/] Edit global policy
+
+[\] class inspection_default
+[/] Default inspection class
+
+[\] inspect dns
+[/] Enable DNS inspection
+
+[\] inspect ftp
+[/] Enable FTP inspection
+
+[\] inspect icmp
+[/] Enable ICMP inspection
+
+[\] crypto ikev1 enable outside
+[/] Enable IKEv1
+
+[\] crypto ikev2 enable outside
+[/] Enable IKEv2
+
+[\] tunnel-group 203.0.113.20 type ipsec-l2l
+[/] Create L2L tunnel group
+
+[\] tunnel-group 203.0.113.20 ipsec-attributes
+[/] Enter IPsec attributes
+
+[\] ikev1 pre-shared-key MyKey
+[/] Set PSK
+
+[\] crypto map OUTSIDE-MAP 10 match address VPN-ACL
+[/] Bind ACL to crypto map
+
+[\] crypto map OUTSIDE-MAP 10 set peer 203.0.113.20
+[/] Set peer IP
+
+[\] crypto map OUTSIDE-MAP 10 set ikev1 transform-set ESP-AES
+[/] Set transform set
+
+[\] crypto map OUTSIDE-MAP interface outside
+[/] Apply crypto map
+
+[\] show crypto ikev1 sa
+[/] Show IKEv1 tunnels
+
+[\] show crypto ikev2 sa
+[/] Show IKEv2 tunnels
+
+[\] show crypto ipsec sa
+[/] Show IPsec SAs
+
+[\] webvpn
+[/] Enter WebVPN config
+
+[\] enable outside
+[/] Enable SSL VPN on outside
+
+[\] anyconnect image disk0:/anyconnect.pkg 1
+[/] Upload AnyConnect image
+
+[\] tunnel-group DefaultWEBVPNGroup general-attributes
+[/] Configure default group
+
+[\] group-policy VPN-POLICY internal
+[/] Create group policy
+
+[\] group-policy VPN-POLICY attributes
+[/] Edit group policy
+
+[\] vpn-tunnel-protocol ssl-client
+[/] Allow SSL VPN
+
+[\] crypto ca trustpoint MY-CA
+[/] Create trustpoint
+
+[\] enrollment url http://ca-server
+[/] Set CA URL
+
+[\] subject-name CN=asa.example.com
+[/] Set certificate subject
+
+[\] crypto ca enroll MY-CA
+[/] Enroll certificate
+
+[\] show crypto ca certificates
+[/] Show installed certificates
+
+[\] failover
+[/] Enable failover
+
+[\] failover lan unit primary
+[/] Set primary unit
+
+[\] failover lan interface FO GigabitEthernet0/2
+[/] Failover link
+
+[\] failover interface ip FO 192.168.255.1 255.255.255.0 standby 192.168.255.2
+[/] Failover IPs
+
+[\] show failover
+[/] Show failover status
+
+[\] logging enable
+[/] Enable logging
+
+[\] logging buffered warnings
+[/] Set buffer level
+
+[\] logging trap informational
+[/] Set syslog level
+
+[\] logging host inside 192.168.1.50
+[/] Send logs to syslog server
+
+[\] show logging
+[/] View logs
+
+[\] packet-tracer input inside tcp 192.168.1.10 12345 8.8.8.8 80
+[/] Simulate packet flow
+
+[\] show conn
+[/] Show active connections
+
+[\] clear conn
+[/] Clear connections
+
+[\] show xlate
+[/] Show NAT translations
+
+[\] clear xlate
+[/] Clear NAT table
+
+[\] show asp drop
+[/] Show dropped packets
+
+[\] debug packet
+[/] Enable packet debugging
+
+[\] undebug all
+[/] Disable debugging
+
+[\] dir disk0:
+[/] List files
+
+[\] delete disk0:/asa.old.bin
+[/] Delete file
+
+[\] copy tftp flash
+[/] Copy file from TFTP
+
+[\] copy flash tftp
+[/] Backup file to TFTP
+
+[\] format flash:
+[/] Format flash (dangerous)
+
+[\] show cpu usage
+[/] Show CPU load
+
+[\] show memory
+[/] Show memory usage
+
+[\] show processes
+[/] Show running processes
+
+[\] show blocks
+[/] Show memory block usage
+
+[\] cluster group ASA-CLUSTER
+[/] Create cluster group
+
+[\] cluster interface GigabitEthernet0/3
+[/] Assign cluster interface
+
+[\] show cluster info
+[/] Show cluster status
+
+[\] clear configure all
+[/] Factory reset ASA
+
+[\] clear configure interface
+[/] Reset interface config
+
+[\] clear configure nat
+[/] Reset NAT config
+
+[\] clear configure access-list
+[/] Reset ACLs

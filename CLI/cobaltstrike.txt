@@ -1,0 +1,136 @@
+[X] Cobalt Strike Command List
+
+[\] ./teamserver <IP> <password>
+[/] Start Cobalt Strike team server
+
+[\] ./cobaltstrike
+[/] Launch Cobalt Strike client
+
+[\] listeners
+[/] Open listener management window
+
+[\] attacks
+[/] Open attack packages menu
+
+[\] beacons
+[/] View active Beacon sessions
+
+[\] jobs
+[/] Show running jobs
+
+[\] kill <jobid>
+[/] Stop a running job
+
+[\] help
+[/] Show Beacon help menu
+
+[\] shell <command>
+[/] Run command via cmd.exe
+
+[\] powershell <command>
+[/] Run PowerShell command
+
+[\] execute-assembly <file.exe>
+[/] Run .NET assembly in memory
+
+[\] upload <file>
+[/] Upload file to target
+
+[\] download <file>
+[/] Download file from target
+
+[\] ls
+[/] List directory contents
+
+[\] cd <path>
+[/] Change directory
+
+[\] rm <file>
+[/] Delete file
+
+[\] mv <src> <dst>
+[/] Move/rename file
+
+[\] ps
+[/] List processes
+
+[\] kill <pid>
+[/] Kill process
+
+[\] getuid
+[/] Show current user
+
+[\] getprivs
+[/] Show available privileges
+
+[\] make_token <user> <pass> <domain>
+[/] Create token (authorized testing only)
+
+[\] steal_token <pid>
+[/] Steal token (authorized testing only)
+
+[\] rev2self
+[/] Revert to original token
+
+[\] spawn <arch>
+[/] Spawn new Beacon process
+
+[\] inject <pid> <arch>
+[/] Inject Beacon into process
+
+[\] runas <user> <cmd>
+[/] Run command as another user
+
+[\] elevate uac-token
+[/] Attempt UAC bypass (authorized testing only)
+
+[\] elevate svc-exe
+[/] Attempt service‑based privilege escalation
+
+[\] portscan <targets> <ports>
+[/] Internal port scanner
+
+[\] socks <port>
+[/] Start SOCKS proxy
+
+[\] socks stop
+[/] Stop SOCKS proxy
+
+[\] screenshot
+[/] Capture screenshot
+
+[\] keystrokes
+[/] Start keylogging (authorized testing only)
+
+[\] keylogger
+[/] Alias for keystrokes
+
+[\] mimikatz
+[/] Run Mimikatz module (authorized testing only)
+
+[\] hashdump
+[/] Dump local password hashes (authorized testing only)
+
+[\] dcsync <user>
+[/] DCSync attack (authorized testing only)
+
+[\] logonpasswords
+[/] Dump credentials from memory (authorized testing only)
+
+[\] net view
+[/] Enumerate network shares
+
+[\] net computers
+[/] Enumerate domain computers
+
+[\] net users
+[/] Enumerate domain users
+
+[\] net groups
+[/] Enumerate domain groups
+
+[\] net domain_controllers
+[/] Enumerate domain controllers
+
+[\] exit
+[/] Close Beacon session

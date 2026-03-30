@@ -1,0 +1,46 @@
+[X] cloud_enum Command List
+
+[\] python3 cloud_enum.py -k companyname
+[/] Search cloud resources using keyword
+
+[\] python3 cloud_enum.py -k companyname -t 50
+[/] Set number of threads
+
+[\] python3 cloud_enum.py -k companyname -l 100
+[/] Limit number of results per service
+
+[\] python3 cloud_enum.py -k companyname -o output.txt
+[/] Save results to file
+
+[\] python3 cloud_enum.py -k companyname --quickscan
+[/] Perform faster, less thorough scan
+
+[\] python3 cloud_enum.py -k companyname --disable-aws
+[/] Disable AWS enumeration
+
+[\] python3 cloud_enum.py -k companyname --disable-azure
+[/] Disable Azure enumeration
+
+[\] python3 cloud_enum.py -k companyname --disable-gcp
+[/] Disable Google Cloud enumeration
+
+[\] python3 cloud_enum.py -k companyname --include-azure
+[/] Focus on Azure enumeration
+
+[\] python3 cloud_enum.py -k companyname --include-aws
+[/] Focus on AWS enumeration
+
+[\] python3 cloud_enum.py -k companyname --include-gcp
+[/] Focus on GCP enumeration
+
+[\] python3 cloud_enum.py -k companyname --brute
+[/] Enable brute-force name generation
+
+[\] python3 cloud_enum.py -k companyname --domain example.com
+[/] Use domain as keyword source
+
+[\] python3 cloud_enum.py --help
+[/] Show help menu
+
+[\] python3 cloud_enum.py --version
+[/] Show version

@@ -1,0 +1,31 @@
+[X] Chkrootkit Command List (Rootkit Scanner)
+
+[\] chkrootkit
+[/] Run default scan on the local system
+
+[\] chkrootkit -q
+[/] Quiet mode (only show warnings/issues)
+
+[\] chkrootkit -r /path/to/dir
+[/] Scan a specific directory instead of the whole system
+
+[\] chkrootkit -x
+[/] Debug mode (show extra information)
+
+[\] chkrootkit -l
+[/] List all available tests
+
+[\] chkrootkit -h
+[/] Show help menu
+
+[\] chkrootkit --version
+[/] Show chkrootkit version
+
+[\] chkrootkit -V
+[/] Verbose output
+
+[\] chkrootkit -C
+[/] Only check for specific exploits (custom)
+
+[\] chkrootkit --skip-scanner
+[/] Skip certain scanners (useful for selective tests)

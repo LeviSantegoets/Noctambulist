@@ -1,0 +1,142 @@
+# Cisco ASA OS Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Cisco ASA OS Command List
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] disable
+[/] Exit from privileged EXEC mode
+
+[\] show version
+[/] Display the system hardware and software version
+
+[\] show running-config
+[/] Display the current running configuration
+
+[\] show startup-config
+[/] Display the saved configuration
+
+[\] show interface
+[/] Display interface information
+
+[\] show ip address
+[/] Display IP addresses on interfaces
+
+[\] configure terminal
+[/] Enter global configuration mode
+
+[\] interface GigabitEthernet0/0
+[/] Enter interface configuration mode
+
+[\] ip address 192.168.1.1 255.255.255.0
+[/] Set IP address on an interface
+
+[\] no shutdown
+[/] Enable an interface
+
+[\] nameif
+[/] Assign interface name
+
+[\] security-level
+[/] Set interface security level
+
+[\] exit
+[/] Exit current mode
+
+[\] write memory
+[/] Save the configuration
+
+[\] reload
+[/] Reload the device
+
+[\] ping 192.168.1.1
+[/] Send ICMP echo requests to a host
+
+[\] show route
+[/] Display routing table
+
+[\] route inside 0.0.0.0 0.0.0.0 192.168.1.1
+[/] Configure default route
+
+[\] access-list ACL_IN permit ip any any
+[/] Create an access list
+
+[\] access-group ACL_IN in interface inside
+[/] Apply access list to interface
+
+[\] nat (inside,outside) source static inside_local inside_global
+[/] Configure NAT
+
+[\] global (outside) 1 192.168.1.10-192.168.1.20
+[/] Configure global NAT pool
+
+[\] object network OBJ_ANY
+[/] Create network object
+
+[\] object network OBJ_ANY subnet 0.0.0.0 0.0.0.0
+[/] Define any network
+
+[\] nat (inside,outside) dynamic interface
+[/] Configure PAT
+
+[\] show conn
+[/] Display active connections
+
+[\] clear conn
+[/] Clear connections
+
+[\] show firewall
+[/] Display firewall status
+
+[\] firewall mode router
+[/] Set firewall mode to router
+
+[\] firewall mode transparent
+[/] Set firewall mode to transparent
+
+[\] router ospf 1
+[/] Enable OSPF routing
+
+[\] network 192.168.1.0 255.255.255.0 area 0
+[/] Specify OSPF network
+
+[\] router eigrp 100
+[/] Enable EIGRP routing
+
+[\] network 192.168.1.0 255.255.255.0
+[/] Specify EIGRP network
+
+[\] vpnclient enable
+[/] Enable VPN client
+
+[\] show vpn-sessiondb
+[/] Display VPN session information
+
+[\] group-policy DfltGrpPolicy attributes
+[/] Configure group policy
+
+[\] username admin password cisco privilege 15
+[/] Create admin user
+
+[\] aaa authentication ssh console LOCAL
+[/] Configure AAA for SSH
+
+[\] crypto key generate rsa modulus 2048
+[/] Generate RSA key
+
+[\] ssh 192.168.1.0 255.255.255.0 inside
+[/] Allow SSH access
+
+[\] telnet 192.168.1.0 255.255.255.0 inside
+[/] Allow Telnet access
+
+[\] logging host inside 192.168.1.100
+[/] Configure syslog server
+
+[\] logging enable
+[/] Enable logging
+
+[\] show logging
+[/] Display log messages

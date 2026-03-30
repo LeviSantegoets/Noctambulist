@@ -1,0 +1,91 @@
+[X] Cron / Crontab Command List
+
+[\] crontab -l
+[/] List current user’s cron jobs
+
+[\] crontab -e
+[/] Edit current user’s cron jobs
+
+[\] crontab -r
+[/] Remove current user’s cron jobs
+
+[\] crontab -i -r
+[/] Prompt before removing cron jobs
+
+[\] crontab -u username -l
+[/] List another user’s cron jobs (requires privileges)
+
+[\] crontab -u username -e
+[/] Edit another user’s cron jobs
+
+[\] crontab -u username -r
+[/] Remove another user’s cron jobs
+
+[\] * * * * * command
+[/] Schedule command every minute (cron syntax)
+
+[\] 0 * * * * command
+[/] Run command hourly at minute 0
+
+[\] 0 0 * * * command
+[/] Run command daily at midnight
+
+[\] 0 0 * * 0 command
+[/] Run command weekly on Sunday at midnight
+
+[\] 0 0 1 * * command
+[/] Run command monthly on 1st day at midnight
+
+[\] 0 0 1 1 * command
+[/] Run command yearly on Jan 1 at midnight
+
+[\] */5 * * * * command
+[/] Run command every 5 minutes
+
+[\] 0 9-17 * * 1-5 command
+[/] Run command every hour 9–17 on weekdays
+
+[\] @reboot command
+[/] Run command at system startup
+
+[\] @daily command
+[/] Run command once daily
+
+[\] @hourly command
+[/] Run command once hourly
+
+[\] @weekly command
+[/] Run command once weekly
+
+[\] @monthly command
+[/] Run command once monthly
+
+[\] @yearly command
+[/] Run command once yearly
+
+[\] @midnight command
+[/] Run command at midnight
+
+[\] crontab -c /etc/crontab
+[/] Specify alternate cron file
+
+[\] systemctl status cron
+[/] Check cron service status (systemd)
+
+[\] systemctl start cron
+[/] Start cron service
+
+[\] systemctl stop cron
+[/] Stop cron service
+
+[\] systemctl restart cron
+[/] Restart cron service
+
+[\] tail -f /var/log/cron
+[/] View live cron logs (may vary by distro)
+
+[\] grep CRON /var/log/syslog
+[/] View cron logs on Debian/Ubuntu
+
+[\] grep CRON /var/log/cron
+[/] View cron logs on RHEL/CentOS

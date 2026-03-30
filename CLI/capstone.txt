@@ -1,0 +1,43 @@
+[X] Capstone Command List (Disassembly Framework)
+
+[\] cs_disasm(code, address)
+[/] Disassemble given binary code starting at specified address
+
+[\] cs_disasm_lite(code, address, mode)
+[/] Lightweight disassembly (fast, less info)
+
+[\] cs_open(arch, mode)
+[/] Initialize Capstone disassembler for architecture and mode
+
+[\] cs_close(handle)
+[/] Close disassembler handle
+
+[\] cs_option(handle, option, value)
+[/] Set options (syntax, detail, etc.)
+
+[\] cs_detail(handle, insn)
+[/] Enable detailed instruction info (operands, regs read/write)
+
+[\] cs_errno(handle)
+[/] Get last error code
+
+[\] cs_version()
+[/] Get Capstone version
+
+[\] cs_group(insn)
+[/] Get instruction group(s) (jump, call, etc.)
+
+[\] cs_reg_read(insn)
+[/] Get registers read by instruction
+
+[\] cs_reg_write(insn)
+[/] Get registers written by instruction
+
+[\] cs_mem_read(insn)
+[/] Get memory addresses read by instruction
+
+[\] cs_mem_write(insn)
+[/] Get memory addresses written by instruction
+
+[\] cs_help()
+[/] Show help and API usage

@@ -1,0 +1,142 @@
+# Cisco IOS-XE Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Cisco IOS-XE Command List
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] disable
+[/] Exit from privileged EXEC mode
+
+[\] show version
+[/] Display the system hardware and software version
+
+[\] show running-config
+[/] Display the current running configuration
+
+[\] show startup-config
+[/] Display the saved configuration
+
+[\] show ip interface brief
+[/] Display a brief summary of IP interfaces
+
+[\] show interfaces
+[/] Display detailed interface information
+
+[\] show ip route
+[/] Display the IP routing table
+
+[\] configure terminal
+[/] Enter global configuration mode
+
+[\] interface GigabitEthernet0/0
+[/] Enter interface configuration mode
+
+[\] ip address 192.168.1.1 255.255.255.0
+[/] Set IP address on an interface
+
+[\] no shutdown
+[/] Enable an interface
+
+[\] shutdown
+[/] Disable an interface
+
+[\] exit
+[/] Exit current mode
+
+[\] copy running-config startup-config
+[/] Save the running configuration to NVRAM
+
+[\] reload
+[/] Reload the device
+
+[\] ping 192.168.1.1
+[/] Send ICMP echo requests to a host
+
+[\] traceroute 192.168.1.1
+[/] Trace the path to a destination
+
+[\] show vlan
+[/] Display VLAN information
+
+[\] vlan 10
+[/] Create and enter VLAN configuration
+
+[\] switchport mode access
+[/] Set switchport to access mode
+
+[\] switchport mode trunk
+[/] Set switchport to trunk mode
+
+[\] spanning-tree portfast
+[/] Enable PortFast on an interface
+
+[\] show spanning-tree
+[/] Display spanning-tree information
+
+[\] router ospf 1
+[/] Enable OSPF routing process
+
+[\] network 192.168.1.0 0.0.0.255 area 0
+[/] Specify OSPF network
+
+[\] router eigrp 100
+[/] Enable EIGRP routing process
+
+[\] network 192.168.1.0
+[/] Specify EIGRP network
+
+[\] ip routing
+[/] Enable IP routing
+
+[\] ip cef
+[/] Enable Cisco Express Forwarding
+
+[\] interface Loopback0
+[/] Create and enter Loopback interface
+
+[\] description Loopback Interface
+[/] Add description to interface
+
+[\] interface Port-channel1
+[/] Create EtherChannel interface
+
+[\] channel-group 1 mode active
+[/] Add interface to channel group
+
+[\] show ip ospf neighbor
+[/] Display OSPF neighbor information
+
+[\] show ip eigrp neighbors
+[/] Display EIGRP neighbor information
+
+[\] logging host 192.168.1.100
+[/] Configure syslog server
+
+[\] ntp server 192.168.1.100
+[/] Configure NTP server
+
+[\] username admin privilege 15 secret cisco
+[/] Create admin user
+
+[\] line vty 0 4
+[/] Enter VTY line configuration
+
+[\] transport input ssh
+[/] Enable SSH on VTY lines
+
+[\] crypto key generate rsa
+[/] Generate RSA key for SSH
+
+[\] license boot module
+[/] Activate device license
+
+[\] show license
+[/] Display license information
+
+[\] install activate
+[/] Activate software install
+
+[\] show install summary
+[/] Display install summary

@@ -1,0 +1,172 @@
+# Cisco IOS-XR Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Cisco IOS-XR Command List
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] disable
+[/] Exit from privileged EXEC mode
+
+[\] show version
+[/] Display the system hardware and software version
+
+[\] show running-config
+[/] Display the current running configuration
+
+[\] show configuration commit list
+[/] Display committed configurations
+
+[\] show ip interface brief
+[/] Display a brief summary of IP interfaces
+
+[\] show interface
+[/] Display detailed interface information
+
+[\] show route
+[/] Display the routing table
+
+[\] configure
+[/] Enter configuration mode
+
+[\] interface GigabitEthernet0/0/0/0
+[/] Enter interface configuration mode
+
+[\] ipv4 address 192.168.1.1 255.255.255.0
+[/] Set IPv4 address on an interface
+
+[\] no shutdown
+[/] Enable an interface
+
+[\] shutdown
+[/] Disable an interface
+
+[\] exit
+[/] Exit current mode
+
+[\] commit
+[/] Commit the configuration
+
+[\] abort
+[/] Abort the configuration
+
+[\] reload
+[/] Reload the device
+
+[\] ping 192.168.1.1
+[/] Send ICMP echo requests to a host
+
+[\] traceroute 192.168.1.1
+[/] Trace the path to a destination
+
+[\] show vrf
+[/] Display VRF information
+
+[\] vrf VRF_NAME
+[/] Create a VRF
+
+[\] address-family ipv4 unicast
+[/] Configure IPv4 address family
+
+[\] router ospf 1
+[/] Enable OSPF routing process
+
+[\] area 0
+[/] Configure OSPF area
+
+[\] network 192.168.1.0 0.0.0.255
+[/] Specify OSPF network
+
+[\] router bgp 65001
+[/] Enable BGP routing process
+
+[\] neighbor 192.168.1.2 remote-as 65001
+[/] Configure BGP neighbor
+
+[\] update-source Loopback0
+[/] Configure BGP update source
+
+[\] address-family ipv4 unicast
+[/] Configure IPv4 address family
+
+[\] router isis 1
+[/] Enable IS-IS routing process
+
+[\] net 49.0001.0000.0000.0001.00
+[/] Configure IS-IS NET
+
+[\] interface GigabitEthernet0/0/0/0
+[/] Add interface to IS-IS
+
+[\] show cef
+[/] Display Cisco Express Forwarding information
+
+[\] cef distribute
+[/] Enable CEF distribution
+
+[\] mpls ldp
+[/] Enable MPLS LDP
+
+[\] interface GigabitEthernet0/0/0/0
+[/] Enable LDP on interface
+
+[\] mpls traffic-eng
+[/] Enable MPLS TE
+
+[\] router bgp 65001
+[/] Enter BGP configuration
+
+[\] bgp graceful-restart
+[/] Enable BGP graceful restart
+
+[\] show bgp
+[/] Display BGP information
+
+[\] show bgp neighbor
+[/] Display BGP neighbor information
+
+[\] show mpls ldp neighbor
+[/] Display LDP neighbors
+
+[\] show mpls ldp bindings
+[/] Display LDP bindings
+
+[\] clear bgp *
+[/] Clear BGP sessions
+
+[\] clear ospf process
+[/] Clear OSPF process
+
+[\] username admin
+[/] Create or modify user
+
+[\] password cisco
+[/] Set user password
+
+[\] group operator
+[/] Create user group
+
+[\] taskgroup operator
+[/] Create task group
+
+[\] task execute
+[/] Add execute task
+
+[\] logging console
+[/] Configure console logging
+
+[\] logging monitor
+[/] Configure monitor logging
+
+[\] service timestamps debug datetime
+[/] Configure timestamp format
+
+[\] commit replace
+[/] Replace running configuration with committed
+
+[\] load configuration
+[/] Load configuration from file
+
+[\] admin
+[/] Enter admin EXEC mode

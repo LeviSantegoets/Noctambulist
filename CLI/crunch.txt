@@ -1,0 +1,79 @@
+# Crunch Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Crunch Command List
+
+[\] crunch 4 4 abc123
+[/] Generate all 4‑character combinations from the charset "abc123"
+
+[\] crunch 6 6
+[/] Generate all 6‑character combinations using default charset
+
+[\] crunch 1 5 abcdef -o wordlist.txt
+[/] Save generated list (1–5 chars) to a file
+
+[\] crunch 8 8 0123456789 -o pins.txt
+[/] Generate all 8‑digit numeric combinations
+
+[\] crunch 4 4 -f /usr/share/crunch/charset.lst mixalpha
+[/] Use predefined charset: mixed alphabet
+
+[\] crunch 4 4 -f /usr/share/crunch/charset.lst mixalpha-numeric
+[/] Use predefined charset: alphanumeric
+
+[\] crunch 4 4 -f /usr/share/crunch/charset.lst numeric
+[/] Use predefined charset: numbers only
+
+[\] crunch 6 6 -t @@dog%
+[/] Pattern mode: letters + "dog" + symbol  @ = lowercase  , = uppercase  % = symbol  ^ = number
+
+[\] crunch 8 8 -t pass%%%%
+[/] Generate passwords starting with "pass" + 4 digits
+
+[\] crunch 10 10 -t admin@@@@@@
+[/] Generate "admin" + 6 lowercase letters
+
+[\] crunch 5 5 -t ,,,,,
+[/] Generate 5 uppercase letters
+
+[\] crunch 8 8 -t ^^^^^^^^
+[/] Generate 8 digits
+
+[\] crunch 6 6 -t @,%^@%
+[/] Mixed pattern example
+
+[\] crunch 4 4 -o wordlist.txt -q 10mb
+[/] Split output into 10MB chunks
+
+[\] crunch 6 6 abc123 -o wordlist.txt -b 5mb -o START
+[/] Split into 5MB files with prefix "START"
+
+[\] crunch 8 8 -o wordlist.txt -z gzip
+[/] Compress output with gzip
+
+[\] crunch 8 8 -o wordlist.txt -z bzip2
+[/] Compress output with bzip2
+
+[\] crunch 8 8 -o wordlist.txt -z lzma
+[/] Compress output with lzma
+
+[\] crunch 5 5 -s abcde
+[/] Start generation at a specific string
+
+[\] crunch 5 5 -e fffff
+[/] End generation at a specific string
+
+[\] crunch 4 6 abc123 -o wordlist.txt
+[/] Generate combinations from length 4 to 6
+
+[\] crunch 3 3 -p dog cat 123
+[/] Generate permutations of given words
+
+[\] crunch 3 3 -p red blue green
+[/] Permutation mode with colors
+
+[\] crunch 1 8 -u
+[/] Suppress duplicate lines
+
+[\] crunch --help
+[/] Show help menu

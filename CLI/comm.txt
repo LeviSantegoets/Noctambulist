@@ -1,0 +1,34 @@
+[X] Comm Command List
+
+[\] comm file1.txt file2.txt
+[/] Compare two sorted files line by line
+
+[\] comm -1 file1.txt file2.txt
+[/] Suppress lines unique to file1
+
+[\] comm -2 file1.txt file2.txt
+[/] Suppress lines unique to file2
+
+[\] comm -3 file1.txt file2.txt
+[/] Suppress lines common to both files
+
+[\] comm -12 file1.txt file2.txt
+[/] Show only common lines
+
+[\] comm -23 file1.txt file2.txt
+[/] Show only lines unique to file1
+
+[\] comm -13 file1.txt file2.txt
+[/] Show only lines unique to file2
+
+[\] comm --check-order file1.txt file2.txt
+[/] Check if input files are sorted
+
+[\] comm --output-delimiter=", " file1.txt file2.txt
+[/] Set custom delimiter between columns
+
+[\] comm --help
+[/] Show help menu
+
+[\] comm --version
+[/] Show comm version

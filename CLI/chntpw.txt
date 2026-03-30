@@ -1,0 +1,46 @@
+[X] chntpw Command List
+
+[\] chntpw -l SAM
+[/] List users in SAM file
+
+[\] chntpw -u Administrator SAM
+[/] Edit password for specific user
+
+[\] chntpw -u user SAM
+[/] Select and modify a user account
+
+[\] chntpw -i SAM
+[/] Interactive menu for editing SAM database
+
+[\] chntpw -e SYSTEM
+[/] Edit Windows registry hive (SYSTEM)
+
+[\] chntpw -e SOFTWARE
+[/] Edit Windows registry hive (SOFTWARE)
+
+[\] chntpw -e SECURITY
+[/] Edit Windows registry hive (SECURITY)
+
+[\] chntpw -c SAM
+[/] Clear (blank) user password
+
+[\] chntpw -d SAM
+[/] Disable user account
+
+[\] chntpw -u Administrator -i SAM
+[/] Interactive edit for Administrator account
+
+[\] chntpw -u user -i SAM
+[/] Interactive edit for specific user
+
+[\] chntpw -u user -c SAM
+[/] Clear password for specific user
+
+[\] chntpw -u user -d SAM
+[/] Disable specific user account
+
+[\] chntpw --help
+[/] Show help menu
+
+[\] chntpw --version
+[/] Show version

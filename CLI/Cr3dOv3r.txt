@@ -1,0 +1,46 @@
+[X] Cr3dOv3r Command List
+
+[\] cr3dov3r
+[/] Show help menu
+
+[\] cr3dov3r -h
+[/] Display full help and options
+
+[\] cr3dov3r -u user@example.com
+[/] Check if a single email appears in known breaches
+
+[\] cr3dov3r -u user@example.com -p password123
+[/] Test a single credential pair (authorized testing only)
+
+[\] cr3dov3r -f users.txt
+[/] Check multiple emails from a file
+
+[\] cr3dov3r -f creds.txt --password password123
+[/] Use one password against multiple usernames (authorized testing only)
+
+[\] cr3dov3r -f creds.txt
+[/] Test multiple username:password pairs (authorized testing only)
+
+[\] cr3dov3r -u user@example.com --verbose
+[/] Enable verbose output
+
+[\] cr3dov3r -u user@example.com --json
+[/] Output results in JSON format
+
+[\] cr3dov3r -u user@example.com --proxy http://127.0.0.1:8080
+[/] Route traffic through proxy (e.g., Burp)
+
+[\] cr3dov3r -u user@example.com --tor
+[/] Route traffic through Tor
+
+[\] cr3dov3r -u user@example.com --timeout 10
+[/] Set request timeout
+
+[\] cr3dov3r -u user@example.com --threads 20
+[/] Use 20 threads
+
+[\] cr3dov3r -u user@example.com --output results.txt
+[/] Save output to file
+
+[\] cr3dov3r --update
+[/] Update Cr3dOv3r

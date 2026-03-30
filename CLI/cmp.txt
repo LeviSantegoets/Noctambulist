@@ -1,0 +1,31 @@
+[X] CMP Command List
+
+[\] cmp file1.txt file2.txt
+[/] Compare two files byte by byte
+
+[\] cmp -l file1.txt file2.txt
+[/] List all differing bytes
+
+[\] cmp -s file1.txt file2.txt
+[/] Silent mode (exit status only)
+
+[\] cmp -i 10 file1.txt file2.txt
+[/] Skip first 10 bytes of both files
+
+[\] cmp -n 100 file1.txt file2.txt
+[/] Compare only first 100 bytes
+
+[\] cmp --verbose file1.txt file2.txt
+[/] Show detailed differences
+
+[\] cmp --quiet file1.txt file2.txt
+[/] Same as -s, suppress output
+
+[\] cmp -b file1.txt file2.txt
+[/] Show differing bytes in octal/char
+
+[\] cmp --help
+[/] Show help menu
+
+[\] cmp --version
+[/] Show cmp version

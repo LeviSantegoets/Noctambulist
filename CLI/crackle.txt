@@ -1,0 +1,55 @@
+[X] Crackle Command List
+
+[\] crackle
+[/] Launch Crackle with default settings
+
+[\] crackle -h
+[/] Show help menu
+
+[\] crackle -i input.pcap
+[/] Specify input PCAP file containing BLE pairing data
+
+[\] crackle -i input.pcap -o output.pcap
+[/] Specify output PCAP file for decrypted packets
+
+[\] crackle -i input.pcap -o output.pcap -p
+[/] Attempt to crack BLE passkey pairing
+
+[\] crackle -i input.pcap -o output.pcap -j
+[/] Attempt to crack BLE Just Works pairing
+
+[\] crackle -i input.pcap -o output.pcap -d
+[/] Enable debug output
+
+[\] crackle -i input.pcap -o output.pcap -v
+[/] Enable verbose mode
+
+[\] crackle -i input.pcap -o output.pcap -q
+[/] Quiet mode (minimal output)
+
+[\] crackle -i input.pcap --keep-mic
+[/] Keep MIC (Message Integrity Check) values in output
+
+[\] crackle -i input.pcap --remove-mic
+[/] Strip MIC values from output
+
+[\] crackle --version
+[/] Show Crackle version
+
+[\] crackle --help
+[/] Display extended help
+
+[\] hcxpcapngtool -o blehashes input.pcapng
+[/] Convert BLE PCAPNG to compatible format (companion workflow)
+
+[\] btlejack -f capture.pcap
+[/] Capture BLE pairing traffic for Crackle (companion tool)
+
+[\] sudo hciconfig hci0 down
+[/] Bring Bluetooth interface down (avoid interference during capture)
+
+[\] sudo hciconfig hci0 up
+[/] Bring Bluetooth interface back up
+
+[\] sudo systemctl restart bluetooth
+[/] Restart Bluetooth service

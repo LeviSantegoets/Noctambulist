@@ -1,0 +1,94 @@
+[X] conntrack Command List
+
+[\] conntrack -L
+[/] List all current connections
+
+[\] conntrack -L -p tcp
+[/] List TCP connections only
+
+[\] conntrack -L -p udp
+[/] List UDP connections only
+
+[\] conntrack -L -s 192.168.1.10
+[/] Show connections from source IP
+
+[\] conntrack -L -d 192.168.1.10
+[/] Show connections to destination IP
+
+[\] conntrack -L --dport 80
+[/] Show connections to specific destination port
+
+[\] conntrack -L --sport 443
+[/] Show connections from specific source port
+
+[\] conntrack -L -f ipv4
+[/] Show IPv4 connections
+
+[\] conntrack -L -f ipv6
+[/] Show IPv6 connections
+
+[\] conntrack -S
+[/] Show conntrack statistics
+
+[\] conntrack -C
+[/] Show current connection count
+
+[\] conntrack -E
+[/] Monitor live connection events
+
+[\] conntrack -E -p tcp
+[/] Monitor TCP events only
+
+[\] conntrack -F
+[/] Flush all connection tracking entries (dangerous)
+
+[\] conntrack -D -p tcp --dport 80
+[/] Delete matching connections
+
+[\] conntrack -D -s 192.168.1.10
+[/] Delete connections from source IP
+
+[\] conntrack -D -d 192.168.1.10
+[/] Delete connections to destination IP
+
+[\] conntrack -I -p tcp --dport 22 -s 192.168.1.5 -d 192.168.1.10
+[/] Insert new connection entry manually
+
+[\] conntrack -U -p tcp --dport 22 -s 192.168.1.5 -d 192.168.1.10
+[/] Update existing connection entry
+
+[\] conntrack -G -p tcp --dport 22 -s 192.168.1.5 -d 192.168.1.10
+[/] Get specific connection entry
+
+[\] conntrack -L --state ESTABLISHED
+[/] Show established connections
+
+[\] conntrack -L --state NEW
+[/] Show new connections
+
+[\] conntrack -L --state RELATED
+[/] Show related connections
+
+[\] conntrack -L --state INVALID
+[/] Show invalid connections
+
+[\] sysctl net.netfilter.nf_conntrack_max
+[/] Show max conntrack table size
+
+[\] sysctl -w net.netfilter.nf_conntrack_max=262144
+[/] Set max conntrack entries
+
+[\] cat /proc/sys/net/netfilter/nf_conntrack_count
+[/] Show current connection count (kernel)
+
+[\] watch -n 1 conntrack -C
+[/] Monitor connection count in real time
+
+[\] lsmod | grep conntrack
+[/] Check conntrack kernel modules
+
+[\] modprobe nf_conntrack
+[/] Load conntrack module
+
+[\] dmesg | grep conntrack
+[/] View conntrack-related kernel logs

@@ -1,0 +1,109 @@
+[X] CSDR (Command-line SDR) Command List
+
+[\] csdr --help
+[/] Show help and available commands
+
+# -------------------------
+# IQ SAMPLE CONVERSIONS
+# -------------------------
+
+[\] csdr convert_u8_f
+[/] Convert unsigned 8-bit samples to float
+
+[\] csdr convert_f_u8
+[/] Convert float samples to unsigned 8-bit
+
+[\] csdr convert_s16_f
+[/] Convert signed 16-bit samples to float
+
+[\] csdr convert_f_s16
+[/] Convert float samples to signed 16-bit
+
+# -------------------------
+# FILTERING
+# -------------------------
+
+[\] csdr fir_decimate_ccf 4 0.1 0.0
+[/] Decimate by factor of 4 with low-pass filter
+
+[\] csdr fir_interpolate_ccf 4 0.1 0.0
+[/] Interpolate by factor of 4 with low-pass filter
+
+[\] csdr bandpass_fir_ccf 0.1 0.2 0.01
+[/] Apply bandpass FIR filter
+
+[\] csdr lowpass_fir_ccf 0.1 0.01
+[/] Apply lowpass FIR filter
+
+[\] csdr highpass_fir_ccf 0.1 0.01
+[/] Apply highpass FIR filter
+
+# -------------------------
+# FREQUENCY SHIFT / MIXING
+# -------------------------
+
+[\] csdr shift_add_cc 0.1
+[/] Frequency shift signal by 0.1 normalized frequency
+
+[\] csdr multiply_cc
+[/] Multiply complex signals
+
+[\] csdr add_cc
+[/] Add complex signals
+
+[\] csdr complex_to_real
+[/] Extract real part of complex signal
+
+[\] csdr complex_to_imag
+[/] Extract imaginary part of complex signal
+
+# -------------------------
+# DEMODULATION
+# -------------------------
+
+[\] csdr fmdemod_fc
+[/] FM demodulate complex float input
+
+[\] csdr amdemod_fc
+[/] AM demodulate complex float input
+
+[\] csdr lsbdemod_fc
+[/] Demodulate LSB
+
+[\] csdr usb_demod_fc
+[/] Demodulate USB
+
+[\] csdr cpm_demod_fc
+[/] Demodulate CPM signals
+
+# -------------------------
+# DECIMATION / RESAMPLING
+# -------------------------
+
+[\] csdr decimate_fir_ccf 4 0.1
+[/] Decimate by factor of 4 with FIR filter
+
+[\] csdr interpolate_fir_ccf 4 0.1
+[/] Interpolate by factor of 4 with FIR filter
+
+[\] csdr resample_cc 48000 44100
+[/] Resample from 48 kHz to 44.1 kHz
+
+# -------------------------
+# SIGNAL PROCESSING / MISC
+# -------------------------
+
+[\] csdr agc_cc
+[/] Automatic gain control on complex signal
+
+[\] csdr normalize_f
+[/] Normalize float signal
+
+[\] csdr multiply_const_cc 0.5
+[/] Scale signal amplitude by 0.5
+
+[\] csdr clip_cc 0.8
+[/] Clip complex signal magnitude to 0.8
+
+[\] csdr lowpass_fir_ccf 0.1 0.01
+[/] Apply low-pass filter to reduce noise

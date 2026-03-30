@@ -1,0 +1,58 @@
+[X] CredSniper Command List
+
+[\] python3 credsniper.py
+[/] Launch CredSniper interactive menu
+
+[\] python3 credsniper.py --help
+[/] Show help menu
+
+[\] python3 credsniper.py --setup
+[/] Run initial setup and install dependencies
+
+[\] python3 credsniper.py --update
+[/] Update CredSniper to latest version
+
+[\] python3 credsniper.py --list
+[/] List available phishing templates
+
+[\] python3 credsniper.py --template microsoft
+[/] Select Microsoft login template
+
+[\] python3 credsniper.py --template google
+[/] Select Google login template
+
+[\] python3 credsniper.py --template github
+[/] Select GitHub login template
+
+[\] python3 credsniper.py --template custom
+[/] Use custom HTML phishing template
+
+[\] python3 credsniper.py --domain example.com
+[/] Set phishing domain
+
+[\] python3 credsniper.py --port 80
+[/] Set HTTP port
+
+[\] python3 credsniper.py --ssl
+[/] Enable HTTPS
+
+[\] python3 credsniper.py --cert cert.pem --key key.pem
+[/] Use custom SSL certificate
+
+[\] python3 credsniper.py --output logs/
+[/] Save captured credentials to directory
+
+[\] python3 credsniper.py --debug
+[/] Enable debug mode
+
+[\] python3 credsniper.py --no-verify
+[/] Disable SSL verification
+
+[\] python3 credsniper.py --clone https://target.com/login
+[/] Clone a login page automatically
+
+[\] python3 credsniper.py --start
+[/] Start phishing server
+
+[\] ctrl + c
+[/] Stop CredSniper server

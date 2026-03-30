@@ -1,0 +1,307 @@
+# Cisco IOS Command List
+# Format: [\] command [/] description
+
+[X] Cisco IOS Command List
+# EXEC & Privileged Mode
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] disable
+[/] Exit privileged EXEC mode
+
+[\] exit
+[/] Exit current mode
+
+[\] logout
+[/] Log out of the session
+# Show Commands
+
+[\] show version
+[/] Display system hardware/software version
+
+[\] show running-config
+[/] Display running configuration
+
+[\] show startup-config
+[/] Display startup configuration
+
+[\] show ip interface brief
+[/] Summary of IP interfaces
+
+[\] show interfaces
+[/] Detailed interface information
+
+[\] show ip route
+[/] Display routing table
+
+[\] show arp
+[/] Display ARP table
+
+[\] show protocols
+[/] Show configured protocols
+
+[\] show flash:
+[/] Display flash memory contents
+
+[\] show vlan
+[/] Display VLAN information
+
+[\] show spanning-tree
+[/] Display spanning-tree information
+
+[\] show mac address-table
+[/] Display MAC address table
+
+[\] show cdp neighbors
+[/] Display CDP neighbor information
+
+[\] show logging
+[/] Display system logs
+
+[\] show ip nat translations
+[/] Display NAT table
+
+[\] show ip dhcp binding
+[/] Display DHCP bindings
+
+[\] show access-lists
+[/] Display access lists
+
+[\] show tech-support
+[/] Display technical support info
+# Configuration Mode
+
+[\] configure terminal
+[/] Enter global configuration mode
+
+[\] hostname Router
+[/] Set device hostname
+
+[\] banner motd #
+[/] Set message of the day banner
+
+[\] enable secret cisco
+[/] Set enable secret password
+# File & Configuration Management
+
+[\] copy running-config startup-config
+[/] Save running config
+
+[\] write memory
+[/] Save running config (same as copy run start)
+
+[\] write erase
+[/] Erase startup config
+
+[\] erase startup-config
+[/] Delete startup config
+
+[\] erase flash:
+[/] Erase flash storage
+
+[\] copy startup-config running-config
+[/] Merge startup config into running config
+
+[\] copy tftp: running-config
+[/] Restore config from TFTP
+
+[\] copy running-config tftp:
+[/] Backup config to TFTP
+
+[\] reload
+[/] Reboot device
+# Interface Configuration
+
+[\] interface FastEthernet0/0
+[/] Enter interface config mode
+
+[\] interface GigabitEthernet0/1
+[/] Enter Gigabit interface
+
+[\] interface vlan 1
+[/] Enter SVI interface
+
+[\] ip address 192.168.1.1 255.255.255.0
+[/] Assign IP address
+
+[\] no ip address
+[/] Remove IP address
+
+[\] no shutdown
+[/] Enable interface
+
+[\] shutdown
+[/] Disable interface
+
+[\] duplex full
+[/] Set full duplex
+
+[\] speed 100
+[/] Set interface speed
+# Switching Commands
+
+[\] vlan 10
+[/] Create VLAN
+
+[\] name MyVLAN
+[/] Name VLAN
+
+[\] switchport mode access
+[/] Set access mode
+
+[\] switchport access vlan 10
+[/] Assign access VLAN
+
+[\] switchport mode trunk
+[/] Set trunk mode
+
+[\] switchport trunk allowed vlan 10,20
+[/] Allow VLANs on trunk
+
+[\] spanning-tree portfast
+[/] Enable PortFast
+
+[\] spanning-tree bpduguard enable
+[/] Enable BPDU Guard
+# Routing Protocols
+# Static Routing
+
+[\] ip route 0.0.0.0 0.0.0.0 192.168.1.1
+[/] Default route
+
+[\] ip route 10.0.0.0 255.255.255.0 192.168.1.2
+[/] Static route
+# OSPF
+
+[\] router ospf 1
+[/] Enable OSPF process
+
+[\] network 192.168.1.0 0.0.0.255 area 0
+[/] OSPF network statement
+
+[\] passive-interface default
+[/] Make all interfaces passive
+
+[\] no passive-interface GigabitEthernet0/1
+[/] Enable OSPF on specific interface
+# EIGRP
+
+[\] router eigrp 100
+[/] Enable EIGRP
+
+[\] network 192.168.1.0
+[/] EIGRP network
+
+[\] no auto-summary
+[/] Disable auto-summarization
+# RIP
+
+[\] router rip
+[/] Enable RIP
+
+[\] version 2
+[/] Use RIP v2
+
+[\] network 192.168.1.0
+[/] Add network to RIP
+# BGP
+
+[\] router bgp 65001
+[/] Enable BGP
+
+[\] neighbor 10.0.0.2 remote-as 65002
+[/] Configure BGP neighbor
+
+[\] network 192.168.1.0 mask 255.255.255.0
+[/] Advertise network
+# NAT
+
+[\] ip nat inside
+[/] Mark interface as inside NAT
+
+[\] ip nat outside
+[/] Mark interface as outside NAT
+
+[\] ip nat inside source list 1 interface FastEthernet0/0 overload
+[/] PAT overload
+
+[\] access-list 1 permit 192.168.1.0 0.0.0.255
+[/] NAT ACL
+# DHCP Server
+
+[\] ip dhcp pool LAN
+[/] Create DHCP pool
+
+[\] network 192.168.1.0 255.255.255.0
+[/] Define DHCP network
+
+[\] default-router 192.168.1.1
+[/] Set default gateway
+
+[\] dns-server 8.8.8.8
+[/] Set DNS server
+
+[\] ip dhcp excluded-address 192.168.1.1 192.168.1.10
+[/] Exclude addresses
+# Security & AAA
+
+[\] line vty 0 4
+[/] Enter VTY config
+
+[\] password cisco
+[/] Set line password
+
+[\] login
+[/] Enable login
+
+[\] service password-encryption
+[/] Encrypt passwords
+
+[\] username admin secret MyPass
+[/] Create local user
+
+[\] aaa new-model
+[/] Enable AAA
+# Access Lists
+
+[\] access-list 10 permit host 192.168.1.1
+[/] Standard ACL
+
+[\] access-list 100 permit tcp any any eq 80
+[/] Extended ACL
+
+[\] ip access-group 100 in
+[/] Apply ACL to interface
+# Monitoring & Debug
+
+[\] debug ip routing
+[/] Debug routing
+
+[\] debug ip packet
+[/] Debug packets
+
+[\] no debug all
+[/] Disable all debugging
+
+[\] terminal monitor
+[/] Show logs on terminal
+# System & Management
+
+[\] clock set 12:00:00 17 Feb 2026
+[/] Set system clock
+
+[\] ip domain-name example.com
+[/] Set domain name
+
+[\] crypto key generate rsa
+[/] Generate SSH keys
+
+[\] ip ssh version 2
+[/] Enable SSH v2
+
+[\] logging buffered 4096
+[/] Set log buffer size
+
+[\] ip default-gateway 192.168.1.1
+[/] Set default gateway (switches)

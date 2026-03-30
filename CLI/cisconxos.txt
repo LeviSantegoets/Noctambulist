@@ -1,0 +1,136 @@
+# Cisco NX-OS Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Cisco NX-OS Command List
+
+[\] enable
+[/] Enter privileged EXEC mode
+
+[\] disable
+[/] Exit from privileged EXEC mode
+
+[\] show version
+[/] Display the system hardware and software version
+
+[\] show running-config
+[/] Display the current running configuration
+
+[\] show startup-config
+[/] Display the saved configuration
+
+[\] show ip interface brief
+[/] Display a brief summary of IP interfaces
+
+[\] show interface
+[/] Display detailed interface information
+
+[\] show ip route
+[/] Display the IP routing table
+
+[\] configure terminal
+[/] Enter global configuration mode
+
+[\] interface Ethernet1/1
+[/] Enter interface configuration mode
+
+[\] ip address 192.168.1.1/24
+[/] Set IP address on an interface
+
+[\] no shutdown
+[/] Enable an interface
+
+[\] shutdown
+[/] Disable an interface
+
+[\] exit
+[/] Exit current mode
+
+[\] copy running-config startup-config
+[/] Save the running configuration to NVRAM
+
+[\] reload
+[/] Reload the device
+
+[\] ping 192.168.1.1
+[/] Send ICMP echo requests to a host
+
+[\] traceroute 192.168.1.1
+[/] Trace the path to a destination
+
+[\] show vlan
+[/] Display VLAN information
+
+[\] vlan 10
+[/] Create VLAN
+
+[\] vlan 10 name TestVLAN
+[/] Create VLAN with name
+
+[\] no vlan 10
+[/] Delete VLAN
+
+[\] feature vpc
+[/] Enable vPC feature
+
+[\] feature lacp
+[/] Enable LACP feature
+
+[\] feature ospf
+[/] Enable OSPF feature
+
+[\] feature bgp
+[/] Enable BGP feature
+
+[\] feature pim
+[/] Enable PIM feature
+
+[\] vpc domain 10
+[/] Create vPC domain
+
+[\] peer-keepalive destination 192.168.1.2
+[/] Configure vPC peer keepalive
+
+[\] interface port-channel1
+[/] Create Port-Channel interface
+
+[\] channel-group 1 mode active
+[/] Add interface to channel group
+
+[\] show vpc
+[/] Display vPC information
+
+[\] show vpc peer-keepalive
+[/] Display vPC peer keepalive status
+
+[\] router ospf 1
+[/] Enable OSPF routing process
+
+[\] network 192.168.1.0/24 area 0
+[/] Specify OSPF network
+
+[\] router bgp 65001
+[/] Enable BGP routing process
+
+[\] neighbor 192.168.1.2 remote-as 65001
+[/] Configure BGP neighbor
+
+[\] show spanning-tree
+[/] Display spanning-tree information
+
+[\] spanning-tree mode mst
+[/] Set spanning-tree mode to MST
+
+[\] show vrrp
+[/] Display VRRP information
+
+[\] feature hsrp
+[/] Enable HSRP feature
+
+[\] show hsrp
+[/] Display HSRP information
+
+[\] copy file bootflash:
+[/] Copy file to bootflash
+
+[\] dir bootflash:
+[/] List files in bootflash

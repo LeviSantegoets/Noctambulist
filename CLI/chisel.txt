@@ -1,0 +1,37 @@
+[X] Chisel Command List
+
+[\] ./chisel server -p 8000 --reverse
+[/] Start chisel server on port 8000 with reverse tunneling
+
+[\] ./chisel client server:8000 R:1080:localhost:22
+[/] Connect to server and create reverse tunnel (remote port 1080 → local 22)
+
+[\] ./chisel client server:8000 8080:localhost:80
+[/] Forward local port 80 to remote port 8080
+
+[\] ./chisel client server:8000 0.0.0.0:3306:localhost:3306
+[/] Bind to all interfaces on remote side
+
+[\] ./chisel server -p 443 --reverse --auth user:pass
+[/] Start server with authentication
+
+[\] ./chisel client server:443 R:2222:localhost:22 --auth user:pass
+[/] Connect client with username/password
+
+[\] ./chisel client server:8000 0:0:0:0
+[/] Forward all ports (advanced)
+
+[\] ./chisel server -v
+[/] Verbose output (server)
+
+[\] ./chisel client server:8000 8080:localhost:80 -v
+[/] Verbose output (client)
+
+[\] ./chisel server --help
+[/] Show server help menu
+
+[\] ./chisel client --help
+[/] Show client help menu
+
+[\] ./chisel --version
+[/] Show chisel version
