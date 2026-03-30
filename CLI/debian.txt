@@ -1,0 +1,148 @@
+# Debian Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Debian Command List
+
+[\] apt update
+[/] Refresh package lists
+
+[\] apt upgrade
+[/] Upgrade installed packages
+
+[\] apt full-upgrade
+[/] Upgrade packages including dependencies and removals
+
+[\] apt install package
+[/] Install a package
+
+[\] apt remove package
+[/] Remove a package
+
+[\] apt purge package
+[/] Remove package and configuration files
+
+[\] apt autoremove
+[/] Remove unused dependencies
+
+[\] apt search keyword
+[/] Search for a package
+
+[\] apt show package
+[/] Display package details
+
+[\] dpkg -i package.deb
+[/] Install a .deb package manually
+
+[\] dpkg -r package
+[/] Remove a package
+
+[\] dpkg -l
+[/] List installed packages
+
+[\] dpkg -L package
+[/] List files installed by a package
+
+[\] dpkg --configure -a
+[/] Fix interrupted installations
+
+[\] systemctl status service
+[/] Show service status
+
+[\] systemctl start service
+[/] Start a service
+
+[\] systemctl stop service
+[/] Stop a service
+
+[\] systemctl restart service
+[/] Restart a service
+
+[\] systemctl enable service
+[/] Enable service at boot
+
+[\] systemctl disable service
+[/] Disable service at boot
+
+[\] systemctl list-units --type=service
+[/] List active services
+
+[\] journalctl -xe
+[/] View system logs with details
+
+[\] journalctl -u service
+[/] View logs for a specific service
+
+[\] journalctl -f
+[/] Follow logs in real time
+
+[\] ip a
+[/] Show network interfaces and IP addresses
+
+[\] ip r
+[/] Show routing table
+
+[\] ping debian.org
+[/] Test network connectivity
+
+[\] systemctl restart networking
+[/] Restart Debian networking service
+
+[\] nano /etc/network/interfaces
+[/] Edit classic network configuration
+
+[\] nmcli device status
+[/] Show NetworkManager device status
+
+[\] hostnamectl
+[/] Show system hostname info
+
+[\] hostnamectl set-hostname newname
+[/] Change system hostname
+
+[\] adduser username
+[/] Create a new user (Debian-friendly)
+
+[\] deluser username
+[/] Delete a user
+
+[\] usermod -aG sudo username
+[/] Add user to sudo group
+
+[\] passwd username
+[/] Change user password
+
+[\] visudo
+[/] Safely edit sudoers file
+
+[\] df -h
+[/] Show disk usage
+
+[\] du -sh folder
+[/] Show folder size
+
+[\] lsblk
+[/] List block devices
+
+[\] mount /dev/sdX /mnt
+[/] Mount a device
+
+[\] umount /mnt
+[/] Unmount a device
+
+[\] apt install sudo
+[/] Install sudo package
+
+[\] apt install build-essential
+[/] Install compiler tools (gcc, make, etc.)
+
+[\] apt install curl wget git
+[/] Install common utilities
+
+[\] reboot
+[/] Restart the system
+
+[\] shutdown now
+[/] Shut down immediately
+
+[\] shutdown -r +5
+[/] Reboot in 5 minutes

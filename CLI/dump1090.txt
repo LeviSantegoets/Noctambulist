@@ -1,0 +1,130 @@
+[X] dump1090 Command List
+
+[\] dump1090
+[/] Start dump1090 with default settings
+
+[\] dump1090 --help
+[/] Show help menu
+
+[\] dump1090 --version
+[/] Show version information
+
+[\] dump1090 --device-index 0
+[/] Use RTL‑SDR device index 0
+
+[\] dump1090 --gain -10
+[/] Set gain to auto
+
+[\] dump1090 --gain 40
+[/] Set manual gain to 40 dB
+
+[\] dump1090 --freq 1090000000
+[/] Set frequency to 1090 MHz (ADS‑B)
+
+[\] dump1090 --interactive
+[/] Enable interactive live terminal display
+
+[\] dump1090 --interactive --metric
+[/] Show interactive display using metric units
+
+[\] dump1090 --interactive --no-interactive-ttl
+[/] Disable TTL clearing in interactive mode
+
+[\] dump1090 --net
+[/] Enable network server (default ports)
+
+[\] dump1090 --net-only
+[/] Run network server without RTL‑SDR hardware
+
+[\] dump1090 --net-ro-port 30002
+[/] Set raw output port
+
+[\] dump1090 --net-ri-port 30001
+[/] Set raw input port
+
+[\] dump1090 --net-bo-port 30005
+[/] Set Beast output port
+
+[\] dump1090 --net-bi-port 30004
+[/] Set Beast input port
+
+[\] dump1090 --net-http-port 8080
+[/] Set HTTP web interface port
+
+[\] dump1090 --write-json /var/www/html/data
+[/] Write aircraft JSON files for web map
+
+[\] dump1090 --json-location-accuracy 2
+[/] Set location accuracy level
+
+[\] dump1090 --lat 51.1234 --lon 5.1234
+[/] Set receiver location (for MLAT)
+
+[\] dump1090 --fix
+[/] Enable single‑bit error correction
+
+[\] dump1090 --no-fix
+[/] Disable error correction
+
+[\] dump1090 --aggressive
+[/] Enable aggressive decoding mode
+
+[\] dump1090 --no-aggressive
+[/] Disable aggressive mode
+
+[\] dump1090 --stats
+[/] Show decoder statistics
+
+[\] dump1090 --stats-every 60
+[/] Print stats every 60 seconds
+
+[\] dump1090 --quiet
+[/] Quiet mode (minimal output)
+
+[\] dump1090 --ppm 40
+[/] Apply 40 ppm frequency correction
+
+[\] dump1090 --modeac
+[/] Enable Mode A/C decoding
+
+[\] dump1090 --no-modeac
+[/] Disable Mode A/C decoding
+
+[\] dump1090 --raw
+[/] Output raw messages to stdout
+
+[\] dump1090 --net --interactive
+[/] Run interactive mode + network server
+
+[\] dump1090 --write-csv aircraft.csv
+[/] Write aircraft data to CSV file
+
+[\] dump1090 --write-beast beast.bin
+[/] Save Beast‑format output to file
+
+[\] dump1090 --write-msgs msgs.bin
+[/] Save raw messages to file
+
+[\] dump1090 --max-range 350
+[/] Set maximum display range (km)
+
+[\] dump1090 --phase-enhance
+[/] Enable phase enhancement for weak signals
+
+[\] dump1090 --no-phase-enhance
+[/] Disable phase enhancement
+
+[\] dump1090 --mlat
+[/] Enable MLAT support
+
+[\] dump1090 --no-mlat
+[/] Disable MLAT
+
+[\] rtl_test
+[/] Test RTL‑SDR dongle (companion tool)
+
+[\] rtl_eeprom
+[/] Read/write RTL‑SDR EEPROM
+
+[\] sudo apt install dump1090
+[/] Install dump1090 on Debian‑based systems

@@ -1,0 +1,52 @@
+[X] dnstwist Command List
+
+[\] dnstwist example.com
+[/] Generate and check domain permutations
+
+[\] dnstwist example.com  --registered
+[/] Show only registered domains
+
+[\] dnstwist example.com  --mxcheck
+[/] Check MX records for permutations
+
+[\] dnstwist example.com  --geoip
+[/] Show GeoIP information
+
+[\] dnstwist example.com  --whois
+[/] Perform WHOIS lookups
+
+[\] dnstwist example.com  --tld
+[/] Include TLD permutations
+
+[\] dnstwist example.com  --dictionary words.txt
+[/] Use custom dictionary for mutations
+
+[\] dnstwist example.com  --format csv
+[/] Output results in CSV format
+
+[\] dnstwist example.com  --format json
+[/] Output results in JSON format
+
+[\] dnstwist example.com  --output results.csv
+[/] Save output to file
+
+[\] dnstwist example.com  --ssdeep
+[/] Compare website content using ssdeep
+
+[\] dnstwist example.com  --screenshots
+[/] Capture screenshots of discovered domains
+
+[\] dnstwist example.com  --threads 50
+[/] Use 50 threads
+
+[\] dnstwist example.com  --nameservers ns1.example.com
+[/] Use custom DNS resolver
+
+[\] dnstwist example.com  --lsh
+[/] Use perceptual hashing for website similarity
+
+[\] dnstwist example.com  --fuzzy
+[/] Enable fuzzy domain matching
+
+[\] dnstwist --help
+[/] Show help menu

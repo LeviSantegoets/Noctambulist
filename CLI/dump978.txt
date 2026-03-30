@@ -1,0 +1,91 @@
+[X] Dump978 Command List
+
+[\] dump978
+[/] Start dump978 UAT (Universal Access Transceiver) ADS-B receiver
+
+[\] dump978 --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] dump978 --device rtl
+[/] Use RTL-SDR for 978 MHz UAT reception
+
+[\] dump978 --device hackrf
+[/] Use HackRF SDR
+
+[\] dump978 --device usrp
+[/] Use USRP SDR device
+
+[\] dump978 --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] dump978 -f 978e6
+[/] Tune to 978 MHz UAT frequency
+
+[\] dump978 -s 2e6
+[/] Set SDR sample rate to 2 MSPS
+
+[\] dump978 -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] dump978 --file capture.iq
+[/] Decode UAT signal from recorded IQ file
+
+[\] dump978 --stdout
+[/] Output decoded messages to standard output
+
+[\] dump978 --json
+[/] Output ADS-B messages in JSON format
+
+[\] dump978 --logfile adsb978.log
+[/] Save decoded messages to log file
+
+# -------------------------
+# NETWORK / STREAMING
+# -------------------------
+
+[\] dump978 --net
+[/] Enable network streaming of ADS-B data
+
+[\] dump978 --net-port 30003
+[/] Set TCP port for streaming decoded messages
+
+[\] dump978 --beast
+[/] Output in Beast binary format
+
+# -------------------------
+# DISPLAY / DEBUG
+# -------------------------
+
+[\] dump978 --verbose
+[/] Enable verbose output
+
+[\] dump978 --stats
+[/] Show reception and decoding statistics
+
+[\] dump978 --spectrum
+[/] Show signal spectrum
+
+[\] dump978 --waterfall
+[/] Show waterfall of received signal
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 978e6 -s 2e6 - | dump978 --stdin
+[/] Decode live 978 MHz UAT traffic from RTL-SDR
+
+[\] rtl_sdr -f 978e6 -s 2e6 - | csdr convert_u8_f | dump978 --stdin
+[/] Process SDR IQ stream through CSDR before decoding

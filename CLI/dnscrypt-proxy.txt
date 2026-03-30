@@ -1,0 +1,67 @@
+[X] dnscrypt-proxy Command List
+
+[\] dnscrypt-proxy
+[/] Start dnscrypt-proxy with default config
+
+[\] dnscrypt-proxy -config /path/to/dnscrypt-proxy.toml
+[/] Use custom configuration file
+
+[\] dnscrypt-proxy -resolve example.com
+[/] Resolve a domain using dnscrypt-proxy
+
+[\] dnscrypt-proxy -list
+[/] List available resolvers
+
+[\] dnscrypt-proxy -R
+[/] Randomize resolver selection
+
+[\] dnscrypt-proxy -a 127.0.0.1:5353
+[/] Bind to specific local IP and port
+
+[\] dnscrypt-proxy -log /var/log/dnscrypt-proxy.log
+[/] Specify log file
+
+[\] dnscrypt-proxy -n
+[/] Disable logging to syslog
+
+[\] dnscrypt-proxy -v
+[/] Show version
+
+[\] dnscrypt-proxy -h
+[/] Show help menu
+
+[\] dnscrypt-proxy --version
+[/] Show version (alternative)
+
+[\] systemctl start dnscrypt-proxy
+[/] Start dnscrypt-proxy service
+
+[\] systemctl stop dnscrypt-proxy
+[/] Stop dnscrypt-proxy service
+
+[\] systemctl restart dnscrypt-proxy
+[/] Restart dnscrypt-proxy service
+
+[\] systemctl status dnscrypt-proxy
+[/] Show service status
+
+[\] journalctl -u dnscrypt-proxy
+[/] View service logs
+
+[\] dnscrypt-proxy -resolve example.com -R
+[/] Resolve using random resolver
+
+[\] dnscrypt-proxy -resolve example.com -a 127.0.0.1:5353
+[/] Resolve using specific local address
+
+[\] dnscrypt-proxy -provider-list
+[/] Show all configured providers
+
+[\] dnscrypt-proxy -test
+[/] Test configuration file and connectivity
+
+[\] dnscrypt-proxy -resolve example.com -json
+[/] Output DNS resolution in JSON format
+
+[\] dnscrypt-proxy -resolve example.com -quiet
+[/] Suppress extra output during resolution

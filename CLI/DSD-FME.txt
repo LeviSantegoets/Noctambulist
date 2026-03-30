@@ -1,0 +1,93 @@
+[X] DSD-FME Command List
+
+[\] dsd-fme
+[/] Launch DSD-FME digital voice decoder
+
+[\] dsd-fme --help
+[/] Show help and available command options
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] dsd-fme input.wav
+[/] Decode digital voice from WAV file
+
+[\] rtl_fm -f 851e6 -M nfm -s 12.5k - | dsd-fme -
+[/] Pipe SDR audio into DSD-FME decoder
+
+[\] dsd-fme --stdin
+[/] Read audio samples from standard input
+
+[\] dsd-fme --file capture.wav
+[/] Decode recorded file
+
+# -------------------------
+# MODES / PROTOCOLS
+# -------------------------
+
+[\] dsd-fme -m dmr
+[/] Decode DMR (Digital Mobile Radio)
+
+[\] dsd-fme -m dstar
+[/] Decode D-STAR digital voice
+
+[\] dsd-fme -m p25
+[/] Decode P25 Phase 1 voice
+
+[\] dsd-fme -m nxdn
+[/] Decode NXDN digital voice
+
+[\] dsd-fme -m ysf
+[/] Decode Yaesu System Fusion
+
+[\] dsd-fme -m mototrbo
+[/] Decode Motorola TRBO
+
+[\] dsd-fme -m ambe
+[/] Decode AMBE-based streams
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] dsd-fme -o output.wav
+[/] Save decoded audio to WAV file
+
+[\] dsd-fme -a
+[/] Play decoded audio live
+
+[\] dsd-fme -v
+[/] Enable verbose output
+
+[\] dsd-fme --json
+[/] Output decoded metadata as JSON
+
+# -------------------------
+# SIGNAL / AUDIO SETTINGS
+# -------------------------
+
+[\] dsd-fme --gain 30
+[/] Set input gain
+
+[\] dsd-fme --invert
+[/] Invert signal polarity
+
+[\] dsd-fme --agc
+[/] Enable automatic gain control
+
+[\] dsd-fme --filter
+[/] Apply audio filtering for better decoding
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 851e6 -M nfm -s 12.5k - | dsd-fme -m p25 -
+[/] Decode P25 audio from SDR stream
+
+[\] rtl_fm -f 433.9e6 -M nfm -s 12.5k - | dsd-fme -m dmr -
+[/] Decode DMR from 433 MHz
+
+[\] rtl_sdr -f 851e6 -s 250k - | csdr convert_u8_f | dsd-fme -m p25 -
+[/] Use CSDR processing pipeline before DSD-FME

@@ -1,0 +1,108 @@
+[X] Dablin Command List
+
+[\] dablin
+[/] Start Dablin DAB/DAB+ radio decoder
+
+[\] dablin --help
+[/] Show help and available command options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] dablin -f 220352000
+[/] Tune to DAB frequency 220.352 MHz
+
+[\] dablin -c 11D
+[/] Tune to DAB channel 11D
+
+[\] dablin -c 5A
+[/] Tune to DAB channel 5A
+
+[\] dablin -s 2048000
+[/] Set SDR sample rate to 2.048 MSPS
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] dablin -d 0
+[/] Use first RTL-SDR device
+
+[\] dablin -d 1
+[/] Use second RTL-SDR device
+
+[\] dablin --device rtl
+[/] Use RTL-SDR input
+
+[\] dablin --device soapy
+[/] Use SoapySDR compatible device
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] dablin --file capture.iq
+[/] Decode DAB signal from recorded IQ file
+
+[\] dablin --stdin
+[/] Read IQ samples from standard input
+
+[\] rtl_sdr -f 220352000 -s 2048000 - | dablin --stdin
+[/] Pipe RTL-SDR IQ stream into Dablin decoder
+
+# -------------------------
+# AUDIO OUTPUT
+# -------------------------
+
+[\] dablin --audio alsa
+[/] Output decoded audio via ALSA
+
+[\] dablin --audio pulse
+[/] Output audio via PulseAudio
+
+[\] dablin --audio file
+[/] Save decoded audio to file
+
+[\] dablin --output dab_audio.wav
+[/] Save audio to WAV file
+
+# -------------------------
+# SERVICE SELECTION
+# -------------------------
+
+[\] dablin --list
+[/] List available DAB services in ensemble
+
+[\] dablin --service "BBC Radio 1"
+[/] Play specific radio service
+
+[\] dablin --service-id 0x1234
+[/] Select service by ID
+
+# -------------------------
+# RECORDING
+# -------------------------
+
+[\] dablin --record
+[/] Record current DAB audio stream
+
+[\] dablin --record-file station.wav
+[/] Save recorded audio to WAV file
+
+# -------------------------
+# SIGNAL / DEBUG
+# -------------------------
+
+[\] dablin --verbose
+[/] Enable verbose logging output
+
+[\] dablin --stats
+[/] Show DAB decoding statistics
+
+[\] dablin --spectrum
+[/] Show signal spectrum information
+
+[\] dablin --waterfall
+[/] Enable waterfall display
+[/] Visualize DAB signal activity

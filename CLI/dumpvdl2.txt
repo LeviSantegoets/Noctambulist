@@ -1,0 +1,97 @@
+[X] DumpVDL2 Command List
+
+[\] dumpvdl2
+[/] Start VDL Mode 2 (VDL2) decoder for aircraft communications
+
+[\] dumpvdl2 --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] dumpvdl2 --device rtl
+[/] Use RTL-SDR for VDL2 reception
+
+[\] dumpvdl2 --device hackrf
+[/] Use HackRF SDR
+
+[\] dumpvdl2 --device usrp
+[/] Use USRP SDR device
+
+[\] dumpvdl2 --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] dumpvdl2 -f 136.975e6
+[/] Tune to 136.975 MHz (VDL2 control/data channel)
+
+[\] dumpvdl2 -f 136.950e6
+[/] Tune to another VDL2 frequency
+
+[\] dumpvdl2 -s 240k
+[/] Set SDR sample rate to 240 kHz
+
+[\] dumpvdl2 -g 30
+[/] Set SDR gain to 30 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] dumpvdl2 --file capture.iq
+[/] Decode VDL2 from recorded IQ file
+
+[\] dumpvdl2 --stdout
+[/] Output decoded messages to standard output
+
+[\] dumpvdl2 --json
+[/] Output decoded messages in JSON format
+
+[\] dumpvdl2 --logfile vdl2.log
+[/] Save decoded messages to log file
+
+# -------------------------
+# SIGNAL PROCESSING / DEMODULATION
+# -------------------------
+
+[\] dumpvdl2 --fm
+[/] FM demodulation for VDL2 signal
+
+[\] dumpvdl2 --filter
+[/] Apply bandpass filter
+
+[\] dumpvdl2 --agc
+[/] Enable automatic gain control
+
+[\] dumpvdl2 --invert
+[/] Invert signal polarity if needed
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] dumpvdl2 --verbose
+[/] Enable verbose decoding output
+
+[\] dumpvdl2 --stats
+[/] Show decoding statistics
+
+[\] dumpvdl2 --spectrum
+[/] Show signal spectrum
+
+[\] dumpvdl2 --waterfall
+[/] Display waterfall of received signal
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 136.975e6 -s 240k - | dumpvdl2 --stdin
+[/] Decode live VDL2 from RTL-SDR stream
+
+[\] rtl_sdr -f 136.950e6 -s 240k - | csdr convert_u8_f | dumpvdl2 --stdin
+[/] Process SDR IQ stream through CSDR before decoding

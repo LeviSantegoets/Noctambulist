@@ -1,0 +1,64 @@
+[X] dnsx Command List
+
+[\] dnsx -l domains.txt
+[/] Resolve list of domains
+
+[\] dnsx -d example.com
+[/] Resolve a single domain
+
+[\] dnsx -l domains.txt -a
+[/] Query A records
+
+[\] dnsx -l domains.txt -aaaa
+[/] Query AAAA (IPv6) records
+
+[\] dnsx -l domains.txt -mx
+[/] Query MX records
+
+[\] dnsx -l domains.txt -ns
+[/] Query NS records
+
+[\] dnsx -l domains.txt -txt
+[/] Query TXT records
+
+[\] dnsx -l domains.txt -cname
+[/] Query CNAME records
+
+[\] dnsx -l domains.txt -resp
+[/] Show full DNS response
+
+[\] dnsx -l domains.txt -silent
+[/] Silent mode (only results)
+
+[\] dnsx -l domains.txt -json
+[/] Output results in JSON
+
+[\] dnsx -l domains.txt -o output.txt
+[/] Save output to file
+
+[\] dnsx -l domains.txt -r resolvers.txt
+[/] Use custom DNS resolvers
+
+[\] dnsx -l domains.txt -retry 3
+[/] Retry failed queries
+
+[\] dnsx -l domains.txt -timeout 5
+[/] Set timeout (seconds)
+
+[\] dnsx -l domains.txt -t 100
+[/] Set number of threads
+
+[\] dnsx -l domains.txt -recon
+[/] Enable reconnaissance mode (multi-record lookup)
+
+[\] dnsx -l domains.txt -wildcard-filter
+[/] Filter wildcard DNS responses
+
+[\] dnsx -l domains.txt -rate-limit 200
+[/] Limit requests per second
+
+[\] dnsx -h
+[/] Show help menu
+
+[\] dnsx -version
+[/] Show version

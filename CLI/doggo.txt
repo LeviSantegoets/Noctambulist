@@ -1,0 +1,61 @@
+[X] Doggo Command List
+
+[\] doggo lookup example.com
+[/] Perform a DNS lookup for a domain
+
+[\] doggo resolve example.com
+[/] Resolve domain to IP address
+
+[\] doggo whois example.com
+[/] Retrieve WHOIS information
+
+[\] doggo ping example.com
+[/] Ping a host to check connectivity
+
+[\] doggo http example.com
+[/] Perform an HTTP GET request
+
+[\] doggo https example.com
+[/] Perform an HTTPS GET request
+
+[\] doggo ns example.com
+[/] List nameservers for a domain
+
+[\] doggo mx example.com
+[/] List mail servers (MX records)
+
+[\] doggo txt example.com
+[/] Fetch TXT records
+
+[\] doggo cname example.com
+[/] Fetch CNAME record
+
+[\] doggo soa example.com
+[/] Fetch Start of Authority (SOA) record
+
+[\] doggo trace example.com
+[/] Perform a traceroute
+
+[\] doggo scan example.com 80,443
+[/] Scan specified ports
+
+[\] doggo lookup -t A example.com
+[/] Specify DNS record type
+
+[\] doggo lookup -t AAAA example.com
+[/] Lookup IPv6 address
+
+[\] doggo lookup -t SRV _sip._tcp.example.com
+[/] Lookup SRV record
+
+[\] doggo --json example.com
+[/] Output results in JSON
+
+[\] doggo -v
+[/] Verbose output
+
+[\] doggo --help
+[/] Show help menu
+
+[\] doggo --version
+[/] Show version

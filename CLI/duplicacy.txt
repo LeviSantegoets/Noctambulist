@@ -1,0 +1,106 @@
+[X] Duplicacy Backup Command List
+
+[\] duplicacy init repo-name /backup
+[/] Initialize repository
+
+[\] duplicacy init repo-name sftp://user@host//repo
+[/] Initialize remote repository (SFTP)
+
+[\] duplicacy backup
+[/] Run backup for current repository
+
+[\] duplicacy backup -stats
+[/] Show backup statistics
+
+[\] duplicacy backup -threads 4
+[/] Use multiple threads
+
+[\] duplicacy backup -t daily
+[/] Add tag to snapshot
+
+[\] duplicacy list
+[/] List snapshots
+
+[\] duplicacy list -all
+[/] List all revisions
+
+[\] duplicacy list -id repo-name
+[/] List snapshots for specific repo
+
+[\] duplicacy diff -r 1 -r 2
+[/] Compare two revisions
+
+[\] duplicacy restore -r 1
+[/] Restore revision
+
+[\] duplicacy restore -r 1 -overwrite
+[/] Restore and overwrite existing files
+
+[\] duplicacy restore -r 1 -files path/to/file
+[/] Restore specific file
+
+[\] duplicacy prune -keep 0:360
+[/] Keep snapshots from last 360 days
+
+[\] duplicacy prune -keep 7:7 -keep 30:4 -keep 365:12
+[/] Advanced retention policy
+
+[\] duplicacy check
+[/] Check repository integrity
+
+[\] duplicacy check -all
+[/] Check all snapshots
+
+[\] duplicacy copy
+[/] Copy snapshots to another storage
+
+[\] duplicacy set
+[/] Configure storage
+
+[\] duplicacy set -storage default
+[/] Set default storage
+
+[\] duplicacy info
+[/] Show repository info
+
+[\] duplicacy benchmark
+[/] Test performance
+
+[\] duplicacy preferences
+[/] Edit preferences file
+
+[\] duplicacy add -e /path/to/exclude
+[/] Add exclusion rule
+
+[\] duplicacy backup -hash
+[/] Use hash-based backup mode
+
+[\] duplicacy backup -vss
+[/] Use Volume Shadow Copy (Windows)
+
+[\] duplicacy backup -limit-rate 1000
+[/] Limit upload speed (KB/s)
+
+[\] duplicacy backup -encrypt
+[/] Enable encryption
+
+[\] duplicacy backup -zstd
+[/] Use Zstandard compression
+
+[\] duplicacy version
+[/] Show version
+
+[\] duplicacy help
+[/] Show help menu
+
+[\] export DUPLICACY_PASSWORD=secret
+[/] Set repository password
+
+[\] export DUPLICACY_CONFIG=/path/.duplicacy
+[/] Set config directory
+
+[\] crontab -e
+[/] Schedule automated backups
+
+[\] du -sh /backup
+[/] Check storage usage

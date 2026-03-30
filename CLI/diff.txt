@@ -1,0 +1,64 @@
+[X] Diff Command List
+
+[\] diff file1.txt file2.txt
+[/] Compare two files
+
+[\] diff -u file1.txt file2.txt
+[/] Unified diff (common for patch files)
+
+[\] diff -c file1.txt file2.txt
+[/] Context diff
+
+[\] diff -i file1.txt file2.txt
+[/] Ignore case differences
+
+[\] diff -w file1.txt file2.txt
+[/] Ignore all whitespace
+
+[\] diff -b file1.txt file2.txt
+[/] Ignore changes in amount of whitespace
+
+[\] diff -B file1.txt file2.txt
+[/] Ignore changes that are only blank lines
+
+[\] diff -y file1.txt file2.txt
+[/] Side-by-side comparison
+
+[\] diff --suppress-common-lines -y file1.txt file2.txt
+[/] Side-by-side, hide identical lines
+
+[\] diff --brief file1.txt file2.txt
+[/] Only report if files differ
+
+[\] diff --report-identical-files file1.txt file2.txt
+[/] Report if files are identical
+
+[\] diff --recursive dir1 dir2
+[/] Compare directories recursively
+
+[\] diff -r dir1 dir2
+[/] Recursive directory comparison
+
+[\] diff --new-file dir1 dir2
+[/] Treat missing files as empty
+
+[\] diff --unified=5 file1.txt file2.txt
+[/] Unified diff with 5 lines of context
+
+[\] diff --old-group-format='%<' --new-group-format='%>' file1.txt file2.txt
+[/] Custom diff format
+
+[\] diff -Naur olddir newdir > patch.diff
+[/] Create patch file from directories
+
+[\] patch -p1 < patch.diff
+[/] Apply patch
+
+[\] diff -q file1.txt file2.txt
+[/] Quiet mode (only differences reported)
+
+[\] diff --color file1.txt file2.txt
+[/] Colorize output
+
+[\] diff --strip-trailing-cr file1.txt file2.txt
+[/] Ignore Windows vs Unix line endings

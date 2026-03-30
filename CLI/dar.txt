@@ -1,0 +1,97 @@
+[X] dar (Disk ARchive) Command List
+
+[\] dar -c backup -R /home/user
+[/] Create archive from directory
+
+[\] dar -c backup -R /home --exclude "*.log"
+[/] Create archive with exclusions
+
+[\] dar -c backup -R /home -s 100M
+[/] Split archive into 100MB slices
+
+[\] dar -c backup -R /home -z
+[/] Enable compression
+
+[\] dar -c backup -R /home -z9
+[/] Maximum compression level
+
+[\] dar -c backup -R /home -K keyfile
+[/] Encrypt archive with keyfile
+
+[\] dar -c backup -R /home -w
+[/] Pause before overwriting files
+
+[\] dar -c backup -R /home -v
+[/] Verbose output
+
+[\] dar -l backup
+[/] List archive contents
+
+[\] dar -l backup -v
+[/] Verbose listing
+
+[\] dar -t backup
+[/] Test archive integrity
+
+[\] dar -x backup
+[/] Extract archive
+
+[\] dar -x backup -R /restore
+[/] Extract to specific directory
+
+[\] dar -x backup -g file.txt
+[/] Extract specific file
+
+[\] dar -d backup
+[/] Compare archive with filesystem
+
+[\] dar -d backup -R /home
+[/] Compare against directory
+
+[\] dar -c diff -A backup -R /home
+[/] Create differential backup
+
+[\] dar -c incr -A backup -R /home
+[/] Create incremental backup
+
+[\] dar -l backup -g "*.conf"
+[/] List specific files
+
+[\] dar -x backup -g "*.conf"
+[/] Extract matching files
+
+[\] dar_manager -v
+[/] Show archive catalog information
+
+[\] dar_manager -C backup
+[/] Create catalog
+
+[\] dar_manager -l backup
+[/] List catalog entries
+
+[\] dar_slave
+[/] Run slave process (remote backup)
+
+[\] dar -c backup -R /home -B exclude.txt
+[/] Use exclude list file
+
+[\] dar -c backup -R /home -P include.txt
+[/] Use include list file
+
+[\] dar -c backup -R /home -s 1G -z -K keyfile
+[/] Combined split + compress + encrypt
+
+[\] dar --help
+[/] Show help menu
+
+[\] dar --version
+[/] Show version
+
+[\] du -sh backup*
+[/] Check archive size
+
+[\] ls backup*
+[/] List archive slices
+
+[\] crontab -e
+[/] Schedule automated backups

@@ -1,0 +1,103 @@
+[X] DumpHFDL Command List
+
+[\] dumphfdl
+[/] Start HFDL (High-Frequency Data Link) decoder for aircraft communications
+
+[\] dumphfdl --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] dumphfdl --device rtl
+[/] Use RTL-SDR for HFDL reception
+
+[\] dumphfdl --device hackrf
+[/] Use HackRF SDR
+
+[\] dumphfdl --device usrp
+[/] Use USRP SDR device
+
+[\] dumphfdl --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] dumphfdl -f 8.915e6
+[/] Tune to 8.915 MHz HFDL channel
+
+[\] dumphfdl -f 9.645e6
+[/] Tune to 9.645 MHz HFDL channel
+
+[\] dumphfdl -s 48k
+[/] Set SDR audio sample rate to 48 kHz
+
+[\] dumphfdl -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] dumphfdl --file capture.wav
+[/] Decode HFDL from recorded audio file
+
+[\] dumphfdl --stdin
+[/] Read audio stream from standard input
+
+[\] dumphfdl --stdout
+[/] Output decoded messages to standard output
+
+[\] dumphfdl --logfile hfdl.log
+[/] Save decoded messages to log file
+
+[\] dumphfdl --json
+[/] Output decoded messages in JSON format
+
+# -------------------------
+# SIGNAL PROCESSING / DEMODULATION
+# -------------------------
+
+[\] dumphfdl --nfm
+[/] Narrowband FM demodulation
+
+[\] dumphfdl --am
+[/] AM demodulation (if required)
+
+[\] dumphfdl --filter
+[/] Apply bandpass filtering
+
+[\] dumphfdl --agc
+[/] Enable automatic gain control
+
+[\] dumphfdl --invert
+[/] Invert audio polarity if needed
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] dumphfdl --verbose
+[/] Enable verbose output
+
+[\] dumphfdl --stats
+[/] Show decoding statistics
+
+[\] dumphfdl --spectrum
+[/] Show signal spectrum
+
+[\] dumphfdl --waterfall
+[/] Display waterfall of received signal
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 8.915e6 -M nfm -s 48k - | dumphfdl --stdin
+[/] Decode HFDL live from RTL-SDR stream
+
+[\] rtl_sdr -f 9.645e6 -s 48k - | csdr convert_u8_f | dumphfdl --stdin
+[/] Process SDR IQ stream through CSDR before decoding

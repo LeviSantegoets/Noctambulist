@@ -1,0 +1,85 @@
+[X] dig Command List
+
+[\] dig example.com
+[/] Perform standard DNS lookup for example.com
+
+[\] dig @8.8.8.8 example.com
+[/] Query specific DNS server (Google DNS)
+
+[\] dig example.com A
+[/] Lookup A (IPv4) records
+
+[\] dig example.com AAAA
+[/] Lookup AAAA (IPv6) records
+
+[\] dig example.com MX
+[/] Lookup mail exchanger records
+
+[\] dig example.com NS
+[/] Lookup name server records
+
+[\] dig example.com TXT
+[/] Lookup TXT records
+
+[\] dig example.com SOA
+[/] Lookup start of authority record
+
+[\] dig example.com ANY
+[/] Lookup all records
+
+[\] dig +short example.com
+[/] Show concise output (only the answer)
+
+[\] dig +noall +answer example.com
+[/] Show only the answer section
+
+[\] dig +stats example.com
+[/] Show query statistics
+
+[\] dig +trace example.com
+[/] Trace DNS resolution path
+
+[\] dig +time=5 example.com
+[/] Set timeout to 5 seconds
+
+[\] dig +retry=3 example.com
+[/] Retry failed queries 3 times
+
+[\] dig -x 192.0.2.1
+[/] Reverse lookup of IP address
+
+[\] dig -t PTR 192.0.2.1
+[/] Reverse lookup using PTR record
+
+[\] dig +dnssec example.com
+[/] Query DNSSEC records
+
+[\] dig +multiline example.com
+[/] Display output in multiline format
+
+[\] dig @1.1.1.1 example.com A +short
+[/] Quick lookup using Cloudflare DNS
+
+[\] dig -f domains.txt
+[/] Batch lookup from file
+
+[\] dig +nocmd example.com
+[/] Hide command section in output
+
+[\] dig +nocomments example.com
+[/] Remove comments from output
+
+[\] dig +noquestion example.com
+[/] Hide question section
+
+[\] dig +noauthority example.com
+[/] Hide authority section
+
+[\] dig +noadditional example.com
+[/] Hide additional section
+
+[\] dig +tcp example.com
+[/] Force TCP query instead of UDP
+
+[\] dig +edns=0 example.com
+[/] Disable EDNS (useful for compatibility)

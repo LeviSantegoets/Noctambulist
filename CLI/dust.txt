@@ -1,0 +1,55 @@
+[X] Dust Command List (Rust Disk Usage Tool)
+
+[\] dust
+[/] Show disk usage for current directory
+
+[\] dust /path/to/directory
+[/] Analyze specific directory
+
+[\] dust -d 3
+[/] Limit depth to 3 levels
+
+[\] dust -r
+[/] Reverse sort order
+
+[\] dust -n 20
+[/] Show top 20 largest entries
+
+[\] dust -X
+[/] Stay on same filesystem (ignore mounts)
+
+[\] dust -H
+[/] Include hidden files
+
+[\] dust -b
+[/] Show sizes in bytes
+
+[\] dust -k
+[/] Show sizes in kilobytes
+
+[\] dust -m
+[/] Show sizes in megabytes
+
+[\] dust -g
+[/] Show sizes in gigabytes
+
+[\] dust -p
+[/] Show full paths
+
+[\] dust -c
+[/] Disable colors
+
+[\] dust -s
+[/] Show apparent size instead of disk usage
+
+[\] dust -t
+[/] Show file types
+
+[\] dust --files0-from filelist.txt
+[/] Read list of files from input file
+
+[\] dust -v
+[/] Show version
+
+[\] dust -h
+[/] Show help menu

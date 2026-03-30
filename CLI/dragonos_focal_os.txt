@@ -1,0 +1,229 @@
+# DragonOS Focal OS Commands
+# Format: [\] command [/] description [X] menutitlename
+
+[X] DragonOS Focal OS Command List
+
+# -------------------------
+# SYSTEM INFO
+# -------------------------
+
+[\] uname -a
+[/] Show kernel and system info
+
+[\] lsb_release -a
+[/] Show DragonOS/Ubuntu version
+
+[\] neofetch
+[/] Display system summary
+
+[\] lsmod
+[/] List loaded kernel modules
+
+[\] dmesg | grep -i sdr
+[/] Check SDR-related kernel messages
+
+# -------------------------
+# PACKAGE MANAGEMENT
+# -------------------------
+
+[\] apt update
+[/] Refresh package lists
+
+[\] apt upgrade
+[/] Upgrade installed packages
+
+[\] apt install <package>
+[/] Install a package
+
+[\] apt remove <package>
+[/] Remove a package
+
+[\] apt search <keyword>
+[/] Search for packages
+
+# -------------------------
+# SDR UTILITIES (BUILT-IN)
+# -------------------------
+
+[\] hackrf_info
+[/] Check HackRF One status
+
+[\] rtl_test
+[/] Test RTL-SDR dongle
+
+[\] bladerf-cli -i
+[/] BladeRF interactive shell
+
+[\] uhd_find_devices
+[/] Detect USRP devices
+
+[\] uhd_usrp_probe
+[/] Probe USRP hardware
+
+[\] gqrx
+[/] Launch GQRX SDR GUI
+
+[\] gnuradio-companion
+[/] Launch GNU Radio Companion
+
+[\] inspectrum
+[/] Open IQ file inspector
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] ip a
+[/] Show network interfaces
+
+[\] ip link set wlan0 down
+[/] Bring interface down
+
+[\] ip link set wlan0 up
+[/] Bring interface up
+
+[\] iwconfig
+[/] Show wireless interface info
+
+[\] iw dev wlan0 set type monitor
+[/] Set interface to monitor mode
+
+[\] iw dev wlan0 set channel 6
+[/] Change Wi-Fi channel
+
+[\] ifconfig wlan0mon up
+[/] Bring monitor interface up
+
+# -------------------------
+# WIFI ATTACK TOOLING (BUILT-IN)
+# -------------------------
+
+[\] airmon-ng start wlan0
+[/] Enable monitor mode
+
+[\] airodump-ng wlan0mon
+[/] Scan Wi-Fi networks
+
+[\] mdk4 wlan0mon d
+[/] Deauth attack
+
+[\] hcxdumptool -i wlan0mon -o dump.pcapng
+[/] Capture WPA handshakes/PMKID
+
+[\] hcxpcapngtool dump.pcapng -o hash.hc22000
+[/] Convert capture for Hashcat
+
+# -------------------------
+# BLUETOOTH / RF
+# -------------------------
+
+[\] bluetoothctl
+[/] Bluetooth control shell
+
+[\] btmon
+[/] Monitor Bluetooth traffic
+
+[\] rfkill list
+[/] Show RF kill switches
+
+[\] rfkill unblock all
+[/] Enable all RF devices
+
+# -------------------------
+# AUDIO / DSP
+# -------------------------
+
+[\] pulseaudio --check
+[/] Check PulseAudio status
+
+[\] pactl list sources
+[/] List audio input devices
+
+[\] sox --help
+[/] Show SoX audio processing options
+
+# -------------------------
+# FILESYSTEM & STORAGE
+# -------------------------
+
+[\] df -h
+[/] Show disk usage
+
+[\] lsblk
+[/] List block devices
+
+[\] mount /dev/sdX /mnt
+[/] Mount a device
+
+[\] umount /mnt
+[/] Unmount device
+
+# -------------------------
+# PROCESS & SYSTEM CONTROL
+# -------------------------
+
+[\] systemctl status <service>
+[/] Check service status
+
+[\] systemctl restart <service>
+[/] Restart a service
+
+[\] ps aux
+[/] List running processes
+
+[\] top
+[/] Live process monitor
+
+[\] htop
+[/] Enhanced process monitor
+
+# -------------------------
+# PYTHON / GNU RADIO
+# -------------------------
+
+[\] python3 --version
+[/] Check Python version
+
+[\] pip3 list
+[/] List installed Python packages
+
+[\] gnuradio-companion
+[/] Launch GNU Radio GUI
+
+[\] gr_modtool newmod <name>
+[/] Create new GNU Radio module
+
+# -------------------------
+# SDR RECORDING / PLAYBACK
+# -------------------------
+
+[\] rtl_sdr -f 100M -s 2M out.bin
+[/] Record raw IQ (RTL-SDR)
+
+[\] hackrf_transfer -r out.iq -f 433M
+[/] Record raw IQ (HackRF)
+
+[\] hackrf_transfer -t out.iq -f 433M
+[/] Replay IQ file (HackRF)
+
+[\] inspectrum out.iq
+[/] Analyze IQ visually
+
+# -------------------------
+# MISC UTILITIES
+# -------------------------
+
+[\] screen -ls
+[/] List screen sessions
+
+[\] screen -S sdr
+[/] Create screen session
+
+[\] tmux new -s sdr
+[/] Create tmux session
+
+[\] wget <url>
+[/] Download file
+
+[\] curl <url>
+[/] Fetch URL data

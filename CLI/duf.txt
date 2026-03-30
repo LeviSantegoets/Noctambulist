@@ -1,0 +1,49 @@
+[X] DUF Command List (Disk Usage/Filesystem Utility)
+
+[\] duf
+[/] Show disk usage summary for all mounted filesystems
+
+[\] duf -h
+[/] Human-readable sizes (e.g., 1K, 1M, 1G)
+
+[\] duf -s
+[/] Show summary only (total per filesystem)
+
+[\] duf -t ext4
+[/] Show only filesystems of type ext4
+
+[\] duf -t ext4,tmpfs
+[/] Show multiple filesystem types
+
+[\] duf --type-ignore tmpfs
+[/] Exclude specific filesystem type
+
+[\] duf -a
+[/] Show all filesystems, including zero-size
+
+[\] duf -f
+[/] Show output in filesystem order
+
+[\] duf --color=always
+[/] Force color output
+
+[\] duf --color=auto
+[/] Auto color output
+
+[\] duf --color=never
+[/] Disable color output
+
+[\] duf -j
+[/] Output in JSON format
+
+[\] duf --output json
+[/] Same as -j, machine-readable output
+
+[\] duf -y
+[/] Skip confirmation prompts
+
+[\] duf --help
+[/] Show help menu
+
+[\] duf --version
+[/] Show duf version

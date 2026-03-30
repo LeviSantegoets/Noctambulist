@@ -1,0 +1,46 @@
+[X] Dstat Command List (System Resource Monitoring)
+
+[\] dstat
+[/] Show CPU, disk, network, and memory stats in real time
+
+[\] dstat -c
+[/] Show CPU statistics only
+
+[\] dstat -d
+[/] Show disk I/O statistics only
+
+[\] dstat -n
+[/] Show network statistics only
+
+[\] dstat -m
+[/] Show memory statistics only
+
+[\] dstat -t
+[/] Show timestamp with each line
+
+[\] dstat -a
+[/] Show all statistics
+
+[\] dstat -c -d -n -m
+[/] Combine CPU, disk, network, memory stats
+
+[\] dstat --top-cpu
+[/] Show processes consuming most CPU
+
+[\] dstat --top-mem
+[/] Show processes consuming most memory
+
+[\] dstat --output output.csv
+[/] Save output to CSV file
+
+[\] dstat -T --output output.csv
+[/] Include timestamp in CSV output
+
+[\] dstat -p
+[/] Show interrupts and context switches
+
+[\] dstat --help
+[/] Show help menu
+
+[\] dstat --version
+[/] Show dstat version

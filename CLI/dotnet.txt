@@ -1,0 +1,145 @@
+[X] .NET CLI Command List
+
+[\] dotnet --info
+[/] Show installed .NET SDKs and runtimes
+
+[\] dotnet --list-sdks
+[/] List installed SDK versions
+
+[\] dotnet --list-runtimes
+[/] List installed runtimes
+
+[\] dotnet help
+[/] Show help menu
+
+[\] dotnet new console
+[/] Create a new console application
+
+[\] dotnet new webapi
+[/] Create a new Web API project
+
+[\] dotnet new mvc
+[/] Create an MVC web app
+
+[\] dotnet new classlib
+[/] Create a class library
+
+[\] dotnet new xunit
+[/] Create an xUnit test project
+
+[\] dotnet new sln
+[/] Create a solution file
+
+[\] dotnet new --list
+[/] List all available templates
+
+[\] dotnet new <template> -n MyProject
+[/] Create project with custom name
+
+[\] dotnet sln add MyProject/MyProject.csproj
+[/] Add project to solution
+
+[\] dotnet sln remove MyProject/MyProject.csproj
+[/] Remove project from solution
+
+[\] dotnet add reference ../Lib/Lib.csproj
+[/] Add project reference
+
+[\] dotnet remove reference ../Lib/Lib.csproj
+[/] Remove project reference
+
+[\] dotnet add package Newtonsoft.Json
+[/] Add NuGet package
+
+[\] dotnet remove package Newtonsoft.Json
+[/] Remove NuGet package
+
+[\] dotnet restore
+[/] Restore project dependencies
+
+[\] dotnet build
+[/] Build project
+
+[\] dotnet build -c Release
+[/] Build in Release mode
+
+[\] dotnet run
+[/] Run project
+
+[\] dotnet run --project MyProject.csproj
+[/] Run specific project
+
+[\] dotnet publish
+[/] Publish application
+
+[\] dotnet publish -c Release -r win-x64
+[/] Publish self‑contained app for Windows
+
+[\] dotnet publish -r linux-x64 --self-contained true
+[/] Publish self‑contained Linux build
+
+[\] dotnet test
+[/] Run all tests
+
+[\] dotnet test --filter Category=Unit
+[/] Run tests by category
+
+[\] dotnet test --logger "trx"
+[/] Output test results in TRX format
+
+[\] dotnet test --collect:"XPlat Code Coverage"
+[/] Collect code coverage
+
+[\] dotnet nuget list source
+[/] List NuGet sources
+
+[\] dotnet nuget add source <url> -n MySource
+[/] Add NuGet source
+
+[\] dotnet nuget remove source MySource
+[/] Remove NuGet source
+
+[\] dotnet pack
+[/] Create NuGet package from project
+
+[\] dotnet nuget push *.nupkg -s <source>
+[/] Push package to feed
+
+[\] dotnet tool list -g
+[/] List global tools
+
+[\] dotnet tool install -g dotnet-ef
+[/] Install global tool (example: Entity Framework)
+
+[\] dotnet tool update -g dotnet-ef
+[/] Update global tool
+
+[\] dotnet tool uninstall -g dotnet-ef
+[/] Uninstall global tool
+
+[\] dotnet ef migrations add InitialCreate
+[/] Add migration
+
+[\] dotnet ef database update
+[/] Apply migrations
+
+[\] dotnet ef database drop
+[/] Drop database
+
+[\] dotnet ef dbcontext info
+[/] Show DbContext info
+
+[\] dotnet ef migrations list
+[/] List migrations
+
+[\] dotnet exec app.dll
+[/] Execute a compiled .NET DLL
+
+[\] dotnet clean
+[/] Clean build output
+
+[\] dotnet watch run
+[/] Run with auto‑reload on file changes
+
+[\] dotnet watch test
+[/] Auto‑run tests on file changes

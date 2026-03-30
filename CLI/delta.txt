@@ -1,0 +1,64 @@
+[X] Delta Command List
+
+[\] git diff | delta
+[/] View git diff with syntax highlighting
+
+[\] git show --color=always | delta
+[/] Highlight a single commit
+
+[\] git log -p | delta
+[/] Show commit history with colored diffs
+
+[\] git diff --cached | delta
+[/] Show staged changes with delta
+
+[\] git diff HEAD~1 | delta
+[/] Compare with previous commit
+
+[\] git diff branch1 branch2 | delta
+[/] Compare two branches
+
+[\] git diff --stat | delta
+[/] Show diff statistics (files changed, insertions, deletions)
+
+[\] git diff --color-only | delta
+[/] Force colored output for piping
+
+[\] git diff -U5 | delta
+[/] Show 5 lines of context
+
+[\] git diff --word-diff | delta
+[/] Highlight word-level changes
+
+[\] git diff --color-moved | delta
+[/] Highlight moved code blocks
+
+[\] git diff --no-index oldfile newfile | delta
+[/] Compare two files outside git repository
+
+[\] git diff --relative=src/ | delta
+[/] Show diff relative to a subdirectory
+
+[\] git diff --inter-hunk-context=3 | delta
+[/] Show context around changes
+
+[\] git config --global pager.diff delta
+[/] Set delta as default git diff pager
+
+[\] git config --global delta.syntax-theme Dracula
+[/] Set delta syntax theme
+
+[\] git config --global delta.side-by-side true
+[/] Enable side-by-side diff view
+
+[\] git config --global delta.line-numbers true
+[/] Show line numbers in diff
+
+[\] git config --global delta.navigate true
+[/] Enable navigation shortcuts
+
+[\] delta --help
+[/] Show help menu
+
+[\] delta --version
+[/] Show delta version
