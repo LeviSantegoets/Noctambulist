@@ -1,0 +1,85 @@
+[X] FD Command List (Rust Fast File Finder)
+
+[\] fd pattern
+[/] Search for files and directories matching pattern in current directory
+
+[\] fd pattern /path/to/search
+[/] Search in specific directory
+
+[\] fd -i pattern
+[/] Case-insensitive search
+
+[\] fd -I pattern
+[/] Ignore `.gitignore` and hidden files
+
+[\] fd -t f pattern
+[/] Search for files only
+
+[\] fd -t d pattern
+[/] Search for directories only
+
+[\] fd -t l pattern
+[/] Search for symbolic links only
+
+[\] fd -e txt pattern
+[/] Search only files with .txt extension
+
+[\] fd -E '*.log' pattern
+[/] Exclude files matching pattern
+
+[\] fd -x command {}
+[/] Execute command on each search result
+
+[\] fd -X command {}
+[/] Execute command on all results at once
+
+[\] fd -d 2 pattern
+[/] Limit search depth to 2
+
+[\] fd -H pattern
+[/] Include hidden files and directories
+
+[\] fd -L pattern
+[/] Follow symbolic links
+
+[\] fd --absolute-path pattern
+[/] Print absolute paths
+
+[\] fd --base-directory /path pattern
+[/] Search relative to base directory
+
+[\] fd -s pattern
+[/] Only show results in current working directory (no parent dirs)
+
+[\] fd --color=always pattern
+[/] Force color output
+
+[\] fd --color=auto pattern
+[/] Colorize output automatically
+
+[\] fd --color=never pattern
+[/] Disable colored output
+
+[\] fd -j 4 pattern
+[/] Use 4 threads for searching
+
+[\] fd --regex pattern
+[/] Interpret pattern as a regular expression
+
+[\] fd --glob pattern
+[/] Interpret pattern as glob (default)
+
+[\] fd --type-add 'md:*.md' -tmd pattern
+[/] Add custom type and search
+
+[\] fd --exec-batch command {}
+[/] Run command once with all results
+
+[\] fd --exec command {} +
+[/] Same as above (POSIX style)
+
+[\] fd --help
+[/] Show help menu
+
+[\] fd --version
+[/] Show fd version

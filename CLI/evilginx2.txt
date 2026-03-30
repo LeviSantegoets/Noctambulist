@@ -1,0 +1,76 @@
+[X] evilginx2 Command List
+
+[\] evilginx2
+[/] Launch Evilginx2 interactive console
+
+[\] help
+[/] Show available commands (inside console)
+
+[\] config domain example.com
+[/] Set base domain for phishing campaigns
+
+[\] config ip 192.168.1.10
+[/] Set server public IP
+
+[\] config redirect_url https://example.com
+[/] Set redirect URL after login
+
+[\] phishlets
+[/] List available phishlets
+
+[\] phishlets hostname <phishlet> sub.example.com
+[/] Assign hostname to phishlet
+
+[\] phishlets enable <phishlet>
+[/] Enable selected phishlet
+
+[\] phishlets disable <phishlet>
+[/] Disable phishlet
+
+[\] lures create <phishlet>
+[/] Create phishing lure
+
+[\] lures get-url <id>
+[/] Generate phishing URL for lure
+
+[\] lures edit <id>
+[/] Modify lure settings
+
+[\] lures delete <id>
+[/] Delete lure
+
+[\] sessions
+[/] List captured sessions
+
+[\] sessions <id>
+[/] View details of specific session
+
+[\] sessions delete <id>
+[/] Delete captured session
+
+[\] blacklist add <ip>
+[/] Add IP to blacklist
+
+[\] blacklist remove <ip>
+[/] Remove IP from blacklist
+
+[\] blacklist
+[/] Show blacklisted IPs
+
+[\] clear
+[/] Clear console output
+
+[\] exit
+[/] Exit Evilginx2 console
+
+[\] evilginx2 -p ./phishlets
+[/] Start Evilginx2 with custom phishlets directory
+
+[\] evilginx2 -developer
+[/] Enable developer/debug mode
+
+[\] evilginx2 -h
+[/] Show help menu
+
+[\] evilginx2 --version
+[/] Show version

@@ -1,0 +1,28 @@
+[X] Hexyl Command List (Hex Viewer)
+
+[\] hexyl file
+[/] View file in hex and ASCII side by side
+
+[\] hexyl -C file
+[/] Colorize output
+
+[\] hexyl -n 64 file
+[/] Show first 64 bytes
+
+[\] hexyl -s 16 file
+[/] Start at byte offset 16
+
+[\] hexyl -l 128 file
+[/] Limit output to 128 bytes
+
+[\] hexyl -c file
+[/] Show only ASCII characters
+
+[\] hexyl -v file
+[/] Show non-printable characters
+
+[\] hexyl -h
+[/] Show help menu
+
+[\] hexyl --version
+[/] Show version

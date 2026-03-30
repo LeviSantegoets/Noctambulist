@@ -1,0 +1,25 @@
+[X] Export Command List (Shell Environment)
+
+[\] export VAR=value
+[/] Set environment variable
+
+[\] export PATH=$PATH:/new/path
+[/] Add directory to PATH
+
+[\] export -n VAR
+[/] Remove variable from export list
+
+[\] export -p
+[/] List all exported variables
+
+[\] export VAR
+[/] Export existing shell variable
+
+[\] export VAR=$(command)
+[/] Export result of command as variable
+
+[\] export -f function_name
+[/] Export shell function to subshells
+
+[\] export --help
+[/] Show help menu

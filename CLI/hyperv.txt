@@ -1,0 +1,204 @@
+# Hyper‑V Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Hyper‑V Command List
+
+# -------------------------
+# INSTALLATION & ROLE MGMT
+# -------------------------
+
+[\] Install-WindowsFeature Hyper-V -IncludeManagementTools
+[/] Install Hyper‑V role
+
+[\] Get-WindowsFeature Hyper-V
+[/] Check if Hyper‑V is installed
+
+[\] Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V
+[/] Enable Hyper‑V on Windows (non‑server)
+
+# -------------------------
+# VM CREATION & REMOVAL
+# -------------------------
+
+[\] New-VM -Name "VM01" -MemoryStartupBytes 4GB -Generation 2
+[/] Create a new VM
+
+[\] New-VM -Name "VM01" -MemoryStartupBytes 4GB -SwitchName "vSwitch"
+[/] Create VM and attach to virtual switch
+
+[\] Remove-VM -Name "VM01"
+[/] Delete a VM
+
+# -------------------------
+# VM POWER CONTROL
+# -------------------------
+
+[\] Start-VM -Name "VM01"
+[/] Start a VM
+
+[\] Stop-VM -Name "VM01"
+[/] Stop a VM
+
+[\] Restart-VM -Name "VM01"
+[/] Restart a VM
+
+[\] Suspend-VM -Name "VM01"
+[/] Pause a VM
+
+[\] Resume-VM -Name "VM01"
+[/] Resume a paused VM
+
+# -------------------------
+# VM INFORMATION
+# -------------------------
+
+[\] Get-VM
+[/] List all VMs
+
+[\] Get-VM -Name "VM01"
+[/] Show VM details
+
+[\] Get-VMNetworkAdapter -VMName "VM01"
+[/] Show VM network adapters
+
+[\] Get-VMDvdDrive -VMName "VM01"
+[/] Show VM DVD drives
+
+# -------------------------
+# CPU & MEMORY CONFIG
+# -------------------------
+
+[\] Set-VMProcessor -VMName "VM01" -Count 4
+[/] Assign CPU cores
+
+[\] Set-VMMemory -VMName "VM01" -DynamicMemoryEnabled $true
+[/] Enable dynamic memory
+
+[\] Set-VMMemory -VMName "VM01" -StartupBytes 4GB -MinimumBytes 2GB -MaximumBytes 8GB
+[/] Configure dynamic memory limits
+
+# -------------------------
+# STORAGE (VHD/VHDX)
+# -------------------------
+
+[\] New-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 60GB -Dynamic
+[/] Create a dynamic VHDX
+
+[\] New-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 60GB -Fixed
+[/] Create a fixed-size VHDX
+
+[\] Add-VMHardDiskDrive -VMName "VM01" -Path "C:\VMs\disk.vhdx"
+[/] Attach a virtual disk
+
+[\] Remove-VMHardDiskDrive -VMName "VM01" -ControllerNumber 0 -ControllerLocation 1
+[/] Remove a virtual disk
+
+[\] Resize-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 100GB
+[/] Expand a VHDX
+
+# -------------------------
+# ISO / DVD MANAGEMENT
+# -------------------------
+
+[\] Add-VMDvdDrive -VMName "VM01" -Path "C:\ISOs\setup.iso"
+[/] Attach ISO to VM
+
+[\] Set-VMDvdDrive -VMName "VM01" -Path $null
+[/] Eject ISO
+
+# -------------------------
+# VIRTUAL SWITCHES
+# -------------------------
+
+[\] New-VMSwitch -Name "vSwitch" -NetAdapterName "Ethernet"
+[/] Create external virtual switch
+
+[\] New-VMSwitch -Name "InternalSwitch" -SwitchType Internal
+[/] Create internal switch
+
+[\] New-VMSwitch -Name "PrivateSwitch" -SwitchType Private
+[/] Create private switch
+
+[\] Get-VMSwitch
+[/] List virtual switches
+
+[\] Remove-VMSwitch -Name "vSwitch"
+[/] Delete virtual switch
+
+# -------------------------
+# NETWORK ADAPTERS
+# -------------------------
+
+[\] Add-VMNetworkAdapter -VMName "VM01" -SwitchName "vSwitch"
+[/] Add network adapter to VM
+
+[\] Set-VMNetworkAdapter -VMName "VM01" -StaticMacAddress "00-15-5D-01-02-03"
+[/] Set static MAC address
+
+[\] Set-VMNetworkAdapterVlan -VMName "VM01" -Access -VlanId 10
+[/] Assign VLAN tag
+
+# -------------------------
+# CHECKPOINTS (SNAPSHOTS)
+# -------------------------
+
+[\] Checkpoint-VM -Name "VM01"
+[/] Create a checkpoint
+
+[\] Get-VMSnapshot -VMName "VM01"
+[/] List checkpoints
+
+[\] Restore-VMSnapshot -VMName "VM01" -Name "Checkpoint1"
+[/] Restore checkpoint
+
+[\] Remove-VMSnapshot -VMName "VM01" -Name "Checkpoint1"
+[/] Delete checkpoint
+
+# -------------------------
+# VM EXPORT / IMPORT
+# -------------------------
+
+[\] Export-VM -Name "VM01" -Path "D:\Exports"
+[/] Export VM
+
+[\] Import-VM -Path "D:\Exports\VM01"
+[/] Import VM
+
+# -------------------------
+# HYPER‑V HOST MANAGEMENT
+# -------------------------
+
+[\] Get-VMHost
+[/] Show Hyper‑V host settings
+
+[\] Set-VMHost -VirtualHardDiskPath "D:\VMs\VHDs"
+[/] Change default VHD path
+
+[\] Set-VMHost -VirtualMachinePath "D:\VMs"
+[/] Change default VM path
+
+# -------------------------
+# HYPER‑V REPLICATION
+# -------------------------
+
+[\] Enable-VMReplication -VMName "VM01" -ReplicaServerName "replica01" -ReplicaServerPort 80
+[/] Enable VM replication
+
+[\] Start-VMInitialReplication -VMName "VM01"
+[/] Start initial replication
+
+[\] Get-VMReplication -VMName "VM01"
+[/] Check replication status
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] Get-EventLog -LogName "Microsoft-Windows-Hyper-V-VMMS/Admin"
+[/] View Hyper‑V event logs
+
+[\] Get-VMIntegrationService -VMName "VM01"
+[/] Check integration services
+
+[\] Repair-VM -Name "VM01"
+[/] Attempt to repair VM configuration

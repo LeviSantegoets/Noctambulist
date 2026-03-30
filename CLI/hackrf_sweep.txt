@@ -1,0 +1,84 @@
+[X] HackRF Sweep Command List
+
+[\] hackrf_sweep
+[/] Perform a basic spectrum sweep using HackRF
+
+[\] hackrf_sweep -h
+[/] Show help and all command options
+
+# -------------------------
+# FREQUENCY RANGE
+# -------------------------
+
+[\] hackrf_sweep -f 100:200
+[/] Sweep from 100 MHz to 200 MHz
+
+[\] hackrf_sweep -f 400:500
+[/] Sweep UHF band from 400 MHz to 500 MHz
+
+[\] hackrf_sweep -f 88:108
+[/] Sweep FM broadcast band
+
+[\] hackrf_sweep -f 850:960
+[/] Sweep GSM cellular bands
+
+# -------------------------
+# STEP SIZE / RESOLUTION
+# -------------------------
+
+[\] hackrf_sweep -w 100000
+[/] Set frequency step size to 100 kHz
+
+[\] hackrf_sweep -w 50000
+[/] Set frequency step size to 50 kHz
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] hackrf_sweep -l 32
+[/] Set LNA gain to 32 dB
+
+[\] hackrf_sweep -g 40
+[/] Set VGA gain to 40 dB
+
+[\] hackrf_sweep -a 1
+[/] Enable RF amplifier
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] hackrf_sweep -f 88:108 -o fm_sweep.csv
+[/] Save sweep results to CSV file
+
+[\] hackrf_sweep -f 400:500 -o uhf_sweep.csv
+[/] Save UHF sweep to CSV
+
+[\] hackrf_sweep -f 100:200 -o output.txt
+[/] Save results in text format
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] hackrf_sweep -1
+[/] Perform a single sweep
+
+[\] hackrf_sweep -R
+[/] Use real-time processing
+
+[\] hackrf_sweep -v
+[/] Enable verbose output
+
+[\] hackrf_sweep -f 100:200 -s 2000000
+[/] Set sample rate to 2 MSPS
+
+[\] hackrf_sweep -p 20
+[/] Apply 20 PPM frequency correction
+
+[\] hackrf_sweep -d 0
+[/] Use first HackRF device
+
+[\] hackrf_sweep -d 1
+[/] Use second HackRF device

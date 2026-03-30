@@ -1,0 +1,121 @@
+# Hashcat Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Hashcat Command List
+
+[\] hashcat -I
+[/] Show GPU information and supported features
+
+[\] hashcat -b
+[/] Benchmark all hash modes
+
+[\] hashcat -b -m 0
+[/] Benchmark a specific hash mode (MD5)
+
+[\] hashcat -m 0 hash.txt wordlist.txt
+[/] Crack MD5 hashes with a wordlist
+
+[\] hashcat -m 1000 hash.txt wordlist.txt
+[/] Crack NTLM hashes
+
+[\] hashcat -m 1800 hash.txt wordlist.txt
+[/] Crack SHA-512 hashes
+
+[\] hashcat -m 13100 hash.txt wordlist.txt
+[/] Crack Kerberos 5 TGS-REP hashes
+
+[\] hashcat -m 22000 wifi.hc22000 wordlist.txt
+[/] Crack WPA/WPA2 handshake (HC22000 format)
+
+[\] hashcat -m 22000 wifi.hc22000 -a 3 ?d?d?d?d?d?d?d?d
+[/] WPA brute-force (8 digits)
+
+[\] hashcat -m 0 hash.txt -a 0 wordlist.txt
+[/] Straight attack (wordlist)
+
+[\] hashcat -m 0 hash.txt -a 1 wordlist1.txt wordlist2.txt
+[/] Combination attack
+
+[\] hashcat -m 0 hash.txt -a 3 ?l?l?l?l?d?d
+[/] Mask attack (4 letters + 2 digits)
+
+[\] hashcat -m 0 hash.txt -a 3 ?u?u?u?u?d?d
+[/] Mask attack (uppercase + digits)
+
+[\] hashcat -m 0 hash.txt -a 3 ?a?a?a?a
+[/] Mask attack (all printable characters)
+
+[\] hashcat -m 0 hash.txt -a 0 wordlist.txt -r rules/best64.rule
+[/] Wordlist + rules attack
+
+[\] hashcat -m 0 hash.txt -a 0 wordlist.txt -r rules/dive.rule
+[/] Deep mutation rules
+
+[\] hashcat -m 0 hash.txt --show
+[/] Show cracked passwords
+
+[\] hashcat -m 0 hash.txt --left
+[/] Show uncracked hashes
+
+[\] hashcat -m 0 hash.txt --username
+[/] Ignore usernames in hash file
+
+[\] hashcat -m 0 hash.txt --session=mycrack
+[/] Create a named cracking session
+
+[\] hashcat --restore=mycrack
+[/] Restore a paused session
+
+[\] hashcat -m 0 hash.txt --potfile-disable
+[/] Disable potfile usage
+
+[\] hashcat -m 0 hash.txt --potfile-path=my.pot
+[/] Use a custom potfile
+
+[\] hashcat -m 0 hash.txt --force
+[/] Force Hashcat to run (not recommended)
+
+[\] hashcat -m 0 hash.txt --status
+[/] Show cracking status
+
+[\] hashcat -m 0 hash.txt --status-timer=10
+[/] Update status every 10 seconds
+
+[\] hashcat -m 0 hash.txt --outfile=cracked.txt
+[/] Save cracked passwords to a file
+
+[\] hashcat -m 0 hash.txt --outfile-format=2
+[/] Output only cracked passwords
+
+[\] hashcat -m 0 hash.txt --gpu-temp-abort=90
+[/] Abort if GPU reaches 90°C
+
+[\] hashcat -m 0 hash.txt --workload-profile=4
+[/] Maximum GPU workload
+
+[\] hashcat -m 0 hash.txt --opencl-device-types=1
+[/] Use only GPU devices
+
+[\] hashcat -m 0 hash.txt --opencl-device-types=2
+[/] Use only CPU devices
+
+[\] hashcat -m 0 hash.txt --speed-only
+[/] Show cracking speed without cracking
+
+[\] hashcat -m 0 hash.txt --example-hashes
+[/] Show example hashes for each mode
+
+[\] zip2john file.zip > hash.txt
+[/] Extract ZIP hash for cracking
+
+[\] rar2john file.rar > hash.txt
+[/] Extract RAR hash
+
+[\] pdf2john file.pdf > hash.txt
+[/] Extract PDF hash
+
+[\] keepass2john database.kdbx > hash.txt
+[/] Extract KeePass hash
+
+[\] truecrypt2john volume.tc > hash.txt
+[/] Extract TrueCrypt/VeraCrypt hash

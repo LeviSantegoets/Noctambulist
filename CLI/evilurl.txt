@@ -1,0 +1,49 @@
+[X] EvilURL Command List
+
+[\] evilurl
+[/] Show help menu
+
+[\] evilurl -u example.com
+[/] Generate homoglyph (IDN) domain variations
+
+[\] evilurl -u example.com  -o results.txt
+[/] Save output to file
+
+[\] evilurl -u example.com  -t all
+[/] Generate all available domain mutation types
+
+[\] evilurl -u example.com  -t homoglyph
+[/] Generate homoglyph‑only variations
+
+[\] evilurl -u example.com  -t hyphenation
+[/] Generate hyphenation variations
+
+[\] evilurl -u example.com  -t omission
+[/] Generate omission variations
+
+[\] evilurl -u example.com  -t repetition
+[/] Generate repeated‑character variations
+
+[\] evilurl -u example.com  -t replacement
+[/] Generate character‑replacement variations
+
+[\] evilurl -u example.com  -t insertion
+[/] Generate insertion variations
+
+[\] evilurl -u example.com  -t subdomain
+[/] Generate subdomain variations
+
+[\] evilurl -u example.com  --punycode
+[/] Convert generated domains to Punycode
+
+[\] evilurl -u example.com  --no-color
+[/] Disable colored output
+
+[\] evilurl -u example.com  --json
+[/] Output results in JSON format
+
+[\] evilurl -u example.com  --limit 50
+[/] Limit number of generated domains
+
+[\] evilurl --update
+[/] Update EvilURL

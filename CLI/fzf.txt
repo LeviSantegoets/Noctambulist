@@ -1,0 +1,76 @@
+[X] FZF Command List (Fuzzy Finder)
+
+[\] fzf
+[/] Launch interactive fuzzy finder on stdin input
+
+[\] fzf -f pattern
+[/] Start with initial search pattern
+
+[\] fzf --reverse
+[/] Display results from bottom to top
+
+[\] fzf --multi
+[/] Enable multi-select
+
+[\] fzf --no-sort
+[/] Disable sorting (keep input order)
+
+[\] fzf --height 40%
+[/] Set height of fzf window
+
+[\] fzf --prompt "Search> "
+[/] Customize prompt text
+
+[\] fzf --info=inline
+[/] Show search info inline
+
+[\] fzf --border
+[/] Show a border around fzf
+
+[\] fzf --cycle
+[/] Enable cycling through results
+
+[\] fzf --ansi
+[/] Enable ANSI color codes
+
+[\] fzf --bind "ctrl-d:half-page-down"
+[/] Bind keys for scrolling
+
+[\] fzf --bind "ctrl-u:half-page-up"
+[/] Bind keys for scrolling up
+
+[\] fzf --preview 'cat {}'
+[/] Show preview of selected item
+
+[\] fzf --preview-window=up:10:wrap
+[/] Customize preview window (top, 10 lines, wrapped)
+
+[\] fzf --preview 'bat --style=numbers --color=always {}'
+[/] Syntax-highlighted preview with bat
+
+[\] fzf --expect=ctrl-v,ctrl-x
+[/] Return key pressed along with selection
+
+[\] fzf --read0
+[/] Read null-separated input (useful with find -print0)
+
+[\] fzf --print0
+[/] Output null-separated results
+
+[\] fzf --exact
+[/] Match exact string only
+
+[\] fzf --no-hscroll
+[/] Disable horizontal scrolling
+
+[\] fzf --margin=1,2
+[/] Set top/bottom margins
+
+[\] fzf --cycle --reverse --height 50%
+[/] Combine options for custom layout
+
+[\] fzf --help
+[/] Show help menu
+
+[\] fzf --version
+[/] Show fzf version

@@ -1,0 +1,46 @@
+[X] Etckeeper Command List (Version Control for /etc)
+
+[\] etckeeper init
+[/] Initialize version control for /etc
+
+[\] etckeeper commit "Initial commit"
+[/] Commit changes to /etc
+
+[\] etckeeper vcs status
+[/] Show status of /etc repository
+
+[\] etckeeper vcs diff
+[/] Show differences of /etc changes
+
+[\] etckeeper vcs log
+[/] Show commit history
+
+[\] etckeeper vcs add file
+[/] Add file to version control
+
+[\] etckeeper vcs remove file
+[/] Remove file from version control
+
+[\] etckeeper vcs push
+[/] Push changes to remote repository
+
+[\] etckeeper vcs pull
+[/] Pull changes from remote repository
+
+[\] etckeeper pre-install
+[/] Commit changes before package installation
+
+[\] etckeeper post-install
+[/] Commit changes after package installation
+
+[\] etckeeper commit "Message"
+[/] Commit manually with custom message
+
+[\] etckeeper uninit
+[/] Remove etckeeper from /etc
+
+[\] etckeeper --help
+[/] Show help menu
+
+[\] etckeeper --version
+[/] Show etckeeper version

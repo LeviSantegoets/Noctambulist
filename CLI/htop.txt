@@ -1,0 +1,124 @@
+[X] htop Command List
+
+[\] htop
+[/] Launch htop process viewer
+
+[\] htop -d 10
+[/] Set update delay (tenths of seconds)
+
+[\] htop -u user
+[/] Show processes for specific user
+
+[\] htop -p PID
+[/] Monitor specific process ID(s)
+
+[\] htop -s PERCENT_CPU
+[/] Sort by CPU usage on start
+
+[\] htop -s PERCENT_MEM
+[/] Sort by memory usage on start
+
+[\] htop -t
+[/] Start in tree view
+
+[\] htop --help
+[/] Show help menu
+
+[\] htop --version
+[/] Show version
+
+[\] F1
+[/] Help screen
+
+[\] F2
+[/] Setup / configuration menu
+
+[\] F3
+[/] Search for process
+
+[\] F4
+[/] Filter processes
+
+[\] F5
+[/] Toggle tree view
+
+[\] F6
+[/] Change sort column
+
+[\] F7
+[/] Decrease nice value (increase priority)
+
+[\] F8
+[/] Increase nice value (decrease priority)
+
+[\] F9
+[/] Kill selected process
+
+[\] F10
+[/] Quit htop
+
+[\] ↑ / ↓
+[/] Navigate process list
+
+[\] ← / →
+[/] Collapse / expand tree (tree view)
+
+[\] Enter
+[/] Show process details
+
+[\] Space
+[/] Tag process
+
+[\] U
+[/] Clear all tags
+
+[\] K
+[/] Kill process (alternative)
+
+[\] S
+[/] Trace system calls (strace)
+
+[\] L
+[/] List open files (lsof)
+
+[\] H
+[/] Toggle threads display
+
+[\] T
+[/] Toggle tree view (shortcut)
+
+[\] P
+[/] Sort by CPU usage
+
+[\] M
+[/] Sort by memory usage
+
+[\] N
+[/] Sort by PID
+
+[\] I
+[/] Invert sort order
+
+[\] +
+[/] Expand all in tree view
+
+[\] -
+[/] Collapse all in tree view
+
+[\] [
+[/] Decrease update frequency
+
+[\] ]
+[/] Increase update frequency
+
+[\] C
+[/] Toggle full command path
+
+[\] W
+[/] Search process online (if supported)
+
+[\] Ctrl + L
+[/] Refresh screen
+
+[\] q
+[/] Quit quickly

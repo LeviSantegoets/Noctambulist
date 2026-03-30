@@ -1,0 +1,76 @@
+[X] htop-ncurses-graph Command List
+
+[\] htop-ncurses-graph
+[/] Launch htop with ncurses-based CPU/Memory graphs
+
+[\] htop-ncurses-graph -h
+[/] Show help menu
+
+[\] htop-ncurses-graph --version
+[/] Show version
+
+[\] htop-ncurses-graph -d 2
+[/] Set update interval to 2 seconds
+
+[\] htop-ncurses-graph -p 1234
+[/] Monitor specific process by PID
+
+[\] htop-ncurses-graph -s cpu
+[/] Sort processes by CPU usage
+
+[\] htop-ncurses-graph -s mem
+[/] Sort processes by memory usage
+
+[\] htop-ncurses-graph -S
+[/] Toggle tree view of processes
+
+[\] htop-ncurses-graph -t
+[/] Toggle detailed CPU/Memory graphs
+
+[\] htop-ncurses-graph -k
+[/] Kill selected process (interactive mode)
+
+[\] htop-ncurses-graph -u user
+[/] Filter processes by user
+
+[\] htop-ncurses-graph -C
+[/] Disable color output
+
+[\] htop-ncurses-graph -b
+[/] Enable batch mode (for logging)
+
+[\] htop-ncurses-graph --log /tmp/logfile.txt
+[/] Save output to log file
+
+[\] htop-ncurses-graph --no-curses
+[/] Disable curses interface
+
+[\] htop-ncurses-graph --help
+[/] Show help menu
+
+[\] htop-ncurses-graph --pause
+[/] Pause updating graphs
+
+[\] htop-ncurses-graph --resume
+[/] Resume updating graphs
+
+[\] htop-ncurses-graph -r
+[/] Reset graph scales
+
+[\] htop-ncurses-graph -w 80
+[/] Set terminal width for graphs
+
+[\] htop-ncurses-graph -l 24
+[/] Set terminal height for graphs
+
+[\] htop-ncurses-graph -x
+[/] Show extended process info
+
+[\] htop-ncurses-graph -m
+[/] Show memory breakdown graphs
+
+[\] htop-ncurses-graph -n
+[/] Show network usage graphs
+
+[\] htop-ncurses-graph -I
+[/] Ignore idle processes in display

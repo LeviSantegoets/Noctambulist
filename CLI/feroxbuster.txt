@@ -1,0 +1,64 @@
+[X] Feroxbuster Command List
+
+[\] feroxbuster -u https://example.com
+[/] Basic scan of a target URL
+
+[\] feroxbuster -u https://example.com -w wordlist.txt
+[/] Specify custom wordlist
+
+[\] feroxbuster -u https://example.com -t 50
+[/] Set number of concurrent threads
+
+[\] feroxbuster -u https://example.com -x .php,.html,.txt
+[/] Append file extensions to scan
+
+[\] feroxbuster -u https://example.com -o output.txt
+[/] Save results to a file
+
+[\] feroxbuster -u https://example.com -of json
+[/] Save output in JSON format
+
+[\] feroxbuster -u https://example.com -v
+[/] Verbose output
+
+[\] feroxbuster -u https://example.com -r
+[/] Follow redirects
+
+[\] feroxbuster -u https://example.com -s 200,301,302
+[/] Filter by HTTP status codes
+
+[\] feroxbuster -u https://example.com -q
+[/] Quiet mode (minimal output)
+
+[\] feroxbuster -u https://example.com -H "Authorization: Bearer TOKEN"
+[/] Add custom headers
+
+[\] feroxbuster -u https://example.com -b "SESSION=abc123"
+[/] Send cookies
+
+[\] feroxbuster -u https://example.com -d "param=FUZZ"
+[/] Fuzz query parameters
+
+[\] feroxbuster -u https://example.com -l
+[/] Show request/response length
+
+[\] feroxbuster -u https://example.com -T 10
+[/] Set timeout per request (seconds)
+
+[\] feroxbuster -u https://example.com -p http://127.0.0.1:8080
+[/] Use proxy
+
+[\] feroxbuster -u https://example.com -r
+[/] Recursive scanning
+
+[\] feroxbuster -u https://example.com -R 2
+[/] Set recursion depth
+
+[\] feroxbuster -u https://example.com --update
+[/] Update Feroxbuster database
+
+[\] feroxbuster -h
+[/] Show help menu
+
+[\] feroxbuster -V
+[/] Show version

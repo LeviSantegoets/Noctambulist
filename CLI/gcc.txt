@@ -1,0 +1,212 @@
+# GCC Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] GCC Command List
+
+# -------------------------
+# BASIC COMPILATION
+# -------------------------
+
+[\] gcc file.c
+[/] Compile file.c into a.out
+
+[\] gcc file.c -o program
+[/] Compile and output as "program"
+
+[\] gcc file1.c file2.c -o program
+[/] Compile multiple source files
+
+[\] gcc -c file.c
+[/] Compile to object file (file.o)
+
+[\] gcc file.o -o program
+[/] Link object file into executable
+
+# -------------------------
+# WARNINGS & DEBUGGING
+# -------------------------
+
+[\] gcc -Wall file.c -o program
+[/] Enable common warnings
+
+[\] gcc -Wextra file.c -o program
+[/] Enable extra warnings
+
+[\] gcc -Werror file.c -o program
+[/] Treat warnings as errors
+
+[\] gcc -g file.c -o program
+[/] Include debug symbols for gdb
+
+[\] gcc -ggdb file.c -o program
+[/] Include gdb‑optimized debug symbols
+
+# -------------------------
+# OPTIMIZATION LEVELS
+# -------------------------
+
+[\] gcc -O0 file.c -o program
+[/] No optimization (default)
+
+[\] gcc -O1 file.c -o program
+[/] Basic optimization
+
+[\] gcc -O2 file.c -o program
+[/] Standard optimization
+
+[\] gcc -O3 file.c -o program
+[/] Maximum optimization
+
+[\] gcc -Ofast file.c -o program
+[/] Aggressive optimization (unsafe)
+
+[\] gcc -Os file.c -o program
+[/] Optimize for size
+
+# -------------------------
+# C & C++ MODE
+# -------------------------
+
+[\] gcc file.c -std=c99 -o program
+[/] Compile using C99 standard
+
+[\] gcc file.c -std=c11 -o program
+[/] Compile using C11 standard
+
+[\] g++ file.cpp -o program
+[/] Compile C++ code
+
+[\] g++ file.cpp -std=c++17 -o program
+[/] Use C++17 standard
+
+# -------------------------
+# INCLUDE PATHS & LIBRARIES
+# -------------------------
+
+[\] gcc file.c -I include/
+[/] Add include directory
+
+[\] gcc file.c -L lib/ -lmylib
+[/] Link against library "mylib"
+
+[\] gcc file.c -lm
+[/] Link math library (libm)
+
+[\] gcc file.c -lpthread
+[/] Link pthreads
+
+# -------------------------
+# PREPROCESSOR OPTIONS
+# -------------------------
+
+[\] gcc -E file.c
+[/] Run preprocessor only
+
+[\] gcc -DDEBUG file.c -o program
+[/] Define macro DEBUG
+
+[\] gcc -UDEBUG file.c -o program
+[/] Undefine macro DEBUG
+
+# -------------------------
+# ASSEMBLY & MACHINE CODE
+# -------------------------
+
+[\] gcc -S file.c
+[/] Output assembly (.s)
+
+[\] gcc -c file.s
+[/] Assemble .s file into .o
+
+[\] objdump -d program
+[/] Disassemble binary
+
+# -------------------------
+# ARCHITECTURE FLAGS
+# -------------------------
+
+[\] gcc file.c -m32 -o program
+[/] Compile 32‑bit binary
+
+[\] gcc file.c -m64 -o program
+[/] Compile 64‑bit binary
+
+[\] gcc file.c -march=native -o program
+[/] Optimize for local CPU
+
+[\] gcc file.c -mtune=native -o program
+[/] Tune for local CPU (portable)
+
+# -------------------------
+# STATIC & SHARED LIBRARIES
+# -------------------------
+
+[\] gcc -static file.c -o program
+[/] Build static binary
+
+[\] gcc -shared -fPIC file.c -o libshared.so
+[/] Build shared library (.so)
+
+[\] gcc file.c -L. -lshared
+[/] Link shared library
+
+# -------------------------
+# MULTI-FILE PROJECTS
+# -------------------------
+
+[\] gcc -c main.c utils.c
+[/] Compile multiple objects
+
+[\] gcc main.o utils.o -o program
+[/] Link objects into executable
+
+[\] make
+[/] Build using Makefile
+
+# -------------------------
+# SECURITY FLAGS
+# -------------------------
+
+[\] gcc file.c -fstack-protector
+[/] Enable stack canaries
+
+[\] gcc file.c -fstack-protector-all
+[/] Stronger stack protection
+
+[\] gcc file.c -D_FORTIFY_SOURCE=2
+[/] Enable fortified functions
+
+[\] gcc file.c -pie -fPIE -o program
+[/] Build position‑independent executable
+
+[\] gcc file.c -Wl,-z,relro,-z,now
+[/] Enable RELRO + immediate binding
+
+# -------------------------
+# LINKER OPTIONS
+# -------------------------
+
+[\] gcc file.c -Wl,-Map=mapfile.map
+[/] Generate linker map file
+
+[\] gcc file.c -Wl,-rpath=/usr/local/lib
+[/] Add runtime library path
+
+[\] gcc file.c -static-libgcc
+[/] Link static libgcc
+
+# -------------------------
+# CLEANUP & UTILITIES
+# -------------------------
+
+[\] strip program
+[/] Remove symbols (smaller binary)
+
+[\] nm program
+[/] List symbols in binary
+
+[\] ldd program
+[/] Show linked libraries
+
+[\] gcc --version
+[/] Show GCC version

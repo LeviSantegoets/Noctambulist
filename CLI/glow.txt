@@ -1,0 +1,52 @@
+[X] Glow (Markdown Terminal Viewer) Command List
+
+[\] glow README.md
+[/] View a markdown file in terminal
+
+[\] glow -s dark README.md
+[/] Use dark color scheme
+
+[\] glow -s light README.md
+[/] Use light color scheme
+
+[\] glow -p README.md
+[/] Show plain text (without syntax)
+
+[\] glow -r README.md
+[/] Render markdown with paging
+
+[\] glow -h
+[/] Show help menu
+
+[\] glow -v
+[/] Show version
+
+[\] glow .
+[/] Browse all markdown files in current directory
+
+[\] glow -g README.md
+[/] Preview GitHub-flavored markdown
+
+[\] glow -n 10 README.md
+[/] Limit number of lines to display
+
+[\] glow -w 80 README.md
+[/] Set terminal width
+
+[\] glow -c solarized-dark README.md
+[/] Use custom color scheme
+
+[\] glow -l README.md
+[/] List headers in markdown
+
+[\] glow -x README.md
+[/] Open in external pager (like less)
+
+[\] glow --theme=dark README.md
+[/] Apply theme explicitly
+
+[\] glow --help
+[/] Show help menu
+
+[\] glow --version
+[/] Show version

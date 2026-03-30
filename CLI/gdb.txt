@@ -1,0 +1,231 @@
+# GDB Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] GDB Command List
+
+# -------------------------
+# STARTING GDB
+# -------------------------
+
+[\] gdb program
+[/] Start GDB with executable
+
+[\] gdb program core
+[/] Debug program with core dump
+
+[\] gdb --args program arg1 arg2
+[/] Start GDB with program arguments
+
+# -------------------------
+# RUNNING & CONTROLLING EXECUTION
+# -------------------------
+
+[\] run
+[/] Start program
+
+[\] run arg1 arg2
+[/] Run program with arguments
+
+[\] continue
+[/] Continue execution after breakpoint
+
+[\] next
+[/] Step over (skip function calls)
+
+[\] step
+[/] Step into (enter functions)
+
+[\] finish
+[/] Run until current function returns
+
+[\] until
+[/] Run until next line outside loop
+
+[\] kill
+[/] Stop running program
+
+# -------------------------
+# BREAKPOINTS
+# -------------------------
+
+[\] break main
+[/] Set breakpoint at function main
+
+[\] break file.c:42
+[/] Break at line 42 in file.c
+
+[\] break *0x00400510
+[/] Break at memory address
+
+[\] break if x==5
+[/] Conditional breakpoint
+
+[\] info breakpoints
+[/] List breakpoints
+
+[\] delete 1
+[/] Delete breakpoint #1
+
+[\] disable 1
+[/] Disable breakpoint #1
+
+[\] enable 1
+[/] Enable breakpoint #1
+
+# -------------------------
+# WATCHPOINTS (MEMORY WATCH)
+# -------------------------
+
+[\] watch variable
+[/] Break when variable changes
+
+[\] rwatch variable
+[/] Break when variable is read
+
+[\] awatch variable
+[/] Break when variable is read or written
+
+[\] info watchpoints
+[/] List watchpoints
+
+# -------------------------
+# INSPECTING VARIABLES
+# -------------------------
+
+[\] print x
+[/] Print value of variable x
+
+[\] print *ptr
+[/] Print value pointed to by ptr
+
+[\] print/x x
+[/] Print in hex
+
+[\] print/d x
+[/] Print in decimal
+
+[\] print/t x
+[/] Print in binary
+
+[\] display x
+[/] Automatically print x every step
+
+[\] undisplay 1
+[/] Remove display #1
+
+# -------------------------
+# STACK & FRAMES
+# -------------------------
+
+[\] backtrace
+[/] Show call stack
+
+[\] backtrace full
+[/] Show stack with locals
+
+[\] frame 2
+[/] Switch to stack frame #2
+
+[\] info locals
+[/] Show local variables
+
+[\] info args
+[/] Show function arguments
+
+# -------------------------
+# MEMORY INSPECTION
+# -------------------------
+
+[\] x/10x 0x7fffffffe000
+[/] Examine 10 words in hex
+
+[\] x/20i $pc
+[/] Show 20 instructions at program counter
+
+[\] x/s 0x600800
+[/] Show string at memory address
+
+[\] x/32b buffer
+[/] Show 32 bytes of buffer
+
+# -------------------------
+# REGISTERS
+# -------------------------
+
+[\] info registers
+[/] Show CPU registers
+
+[\] print $rax
+[/] Print register value
+
+[\] set $rax = 0
+[/] Modify register
+
+# -------------------------
+# THREADS
+# -------------------------
+
+[\] info threads
+[/] List threads
+
+[\] thread 3
+[/] Switch to thread #3
+
+[\] thread apply all bt
+[/] Backtrace all threads
+
+# -------------------------
+# DISASSEMBLY
+# -------------------------
+
+[\] disassemble
+[/] Disassemble current function
+
+[\] disassemble main
+[/] Disassemble specific function
+
+[\] disassemble 0x400500,0x400540
+[/] Disassemble address range
+
+# -------------------------
+# MODIFYING VARIABLES
+# -------------------------
+
+[\] set variable x=10
+[/] Change variable value
+
+[\] set {int}0x600800 = 5
+[/] Modify memory directly
+
+# -------------------------
+# LOADING SYMBOLS & SHARED LIBS
+# -------------------------
+
+[\] info sharedlibrary
+[/] Show loaded shared libraries
+
+[\] sharedlibrary
+[/] Reload shared libraries
+
+[\] symbol-file program.debug
+[/] Load external debug symbols
+
+# -------------------------
+# SCRIPTING & AUTOMATION
+# -------------------------
+
+[\] source script.gdb
+[/] Run GDB script
+
+[\] define hook-stop
+[/] Run commands every time program stops
+
+# -------------------------
+# QUITTING
+# -------------------------
+
+[\] quit
+[/] Exit GDB
+
+[\] quit y
+[/] Exit without confirmation

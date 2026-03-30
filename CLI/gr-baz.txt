@@ -1,0 +1,40 @@
+[X] gr-baz Command List
+
+[\] gr-baz --help
+[/] Show help menu
+
+[\] gr-baz --version
+[/] Show version
+
+[\] gr-baz scan
+[/] Scan available SDR devices
+
+[\] gr-baz list-devices
+[/] List connected SDR devices
+
+[\] gr-baz capture -d rtl0 -f 100M -g 30 -o output.bin
+[/] Capture RF signal from device rtl0 at 100 MHz, gain 30, save to output.bin
+
+[\] gr-baz analyze output.bin
+[/] Analyze captured signal file
+
+[\] gr-baz plot-spectrogram output.bin
+[/] Display spectrogram of captured signals
+
+[\] gr-baz demodulate output.bin --mode fm
+[/] Demodulate FM signal from capture
+
+[\] gr-baz demodulate output.bin --mode am
+[/] Demodulate AM signal from capture
+
+[\] gr-baz freq-scan 88M-108M
+[/] Scan frequency range (example: FM band)
+
+[\] gr-baz gain -d rtl0 -g 20
+[/] Set gain for SDR device
+
+[\] gr-baz info -d rtl0
+[/] Show detailed info about SDR device
+
+[\] gr-baz --interactive
+[/] Launch interactive mode for live analysis

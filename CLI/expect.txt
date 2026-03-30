@@ -1,0 +1,43 @@
+[X] Expect Command List (Automated Interactive Scripts)
+
+[\] expect -f script.exp
+[/] Run Expect script from file
+
+[\] expect -c 'spawn ssh user@host; expect "password:"; send "mypassword\r"; interact'
+[/] Inline Expect command to automate SSH login
+
+[\] spawn ssh user@host
+[/] Start a process to control
+
+[\] expect "pattern"
+[/] Wait for specific output from spawned process
+
+[\] send "string\r"
+[/] Send string to spawned process
+
+[\] interact
+[/] Hand control back to user (interactive mode)
+
+[\] set timeout 10
+[/] Set wait timeout (10 seconds)
+
+[\] expect eof
+[/] Wait until end-of-file (process ends)
+
+[\] expect -re "regex"
+[/] Wait for output matching regular expression
+
+[\] log_file /tmp/output.log
+[/] Log Expect session to file
+
+[\] exp_internal 1
+[/] Enable verbose debugging of Expect script
+
+[\] match_max 10000
+[/] Set maximum match buffer size
+
+[\] expect --help
+[/] Show help menu
+
+[\] expect -v
+[/] Show version

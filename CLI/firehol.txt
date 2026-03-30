@@ -1,0 +1,94 @@
+[X] FireHOL Firewall Command List
+
+[\] firehol start
+[/] Start FireHOL firewall
+
+[\] firehol stop
+[/] Stop FireHOL firewall
+
+[\] firehol restart
+[/] Restart firewall and reload rules
+
+[\] firehol try
+[/] Test new configuration safely (auto-revert if fails)
+
+[\] firehol debug
+[/] Run FireHOL in debug mode
+
+[\] firehol status
+[/] Show firewall status
+
+[\] firehol panic
+[/] Drop all traffic immediately (emergency lockdown)
+
+[\] firehol clear
+[/] Remove all firewall rules
+
+[\] firehol save
+[/] Save current iptables rules
+
+[\] firehol restore
+[/] Restore saved rules
+
+[\] firehol help
+[/] Show help information
+
+[\] firehol version
+[/] Show FireHOL version
+
+[\] firehol reload
+[/] Reload configuration without full restart
+
+[\] firehol check
+[/] Check configuration for errors
+
+[\] firehol explain
+[/] Show expanded rules (debugging)
+
+[\] firehol iptables
+[/] Show generated iptables rules
+
+[\] systemctl start firehol
+[/] Start FireHOL via systemd
+
+[\] systemctl stop firehol
+[/] Stop FireHOL via systemd
+
+[\] systemctl restart firehol
+[/] Restart FireHOL via systemd
+
+[\] systemctl status firehol
+[/] Show FireHOL service status
+
+[\] systemctl enable firehol
+[/] Enable FireHOL at boot
+
+[\] systemctl disable firehol
+[/] Disable FireHOL at boot
+
+[\] nano /etc/firehol/firehol.conf
+[/] Edit FireHOL configuration file
+
+[\] firehol try /etc/firehol/firehol.conf
+[/] Test specific config file safely
+
+[\] firehol start /etc/firehol/firehol.conf
+[/] Start firewall with specific config
+
+[\] firehol debug /etc/firehol/firehol.conf
+[/] Debug specific configuration
+
+[\] iptables -L
+[/] List active firewall rules (backend)
+
+[\] iptables -F
+[/] Flush all iptables rules (dangerous)
+
+[\] iptables -t nat -L
+[/] Show NAT table rules
+
+[\] iptables-save
+[/] Export current iptables rules
+
+[\] iptables-restore
+[/] Import iptables rules from file

@@ -1,0 +1,55 @@
+[X] Gobuster Command List
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt
+[/] Directory brute‑force
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -x php,txt
+[/] Add file extensions
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -t 50
+[/] Use 50 threads
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -s 200,204,301,302
+[/] Match specific status codes
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -b 404
+[/] Exclude status code 404
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -k
+[/] Skip SSL certificate verification
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -o results.txt
+[/] Save output to file
+
+[\] gobuster dir -u https://site.com  -w wordlist.txt -q
+[/] Quiet mode
+
+[\] gobuster dns -d example.com  -w subdomains.txt
+[/] DNS subdomain brute‑force
+
+[\] gobuster dns -d example.com  -w subdomains.txt -i
+[/] Show IP addresses
+
+[\] gobuster dns -d example.com  -w subdomains.txt -t 100
+[/] Use 100 threads for DNS mode
+
+[\] gobuster vhost -u https://site.com  -w vhosts.txt
+[/] Virtual host brute‑force
+
+[\] gobuster fuzz -u https://site.com/FUZZ  -w wordlist.txt
+[/] Fuzz any part of a URL
+
+[\] gobuster fuzz -u https://site.com/api/FUZZ?id=1  -w words.txt
+[/] Parameter fuzzing
+
+[\] gobuster fuzz -u https://site.com  -H "User-Agent: FUZZ" -w agents.txt
+[/] Header fuzzing
+
+[\] gobuster s3 -w buckets.txt
+[/] Enumerate AWS S3 buckets
+
+[\] gobuster gcs -w buckets.txt
+[/] Enumerate Google Cloud Storage buckets
+
+[\] gobuster help
+[/] Show help menu

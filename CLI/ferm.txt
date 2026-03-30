@@ -1,0 +1,88 @@
+[X] ferm Firewall Command List
+
+[\] ferm /etc/ferm/ferm.conf
+[/] Apply firewall rules from config file
+
+[\] ferm --interactive /etc/ferm/ferm.conf
+[/] Apply rules interactively (confirm before commit)
+
+[\] ferm --dry-run /etc/ferm/ferm.conf
+[/] Test configuration without applying
+
+[\] ferm --lines /etc/ferm/ferm.conf
+[/] Show generated iptables rules with line numbers
+
+[\] ferm --verbose /etc/ferm/ferm.conf
+[/] Enable verbose output
+
+[\] ferm --help
+[/] Show help menu
+
+[\] ferm --version
+[/] Show ferm version
+
+[\] ferm --flush /etc/ferm/ferm.conf
+[/] Flush existing rules before applying new ones
+
+[\] ferm --noexec /etc/ferm/ferm.conf
+[/] Parse config but do not execute
+
+[\] ferm --fast /etc/ferm/ferm.conf
+[/] Apply rules faster (less checks)
+
+[\] systemctl start ferm
+[/] Start ferm firewall service
+
+[\] systemctl stop ferm
+[/] Stop ferm firewall service
+
+[\] systemctl restart ferm
+[/] Restart ferm firewall service
+
+[\] systemctl status ferm
+[/] Show ferm service status
+
+[\] systemctl enable ferm
+[/] Enable ferm at boot
+
+[\] systemctl disable ferm
+[/] Disable ferm at boot
+
+[\] nano /etc/ferm/ferm.conf
+[/] Edit main ferm configuration file
+
+[\] ferm -i /etc/ferm/ferm.conf
+[/] Interactive mode (short flag)
+
+[\] ferm -n /etc/ferm/ferm.conf
+[/] Dry run (short flag)
+
+[\] ferm -l /etc/ferm/ferm.conf
+[/] Show rules with line numbers (short flag)
+
+[\] ferm -v /etc/ferm/ferm.conf
+[/] Verbose mode (short flag)
+
+[\] ferm -F /etc/ferm/ferm.conf
+[/] Flush rules before applying (short flag)
+
+[\] iptables -L
+[/] List active firewall rules (backend)
+
+[\] iptables -t nat -L
+[/] Show NAT table rules
+
+[\] iptables -F
+[/] Flush all iptables rules (dangerous)
+
+[\] iptables-save
+[/] Export current rules
+
+[\] iptables-restore
+[/] Restore rules from file
+
+[\] ip6tables -L
+[/] List IPv6 firewall rules
+
+[\] ip6tables -F
+[/] Flush IPv6 rules (dangerous)

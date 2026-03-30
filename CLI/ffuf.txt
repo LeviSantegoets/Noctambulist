@@ -1,0 +1,64 @@
+[X] ffuf Command List
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt
+[/] Basic directory brute‑force
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -mc 200
+[/] Match only HTTP 200 responses
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -fc 404
+[/] Filter out HTTP 404 responses
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -fs 0
+[/] Filter responses by size
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -fw 10
+[/] Filter responses by number of words
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -fl 20
+[/] Filter responses by number of lines
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -recursion
+[/] Enable recursive fuzzing
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -recursion-depth 3
+[/] Set recursion depth
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -e .php,.txt
+[/] Add file extensions
+
+[\] ffuf -u https://site.com/login  -w users.txt:USER -w pass.txt:PASS -d "u=USER&p=PASS"
+[/] POST login fuzzing
+
+[\] ffuf -u https://site.com/page?search=FUZZ  -w payloads.txt
+[/] Parameter fuzzing
+
+[\] ffuf -u https://site.com  -H "X-Forwarded-For: FUZZ" -w ips.txt
+[/] Header fuzzing
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -t 50
+[/] Set 50 threads
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -timeout 10
+[/] Set request timeout
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -o results.json -of json
+[/] Save output as JSON
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -o results.csv -of csv
+[/] Save output as CSV
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -v
+[/] Verbose mode
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -ac
+[/] Auto-calibrate filters
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -rate 100
+[/] Limit to 100 requests per second
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -replay-proxy http://127.0.0.1:8080
+[/] Replay traffic through proxy (e.g., Burp)
+
+[\] ffuf -u https://site.com/FUZZ  -w wordlist.txt -s
+[/] Silent mode

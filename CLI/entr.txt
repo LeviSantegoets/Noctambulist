@@ -1,0 +1,28 @@
+[X] Entr Command List (Run Commands on File Changes)
+
+[\] ls *.txt | entr echo "File changed"
+[/] Run command whenever any .txt file changes
+
+[\] find /path -type f | entr -p make
+[/] Rebuild project when any file changes (clear screen before running)
+
+[\] echo foo.txt | entr -r ./script.sh
+[/] Restart command on file change
+
+[\] echo foo.txt | entr -n ./script.sh
+[/] Run command without running initially (only on change)
+
+[\] echo foo.txt | entr -c ./script.sh
+[/] Clear screen before executing command
+
+[\] echo foo.txt | entr -s 'sh backup.sh'
+[/] Run shell command on change
+
+[\] echo foo.txt | entr -d
+[/] Watch directories recursively
+
+[\] echo foo.txt | entr -h
+[/] Show help menu
+
+[\] entr --version
+[/] Show version

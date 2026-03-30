@@ -1,0 +1,19 @@
+[X] Head Command List
+
+[\] head file.txt
+[/] Show first 10 lines
+
+[\] head -n 20 file.txt
+[/] Show first 20 lines
+
+[\] head -c 100 file.txt
+[/] Show first 100 bytes
+
+[\] head -q file1 file2
+[/] Show first 10 lines of multiple files without headers
+
+[\] head -v file1 file2
+[/] Show filenames before output when multiple files
+
+[\] head --help
+[/] Show head help menu

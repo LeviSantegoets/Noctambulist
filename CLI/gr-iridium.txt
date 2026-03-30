@@ -1,0 +1,61 @@
+[X] GR-Iridium Command List
+
+[\] gr-iridium-info
+[/] Show available SDR devices and Iridium configuration
+
+[\] gr-iridium-scan
+[/] Scan for Iridium satellites and channels
+
+[\] gr-iridium-scan -f 1616.0e6
+[/] Scan at specific Iridium frequency
+
+[\] gr-iridium-scan -s 2e6
+[/] Set SDR sample rate for scanning
+
+[\] gr-iridium-scan -g 40
+[/] Set SDR gain for satellite reception
+
+[\] gr-iridium-grc
+[/] Launch the GNU Radio flowgraph for Iridium decoding
+
+[\] gr-iridium-decode
+[/] Decode Iridium bursts from captured signals
+
+[\] gr-iridium-decode -c capture.cfile
+[/] Decode bursts from recorded capture file
+
+[\] gr-iridium-decode -v
+[/] Enable verbose output during decoding
+
+[\] gr-iridium-burst
+[/] Process raw IQ samples into Iridium bursts
+
+[\] gr-iridium-burst capture.cfile
+[/] Convert capture file into bursts
+
+[\] gr-iridium-channelize
+[/] Split wideband Iridium capture into individual channels
+
+[\] gr-iridium-extract-sb
+[/] Extract SBD (Short Burst Data) messages
+
+[\] gr-iridium-extract-sbd capture.cfile
+[/] Extract SBD messages from capture file
+
+[\] gr-iridium-analyze
+[/] Analyze satellite traffic and signal quality
+
+[\] gr-iridium-timestamp
+[/] Timestamp decoded Iridium bursts
+
+[\] gr-iridium-log
+[/] Save decoded bursts and metadata to log file
+
+[\] gr-iridium-plot
+[/] Visualize satellite signal strength over time
+
+[\] gr-iridium-filter
+[/] Apply filters on frequency, channel, or signal strength
+
+[\] gr-iridium-help
+[/] Show all available GR-Iridium commands and options

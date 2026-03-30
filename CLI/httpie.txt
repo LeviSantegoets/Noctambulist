@@ -1,0 +1,61 @@
+[X] HTTPie Command List
+
+[\] http https://example.com
+[/] Perform a simple GET request
+
+[\] http GET https://example.com
+[/] Explicit GET request
+
+[\] http POST https://example.com name=John age=30
+[/] POST with form data
+
+[\] http POST https://example.com Content-Type:application/json name=John age:=30
+[/] POST with JSON payload
+
+[\] http GET https://example.com "Authorization:Bearer TOKEN"
+[/] Send custom header
+
+[\] http GET https://example.com Accept:application/json
+[/] Add custom Accept header
+
+[\] http GET https://example.com -v
+[/] Verbose output (request + response headers)
+
+[\] http GET https://example.com -h
+[/] Show help menu
+
+[\] http --version
+[/] Show HTTPie version
+
+[\] http https://example.com -j
+[/] Pretty-print JSON response
+
+[\] http GET https://example.com -p hhb
+[/] Pretty-print headers, body, and cookies
+
+[\] http GET https://example.com --check-status
+[/] Fail on HTTP errors (status ≥400)
+
+[\] http GET https://example.com --timeout=10
+[/] Set request timeout (seconds)
+
+[\] http GET https://example.com --follow
+[/] Follow redirects
+
+[\] http GET https://example.com --download
+[/] Download response to file
+
+[\] http GET https://example.com --session=mysession
+[/] Save session (cookies, headers) to reuse later
+
+[\] http GET https://example.com --proxy=http://127.0.0.1:8080
+[/] Use HTTP proxy
+
+[\] http GET https://example.com --verify=no
+[/] Disable SSL certificate verification
+
+[\] http --help
+[/] Show help menu
+
+[\] http --traceback
+[/] Show full traceback for errors

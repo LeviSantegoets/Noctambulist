@@ -1,0 +1,103 @@
+[X] hcxtools Command List
+
+[\] hcxpcapngtool -o hashes.22000 dump.pcapng
+[/] Convert PCAPNG to Hashcat 22000 hash format
+
+[\] hcxpcapngtool -E essidlist.txt dump.pcapng
+[/] Extract ESSIDs from capture file
+
+[\] hcxpcapngtool -I identitylist.txt dump.pcapng
+[/] Extract identities from capture file
+
+[\] hcxpcapngtool -U usernamelist.txt dump.pcapng
+[/] Extract usernames from capture file
+
+[\] hcxpcapngtool -P pmkidlist.txt dump.pcapng
+[/] Extract PMKIDs from capture file
+
+[\] hcxpcapngtool -X eapollist.txt dump.pcapng
+[/] Extract EAPOL frames
+
+[\] hcxpcapngtool -H handshakes.txt dump.pcapng
+[/] Extract WPA/WPA2 handshakes
+
+[\] hcxpcapngtool --all dump.pcapng
+[/] Extract all possible data types
+
+[\] hcxpcapngtool --nonce-error-corrections=8 dump.pcapng
+[/] Apply nonce error correction
+
+[\] hcxpcapngtool --ignore-ie
+[/] Ignore malformed information elements
+
+[\] hcxpcapngtool --filterlist=filter.txt --filtermode=1 dump.pcapng
+[/] Filter capture by MAC list (include mode)
+
+[\] hcxpcapngtool --filterlist=filter.txt --filtermode=2 dump.pcapng
+[/] Filter capture by MAC list (exclude mode)
+
+[\] hcxhashtool -i hashes.22000 -o cleaned.22000
+[/] Clean and optimize Hashcat 22000 hash files
+
+[\] hcxhashtool -i hashes.22000 --info
+[/] Show detailed information about hash file
+
+[\] hcxhashtool -i hashes.22000 --remove-duplicates
+[/] Remove duplicate hashes
+
+[\] hcxhashtool -i hashes.22000 --remove-invalid
+[/] Remove invalid or corrupted hashes
+
+[\] hcxpsktool -i wordlist.txt -o psklist.txt
+[/] Convert plaintext passwords to PSK list
+
+[\] hcxpsktool -i wordlist.txt --hex
+[/] Convert passwords to hex format
+
+[\] hcxpmkidtool -i pmkidlist.txt -o pmkid_clean.txt
+[/] Clean and normalize PMKID lists
+
+[\] hcxpmkidtool -i pmkidlist.txt --info
+[/] Display PMKID list information
+
+[\] hcxwltool -i dump.pcapng -o wlanlist.txt
+[/] Extract WLAN information from capture
+
+[\] hcxwltool -i dump.pcapng --raw
+[/] Output raw WLAN data
+
+[\] hcxmactool -i maclist.txt --vendor
+[/] Identify vendor from MAC list
+
+[\] hcxmactool -i maclist.txt --oui
+[/] Extract OUI information
+
+[\] hcxmactool -i maclist.txt --search=AA:BB:CC
+[/] Search for specific MAC/OUI
+
+[\] hcxinfo dump.pcapng
+[/] Display detailed info about PCAPNG file
+
+[\] hcxinfo --all dump.pcapng
+[/] Show all metadata and statistics
+
+[\] hcxpcaptool dump.pcap
+[/] Legacy PCAP converter (older format)
+
+[\] hcxpcaptool -z pmkid.txt dump.pcap
+[/] Extract PMKID from legacy PCAP
+
+[\] hcxpcaptool -e essid.txt dump.pcap
+[/] Extract ESSIDs from legacy PCAP
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode

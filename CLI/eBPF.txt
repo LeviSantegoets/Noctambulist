@@ -1,0 +1,121 @@
+[X] eBPF / XDP Firewall Command List (Advanced)
+
+[\] ip link show
+[/] List network interfaces
+
+[\] ip link set dev eth0 xdp obj prog.o sec xdp
+[/] Attach XDP program to interface
+
+[\] ip link set dev eth0 xdp off
+[/] Remove XDP program from interface
+
+[\] ip link set dev eth0 xdpgeneric obj prog.o
+[/] Attach XDP in generic (driver-independent) mode
+
+[\] ip link set dev eth0 xdpdrv obj prog.o
+[/] Attach XDP in native driver mode
+
+[\] ip link set dev eth0 xdpoffload obj prog.o
+[/] Attach XDP with hardware offload (if supported)
+
+[\] bpftool prog show
+[/] List loaded eBPF programs
+
+[\] bpftool map show
+[/] List eBPF maps
+
+[\] bpftool net
+[/] Show XDP programs attached to interfaces
+
+[\] bpftool prog load prog.o /sys/fs/bpf/xdp_prog
+[/] Load eBPF program into kernel
+
+[\] bpftool prog attach id 10 xdp dev eth0
+[/] Attach loaded program by ID
+
+[\] bpftool prog detach id 10 xdp dev eth0
+[/] Detach program by ID
+
+[\] bpftool prog dump xlated id 10
+[/] Show translated eBPF instructions
+
+[\] bpftool prog dump jited id 10
+[/] Show JIT-compiled instructions
+
+[\] bpftool map dump id 5
+[/] Dump contents of eBPF map
+
+[\] bpftool map update id 5 key 1 2 3 4 value 5 6 7 8
+[/] Update map entry
+
+[\] bpftool map delete id 5 key 1 2 3 4
+[/] Delete map entry
+
+[\] mount -t bpf bpf /sys/fs/bpf
+[/] Mount BPF filesystem
+
+[\] ls /sys/fs/bpf
+[/] List pinned BPF objects
+
+[\] rm /sys/fs/bpf/xdp_prog
+[/] Remove pinned program
+
+[\] clang -O2 -target bpf -c prog.c -o prog.o
+[/] Compile eBPF program
+
+[\] llvm-objdump -S prog.o
+[/] Inspect compiled BPF object
+
+[\] tc qdisc add dev eth0 clsact
+[/] Add tc hook for eBPF programs
+
+[\] tc filter add dev eth0 ingress bpf da obj prog.o sec classifier
+[/] Attach eBPF program via tc
+
+[\] tc filter show dev eth0 ingress
+[/] Show tc filters
+
+[\] tc qdisc del dev eth0 clsact
+[/] Remove tc hook
+
+[\] xdp-loader load eth0 prog.o
+[/] Load XDP program (libxdp tool)
+
+[\] xdp-loader unload eth0
+[/] Unload XDP program
+
+[\] xdp-loader status eth0
+[/] Show XDP status
+
+[\] ethtool -S eth0
+[/] Show NIC stats (including XDP drops)
+
+[\] perf top
+[/] Monitor performance hotspots
+
+[\] perf record -a -g
+[/] Record system-wide profiling data
+
+[\] perf report
+[/] Analyze profiling results
+
+[\] dmesg | grep bpf
+[/] View kernel BPF logs
+
+[\] sysctl net.core.bpf_jit_enable=1
+[/] Enable BPF JIT compiler
+
+[\] sysctl net.core.bpf_jit_harden=1
+[/] Harden JIT against attacks
+
+[\] sysctl net.core.bpf_jit_kallsyms=1
+[/] Export JIT symbols for debugging
+
+[\] cat /proc/sys/net/core/bpf_jit_enable
+[/] Check JIT status
+
+[\] ulimit -l unlimited
+[/] Allow large BPF memory locking
+
+[\] bpftool prog tracelog
+[/] Read trace output from BPF programs

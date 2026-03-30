@@ -1,0 +1,34 @@
+[X] Ghidra-Headless Command List (Automated Reverse Engineering)
+
+[\] ghidraHeadless /path/to/project projectName -import file
+[/] Import binary into Ghidra project in headless mode
+
+[\] ghidraHeadless /path/to/project projectName -import file -scriptPath /path/to/scripts -postScript MyScript.java
+[/] Run custom script after importing file
+
+[\] ghidraHeadless /path/to/project projectName -import file -postScript MyScript.java arg1 arg2
+[/] Pass arguments to post-script
+
+[\] ghidraHeadless /path/to/project projectName -deleteProject
+[/] Delete existing Ghidra project
+
+[\] ghidraHeadless /path/to/project projectName -help
+[/] Show help menu
+
+[\] ghidraHeadless /path/to/project projectName -version
+[/] Show Ghidra version
+
+[\] ghidraHeadless /path/to/project projectName -scriptLog log.txt
+[/] Save script output to file
+
+[\] ghidraHeadless /path/to/project projectName -preScript Script.java
+[/] Run script before import
+
+[\] ghidraHeadless /path/to/project projectName -noanalysis
+[/] Skip auto-analysis on import
+
+[\] ghidraHeadless /path/to/project projectName -analysisTimeout 600
+[/] Set maximum analysis time in seconds
+
+[\] ghidraHeadless /path/to/project projectName -import file -recursive
+[/] Import all binaries in a directory recursively

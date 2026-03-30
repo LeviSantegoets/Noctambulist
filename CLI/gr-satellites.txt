@@ -1,0 +1,97 @@
+[X] GR-Satellites Command List
+
+[\] gr_satellites_rx
+[/] Start GNU Radio flowgraph for receiving satellite signals
+
+[\] gr_satellites_rx -h
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] gr_satellites_rx --device rtl
+[/] Use RTL-SDR as SDR input
+
+[\] gr_satellites_rx --device hackrf
+[/] Use HackRF SDR device
+
+[\] gr_satellites_rx --device usrp
+[/] Use USRP device
+
+[\] gr_satellites_rx --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] gr_satellites_rx -f 137.1e6
+[/] Tune to 137.1 MHz (NOAA weather satellite)
+
+[\] gr_satellites_rx -f 145.8e6
+[/] Tune to 145.8 MHz (Amateur satellite)
+
+[\] gr_satellites_rx -s 2e6
+[/] Set SDR sample rate to 2 MSPS
+
+[\] gr_satellites_rx -g 30
+[/] Set receiver gain to 30 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] gr_satellites_rx --file capture.iq
+[/] Decode satellite signal from recorded IQ file
+
+[\] gr_satellites_rx --audio
+[/] Output demodulated audio
+
+[\] gr_satellites_rx --save output.wav
+[/] Save decoded audio to WAV file
+
+# -------------------------
+# DEMODULATION / SIGNAL PROCESSING
+# -------------------------
+
+[\] gr_satellites_rx --fm
+[/] FM demodulation for audio signals
+
+[\] gr_satellites_rx --am
+[/] AM demodulation
+
+[\] gr_satellites_rx --lna
+[/] Enable automatic gain control
+
+[\] gr_satellites_rx --filter
+[/] Apply bandpass or lowpass filters
+
+[\] gr_satellites_rx --decode-telemetry
+[/] Decode satellite telemetry signals
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] gr_satellites_rx --spectrum
+[/] Show signal spectrum
+
+[\] gr_satellites_rx --waterfall
+[/] Show waterfall display
+
+[\] gr_satellites_rx --verbose
+[/] Enable verbose output
+
+[\] gr_satellites_rx --stats
+[/] Show decoding and reception statistics
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 137.1e6 -M fm -s 22050 - | gr_satellites_rx --stdin
+[/] Decode NOAA weather satellite audio from RTL-SDR stream
+
+[\] rtl_sdr -f 145.8e6 -s 1e6 - | csdr convert_u8_f | gr_satellites_rx --stdin
+[/] Process SDR IQ stream through CSDR before decoding

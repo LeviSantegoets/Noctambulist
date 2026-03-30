@@ -1,0 +1,73 @@
+[X] GEF Command List (GDB Enhanced Features)
+
+[\] gdb program
+[/] Start GDB with GEF loaded
+
+[\] context
+[/] Show registers, stack, code, and memory context
+
+[\] checksec
+[/] Display binary security protections (NX, PIE, Canary, RELRO)
+
+[\] vmmap
+[/] Show memory mappings
+
+[\] hexdump addr
+[/] Display memory in hex format
+
+[\] telescope addr
+[/] Recursively dereference pointers at address
+
+[\] dereference addr
+[/] Show pointer chain from address
+
+[\] search-pattern pattern
+[/] Search memory for a pattern
+
+[\] pattern create 100
+[/] Generate cyclic pattern (for overflow testing)
+
+[\] pattern search value
+[/] Find offset of value in cyclic pattern
+
+[\] got
+[/] Display Global Offset Table entries
+
+[\] plt
+[/] Display Procedure Linkage Table
+
+[\] registers
+[/] Show CPU registers
+
+[\] stack
+[/] Display stack contents
+
+[\] heap
+[/] Show heap chunks and info
+
+[\] break main
+[/] Set breakpoint at main
+
+[\] run
+[/] Start execution
+
+[\] continue
+[/] Continue execution
+
+[\] next
+[/] Step over instruction
+
+[\] step
+[/] Step into instruction
+
+[\] backtrace
+[/] Show call stack
+
+[\] quit
+[/] Exit GDB
+
+[\] gef help
+[/] Show GEF help menu
+
+[\] gef config
+[/] Show or modify GEF configuration

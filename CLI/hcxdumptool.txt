@@ -1,0 +1,115 @@
+[X] hcxdumptool Command List
+
+[\] hcxdumptool -i wlan0mon -o dump.pcapng
+[/] Capture WPA/WPA2/PMKID handshakes to PCAPNG file
+
+[\] hcxdumptool -i wlan0mon --enable_status=1
+[/] Show basic status information during capture
+
+[\] hcxdumptool -i wlan0mon --enable_status=15
+[/] Show full detailed status output
+
+[\] hcxdumptool -i wlan0mon --filterlist=filter.txt --filtermode=2
+[/] Use filter list to target specific APs/clients
+
+[\] hcxdumptool -i wlan0mon --filtermode=1
+[/] Capture only traffic from MACs in filter list
+
+[\] hcxdumptool -i wlan0mon --filtermode=2
+[/] Ignore MACs in filter list
+
+[\] hcxdumptool -i wlan0mon --enable_status=31
+[/] Enable all status messages
+
+[\] hcxdumptool -i wlan0mon --silent
+[/] Run silently with no status output
+
+[\] hcxdumptool -i wlan0mon --active_beacon
+[/] Send active beacon frames
+
+[\] hcxdumptool -i wlan0mon --disable_deauthentication
+[/] Disable deauthentication attacks
+
+[\] hcxdumptool -i wlan0mon --disable_ap_attacks
+[/] Disable attacks against access points
+
+[\] hcxdumptool -i wlan0mon --disable_client_attacks
+[/] Disable attacks against clients
+
+[\] hcxdumptool -i wlan0mon --enable_client_attacks
+[/] Enable attacks against clients
+
+[\] hcxdumptool -i wlan0mon --enable_ap_attacks
+[/] Enable attacks against access points
+
+[\] hcxdumptool -i wlan0mon --enable_status=1 --poweroff
+[/] Power off system after capture completes
+
+[\] hcxdumptool -i wlan0mon --gps=gpsd
+[/] Enable GPS logging via gpsd
+
+[\] hcxdumptool -i wlan0mon --use_gpsd
+[/] Use GPSD for location data
+
+[\] hcxdumptool -i wlan0mon --daemonize
+[/] Run hcxdumptool in background mode
+
+[\] hcxdumptool -i wlan0mon --tot=60
+[/] Stop capture after 60 seconds
+
+[\] hcxdumptool -i wlan0mon --max=10000
+[/] Stop after capturing 10,000 packets
+
+[\] hcxdumptool -i wlan0mon --filterlist_ap=aps.txt
+[/] Filter APs using AP‑specific filter list
+
+[\] hcxdumptool -i wlan0mon --filterlist_client=clients.txt
+[/] Filter clients using client‑specific filter list
+
+[\] hcxdumptool -i wlan0mon --nmea=log.nmea
+[/] Save GPS NMEA data to file
+
+[\] hcxdumptool -i wlan0mon --pcapng=output.pcapng
+[/] Write capture directly to PCAPNG
+
+[\] hcxdumptool -i wlan0mon --raw_out=raw.dump
+[/] Save raw frames to file
+
+[\] hcxdumptool -i wlan0mon --status=stdout
+[/] Output status to stdout
+
+[\] hcxdumptool --check_driver
+[/] Check if Wi‑Fi driver supports required features
+
+[\] hcxdumptool --check_injection
+[/] Test if interface supports packet injection
+
+[\] hcxdumptool --help
+[/] Show help menu
+
+[\] hcxpcapngtool -o hashes.22000 dump.pcapng
+[/] Convert PCAPNG to hashcat 22000 format (companion tool)
+
+[\] hcxpcapngtool -E essidlist.txt dump.pcapng
+[/] Extract ESSIDs from capture
+
+[\] hcxpcapngtool -I identitylist.txt dump.pcapng
+[/] Extract identities from capture
+
+[\] hcxpcapngtool -U usernamelist.txt dump.pcapng
+[/] Extract usernames from capture
+
+[\] hcxpcapngtool -P pmkidlist.txt dump.pcapng
+[/] Extract PMKIDs from capture
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode

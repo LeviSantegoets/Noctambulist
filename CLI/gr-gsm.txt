@@ -1,0 +1,121 @@
+[X] GR-GSM Command List
+
+[\] grgsm_scanner
+[/] Scan GSM frequency bands and detect active base stations (ARFCNs)
+
+[\] grgsm_scanner -b GSM900
+[/] Scan GSM900 band for active channels
+
+[\] grgsm_scanner -b DCS1800
+[/] Scan DCS1800 band
+
+[\] grgsm_scanner -g 40
+[/] Set SDR gain level during scan
+
+[\] grgsm_livemon
+[/] Live monitor GSM traffic using SDR
+
+[\] grgsm_livemon -f <frequency>
+[/] Monitor a specific GSM frequency
+
+[\] grgsm_livemon -g 40
+[/] Set SDR gain
+
+[\] grgsm_livemon -s 2e6
+[/] Set sampling rate
+
+[\] grgsm_livemon_headless
+[/] Headless GSM monitoring (no GUI)
+
+[\] grgsm_livemon_headless -f <frequency>
+[/] Monitor specific frequency without GUI
+
+[\] grgsm_capture
+[/] Capture GSM bursts and save to file
+
+[\] grgsm_capture -f <frequency>
+[/] Capture GSM traffic from a specific frequency
+
+[\] grgsm_capture -g 40
+[/] Set gain for capture
+
+[\] grgsm_capture -o capture.cfile
+[/] Save captured samples to file
+
+[\] grgsm_decode
+[/] Decode GSM bursts from capture file
+
+[\] grgsm_decode -c capture.cfile
+[/] Decode bursts from recorded capture
+
+[\] grgsm_decode -m BCCH
+[/] Decode broadcast control channel
+
+[\] grgsm_decode -m SDCCH
+[/] Decode signaling channel
+
+[\] grgsm_decode -m TCH
+[/] Decode traffic channel
+
+[\] grgsm_channelize
+[/] Split wideband GSM capture into channels
+
+[\] grgsm_channelize -c capture.cfile
+[/] Channelize a capture file
+
+[\] grgsm_channelize -o channels/
+[/] Output separated channels
+
+[\] grgsm_extract_system_info
+[/] Extract GSM system information messages
+
+[\] grgsm_extract_system_info capture.cfile
+[/] Extract system info from capture
+
+[\] grgsm_decrypt
+[/] Attempt decryption of GSM traffic
+
+[\] grgsm_decrypt -k <key>
+[/] Use provided key to decrypt traffic
+
+[\] grgsm_decode_sdcch
+[/] Decode SDCCH signaling channel messages
+
+[\] grgsm_decode_bcch
+[/] Decode broadcast channel information
+
+[\] grgsm_decode_tch
+[/] Decode traffic channel bursts
+
+[\] grgsm_sms
+[/] Extract SMS messages from decoded GSM traffic
+
+[\] grgsm_sms capture.cfile
+[/] Parse SMS messages from capture file
+
+[\] grgsm_lapdm
+[/] Decode LAPDm GSM signaling frames
+
+[\] grgsm_tmsi
+[/] Extract TMSI identifiers from GSM traffic
+
+[\] grgsm_imsi
+[/] Extract IMSI identifiers from GSM traffic
+
+[\] grgsm_clock_offset_control
+[/] Correct SDR clock offset during capture
+
+[\] grgsm_control_channels_decoder
+[/] Decode GSM control channel messages
+
+[\] grgsm_bcch_ccch_demapper
+[/] Demap BCCH and CCCH logical channels
+
+[\] grgsm_sdcch_demapper
+[/] Demap SDCCH logical channels
+
+[\] grgsm_tch_f_decoder
+[/] Decode full-rate GSM voice channel
+
+[\] grgsm_tch_h_decoder
+[/] Decode half-rate GSM voice channel

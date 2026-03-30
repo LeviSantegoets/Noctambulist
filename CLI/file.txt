@@ -1,0 +1,31 @@
+[X] File Command List (Determine File Type)
+
+[\] file filename
+[/] Show type of a file
+
+[\] file -b filename
+[/] Brief output (no filename)
+
+[\] file -i filename
+[/] Show MIME type
+
+[\] file -z archive.zip
+[/] Examine compressed files
+
+[\] file -L symlink
+[/] Follow symlink to determine target file type
+
+[\] file *
+[/] Determine types of all files in current directory
+
+[\] file --mime-type filename
+[/] Show only MIME type
+
+[\] file --mime-encoding filename
+[/] Show only encoding
+
+[\] file --help
+[/] Show help menu
+
+[\] file --version
+[/] Show file command version

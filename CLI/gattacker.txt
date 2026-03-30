@@ -1,0 +1,40 @@
+[X] Gattacker Command List
+
+[\] gattacker scan
+[/] Scan for nearby BLE devices
+
+[\] gattacker connect <MAC>
+[/] Connect to a BLE device by MAC address
+
+[\] gattacker disconnect <MAC>
+[/] Disconnect from a BLE device
+
+[\] gattacker services <MAC>
+[/] List all GATT services of a device
+
+[\] gattacker characteristics <MAC> <serviceUUID>
+[/] List characteristics of a specific service
+
+[\] gattacker read <MAC> <charUUID>
+[/] Read value from a characteristic
+
+[\] gattacker write <MAC> <charUUID> <value>
+[/] Write value to a characteristic
+
+[\] gattacker notify <MAC> <charUUID>
+[/] Subscribe to notifications from a characteristic
+
+[\] gattacker spoof <MAC> <charUUID> <value>
+[/] Spoof characteristic value
+
+[\] gattacker mitm <MAC>
+[/] Perform MITM attack on BLE device (if supported)
+
+[\] gattacker log
+[/] Log BLE traffic
+
+[\] gattacker -h
+[/] Show help menu
+
+[\] gattacker --version
+[/] Show version

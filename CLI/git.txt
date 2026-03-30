@@ -1,0 +1,142 @@
+[X] Git Command List
+
+[\] git --version
+[/] Show installed Git version
+
+[\] git init
+[/] Initialize new repository
+
+[\] git clone https://repo.url
+[/] Clone remote repository
+
+[\] git status
+[/] Show working tree status
+
+[\] git add file.txt
+[/] Stage specific file
+
+[\] git add .
+[/] Stage all changes
+
+[\] git commit -m "message"
+[/] Commit staged changes
+
+[\] git commit -am "message"
+[/] Stage and commit tracked files
+
+[\] git log
+[/] Show commit history
+
+[\] git log --oneline
+[/] Compact commit history
+
+[\] git diff
+[/] Show unstaged changes
+
+[\] git diff --staged
+[/] Show staged changes
+
+[\] git branch
+[/] List branches
+
+[\] git branch new-branch
+[/] Create new branch
+
+[\] git checkout branch-name
+[/] Switch branch
+
+[\] git checkout -b new-branch
+[/] Create and switch branch
+
+[\] git merge branch-name
+[/] Merge branch into current
+
+[\] git pull
+[/] Fetch and merge from remote
+
+[\] git fetch
+[/] Fetch changes from remote
+
+[\] git push
+[/] Push commits to remote
+
+[\] git push origin branch-name
+[/] Push specific branch
+
+[\] git remote -v
+[/] Show remote repositories
+
+[\] git remote add origin https://repo.url
+[/] Add remote repository
+
+[\] git reset file.txt
+[/] Unstage file
+
+[\] git reset --hard
+[/] Reset working directory (dangerous)
+
+[\] git stash
+[/] Stash changes
+
+[\] git stash pop
+[/] Apply and remove stash
+
+[\] git stash list
+[/] List stashes
+
+[\] git rm file.txt
+[/] Remove file
+
+[\] git mv old.txt new.txt
+[/] Rename/move file
+
+[\] git tag
+[/] List tags
+
+[\] git tag v1.0
+[/] Create tag
+
+[\] git show tag_name
+[/] Show tag details
+
+[\] git rebase branch-name
+[/] Rebase current branch
+
+[\] git cherry-pick commit_hash
+[/] Apply specific commit
+
+[\] git revert commit_hash
+[/] Revert a commit
+
+[\] git clean -fd
+[/] Remove untracked files
+
+[\] git config --global user.name "Your Name"
+[/] Set global username
+
+[\] git config --global user.email "you@example.com"
+[/] Set global email
+
+[\] git config --list
+[/] Show configuration
+
+[\] git blame file.txt
+[/] Show who changed each line
+
+[\] git show commit_hash
+[/] Show commit details
+
+[\] git shortlog
+[/] Summarize commits
+
+[\] git archive -o repo.zip HEAD
+[/] Export repository as archive
+
+[\] git gc
+[/] Cleanup repository
+
+[\] git fsck
+[/] Check repository integrity
+
+[\] git help
+[/] Show help menu

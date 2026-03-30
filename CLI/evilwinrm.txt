@@ -1,0 +1,37 @@
+[X] Evil‑WinRM Command List
+
+[\] evil-winrm -i 10.10.10.10 -u user -p pass
+[/] Basic login with username and password
+
+[\] evil-winrm -i 10.10.10.10 -u user -H NTLMHASH
+[/] Login using NTLM hash (authorized testing only)
+
+[\] evil-winrm -i 10.10.10.10 -u user -P pass.txt
+[/] Use password file
+
+[\] evil-winrm -i 10.10.10.10 -u user -s scripts/
+[/] Load local scripts directory
+
+[\] evil-winrm -i 10.10.10.10 -u user -p pass -e /tmp/
+[/] Enable remote script execution directory
+
+[\] evil-winrm -i 10.10.10.10 -S
+[/] Use SSL
+
+[\] evil-winrm -i 10.10.10.10 -u user -p pass -r domain.local
+[/] Specify domain
+
+[\] evil-winrm -i 10.10.10.10 -u user -p pass -c cert.pem -k key.pem
+[/] Certificate‑based authentication
+
+[\] upload file.txt
+[/] Upload file to remote host
+
+[\] download file.txt
+[/] Download file from remote host
+
+[\] menu
+[/] Show Evil‑WinRM built‑in menu
+
+[\] exit
+[/] Exit Evil‑WinRM session

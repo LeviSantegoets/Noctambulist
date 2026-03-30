@@ -1,0 +1,127 @@
+[X] GQRX Command List
+
+[\] gqrx
+[/] Launch GQRX SDR receiver (GUI)
+
+[\] gqrx --help
+[/] Show help menu
+
+[\] gqrx --version
+[/] Show GQRX version
+
+[\] gqrx --config gqrx.conf
+[/] Start GQRX using a specific configuration file
+
+[\] gqrx --input /dev/rtl_sdr
+[/] Specify SDR input device (RTL‑SDR example)
+
+[\] gqrx --remote
+[/] Enable remote control interface
+
+[\] gqrx --geometry 800x600
+[/] Set window size on launch
+
+[\] gqrx --fullscreen
+[/] Launch in fullscreen mode
+
+[\] gqrx --no-splash
+[/] Disable splash screen
+
+[\] gqrx --style fusion
+[/] Launch with a specific Qt UI style
+
+[\] gqrx --list-audio
+[/] List available audio output devices
+
+[\] gqrx --audio hw:0
+[/] Select specific audio device
+
+[\] gqrx --iq-file input.iq
+[/] Open IQ file for playback
+
+[\] gqrx --iq-rate 2e6
+[/] Set IQ sample rate for file playback
+
+[\] gqrx --remote-port 7356
+[/] Set TCP port for remote control
+
+[\] gqrx --remote-host 127.0.0.1
+[/] Set remote control host
+
+[\] gqrx --device "rtl=0"
+[/] Select RTL‑SDR device by index
+
+[\] gqrx --device "hackrf=0"
+[/] Select HackRF device
+
+[\] gqrx --device "airspy=0"
+[/] Select Airspy device
+
+[\] gqrx --device "uhd=addr=192.168.10.2"
+[/] Select USRP device
+
+[\] gqrx --freq 433.92e6
+[/] Start GQRX tuned to a specific frequency
+
+[\] gqrx --mode WFM
+[/] Start in Wide FM mode
+
+[\] gqrx --gain 30
+[/] Set initial gain
+
+[\] gqrx --squelch -50
+[/] Set initial squelch level
+
+[\] gqrx --filter-width 20000
+[/] Set filter width
+
+[\] gqrx --agc slow
+[/] Set AGC mode
+
+[\] gqrx --no-alsa
+[/] Disable ALSA audio backend
+
+[\] gqrx --no-pulseaudio
+[/] Disable PulseAudio backend
+
+[\] gqrx --record iq.raw
+[/] Start recording IQ data on launch
+
+[\] gqrx --audio-record audio.wav
+[/] Start recording audio on launch
+
+[\] gqrx --bookmark-file bookmarks.csv
+[/] Load bookmarks from file
+
+[\] gqrx --dump-config
+[/] Print current configuration to terminal
+
+[\] gqrx --reset-config
+[/] Reset configuration to defaults
+
+[\] gqrx --rds
+[/] Enable RDS decoding (FM)
+
+[\] gqrx --no-rds
+[/] Disable RDS decoding
+
+[\] rtl_test
+[/] Test RTL‑SDR dongle (common GQRX companion tool)
+
+[\] rtl_fm -f 100M -M wbfm -s 200k -r 48k - | aplay -r 48k -f S16_LE
+[/] Listen to FM radio via RTL‑SDR (external workflow)
+
+[\] hackrf_info
+[/] Show HackRF device info
+
+[\] airspy_info
+[/] Show Airspy device info
+
+[\] uhd_find_devices
+[/] Detect USRP devices
+
+[\] uhd_usrp_probe
+[/] Show detailed USRP information
+
+[\] sudo apt install gqrx-sdr
+[/] Install GQRX on Debian‑based systems

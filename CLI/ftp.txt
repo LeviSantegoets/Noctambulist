@@ -1,0 +1,171 @@
+# FTP Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] FTP Command List
+
+# -------------------------
+# CONNECTING
+# -------------------------
+
+[\] ftp <host>
+[/] Connect to FTP server
+
+[\] ftp <host> <port>
+[/] Connect to FTP server on custom port
+
+[\] ftp -n <host>
+[/] Connect without auto-login
+
+[\] open <host>
+[/] Open connection from FTP prompt
+
+[\] open <host> <port>
+[/] Open connection on specific port
+
+# -------------------------
+# AUTHENTICATION
+# -------------------------
+
+[\] user <username>
+[/] Enter username
+
+[\] pass <password>
+[/] Enter password
+
+[\] quote USER <username>
+[/] Send raw USER command
+
+[\] quote PASS <password>
+[/] Send raw PASS command
+
+# -------------------------
+# NAVIGATION (REMOTE)
+# -------------------------
+
+[\] ls
+[/] List files on server
+
+[\] dir
+[/] Detailed directory listing
+
+[\] cd <directory>
+[/] Change remote directory
+
+[\] pwd
+[/] Show remote working directory
+
+[\] mkdir <directory>
+[/] Create remote directory
+
+[\] rmdir <directory>
+[/] Remove remote directory
+
+# -------------------------
+# NAVIGATION (LOCAL)
+# -------------------------
+
+[\] lcd <directory>
+[/] Change local directory
+
+[\] lpwd
+[/] Show local working directory
+
+[\] !ls
+[/] Run local shell command
+
+# -------------------------
+# DOWNLOAD FILES
+# -------------------------
+
+[\] get <file>
+[/] Download a file
+
+[\] get <remote> <local>
+[/] Download and rename locally
+
+[\] mget <files>
+[/] Download multiple files
+
+[\] reget <file>
+[/] Resume interrupted download
+
+# -------------------------
+# UPLOAD FILES
+# -------------------------
+
+[\] put <file>
+[/] Upload a file
+
+[\] put <local> <remote>
+[/] Upload and rename on server
+
+[\] mput <files>
+[/] Upload multiple files
+
+# -------------------------
+# TRANSFER MODES
+# -------------------------
+
+[\] binary
+[/] Set binary mode (default for non-text)
+
+[\] ascii
+[/] Set ASCII mode (text files)
+
+# -------------------------
+# PASSIVE / ACTIVE MODE
+# -------------------------
+
+[\] passive
+[/] Toggle passive mode (PASV)
+
+[\] quote PASV
+[/] Force passive mode manually
+
+[\] quote PORT <args>
+[/] Force active mode manually
+
+# -------------------------
+# FILE MANAGEMENT (REMOTE)
+# -------------------------
+
+[\] delete <file>
+[/] Delete remote file
+
+[\] rename <old> <new>
+[/] Rename remote file
+
+[\] chmod <mode> <file>
+[/] Change permissions (if supported)
+
+# -------------------------
+# SESSION CONTROL
+# -------------------------
+
+[\] status
+[/] Show connection status
+
+[\] close
+[/] Close current connection
+
+[\] bye
+[/] Exit FTP client
+
+[\] quit
+[/] Exit FTP client
+
+# -------------------------
+# DEBUGGING & RAW COMMANDS
+# -------------------------
+
+[\] debug
+[/] Toggle debug mode
+
+[\] trace
+[/] Toggle packet tracing
+
+[\] quote <raw FTP command>
+[/] Send raw FTP command to server
+
+[\] verbose
+[/] Toggle verbose mode

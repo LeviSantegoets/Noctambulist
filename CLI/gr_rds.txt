@@ -1,0 +1,91 @@
+[X] GR-RDS Command List
+
+[] gr_rds_rx
+[] Launch GNU Radio RDS receiver flowgraph
+
+[] gr_rds_rx -h
+[] Show help and available options
+
+# -------------------------
+# BASIC RDS RECEIVING
+# -------------------------
+
+[] gr_rds_rx -f 100e6
+[] Receive FM broadcast and decode RDS at 100 MHz
+
+[] gr_rds_rx -f 101.1e6
+[] Decode RDS from FM station at 101.1 MHz
+
+[] gr_rds_rx -s 2e6
+[] Set SDR sample rate to 2 MSPS
+
+[] gr_rds_rx -g 30
+[] Set receiver gain to 30 dB
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[] gr_rds_rx -d 0
+[] Use first SDR device
+
+[] gr_rds_rx -d 1
+[] Use second SDR device
+
+[] gr_rds_rx --device rtl
+[] Use RTL-SDR as SDR source
+
+# -------------------------
+# INPUT  OUTPUT
+# -------------------------
+
+[] gr_rds_rx -i capture.iq
+[] Decode RDS data from recorded IQ file
+
+[] gr_rds_rx -o rds_output.txt
+[] Save decoded RDS messages to file
+
+[] gr_rds_rx -j
+[] Output decoded RDS data in JSON format
+
+# -------------------------
+# DISPLAY  INFORMATION
+# -------------------------
+
+[] gr_rds_rx --ps
+[] Display program service name (station name)
+
+[] gr_rds_rx --rt
+[] Display radio text messages
+
+[] gr_rds_rx --pi
+[] Show program identification code
+
+[] gr_rds_rx --pty
+[] Show program type information
+
+# -------------------------
+# DEMODULATION  SIGNAL PROCESSING
+# -------------------------
+
+[] gr_rds_rx --fm-demod
+[] Use FM demodulator for RDS decoding
+
+[] gr_rds_rx --rds-filter
+[] Apply RDS bandpass filter
+
+[] gr_rds_rx --sync
+[] Enable RDS block synchronization
+
+# -------------------------
+# DEBUG  VERBOSE
+# -------------------------
+
+[] gr_rds_rx -v
+[] Enable verbose output
+
+[] gr_rds_rx --stats
+[] Show decoding statistics
+
+[] gr_rds_rx --log
+[] Log decoded RDS messages to file

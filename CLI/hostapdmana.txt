@@ -1,0 +1,118 @@
+[X] Hostapd‑mana Command List
+
+[\] hostapd-mana hostapd-mana.conf
+[/] Start Hostapd‑mana using a configuration file
+
+[\] sudo hostapd-mana hostapd-mana.conf
+[/] Run Hostapd‑mana with root privileges
+
+[\] hostapd-mana -dd hostapd-mana.conf
+[/] Enable extra debug output
+
+[\] hostapd-mana -K hostapd-mana.conf
+[/] Enable key debugging output
+
+[\] hostapd-mana -t hostapd-mana.conf
+[/] Test configuration file for errors
+
+[\] hostapd-mana -B hostapd-mana.conf
+[/] Run Hostapd‑mana in background (daemon mode)
+
+[\] hostapd-mana -P /var/run/hostapd.pid hostapd-mana.conf
+[/] Write PID file for process control
+
+[\] interface=wlan0
+[/] Set wireless interface (config file)
+
+[\] ssid=FreeWifi
+[/] Set rogue AP SSID
+
+[\] channel=6
+[/] Set wireless channel
+
+[\] hw_mode=g
+[/] Set 2.4GHz mode
+
+[\] ieee8021x=1
+[/] Enable 802.1X authentication
+
+[\] eap_server=1
+[/] Enable internal EAP server
+
+[\] eap_user_file=eap_user
+[/] Specify EAP user configuration file
+
+[\] mana_wpe=1
+[/] Enable WPE (Wireless Pwnage Edition) mode
+
+[\] mana_eapsuccess=1
+[/] Force EAP success (rogue AP behavior)
+
+[\] mana_loud=1
+[/] Enable loud mode (aggressive probing)
+
+[\] mana_wpaout=wpa.log
+[/] Save WPA handshake captures
+
+[\] mana_eapout=eap.log
+[/] Save EAP credential captures
+
+[\] mana_ssidout=ssid.log
+[/] Log probed SSIDs
+
+[\] mana_blacklist=blacklist.txt
+[/] Block specific MAC addresses
+
+[\] mana_whitelist=whitelist.txt
+[/] Allow only specific MAC addresses
+
+[\] wpa=2
+[/] Enable WPA2 mode
+
+[\] wpa_key_mgmt=WPA-EAP
+[/] Use WPA‑Enterprise authentication
+
+[\] rsn_pairwise=CCMP
+[/] Set encryption type
+
+[\] auth_algs=1
+[/] Enable Open System authentication
+
+[\] wpa_passphrase=Password123
+[/] Set WPA2 passphrase (if needed)
+
+[\] ca_cert=/path/ca.pem
+[/] Set CA certificate for EAP
+
+[\] server_cert=/path/server.pem
+[/] Set server certificate
+
+[\] private_key=/path/server.key
+[/] Set private key
+
+[\] private_key_passwd=secret
+[/] Private key password
+
+[\] eapol_key_index_workaround=0
+[/] Disable key index workaround
+
+[\] logger_syslog=1
+[/] Enable syslog logging
+
+[\] logger_stdout=1
+[/] Enable console logging
+
+[\] logger_stdout_level=2
+[/] Set console log level
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with Hostapd‑mana

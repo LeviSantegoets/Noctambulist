@@ -1,0 +1,52 @@
+[X] enum4linux-ng Command List
+
+[\] enum4linux-ng 192.168.1.10
+[/] Run basic enumeration against target
+
+[\] enum4linux-ng -A 192.168.1.10
+[/] Run all enumeration modules
+
+[\] enum4linux-ng -u user -p password 192.168.1.10
+[/] Authenticate with username and password
+
+[\] enum4linux-ng -u user -H <hash> 192.168.1.10
+[/] Authenticate using NTLM hash
+
+[\] enum4linux-ng -U 192.168.1.10
+[/] Enumerate users
+
+[\] enum4linux-ng -G 192.168.1.10
+[/] Enumerate groups
+
+[\] enum4linux-ng -S 192.168.1.10
+[/] Enumerate shares
+
+[\] enum4linux-ng -P 192.168.1.10
+[/] Get password policy
+
+[\] enum4linux-ng -O 192.168.1.10
+[/] Get OS information
+
+[\] enum4linux-ng -N 192.168.1.10
+[/] Enumerate network information
+
+[\] enum4linux-ng -r 192.168.1.10
+[/] RID cycling (user enumeration)
+
+[\] enum4linux-ng -u user -p password -A 192.168.1.10
+[/] Full authenticated enumeration
+
+[\] enum4linux-ng -oA results 192.168.1.10
+[/] Save output in all formats (txt/json/yaml)
+
+[\] enum4linux-ng --verbose 192.168.1.10
+[/] Enable verbose output
+
+[\] enum4linux-ng --timeout 30 192.168.1.10
+[/] Set connection timeout (seconds)
+
+[\] enum4linux-ng --help
+[/] Show help menu
+
+[\] enum4linux-ng --version
+[/] Show version

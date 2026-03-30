@@ -1,0 +1,40 @@
+[X] Glances Command List (Comprehensive System Monitoring)
+
+[\] glances
+[/] Launch Glances interactive monitoring dashboard
+
+[\] glances -w
+[/] Start Glances in web server mode
+
+[\] glances -s
+[/] Start Glances as a server (for client connections)
+
+[\] glances -c 192.168.1.10
+[/] Connect to a Glances server at IP 192.168.1.10
+
+[\] glances -t 5
+[/] Set refresh interval to 5 seconds
+
+[\] glances -C /path/to/config
+[/] Use custom configuration file
+
+[\] glances -o csv
+[/] Export statistics to CSV
+
+[\] glances -o json
+[/] Export statistics to JSON
+
+[\] glances --export-csv /tmp/stats.csv
+[/] Save output directly to CSV file
+
+[\] glances --disable-plugin disk
+[/] Disable a specific plugin
+
+[\] glances --enable-plugin docker
+[/] Enable a specific plugin
+
+[\] glances --help
+[/] Show help menu
+
+[\] glances --version
+[/] Show Glances version

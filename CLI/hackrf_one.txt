@@ -1,0 +1,140 @@
+# HackRF One Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] HackRF One Command List
+
+# -------------------------
+# DEVICE INFO & TESTING
+# -------------------------
+
+[\] hackrf_info
+[/] Show HackRF device information
+
+[\] hackrf_debug --si5351c
+[/] Test clock generator
+
+[\] hackrf_debug --lna 40
+[/] Set LNA gain to 40 dB
+
+[\] hackrf_debug --vga 20
+[/] Set VGA gain to 20 dB
+
+[\] hackrf_transfer --help
+[/] Show all HackRF transfer options
+
+# -------------------------
+# RECEIVING (RX)
+# -------------------------
+
+[\] hackrf_transfer -r out.iq
+[/] Capture raw IQ data
+
+[\] hackrf_transfer -f 100000000 -s 2000000 -r fm.iq
+[/] Capture 100 MHz at 2 MS/s
+
+[\] hackrf_transfer -f 433920000 -s 1000000 -g 40 -r 433.iq
+[/] Capture 433.92 MHz ISM band
+
+[\] hackrf_transfer -f 1575420000 -s 2400000 -r gps.iq
+[/] Capture GPS L1 frequency
+
+[\] hackrf_transfer -f 137100000 -s 2400000 -r noaa.iq
+[/] Capture NOAA APT weather satellite
+
+# -------------------------
+# TRANSMITTING (TX)
+# -------------------------
+
+[\] hackrf_transfer -t file.iq -f 433920000 -s 2000000
+[/] Transmit IQ file at 433.92 MHz
+
+[\] hackrf_transfer -t tone.iq -f 100000000
+[/] Transmit a tone (pre‑generated IQ)
+
+[\] hackrf_transfer -t file.iq -f 915000000 -x 20
+[/] Transmit with 20 dB TX gain
+
+[\] hackrf_transfer -t file.iq -f 315000000 -a 1
+[/] Enable antenna power (bias‑tee)
+
+# -------------------------
+# REAL‑TIME TX/RX (HALF‑DUPLEX)
+# -------------------------
+
+[\] hackrf_transfer -f 100000000 -s 2000000 -r rx.iq -t tx.iq
+[/] Simultaneous RX/TX (time‑interleaved)
+
+# -------------------------
+# FREQUENCY SWEEPING
+# -------------------------
+
+[\] hackrf_sweep
+[/] Default wideband sweep
+
+[\] hackrf_sweep -f 100:500
+[/] Sweep 100–500 MHz
+
+[\] hackrf_sweep -f 24:6000 -w 10000000
+[/] Sweep full HackRF range with 10 MHz bins
+
+[\] hackrf_sweep -f 800:900 -l 16 -g 20
+[/] Sweep with LNA/VGA gain settings
+
+# -------------------------
+# REPLAY ATTACKS (IQ RECORD & REPLAY)
+# -------------------------
+
+[\] hackrf_transfer -f 433920000 -s 2000000 -r key.iq
+[/] Record 433 MHz signal (e.g., remote)
+
+[\] hackrf_transfer -f 433920000 -s 2000000 -t key.iq
+[/] Replay captured signal
+
+# -------------------------
+# CLOCK / FREQUENCY CONTROL
+# -------------------------
+
+[\] hackrf_debug --set-freq 100000000
+[/] Set internal clock frequency
+
+[\] hackrf_spiflash -r backup.bin
+[/] Backup SPI flash
+
+[\] hackrf_spiflash -w firmware.bin
+[/] Flash new firmware
+
+# -------------------------
+# ANTENNA POWER (BIAS‑TEE)
+# -------------------------
+
+[\] hackrf_debug --set-antenna 1
+[/] Enable antenna bias‑tee
+
+[\] hackrf_debug --set-antenna 0
+[/] Disable antenna bias‑tee
+
+# -------------------------
+# CALIBRATION
+# -------------------------
+
+[\] hackrf_debug --amp 1
+[/] Enable RF amplifier
+
+[\] hackrf_debug --amp 0
+[/] Disable RF amplifier
+
+[\] hackrf_transfer -f 100000000 -s 2000000 -r cal.iq --ppm 0
+[/] Capture with manual PPM correction
+
+# -------------------------
+# MISC UTILITIES
+# -------------------------
+
+[\] hackrf_cpldjtag -x firmware.jic
+[/] Flash CPLD firmware
+
+[\] hackrf_operacake --list
+[/] List OperaCake ports
+
+[\] hackrf_operacake --config 1:RX
+[/] Configure OperaCake switching

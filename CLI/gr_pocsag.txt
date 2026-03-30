@@ -1,0 +1,107 @@
+[X] GR-POCSAG Command List
+
+[\] gr_pocsag_decoder
+[/] Start GNU Radio POCSAG pager decoder
+
+[\] gr_pocsag_decoder -h
+[/] Show help and available options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] gr_pocsag_decoder -f 929e6
+[/] Decode pager signals at 929 MHz
+
+[\] gr_pocsag_decoder -f 931e6
+[/] Decode pager signals at 931 MHz
+
+[\] gr_pocsag_decoder -s 22050
+[/] Set audio sample rate
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] gr_pocsag_decoder -d 0
+[/] Use first SDR device
+
+[\] gr_pocsag_decoder -d 1
+[/] Use second SDR device
+
+[\] gr_pocsag_decoder --device rtl
+[/] Use RTL-SDR input device
+
+[\] gr_pocsag_decoder --device hackrf
+[/] Use HackRF SDR device
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] gr_pocsag_decoder --file capture.iq
+[/] Decode pager signal from recorded IQ file
+
+[\] gr_pocsag_decoder --stdin
+[/] Read samples from standard input
+
+[\] rtl_sdr -f 929e6 -s 1e6 - | gr_pocsag_decoder --stdin
+[/] Pipe RTL-SDR stream to POCSAG decoder
+
+# -------------------------
+# BAUD RATE OPTIONS
+# -------------------------
+
+[\] gr_pocsag_decoder --baud 512
+[/] Decode POCSAG 512 baud messages
+
+[\] gr_pocsag_decoder --baud 1200
+[/] Decode POCSAG 1200 baud messages
+
+[\] gr_pocsag_decoder --baud 2400
+[/] Decode POCSAG 2400 baud messages
+
+[\] gr_pocsag_decoder --auto-baud
+[/] Automatically detect baud rate
+
+# -------------------------
+# MESSAGE OUTPUT
+# -------------------------
+
+[\] gr_pocsag_decoder --show-address
+[/] Display pager capcode (address)
+
+[\] gr_pocsag_decoder --show-message
+[/] Display decoded pager text
+
+[\] gr_pocsag_decoder --json
+[/] Output decoded pager messages in JSON format
+
+[\] gr_pocsag_decoder --output messages.txt
+[/] Save decoded pager messages to file
+
+# -------------------------
+# FILTER / SIGNAL PROCESSING
+# -------------------------
+
+[\] gr_pocsag_decoder --filter
+[/] Enable signal filtering
+
+[\] gr_pocsag_decoder --invert
+[/] Invert signal polarity
+
+[\] gr_pocsag_decoder --agc
+[/] Enable automatic gain control
+
+# -------------------------
+# DEBUG / ANALYSIS
+# -------------------------
+
+[\] gr_pocsag_decoder --verbose
+[/] Enable verbose decoding output
+
+[\] gr_pocsag_decoder --stats
+[/] Show decoding statistics
+
+[\] gr_pocsag_decoder --log
+[/] Log pager messages to file

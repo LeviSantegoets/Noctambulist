@@ -1,0 +1,64 @@
+[X] HiddenEye Command List
+
+[\] hiddeneye
+[/] Launch HiddenEye menu
+
+[\] hiddeneye --help
+[/] Show help menu
+
+[\] hiddeneye --facebook
+[/] Start Facebook phishing page
+
+[\] hiddeneye --google
+[/] Start Google phishing page
+
+[\] hiddeneye --instagram
+[/] Start Instagram phishing page
+
+[\] hiddeneye --twitter
+[/] Start Twitter phishing page
+
+[\] hiddeneye --linkedin
+[/] Start LinkedIn phishing page
+
+[\] hiddeneye --github
+[/] Start GitHub phishing page
+
+[\] hiddeneye --paypal
+[/] Start PayPal phishing page
+
+[\] hiddeneye --snapchat
+[/] Start Snapchat phishing page
+
+[\] hiddeneye --yahoo
+[/] Start Yahoo phishing page
+
+[\] hiddeneye --spotify
+[/] Start Spotify phishing page
+
+[\] hiddeneye --netflix
+[/] Start Netflix phishing page
+
+[\] hiddeneye --custom
+[/] Use custom phishing template
+
+[\] hiddeneye --port 80
+[/] Set server port
+
+[\] hiddeneye --ssl
+[/] Enable HTTPS
+
+[\] hiddeneye --cert cert.pem --key key.pem
+[/] Use custom SSL certificate
+
+[\] hiddeneye --output logs/
+[/] Save logs and credentials
+
+[\] hiddeneye --user-agent random
+[/] Use random user‑agent strings
+
+[\] hiddeneye --no-logs
+[/] Disable logging
+
+[\] hiddeneye --update
+[/] Update HiddenEye

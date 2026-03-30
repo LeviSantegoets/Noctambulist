@@ -1,0 +1,133 @@
+[X] HackRF Tools Command List
+
+[\] hackrf_info
+[/] Display connected HackRF device information
+
+[\] hackrf_info -a
+[/] Show extended device information
+
+[\] hackrf_info -v
+[/] Show firmware and USB version details
+
+# -------------------------
+# DEVICE CONTROL
+# -------------------------
+
+[\] hackrf_spiflash -R
+[/] Read contents of SPI flash
+
+[\] hackrf_spiflash -w firmware.bin
+[/] Write firmware image to SPI flash
+
+[\] hackrf_spiflash -r backup.bin
+[/] Backup SPI flash contents
+
+[\] hackrf_spiflash -e
+[/] Erase SPI flash
+
+[\] hackrf_spiflash -v
+[/] Verify written firmware
+
+# -------------------------
+# FIRMWARE UPDATE
+# -------------------------
+
+[\] hackrf_cpldjtag -x firmware.xsvf
+[/] Flash CPLD firmware using JTAG
+
+[\] hackrf_cpldjtag -v
+[/] Verify CPLD firmware
+
+[\] hackrf_cpldjtag -r
+[/] Reset CPLD after flashing
+
+# -------------------------
+# SIGNAL TRANSMIT
+# -------------------------
+
+[\] hackrf_transfer -t file.iq
+[/] Transmit IQ samples from file
+
+[\] hackrf_transfer -t file.iq -f <frequency>
+[/] Transmit samples at specific frequency
+
+[\] hackrf_transfer -t file.iq -s 2000000
+[/] Set sample rate for transmission
+
+[\] hackrf_transfer -t file.iq -x 47
+[/] Set TX amplifier gain
+
+[\] hackrf_transfer -t file.iq -a 1
+[/] Enable RF amplifier during transmission
+
+# -------------------------
+# SIGNAL RECEIVE
+# -------------------------
+
+[\] hackrf_transfer -r capture.iq
+[/] Receive signal and save IQ samples
+
+[\] hackrf_transfer -r capture.iq -f <frequency>
+[/] Capture samples at specified frequency
+
+[\] hackrf_transfer -r capture.iq -s 2000000
+[/] Set sampling rate for capture
+
+[\] hackrf_transfer -r capture.iq -n 10000000
+[/] Capture specific number of samples
+
+[\] hackrf_transfer -r capture.iq -l 32
+[/] Set LNA gain level
+
+[\] hackrf_transfer -r capture.iq -g 40
+[/] Set VGA gain level
+
+[\] hackrf_transfer -r capture.iq -a 1
+[/] Enable RF amplifier for receiving
+
+# -------------------------
+# SWEEP / SPECTRUM
+# -------------------------
+
+[\] hackrf_sweep
+[/] Perform spectrum sweep across wide frequency range
+
+[\] hackrf_sweep -f 100:1000
+[/] Sweep from 100 MHz to 1000 MHz
+
+[\] hackrf_sweep -w 1000000
+[/] Set sweep bin width
+
+[\] hackrf_sweep -l 32
+[/] Set LNA gain for sweep
+
+[\] hackrf_sweep -g 40
+[/] Set VGA gain for sweep
+
+[\] hackrf_sweep -a 1
+[/] Enable RF amplifier during sweep
+
+[\] hackrf_sweep -1
+[/] Perform single sweep
+
+# -------------------------
+# CLOCK / DEBUG
+# -------------------------
+
+[\] hackrf_debug --si5351c -n 0 -r
+[/] Read Si5351C clock register
+
+[\] hackrf_debug --si5351c -n 0 -w 0x10
+[/] Write value to clock register
+
+[\] hackrf_debug --max2837 -n 0 -r
+[/] Read MAX2837 RF chip register
+
+[\] hackrf_debug --max2837 -n 0 -w 0x10
+[/] Write value to MAX2837 register
+
+[\] hackrf_debug --gpio_read
+[/] Read HackRF GPIO pins
+
+[\] hackrf_debug --gpio_write
+[/] Write values to GPIO pins
