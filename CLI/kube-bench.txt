@@ -1,0 +1,61 @@
+[X] Kube-Bench Command List
+
+[\] kube-bench
+[/] Run default CIS benchmark checks
+
+[\] kube-bench run
+[/] Execute all benchmark tests
+
+[\] kube-bench run --targets master
+[/] Run checks for control plane (master nodes)
+
+[\] kube-bench run --targets node
+[/] Run checks for worker nodes
+
+[\] kube-bench run --targets etcd
+[/] Run checks for etcd configuration
+
+[\] kube-bench run --targets policies
+[/] Run policy-related checks
+
+[\] kube-bench --version
+[/] Show kube-bench version
+
+[\] kube-bench --help
+[/] Show help menu
+
+[\] kube-bench --config-dir <dir>
+[/] Specify custom configuration directory
+
+[\] kube-bench --config <file>
+[/] Use a specific config file
+
+[\] kube-bench --benchmark <version>
+[/] Specify CIS benchmark version
+
+[\] kube-bench --json
+[/] Output results in JSON format
+
+[\] kube-bench --yaml
+[/] Output results in YAML format
+
+[\] kube-bench --check <check_id>
+[/] Run a specific check
+
+[\] kube-bench --skip <check_id>
+[/] Skip a specific check
+
+[\] kube-bench --group <group_id>
+[/] Run a group of checks
+
+[\] kube-bench --logtostderr
+[/] Log output to stderr
+
+[\] kube-bench --v <level>
+[/] Set verbosity level
+
+[\] kube-bench --outputfile <file>
+[/] Save output to a file
+
+[\] kube-bench --exit-code
+[/] Return non-zero exit code if checks fail

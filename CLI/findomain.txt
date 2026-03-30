@@ -1,0 +1,31 @@
+[X] Findomain Command List
+
+[\] findomain -t <domain>
+[/] Enumerate subdomains for a target domain
+
+[\] findomain -t <domain> -u <file>
+[/] Save subdomain results to a file
+
+[\] findomain -t <domain> -o <format>
+[/] Output results in a specific format (txt, json, csv)
+
+[\] findomain -t <domain> -r
+[/] Resolve subdomains to IP addresses
+
+[\] findomain -t <domain> -b
+[/] Use brute-force enumeration
+
+[\] findomain -t <domain> --no-bruteforce
+[/] Disable brute-force (only passive sources)
+
+[\] findomain -t <domain> --threads <n>
+[/] Set number of threads for faster scanning
+
+[\] findomain -h
+[/] Show help menu
+
+[\] findomain -v
+[/] Show Findomain version
+
+[\] findomain --silent
+[/] Suppress unnecessary output

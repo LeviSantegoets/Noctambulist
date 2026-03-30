@@ -1,0 +1,52 @@
+[X] SMBMap Command List
+
+[\] smbmap -H <target>
+[/] Scan a host for SMB shares
+
+[\] smbmap -H <target> -u <username> -p <password>
+[/] Authenticate with username and password
+
+[\] smbmap -H <target> -u <username> -p <password> -d <domain>
+[/] Authenticate with domain credentials
+
+[\] smbmap -H <target> -u <username> -p <password> --shares
+[/] List all SMB shares on the target
+
+[\] smbmap -H <target> -u <username> -p <password> -r <regex>
+[/] Recursively list files/folders matching regex
+
+[\] smbmap -H <target> -u <username> -p <password> -R
+[/] Recursively enumerate all files/folders in all shares
+
+[\] smbmap -H <target> -u <username> -p <password> -A
+[/] List accessible files (read permissions)
+
+[\] smbmap -H <target> -u <username> -p <password> -x <command>
+[/] Execute a command on a writable share
+
+[\] smbmap -H <target> -u <username> -p <password> -D
+[/] Download all accessible files from shares
+
+[\] smbmap -H <target> -u <username> -p <password> -o <outputfile>
+[/] Save scan output to a file
+
+[\] smbmap -H <target> -u <username> -p <password> --no-bruteforce
+[/] Disable share brute-force attempts
+
+[\] smbmap -H <target> -u <username> -p <password> --enum
+[/] Enumerate share permissions and contents
+
+[\] smbmap -H <target> -u <username> -p <password> -v
+[/] Enable verbose output
+
+[\] smbmap -H <target> -u <username> -p <password> --sam
+[/] Attempt to dump SAM database
+
+[\] smbmap -H <target> -u <username> -p <password> --pass-pol
+[/] Retrieve password policy
+
+[\] smbmap -H <target> --no-color
+[/] Disable colored output
+
+[\] smbmap --help
+[/] Show help menu

@@ -1,0 +1,43 @@
+[X] ELFutils Command List
+
+[\] readelf -h <binary>
+[/] Display ELF header information
+
+[\] readelf -S <binary>
+[/] Show all sections in the ELF file
+
+[\] readelf -s <binary>
+[/] Display symbol table
+
+[\] readelf -r <binary>
+[/] Show relocation entries
+
+[\] readelf -d <binary>
+[/] Display dynamic section
+
+[\] readelf -V <binary>
+[/] Show version information
+
+[\] readelf -x <section> <binary>
+[/] Dump hexadecimal contents of a section
+
+[\] readelf -p <section> <binary>
+[/] Dump ASCII contents of a section
+
+[\] eu-readelf -a <binary>
+[/] Show all information (wrapper for readelf)
+
+[\] eu-objdump -d <binary>
+[/] Disassemble the binary
+
+[\] eu-nm <binary>
+[/] Show symbol table
+
+[\] eu-addr2line -e <binary> <address>
+[/] Map addresses to source code lines
+
+[\] eu-strip <binary>
+[/] Strip debugging symbols
+
+[\] elfutils --version
+[/] Show ELFutils versionaw

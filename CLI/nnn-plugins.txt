@@ -1,0 +1,40 @@
+[X] nnn-Plugins Command List
+
+[\] nnn --help
+[/] Show help menu
+
+[\] nnn --version
+[/] Show nnn version
+
+[\] nnn -p <plugin_name>
+[/] Run a specific plugin
+
+[\] nnn -P <plugin_directory>
+[/] Set custom directory for plugins
+
+[\] nnn -t
+[/] Launch nnn in terminal-only mode (without plugins)
+
+[\] nnn -e
+[/] Execute default file opener on selected file
+
+[\] nnn -d <directory>
+[/] Start in a specific directory
+
+[\] nnn -C <command>
+[/] Run a shell command from within nnn
+
+[\] nnn --plugin-list
+[/] List all available plugins
+
+[\] nnn --help-plugins
+[/] Show detailed plugin usage
+
+[\] nnn --plugin-update
+[/] Update all plugins from repository
+
+[\] nnn --plugin-config <file>
+[/] Specify plugin configuration file
+
+[\] nnn --help-all
+[/] Show advanced options

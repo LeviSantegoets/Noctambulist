@@ -1,0 +1,49 @@
+[X] RFcat Command List
+
+[\] rflib -h
+[/] Show help menu
+
+[\] rflib -i <device>
+[/] Connect to specific RF device
+
+[\] rflib --version
+[/] Show RFcat version
+
+[\] rflib -f <frequency>
+[/] Set operating frequency in Hz
+
+[\] rflib -s <speed>
+[/] Set data rate or bit rate
+
+[\] rflib -p <power>
+[/] Set transmission power
+
+[\] rflib -m <modulation>
+[/] Set modulation type (OOK, FSK, etc.)
+
+[\] rflib --rx <duration>
+[/] Receive signals for a duration
+
+[\] rflib --tx <data>
+[/] Transmit raw data
+
+[\] rflib --sniff
+[/] Start packet sniffing
+
+[\] rflib --send-packet <file>
+[/] Send packet from file
+
+[\] rflib --recv-packet <file>
+[/] Save received packet to file
+
+[\] rflib --set-channel <channel>
+[/] Set specific RF channel
+
+[\] rflib --set-baud <baudrate>
+[/] Set baud rate for serial devices
+
+[\] rflib --help-mods
+[/] List supported modulation types
+
+[\] rflib --quit
+[/] Exit RFcat session

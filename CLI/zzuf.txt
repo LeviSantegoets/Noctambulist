@@ -1,0 +1,46 @@
+[X] zzuf Command List
+
+[\] zzuf -h
+[/] Show help menu
+
+[\] zzuf -V
+[/] Show zzuf version
+
+[\] zzuf -r
+[/] Replace input file with fuzzed output
+
+[\] zzuf -s <seed>
+[/] Set random seed
+
+[\] zzuf -p <probability>
+[/] Set fuzzing probability (e.g., 0.01 = 1%)
+
+[\] zzuf -m <max_bytes>
+[/] Maximum bytes to fuzz
+
+[\] zzuf -x
+[/] Enable hex mode
+
+[\] zzuf -f <file>
+[/] Fuzz a specific file
+
+[\] zzuf -o <file>
+[/] Save fuzzed output to a file
+
+[\] zzuf -c <command>
+[/] Run a command with fuzzed input
+
+[\] zzuf -t <time>
+[/] Set duration of fuzzing (seconds)
+
+[\] zzuf -q
+[/] Quiet mode
+
+[\] zzuf -d
+[/] Debug mode
+
+[\] zzuf -b
+[/] Enable binary mode for fuzzing
+
+[\] zzuf --version
+[/] Show zzuf version

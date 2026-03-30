@@ -1,0 +1,49 @@
+[X] CloudSploit Command List
+
+[\] cloudsploit scan
+[/] Run a security scan using default configuration
+
+[\] cloudsploit scan --account <account_name_or_id>
+[/] Scan a specific cloud account
+
+[\] cloudsploit scan --config <file>
+[/] Use a custom configuration file
+
+[\] cloudsploit scan --plugin <plugin_name>
+[/] Run a specific plugin check
+
+[\] cloudsploit scan --plugins <file>
+[/] Run a set of plugins defined in a file
+
+[\] cloudsploit scan --report json
+[/] Output scan results in JSON format
+
+[\] cloudsploit scan --report csv
+[/] Output scan results in CSV format
+
+[\] cloudsploit scan --report html
+[/] Output scan results in HTML format
+
+[\] cloudsploit scan --quiet
+[/] Suppress non-essential output
+
+[\] cloudsploit scan --debug
+[/] Enable debug logging
+
+[\] cloudsploit version
+[/] Show CloudSploit version
+
+[\] cloudsploit help
+[/] Show help menu
+
+[\] cloudsploit plugin list
+[/] List all available CloudSploit plugins
+
+[\] cloudsploit plugin update
+[/] Update CloudSploit plugins
+
+[\] cloudsploit account add --name <name> --key <key> --secret <secret>
+[/] Add a cloud account for scanning
+
+[\] cloudsploit account remove --name <name>
+[/] Remove a cloud account from CloudSploit

@@ -1,0 +1,31 @@
+[X] Yersinia Command List
+
+[\] yersinia -h
+[/] Show help menu
+
+[\] yersinia -G
+[/] Launch the graphical (GTK) interface
+
+[\] yersinia -I
+[/] Launch interactive mode in the terminal
+
+[\] yersinia -T <protocol>
+[/] Specify the protocol to test (e.g., STP, CDP, DTP, FDB, HSRP, etc.)
+
+[\] yersinia -S <target_ip>
+[/] Specify target IP address for attacks
+
+[\] yersinia -a <attack_type>
+[/] Select attack type for the chosen protocol
+
+[\] yersinia -v
+[/] Enable verbose output
+
+[\] yersinia -l
+[/] List available protocols and attack types
+
+[\] yersinia -n
+[/] Run in non-interactive mode
+
+[\] yersinia --version
+[/] Show Yersinia version

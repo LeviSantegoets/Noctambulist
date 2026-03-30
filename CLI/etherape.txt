@@ -1,0 +1,34 @@
+[X] EtherApe Command List
+
+[\] etherape
+[/] Launch EtherApe with default interface
+
+[\] etherape -i <interface>
+[/] Monitor a specific network interface
+
+[\] etherape -f <filter>
+[/] Apply a capture filter (BPF syntax, e.g., tcp, udp, port 80)
+
+[\] etherape -n
+[/] Disable DNS resolution (numeric IPs only)
+
+[\] etherape -g
+[/] Group nodes by network address
+
+[\] etherape -l <file>
+[/] Load a previously saved capture file
+
+[\] etherape -w <file>
+[/] Write capture data to a file
+
+[\] etherape -t <time>
+[/] Set capture duration in seconds
+
+[\] etherape --help
+[/] Show help menu
+
+[\] etherape --version
+[/] Show EtherApe version
+
+[\] etherape -s
+[/] Start in silent mode (no GUI)

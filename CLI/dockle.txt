@@ -1,0 +1,37 @@
+[X] Dockle Command List
+
+[\] dockle <image>
+[/] Run a security and best-practice scan on a Docker image
+
+[\] dockle <image> -f json
+[/] Output scan results in JSON format
+
+[\] dockle <image> -f sarif
+[/] Output scan results in SARIF format
+
+[\] dockle <image> -f csv
+[/] Output scan results in CSV format
+
+[\] dockle <image> -f html
+[/] Output scan results in HTML format
+
+[\] dockle <image> -l <level>
+[/] Set minimum severity level to display (e.g., WARN, CRITICAL)
+
+[\] dockle <image> --no-color
+[/] Disable colored output
+
+[\] dockle <image> --ignore <rule_id>
+[/] Ignore specific rule(s) during the scan
+
+[\] dockle <image> --list-rules
+[/] List all available rules
+
+[\] dockle <image> --config <file>
+[/] Use a custom configuration file
+
+[\] dockle --version
+[/] Show Dockle version
+
+[\] dockle --help
+[/] Show help menu

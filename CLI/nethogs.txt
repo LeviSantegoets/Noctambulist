@@ -1,0 +1,34 @@
+[X] Nethogs Command List
+
+[\] nethogs
+[/] Start monitoring bandwidth usage per process (default interface)
+
+[\] nethogs <interface>
+[/] Monitor bandwidth on a specific network interface
+
+[\] nethogs <interface1> <interface2>
+[/] Monitor multiple interfaces simultaneously
+
+[\] nethogs -d <seconds>
+[/] Set refresh interval (in seconds)
+
+[\] nethogs -t
+[/] Run in text mode (no interactive UI)
+
+[\] nethogs -c <count>
+[/] Exit after a number of refresh cycles
+
+[\] nethogs -v 1
+[/] Show version information
+
+[\] nethogs -p
+[/] Enable promiscuous mode
+
+[\] nethogs -s
+[/] Sort output by sent traffic
+
+[\] nethogs -r
+[/] Sort output by received traffic
+
+[\] nethogs -h
+[/] Show help menu

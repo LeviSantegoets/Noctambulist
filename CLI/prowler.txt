@@ -1,0 +1,49 @@
+[X] Prowler Command List
+
+[\] prowler
+[/] Run default AWS security checks (CIS benchmark)
+
+[\] prowler -g <group_id>
+[/] Run a specific group of checks
+
+[\] prowler -c <check_id>
+[/] Run a specific check
+
+[\] prowler -M json
+[/] Output results in JSON format
+
+[\] prowler -M csv
+[/] Output results in CSV format
+
+[\] prowler -M html
+[/] Output results in HTML report
+
+[\] prowler -M junit
+[/] Output results in JUnit format (CI/CD integration)
+
+[\] prowler -A <account_id>
+[/] Scan a specific AWS account
+
+[\] prowler -R <region>
+[/] Scan a specific AWS region
+
+[\] prowler -S
+[/] Enable summary output
+
+[\] prowler -V
+[/] Show Prowler version
+
+[\] prowler --update
+[/] Update Prowler to the latest version
+
+[\] prowler --list-groups
+[/] List all available groups of checks
+
+[\] prowler --list-checks
+[/] List all individual checks
+
+[\] prowler --debug
+[/] Enable debug mode for detailed output
+
+[\] prowler --help
+[/] Show help menu

@@ -1,0 +1,34 @@
+[X] Watch Command List
+
+[\] watch -h
+[/] Show help menu
+
+[\] watch --version
+[/] Show watch version
+
+[\] watch <command>
+[/] Run a command repeatedly and display output
+
+[\] watch -n <seconds> <command>
+[/] Set interval between command executions (default 2s)
+
+[\] watch -d <command>
+[/] Highlight differences between successive outputs
+
+[\] watch -t <command>
+[/] Disable header showing interval, command, and time
+
+[\] watch -g <command>
+[/] Exit when output changes
+
+[\] watch -b <command>
+[/] Beep when output changes
+
+[\] watch -p <command>
+[/] Pause screen updates temporarily
+
+[\] watch --color <command>
+[/] Force color output for command
+
+[\] watch --help-all
+[/] Show advanced options

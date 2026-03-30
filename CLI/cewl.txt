@@ -1,0 +1,34 @@
+[X] CeWL Command List
+
+[\] cewl --help
+[/] Show help menu
+
+[\] cewl <url>
+[/] Generate a wordlist from a website
+
+[\] cewl <url> -w <file>
+[/] Save generated wordlist to a file
+
+[\] cewl <url> -d <depth>
+[/] Set crawl depth (default = 2)
+
+[\] cewl <url> -m <min_length>
+[/] Set minimum word length to include
+
+[\] cewl <url> -e
+[/] Include email addresses found on the site
+
+[\] cewl <url> -a <user-agent>
+[/] Specify a custom User-Agent
+
+[\] cewl <url> -v
+[/] Enable verbose output
+
+[\] cewl <url> -u <username_file>
+[/] Use username list for targeted scraping
+
+[\] cewl --version
+[/] Show CeWL version
+
+[\] cewl <url> -c
+[/] Count the number of words found

@@ -1,0 +1,57 @@
+[X] Maskprocessor Command List
+
+[\] mp64 --help
+[/] Show help menu
+
+[\] mp64 <mask>
+[/] Generate wordlist from a mask pattern
+
+[\] mp64 <mask> -o <file>
+[/] Save generated output to a file
+
+[\] mp64 <mask> --increment
+[/] Enable incremental mask length
+
+[\] mp64 <mask> --increment-min <n>
+[/] Set minimum length for incremental mode
+
+[\] mp64 <mask> --increment-max <n>
+[/] Set maximum length for incremental mode
+
+[\] mp64 <mask> -1 <charset>
+[/] Define custom charset ?1
+
+[\] mp64 <mask> -2 <charset>
+[/] Define custom charset ?2
+
+[\] mp64 <mask> -3 <charset>
+[/] Define custom charset ?3
+
+[\] mp64 <mask> -4 <charset>
+[/] Define custom charset ?4
+
+[\] mp64 <mask> -q
+[/] Suppress status output (quiet mode)
+
+[\] mp64 --stdout
+[/] Output directly to stdout
+
+[\] mp64 --version
+[/] Show Maskprocessor version
+
+# Common mask placeholders:
+
+[\] ?l
+[/] Lowercase letters (a-z) (mask placeholder)
+
+[\] ?u
+[/] Uppercase letters (A-Z) (mask placeholder)
+
+[\] ?d
+[/] Digits (0-9) (mask placeholder)
+
+[\] ?s
+[/] Special characters (mask placeholder)
+
+[\] ?a
+[/] All characters (letters + digits + symbols) (mask placeholder)

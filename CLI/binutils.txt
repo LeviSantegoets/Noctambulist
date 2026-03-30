@@ -1,0 +1,46 @@
+[X] Binutils Command List
+
+[\] objdump -h <binary>
+[/] Show section headers
+
+[\] objdump -d <binary>
+[/] Disassemble the binary
+
+[\] objdump -D <binary>
+[/] Disassemble all sections
+
+[\] objdump -S <binary>
+[/] Disassemble and interleave source code (if available)
+
+[\] objdump -t <binary>
+[/] Show symbol table
+
+[\] nm <binary>
+[/] List symbols in the binary
+
+[\] readelf -h <binary>
+[/] Show ELF header
+
+[\] readelf -S <binary>
+[/] Show sections
+
+[\] readelf -s <binary>
+[/] Show symbol table
+
+[\] strings <binary>
+[/] Extract printable strings
+
+[\] addr2line -e <binary> <address>
+[/] Map addresses to source code lines
+
+[\] strip <binary>
+[/] Remove symbols and debugging info
+
+[\] ld <object_files> -o <output>
+[/] Link object files into an executable
+
+[\] ar rcs <archive.a> <object_files>
+[/] Create or update a static library
+
+[\] binutils --version
+[/] Show Binutils version

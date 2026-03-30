@@ -1,0 +1,40 @@
+[X] Domato Command List
+
+[\] domato -h
+[/] Show help menu
+
+[\] domato --version
+[/] Show Domato version
+
+[\] domato --input <file_or_url>
+[/] Specify HTML/DOM input file or URL
+
+[\] domato --output <file>
+[/] Save extracted elements to a file
+
+[\] domato --tags <tag1,tag2,...>
+[/] Extract specific HTML tags (e.g., script, img, link)
+
+[\] domato --attributes <attr1,attr2,...>
+[/] Extract specific attributes (e.g., src, href)
+
+[\] domato --all
+[/] Extract all elements and attributes
+
+[\] domato --json
+[/] Output results in JSON format
+
+[\] domato --csv
+[/] Output results in CSV format
+
+[\] domato --recursive
+[/] Recursively follow links and extract DOM elements
+
+[\] domato --filter <regex>
+[/] Filter extracted results with regex
+
+[\] domato --quiet
+[/] Suppress console output
+
+[\] domato --help-all
+[/] Show advanced options

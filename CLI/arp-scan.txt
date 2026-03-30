@@ -1,0 +1,46 @@
+[X] ARP-Scan Command List
+
+[\] arp-scan --help
+[/] Show help menu
+
+[\] arp-scan --localnet
+[/] Scan all hosts on the local network
+
+[\] arp-scan <target_range>
+[/] Scan a specific IP range (e.g., 192.168.1.0/24)
+
+[\] arp-scan -I <interface> --localnet
+[/] Specify network interface for scanning
+
+[\] arp-scan -I <interface> <target_range>
+[/] Scan a range using a specific interface
+
+[\] arp-scan -l
+[/] Shortcut for scanning the local network
+
+[\] arp-scan -x
+[/] Output results in a simple tabular format
+
+[\] arp-scan -r <n>
+[/] Set number of retries per host
+
+[\] arp-scan -t <timeout>
+[/] Set timeout per request
+
+[\] arp-scan -g
+[/] Output results in grepable format
+
+[\] arp-scan --file=<file>
+[/] Read target IPs/ranges from a file
+
+[\] arp-scan --ignoredups
+[/] Ignore duplicate packets
+
+[\] arp-scan --quiet
+[/] Suppress non-essential output
+
+[\] arp-scan --numeric
+[/] Disable name resolution (faster output)
+
+[\] arp-scan --version
+[/] Show ARP-Scan version

@@ -1,0 +1,37 @@
+[X] HTTPX Command List
+
+[\] httpx -h
+[/] Show help menu
+
+[\] httpx -l <file>
+[/] Read a list of hosts/URLs from a file
+
+[\] httpx -u <url>
+[/] Scan a single URL
+
+[\] httpx -ports <ports>
+[/] Specify ports to scan (comma-separated or range)
+
+[\] httpx -o <file>
+[/] Save output to a file
+
+[\] httpx -status-code
+[/] Show HTTP status codes
+
+[\] httpx -title
+[/] Show page titles
+
+[\] httpx -tech-detect
+[/] Detect technologies used by the target
+
+[\] httpx -threads <n>
+[/] Set number of threads for faster scanning
+
+[\] httpx -json
+[/] Output results in JSON format
+
+[\] httpx -silent
+[/] Suppress unnecessary output
+
+[\] httpx -version
+[/] Show HTTPX version

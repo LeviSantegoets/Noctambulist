@@ -1,0 +1,31 @@
+[X] GAU (GetAllUrls) Command List
+
+[\] gau <domain>
+[/] Fetch all known URLs for the given domain
+
+[\] gau <domain> -subs
+[/] Include subdomains in the URL search
+
+[\] gau <domain> -o <file>
+[/] Save the output to a file
+
+[\] gau <domain> -b <source>
+[/] Specify the source(s) to fetch URLs from (e.g., wayback, commoncrawl)
+
+[\] gau <domain> -ip
+[/] Include URLs with IP addresses
+
+[\] gau <domain> --robots
+[/] Fetch URLs listed in robots.txt
+
+[\] gau <domain> --threads <n>
+[/] Set the number of threads for faster scanning
+
+[\] gau <domain> --silent
+[/] Suppress unnecessary output
+
+[\] gau --version
+[/] Show GAU version
+
+[\] gau --help
+[/] Show help menu

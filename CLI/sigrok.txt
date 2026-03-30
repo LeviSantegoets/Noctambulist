@@ -1,0 +1,58 @@
+[X] sigrok-cli Command List
+
+[\] sigrok-cli --help
+[/] Show help menu
+
+[\] sigrok-cli --version
+[/] Show sigrok-cli version
+
+[\] sigrok-cli --list-devices
+[/] List connected logic analyzer devices
+
+[\] sigrok-cli --list-drivers
+[/] List available device drivers
+
+[\] sigrok-cli --list-input-formats
+[/] List supported input formats
+
+[\] sigrok-cli --list-output-formats
+[/] List supported output formats
+
+[\] sigrok-cli --list-decoders
+[/] List available protocol decoders
+
+[\] sigrok-cli --driver <driver> --config <options>
+[/] Specify device driver and configuration
+
+[\] sigrok-cli --driver <driver> --continuous
+[/] Capture continuously from device
+
+[\] sigrok-cli --driver <driver> --samples <n>
+[/] Capture a specific number of samples
+
+[\] sigrok-cli --driver <driver> --time <ms>
+[/] Capture for a specific time duration
+
+[\] sigrok-cli --driver <driver> -o <file>
+[/] Save capture to a file
+
+[\] sigrok-cli -i <file>
+[/] Load input file for analysis
+
+[\] sigrok-cli -i <file> -P <decoder>
+[/] Apply protocol decoder to captured data
+
+[\] sigrok-cli -i <file> -P <decoder> -A
+[/] Annotate decoded output
+
+[\] sigrok-cli -i <file> -O <format>
+[/] Convert output to a different format
+
+[\] sigrok-cli --channels <channels>
+[/] Select channels to capture or analyze
+
+[\] sigrok-cli --config samplerate=<rate>
+[/] Set sampling rate
+
+[\] sigrok-cli --quiet
+[/] Suppress non-essential output

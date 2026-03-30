@@ -1,0 +1,67 @@
+[X] PGCLI Command List
+
+[\] pgcli --help
+[/] Show help menu
+
+[\] pgcli --version
+[/] Show PGCLI version
+
+[\] pgcli -h <host> -p <port> -U <username> -d <database>
+[/] Connect to a PostgreSQL database
+
+[\] pgcli <connection_string>
+[/] Connect using a connection string
+
+[\] \q
+[/] Quit PGCLI
+
+[\] \c <database>
+[/] Connect to another database
+
+[\] \d
+[/] List all tables in current database
+
+[\] \d <table_name>
+[/] Describe a specific table
+
+[\] \dt
+[/] List all tables only
+
+[\] \df
+[/] List all functions
+
+[\] \dv
+[/] List all views
+
+[\] \l
+[/] List all databases
+
+[\] \h <SQL_command>
+[/] Show syntax help for SQL command
+
+[\] ! <shell_command>
+[/] Run shell command without leaving PGCLI
+
+[\] \e
+[/] Open query editor
+
+[\] \x
+[/] Toggle expanded output
+
+[\] \timing
+[/] Toggle query execution timing
+
+[\] \watch <seconds> <query>
+[/] Repeatedly run a query every N seconds
+
+[\] ?
+[/] Show list of PGCLI commands
+
+[\] \set <variable> <value>
+[/] Set a session variable
+
+[\] \unset <variable>
+[/] Unset a session variable
+
+[\] \copy <table> TO/FROM <file> WITH CSV
+[/] Copy table data to/from CSV

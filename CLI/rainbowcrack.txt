@@ -1,0 +1,37 @@
+[X] RainbowCrack Command List
+
+[\] rcrack . -h
+[/] Show help menu
+
+[\] rcrack <table_dir> -h <hash>
+[/] Crack a single hash using rainbow tables
+
+[\] rcrack <table_dir> -l <hash_file>
+[/] Crack hashes from a file
+
+[\] rcrack <table_dir> -o <output_file> -l <hash_file>
+[/] Save cracked hashes to a file
+
+[\] rcrack <table_dir> -n <threads>
+[/] Set number of threads
+
+[\] rcrack <table_dir> -v
+[/] Enable verbose output
+
+[\] rcrack <table_dir> -bench
+[/] Benchmark rainbow table performance
+
+[\] rcrack_gen <type> <charset> <length_min> <length_max> <table_index> <chain_len> <chain_count> <part_index>
+[/] Generate rainbow tables
+
+[\] rcrack_sort <table_file>
+[/] Sort rainbow table for faster lookup
+
+[\] rcrack_merge <table1> <table2> <output_table>
+[/] Merge multiple rainbow tables
+
+[\] rcrack_stat <table_file>
+[/] Show statistics about a rainbow table
+
+[\] rcrack --version
+[/] Show RainbowCrack version

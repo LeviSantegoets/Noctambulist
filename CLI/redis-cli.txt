@@ -1,0 +1,43 @@
+[X] Redis-CLI Command List
+
+[\] redis-cli -h <host>
+[/] Connect to Redis server at specified host
+
+[\] redis-cli -p <port>
+[/] Connect to Redis server at specified port
+
+[\] redis-cli -a <password>
+[/] Authenticate with password
+
+[\] redis-cli ping
+[/] Test connectivity to Redis server
+
+[\] redis-cli info
+[/] Show server information and statistics
+
+[\] redis-cli keys <pattern>
+[/] List keys matching a pattern
+
+[\] redis-cli get <key>
+[/] Get the value of a key
+
+[\] redis-cli set <key> <value>
+[/] Set the value of a key
+
+[\] redis-cli del <key>
+[/] Delete a key
+
+[\] redis-cli flushall
+[/] Delete all keys in all databases
+
+[\] redis-cli monitor
+[/] Stream all commands received by the server
+
+[\] redis-cli --csv
+[/] Output results in CSV format
+
+[\] redis-cli --raw
+[/] Output raw format (no formatting)
+
+[\] redis-cli --help-all
+[/] Show advanced options

@@ -1,0 +1,40 @@
+[X] AMQP-Tools Command List
+
+[\] amqp-consume -h
+[/] Show help menu for consuming messages
+
+[\] amqp-publish -h
+[/] Show help menu for publishing messages
+
+[\] amqp-queue -h
+[/] Show help menu for queue management
+
+[\] amqp-consume -u <amqp_url> -q <queue_name>
+[/] Consume messages from a specific queue
+
+[\] amqp-consume -c <count> -u <amqp_url> -q <queue_name>
+[/] Consume a specific number of messages
+
+[\] amqp-publish -u <amqp_url> -q <queue_name> -m "<message>"
+[/] Publish a message to a specific queue
+
+[\] amqp-publish -f <file> -u <amqp_url> -q <queue_name>
+[/] Publish messages from a file
+
+[\] amqp-queue list -u <amqp_url>
+[/] List all queues
+
+[\] amqp-queue purge -u <amqp_url> -q <queue_name>
+[/] Purge all messages from a queue
+
+[\] amqp-queue delete -u <amqp_url> -q <queue_name>
+[/] Delete a specific queue
+
+[\] amqp-queue declare -u <amqp_url> -q <queue_name>
+[/] Declare a new queue
+
+[\] amqp-tools --version
+[/] Show AMQP-Tools version
+
+[\] amqp-tools --help-all
+[/] Show advanced options

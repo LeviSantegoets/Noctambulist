@@ -1,0 +1,34 @@
+[X] Broot Command List
+
+[\] broot --help
+[/] Show help menu
+
+[\] broot --version
+[/] Show Broot version
+
+[\] broot
+[/] Launch interactive file tree explorer
+
+[\] broot -d <directory>
+[/] Start in a specific directory
+
+[\] broot -s <search_term>
+[/] Search for files or directories
+
+[\] broot --filter <pattern>
+[/] Filter displayed files using a pattern
+
+[\] broot -c <command>
+[/] Execute a shell command on the selected file/directory
+
+[\] broot --no-config
+[/] Start without loading config file
+
+[\] broot --colors <scheme>
+[/] Set color scheme
+
+[\] broot --outcmd <shell_command>
+[/] Output shell command instead of executing
+
+[\] broot --help-all
+[/] Show advanced options

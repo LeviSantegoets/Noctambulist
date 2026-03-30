@@ -1,0 +1,40 @@
+[X] Zellij Command List
+
+[\] zellij --help
+[/] Show help menu
+
+[\] zellij --version
+[/] Show Zellij version
+
+[\] zellij
+[/] Launch a new Zellij session
+
+[\] zellij --session <name>
+[/] Attach to or create a named session
+
+[\] zellij --detach
+[/] Detach from the current session
+
+[\] zellij --list-sessions
+[/] List all active sessions
+
+[\] zellij --new-tab
+[/] Open a new tab within the session
+
+[\] zellij --close-tab
+[/] Close the current tab
+
+[\] zellij --layout <layout_file.yaml>
+[/] Start session with a specific layout
+
+[\] zellij --help-keys
+[/] Show keybindings
+
+[\] zellij --lock
+[/] Lock the session for security
+
+[\] zellij --clear
+[/] Clear terminal contents
+
+[\] zellij --help-all
+[/] Show advanced options

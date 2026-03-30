@@ -1,0 +1,43 @@
+[X] PACK Command List
+
+[\] python3 statsgen.py <wordlist>
+[/] Generate statistics from a wordlist
+
+[\] python3 maskgen.py <wordlist>
+[/] Generate masks based on wordlist patterns
+
+[\] python3 maskgen.py <wordlist> --minlength <n>
+[/] Set minimum password length for mask generation
+
+[\] python3 maskgen.py <wordlist> --maxlength <n>
+[/] Set maximum password length for mask generation
+
+[\] python3 maskgen.py <wordlist> --occurrence
+[/] Sort masks by occurrence frequency
+
+[\] python3 maskgen.py <wordlist> --optindex
+[/] Optimize mask index for cracking tools
+
+[\] python3 policygen.py <wordlist>
+[/] Generate password policy from wordlist
+
+[\] python3 policygen.py <wordlist> --minlength <n>
+[/] Set minimum password length for policy
+
+[\] python3 policygen.py <wordlist> --maxlength <n>
+[/] Set maximum password length for policy
+
+[\] python3 rulegen.py <wordlist>
+[/] Generate mutation rules for password cracking
+
+[\] python3 rulegen.py <wordlist> --rulefile <file>
+[/] Save generated rules to a file
+
+[\] python3 wordlist_optimizer.py <wordlist>
+[/] Optimize wordlist for faster cracking
+
+[\] python3 wordlist_optimizer.py <wordlist> -o <file>
+[/] Save optimized wordlist to a file
+
+[\] python3 <script>.py --help
+[/] Show help for specific PACK script

@@ -1,0 +1,49 @@
+[X] AFL++ Command List
+
+[\] afl-fuzz -h
+[/] Show help menu
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -- <target_binary> [target_options]
+[/] Start fuzzing with input and output directories
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -m <mem_limit> -- <target_binary>
+[/] Set memory limit for target
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -t <timeout> -- <target_binary>
+[/] Set timeout for each test case (ms)
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -Q -- <target_binary>
+[/] Use QEMU mode for non-instrumented binaries
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -p <power_schedule> -- <target_binary>
+[/] Set power schedule (fast, explore, exploit, etc.)
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -x <dict_file> -- <target_binary>
+[/] Use dictionary for fuzzing
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -c <cpu_affinity> -- <target_binary>
+[/] Bind fuzzing to specific CPU cores
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -M <master_name> -- <target_binary>
+[/] Start master instance in parallel fuzzing
+
+[\] afl-fuzz -i <input_dir> -o <output_dir> -S <slave_name> -- <target_binary>
+[/] Start slave instance in parallel fuzzing
+
+[\] afl-showmap -o <output_file> -- <target_binary> <input_file>
+[/] Show code coverage map of a test case
+
+[\] afl-cmin -i <input_dir> -o <output_dir> -- <target_binary>
+[/] Minimize input corpus
+
+[\] afl-tmin -i <input_file> -o <output_file> -- <target_binary>
+[/] Minimize a single test case
+
+[\] afl-analyze -i <input_file> -- <target_binary>
+[/] Analyze test case behavior
+
+[\] afl-whatsup -d <fuzz_dir>
+[/] Show fuzzing status
+
+[\] afl-clang-fast <source.c> -o <target_binary>
+[/] Compile target with AFL++ instrumentation

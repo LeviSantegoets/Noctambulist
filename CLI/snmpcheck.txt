@@ -1,0 +1,37 @@
+[X] SNMPCheck Command List
+
+[\] snmpcheck -h
+[/] Show help menu
+
+[\] snmpcheck -t <target> -c public
+[/] Scan target using SNMP community string
+
+[\] snmpcheck -t <target> -c public -v 1
+[/] Use SNMPv1 for scanning
+
+[\] snmpcheck -t <target> -c public -v 2c
+[/] Use SNMPv2c for scanning
+
+[\] snmpcheck -t <target> -c public -p <port>
+[/] Specify SNMP port (default 161)
+
+[\] snmpcheck -t <target> -c public -o <file>
+[/] Save output to a file
+
+[\] snmpcheck -t <target> -c public -w
+[/] Enable write access checks
+
+[\] snmpcheck -t <target> -c public -d
+[/] Enable debug mode
+
+[\] snmpcheck -t <target> -c public -T <timeout>
+[/] Set timeout value
+
+[\] snmpcheck -t <target> -c public -r <retries>
+[/] Set number of retries
+
+[\] snmpcheck -t <target> -c public -i
+[/] Show additional information
+
+[\] snmpcheck --version
+[/] Show SNMPCheck version

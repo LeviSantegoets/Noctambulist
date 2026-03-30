@@ -1,0 +1,52 @@
+[X] OpenOCD Command List
+
+[\] openocd -h
+[/] Show help menu
+
+[\] openocd --version
+[/] Show OpenOCD version
+
+[\] openocd -f <config_file.cfg>
+[/] Load configuration file
+
+[\] openocd -f interface/<interface>.cfg -f target/<target>.cfg
+[/] Specify interface and target configuration
+
+[\] openocd -c "init"
+[/] Initialize debug session
+
+[\] openocd -c "reset init"
+[/] Reset target and initialize
+
+[\] openocd -c "shutdown"
+[/] Shutdown OpenOCD server
+
+[\] openocd -c "program <file> verify reset exit"
+[/] Program flash and verify
+
+[\] openocd -c "load_image <file> <address>"
+[/] Load binary image into memory
+
+[\] openocd -c "halt"
+[/] Halt the target CPU
+
+[\] openocd -c "resume"
+[/] Resume execution
+
+[\] openocd -c "step"
+[/] Single-step CPU execution
+
+[\] openocd -c "mdw <address>"
+[/] Memory display word at address
+
+[\] openocd -c "mww <address> <value>"
+[/] Memory write word at address
+
+[\] openocd -c "reset halt"
+[/] Reset target and halt execution
+
+[\] telnet localhost 4444
+[/] Connect to OpenOCD via Telnet console
+
+[\] gdb-multiarch -ex "target remote localhost:3333"
+[/] Connect GDB to OpenOCD for debugging

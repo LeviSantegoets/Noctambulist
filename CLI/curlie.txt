@@ -1,0 +1,38 @@
+[X] Curlie Command List
+
+[\] curlie --help
+[/] Show help menu
+
+[\] curlie --version
+[/] Show curlie version
+
+[\] curlie <URL>
+[/] Make a request to a URL (like curl)
+
+[\] curlie -X <METHOD> <URL>
+[/] Specify HTTP method (GET, POST, PUT, DELETE, etc.)
+
+[\] curlie -H "<header>" <URL>
+[/] Add custom HTTP header
+
+[\] curlie -d "<data>" <URL>
+[/] Send data with POST or PUT request
+
+[\] curlie -u user:password
+ <URL>
+[/] Use basic authentication
+
+[\] curlie -i <URL>
+[/] Include HTTP response headers in output
+
+[\] curlie -v <URL>
+[/] Enable verbose mode
+
+[\] curlie -o <file> <URL>
+[/] Save response to file
+
+[\] curlie --proxy <proxy> <URL>
+[/] Use a proxy for the request
+
+[\] curlie --help-all
+[/] Show advanced options

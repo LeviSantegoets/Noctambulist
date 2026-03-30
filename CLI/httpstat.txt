@@ -1,0 +1,31 @@
+[X] HTTPStat Command List
+
+[\] httpstat -h
+[/] Show help menu
+
+[\] httpstat --version
+[/] Show httpstat version
+
+[\] httpstat <URL>
+[/] Make a request to a URL and display detailed timing info
+
+[\] httpstat -p <protocol> <URL>
+[/] Force specific protocol (http/https)
+
+[\] httpstat -r <method> <URL>
+[/] Use a specific HTTP method (GET, POST, etc.)
+
+[\] httpstat -v <URL>
+[/] Enable verbose output
+
+[\] httpstat -i <interval> <URL>
+[/] Repeat request at specified interval
+
+[\] httpstat -t <timeout> <URL>
+[/] Set request timeout in seconds
+
+[\] httpstat --headers <URL>
+[/] Show request and response headers
+
+[\] httpstat --help-all
+[/] Show advanced options

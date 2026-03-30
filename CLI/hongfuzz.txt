@@ -1,0 +1,49 @@
+[X] honggfuzz Command List
+
+[\] honggfuzz --help
+[/] Show help menu
+
+[\] honggfuzz --version
+[/] Show honggfuzz version
+
+[\] honggfuzz --input <input_dir> --output <output_dir> -- <target_binary> [args]
+[/] Start fuzzing with input/output directories
+
+[\] honggfuzz --threads <n>
+[/] Set number of fuzzing threads
+
+[\] honggfuzz --timeout <ms>
+[/] Set execution timeout per input
+
+[\] honggfuzz --sanitizers
+[/] Enable ASAN/UBSAN/MSAN sanitizers
+
+[\] honggfuzz --persistent
+[/] Enable persistent mode for faster fuzzing
+
+[\] honggfuzz --crashdir <dir>
+[/] Save crashing inputs to specified directory
+
+[\] honggfuzz --covdir <dir>
+[/] Save coverage information to specified directory
+
+[\] honggfuzz --seed <n>
+[/] Set RNG seed
+
+[\] honggfuzz --dict <file>
+[/] Use dictionary for fuzzing
+
+[\] honggfuzz --feedback <feedback_type>
+[/] Choose feedback type (edge, cmp, etc.)
+
+[\] honggfuzz --clean
+[/] Clean output directory before fuzzing
+
+[\] honggfuzz --showmap
+[/] Display coverage map of test inputs
+
+[\] honggfuzz --setup <script>
+[/] Run setup script before fuzzing
+
+[\] honggfuzz --exit_upon_crash
+[/] Stop fuzzing after first crash

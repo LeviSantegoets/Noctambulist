@@ -1,0 +1,52 @@
+[X] Patator Command List
+
+[\] patator --help
+[/] Show help menu
+
+[\] patator ssh_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform SSH brute-force attack
+
+[\] patator ftp_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform FTP brute-force attack
+
+[\] patator http_fuzz url=<url> method=GET
+[/] Perform HTTP fuzzing
+
+[\] patator http_fuzz url=<url> method=POST body="user=admin&pass=FILE0" 0=<wordlist>
+[/] Brute-force HTTP POST login
+
+[\] patator smtp_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform SMTP brute-force
+
+[\] patator pop_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform POP3 brute-force
+
+[\] patator mysql_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform MySQL brute-force
+
+[\] patator smb_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform SMB brute-force
+
+[\] patator rdp_login host=<target> user=<user> password=FILE0 0=<wordlist>
+[/] Perform RDP brute-force
+
+[\] patator dns_forward host=<dns_server> query=FILE0 0=<wordlist>
+[/] Perform DNS brute-force / enumeration
+
+[\] patator -x ignore:code=401
+[/] Ignore specific HTTP response codes
+
+[\] patator -x quit:code=200
+[/] Stop attack when success condition is met
+
+[\] patator -t <threads>
+[/] Set number of threads
+
+[\] patator --max-retries <n>
+[/] Set retry attempts
+
+[\] patator --timeout <seconds>
+[/] Set request timeout
+
+[\] patator --version
+[/] Show Patator version

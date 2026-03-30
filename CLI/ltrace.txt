@@ -1,40 +1,31 @@
-[X] Ltrace Command List (Library Call Tracer)
+[X] ltrace-ng Command List
 
-[\] ltrace ls
-[/] Trace library calls of `ls` command
-
-[\] ltrace -p 1234
-[/] Attach to running process with PID 1234
-
-[\] ltrace -f ls
-[/] Trace child processes as well
-
-[\] ltrace -o output.txt ls
-[/] Save ltrace output to file
-
-[\] ltrace -e malloc,free ls
-[/] Trace only specific library calls (e.g., malloc, free)
-
-[\] ltrace -e trace=malloc,free ls
-[/] Alternative syntax to trace selected calls
-
-[\] ltrace -S ls
-[/] Print system calls along with library calls
-
-[\] ltrace -r ls
-[/] Show relative time between calls
-
-[\] ltrace -T ls
-[/] Show time spent in each library call
-
-[\] ltrace -s 100 ls
-[/] Increase string size to print in output
-
-[\] ltrace -v ls
-[/] Print all structures and strings in full
-
-[\] ltrace --help
+[\] ltrace-ng -h
 [/] Show help menu
 
-[\] ltrace --version
-[/] Show ltrace version
+[\] ltrace-ng <binary>
+[/] Trace library calls of a binary
+
+[\] ltrace-ng -p <pid>
+[/] Attach to a running process by PID
+
+[\] ltrace-ng -f <binary>
+[/] Follow child processes
+
+[\] ltrace-ng -S
+[/] Show system calls along with library calls
+
+[\] ltrace-ng -o <file>
+[/] Save output to a file
+
+[\] ltrace-ng -e <function>
+[/] Trace only specific function calls
+
+[\] ltrace-ng -i <interval>
+[/] Set polling interval for tracing
+
+[\] ltrace-ng -v
+[/] Enable verbose output
+
+[\] ltrace-ng --version
+[/] Show ltrace-ng version

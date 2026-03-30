@@ -1,0 +1,43 @@
+[X] TruffleHog Command List
+
+[\] trufflehog git <repository_url>
+[/] Scan a Git repository for secrets
+
+[\] trufflehog filesystem <path>
+[/] Scan a local filesystem directory for secrets
+
+[\] trufflehog --branch <branch_name> <repository_url>
+[/] Scan a specific branch in a Git repository
+
+[\] trufflehog --json <repository_url>
+[/] Output results in JSON format
+
+[\] trufflehog --entropy=True <repository_url>
+[/] Scan for high-entropy strings (potential secrets)
+
+[\] trufflehog --rules <file> <repository_url>
+[/] Use custom regex rules for scanning
+
+[\] trufflehog --since-commit <commit_hash> <repository_url>
+[/] Scan commits after a specific commit
+
+[\] trufflehog --max_depth <n> <repository_url>
+[/] Limit scanning depth in the repository
+
+[\] trufflehog --no-git-history <repository_url>
+[/] Scan only current files, skip Git history
+
+[\] trufflehog --only-verified <repository_url>
+[/] Show only verified findings
+
+[\] trufflehog --exclude-branches <pattern> <repository_url>
+[/] Exclude branches matching pattern from scan
+
+[\] trufflehog --debug <repository_url>
+[/] Enable debug logging
+
+[\] trufflehog --help
+[/] Show help menu
+
+[\] trufflehog --version
+[/] Show TruffleHog version

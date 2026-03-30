@@ -1,0 +1,43 @@
+[X] SNMPWalk Command List
+
+[\] snmpwalk -h
+[/] Show help menu
+
+[\] snmpwalk -v1 -c public <target>
+[/] Perform SNMPv1 walk using community string
+
+[\] snmpwalk -v2c -c public <target>
+[/] Perform SNMPv2c walk (most common)
+
+[\] snmpwalk -v3 -u <user> -l <level> <target>
+[/] Perform SNMPv3 walk with user and security level
+
+[\] snmpwalk -v2c -c public <target> <OID>
+[/] Walk a specific OID tree
+
+[\] snmpwalk -v2c -c public <target> 1.3.6.1.2.1.1
+[/] Retrieve system information (sysDescr, sysName, etc.)
+
+[\] snmpwalk -v2c -c public <target> 1.3.6.1.2.1.25.4.2.1.2
+[/] List running processes
+
+[\] snmpwalk -v2c -c public <target> 1.3.6.1.2.1.6.13.1.3
+[/] List open TCP ports
+
+[\] snmpwalk -v2c -c public <target> 1.3.6.1.2.1.2.2.1.2
+[/] List network interfaces
+
+[\] snmpwalk -v2c -c public <target> -On
+[/] Display numeric OIDs instead of names
+
+[\] snmpwalk -v2c -c public <target> -Oqv
+[/] Output only values (quiet mode)
+
+[\] snmpwalk -v2c -c public <target> -t <timeout>
+[/] Set request timeout
+
+[\] snmpwalk -v2c -c public <target> -r <retries>
+[/] Set number of retries
+
+[\] snmpwalk --version
+[/] Show SNMPWalk version

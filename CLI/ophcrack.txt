@@ -1,0 +1,37 @@
+[X] Ophcrack Command List
+
+[\] ophcrack
+[/] Launch Ophcrack GUI
+
+[\] ophcrack-cli
+[/] Run Ophcrack in command-line mode
+
+[\] ophcrack-cli -h
+[/] Show help menu
+
+[\] ophcrack-cli -f <hash_file>
+[/] Load hashes from a file
+
+[\] ophcrack-cli -d <directory>
+[/] Specify directory containing hash files
+
+[\] ophcrack-cli -t <table_path>
+[/] Specify rainbow table directory
+
+[\] ophcrack-cli -o <output_file>
+[/] Save cracked passwords to a file
+
+[\] ophcrack-cli -n <threads>
+[/] Set number of threads
+
+[\] ophcrack-cli -g
+[/] Enable GUI output (if supported)
+
+[\] ophcrack-cli -v
+[/] Enable verbose output
+
+[\] ophcrack-cli --version
+[/] Show Ophcrack version
+
+[\] ophcrack-cli -l
+[/] List available rainbow tables

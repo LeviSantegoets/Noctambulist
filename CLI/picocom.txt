@@ -1,0 +1,46 @@
+[X] Picocom Command List
+
+[\] picocom -h
+[/] Show help menu
+
+[\] picocom -b <baudrate> -r -l <device>
+[/] Connect to serial device with baud rate (raw mode, local echo)
+
+[\] picocom -b <baudrate> <device>
+[/] Connect to serial device with baud rate
+
+[\] picocom --send-cmd <file>
+[/] Send a file via XMODEM, YMODEM, or ZMODEM
+
+[\] picocom --receive-cmd <file>
+[/] Receive a file via XMODEM, YMODEM, or ZMODEM
+
+[\] picocom -f
+[/] Disable flow control
+
+[\] picocom -l
+[/] Enable local echo
+
+[\] picocom -x
+[/] Exit after disconnect
+
+[\] Ctrl-A Ctrl-X
+[/] Exit Picocom session
+
+[\] Ctrl-A Ctrl-U
+[/] Send break signal
+
+[\] Ctrl-A Ctrl-B
+[/] Toggle local echo
+
+[\] Ctrl-A Ctrl-R
+[/] Reset the connection
+
+[\] Ctrl-A Ctrl-S
+[/] Suspend session
+
+[\] Ctrl-A Ctrl-Q
+[/] Resume session
+
+[\] picocom --version
+[/] Show Picocom version

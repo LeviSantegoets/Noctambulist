@@ -1,0 +1,37 @@
+[X] Progress Command List
+
+[\] progress --help
+[/] Show help menu
+
+[\] progress --version
+[/] Show Progress version
+
+[\] progress <file_or_command>
+[/] Track progress of a file operation or command
+
+[\] progress -m <mode> <file_or_command>
+[/] Set display mode (bytes, percentage, etc.)
+
+[\] progress -w <width> <file_or_command>
+[/] Set progress bar width
+
+[\] progress -t <title> <file_or_command>
+[/] Set title for progress display
+
+[\] progress -f <format> <file_or_command>
+[/] Use custom format for progress bar
+
+[\] progress -p <pid>
+[/] Attach progress bar to an existing process by PID
+
+[\] progress -l <logfile> <file_or_command>
+[/] Log progress information to a file
+
+[\] progress -q <file_or_command>
+[/] Quiet mode, minimal output
+
+[\] progress -d <delay> <file_or_command>
+[/] Set update delay in seconds
+
+[\] progress --help-all
+[/] Show advanced options

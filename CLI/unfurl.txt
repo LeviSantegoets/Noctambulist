@@ -1,0 +1,40 @@
+[X] Unfurl Command List
+
+[\] unfurl -h
+[/] Show help menu
+
+[\] unfurl domains
+[/] Extract domains from input URLs
+
+[\] unfurl subdomains
+[/] Extract subdomains from input
+
+[\] unfurl paths
+[/] Extract URL paths
+
+[\] unfurl keys
+[/] Extract parameter keys from URLs
+
+[\] unfurl values
+[/] Extract parameter values from URLs
+
+[\] unfurl keypairs
+[/] Extract key=value pairs from URLs
+
+[\] unfurl json
+[/] Output extracted data in JSON format
+
+[\] unfurl -u <url>
+[/] Process a single URL
+
+[\] cat urls.txt | unfurl domains
+[/] Extract domains from a list of URLs
+
+[\] cat urls.txt | unfurl keys
+[/] Extract parameter keys from URL list
+
+[\] cat urls.txt | unfurl values
+[/] Extract parameter values from URL list
+
+[\] unfurl version
+[/] Show Unfurl version

@@ -1,0 +1,52 @@
+[X] Medusa Command List
+
+[\] medusa -h
+[/] Show help menu
+
+[\] medusa -u <user> -p <password> -h <target> -M <module>
+[/] Single username/password login attempt
+
+[\] medusa -U <user_file> -P <pass_file> -h <target> -M <module>
+[/] Brute-force using username and password lists
+
+[\] medusa -u <user> -P <pass_file> -h <target> -M <module>
+[/] Brute-force passwords for a single user
+
+[\] medusa -U <user_file> -p <password> -h <target> -M <module>
+[/] Brute-force usernames with a single password
+
+[\] medusa -H <host_file> -U <user_file> -P <pass_file> -M <module>
+[/] Attack multiple hosts
+
+[\] medusa -M ssh -h <target> -U <user_file> -P <pass_file>
+[/] Perform SSH brute-force
+
+[\] medusa -M ftp -h <target> -U <user_file> -P <pass_file>
+[/] Perform FTP brute-force
+
+[\] medusa -M http -h <target> -U <user_file> -P <pass_file>
+[/] Perform HTTP authentication brute-force
+
+[\] medusa -M smbnt -h <target> -U <user_file> -P <pass_file>
+[/] Perform SMB brute-force
+
+[\] medusa -M rdp -h <target> -U <user_file> -P <pass_file>
+[/] Perform RDP brute-force
+
+[\] medusa -t <threads>
+[/] Set number of parallel login attempts
+
+[\] medusa -f
+[/] Stop after first successful login
+
+[\] medusa -v
+[/] Enable verbose output
+
+[\] medusa -n <port>
+[/] Specify target port
+
+[\] medusa -o <file>
+[/] Save output to a file
+
+[\] medusa -V
+[/] Show Medusa version

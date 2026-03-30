@@ -1,0 +1,73 @@
+[X] Pwntools Command List
+
+[\] python3
+[/] Launch Python3 interpreter to use pwntools
+
+[\] from pwn import *
+[/] Import pwntools library in Python
+
+[\] context.binary = './binary'
+[/] Set target binary for exploitation
+
+[\] p = process('./binary')
+[/] Launch a local process
+
+[\] p = remote('<host>', <port>)
+[/] Connect to a remote service
+
+[\] p.sendline(b'payload')
+[/] Send a line of data to the process
+
+[\] p.send(b'payload')
+[/] Send raw data to the process
+
+[\] p.recv(n)
+[/] Receive n bytes from the process
+
+[\] p.recvline()
+[/] Receive a line of data
+
+[\] p.interactive()
+[/] Give interactive control of the process
+
+[\] cyclic(length)
+[/] Generate a cyclic pattern for buffer overflow testing
+
+[\] cyclic_find(offset)
+[/] Find offset in a cyclic pattern
+
+[\] asm(shellcraft.sh())
+[/] Generate shellcode using pwntools shellcraft
+
+[\] pwnlib.fmtstr.do_fmt(payload, write_addr)
+[/] Exploit format string vulnerabilities
+
+[\] pwnlib.util.fiddling.randoms(n)
+[/] Generate random numbers
+
+[\] context.log_level = 'debug'
+[/] Enable debug output
+
+[\] context.terminal = ['tmux', 'splitw', '-h']
+[/] Set terminal for gdb debugging
+
+[\] gdb.attach(p)
+[/] Attach gdb to a local process
+
+[\] elf = ELF('./binary')
+[/] Load ELF binary for exploitation
+
+[\] context.arch = 'amd64'
+[/] Set architecture for shellcode or exploitation
+
+[\] context.os = 'linux'
+[/] Set target OS for shellcode
+
+[\] pwnlib.tubes.sock.connect()
+[/] Use sockets for remote exploitation
+
+[\] context.timeout = 10
+[/] Set global timeout for network or process interactions
+
+[\] pwnlib.util.iters.cycle(payload)
+[/] Loop over a payload repeatedly

@@ -1,0 +1,40 @@
+[X] Boomerang Command List
+
+[\] boomerang -h
+[/] Show help menu
+
+[\] boomerang --version
+[/] Show Boomerang version
+
+[\] boomerang <binary_file>
+[/] Decompile a binary file
+
+[\] boomerang -o <output_file>
+[/] Save decompiled output to file
+
+[\] boomerang -f <format>
+[/] Specify output format (e.g., C, JSON)
+
+[\] boomerang -v
+[/] Enable verbose output
+
+[\] boomerang -l
+[/] Enable logging
+
+[\] boomerang -a <arch>
+[/] Specify architecture (e.g., x86, ARM)
+
+[\] boomerang -e <entry_point>
+[/] Set entry point address
+
+[\] boomerang --no-simplify
+[/] Disable code simplifications
+
+[\] boomerang --function <address>
+[/] Decompile specific function
+
+[\] boomerang --gui
+[/] Launch GUI interface (if available)
+
+[\] boomerang --help-all
+[/] Show advanced options

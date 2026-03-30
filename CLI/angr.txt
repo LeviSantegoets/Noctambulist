@@ -1,0 +1,61 @@
+[X] Angr Command List
+
+[\] python3
+[/] Launch Python3 interpreter to use Angr
+
+[\] import angr
+[/] Import the Angr library
+
+[\] project = angr.Project('./binary')
+[/] Load a binary into Angr
+
+[\] state = project.factory.entry_state()
+[/] Create an initial program state
+
+[\] simgr = project.factory.simgr(state)
+[/] Create a simulation manager for symbolic execution
+
+[\] simgr.explore(find=<addr>, avoid=<addr>)
+[/] Explore paths to find a target address while avoiding another
+
+[\] state.solver.eval(<expression>)
+[/] Evaluate symbolic expressions
+
+[\] state.memory.store(address, value)
+[/] Write a value to symbolic memory
+
+[\] state.memory.load(address, size)
+[/] Read value from symbolic memory
+
+[\] state.solver.add(constraint)
+[/] Add a constraint to the symbolic state
+
+[\] project.loader.main_object
+[/] Access the main binary object
+
+[\] project.loader.all_objects
+[/] Access all loaded objects (libraries)
+
+[\] angr.analyses.CFGFast(project)
+[/] Build a control flow graph
+
+[\] angr.analyses.CFGAccurate(project)
+[/] Build a more accurate control flow graph
+
+[\] project.factory.blank_state(addr=<addr>)
+[/] Create a blank state at a specific address
+
+[\] simgr.step()
+[/] Step simulation forward
+
+[\] simgr.active
+[/] Access active states
+
+[\] simgr.deadended
+[/] Access dead-ended states
+
+[\] project.surveyors.ExplorationTechnique()
+[/] Apply custom exploration techniques
+
+[\] angr.version
+[/] Show Angr version

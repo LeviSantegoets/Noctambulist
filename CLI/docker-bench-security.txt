@@ -1,0 +1,43 @@
+[X] Docker Bench Security Command List
+
+[\] docker-bench-security.sh
+[/] Run all security checks on local Docker host
+
+[\] docker-bench-security.sh -h
+[/] Show help menu
+
+[\] docker-bench-security.sh -l
+[/] List all available tests
+
+[\] docker-bench-security.sh -c <category>
+[/] Run checks for a specific category (e.g., “Host Configuration”)
+
+[\] docker-bench-security.sh -s <specific_test>
+[/] Run a specific test by ID
+
+[\] docker-bench-security.sh -o json
+[/] Output results in JSON format
+
+[\] docker-bench-security.sh -o csv
+[/] Output results in CSV format
+
+[\] docker-bench-security.sh -o html
+[/] Output results in HTML format
+
+[\] docker-bench-security.sh -f <file>
+[/] Save output to a file
+
+[\] docker-bench-security.sh -v
+[/] Enable verbose output
+
+[\] docker-bench-security.sh --skip <test_id>
+[/] Skip a specific test
+
+[\] docker-bench-security.sh --debug
+[/] Run in debug mode with detailed logging
+
+[\] docker-bench-security.sh --version
+[/] Show script version
+
+[\] docker-bench-security.sh --pull
+[/] Pull latest version of Docker Bench Security script

@@ -1,0 +1,46 @@
+[X] Ropper Command List
+
+[\] ropper --file <binary>
+[/] Load a binary and list ROP gadgets
+
+[\] ropper --file <binary> --search "pop rdi"
+[/] Search for specific gadgets
+
+[\] ropper --file <binary> --chain execve
+[/] Generate ROP chain for execve syscall
+
+[\] ropper --file <binary> --chain mprotect
+[/] Generate ROP chain for mprotect
+
+[\] ropper --file <binary> --badbytes <bytes>
+[/] Exclude bad bytes from gadgets
+
+[\] ropper --file <binary> --opcode <opcode>
+[/] Search for gadgets with specific opcodes
+
+[\] ropper --file <binary> --string <string>
+[/] Search for strings in the binary
+
+[\] ropper --file <binary> --sections
+[/] List binary sections
+
+[\] ropper --file <binary> --info
+[/] Show detailed binary information
+
+[\] ropper --file <binary> --nocolor
+[/] Disable colored output
+
+[\] ropper --file <binary> --inst-count <n>
+[/] Limit number of instructions per gadget
+
+[\] ropper --file <binary> --arch <arch>
+[/] Specify architecture (x86, x86_64, ARM, etc.)
+
+[\] ropper --file <binary> --type <type>
+[/] Filter gadget type (rop, jop, sys)
+
+[\] ropper --help
+[/] Show help menu
+
+[\] ropper --version
+[/] Show Ropper version

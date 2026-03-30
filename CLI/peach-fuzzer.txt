@@ -1,0 +1,45 @@
+[X] Peach Fuzzer Command List
+
+[\] peach -h
+[/] Show help menu
+
+[\] peach <pit_file.xml>
+[/] Run fuzzing using a PIT configuration file
+
+[\] peach <pit_file.xml> --debug
+[/] Run Peach in debug mode
+
+[\] peach <pit_file.xml> --verbose
+[/] Enable verbose output
+
+[\] peach <pit_file.xml> --skipto <testcase>
+[/] Skip to a specific test case
+
+[\] peach <pit_file.xml> --range start:end
+
+[/] Run a specific range of test cases
+
+[\] peach <pit_file.xml> --seed <value>
+[/] Set random seed
+
+[\] peach <pit_file.xml> --parallel <n>
+[/] Run fuzzing in parallel threads
+
+[\] peach <pit_file.xml> --agent ip:port
+
+[/] Use remote agent for fuzzing
+
+[\] peach <pit_file.xml> --restart
+[/] Restart target automatically after crash
+
+[\] peach <pit_file.xml> --logdir <dir>
+[/] Set directory for logs and crash data
+
+[\] peach <pit_file.xml> --timeout <seconds>
+[/] Set timeout for each test case
+
+[\] peach <pit_file.xml> --dry-run
+[/] Validate PIT file without fuzzing
+
+[\] peach --version
+[/] Show Peach Fuzzer version

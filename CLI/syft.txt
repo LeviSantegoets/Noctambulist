@@ -1,0 +1,47 @@
+[X] Syft Command List
+
+[\] syft <image_or_directory>
+[/] Generate a Software Bill of Materials (SBOM) for a container image or filesystem
+
+[\] syft <image_or_directory> -o table
+[/] Output SBOM in table format (default)
+
+[\] syft <image_or_directory> -o json
+[/] Output SBOM in JSON format
+
+[\] syft <image_or_directory> -o spdx-json
+[/] Output SBOM in SPDX JSON format
+
+[\] syft <image_or_directory> -o spdx-tag-value
+[/] Output SBOM in SPDX Tag-Value format
+
+[\] syft <image_or_directory> -o cyclonedx-json
+[/] Output SBOM in CycloneDX JSON format
+
+[\] syft <image_or_directory> -o cyclonedx-xml
+[/] Output SBOM in CycloneDX XML format
+
+[\] syft <image_or_directory> -q
+[/] Quiet mode, minimal output
+
+[\] syft <image_or_directory> --file <filename>
+[/] Write SBOM output to a file
+
+[\] syft version
+[/] Show Syft version
+
+[\] syft --help
+[/] Show help menu
+
+[\] syft <image_or_directory> --scope <scope>
+[/] Specify scanning scope (e.g., “all-layers”, “squashed”)
+
+[\] syft <image_or_directory> --exclude <pattern>
+[/] Exclude certain files or paths from SBOM
+
+[\] syft <image_or_directory> --registry-auth username:password
+
+[/] Authenticate to private container registries
+
+[\] syft <image_or_directory> --add-cpes
+[/] Include CPE identifiers in SBOM output

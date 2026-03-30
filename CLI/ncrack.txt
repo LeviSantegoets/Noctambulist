@@ -1,0 +1,55 @@
+[X] Ncrack Command List
+
+[\] ncrack -h
+[/] Show help menu
+
+[\] ncrack <target>
+[/] Start brute-force attack with default settings
+
+[\] ncrack -p <port> <target>
+[/] Specify target port
+
+[\] ncrack -p <service>://<target>
+[/] Specify service (e.g., ssh://, ftp://, rdp://)
+
+[\] ncrack -u <user> -p <pass> <target>
+[/] Try single username/password
+
+[\] ncrack -U <user_file> -P <pass_file> <target>
+[/] Use username and password lists
+
+[\] ncrack -u <user> -P <pass_file> <target>
+[/] Brute-force passwords for one user
+
+[\] ncrack -U <user_file> -p <pass> <target>
+[/] Brute-force usernames with one password
+
+[\] ncrack -iL <host_file> -U <user_file> -P <pass_file>
+[/] Attack multiple hosts
+
+[\] ncrack -T <0-5>
+[/] Set timing template (0=slow, 5=fast)
+
+[\] ncrack --connection-limit <n>
+[/] Limit number of parallel connections
+
+[\] ncrack --user <user>
+[/] Specify single username
+
+[\] ncrack --pass <pass>
+[/] Specify single password
+
+[\] ncrack -oN <file>
+[/] Save output in normal format
+
+[\] ncrack -oX <file>
+[/] Save output in XML format
+
+[\] ncrack -v
+[/] Enable verbose output
+
+[\] ncrack -d
+[/] Enable debugging output
+
+[\] ncrack --version
+[/] Show Ncrack version

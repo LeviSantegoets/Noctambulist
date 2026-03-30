@@ -1,0 +1,40 @@
+[X] netsniff-ng Command List
+
+[\] netsniff-ng --help
+[/] Show help menu
+
+[\] netsniff-ng -i <interface>
+[/] Capture packets from a specific network interface
+
+[\] netsniff-ng -i <interface> -o <file>
+[/] Save captured packets to a file (pcap format)
+
+[\] netsniff-ng -i <interface> -f <filter>
+[/] Apply BPF filter (e.g., tcp, udp, port 80)
+
+[\] netsniff-ng -i <interface> -v
+[/] Enable verbose packet output
+
+[\] netsniff-ng -i <interface> -c <count>
+[/] Capture a specific number of packets
+
+[\] netsniff-ng -i <interface> --promisc
+[/] Enable promiscuous mode
+
+[\] netsniff-ng -i <interface> --no-promisc
+[/] Disable promiscuous mode
+
+[\] netsniff-ng -i <interface> --ring-size <size>
+[/] Set ring buffer size
+
+[\] netsniff-ng -i <interface> --interval <sec>
+[/] Rotate output files at interval (seconds)
+
+[\] netsniff-ng -i <interface> --out <dir>
+[/] Specify output directory for rotated files
+
+[\] netsniff-ng -i <interface> --silent
+[/] Suppress non-essential output
+
+[\] netsniff-ng --version
+[/] Show netsniff-ng version

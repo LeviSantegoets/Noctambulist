@@ -1,0 +1,37 @@
+[X] Termshark Command List
+
+[\] termshark -h
+[/] Show help menu
+
+[\] termshark --version
+[/] Show Termshark version
+
+[\] termshark -i <interface>
+[/] Capture live traffic from a network interface
+
+[\] termshark -r <file.pcap>
+[/] Read packets from a pcap file
+
+[\] termshark -Y "<display_filter>"
+[/] Apply a display filter (Wireshark-like syntax)
+
+[\] termshark -R "<read_filter>"
+[/] Apply a read filter when reading from file
+
+[\] termshark -w <output_file.pcap>
+[/] Save captured packets to a file
+
+[\] termshark --export-json <file.json>
+[/] Export filtered packets to JSON
+
+[\] termshark --export-csv <file.csv>
+[/] Export filtered packets to CSV
+
+[\] termshark --color <mode>
+[/] Enable or disable color mode (auto, on, off)
+
+[\] termshark --no-ncurses
+[/] Run in non-interactive mode
+
+[\] termshark --help-all
+[/] Show advanced options

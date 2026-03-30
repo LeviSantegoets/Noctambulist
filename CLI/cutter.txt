@@ -1,0 +1,49 @@
+[X] Cutter Command List
+
+[\] cutter
+[/] Launch Cutter GUI
+
+[\] cutter <binary>
+[/] Open a specific binary in Cutter
+
+[\] cutter --help
+[/] Show help menu
+
+[\] cutter --version
+[/] Show Cutter version
+
+[\] cutter --new-tab <binary>
+[/] Open binary in a new tab
+
+[\] cutter --run-script <script_file>
+[/] Run a Cutter script (Python or JavaScript)
+
+[\] cutter --script-console
+[/] Open the script console for interactive commands
+
+[\] cutter --export-asm <file>
+[/] Export disassembly to a file
+
+[\] cutter --export-c <file>
+[/] Export decompiled C code to a file
+
+[\] cutter --export-json <file>
+[/] Export analysis data in JSON format
+
+[\] cutter --load-session <session_file>
+[/] Load a previously saved session
+
+[\] cutter --save-session <session_file>
+[/] Save current session
+
+[\] cutter --update
+[/] Check for updates
+
+[\] cutter --plugin-list
+[/] List installed plugins
+
+[\] cutter --plugin-install <plugin_name>
+[/] Install a plugin
+
+[\] cutter --plugin-remove <plugin_name>
+[/] Remove a plugin

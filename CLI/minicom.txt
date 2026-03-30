@@ -1,0 +1,49 @@
+[X] Minicom Command List
+
+[\] minicom -h
+[/] Show help menu
+
+[\] minicom -s
+[/] Start configuration menu
+
+[\] minicom -D <device>
+[/] Connect to a specific serial device (e.g., /dev/ttyUSB0)
+
+[\] minicom -b <baudrate> -D <device>
+[/] Connect with specific baud rate
+
+[\] minicom -c on
+[/] Enable color display
+
+[\] minicom -o
+[/] Disable initialization (no modem init)
+
+[\] minicom -C <capture_file>
+[/] Capture session output to a file
+
+[\] minicom -L
+[/] Enable logging
+
+[\] minicom -8
+[/] Use 8-bit characters
+
+[\] minicom -E
+[/] Enable local echo
+
+[\] minicom -w
+[/] Enable line wrap
+
+[\] minicom -r
+[/] Run in read-only mode
+
+[\] minicom -v
+[/] Show Minicom version
+
+[\] Ctrl-A Z
+[/] Show help menu within Minicom
+
+[\] Ctrl-A X
+[/] Exit Minicom
+
+[\] Ctrl-A O
+[/] Open configuration menu while in sessiond

@@ -1,0 +1,25 @@
+[X] Assetfinder Command List
+
+[\] assetfinder <domain>
+[/] Find subdomains for a given domain
+
+[\] assetfinder <domain> --subs-only
+[/] Show only subdomains, exclude root domain
+
+[\] assetfinder <domain> --unique
+[/] Remove duplicate subdomains from output
+
+[\] assetfinder <domain> --output <file>
+[/] Save output to a file
+
+[\] assetfinder --help
+[/] Show help menu
+
+[\] assetfinder --version
+[/] Show Assetfinder version
+
+[\] assetfinder <domain> --silent
+[/] Suppress unnecessary output
+
+[\] assetfinder <domain> --threads <n>
+[/] Set number of threads for faster enumeration

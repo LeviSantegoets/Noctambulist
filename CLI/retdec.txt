@@ -1,0 +1,37 @@
+[X] RetDec Command List
+
+[\] retdec-decompiler.py -h
+[/] Show help menu
+
+[\] retdec-decompiler.py -o <output_file> <binary>
+[/] Decompile a binary and save output to a file
+
+[\] retdec-decompiler.py --cleanup <binary>
+[/] Remove temporary files after decompilation
+
+[\] retdec-decompiler.py --arch <arch> <binary>
+[/] Specify architecture (e.g., x86, x86_64, arm)
+
+[\] retdec-decompiler.py --backend <backend> <binary>
+[/] Choose decompilation backend
+
+[\] retdec-decompiler.py --config <file>
+[/] Use a specific configuration file
+
+[\] retdec-decompiler.py --raw-section <section_name> <binary>
+[/] Decompile a specific section
+
+[\] retdec-decompiler.py --verbose <binary>
+[/] Enable verbose output
+
+[\] retdec-decompiler.py --no-color <binary>
+[/] Disable colored output
+
+[\] retdec-decompiler.py --version
+[/] Show RetDec version
+
+[\] retdec-decompiler.py --json <binary>
+[/] Output decompilation results in JSON format
+
+[\] retdec-decompiler.py --quiet <binary>
+[/] Suppress non-essential output

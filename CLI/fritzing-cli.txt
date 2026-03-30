@@ -1,0 +1,37 @@
+[X] Fritzing-CLI Command List
+
+[\] fritzing-cli --help
+[/] Show help menu
+
+[\] fritzing-cli --version
+[/] Show Fritzing version
+
+[\] fritzing-cli --input <file.fzz>
+[/] Specify Fritzing project file
+
+[\] fritzing-cli --export <format> <output_file>
+[/] Export project to a format (png, svg, pdf, etc.)
+
+[\] fritzing-cli --breadboard-view
+[/] Export breadboard view
+
+[\] fritzing-cli --schematic-view
+[/] Export schematic view
+
+[\] fritzing-cli --pcb-view
+[/] Export PCB view
+
+[\] fritzing-cli --dpi <value>
+[/] Set output resolution for exported images
+
+[\] fritzing-cli --layers <view>
+[/] Export specific layers (e.g., silkscreen, copper)
+
+[\] fritzing-cli --autoroute
+[/] Automatically route PCB traces
+
+[\] fritzing-cli --help-export
+[/] Show export-specific options
+
+[\] fritzing-cli --quit
+[/] Exit CLI

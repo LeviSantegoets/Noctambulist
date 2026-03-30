@@ -1,0 +1,37 @@
+[X] Chaos Client Command List
+
+[\] chaos -h
+[/] Show help menu
+
+[\] chaos -key <api_key>
+[/] Set your Chaos API key
+
+[\] chaos -d <domain>
+[/] Fetch subdomains for a specific domain
+
+[\] chaos -dL <file>
+[/] Fetch subdomains for multiple domains from a file
+
+[\] chaos -o <file>
+[/] Save output to a file
+
+[\] chaos -json
+[/] Output results in JSON format
+
+[\] chaos -silent
+[/] Suppress banner and extra output
+
+[\] chaos -verbose
+[/] Enable verbose output
+
+[\] chaos -size <n>
+[/] Limit number of results returned
+
+[\] chaos -page <n>
+[/] Fetch a specific page of results
+
+[\] chaos -pages <n>
+[/] Fetch multiple pages of results
+
+[\] chaos -version
+[/] Show Chaos Client version

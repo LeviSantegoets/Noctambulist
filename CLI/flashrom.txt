@@ -1,0 +1,43 @@
+[X] Flashrom Command List
+
+[\] flashrom -h
+[/] Show help menu
+
+[\] flashrom -p internal
+[/] Use internal programmer (default motherboard flash chip)
+
+[\] flashrom -p <programmer>
+[/] Specify programmer (e.g., ch341a_spi, buspirate_spi)
+
+[\] flashrom -r <file.bin>
+[/] Read flash chip contents to file
+
+[\] flashrom -w <file.bin>
+[/] Write firmware image to flash chip
+
+[\] flashrom -v <file.bin>
+[/] Verify flash contents against file
+
+[\] flashrom -E
+[/] Erase flash chip
+
+[\] flashrom -c <chip_name>
+[/] Specify flash chip model
+
+[\] flashrom -l <layout_file>
+[/] Use a layout file to define regions
+
+[\] flashrom -i <region>
+[/] Operate on a specific region only
+
+[\] flashrom -p internal:laptop=force_I_want_a_brick
+[/] Force flashing on laptops (dangerous)
+
+[\] flashrom -o <logfile>
+[/] Save log output to file
+
+[\] flashrom -V
+[/] Enable verbose output
+
+[\] flashrom --version
+[/] Show Flashrom version

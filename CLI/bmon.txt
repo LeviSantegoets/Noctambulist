@@ -1,0 +1,34 @@
+[X] Bmon Command List
+
+[\] bmon
+[/] Start monitoring all network interfaces
+
+[\] bmon -i <interface>
+[/] Monitor a specific network interface
+
+[\] bmon -p <plugin>
+[/] Enable a specific input plugin
+
+[\] bmon -o <output_module>
+[/] Enable a specific output module (e.g., curses, ascii)
+
+[\] bmon -r <refresh_interval>
+[/] Set refresh interval in seconds
+
+[\] bmon -c <count>
+[/] Run for a specific number of refresh cycles
+
+[\] bmon -a
+[/] Show all available network interfaces
+
+[\] bmon -v
+[/] Show Bmon version
+
+[\] bmon -h
+[/] Show help menu
+
+[\] bmon --json
+[/] Output statistics in JSON format
+
+[\] bmon --rate
+[/] Show rate statistics instead of absolute values

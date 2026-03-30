@@ -1,0 +1,40 @@
+[X] OHA Command List
+
+[\] oha --help
+[/] Show help menu
+
+[\] oha --version
+[/] Show oha version
+
+[\] oha <URL>
+[/] Benchmark a URL with default settings
+
+[\] oha -c <connections> <URL>
+[/] Set number of concurrent connections
+
+[\] oha -n <requests> <URL>
+[/] Set total number of requests
+
+[\] oha -m <method> <URL>
+[/] Specify HTTP method (GET, POST, etc.)
+
+[\] oha -H "<header>" <URL>
+[/] Add custom HTTP header
+
+[\] oha -d '<data>' <URL>
+[/] Send data with POST/PUT requests
+
+[\] oha -t <timeout> <URL>
+[/] Set request timeout in seconds
+
+[\] oha -p <pipelines> <URL>
+[/] Enable HTTP pipelining with N pipelines
+
+[\] oha -v <URL>
+[/] Enable verbose output
+
+[\] oha --json <URL>
+[/] Output results in JSON format
+
+[\] oha --help-all
+[/] Show advanced options

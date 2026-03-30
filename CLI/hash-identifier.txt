@@ -1,0 +1,28 @@
+[X] Hash-Identifier Command List
+
+[\] hash-identifier
+[/] Launch Hash-Identifier interactive mode
+
+[\] hash-identifier -h
+[/] Show help menu
+
+[\] hash-identifier -i <hash>
+[/] Identify a specific hash type
+
+[\] hash-identifier -f <file>
+[/] Identify hash types from a file containing hashes
+
+[\] hash-identifier -v
+[/] Enable verbose output
+
+[\] hash-identifier --version
+[/] Show Hash-Identifier version
+
+[\] hash-identifier -o <output_file>
+[/] Save identified hash types to a file
+
+[\] hash-identifier --quiet
+[/] Suppress non-essential output
+
+[\] hash-identifier -l
+[/] List all supported hash types

@@ -1,0 +1,37 @@
+[X] Darkstat Command List
+
+[\] darkstat --help
+[/] Show help menu
+
+[\] darkstat -i <interface>
+[/] Start monitoring traffic on a specific interface
+
+[\] darkstat -i <interface> -p <port>
+[/] Run web interface on a specific port
+
+[\] darkstat -i <interface> --bind <ip>
+[/] Bind web interface to a specific IP address
+
+[\] darkstat -i <interface> --local-only
+[/] Restrict access to localhost only
+
+[\] darkstat -i <interface> --no-dns
+[/] Disable DNS resolution for faster performance
+
+[\] darkstat -i <interface> --no-macs
+[/] Disable MAC address display
+
+[\] darkstat -i <interface> --no-promisc
+[/] Disable promiscuous mode
+
+[\] darkstat -i <interface> --export <file>
+[/] Export statistics to a file
+
+[\] darkstat -i <interface> --import <file>
+[/] Import previously saved statistics
+
+[\] darkstat -i <interface> --logfile <file>
+[/] Write logs to a file
+
+[\] darkstat --version
+[/] Show Darkstat version

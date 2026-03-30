@@ -1,0 +1,64 @@
+[X] MyCLI Command List
+
+[\] mycli --help
+[/] Show help menu
+
+[\] mycli --version
+[/] Show MyCLI version
+
+[\] mycli -h <host> -P <port> -u <username> -D <database>
+[/] Connect to a MySQL/MariaDB database
+
+[\] \q
+[/] Quit MyCLI
+
+[\] \c <database>
+[/] Connect to another database
+
+[\] \t
+[/] Toggle table format output
+
+[\] \x
+[/] Toggle expanded output
+
+[\] \e
+[/] Open query in external editor
+
+[\] ! <shell_command>
+[/] Run shell command without leaving MyCLI
+
+[\] \T <table_name>
+[/] Describe table structure
+
+[\] \dt
+[/] List all tables
+
+[\] \df
+[/] List all functions
+
+[\] \dv
+[/] List all views
+
+[\] \l
+[/] List all databases
+
+[\] \timing
+[/] Toggle query execution timing
+
+[\] \watch <seconds> <query>
+[/] Repeatedly run a query every N seconds
+
+[\] \status
+[/] Show current connection info
+
+[\] \set <variable> <value>
+[/] Set a session variable
+
+[\] \unset <variable>
+[/] Unset a session variable
+
+[\] \source <file.sql>
+[/] Execute SQL file
+
+[\] \help
+[/] Show MyCLI commands

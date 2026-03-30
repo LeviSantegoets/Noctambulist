@@ -1,0 +1,28 @@
+[X] Timeout Command List
+
+[\] timeout --help
+[/] Show help menu
+
+[\] timeout --version
+[/] Show timeout version
+
+[\] timeout <seconds> <command>
+[/] Run a command with a time limit in seconds
+
+[\] timeout -s <signal> <seconds> <command>
+[/] Specify signal to send when timeout expires (e.g., SIGKILL, SIGTERM)
+
+[\] timeout -k <kill_after> <seconds> <command>
+[/] Forcefully kill command after additional time if it ignores initial signal
+
+[\] timeout --preserve-status <seconds> <command>
+[/] Return the exit status of command even if timed out
+
+[\] timeout -v <seconds> <command>
+[/] Enable verbose output when timing out
+
+[\] timeout --foreground <seconds> <command>
+[/] Run command in foreground (useful for interactive commands)
+
+[\] timeout --help-all
+[/] Show advanced options

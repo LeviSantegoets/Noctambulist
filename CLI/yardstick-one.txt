@@ -1,0 +1,46 @@
+[X] YARD Stick One Tools Command List
+
+[\] yardstick-one --help
+[/] Show help menu
+
+[\] yardstick-one --version
+[/] Show YARD Stick One version
+
+[\] yardstick-one --device <device>
+[/] Specify connected YARD Stick One device
+
+[\] yardstick-one --freq <frequency>
+[/] Set operating frequency in Hz
+
+[\] yardstick-one --mod <modulation>
+[/] Set modulation type (OOK, FSK, etc.)
+
+[\] yardstick-one --baud <baudrate>
+[/] Set baud rate for transmission
+
+[\] yardstick-one --tx <data>
+[/] Transmit raw data
+
+[\] yardstick-one --rx <duration>
+[/] Receive signals for a specified duration
+
+[\] yardstick-one --sniff
+[/] Start packet sniffing
+
+[\] yardstick-one --send-file <file>
+[/] Transmit packet data from a file
+
+[\] yardstick-one --recv-file <file>
+[/] Save received packet data to a file
+
+[\] yardstick-one --set-power <level>
+[/] Set transmission power level
+
+[\] yardstick-one --set-channel <channel>
+[/] Set RF channel
+
+[\] yardstick-one --list-mods
+[/] List supported modulation types
+
+[\] yardstick-one --quit
+[/] Exit the tool

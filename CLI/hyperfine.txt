@@ -1,0 +1,46 @@
+[X] Hyperfine Command List
+
+[\] hyperfine -h
+[/] Show help menu
+
+[\] hyperfine --version
+[/] Show Hyperfine version
+
+[\] hyperfine "<command1>" "<command2>"
+[/] Benchmark two or more commands
+
+[\] hyperfine --warmup <n> "<command>"
+[/] Run warmup iterations before benchmarking
+
+[\] hyperfine --runs <n> "<command>"
+[/] Set number of benchmark runs
+
+[\] hyperfine --export-json <file.json> "<command>"
+[/] Export benchmark results to JSON
+
+[\] hyperfine --export-csv <file.csv> "<command>"
+[/] Export benchmark results to CSV
+
+[\] hyperfine --export-markdown <file.md> "<command>"
+[/] Export benchmark results to Markdown
+
+[\] hyperfine --prepare "<shell_command>" "<command>"
+[/] Run preparation command before benchmarking
+
+[\] hyperfine --cleanup "<shell_command>" "<command>"
+[/] Run cleanup command after benchmarking
+
+[\] hyperfine --parameter-scan <param1,param2,...> "<command> {}"
+[/] Run benchmarks with parameter scanning
+
+[\] hyperfine --min-runs <n> "<command>"
+[/] Set minimum number of benchmark runs
+
+[\] hyperfine --max-time <seconds> "<command>"
+[/] Set maximum total benchmark time
+
+[\] hyperfine --show-output "<command>"
+[/] Show standard output of commands
+
+[\] hyperfine --help-all
+[/] Show advanced options

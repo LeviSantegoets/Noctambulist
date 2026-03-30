@@ -1,0 +1,28 @@
+[X] WaybackURLs Command List
+
+[\] waybackurls <domain>
+[/] Fetch archived URLs from the Wayback Machine for a domain
+
+[\] waybackurls <domain> > <file>
+[/] Save output to a file
+
+[\] waybackurls <domain> | grep <pattern>
+[/] Filter URLs using grep
+
+[\] waybackurls --help
+[/] Show help menu
+
+[\] waybackurls --version
+[/] Show WaybackURLs version
+
+[\] waybackurls --subs <domain>
+[/] Include subdomains in URL fetching
+
+[\] waybackurls --uniques
+[/] Remove duplicate URLs from output
+
+[\] waybackurls --threads <n>
+[/] Set number of threads for faster fetching
+
+[\] waybackurls --include <extension>
+[/] Only include URLs with a specific file extension

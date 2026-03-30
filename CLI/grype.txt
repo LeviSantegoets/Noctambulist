@@ -1,0 +1,46 @@
+[X] Grype Command List
+
+[\] grype <image_or_directory>
+[/] Scan a container image, filesystem, or directory for vulnerabilities
+
+[\] grype <image_or_directory> -o table
+[/] Output results in table format (default)
+
+[\] grype <image_or_directory> -o json
+[/] Output results in JSON format
+
+[\] grype <image_or_directory> -o sarif
+[/] Output results in SARIF format (for integration with CI/CD tools)
+
+[\] grype <image_or_directory> -o cyclonedx
+[/] Output results in CycloneDX SBOM format
+
+[\] grype <image_or_directory> -q
+[/] Quiet mode (minimal output)
+
+[\] grype db update
+[/] Update the vulnerability database
+
+[\] grype version
+[/] Show Grype version
+
+[\] grype --help
+[/] Show help menu
+
+[\] grype <image_or_directory> --fail-on <severity>
+[/] Exit with non-zero code if vulnerabilities of a certain severity exist
+
+[\] grype <image_or_directory> --exclude <vulnerability_id>
+[/] Exclude specific vulnerabilities from report
+
+[\] grype <image_or_directory> --only-fixed
+[/] Show only vulnerabilities that have fixes available
+
+[\] grype <image_or_directory> --add-cpes
+[/] Include CPEs in the output
+
+[\] grype --config <file>
+[/] Use a custom configuration file
+
+[\] grype --namespace <namespace>
+[/] Scan within a specific namespace (for SBOM or images)

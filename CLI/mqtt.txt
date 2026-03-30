@@ -1,0 +1,37 @@
+[X] MQTT-CLI Command List
+
+[\] mqtt --help
+[/] Show help menu
+
+[\] mqtt --version
+[/] Show MQTT-CLI version
+
+[\] mqtt sub -t <topic> -h <broker_host>
+[/] Subscribe to a topic
+
+[\] mqtt sub -t <topic> -h <broker_host> -p <port>
+[/] Subscribe to a topic on a specific port
+
+[\] mqtt pub -t <topic> -m "<message>" -h <broker_host>
+[/] Publish a message to a topic
+
+[\] mqtt pub -t <topic> -f <file> -h <broker_host>
+[/] Publish messages from a file
+
+[\] mqtt sub -t <topic> -h <broker_host> -q <qos>
+[/] Subscribe with specified QoS level
+
+[\] mqtt pub -t <topic> -m "<message>" -h <broker_host> -q <qos>
+[/] Publish with specified QoS level
+
+[\] mqtt sub -t <topic> -h <broker_host> -u <username> -P <password>
+[/] Subscribe with authentication
+
+[\] mqtt pub -t <topic> -m "<message>" -h <broker_host> -u <username> -P <password>
+[/] Publish with authentication
+
+[\] mqtt sub -t <topic> -h <broker_host> --help-all
+[/] Show advanced subscription options
+
+[\] mqtt pub -t <topic> -h <broker_host> --help-all
+[/] Show advanced publishing options

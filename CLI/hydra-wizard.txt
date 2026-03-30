@@ -1,0 +1,37 @@
+[X] Hydra-Wizard Command List
+
+[\] hydra-wizard
+[/] Launch Hydra-Wizard interactive interface
+
+[\] hydra-wizard -h
+[/] Show help menu
+
+[\] hydra-wizard -t <target>
+[/] Set target host
+
+[\] hydra-wizard -s <service>
+[/] Select service to attack (ssh, ftp, http, etc.)
+
+[\] hydra-wizard -u <username>
+[/] Set single username
+
+[\] hydra-wizard -U <user_file>
+[/] Load usernames from file
+
+[\] hydra-wizard -p <password>
+[/] Set single password
+
+[\] hydra-wizard -P <pass_file>
+[/] Load passwords from file
+
+[\] hydra-wizard -o <file>
+[/] Save output to a file
+
+[\] hydra-wizard -t <threads>
+[/] Set number of threads
+
+[\] hydra-wizard -v
+[/] Enable verbose output
+
+[\] hydra-wizard --version
+[/] Show Hydra-Wizard version

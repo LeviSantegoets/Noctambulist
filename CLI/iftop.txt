@@ -1,0 +1,40 @@
+[X] iftop Command List
+
+[\] iftop -h
+[/] Show help menu
+
+[\] iftop -i <interface>
+[/] Monitor network traffic on a specific interface
+
+[\] iftop -P
+[/] Show ports as well as IP addresses
+
+[\] iftop -N
+[/] Show IP addresses without resolving hostnames
+
+[\] iftop -F <network/mask>
+[/] Filter traffic for a specific network range
+
+[\] iftop -B
+[/] Display bandwidth in bytes per second instead of bits
+
+[\] iftop -n
+[/] Disable hostname resolution (numeric output)
+
+[\] iftop -N
+[/] Show ports numerically
+
+[\] iftop -t
+[/] Print output to terminal without interactive UI
+
+[\] iftop -s <seconds>
+[/] Set the total running time of monitoring
+
+[\] iftop -L <lines>
+[/] Set the number of lines displayed
+
+[\] iftop -h <host>
+[/] Filter traffic for a specific host
+
+[\] iftop -v
+[/] Show iftop version

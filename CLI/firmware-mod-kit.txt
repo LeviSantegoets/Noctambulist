@@ -1,0 +1,37 @@
+[X] Firmware-Mod-Kit Command List
+
+[\] ./extract-firmware.sh <firmware.bin>
+[/] Extract contents of a firmware image
+
+[\] ./build-firmware.sh
+[/] Rebuild firmware after modification
+
+[\] ./extract-ng.sh <firmware.bin>
+[/] Advanced extraction with improved support
+
+[\] ./unsquashfs_all.sh <filesystem>
+[/] Extract SquashFS filesystem
+
+[\] ./cramfsck -x <dir> <filesystem>
+[/] Extract CRAMFS filesystem
+
+[\] ./addpattern <input.bin> <output.bin>
+[/] Add vendor-specific header/pattern
+
+[\] ./asustrx <input.bin> <output.trx>
+[/] Create ASUS TRX firmware image
+
+[\] ./mkimage <options>
+[/] Create firmware images (U-Boot format)
+
+[\] ./binwalk <firmware.bin>
+[/] Analyze firmware structure and extract components
+
+[\] ./firmware-mod-kit.sh
+[/] Run main toolkit script (if available)
+
+[\] ./cleanup.sh
+[/] Clean working directories and temporary files
+
+[\] ./help.sh
+[/] Show help for Firmware-Mod-Kit scripts

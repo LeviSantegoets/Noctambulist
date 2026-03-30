@@ -1,0 +1,52 @@
+[X] AVRDude Command List
+
+[\] avrdude -h
+[/] Show help menu
+
+[\] avrdude -v
+[/] Enable verbose output
+
+[\] avrdude -V
+[/] Disable verification after writing
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U flash:w:<file>:i
+[/] Write flash memory from file
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U eeprom:w:<file>:i
+[/] Write EEPROM memory from file
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U flash:r:<file>:i
+[/] Read flash memory to file
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U eeprom:r:<file>:i
+[/] Read EEPROM memory to file
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U hfuse:r:-:m
+[/] Read high fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U lfuse:r:-:m
+[/] Read low fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U efuse:r:-:m
+[/] Read extended fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U lock:r:-:m
+[/] Read lock bits
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U hfuse:w:<value>:m
+[/] Write high fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U lfuse:w:<value>:m
+[/] Write low fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U efuse:w:<value>:m
+[/] Write extended fuse byte
+
+[\] avrdude -c <programmer> -p <mcu> -P <port> -U lock:w:<value>:m
+[/] Write lock bits
+
+[\] avrdude -C <config_file>
+[/] Use a custom configuration file
+
+[\] avrdude --version
+[/] Show AVRDude version

@@ -1,0 +1,41 @@
+[X] FuzzDB Command List
+
+[\] fuzzdb -h
+[/] Show help menu (if using scripts or CLI tools)
+
+[\] fuzzdb -l
+[/] List available wordlists and payloads
+
+[\] fuzzdb -p <payload_type>
+[/] Select specific payload category (e.g., SQLi, XSS, LFI)
+
+[\] fuzzdb -o <output_file>
+[/] Save selected wordlist or payload to file
+
+[\] fuzzdb -s <string>
+[/] Search wordlists for specific string or pattern
+
+[\] fuzzdb --update
+[/] Update local repository of FuzzDB
+
+[\] fuzzdb --list-files
+[/] List all files in the FuzzDB repository
+
+[\] fuzzdb --show <file>
+[/] Display contents of a specific wordlist
+
+[\] fuzzdb --random <file> --n <number>
+[/] Show a random subset of N payloads from a file
+
+[\] fuzzdb --help-all
+[/] Show advanced options
+
+[\] git clone https://github.com/fuzzdb-project/fuzzdb.git
+
+[/] Clone the FuzzDB repository for offline use
+
+[\] ls fuzzdb/attack/ -R
+[/] Browse attack payloads recursively
+
+[\] ls fuzzdb/wordlists/ -R
+[/] Browse generic and special-purpose wordlists

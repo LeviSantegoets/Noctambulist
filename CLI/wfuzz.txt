@@ -1,0 +1,46 @@
+[X] WFuzz Command List
+
+[\] wfuzz -h
+[/] Show help menu
+
+[\] wfuzz -V
+[/] Show WFuzz version
+
+[\] wfuzz -c -z file,<wordlist> -u <url/FUZZ>
+[/] Fuzz URL using a wordlist with colored output
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> -t <threads>
+[/] Set number of threads for fuzzing
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> --hc <status_code>
+[/] Hide responses with specific HTTP status code
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> --hl <length>
+[/] Hide responses with specific content length
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> --hw <word_count>
+[/] Hide responses with specific word count
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> --hs <regex>
+[/] Hide responses matching regex
+
+[\] wfuzz -z file,<wordlist1> -z file,<wordlist2> -u <url/FUZZ1/FUZZ2>
+[/] Fuzz multiple positions simultaneously
+
+[\] wfuzz -z file,<wordlist> -u <url/FUZZ> --sc <status_code>
+[/] Only show responses with specific HTTP status code
+
+[\] wfuzz -b "SESSION=<cookie>" -u <url/FUZZ>
+[/] Fuzz with cookies
+
+[\] wfuzz -H "User-Agent: <ua>" -u <url/FUZZ>
+[/] Fuzz with custom headers
+
+[\] wfuzz --hc <code> --hh <header> --hl <length>
+[/] Combine hiding options
+
+[\] wfuzz -o <output_file>
+[/] Save output to file
+
+[\] wfuzz --help-all
+[/] Show advanced options

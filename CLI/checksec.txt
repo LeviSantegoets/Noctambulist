@@ -1,0 +1,28 @@
+[X] Checksec Command List
+
+[\] checksec --help
+[/] Show help menu
+
+[\] checksec --file <binary>
+[/] Check security properties of a specific binary
+
+[\] checksec --fortify-file <binary>
+[/] Show Fortify Source protections
+
+[\] checksec --stack <binary>
+[/] Show stack protections (Canary, NX, etc.)
+
+[\] checksec --pie <binary>
+[/] Check if binary is Position Independent Executable (PIE)
+
+[\] checksec --relro <binary>
+[/] Check RELRO status (Full, Partial, or None)
+
+[\] checksec --nx <binary>
+[/] Check NX (No eXecute) protection
+
+[\] checksec --pie --relro --nx --fortify-file <binary>
+[/] Check all main protections at once
+
+[\] checksec --version
+[/] Show Checksec version

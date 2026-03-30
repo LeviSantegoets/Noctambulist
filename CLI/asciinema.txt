@@ -1,0 +1,43 @@
+[X] Asciinema Command List
+
+[\] asciinema --help
+[/] Show help menu
+
+[\] asciinema --version
+[/] Show asciinema version
+
+[\] asciinema rec <file.cast>
+[/] Record a terminal session and save to a file
+
+[\] asciinema rec
+[/] Record a terminal session and upload to asciinema.org by default
+
+[\] asciinema play <file.cast>
+[/] Play a recorded session locally
+
+[\] asciinema upload <file.cast>
+[/] Upload a recorded session to asciinema.org
+
+[\] asciinema rec -c "<command>" <file.cast>
+[/] Record a single command instead of full shell session
+
+[\] asciinema rec --title "<title>" <file.cast>
+[/] Set a title for the recording
+
+[\] asciinema rec --overwrite <file.cast>
+[/] Overwrite existing cast file
+
+[\] asciinema rec --idle-time-limit <seconds> <file.cast>
+[/] Stop recording after a period of inactivity
+
+[\] asciinema rec --quiet <file.cast>
+[/] Suppress messages during recording
+
+[\] asciinema rec --append <file.cast>
+[/] Append to an existing recording
+
+[\] asciinema play --speed <factor> <file.cast>
+[/] Play recording at a different speed
+
+[\] asciinema rec --help-all
+[/] Show advanced options

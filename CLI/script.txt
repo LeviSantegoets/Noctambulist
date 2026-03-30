@@ -1,0 +1,31 @@
+[X] Script Command List
+
+[\] script --help
+[/] Show help menu
+
+[\] script --version
+[/] Show script version
+
+[\] script <file>
+[/] Start recording terminal session to specified file
+
+[\] script -a <file>
+[/] Append to an existing file instead of overwriting
+
+[\] script -q <file>
+[/] Quiet mode, do not display start and end messages
+
+[\] script -f <file>
+[/] Flush output after each write (real-time logging)
+
+[\] script -c "<command>" <file>
+[/] Run a single command and record its output
+
+[\] script --timing=<timing_file> <file>
+[/] Record timing information for session replay
+
+[\] script -e <file>
+[/] Return exit code of child process
+
+[\] script --help-all
+[/] Show advanced options

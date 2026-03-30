@@ -1,0 +1,28 @@
+[X] MapCIDR Command List
+
+[\] mapcidr -h
+[/] Show help menu
+
+[\] mapcidr -cidr <CIDR>
+[/] Expand a CIDR range into individual IP addresses
+
+[\] mapcidr -cidr <CIDR> -o <file>
+[/] Save expanded IP list to a file
+
+[\] mapcidr -l <file>
+[/] Read CIDR ranges from a file
+
+[\] mapcidr -l <file> -o <file>
+[/] Read CIDRs from file and save expanded IPs
+
+[\] mapcidr -cidr <CIDR> -silent
+[/] Output only IPs without extra info
+
+[\] mapcidr -cidr <CIDR> -json
+[/] Output results in JSON format
+
+[\] mapcidr -threads <n>
+[/] Set number of threads for processing
+
+[\] mapcidr -version
+[/] Show MapCIDR version

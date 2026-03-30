@@ -1,0 +1,52 @@
+[X] Kube-Hunter Command List
+
+[\] kube-hunter
+[/] Run kube-hunter in default mode (auto-detect scan type)
+
+[\] kube-hunter --remote <target>
+[/] Scan a remote Kubernetes cluster
+
+[\] kube-hunter --remote <target> --ports <ports>
+[/] Scan specific ports on target
+
+[\] kube-hunter --local
+[/] Run scan from inside a Kubernetes cluster (pod)
+
+[\] kube-hunter --interface <interface>
+[/] Specify network interface to use
+
+[\] kube-hunter --cidr <CIDR>
+[/] Scan a CIDR range for Kubernetes clusters
+
+[\] kube-hunter --active
+[/] Enable active hunting (more intrusive tests)
+
+[\] kube-hunter --passive
+[/] Run passive scan only (no intrusive actions)
+
+[\] kube-hunter --quick
+[/] Run a quick scan with fewer checks
+
+[\] kube-hunter --report json
+[/] Output results in JSON format
+
+[\] kube-hunter --report yaml
+[/] Output results in YAML format
+
+[\] kube-hunter --report html
+[/] Output results in HTML format
+
+[\] kube-hunter --log INFO
+[/] Set logging level (DEBUG, INFO, WARNING, ERROR)
+
+[\] kube-hunter --list
+[/] List all available hunting modules
+
+[\] kube-hunter --pod
+[/] Run kube-hunter inside a Kubernetes pod
+
+[\] kube-hunter --service
+[/] Deploy kube-hunter as a Kubernetes service
+
+[\] kube-hunter --help
+[/] Show help menu

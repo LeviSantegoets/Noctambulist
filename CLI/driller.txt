@@ -1,0 +1,43 @@
+[X] Driller Command List
+
+[\] driller -h
+[/] Show help menu
+
+[\] driller --version
+[/] Show Driller version
+
+[\] driller -p <binary>
+[/] Specify target binary for fuzzing
+
+[\] driller -i <input_dir>
+[/] Input directory for seed files
+
+[\] driller -o <output_dir>
+[/] Output directory for crashes and test cases
+
+[\] driller --timeout <seconds>
+[/] Set execution timeout per input
+
+[\] driller --depth <n>
+[/] Set symbolic execution depth
+
+[\] driller --threads <n>
+[/] Set number of parallel threads
+
+[\] driller --angr
+[/] Enable integration with angr for symbolic execution
+
+[\] driller --afl-path <path>
+[/] Specify path to AFL++ for hybrid fuzzing
+
+[\] driller --no-afl
+[/] Disable AFL fuzzing, use symbolic execution only
+
+[\] driller --verbose
+[/] Enable verbose logging
+
+[\] driller --quiet
+[/] Suppress non-essential output
+
+[\] driller --help-all
+[/] Show advanced options

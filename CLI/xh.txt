@@ -1,0 +1,44 @@
+[X] XH Command List
+
+[\] xh --help
+[/] Show help menu
+
+[\] xh --version
+[/] Show xh version
+
+[\] xh <URL>
+[/] Make a GET request to a URL
+
+[\] xh GET <URL>
+[/] Explicit GET request
+
+[\] xh POST <URL> -d '<data>'
+[/] Make a POST request with data
+
+[\] xh PUT <URL> -d '<data>'
+[/] Make a PUT request with data
+
+[\] xh DELETE <URL>
+[/] Make a DELETE request
+
+[\] xh -H '<header>' <URL>
+[/] Add a custom HTTP header
+
+[\] xh -u user:password
+ <URL>
+[/] Use basic authentication
+
+[\] xh -i <URL>
+[/] Include response headers in output
+
+[\] xh -v <URL>
+[/] Enable verbose output
+
+[\] xh -o <file> <URL>
+[/] Save response to file
+
+[\] xh --json <URL>
+[/] Pretty-print JSON responses
+
+[\] xh --help-all
+[/] Show advanced options
