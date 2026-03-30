@@ -1,0 +1,31 @@
+[X] Chameleon Command List
+
+[\] chameleon --help
+[/] Show help menu
+
+[\] chameleon --version
+[/] Show Chameleon version
+
+[\] chameleon scan <target>
+[/] Perform a network scan on the target
+
+[\] chameleon fingerprint <target>
+[/] Identify services and OS fingerprinting
+
+[\] chameleon exploit <target> -m <module>
+[/] Run a specific exploit module against the target
+
+[\] chameleon list-modules
+[/] List all available exploit modules
+
+[\] chameleon set <option> <value>
+[/] Set module or session options
+
+[\] chameleon show <option>
+[/] Show current options or configuration
+
+[\] chameleon session -i <id>
+[/] Interact with an active session
+
+[\] chameleon --help-all
+[/] Show advanced options

@@ -1,0 +1,40 @@
+[X] Pwncat Command List
+
+[\] pwncat --help
+[/] Show help menu
+
+[\] pwncat --version
+[/] Show pwncat version
+
+[\] pwncat -l -p <port>
+[/] Listen for incoming connections on a specific port
+
+[\] pwncat -c <host>:<port>
+[/] Connect to a remote host and port
+
+[\] pwncat -r <file>
+[/] Read commands from a file
+
+[\] pwncat -e <program>
+[/] Execute a program on the remote host
+
+[\] pwncat --ssl
+[/] Enable SSL/TLS for the connection
+
+[\] pwncat --persist
+[/] Try to create a persistent backdoor
+
+[\] pwncat --help-all
+[/] Show advanced options
+
+[\] pwncat --list-plugins
+[/] Show available plugins
+
+[\] pwncat --upload <local_file> <remote_path>
+[/] Upload a file to the remote host
+
+[\] pwncat --download <remote_file> <local_path>
+[/] Download a file from the remote host
+
+[\] pwncat --shell <shell_type>
+[/] Spawn a specific shell type on the remote host

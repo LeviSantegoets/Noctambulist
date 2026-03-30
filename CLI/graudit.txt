@@ -1,0 +1,28 @@
+[X] Graudit Command List
+
+[\] graudit --help
+[/] Show help menu
+
+[\] graudit --version
+[/] Show Graudit version
+
+[\] graudit <file_or_directory>
+[/] Scan a file or directory for security issues
+
+[\] graudit -r <directory>
+[/] Recursively scan a directory
+
+[\] graudit -l <language> <file_or_directory>
+[/] Limit scan to specific programming language
+
+[\] graudit -o <output_file>
+[/] Save scan results to a file
+
+[\] graudit -v
+[/] Enable verbose mode
+
+[\] graudit -c <config_file>
+[/] Use custom configuration file
+
+[\] graudit --help-all
+[/] Show advanced options

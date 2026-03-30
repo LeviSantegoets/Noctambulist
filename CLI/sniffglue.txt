@@ -1,0 +1,31 @@
+[X] Sniffglue Command List
+
+[\] sniffglue --help
+[/] Show help menu
+
+[\] sniffglue --version
+[/] Show Sniffglue version
+
+[\] sniffglue -i <interface>
+[/] Capture live traffic on a specific network interface
+
+[\] sniffglue -r <file.pcap>
+[/] Read packets from a pcap file
+
+[\] sniffglue -f "<filter>"
+[/] Apply a BPF filter for capture or reading
+
+[\] sniffglue -o <output_file>
+[/] Save captured packets to a file
+
+[\] sniffglue -v
+[/] Enable verbose mode
+
+[\] sniffglue --json <output_file.json>
+[/] Export captured data to JSON format
+
+[\] sniffglue --statistics
+[/] Show capture statistics
+
+[\] sniffglue --help-all
+[/] Show advanced options

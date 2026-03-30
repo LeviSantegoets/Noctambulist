@@ -1,0 +1,28 @@
+[X] Toolong Command List
+
+[\] toolong --help
+[/] Show help menu
+
+[\] toolong --version
+[/] Show toolong version
+
+[\] toolong <URL>
+[/] Expand shortened URLs to their final destination
+
+[\] toolong -t <threads> <URL>
+[/] Number of concurrent threads for URL expansion
+
+[\] toolong -o <file> <URL>
+[/] Save expanded URLs to a file
+
+[\] toolong -v <URL>
+[/] Enable verbose output
+
+[\] toolong -l <file_with_short_urls>
+[/] Read short URLs from a file and expand them
+
+[\] toolong --json <URL>
+[/] Output results in JSON format
+
+[\] toolong --help-all
+[/] Show advanced options
