@@ -1,0 +1,109 @@
+[X] Kopia Backup Command List
+
+[\] kopia repository create filesystem --path /backup
+[/] Create new repository on local filesystem
+
+[\] kopia repository connect filesystem --path /backup
+[/] Connect to existing local repository
+
+[\] kopia repository connect sftp --host user@host --path /repo
+[/] Connect to remote repository (SFTP)
+
+[\] kopia repository status
+[/] Show repository status
+
+[\] kopia repository disconnect
+[/] Disconnect from repository
+
+[\] kopia snapshot create /home/user
+[/] Create snapshot (backup)
+
+[\] kopia snapshot create /etc /var/www
+[/] Backup multiple paths
+
+[\] kopia snapshot create /home --tags daily
+[/] Add tag to snapshot
+
+[\] kopia snapshot list
+[/] List all snapshots
+
+[\] kopia snapshot list --tags daily
+[/] Filter snapshots by tag
+
+[\] kopia snapshot show <snapshotID>
+[/] Show snapshot details
+
+[\] kopia snapshot restore <snapshotID> /restore
+[/] Restore snapshot to directory
+
+[\] kopia snapshot restore <snapshotID> --files /home/user/file.txt /restore
+[/] Restore specific file
+
+[\] kopia snapshot diff <snap1> <snap2>
+[/] Compare snapshots
+
+[\] kopia mount /mnt/kopia
+[/] Mount repository as filesystem
+
+[\] kopia content stats
+[/] Show repository statistics
+
+[\] kopia maintenance run
+[/] Run maintenance tasks
+
+[\] kopia maintenance info
+[/] Show maintenance status
+
+[\] kopia policy set /home --keep-latest 7
+[/] Set retention policy
+
+[\] kopia policy set /home --keep-daily 7 --keep-weekly 4 --keep-monthly 6
+[/] Advanced retention policy
+
+[\] kopia policy show /home
+[/] Show policy for path
+
+[\] kopia cache clear
+[/] Clear local cache
+
+[\] kopia index optimize
+[/] Optimize index
+
+[\] kopia index repair
+[/] Repair index
+
+[\] kopia blob list
+[/] List stored blobs
+
+[\] kopia blob show <blobID>
+[/] Show blob details
+
+[\] kopia repository change-password
+[/] Change repository password
+
+[\] kopia repository sync
+[/] Sync repository metadata
+
+[\] kopia server start
+[/] Start Kopia server (API/UI)
+
+[\] kopia server status
+[/] Show server status
+
+[\] kopia server stop
+[/] Stop Kopia server
+
+[\] kopia ui
+[/] Launch web UI locally
+
+[\] kopia logs
+[/] Show logs
+
+[\] kopia diff <snap1> <snap2>
+[/] Compare snapshots (alias)
+
+[\] kopia version
+[/] Show version
+
+[\] kopia help
+[/] Show help menu

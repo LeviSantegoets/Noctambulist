@@ -1,0 +1,55 @@
+[X] Perf Command List (Linux Performance Analysis Tool)
+
+[\] perf stat ls
+[/] Gather basic performance statistics while running `ls`
+
+[\] perf record ls
+[/] Record performance data while running `ls`
+
+[\] perf report
+[/] Display recorded performance data
+
+[\] perf top
+[/] Real-time performance monitoring (like top)
+
+[\] perf list
+[/] List all available events and counters
+
+[\] perf record -e cpu-cycles,cache-misses ls
+[/] Record specific events (CPU cycles, cache misses)
+
+[\] perf record -p 1234
+[/] Attach to a running process by PID
+
+[\] perf record -a
+[/] System-wide profiling
+
+[\] perf stat -d ls
+[/] Display detailed statistics
+
+[\] perf stat -r 5 ls
+[/] Repeat performance measurement 5 times
+
+[\] perf record --call-graph dwarf ls
+[/] Record call graphs for performance analysis
+
+[\] perf annotate
+[/] Annotate source code with performance data
+
+[\] perf mem
+[/] Memory access profiling
+
+[\] perf probe
+[/] Set dynamic probes in kernel or user-space
+
+[\] perf script
+[/] Convert raw perf data to readable format
+
+[\] perf record -F 99 ls
+[/] Sample at 99 Hz
+
+[\] perf stat --help
+[/] Show help menu
+
+[\] perf --version
+[/] Show perf version

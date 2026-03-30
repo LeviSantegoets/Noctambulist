@@ -1,0 +1,52 @@
+[X] interactsh-client Command List
+
+[\] interactsh-client
+[/] Start client and generate unique interaction domain
+
+[\] interactsh-client -v
+[/] Enable verbose output
+
+[\] interactsh-client -json
+[/] Output interactions in JSON format
+
+[\] interactsh-client -o output.txt
+[/] Save interaction logs to file
+
+[\] interactsh-client -poll-interval 5
+[/] Set polling interval (seconds)
+
+[\] interactsh-client -server https://interact.sh
+[/] Use custom interactsh server
+
+[\] interactsh-client -token YOUR_TOKEN
+[/] Authenticate with API token
+
+[\] interactsh-client -dns-only
+[/] Capture only DNS interactions
+
+[\] interactsh-client -http-only
+[/] Capture only HTTP interactions
+
+[\] interactsh-client -no-color
+[/] Disable colored output
+
+[\] interactsh-client -silent
+[/] Silent mode (minimal output)
+
+[\] interactsh-client -keep-alive
+[/] Keep session active for longer duration
+
+[\] interactsh-client -session-file session.json
+[/] Save session data to file
+
+[\] interactsh-client -resume session.json
+[/] Resume previous session
+
+[\] interactsh-client -debug
+[/] Enable debug mode
+
+[\] interactsh-client -h
+[/] Show help menu
+
+[\] interactsh-client -version
+[/] Show version

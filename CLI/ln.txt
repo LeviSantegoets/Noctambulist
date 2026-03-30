@@ -1,0 +1,31 @@
+[X] LN Command List
+
+[\] ln file.txt link.txt
+[/] Create hard link to file
+
+[\] ln -s file.txt symlink.txt
+[/] Create symbolic (soft) link
+
+[\] ln -f file.txt link.txt
+[/] Force overwrite existing link
+
+[\] ln -v file.txt link.txt
+[/] Verbose mode (show links created)
+
+[\] ln -i file.txt link.txt
+[/] Prompt before overwriting
+
+[\] ln -n file.txt link.txt
+[/] Do not dereference existing symlink
+
+[\] ln -T file.txt link.txt
+[/] Treat target as a normal file
+
+[\] ln -r file.txt link.txt
+[/] Create relative symbolic link
+
+[\] ln --help
+[/] Show help menu
+
+[\] ln --version
+[/] Show ln version

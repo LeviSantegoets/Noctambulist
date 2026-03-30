@@ -1,0 +1,58 @@
+[X] pipes.sh Command List
+
+[\] pipes.sh
+[/] Launch default pipes animation in terminal
+
+[\] pipes.sh -h
+[/] Show help menu
+
+[\] pipes.sh --help
+[/] Show help menu (alternative)
+
+[\] pipes.sh -c
+[/] Enable color mode
+
+[\] pipes.sh -C
+[/] Disable color (monochrome)
+
+[\] pipes.sh -w 80
+[/] Set terminal width
+
+[\] pipes.sh -l 24
+[/] Set terminal height
+
+[\] pipes.sh -s 2
+[/] Set animation speed (higher = faster)
+
+[\] pipes.sh -f
+[/] Force full-screen mode
+
+[\] pipes.sh -r
+[/] Reset pipes layout
+
+[\] pipes.sh -v
+[/] Show version
+
+[\] pipes.sh --random
+[/] Start with random pipe characters
+
+[\] pipes.sh --no-utf8
+[/] Use ASCII characters only
+
+[\] pipes.sh --seed 12345
+[/] Set random seed for reproducible pattern
+
+[\] pipes.sh --loop
+[/] Loop animation indefinitely
+
+[\] pipes.sh --noloop
+[/] Run animation only once
+
+[\] clear
+[/] Clear terminal before starting
+
+[\] tput reset
+[/] Reset terminal for full-screen display
+
+[\] crontab -e
+[/] Schedule pipes.sh to run at startup (fun screensaver)

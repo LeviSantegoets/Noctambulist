@@ -1,0 +1,115 @@
+[X] ipchains (Legacy Linux Firewall) Command List
+
+[\] ipchains -L
+[/] List all rules
+
+[\] ipchains -L -v
+[/] List rules with verbose details
+
+[\] ipchains -L -n
+[/] List rules without DNS resolution
+
+[\] ipchains -F
+[/] Flush all rules (dangerous)
+
+[\] ipchains -Z
+[/] Zero packet/byte counters
+
+[\] ipchains -N mychain
+[/] Create new chain
+
+[\] ipchains -X mychain
+[/] Delete user-defined chain
+
+[\] ipchains -P input ACCEPT
+[/] Set default policy (ACCEPT/DENY)
+
+[\] ipchains -A input -j ACCEPT
+[/] Append rule to allow traffic
+
+[\] ipchains -A input -j DENY
+[/] Append rule to deny traffic
+
+[\] ipchains -A input -p tcp -d 0/0 22 -j ACCEPT
+[/] Allow SSH traffic
+
+[\] ipchains -A input -p tcp -d 0/0 80 -j ACCEPT
+[/] Allow HTTP traffic
+
+[\] ipchains -A input -p tcp -d 0/0 443 -j ACCEPT
+[/] Allow HTTPS traffic
+
+[\] ipchains -A input -s 192.168.1.0/24 -j ACCEPT
+[/] Allow local subnet
+
+[\] ipchains -A input -s 1.2.3.4 -j DENY
+[/] Block specific IP
+
+[\] ipchains -D input 1
+[/] Delete rule by number
+
+[\] ipchains -I input 1 -j ACCEPT
+[/] Insert rule at position
+
+[\] ipchains -R input 1 -j DENY
+[/] Replace rule at position
+
+[\] ipchains -C input -p tcp --dport 22 -j ACCEPT
+[/] Check if rule exists
+
+[\] ipchains -A input -p icmp -j ACCEPT
+[/] Allow ICMP (ping)
+
+[\] ipchains -A input -i lo -j ACCEPT
+[/] Allow loopback traffic
+
+[\] ipchains -A output -j ACCEPT
+[/] Allow all outbound traffic
+
+[\] ipchains -A forward -j DENY
+[/] Deny forwarding traffic
+
+[\] ipchains -M -L
+[/] Show masquerading (NAT) entries
+
+[\] ipchains -A forward -s 192.168.1.0/24 -j MASQ
+[/] Enable NAT (masquerading)
+
+[\] ipchains -M -S
+[/] Set masquerade timeout values
+
+[\] ipchains-save
+[/] Save current rules (if available)
+
+[\] ipchains-restore
+[/] Restore rules from file
+
+[\] lsmod | grep ipchains
+[/] Check kernel module
+
+[\] modprobe ipchains
+[/] Load ipchains module
+
+[\] dmesg | grep ipchains
+[/] View kernel logs
+
+[\] service ipchains start
+[/] Start ipchains service
+
+[\] service ipchains stop
+[/] Stop ipchains service
+
+[\] service ipchains restart
+[/] Restart ipchains service
+
+[\] service ipchains status
+[/] Show service status
+
+[\] chkconfig ipchains on
+[/] Enable at boot (legacy systems)
+
+[\] chkconfig ipchains off
+[/] Disable at boot
+
+[\] nano /etc/sysconfig/ipchains
+[/] Edit configuration file

@@ -1,0 +1,136 @@
+[X] PRET Command List
+
+[\] python pret.py
+[/] Start PRET interactive shell
+
+[\] python pret.py --help
+[/] Show help menu
+
+[\] python pret.py <printer> pjl
+[/] Connect to printer using PJL mode
+
+[\] python pret.py <printer> ps
+[/] Connect using PostScript mode
+
+[\] python pret.py <printer> pcl
+[/] Connect using PCL mode
+
+[\] python pret.py usb:/dev/usb/lp0 pjl
+[/] Connect to USB printer
+
+[\] python pret.py socket://192.168.1.50:9100 ps
+[/] Connect to network printer (JetDirect)
+
+[\] help
+[/] Show available commands
+
+[\] info
+[/] Display printer information
+
+[\] ls
+[/] List files on printer storage
+
+[\] cd <dir>
+[/] Change directory
+
+[\] pwd
+[/] Show current directory
+
+[\] cat <file>
+[/] View file contents
+
+[\] get <file>
+[/] Download file from printer
+
+[\] put <file>
+[/] Upload file to printer
+
+[\] rm <file>
+[/] Delete file from printer
+
+[\] mkdir <name>
+[/] Create directory
+
+[\] rmdir <name>
+[/] Remove directory
+
+[\] id
+[/] Show printer identity
+
+[\] status
+[/] Show printer status
+
+[\] print <file>
+[/] Print a file
+
+[\] reset
+[/] Soft reset printer
+
+[\] reboot
+[/] Reboot printer
+
+[\] eject
+[/] Eject current print job
+
+[\] cancel
+[/] Cancel active print job
+
+[\] pjl info
+[/] Show PJL device info
+
+[\] pjl variables
+[/] List PJL variables
+
+[\] pjl set <var>=<value>
+[/] Set PJL variable
+
+[\] pjl fsdirlist
+[/] List filesystem directories
+
+[\] pjl fsfilelist
+[/] List filesystem files
+
+[\] pjl fscopy <src> <dst>
+[/] Copy file on printer
+
+[\] pjl fsdelete <file>
+[/] Delete file
+
+[\] pjl fsformat
+[/] Format printer storage (dangerous)
+
+[\] ps version
+[/] Show PostScript version
+
+[\] ps print <file>
+[/] Print PostScript file
+
+[\] ps exec <script.ps>
+[/] Execute PostScript script
+
+[\] ps dump
+[/] Dump PostScript memory
+
+[\] pcl version
+[/] Show PCL version
+
+[\] pcl print <file>
+[/] Print PCL file
+
+[\] pcl exec <script.pcl>
+[/] Execute PCL script
+
+[\] log <file>
+[/] Save PRET session log
+
+[\] verbose
+[/] Enable verbose output
+
+[\] quiet
+[/] Disable verbose output
+
+[\] exit
+[/] Quit PRET shell
+
+[\] quit
+[/] Same as exit

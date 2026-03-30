@@ -1,0 +1,94 @@
+[X] MFCUK Command List
+
+[\] mfcuk
+[/] Run MFCUK with default settings
+
+[\] mfcuk -h
+[/] Show help menu
+
+[\] mfcuk -v
+[/] Enable verbose output
+
+[\] mfcuk -V
+[/] Show version information
+
+[\] mfcuk -C
+[/] Enable Darkside attack mode
+
+[\] mfcuk -R
+[/] Enable random nonce generation
+
+[\] mfcuk -S
+[/] Enable slow mode (more reliable)
+
+[\] mfcuk -T 5
+[/] Set timeout to 5 seconds
+
+[\] mfcuk -t 2
+[/] Set authentication timeout to 2 seconds
+
+[\] mfcuk -s 0
+[/] Start attack at sector 0
+
+[\] mfcuk -e 15
+[/] End attack at sector 15
+
+[\] mfcuk -k A0A1A2A3A4A5
+[/] Provide known key A for optimization
+
+[\] mfcuk -K B0B1B2B3B4B5
+[/] Provide known key B for optimization
+
+[\] mfcuk -o dump.mfd
+[/] Save recovered dump to file
+
+[\] mfcuk -O dump.mfd
+[/] Alternate syntax for output file
+
+[\] mfcuk -r 5
+[/] Retry failed sectors 5 times
+
+[\] mfcuk -p 100
+[/] Set probe count to 100
+
+[\] mfcuk -m
+[/] Minimal nonce mode
+
+[\] mfcuk -n
+[/] Disable nested attack fallback
+
+[\] mfcuk -N
+[/] Force nested attack only
+
+[\] mfcuk -D
+[/] Enable debug output
+
+[\] mfcuk -VV
+[/] Maximum verbosity
+
+[\] mfcuk -C -R -S -o dump.mfd
+[/] Full Darkside attack with recommended flags
+
+[\] mfcuk -C -s 1 -e 5 -o dump.mfd
+[/] Attack only sectors 1 through 5
+
+[\] mfcuk -C -T 10 -v
+[/] Darkside attack with 10‑second timeout
+
+[\] mfcuk -C -R -p 200
+[/] Increase probe count for difficult cards
+
+[\] mfcuk -C -r 10
+[/] Retry failed sectors 10 times
+
+[\] sudo apt install mfcuk
+[/] Install MFCUK on Debian‑based systems
+
+[\] nfc-list
+[/] Verify NFC reader detection (libnfc)
+
+[\] mfoc -O dump.mfd
+[/] Use MFOC after MFCUK for full dump (companion workflow)
+
+[\] hf mf hardnested
+[/] Proxmark3 hardnested attack (alternative workflow)

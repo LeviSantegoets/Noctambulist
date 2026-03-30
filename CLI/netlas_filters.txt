@@ -1,0 +1,224 @@
+# Netlas Filters
+# Format: [\] filter [/] description [X] menutitlename
+
+[X] Netlas (Filters)
+
+# -------------------------
+# HOST / NETWORK FILTERS
+# -------------------------
+
+[\] ip:1.2.3.4
+[/] Show results for a specific IP address
+
+[\] net:1.2.3.0/24
+[/] Show hosts within a network range
+
+[\] domain:example.com
+[/] Show data related to a specific domain
+
+[\] hostname:server.example.com
+[/] Filter by full hostname
+
+[\] port:80
+[/] Hosts with port 80 open
+
+[\] port:443
+[/] Hosts with HTTPS enabled
+
+[\] port:22
+[/] Hosts with SSH open
+
+[\] -port:25
+[/] Exclude SMTP servers
+
+# -------------------------
+# GEOLOCATION FILTERS
+# -------------------------
+
+[\] country:US
+[/] Hosts located in the United States
+
+[\] country:NL
+[/] Hosts located in the Netherlands
+
+[\] city:Amsterdam
+[/] Hosts located in Amsterdam
+
+[\] region:California
+[/] Hosts located in a specific region
+
+[\] continent:EU
+[/] Hosts located in Europe
+
+[\] -country:CN
+[/] Exclude China
+
+# -------------------------
+# ORGANIZATION / NETWORK
+# -------------------------
+
+[\] org:"Google LLC"
+[/] Infrastructure belonging to Google
+
+[\] org:"Amazon"
+[/] Hosts owned by Amazon
+
+[\] isp:"Cloudflare"
+[/] Hosts using Cloudflare infrastructure
+
+[\] asn:AS15169
+[/] Hosts in specific ASN
+
+[\] -org:"Microsoft"
+[/] Exclude Microsoft infrastructure
+
+# -------------------------
+# HTTP / WEB DATA
+# -------------------------
+
+[\] http.title:"Login"
+[/] Pages with “Login” in the title
+
+[\] http.title:"Admin"
+[/] Pages with “Admin” in title
+
+[\] http.body:"password"
+[/] Pages containing “password”
+
+[\] http.body:"dashboard"
+[/] Pages containing “dashboard”
+
+[\] http.status:200
+[/] HTTP 200 responses
+
+[\] http.status:404
+[/] HTTP 404 responses
+
+[\] http.header.server:"nginx"
+[/] Servers running nginx
+
+[\] http.header.server:"Apache"
+[/] Servers running Apache
+
+[\] http.header:"Set-Cookie"
+[/] Responses setting cookies
+
+# -------------------------
+# SSL / TLS FILTERS
+# -------------------------
+
+[\] ssl.subject:"example.com"
+[/] Certificates issued for domain
+
+[\] ssl.issuer:"Let's Encrypt"
+[/] Certificates issued by Let's Encrypt
+
+[\] ssl.version:TLS1.2
+[/] Hosts supporting TLS 1.2
+
+[\] ssl.version:TLS1.3
+[/] Hosts supporting TLS 1.3
+
+[\] ssl.cert.expired:true
+[/] Expired certificates
+
+[\] ssl.ja3:"769,49200-49196"
+[/] Filter by JA3 TLS fingerprint
+
+# -------------------------
+# TECHNOLOGY DETECTION
+# -------------------------
+
+[\] tech:wordpress
+[/] Sites running WordPress
+
+[\] tech:nginx
+[/] Servers using nginx
+
+[\] tech:apache
+[/] Servers using Apache
+
+[\] tech:php
+[/] Servers using PHP
+
+[\] tech:react
+[/] Sites using React
+
+[\] tech:django
+[/] Applications running Django
+
+# -------------------------
+# CONTENT SEARCH
+# -------------------------
+
+[\] body:"login"
+[/] Pages containing login text
+
+[\] body:"admin"
+[/] Pages containing admin keyword
+
+[\] body:"api_key"
+[/] Pages leaking API keys
+
+[\] body:"token"
+[/] Pages containing tokens
+
+[\] body:"secret"
+[/] Pages containing secrets
+
+[\] body:"private_key"
+[/] Pages exposing private keys
+
+# -------------------------
+# FILE / EXTENSION FILTERS
+# -------------------------
+
+[\] extension:php
+[/] Only PHP files
+
+[\] extension:js
+[/] Only JavaScript files
+
+[\] extension:json
+[/] Only JSON responses
+
+[\] -extension:css
+[/] Exclude CSS files
+
+[\] -extension:png
+[/] Exclude PNG images
+
+[\] -extension:jpg
+[/] Exclude JPG images
+
+# -------------------------
+# TIME / INDEX FILTERS
+# -------------------------
+
+[\] date:>2024
+[/] Results indexed after 2024
+
+[\] date:<2022
+[/] Results indexed before 2022
+
+[\] updated:>30d
+[/] Updated within last 30 days
+
+# -------------------------
+# ADVANCED
+# -------------------------
+
+[\] contains:"dashboard"
+[/] Results containing dashboard keyword
+
+[\] contains:"login"
+[/] Results containing login keyword
+
+[\] regex:admin.*
+[/] Regex search for admin paths
+
+[\] regex:password=.*?
+[/] Regex search for password parameters
+
+[\] -body:"test"
+[/] Exclude results containing test

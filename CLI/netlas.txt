@@ -1,0 +1,138 @@
+# Netlas Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Netlas Command List
+
+# -------------------------
+# BASIC SEARCH
+# -------------------------
+
+[\] netlas search "query"
+[/] Perform a basic search across Netlas indexed data
+
+[\] netlas search --host example.com
+[/] Search information about a specific host
+
+[\] netlas search --domain example.com
+[/] Search data related to a domain
+
+[\] netlas search --ip 8.8.8.8
+[/] Search information about an IP address
+
+[\] netlas search --net 192.168.1.0/24
+[/] Search an entire network range
+
+# -------------------------
+# RESULTS HANDLING
+# -------------------------
+
+[\] netlas search "query" --limit 10
+[/] Limit the number of returned results
+
+[\] netlas search "query" --offset 50
+[/] Skip first results and start from offset
+
+[\] netlas search "query" --fields ip,port
+[/] Return only selected fields
+
+[\] netlas search "query" --count
+[/] Show only the number of results
+
+[\] netlas search "query" --json
+[/] Output results in JSON format
+
+[\] netlas search "query" --csv
+[/] Output results in CSV format
+
+# -------------------------
+# DATA EXPORT
+# -------------------------
+
+[\] netlas search "query" --output results.json
+[/] Save results to a JSON file
+
+[\] netlas search "query" --output results.csv
+[/] Save results to a CSV file
+
+[\] netlas export scan-id
+[/] Export a previously stored scan
+
+# -------------------------
+# HOST INFORMATION
+# -------------------------
+
+[\] netlas host example.com
+[/] Get detailed host information
+
+[\] netlas ip 8.8.8.8
+[/] Retrieve full IP intelligence data
+
+[\] netlas domain example.com
+[/] Retrieve domain-related intelligence
+
+[\] netlas ports 8.8.8.8
+[/] List open ports for a host
+
+[\] netlas services 8.8.8.8
+[/] Show detected services on a host
+
+# -------------------------
+# SSL / CERTIFICATE DATA
+# -------------------------
+
+[\] netlas cert search example.com
+[/] Search SSL certificates for a domain
+
+[\] netlas cert fingerprint <hash>
+[/] Retrieve certificate by fingerprint
+
+[\] netlas cert domain example.com
+[/] List certificates issued for a domain
+
+# -------------------------
+# SCANNING / TASKS
+# -------------------------
+
+[\] netlas scan start example.com
+[/] Start a new scan for a domain
+
+[\] netlas scan start 8.8.8.8
+[/] Start a scan for a specific IP
+
+[\] netlas scan status <scan-id>
+[/] Check scan progress
+
+[\] netlas scan results <scan-id>
+[/] Retrieve results of a scan
+
+[\] netlas scan stop <scan-id>
+[/] Stop a running scan
+
+# -------------------------
+# ACCOUNT / API
+# -------------------------
+
+[\] netlas login
+[/] Authenticate with Netlas API
+
+[\] netlas logout
+[/] Logout from the CLI
+
+[\] netlas api-key set <key>
+[/] Set API key for CLI usage
+
+[\] netlas account info
+[/] Display account usage information
+
+# -------------------------
+# UTILITY COMMANDS
+# -------------------------
+
+[\] netlas help
+[/] Show help menu
+
+[\] netlas version
+[/] Display CLI version
+
+[\] netlas update
+[/] Update Netlas CLI to latest version

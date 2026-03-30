@@ -1,0 +1,52 @@
+[X] MTR Command List (My Traceroute / Network Diagnostic)
+
+[\] mtr example.com
+[/] Run MTR to host interactively (combine ping + traceroute)
+
+[\] mtr -r example.com
+[/] Report mode (non-interactive, summary after completion)
+
+[\] mtr -c 10 example.com
+[/] Send 10 pings per hop and exit
+
+[\] mtr -w example.com
+[/] Wide output format (full hostnames and IPs)
+
+[\] mtr -b example.com
+[/] Show both hostnames and IP addresses
+
+[\] mtr -n example.com
+[/] Do not resolve hostnames (show only IPs)
+
+[\] mtr -z example.com
+[/] Show compact output (minimal columns)
+
+[\] mtr --report-cycles 20 example.com
+[/] Set number of pings per hop for report
+
+[\] mtr --raw example.com
+[/] Raw output (parseable for scripts)
+
+[\] mtr --json example.com
+[/] Output in JSON format
+
+[\] mtr --tcp example.com
+[/] Use TCP instead of ICMP (for firewalled networks)
+
+[\] mtr --udp example.com
+[/] Use UDP probes (default may vary)
+
+[\] mtr --port 443 example.com
+[/] Specify port for TCP/UDP probes
+
+[\] mtr --interval 1 example.com
+[/] Set interval between pings (1 second)
+
+[\] mtr --ttl 30 example.com
+[/] Set maximum TTL (hops) for traceroute
+
+[\] mtr --help
+[/] Show help menu
+
+[\] mtr --version
+[/] Show mtr version

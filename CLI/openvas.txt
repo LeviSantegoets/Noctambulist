@@ -1,0 +1,79 @@
+[X] OpenVAS / GVM Command List
+
+[\] openvas-setup
+[/] Install and configure OpenVAS (initial setup)
+
+[\] openvas-start
+[/] Start OpenVAS services
+
+[\] openvas-stop
+[/] Stop OpenVAS services
+
+[\] openvas-check-setup
+[/] Verify installation and configuration
+
+[\] openvas-feed-update
+[/] Update NVT (Network Vulnerability Tests) feed
+
+[\] openvas-nvt-sync
+[/] Sync NVTs from feed servers
+
+[\] gvm-check-setup
+[/] Check GVM installation (modern replacement of OpenVAS)
+
+[\] gvm-manage-certs -a
+[/] Generate or manage certificates
+
+[\] gvm-cli socket --xml "<command/>"
+[/] Run GVM commands via CLI (XML input)
+
+[\] gvm-cli ssh user@host
+[/] Connect to remote GVM server
+
+[\] gvm-prefs
+[/] Configure GVM preferences
+
+[\] gvm-feed-update
+[/] Update feed for GVM (NVT, SCAP, CERT data)
+
+[\] gvm-stop
+[/] Stop GVM services
+
+[\] gvm-start
+[/] Start GVM services
+
+[\] omp --create-target
+[/] Create scan target via OMP CLI
+
+[\] omp --create-task
+[/] Create scan task via OMP CLI
+
+[\] omp --start-task <task_id>
+[/] Start scan task
+
+[\] omp --get-tasks
+[/] List scan tasks
+
+[\] omp --get-results <task_id>
+[/] Retrieve scan results
+
+[\] gvmd --get-users
+[/] List users in GVM
+
+[\] gvmd --create-user=username --role=Admin
+[/] Create admin user
+
+[\] gvmd --modify-user=username --password=newpass
+[/] Change user password
+
+[\] gvm-libs --version
+[/] Show installed GVM libraries version
+
+[\] openvas -h
+[/] Show OpenVAS help menu
+
+[\] gvm-cli --help
+[/] Show GVM CLI help menu
+
+[\] gvm-check-setup --version
+[/] Show OpenVAS/GVM version

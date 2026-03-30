@@ -1,0 +1,135 @@
+[X] PHP Command List
+
+# -------------------------
+# VERSION / INFO
+# -------------------------
+
+[\] php -v
+[/] Show installed PHP version
+
+[\] php -i
+[/] Show full PHP configuration info (phpinfo)
+
+[\] php -m
+[/] List loaded PHP modules
+
+[\] php --ini
+[/] Show loaded php.ini configuration files
+
+[\] php -r 'phpinfo();'
+[/] Display phpinfo from command line
+
+# -------------------------
+# RUNNING PHP
+# -------------------------
+
+[\] php script.php
+[/] Execute a PHP script from CLI
+
+[\] php -f script.php
+[/] Run a PHP file explicitly
+
+[\] php -r 'echo "Hello World";'
+[/] Run inline PHP code
+
+[\] php -a
+[/] Start interactive PHP shell
+
+# -------------------------
+# BUILT-IN WEB SERVER
+# -------------------------
+
+[\] php -S localhost:8000
+[/] Start PHP development server
+
+[\] php -S 0.0.0.0:8000
+[/] Start PHP server accessible on network
+
+[\] php -S localhost:8000 -t public
+[/] Set document root directory
+
+[\] php -S localhost:8000 router.php
+[/] Use router script for custom routing
+
+# -------------------------
+# CONFIGURATION
+# -------------------------
+
+[\] php --ini
+[/] Show active php.ini file
+
+[\] php -c /path/php.ini script.php
+[/] Use custom php.ini file
+
+[\] php -d memory_limit=512M script.php
+[/] Override configuration value
+
+[\] php -d display_errors=1 script.php
+[/] Enable error display temporarily
+
+# -------------------------
+# COMPOSER (PHP PACKAGE MANAGER)
+# -------------------------
+
+[\] composer install
+[/] Install dependencies from composer.json
+
+[\] composer update
+[/] Update PHP dependencies
+
+[\] composer require vendor/package
+[/] Install new PHP package
+
+[\] composer remove vendor/package
+[/] Remove installed package
+
+[\] composer show
+[/] List installed packages
+
+# -------------------------
+# EXTENSIONS
+# -------------------------
+
+[\] sudo apt install php-mysql
+[/] Install MySQL PHP extension
+
+[\] sudo apt install php-curl
+[/] Install CURL PHP extension
+
+[\] sudo apt install php-xml
+[/] Install XML PHP extension
+
+[\] sudo apt install php-gd
+[/] Install GD graphics extension
+
+[\] php -m | grep curl
+[/] Check if extension is loaded
+
+# -------------------------
+# PHP-FPM (FASTCGI PROCESS MANAGER)
+# -------------------------
+
+[\] sudo systemctl start php-fpm
+[/] Start PHP-FPM service
+
+[\] sudo systemctl stop php-fpm
+[/] Stop PHP-FPM service
+
+[\] sudo systemctl restart php-fpm
+[/] Restart PHP-FPM service
+
+[\] sudo systemctl status php-fpm
+[/] Show PHP-FPM service status
+
+# -------------------------
+# LOGS / DEBUGGING
+# -------------------------
+
+[\] tail -f /var/log/php_errors.log
+[/] Monitor PHP error log
+
+[\] php -l script.php
+[/] Check PHP syntax for errors
+
+[\] php -d error_reporting=E_ALL script.php
+[/] Enable full error reporting

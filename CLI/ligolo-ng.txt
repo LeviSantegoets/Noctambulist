@@ -1,0 +1,34 @@
+[X] Ligolo-ng Command List
+
+[\] ./ligolo-server -p 443
+[/] Start Ligolo server on port 443
+
+[\] ./ligolo-client -r server:443
+[/] Connect client to Ligolo server
+
+[\] ./ligolo-client -r server:443 -l 1080:localhost:22
+[/] Forward remote port 1080 to local port 22
+
+[\] ./ligolo-client -r server:443 -l 8080:127.0.0.1:80
+[/] Forward local web service through tunnel
+
+[\] ./ligolo-client -r server:443 -u user:pass
+[/] Connect client with username/password authentication
+
+[\] ./ligolo-server -p 443 -u user:pass
+[/] Start server with authentication
+
+[\] ./ligolo-client -r server:443 -v
+[/] Verbose mode (client)
+
+[\] ./ligolo-server -v
+[/] Verbose mode (server)
+
+[\] ./ligolo-client --help
+[/] Show client help menu
+
+[\] ./ligolo-server --help
+[/] Show server help menu
+
+[\] ./ligolo-client --version
+[/] Show version

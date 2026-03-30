@@ -1,0 +1,46 @@
+[X] NCDU Command List (NCurses Disk Usage)
+
+[\] ncdu
+[/] Open interactive disk usage viewer for current directory
+
+[\] ncdu /path/to/dir
+[/] Open specific directory
+
+[\] ncdu -x
+[/] Stay on one filesystem (exclude mounted filesystems)
+
+[\] ncdu -q
+[/] Quiet mode (less verbose output)
+
+[\] ncdu -r
+[/] Read-only mode (no delete)
+
+[\] ncdu -o output.json
+[/] Export scan to JSON file
+
+[\] ncdu -f input.json
+[/] Load scan from JSON file
+
+[\] ncdu -e
+[/] Enable delete mode (delete files from within interface)
+
+[\] ncdu --color=dark
+[/] Use dark color scheme
+
+[\] ncdu --color=light
+[/] Use light color scheme
+
+[\] ncdu --exclude pattern
+[/] Exclude files/directories matching pattern
+
+[\] ncdu --exclude-from file.txt
+[/] Exclude files listed in file.txt
+
+[\] ncdu -0
+[/] Read null-separated file/directory names
+
+[\] ncdu --help
+[/] Show help menu
+
+[\] ncdu --version
+[/] Show ncdu version

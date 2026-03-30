@@ -1,0 +1,97 @@
+[X] M17-Tools Command List
+
+[\] m17cli
+[/] Launch M17 client for transmitting and receiving M17 digital voice
+
+[\] m17cli --help
+[/] Show help and available command options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] m17cli -r 434.5625M
+[/] Receive M17 signals on 434.5625 MHz
+
+[\] m17cli -t 434.5625M
+[/] Transmit M17 voice on 434.5625 MHz
+
+[\] m17cli -f input.wav
+[/] Use recorded audio file as input
+
+[\] m17cli -o output.wav
+[/] Save received audio to file
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] m17cli --device rtl
+[/] Use RTL-SDR as SDR input
+
+[\] m17cli --device hackrf
+[/] Use HackRF SDR
+
+[\] m17cli --device soapy
+[/] Use SoapySDR-compatible device
+
+[\] m17cli --device usrp
+[/] Use USRP device
+
+# -------------------------
+# SAMPLE RATE / FREQUENCY
+# -------------------------
+
+[\] m17cli -s 12.5k
+[/] Set audio sample rate to 12.5 kHz
+
+[\] m17cli -p 20
+[/] Apply 20 PPM frequency correction
+
+[\] m17cli -f 434.5625M
+[/] Set center frequency
+
+# -------------------------
+# AUDIO / VOICE OPTIONS
+# -------------------------
+
+[\] m17cli -a
+[/] Play decoded audio live
+
+[\] m17cli -o output.wav
+[/] Save decoded audio
+
+[\] m17cli --mic /dev/audio
+[/] Use microphone input for transmission
+
+[\] m17cli --volume 80
+[/] Adjust audio volume level
+
+# -------------------------
+# NETWORK / REFLECTORS
+# -------------------------
+
+[\] m17cli -R reflect.example.com:42000
+[/] Connect to remote M17 reflector
+
+[\] m17cli --server
+[/] Run M17 network server
+
+[\] m17cli --client
+[/] Connect as client to M17 network
+
+# -------------------------
+# LOGGING / DEBUG
+# -------------------------
+
+[\] m17cli -v
+[/] Enable verbose output
+
+[\] m17cli --logfile m17.log
+[/] Log events and received messages
+
+[\] m17cli --stats
+[/] Show runtime statistics
+
+[\] m17cli --monitor
+[/] Monitor signal quality and network status

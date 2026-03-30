@@ -1,0 +1,102 @@
+[X] libiio Command List
+
+[\] iio_info
+[/] Display information about all connected IIO devices
+
+[\] iio_info -u <uri>
+[/] Connect to remote device via URI and display info
+
+[\] iio_info -b
+[/] Show buffer capabilities for devices
+
+[\] iio_info -n
+[/] Show device network information
+
+# -------------------------
+# DEVICE PROBING / MANAGEMENT
+# -------------------------
+
+[\] iio_attr
+[/] Read or write device attributes
+
+[\] iio_attr -u <uri> -d <dev> -a <attr> -r
+[/] Read attribute value
+
+[\] iio_attr -u <uri> -d <dev> -a <attr> -w <value>
+[/] Write attribute value
+
+[\] iio_reg
+[/] Read or write device registers
+
+[\] iio_reg -r <reg>
+[/] Read register value
+
+[\] iio_reg -w <reg> <value>
+[/] Write value to register
+
+# -------------------------
+# BUFFER CAPTURE / STREAMING
+# -------------------------
+
+[\] iio_readdev
+[/] Capture samples from a device
+
+[\] iio_readdev -b <buffer_name>
+[/] Read samples from specific buffer
+
+[\] iio_readdev -c <channel>
+[/] Capture from a specific channel
+
+[\] iio_readdev -s 1000
+[/] Capture 1000 samples
+
+[\] iio_readdev -o capture.iq
+[/] Save captured samples to file
+
+[\] iio_readdev -t
+[/] Capture with timestamping
+
+# -------------------------
+# DEVICE CONTROL
+# -------------------------
+
+[\] iio_attr -d <dev> -a sampling_frequency -w 2000000
+[/] Set device sample rate to 2 MSPS
+
+[\] iio_attr -d <dev> -a gain -w 30
+[/] Set RX gain to 30 dB
+
+[\] iio_attr -d <dev> -a frequency -w 100000000
+[/] Set center frequency to 100 MHz
+
+[\] iio_attr -d <dev> -a enable -w 1
+[/] Enable a channel
+
+[\] iio_attr -d <dev> -a enable -w 0
+[/] Disable a channel
+
+# -------------------------
+# NETWORK / REMOTE ACCESS
+# -------------------------
+
+[\] iio_attr -u ip:1234 -d <dev> -a <attr> -r
+[/] Read attribute from remote device
+
+[\] iio_info -u ip:1234
+[/] List remote device capabilities
+
+[\] iio_readdev -u ip:1234 -b <buffer> -o capture.iq
+[/] Capture samples from remote device
+
+# -------------------------
+# DEBUG / VERBOSE
+# -------------------------
+
+[\] iio_info -v
+[/] Verbose device information
+
+[\] iio_readdev -v -o capture.iq
+[/] Capture with verbose output
+
+[\] iio_attr -v -d <dev> -a <attr> -r
+[/] Read attribute with verbose logging

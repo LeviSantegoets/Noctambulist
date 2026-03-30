@@ -1,0 +1,109 @@
+[X] PowerView Command List
+
+[\] Import-Module .\PowerView.ps1
+[/] Load PowerView into PowerShell session
+
+[\] Get-Domain
+[/] Get domain information
+
+[\] Get-DomainController
+[/] List domain controllers
+
+[\] Get-DomainUser
+[/] Enumerate all domain users
+
+[\] Get-DomainUser -Identity username
+[/] Get details for specific user
+
+[\] Get-DomainUser -SPN
+[/] Find users with Service Principal Names (Kerberoast targets)
+
+[\] Get-DomainGroup
+[/] List domain groups
+
+[\] Get-DomainGroup -Identity "Domain Admins"
+[/] Get specific group info
+
+[\] Get-DomainComputer
+[/] List domain computers
+
+[\] Get-DomainComputer -OperatingSystem "*Server*"
+[/] Filter computers by OS
+
+[\] Get-DomainTrust
+[/] Enumerate domain trusts
+
+[\] Get-DomainGPO
+[/] List Group Policy Objects
+
+[\] Get-DomainOU
+[/] List Organizational Units
+
+[\] Get-DomainObjectAcl -Identity username
+[/] View ACLs for specific object
+
+[\] Get-DomainObjectAcl -ResolveGUIDs
+[/] Resolve GUIDs in ACL output
+
+[\] Find-LocalAdminAccess
+[/] Find machines where current user is local admin
+
+[\] Find-DomainShare
+[/] Enumerate network shares
+
+[\] Find-InterestingDomainShareFile
+[/] Find sensitive files in shares
+
+[\] Invoke-UserHunter
+[/] Locate where target users are logged in
+
+[\] Invoke-ProcessHunter
+[/] Find running processes across domain
+
+[\] Invoke-ACLScanner
+[/] Identify interesting ACLs for abuse
+
+[\] Invoke-ShareFinder
+[/] Find accessible SMB shares
+
+[\] Invoke-FileFinder
+[/] Search files across domain
+
+[\] Invoke-Kerberoast
+[/] Perform Kerberoasting attack
+
+[\] Get-NetSession
+[/] Enumerate active sessions on host
+
+[\] Get-NetLoggedon
+[/] List logged-in users on a machine
+
+[\] Get-NetLocalGroup
+[/] List local groups on system
+
+[\] Get-NetLocalGroupMember
+[/] List members of local group
+
+[\] Set-DomainObject -Identity user -Set @{attribute=value}
+[/] Modify AD object attributes (if permitted)
+
+[\] Add-DomainGroupMember -Identity "Group" -Members user
+[/] Add user to group (privileged action)
+
+[\] Remove-DomainGroupMember -Identity "Group" -Members user
+[/] Remove user from group
+
+[\] Get-DomainPolicy
+[/] Get domain password policy
+
+[\] Get-DomainPolicyData
+[/] Detailed domain policy data
+
+[\] Get-DomainForeignUser
+[/] Find users from trusted domains
+
+[\] Get-DomainForeignGroupMember
+[/] Find foreign group memberships
+
+[\] PowerView.ps1 -h
+[/] Show help menu (if available)

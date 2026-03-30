@@ -1,0 +1,43 @@
+[X] IPerf3 Command List (Network Bandwidth Testing)
+
+[\] iperf3 -s
+[/] Start IPerf3 in server mode
+
+[\] iperf3 -c 192.168.1.10
+[/] Connect to server at 192.168.1.10 (client mode)
+
+[\] iperf3 -t 10 -c 192.168.1.10
+[/] Run test for 10 seconds
+
+[\] iperf3 -u -c 192.168.1.10
+[/] Use UDP instead of TCP
+
+[\] iperf3 -b 100M -u -c 192.168.1.10
+[/] Set bandwidth limit for UDP test
+
+[\] iperf3 -p 5202 -c 192.168.1.10
+[/] Specify port (5202) for client/server
+
+[\] iperf3 -R -c 192.168.1.10
+[/] Reverse test (server sends, client receives)
+
+[\] iperf3 -P 4 -c 192.168.1.10
+[/] Use 4 parallel streams
+
+[\] iperf3 -i 1 -c 192.168.1.10
+[/] Show intermediate results every 1 second
+
+[\] iperf3 --logfile output.txt -c 192.168.1.10
+[/] Save test results to a file
+
+[\] iperf3 --json -c 192.168.1.10
+[/] Output results in JSON format
+
+[\] iperf3 --get-server-output -c 192.168.1.10
+[/] Show server output on client
+
+[\] iperf3 --help
+[/] Show help menu
+
+[\] iperf3 --version
+[/] Show iperf3 version

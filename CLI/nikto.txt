@@ -1,0 +1,79 @@
+[X] Nikto Command List
+
+[\] nikto -h
+[/] Show help menu
+
+[\] nikto -Version
+[/] Show Nikto version
+
+[\] nikto -host example.com
+[/] Scan a single host
+
+[\] nikto -hT example.com
+[/] Scan host with target specification
+
+[\] nikto -port 80
+[/] Scan specific port
+
+[\] nikto -ssl
+[/] Force SSL/TLS scan (HTTPS)
+
+[\] nikto -output report.txt
+[/] Save scan results to a file
+
+[\] nikto -Format txt
+[/] Save output in text format
+
+[\] nikto -Format html
+[/] Save output in HTML format
+
+[\] nikto -Format csv
+[/] Save output in CSV format
+
+[\] nikto -Display V
+[/] Display verbose output
+
+[\] nikto -Tuning 1
+[/] Enable specific tests (1 = interesting files)
+
+[\] nikto -Tuning 12345
+[/] Enable multiple test types
+
+[\] nikto -Plugins plugin_name
+[/] Run specific plugin(s)
+
+[\] nikto -Cgidirs /cgi-bin
+[/] Scan specific CGI directories
+
+[\] nikto -useragent "CustomAgent"
+[/] Use custom User-Agent
+
+[\] nikto -timeout 10
+[/] Set connection timeout (seconds)
+
+[\] nikto -ssl_version TLSv1.2
+[/] Force specific SSL/TLS version
+
+[\] nikto -config /path/to/nikto.conf
+[/] Use custom configuration file
+
+[\] nikto -nointeractive
+[/] Disable interactive prompts
+
+[\] nikto -host example.com -port 443 -ssl
+[/] Scan HTTPS host on custom port
+
+[\] nikto -Plugins +vhost
+[/] Enable virtual host scanning
+
+[\] nikto -h
+[/] Show help menu (alternative)
+
+[\] nikto -update
+[/] Update Nikto database/plugins
+
+[\] nikto -list-plugins
+[/] List all available plugins
+
+[\] nikto -dbcheck
+[/] Check and verify database integrity

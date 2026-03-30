@@ -1,0 +1,101 @@
+[X] ModesDeco2 Command List
+
+[\] modesdeco2
+[/] Start ModesDeco2 ADS-B / Mode S / ACAS / MLAT decoder
+
+[\] modesdeco2 --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] modesdeco2 --device rtl
+[/] Use RTL-SDR for 1090 MHz ADS-B reception
+
+[\] modesdeco2 --device hackrf
+[/] Use HackRF SDR
+
+[\] modesdeco2 --device usrp
+[/] Use USRP SDR device
+
+[\] modesdeco2 --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] modesdeco2 -f 1090e6
+[/] Tune to 1090 MHz ADS-B frequency
+
+[\] modesdeco2 -s 2e6
+[/] Set SDR sample rate to 2 MSPS
+
+[\] modesdeco2 -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] modesdeco2 --file capture.iq
+[/] Decode from recorded IQ file
+
+[\] modesdeco2 --stdout
+[/] Output decoded messages to standard output
+
+[\] modesdeco2 --json
+[/] Output messages in JSON format
+
+[\] modesdeco2 --logfile adsb.log
+[/] Save decoded messages to log file
+
+# -------------------------
+# SIGNAL PROCESSING / DECODING
+# -------------------------
+
+[\] modesdeco2 --agc
+[/] Enable automatic gain control
+
+[\] modesdeco2 --invert
+[/] Invert signal polarity if needed
+
+[\] modesdeco2 --verbose
+[/] Enable verbose decoding output
+
+[\] modesdeco2 --stats
+[/] Show decoding statistics
+
+# -------------------------
+# NETWORK / STREAMING
+# -------------------------
+
+[\] modesdeco2 --beast
+[/] Output in Beast binary format
+
+[\] modesdeco2 --net
+[/] Enable network streaming of decoded messages
+
+[\] modesdeco2 --net-port 30005
+[/] Set TCP port for network streaming
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] modesdeco2 --spectrum
+[/] Show signal spectrum
+
+[\] modesdeco2 --waterfall
+[/] Display waterfall of received signal
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 1090e6 -s 2e6 - | modesdeco2 --stdin
+[/] Decode live ADS-B from RTL-SDR stream
+
+[\] rtl_sdr -f 1090e6 -s 2e6 - | csdr convert_u8_f | modesdeco2 --stdin
+[/] Process SDR IQ stream through CSDR before decoding

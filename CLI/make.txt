@@ -1,0 +1,97 @@
+[X] Make Command List (GNU Make)
+
+[\] make
+[/] Build default target (first rule in Makefile)
+
+[\] make target
+[/] Build specific target
+
+[\] make -f Makefile.custom
+[/] Use specific Makefile
+
+[\] make -C /path/to/dir
+[/] Run make in another directory
+
+[\] make -j4
+[/] Run 4 jobs in parallel
+
+[\] make -j
+[/] Run as many jobs as possible in parallel
+
+[\] make clean
+[/] Remove build artifacts
+
+[\] make install
+[/] Install built files
+
+[\] make uninstall
+[/] Remove installed files
+
+[\] make rebuild
+[/] Clean and build again
+
+[\] make all
+[/] Build all targets
+
+[\] make check
+[/] Run tests
+
+[\] make test
+[/] Execute test suite
+
+[\] make VERBOSE=1
+[/] Enable verbose output
+
+[\] make -n
+[/] Dry run (show commands without executing)
+
+[\] make -s
+[/] Silent mode (no command output)
+
+[\] make -k
+[/] Continue despite errors
+
+[\] make -B
+[/] Force rebuild of all targets
+
+[\] make -t
+[/] Touch targets without building
+
+[\] make -q
+[/] Check if targets are up to date
+
+[\] make -d
+[/] Debug output
+
+[\] make --trace
+[/] Show rule execution trace
+
+[\] make --version
+[/] Show make version
+
+[\] make -p
+[/] Print database (rules/variables)
+
+[\] make -e
+[/] Environment variables override Makefile
+
+[\] make VAR=value
+[/] Pass variable to Makefile
+
+[\] make CC=gcc
+[/] Override compiler variable
+
+[\] make PREFIX=/usr/local install
+[/] Set install prefix
+
+[\] make -W file.c
+[/] Assume file changed
+
+[\] make -o file.o
+[/] Do not remake specified file
+
+[\] make --no-print-directory
+[/] Suppress directory messages
+
+[\] make help
+[/] Show help target (if defined in Makefile)

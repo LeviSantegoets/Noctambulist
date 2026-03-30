@@ -1,0 +1,157 @@
+[X] Manjaro OS Command List
+
+[\] neofetch
+[/] Display Manjaro system summary
+
+[\] uname -a
+[/] Show kernel and system details
+
+[\] lsb_release -a
+[/] Show Manjaro/Arch release info
+
+[\] hostnamectl
+[/] Display hostname and OS info
+
+[\] free -h
+[/] Show memory usage
+
+[\] df -h
+[/] Show disk usage
+
+[\] sudo pacman -Syu
+[/] Update system + packages
+
+[\] sudo pacman -Syyu
+[/] Force refresh + full upgrade
+
+[\] sudo pacman -S <package>
+[/] Install a package
+
+[\] sudo pacman -R <package>
+[/] Remove a package
+
+[\] sudo pacman -Rns <package>
+[/] Remove package + configs + dependencies
+
+[\] pacman -Ss <keyword>
+[/] Search for packages
+
+[\] pacman -Qi <package>
+[/] Show package info
+
+[\] pacman -Ql <package>
+[/] List files installed by a package
+
+[\] sudo pacman -Sc
+[/] Clean old package cache
+
+[\] sudo pacman -Scc
+[/] Clean all cached packages
+
+[\] sudo mhwd -l
+[/] List available hardware drivers
+
+[\] sudo mhwd -li
+[/] List installed drivers
+
+[\] sudo mhwd -a pci free 0300
+[/] Auto‑install free GPU drivers
+
+[\] sudo mhwd -a pci nonfree 0300
+[/] Auto‑install proprietary GPU drivers
+
+[\] sudo mhwd -r pci <driver>
+[/] Remove a driver
+
+[\] sudo manjaro-settings-manager
+[/] Open Manjaro Settings Manager GUI
+
+[\] pamac search <package>
+[/] Search AUR + repo packages
+
+[\] pamac install <package>
+[/] Install from repo or AUR
+
+[\] pamac remove <package>
+[/] Remove package
+
+[\] pamac update
+[/] Update all packages
+
+[\] pamac build <package>
+[/] Build AUR package manually
+
+[\] pamac list --installed
+[/] List installed packages
+
+[\] pamac list --orphans
+[/] Show orphaned packages
+
+[\] systemctl status <service>
+[/] Check service status
+
+[\] sudo systemctl start <service>
+[/] Start a service
+
+[\] sudo systemctl stop <service>
+[/] Stop a service
+
+[\] sudo systemctl enable <service>
+[/] Enable service at boot
+
+[\] sudo systemctl disable <service>
+[/] Disable service at boot
+
+[\] nmcli device status
+[/] Show network devices
+
+[\] nmcli connection show
+[/] List saved connections
+
+[\] nmcli device wifi list
+[/] Scan for Wi‑Fi networks
+
+[\] nmcli device wifi connect <SSID> password <pass>
+[/] Connect to Wi‑Fi
+
+[\] ip a
+[/] Show IP addresses
+
+[\] ping -c 4 manjaro.org
+[/] Test network connectivity
+
+[\] sudo useradd <name>
+[/] Create new user
+
+[\] sudo passwd <name>
+[/] Set user password
+
+[\] sudo userdel <name>
+[/] Delete user
+
+[\] sudo usermod -aG wheel <name>
+[/] Add user to sudo group
+
+[\] chmod 755 <file>
+[/] Change file permissions
+
+[\] chown user:user <file>
+[/] Change file owner
+
+[\] htop
+[/] Interactive process viewer
+
+[\] ps aux
+[/] List running processes
+
+[\] kill <PID>
+[/] Terminate process
+
+[\] reboot
+[/] Restart system
+
+[\] shutdown now
+[/] Shutdown immediately
+
+[\] shutdown -r now
+[/] Reboot immediately

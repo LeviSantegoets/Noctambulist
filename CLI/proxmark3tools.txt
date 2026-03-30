@@ -1,0 +1,226 @@
+[X] Proxmark3 Tools Command List
+
+[\] pm3
+[/] Launch Proxmark3 client
+
+[\] pm3 --help
+[/] Show help menu
+
+[\] pm3 --version
+[/] Show client version
+
+[\] pm3 /dev/ttyACM0
+[/] Connect to Proxmark3 on specific port
+
+[\] hw status
+[/] Show hardware status
+
+[\] hw tune
+[/] Tune antennas and show resonance
+
+[\] hw version
+[/] Display firmware and hardware version
+
+[\] hw ping
+[/] Test communication with device
+
+[\] hw reset
+[/] Reset Proxmark3 hardware
+
+[\] hw upgrade fullimage.elf
+[/] Flash full firmware image
+
+[\] hw upgrade bootrom.elf
+[/] Flash bootrom
+
+[\] hw upgrade os.elf
+[/] Flash OS firmware
+
+[\] lf search
+[/] Auto‑detect LF tag type
+
+[\] lf read
+[/] Read raw LF data
+
+[\] lf write
+[/] Write raw LF data
+
+[\] lf config
+[/] Show LF configuration
+
+[\] lf tune
+[/] Tune LF antenna
+
+[\] lf hid read
+[/] Read HID Prox LF tag
+
+[\] lf hid clone --id 1234567890
+[/] Clone HID tag to T55x7
+
+[\] lf t55xx detect
+[/] Detect T55xx tag
+
+[\] lf t55xx read
+[/] Read T55xx block data
+
+[\] lf t55xx write b 0 d 11223344
+[/] Write block to T55xx tag
+
+[\] lf em410x read
+[/] Read EM410x tag
+
+[\] lf em410x clone --id 0F12345678
+[/] Clone EM410x tag
+
+[\] lf io read
+[/] Read Indala tag
+
+[\] lf io clone
+[/] Clone Indala tag
+
+[\] hf search
+[/] Auto‑detect HF tag type
+
+[\] hf tune
+[/] Tune HF antenna
+
+[\] hf list
+[/] Show last HF captures
+
+[\] hf read
+[/] Read raw HF data
+
+[\] hf mf search
+[/] Detect MIFARE Classic / Ultralight
+
+[\] hf mf chk
+[/] Check MIFARE Classic keys
+
+[\] hf mf dump
+[/] Dump MIFARE Classic card
+
+[\] hf mf restore
+[/] Restore MIFARE Classic dump
+
+[\] hf mf mifare
+[/] Show MIFARE Classic commands
+
+[\] hf mf nested
+[/] Run nested attack (authorized testing only)
+
+[\] hf mf hardnested
+[/] Run hardnested attack (authorized testing only)
+
+[\] hf mf autopwn
+[/] Automatic MIFARE Classic attack workflow
+
+[\] hf mf wrbl --blk 4 --data A0A1A2A3A4A5
+[/] Write block to MIFARE Classic
+
+[\] hf mf rdbl --blk 4 --key A0A1A2A3A4A5
+[/] Read block from MIFARE Classic
+
+[\] hf mf setuid 11223344
+[/] Set UID on magic Chinese card
+
+[\] hf 14a info
+[/] Show ISO14443‑A tag info
+
+[\] hf 14a sniff
+[/] Sniff ISO14443‑A communication
+
+[\] hf 14b info
+[/] Show ISO14443‑B tag info
+
+[\] hf 15 info
+[/] Show ISO15693 tag info
+
+[\] hf 15 dump
+[/] Dump ISO15693 tag
+
+[\] hf iclass info
+[/] Show iClass tag info
+
+[\] hf iclass dump
+[/] Dump iClass tag (authorized testing only)
+
+[\] hf iclass clone
+[/] Clone iClass tag (authorized testing only)
+
+[\] hf desfire info
+[/] Show DESFire tag info
+
+[\] hf desfire dump
+[/] Dump DESFire card (authorized testing only)
+
+[\] hf sniff
+[/] Sniff HF communication
+
+[\] lf sniff
+[/] Sniff LF communication
+
+[\] hf list 14a
+[/] Show sniffed ISO14443‑A frames
+
+[\] hf list mf
+[/] Show sniffed MIFARE frames
+
+[\] lf list
+[/] Show LF sniffed frames
+
+[\] hf 14a sim --uid 11223344
+[/] Simulate ISO14443‑A tag
+
+[\] hf mf sim --uid 11223344
+[/] Simulate MIFARE Classic tag
+
+[\] lf em410x sim --id 0F12345678
+[/] Simulate EM410x tag
+
+[\] lf hid sim --id 1234567890
+[/] Simulate HID Prox tag
+
+[\] script list
+[/] List available scripts
+
+[\] script run mf_autopwn
+[/] Run MIFARE autopwn script
+
+[\] script run iclass_autopwn
+[/] Run iClass autopwn script
+
+[\] script run t55xx_recover
+[/] Recover T55xx tag
+
+[\] script run em410x_clone
+[/] Clone EM410x tag via script
+
+[\] script run lf_hid_bruteforce
+[/] HID brute‑force script (authorized testing only)
+
+[\] data save dump.bin
+[/] Save last read data to file
+
+[\] data load dump.bin
+[/] Load data file into buffer
+
+[\] data print
+[/] Print buffer contents
+
+[\] data hex
+[/] Show buffer in hex format
+
+[\] help
+[/] Show all commands
+
+[\] help hf
+[/] Show HF command help
+
+[\] help lf
+[/] Show LF command help
+
+[\] help script
+[/] Show script help
+
+[\] quit
+[/] Exit Proxmark3 client

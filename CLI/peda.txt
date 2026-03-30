@@ -1,0 +1,61 @@
+[X] PEDA Command List (Python Exploit Development Assistance for GDB)
+
+[\] gdb program
+[/] Start GDB with PEDA loaded
+
+[\] context
+[/] Show registers, code, stack, and memory context
+
+[\] checksec
+[/] Display binary security protections (NX, PIE, Canary, RELRO)
+
+[\] vmmap
+[/] Show memory mappings
+
+[\] hexdump addr
+[/] Display memory in hex format
+
+[\] telescope addr
+[/] Recursively dereference pointers
+
+[\] xinfo addr
+[/] Show detailed info about an address
+
+[\] pattern_create 100
+[/] Generate cyclic pattern for buffer overflow testing
+
+[\] pattern_offset value
+[/] Find offset of value in cyclic pattern
+
+[\] searchmem pattern
+[/] Search memory for a pattern
+
+[\] dumpmem start end file
+[/] Dump memory range to file
+
+[\] aslr
+[/] Show or toggle ASLR status
+
+[\] break main
+[/] Set breakpoint at main
+
+[\] run
+[/] Start program execution
+
+[\] continue
+[/] Continue execution
+
+[\] next
+[/] Step over instruction
+
+[\] step
+[/] Step into instruction
+
+[\] backtrace
+[/] Show call stack
+
+[\] quit
+[/] Exit GDB
+
+[\] help
+[/] Show help menu

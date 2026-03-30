@@ -1,0 +1,79 @@
+[X] Inspectrum Command List
+
+[\] inspectrum
+[/] Launch Inspectrum GUI
+
+[\] inspectrum --help
+[/] Show help menu
+
+[\] inspectrum --version
+[/] Show Inspectrum version
+
+[\] inspectrum capture.iq
+[/] Open IQ file directly
+
+[\] inspectrum capture.cfile
+[/] Open GNU Radio CFILE format
+
+[\] inspectrum capture.wav
+[/] Open WAV file as RF data
+
+[\] inspectrum --sample-rate 2e6 capture.iq
+[/] Set sample rate when opening file
+
+[\] inspectrum --center-freq 433.92e6 capture.iq
+[/] Set center frequency for display
+
+[\] inspectrum --start 1.5
+[/] Start viewing at 1.5 seconds into file
+
+[\] inspectrum --end 3.0
+[/] End viewing at 3.0 seconds
+
+[\] inspectrum --time-range 0.5
+[/] Set visible time window to 0.5 seconds
+
+[\] inspectrum --freq-range 200000
+[/] Set visible frequency span
+
+[\] inspectrum --gain 20
+[/] Apply display gain
+
+[\] inspectrum --theme dark
+[/] Launch with dark theme (if supported)
+
+[\] inspectrum --theme light
+[/] Launch with light theme
+
+[\] inspectrum --export-bits bits.txt
+[/] Export demodulated bits (GUI must be open)
+
+[\] inspectrum --export-samples samples.bin
+[/] Export selected samples
+
+[\] inspectrum --export-plot plot.png
+[/] Export current view as image
+
+[\] inspectrum --bookmark-file bookmarks.json
+[/] Load bookmarks
+
+[\] inspectrum --save-session session.json
+[/] Save full session (markers, zoom, settings)
+
+[\] inspectrum --load-session session.json
+[/] Load saved session
+
+[\] sudo apt install inspectrum
+[/] Install Inspectrum on Debian‑based systems
+
+[\] pip install inspectrum
+[/] Install Inspectrum via Python/pip (if available)
+
+[\] rtl_sdr -f 433.92M -s 2e6 -g 30 capture.bin
+[/] Record IQ data for Inspectrum (RTL‑SDR companion)
+
+[\] hackrf_transfer -r capture.iq -f 433920000 -s 2000000
+[/] Record IQ data using HackRF
+
+[\] uhd_rx_cfile -f 433.92M -r 2e6 -o capture.cfile
+[/] Record IQ data using USRP

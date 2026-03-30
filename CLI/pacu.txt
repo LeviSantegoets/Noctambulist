@@ -1,0 +1,70 @@
+[X] Pacu Command List
+
+[\] pacu
+[/] Launch Pacu interactive shell
+
+[\] set_keys <access_key> <secret_key>
+[/] Set AWS credentials
+
+[\] set_region us-east-1
+[/] Set AWS region
+
+[\] whoami
+[/] Display current AWS identity
+
+[\] run iam__enum_users_roles_policies_groups
+[/] Enumerate IAM users, roles, policies, and groups
+
+[\] run iam__enum_permissions
+[/] Enumerate permissions for current identity
+
+[\] run iam__bruteforce_permissions
+[/] Bruteforce allowed IAM actions
+
+[\] run ec2__enum
+[/] Enumerate EC2 instances and resources
+
+[\] run s3__enum
+[/] Enumerate S3 buckets
+
+[\] run s3__download_bucket
+[/] Download contents of accessible S3 bucket
+
+[\] run lambda__enum
+[/] Enumerate Lambda functions
+
+[\] run rds__enum
+[/] Enumerate RDS instances
+
+[\] run cloudtrail__enum
+[/] Enumerate CloudTrail logs
+
+[\] run sts__enum
+[/] Enumerate STS tokens and roles
+
+[\] run iam__privesc_scan
+[/] Scan for IAM privilege escalation paths
+
+[\] run iam__backdoor_user
+[/] Create backdoor IAM user
+
+[\] run iam__attach_user_policy
+[/] Attach policy to user
+
+[\] run iam__create_access_key
+[/] Create new access keys
+
+[\] run iam__list_access_keys
+[/] List access keys
+
+[\] run iam__delete_access_key
+[/] Delete access key
+
+[\] data
+[/] Show collected data from modules
+
+[\] help
+[/] Show help menu
+
+[\] exit
+[/] Exit Pacu shell

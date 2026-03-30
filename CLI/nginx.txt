@@ -1,0 +1,149 @@
+# Nginx Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Nginx Command List
+
+# -------------------------
+# INSTALLATION & SERVICE CONTROL
+# -------------------------
+
+[\] sudo apt install nginx
+[/] Install Nginx
+
+[\] sudo systemctl start nginx
+[/] Start Nginx service
+
+[\] sudo systemctl stop nginx
+[/] Stop Nginx service
+
+[\] sudo systemctl restart nginx
+[/] Restart Nginx service
+
+[\] sudo systemctl reload nginx
+[/] Reload config without dropping connections
+
+[\] sudo systemctl status nginx
+[/] Show Nginx service status
+
+[\] sudo systemctl enable nginx
+[/] Enable Nginx at boot
+
+[\] sudo systemctl disable nginx
+[/] Disable Nginx at boot
+
+# -------------------------
+# CONFIGURATION TESTING
+# -------------------------
+
+[\] sudo nginx -t
+[/] Test Nginx configuration syntax
+
+[\] sudo nginx -T
+[/] Show full config including includes
+
+# -------------------------
+# MAIN CONFIG FILES
+# -------------------------
+
+[\] /etc/nginx/nginx.conf
+[/] Main Nginx configuration file
+
+[\] /etc/nginx/sites-available/
+[/] Available server blocks (virtual hosts)
+
+[\] /etc/nginx/sites-enabled/
+[/] Enabled server blocks
+
+[\] /etc/nginx/snippets/
+[/] Reusable config snippets
+
+# -------------------------
+# SITE MANAGEMENT (SERVER BLOCKS)
+# -------------------------
+
+[\] sudo ln -s /etc/nginx/sites-available/<site> /etc/nginx/sites-enabled/
+[/] Enable a site
+
+[\] sudo rm /etc/nginx/sites-enabled/<site>
+[/] Disable a site
+
+[\] sudo nano /etc/nginx/sites-available/<site>
+[/] Edit a site configuration
+
+[\] sudo systemctl reload nginx
+[/] Apply site changes
+
+# -------------------------
+# LOGS
+# -------------------------
+
+[\] tail -f /var/log/nginx/access.log
+[/] Live access log
+
+[\] tail -f /var/log/nginx/error.log
+[/] Live error log
+
+[\] cat /var/log/nginx/error.log
+[/] View error log
+
+# -------------------------
+# FIREWALL (UFW)
+# -------------------------
+
+[\] sudo ufw allow 'Nginx HTTP'
+[/] Allow port 80
+
+[\] sudo ufw allow 'Nginx HTTPS'
+[/] Allow port 443
+
+[\] sudo ufw allow 'Nginx Full'
+[/] Allow both HTTP and HTTPS
+
+# -------------------------
+# SSL / HTTPS
+# -------------------------
+
+[\] sudo apt install certbot python3-certbot-nginx
+[/] Install Certbot for Nginx
+
+[\] sudo certbot --nginx
+[/] Auto-configure HTTPS with Let's Encrypt
+
+[\] sudo certbot renew --dry-run
+[/] Test certificate renewal
+
+[\] sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx.key -out /etc/ssl/certs/nginx.crt
+[/] Generate self-signed SSL certificate
+
+# -------------------------
+# MODULES & PERFORMANCE
+# -------------------------
+
+[\] sudo nginx -V
+[/] Show compiled modules and version
+
+[\] sudo a2enmod proxy_http
+[/] (Not for Nginx — reminder: Nginx modules are compiled in)
+
+[\] sudo nano /etc/nginx/nginx.conf
+[/] Edit global performance settings
+
+[\] sudo systemctl reload nginx
+[/] Apply performance tuning
+
+# -------------------------
+# DOCUMENT ROOT
+# -------------------------
+
+[\] /var/www/html/
+[/] Default Nginx web root
+
+[\] sudo chown -R $USER:$USER /var/www/html
+[/] Change ownership of web root
+
+# -------------------------
+# RELOAD AFTER CHANGES
+# -------------------------
+
+[\] sudo systemctl reload nginx
+[/] Safely reload Nginx after config edits

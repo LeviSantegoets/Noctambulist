@@ -1,0 +1,58 @@
+[X] LinPEAS Command List
+
+[\] ./linpeas.sh
+[/] Run standard enumeration
+
+[\] ./linpeas.sh -a
+[/] Run all checks (full enumeration)
+
+[\] ./linpeas.sh -q
+[/] Quiet mode (less output)
+
+[\] ./linpeas.sh -s
+[/] Super fast mode (quick checks)
+
+[\] ./linpeas.sh -e
+[/] Extra checks enabled
+
+[\] ./linpeas.sh -r
+[/] Red output only (highlight findings)
+
+[\] ./linpeas.sh -o output.txt
+[/] Save output to file
+
+[\] ./linpeas.sh -f
+[/] Search for interesting files
+
+[\] ./linpeas.sh -p
+[/] Focus on processes
+
+[\] ./linpeas.sh -n
+[/] Network information only
+
+[\] ./linpeas.sh -c
+[/] Check cron jobs
+
+[\] ./linpeas.sh -u
+[/] Enumerate users
+
+[\] ./linpeas.sh -g
+[/] Enumerate groups
+
+[\] ./linpeas.sh -d
+[/] Check Docker/container environment
+
+[\] ./linpeas.sh -k
+[/] Kernel exploits checks
+
+[\] ./linpeas.sh -m
+[/] Check SUID/SGID binaries
+
+[\] ./linpeas.sh -t
+[/] Check writable files and directories
+
+[\] ./linpeas.sh -w
+[/] Check weak permissions
+
+[\] ./linpeas.sh -h
+[/] Show help menu

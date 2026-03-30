@@ -1,0 +1,94 @@
+# MySQL Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] MySQL Command List
+
+[\] mysql -u root -p
+[/] Log in to MySQL as root
+
+[\] SHOW DATABASES;
+[/] List all databases
+
+[\] CREATE DATABASE dbname;
+[/] Create a new database
+
+[\] DROP DATABASE dbname;
+[/] Delete a database
+
+[\] USE dbname;
+[/] Select a database to work with
+
+[\] SHOW TABLES;
+[/] List all tables in the selected database
+
+[\] DESCRIBE tablename;
+[/] Show table structure
+
+[\] CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
+[/] Create a new table
+
+[\] DROP TABLE tablename;
+[/] Delete a table
+
+[\] ALTER TABLE tablename ADD COLUMN age INT;
+[/] Add a column to a table
+
+[\] ALTER TABLE tablename DROP COLUMN age;
+[/] Remove a column from a table
+
+[\] INSERT INTO users (id, name) VALUES (1, 'John');
+[/] Insert a new row into a table
+
+[\] SELECT * FROM users;
+[/] Select all rows from a table
+
+[\] SELECT name FROM users WHERE id=1;
+[/] Select specific rows with a condition
+
+[\] UPDATE users SET name='Mike' WHERE id=1;
+[/] Update data in a table
+
+[\] DELETE FROM users WHERE id=1;
+[/] Delete rows from a table
+
+[\] CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+[/] Create a new MySQL user
+
+[\] DROP USER 'user'@'localhost';
+[/] Delete a MySQL user
+
+[\] GRANT ALL PRIVILEGES ON dbname.* TO 'user'@'localhost';
+[/] Grant all privileges on a database
+
+[\] REVOKE ALL PRIVILEGES ON dbname.* FROM 'user'@'localhost';
+[/] Revoke privileges from a user
+
+[\] FLUSH PRIVILEGES;
+[/] Reload privilege tables
+
+[\] SHOW GRANTS FOR 'user'@'localhost';
+[/] Show user privileges
+
+[\] SET PASSWORD FOR 'user'@'localhost' = PASSWORD('newpass');
+[/] Change a user password
+
+[\] mysqldump -u root -p dbname > backup.sql
+[/] Export a database to a SQL file
+
+[\] mysql -u root -p dbname < backup.sql
+[/] Import a database from a SQL file
+
+[\] SHOW PROCESSLIST;
+[/] Show running MySQL processes
+
+[\] KILL process_id;
+[/] Kill a MySQL process
+
+[\] SHOW VARIABLES;
+[/] Show MySQL configuration variables
+
+[\] SHOW STATUS;
+[/] Show server status information
+
+[\] EXIT;
+[/] Exit the MySQL shell

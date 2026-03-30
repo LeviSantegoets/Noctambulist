@@ -1,0 +1,163 @@
+[X] nnn File Manager Command List
+
+[\] nnn
+[/] Launch nnn file manager
+
+[\] nnn -h
+[/] Show help menu
+
+[\] nnn -d
+[/] Show detailed file information
+
+[\] nnn -p path
+[/] Open at specific path
+
+[\] nnn -e
+[/] Open text files in $EDITOR
+
+[\] nnn -t
+[/] Start in selection mode
+
+[\] nnn -H
+[/] Show hidden files
+
+[\] nnn -n
+[/] Use no color mode
+
+[\] nnn -s
+[/] Enable case-sensitive sort
+
+[\] nnn -v
+[/] Show version
+
+[\] ↑ / ↓
+[/] Navigate up/down
+
+[\] ←
+[/] Go to parent directory
+
+[\] →
+[/] Enter directory / open file
+
+[\] Enter
+[/] Open file with default program
+
+[\] q
+[/] Quit nnn
+
+[\] /
+[/] Search files
+
+[\] n
+[/] Next search result
+
+[\] N
+[/] Previous search result
+
+[\] Space
+[/] Select file
+
+[\] a
+[/] Select all files
+
+[\] A
+[/] Invert selection
+
+[\] c
+[/] Copy selected files
+
+[\] x
+[/] Cut selected files
+
+[\] p
+[/] Paste files
+
+[\] d
+[/] Delete selected file(s)
+
+[\] r
+[/] Rename file
+
+[\] m
+[/] Create directory
+
+[\] t
+[/] Create new file
+
+[\] e
+[/] Edit file
+
+[\] v
+[/] View file
+
+[\] o
+[/] Open file with chooser
+
+[\] s
+[/] Sort files
+
+[\] S
+[/] Toggle file size display
+
+[\] . 
+[/] Toggle hidden files
+
+[\] g
+[/] Go to top
+
+[\] G
+[/] Go to bottom
+
+[\] b
+[/] Jump to bookmarks
+
+[\] B
+[/] Set bookmark
+
+[\] h
+[/] Show help inside nnn
+
+[\] !
+[/] Open shell in current directory
+
+[\] =
+[/] Launch plugin manager
+
+[\] ;
+[/] Run plugin
+
+[\] Ctrl + L
+[/] Refresh screen
+
+[\] Ctrl + H
+[/] Toggle hidden files
+
+[\] Ctrl + F
+[/] Toggle file details
+
+[\] Ctrl + P
+[/] Toggle preview pane (if enabled)
+
+[\] Ctrl + T
+[/] Open new tab
+
+[\] Tab
+[/] Switch between contexts (tabs)
+
+[\] F1
+[/] Help
+
+[\] F2
+[/] Rename
+
+[\] F5
+[/] Copy
+
+[\] F6
+[/] Move
+
+[\] F7
+[/] Make directory
+
+[\] F8
+[/] Delete

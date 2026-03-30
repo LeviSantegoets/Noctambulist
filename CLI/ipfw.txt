@@ -1,0 +1,130 @@
+[X] ipfw (FreeBSD Firewall) Command List
+
+[\] ipfw list
+[/] Show all firewall rules
+
+[\] ipfw show
+[/] Show rules with packet/byte counters
+
+[\] ipfw add allow ip from any to any
+[/] Allow all traffic
+
+[\] ipfw add deny ip from any to any
+[/] Deny all traffic
+
+[\] ipfw add allow tcp from any to any 22
+[/] Allow SSH traffic
+
+[\] ipfw add allow tcp from any to any 80
+[/] Allow HTTP traffic
+
+[\] ipfw add allow tcp from any to any 443
+[/] Allow HTTPS traffic
+
+[\] ipfw add allow ip from 192.168.1.0/24 to any
+[/] Allow local subnet
+
+[\] ipfw add deny ip from 1.2.3.4 to any
+[/] Block specific IP
+
+[\] ipfw delete 100
+[/] Delete rule by number
+
+[\] ipfw flush
+[/] Remove all rules (dangerous)
+
+[\] ipfw zero
+[/] Reset all rule counters
+
+[\] ipfw zero 100
+[/] Reset counter for specific rule
+
+[\] ipfw add 100 allow ip from any to any
+[/] Add rule with number
+
+[\] ipfw add 200 deny ip from any to any
+[/] Add rule with priority order
+
+[\] ipfw add allow tcp from any to any established
+[/] Allow established connections
+
+[\] ipfw add allow icmp from any to any
+[/] Allow ICMP (ping)
+
+[\] ipfw add deny log ip from any to any
+[/] Deny and log traffic
+
+[\] ipfw add allow ip from any to any via lo0
+[/] Allow loopback traffic
+
+[\] ipfw add allow ip from any to any out
+[/] Allow outbound traffic
+
+[\] ipfw add allow ip from any to any in
+[/] Allow inbound traffic
+
+[\] ipfw pipe 1 config bw 10Mbit/s
+[/] Create traffic shaping pipe
+
+[\] ipfw add pipe 1 ip from any to any
+[/] Apply traffic shaping rule
+
+[\] ipfw queue 1 config weight 50
+[/] Configure queue for shaping
+
+[\] ipfw add queue 1 ip from any to any
+[/] Assign traffic to queue
+
+[\] ipfw nat 1 config if em0
+[/] Configure NAT on interface
+
+[\] ipfw add nat 1 ip from any to any
+[/] Enable NAT rule
+
+[\] ipfw nat 1 show
+[/] Show NAT configuration
+
+[\] ipfw nat 1 delete
+[/] Delete NAT instance
+
+[\] ipfw table 1 add 1.2.3.4
+[/] Add IP to table
+
+[\] ipfw table 1 delete 1.2.3.4
+[/] Remove IP from table
+
+[\] ipfw table 1 list
+[/] Show table contents
+
+[\] ipfw set enable 1
+[/] Enable rule set
+
+[\] ipfw set disable 1
+[/] Disable rule set
+
+[\] ipfw set swap 1 2
+[/] Swap rule sets
+
+[\] sysctl net.inet.ip.fw.enable=1
+[/] Enable ipfw firewall
+
+[\] sysctl net.inet.ip.fw.verbose=1
+[/] Enable logging
+
+[\] service ipfw start
+[/] Start ipfw service
+
+[\] service ipfw stop
+[/] Stop ipfw service
+
+[\] service ipfw restart
+[/] Restart ipfw service
+
+[\] service ipfw status
+[/] Show ipfw service status
+
+[\] nano /etc/rc.conf
+[/] Configure ipfw at boot
+
+[\] nano /etc/ipfw.rules
+[/] Edit firewall rules file

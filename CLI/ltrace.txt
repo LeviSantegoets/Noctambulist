@@ -1,0 +1,40 @@
+[X] Ltrace Command List (Library Call Tracer)
+
+[\] ltrace ls
+[/] Trace library calls of `ls` command
+
+[\] ltrace -p 1234
+[/] Attach to running process with PID 1234
+
+[\] ltrace -f ls
+[/] Trace child processes as well
+
+[\] ltrace -o output.txt ls
+[/] Save ltrace output to file
+
+[\] ltrace -e malloc,free ls
+[/] Trace only specific library calls (e.g., malloc, free)
+
+[\] ltrace -e trace=malloc,free ls
+[/] Alternative syntax to trace selected calls
+
+[\] ltrace -S ls
+[/] Print system calls along with library calls
+
+[\] ltrace -r ls
+[/] Show relative time between calls
+
+[\] ltrace -T ls
+[/] Show time spent in each library call
+
+[\] ltrace -s 100 ls
+[/] Increase string size to print in output
+
+[\] ltrace -v ls
+[/] Print all structures and strings in full
+
+[\] ltrace --help
+[/] Show help menu
+
+[\] ltrace --version
+[/] Show ltrace version

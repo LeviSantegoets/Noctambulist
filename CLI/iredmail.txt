@@ -1,0 +1,209 @@
+# iRedMail Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] iRedMail Command List
+
+# -------------------------
+# INSTALLATION & SETUP
+# -------------------------
+
+[\] wget https://github.com/iredmail/iRedMail/archive/refs/tags/1.6.7.tar.gz
+[/] Download iRedMail installer (example version)
+
+[\] tar xvf iRedMail-1.6.7.tar.gz
+[/] Extract installer
+
+[\] cd iRedMail-1.6.7
+[/] Enter installer directory
+
+[\] sudo bash iRedMail.sh
+[/] Start iRedMail installation wizard
+
+# -------------------------
+# SERVICE CONTROL (POSTFIX / DOVECOT / NGINX / AMAVIS)
+# -------------------------
+
+[\] sudo systemctl restart postfix
+[/] Restart Postfix (SMTP)
+
+[\] sudo systemctl restart dovecot
+[/] Restart Dovecot (IMAP/POP3)
+
+[\] sudo systemctl restart nginx
+[/] Restart Nginx (webmail/admin)
+
+[\] sudo systemctl restart amavis
+[/] Restart Amavis (spam/virus filter)
+
+[\] sudo systemctl restart clamav-daemon
+[/] Restart ClamAV antivirus
+
+[\] sudo systemctl restart rspamd
+[/] Restart Rspamd (spam filtering)
+
+# -------------------------
+# STATUS CHECKS
+# -------------------------
+
+[\] systemctl status postfix
+[/] Check Postfix status
+
+[\] systemctl status dovecot
+[/] Check Dovecot status
+
+[\] systemctl status rspamd
+[/] Check Rspamd status
+
+[\] systemctl status nginx
+[/] Check Nginx status
+
+# -------------------------
+# LOG FILES
+# -------------------------
+
+[\] tail -f /var/log/mail.log
+[/] Live mail log (SMTP/IMAP)
+
+[\] tail -f /var/log/dovecot.log
+[/] Dovecot log
+
+[\] tail -f /var/log/nginx/error.log
+[/] Nginx error log
+
+[\] tail -f /var/log/rspamd/rspamd.log
+[/] Rspamd spam filter log
+
+[\] tail -f /var/log/clamav/clamav.log
+[/] ClamAV antivirus log
+
+# -------------------------
+# ADMIN PANELS
+# -------------------------
+
+[\] https://yourserver/iredadmin
+[/] iRedAdmin web interface
+
+[\] https://yourserver/mail
+[/] Roundcube webmail
+
+# -------------------------
+# USER & DOMAIN MANAGEMENT (iRedAdmin-Pro)
+# -------------------------
+
+[\] iRedAdmin-Pro GUI
+[/] Add/remove domains
+
+[\] iRedAdmin-Pro GUI
+[/] Add/remove mail users
+
+[\] iRedAdmin-Pro GUI
+[/] Add aliases / catch-all
+
+# -------------------------
+# POSTFIX COMMANDS
+# -------------------------
+
+[\] postqueue -p
+[/] Show mail queue
+
+[\] postsuper -d ALL
+[/] Delete all queued mail
+
+[\] postsuper -d <queue_id>
+[/] Delete specific queued message
+
+[\] postconf -n
+[/] Show non-default Postfix settings
+
+# -------------------------
+# DOVECOT COMMANDS
+# -------------------------
+
+[\] doveadm user '*'
+[/] List all Dovecot users
+
+[\] doveadm auth test user@domain.com
+[/] Test IMAP/POP authentication
+
+[\] doveadm mailbox list -u user@domain.com
+[/] List user mailboxes
+
+# -------------------------
+# RSPAMD COMMANDS
+# -------------------------
+
+[\] rspamc stat
+[/] Show spam filter statistics
+
+[\] rspamc learn_spam < file.eml
+[/] Train spam
+
+[\] rspamc learn_ham < file.eml
+[/] Train ham (legit mail)
+
+# -------------------------
+# SSL / CERTIFICATES
+# -------------------------
+
+[\] sudo certbot --nginx
+[/] Enable HTTPS for iRedMail
+
+[\] sudo certbot renew --dry-run
+[/] Test certificate renewal
+
+[\] /etc/letsencrypt/live/<domain>/
+[/] SSL certificate directory
+
+# -------------------------
+# BACKUP & RESTORE
+# -------------------------
+
+[\] /var/vmail/
+[/] Mailbox storage directory
+
+[\] /var/lib/mysql/
+[/] MySQL/MariaDB mail database
+
+[\] /var/lib/pgsql/
+[/] PostgreSQL mail database (if used)
+
+[\] /opt/iredmail/backup/
+[/] iRedMail backup directory
+
+# -------------------------
+# CONFIG FILE LOCATIONS
+# -------------------------
+
+[\] /etc/postfix/main.cf
+[/] Postfix main configuration
+
+[\] /etc/dovecot/dovecot.conf
+[/] Dovecot configuration
+
+[\] /etc/nginx/sites-enabled/iredmail
+[/] Nginx iRedMail site config
+
+[\] /etc/rspamd/local.d/
+[/] Rspamd configuration directory
+
+[\] /etc/clamav/clamd.conf
+[/] ClamAV configuration
+
+# -------------------------
+# FIREWALL PORTS
+# -------------------------
+
+[\] sudo ufw allow 25
+[/] SMTP
+
+[\] sudo ufw allow 587
+[/] Submission port
+
+[\] sudo ufw allow 993
+[/] IMAPS
+
+[\] sudo ufw allow 443
+[/] HTTPS (webmail/admin)
+
+[\] sudo ufw allow 110 143 995
+[/] POP3/IMAP/POP3S (if enabled)

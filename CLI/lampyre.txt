@@ -1,0 +1,183 @@
+# Lampyre Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Lampyre Command List
+
+# -------------------------
+# INSTALLATION & STARTUP
+# -------------------------
+
+[\] lampyre
+[/] Launch Lampyre application
+
+[\] lampyre --safe-mode
+[/] Start Lampyre in safe mode
+
+[\] lampyre --reset-settings
+[/] Reset Lampyre configuration
+
+[\] lampyre --log-level debug
+[/] Start Lampyre with debug logging
+
+
+# -------------------------
+# PROJECT MANAGEMENT
+# -------------------------
+
+[\] New Project
+[/] Create a new investigation project
+
+[\] Open Project
+[/] Open an existing Lampyre project
+
+[\] Save Project
+[/] Save the current project
+
+[\] Export Project
+[/] Export investigation results
+
+[\] Import Data
+[/] Import external data into project
+
+
+# -------------------------
+# SEARCH TASKS (OSINT COLLECTION)
+# -------------------------
+
+[\] Domain Investigation
+[/] Collect OSINT data about a domain
+
+[\] Email Investigation
+[/] Gather OSINT data about an email address
+
+[\] IP Investigation
+[/] Investigate an IP address
+
+[\] Phone Number Investigation
+[/] Search OSINT data related to phone numbers
+
+[\] Username Investigation
+[/] Search for accounts across services
+
+[\] Company Investigation
+[/] Investigate a company or organization
+
+[\] Person Investigation
+[/] Search OSINT data about a person
+
+[\] Cryptocurrency Investigation
+[/] Analyze cryptocurrency wallets and transactions
+
+
+# -------------------------
+# DATA COLLECTION SOURCES
+# -------------------------
+
+[\] DNS Lookup
+[/] Retrieve DNS records for domains
+
+[\] WHOIS Lookup
+[/] Retrieve domain registration data
+
+[\] Subdomain Enumeration
+[/] Discover subdomains for a domain
+
+[\] Data Breach Search
+[/] Search breach databases
+
+[\] Social Media Search
+[/] Collect social media related data
+
+[\] Paste Site Search
+[/] Search paste sites for leaked data
+
+
+# -------------------------
+# FILTERING & DATA ANALYSIS
+# -------------------------
+
+[\] Filter by Entity Type
+[/] Filter nodes by type (email, IP, domain, etc.)
+
+[\] Filter by Source
+[/] Show results from specific sources
+
+[\] Filter by Attribute
+[/] Filter entities by properties
+
+[\] Filter by Tag
+[/] Filter data using tags
+
+[\] Filter by Time
+[/] Limit results to a time range
+
+
+# -------------------------
+# VISUALIZATION & GRAPH
+# -------------------------
+
+[\] Graph View
+[/] Visualize relationships between entities
+
+[\] Table View
+[/] Show collected data in table format
+
+[\] Timeline View
+[/] Display events chronologically
+
+[\] Expand Node
+[/] Expand node to reveal related entities
+
+[\] Collapse Node
+[/] Collapse graph nodes
+
+
+# -------------------------
+# AUTOMATION & TASKS
+# -------------------------
+
+[\] Run Task
+[/] Execute a data collection task
+
+[\] Task Queue
+[/] Manage queued OSINT tasks
+
+[\] Stop Task
+[/] Stop a running task
+
+[\] Task Logs
+[/] View logs from task execution
+
+
+# -------------------------
+# EXPORT & REPORTING
+# -------------------------
+
+[\] Export CSV
+[/] Export results to CSV
+
+[\] Export JSON
+[/] Export results to JSON
+
+[\] Export Graph
+[/] Export investigation graph
+
+[\] Generate Report
+[/] Generate investigation report
+
+
+# -------------------------
+# SETTINGS
+# -------------------------
+
+[\] API Settings
+[/] Configure OSINT API keys
+
+[\] Proxy Settings
+[/] Configure proxy for requests
+
+[\] Data Source Settings
+[/] Enable or disable data sources
+
+[\] Update Lampyre
+[/] Check for software updates

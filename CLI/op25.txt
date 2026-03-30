@@ -1,0 +1,117 @@
+[X] OP25 Command List
+
+[\] rx.py
+[/] Start OP25 P25 digital radio receiver
+
+[\] rx.py --help
+[/] Show help and available command options
+
+# -------------------------
+# BASIC RECEIVING
+# -------------------------
+
+[\] ./rx.py --args 'rtl' -f 851e6
+[/] Start P25 receiver using RTL-SDR at 851 MHz
+
+[\] ./rx.py --args 'rtl' -f 770e6
+[/] Tune to 770 MHz P25 trunked system
+
+[\] ./rx.py --args 'rtl' -N 'LNA:30'
+[/] Start receiver with LNA gain set to 30 dB
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] ./rx.py --args 'rtl'
+[/] Use RTL-SDR device
+
+[\] ./rx.py --args 'hackrf'
+[/] Use HackRF device
+
+[\] ./rx.py --args 'uhd'
+[/] Use USRP device
+
+[\] ./rx.py --args 'rtl=1'
+[/] Use second RTL-SDR device
+
+# -------------------------
+# SAMPLE RATE
+# -------------------------
+
+[\] ./rx.py --sample-rate 2400000
+[/] Set SDR sample rate to 2.4 MSPS
+
+[\] ./rx.py --sample-rate 1000000
+[/] Set SDR sample rate to 1 MSPS
+
+# -------------------------
+# TRUNKED RADIO
+# -------------------------
+
+[\] ./rx.py --trunk-conf trunk.tsv
+[/] Load trunking configuration file
+
+[\] ./rx.py --trunk-conf trunk.tsv --terminal-type curses
+[/] Start trunking receiver with terminal interface
+
+[\] ./rx.py --trunk-conf trunk.tsv --terminal-type http
+[/] Enable HTTP web interface
+
+[\] ./rx.py --trunk-conf trunk.tsv --plot-mode constellation
+[/] Show constellation plot
+
+# -------------------------
+# FREQUENCY / GAIN
+# -------------------------
+
+[\] ./rx.py -f 851e6 -g 30
+[/] Tune to 851 MHz with 30 dB gain
+
+[\] ./rx.py --freq 770e6
+[/] Set receiver frequency
+
+[\] ./rx.py --gain 25
+[/] Set receiver gain
+
+# -------------------------
+# AUDIO OUTPUT
+# -------------------------
+
+[\] ./rx.py --audio
+[/] Enable audio output
+
+[\] ./rx.py --audio-output default
+[/] Use default system audio output
+
+[\] ./rx.py --udp-player
+[/] Stream audio over UDP
+
+# -------------------------
+# LOGGING / RECORDING
+# -------------------------
+
+[\] ./rx.py --logfile op25.log
+[/] Save receiver logs to file
+
+[\] ./rx.py --record
+[/] Record received digital voice
+
+[\] ./rx.py --json
+[/] Output decoded messages in JSON format
+
+# -------------------------
+# DEBUG / ANALYSIS
+# -------------------------
+
+[\] ./rx.py --debug
+[/] Enable debug output
+
+[\] ./rx.py --verbose
+[/] Enable verbose logging
+
+[\] ./rx.py --plot-mode fft
+[/] Show FFT spectrum display
+
+[\] ./rx.py --plot-mode symbol
+[/] Show symbol timing plot

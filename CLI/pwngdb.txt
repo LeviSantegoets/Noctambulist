@@ -1,0 +1,43 @@
+[X] Pwndbg Command List (GDB Extension for Exploit Development)
+
+[\] gdb program
+[/] Start GDB with Pwndbg loaded automatically (if installed)
+
+[\] context
+[/] Show process context: registers, stack, heap, etc.
+
+[\] hexdump addr
+[/] Hexdump memory at specified address
+
+[\] search pattern
+[/] Search memory for byte pattern
+
+[\] find start_addr, end_addr, /pattern/
+[/] Search memory range for pattern
+
+[\] telescope addr
+[/] View memory at pointer recursively (dereference pointers)
+
+[\] vmmap
+[/] Show memory mappings of process
+
+[\] checksec
+[/] Show security features of binary (NX, PIE, Canary, RELRO)
+
+[\] backtrace
+[/] Show call stack
+
+[\] disassemble func
+[/] Disassemble function
+
+[\] assemble "instructions"
+[/] Assemble instructions into machine code
+
+[\] shell command
+[/] Run shell command from GDB prompt
+
+[\] gef help / pwndbg help
+[/] Show Pwndbg help menu
+
+[\] quit
+[/] Exit GDB with Pwndbg

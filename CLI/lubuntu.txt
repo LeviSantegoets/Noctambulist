@@ -1,0 +1,139 @@
+[X] Lubuntu Command List
+
+[\] lsb_release -a
+[/] Show Lubuntu / Ubuntu version info
+
+[\] uname -a
+[/] Show kernel and system details
+
+[\] hostnamectl
+[/] Display hostname and OS info
+
+[\] free -h
+[/] Show memory usage
+
+[\] df -h
+[/] Show disk usage
+
+[\] neofetch
+[/] Display system summary (if installed)
+
+[\] sudo apt update
+[/] Refresh package lists
+
+[\] sudo apt upgrade
+[/] Upgrade installed packages
+
+[\] sudo apt full-upgrade
+[/] Full system upgrade
+
+[\] sudo apt install <package>
+[/] Install a package
+
+[\] sudo apt remove <package>
+[/] Remove a package
+
+[\] sudo apt purge <package>
+[/] Remove package + config files
+
+[\] sudo apt autoremove
+[/] Remove unused dependencies
+
+[\] apt search <keyword>
+[/] Search for packages
+
+[\] apt show <package>
+[/] Show package details
+
+[\] lxqt-config
+[/] Open LXQt configuration center
+
+[\] lxqt-panel
+[/] Restart LXQt panel
+
+[\] pcmanfm-qt
+[/] Launch file manager
+
+[\] lxqt-sudo <command>
+[/] Run GUI app as root
+
+[\] lxqt-leave
+[/] Open logout / shutdown menu
+
+[\] nmcli device status
+[/] Show network devices
+
+[\] nmcli connection show
+[/] List saved connections
+
+[\] nmcli device wifi list
+[/] Scan for Wi‑Fi networks
+
+[\] nmcli device wifi connect <SSID> password <pass>
+[/] Connect to Wi‑Fi
+
+[\] ip a
+[/] Show IP addresses
+
+[\] ping -c 4 google.com
+[/] Test network connectivity
+
+[\] systemctl status <service>
+[/] Check service status
+
+[\] sudo systemctl start <service>
+[/] Start a service
+
+[\] sudo systemctl stop <service>
+[/] Stop a service
+
+[\] sudo systemctl enable <service>
+[/] Enable service at boot
+
+[\] sudo systemctl disable <service>
+[/] Disable service at boot
+
+[\] sudo adduser <name>
+[/] Create new user
+
+[\] sudo deluser <name>
+[/] Delete user
+
+[\] sudo usermod -aG sudo <name>
+[/] Add user to sudo group
+
+[\] chmod 755 <file>
+[/] Change file permissions
+
+[\] chown user:user <file>
+[/] Change file owner
+
+[\] sudo apt install lubuntu-desktop
+[/] Install Lubuntu desktop environment
+
+[\] sudo apt install snapd
+[/] Enable Snap support
+
+[\] snap install <package>
+[/] Install Snap package
+
+[\] sudo do-release-upgrade
+[/] Upgrade to next Ubuntu version
+
+[\] htop
+[/] Interactive process viewer (if installed)
+
+[\] ps aux
+[/] List running processes
+
+[\] kill <PID>
+[/] Terminate process
+
+[\] reboot
+[/] Restart system
+
+[\] shutdown now
+[/] Shutdown immediately
+
+[\] shutdown -r now
+[/] Reboot immediately

@@ -1,0 +1,97 @@
+[X] NOAA-APT Command List
+
+[\] noaa-apt
+[/] Start NOAA APT weather satellite image decoder
+
+[\] noaa-apt --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] noaa-apt --device rtl
+[/] Use RTL-SDR for NOAA APT reception
+
+[\] noaa-apt --device hackrf
+[/] Use HackRF SDR
+
+[\] noaa-apt --device usrp
+[/] Use USRP device
+
+[\] noaa-apt --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] noaa-apt -f 137.1e6
+[/] Tune to 137.1 MHz (NOAA satellite)
+
+[\] noaa-apt -f 137.62e6
+[/] Tune to 137.62 MHz (NOAA satellite)
+
+[\] noaa-apt -s 60k
+[/] Set audio sample rate to 60 kHz
+
+[\] noaa-apt -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] noaa-apt --file capture.iq
+[/] Decode APT signal from recorded IQ file
+
+[\] noaa-apt --audio
+[/] Output demodulated audio
+
+[\] noaa-apt --save output.wav
+[/] Save demodulated audio to WAV file
+
+[\] noaa-apt --image output.png
+[/] Save processed NOAA APT satellite image
+
+# -------------------------
+# SIGNAL PROCESSING / DEMODULATION
+# -------------------------
+
+[\] noaa-apt --fm
+[/] FM demodulation for APT signals
+
+[\] noaa-apt --filter
+[/] Apply lowpass or bandpass filtering
+
+[\] noaa-apt --agc
+[/] Enable automatic gain control
+
+[\] noaa-apt --invert
+[/] Invert signal polarity if needed
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] noaa-apt --spectrum
+[/] Display signal spectrum
+
+[\] noaa-apt --waterfall
+[/] Show waterfall of received signal
+
+[\] noaa-apt --verbose
+[/] Enable verbose output
+
+[\] noaa-apt --stats
+[/] Show decoding statistics
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 137.1e6 -s 60k - | noaa-apt --stdin
+[/] Decode NOAA APT signal from RTL-SDR live stream
+
+[\] rtl_sdr -f 137.62e6 -s 60k - | csdr convert_u8_f | noaa-apt --stdin
+[/] Process SDR IQ stream through CSDR before decoding

@@ -1,0 +1,43 @@
+[X] Inotifywait Command List (Monitor File System Events)
+
+[\] inotifywait /path/to/dir
+[/] Wait for events in directory (default: one event, then exit)
+
+[\] inotifywait -m /path/to/dir
+[/] Monitor continuously (keep running)
+
+[\] inotifywait -e modify /path/to/file
+[/] Watch for file modifications
+
+[\] inotifywait -e create /path/to/dir
+[/] Watch for file/directory creation
+
+[\] inotifywait -e delete /path/to/dir
+[/] Watch for deletion
+
+[\] inotifywait -e move /path/to/dir
+[/] Watch for file/directory moves
+
+[\] inotifywait -r /path/to/dir
+[/] Watch directory recursively
+
+[\] inotifywait -q /path/to/dir
+[/] Suppress extra output (quiet mode)
+
+[\] inotifywait -t 10 /path/to/dir
+[/] Wait for 10 seconds, then exit
+
+[\] inotifywait --format '%w%f %e' /path/to/dir
+[/] Custom output format (path, filename, event)
+
+[\] inotifywait -m -e create -e delete /path/to/dir
+[/] Monitor multiple events
+
+[\] inotifywait --event modify,create,delete /path/to/dir
+[/] Alternative syntax for multiple events
+
+[\] inotifywait --help
+[/] Show help menu
+
+[\] inotifywait --version
+[/] Show version

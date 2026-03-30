@@ -1,0 +1,127 @@
+[X] multimon‑ng Command List
+
+[\] multimon-ng
+[/] Launch multimon‑ng with default settings
+
+[\] multimon-ng -h
+[/] Show help menu
+
+[\] multimon-ng -v
+[/] Enable verbose output
+
+[\] multimon-ng -V
+[/] Show version information
+
+[\] multimon-ng -t raw
+[/] Set input type to raw audio
+
+[\] multimon-ng -t wav
+[/] Set input type to WAV file
+
+[\] multimon-ng -t rtl
+[/] Use RTL‑SDR as input source
+
+[\] multimon-ng -a AFSK1200
+[/] Decode AFSK1200 (APRS, packet radio)
+
+[\] multimon-ng -a AFSK2400
+[/] Decode AFSK2400
+
+[\] multimon-ng -a AFSK2400_2
+[/] Decode alternate AFSK2400 mode
+
+[\] multimon-ng -a FSK9600
+[/] Decode 9600‑baud FSK
+
+[\] multimon-ng -a FSK200
+[/] Decode 200‑baud FSK
+
+[\] multimon-ng -a POCSAG512
+[/] Decode POCSAG 512 baud
+
+[\] multimon-ng -a POCSAG1200
+[/] Decode POCSAG 1200 baud
+
+[\] multimon-ng -a POCSAG2400
+[/] Decode POCSAG 2400 baud
+
+[\] multimon-ng -a FLEX
+[/] Decode FLEX pager protocol
+
+[\] multimon-ng -a EAS
+[/] Decode Emergency Alert System tones
+
+[\] multimon-ng -a ZVEI1
+[/] Decode ZVEI1 tone protocol
+
+[\] multimon-ng -a ZVEI2
+[/] Decode ZVEI2 tone protocol
+
+[\] multimon-ng -a ZVEI3
+[/] Decode ZVEI3 tone protocol
+
+[\] multimon-ng -a DTMF
+[/] Decode DTMF tones
+
+[\] multimon-ng -a EEA
+[/] Decode EEA tone protocol
+
+[\] multimon-ng -a EIA
+[/] Decode EIA tone protocol
+
+[\] multimon-ng -a CCIR
+[/] Decode CCIR tone protocol
+
+[\] multimon-ng -a MORSE_CW
+[/] Decode Morse code (CW)
+
+[\] multimon-ng -a ALL
+[/] Enable all decoders
+
+[\] multimon-ng -f alpha
+[/] Use alphanumeric output format
+
+[\] multimon-ng -f numeric
+[/] Use numeric output format
+
+[\] multimon-ng -f raw
+[/] Output raw decoded data
+
+[\] multimon-ng -o output.txt
+[/] Save decoded output to file
+
+[\] multimon-ng -q
+[/] Quiet mode (minimal output)
+
+[\] multimon-ng -s 22050
+[/] Set sample rate to 22.05 kHz
+
+[\] multimon-ng -r 48000
+[/] Set sample rate to 48 kHz
+
+[\] multimon-ng -A
+[/] Automatic gain control
+
+[\] multimon-ng -B
+[/] Disable AGC
+
+[\] multimon-ng -t wav input.wav
+[/] Decode from WAV file
+
+[\] multimon-ng -t raw input.raw
+[/] Decode from raw audio
+
+[\] rtl_fm -f 433.92M -s 22050 -g 30 - | multimon-ng -t raw -a POCSAG1200 -
+[/] Decode POCSAG live from RTL‑SDR
+
+[\] rtl_fm -f 144.39M -s 22050 -g 30 - | multimon-ng -a AFSK1200 -t raw -
+[/] Decode APRS (144.39 MHz)
+
+[\] hackrf_transfer -r capture.iq -f 433920000 -s 2000000
+[/] Record IQ for later decoding (companion tool)
+
+[\] sox capture.wav -t raw -r 22050 -c 1 -b 16 -e s capture.raw
+[/] Convert WAV to raw audio for multimon‑ng
+
+[\] sudo apt install multimon-ng
+[/] Install multimon‑ng on Debian‑based systems

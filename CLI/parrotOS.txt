@@ -1,0 +1,142 @@
+[X] Parrot OS Command List 
+
+[\] neofetch
+[/] Display Parrot OS system summary
+
+[\] lsb_release -a
+[/] Show Parrot OS version info
+
+[\] uname -a
+[/] Show kernel and system details
+
+[\] hostnamectl
+[/] Display hostname and OS info
+
+[\] free -h
+[/] Show memory usage
+
+[\] df -h
+[/] Show disk usage
+
+[\] sudo apt update
+[/] Refresh package lists
+
+[\] sudo apt upgrade
+[/] Upgrade installed packages
+
+[\] sudo apt full-upgrade
+[/] Full system upgrade
+
+[\] sudo apt install <package>
+[/] Install a package
+
+[\] sudo apt remove <package>
+[/] Remove a package
+
+[\] sudo apt purge <package>
+[/] Remove package + config files
+
+[\] sudo apt autoremove
+[/] Remove unused dependencies
+
+[\] apt search <keyword>
+[/] Search for packages
+
+[\] apt show <package>
+[/] Show package details
+
+[\] parrot-upgrade
+[/] Full Parrot OS upgrade (recommended method)
+
+[\] sudo apt install parrot-tools
+[/] Install all Parrot security tools
+
+[\] sudo apt install parrot-tools-full
+[/] Install the complete Parrot toolkit
+
+[\] sudo apt install parrot-tools-cloud
+[/] Install cloud‑focused tools
+
+[\] sudo apt install parrot-tools-forensics
+[/] Install forensic tools
+
+[\] sudo apt install parrot-tools-wireless
+[/] Install wireless analysis tools
+
+[\] sudo apt install parrot-tools-web
+[/] Install web testing tools
+
+[\] sudo apt install parrot-tools-crypto
+[/] Install cryptography tools
+
+[\] nmcli device status
+[/] Show network devices
+
+[\] nmcli connection show
+[/] List saved connections
+
+[\] nmcli device wifi list
+[/] Scan for Wi‑Fi networks
+
+[\] nmcli device wifi connect <SSID> password <pass>
+[/] Connect to Wi‑Fi
+
+[\] ip a
+[/] Show IP addresses
+
+[\] ping -c 4 parrotsec.org
+[/] Test network connectivity
+
+[\] systemctl status <service>
+[/] Check service status
+
+[\] sudo systemctl start <service>
+[/] Start a service
+
+[\] sudo systemctl stop <service>
+[/] Stop a service
+
+[\] sudo systemctl enable <service>
+[/] Enable service at boot
+
+[\] sudo systemctl disable <service>
+[/] Disable service at boot
+
+[\] sudo adduser <name>
+[/] Create new user
+
+[\] sudo deluser <name>
+[/] Delete user
+
+[\] sudo usermod -aG sudo <name>
+[/] Add user to sudo group
+
+[\] chmod 755 <file>
+[/] Change file permissions
+
+[\] chown user:user <file>
+[/] Change file owner
+
+[\] sudo apt install virtualbox-guest-x11
+[/] Install VirtualBox guest additions
+
+[\] sudo apt install open-vm-tools-desktop
+[/] Install VMware guest tools
+
+[\] htop
+[/] Interactive process viewer
+
+[\] ps aux
+[/] List running processes
+
+[\] kill <PID>
+[/] Terminate process
+
+[\] reboot
+[/] Restart system
+
+[\] shutdown now
+[/] Shutdown immediately
+
+[\] shutdown -r now
+[/] Reboot immediately

@@ -1,0 +1,154 @@
+# Samba Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Kismet Command List
+
+[\] sudo apt install kismet
+[/] Install Kismet on Debian‑based systems
+
+[\] sudo systemctl start kismet
+[/] Start Kismet service
+
+[\] sudo systemctl stop kismet
+[/] Stop Kismet service
+
+[\] sudo systemctl enable kismet
+[/] Enable Kismet at boot
+
+[\] sudo systemctl status kismet
+[/] Check service status
+
+[\] kismet
+[/] Start Kismet server + UI (default)
+
+[\] kismet -c wlan0
+[/] Start Kismet using interface wlan0
+
+[\] kismet -c wlan0mon
+[/] Start Kismet using monitor‑mode interface
+
+[\] kismet_server
+[/] Start server only (headless mode)
+
+[\] kismet_client
+[/] Start client UI only
+
+[\] kismet --no-ncurses
+[/] Run without terminal UI (server only)
+
+[\] sudo kismet_cap_linux_wifi --list-interfaces
+[/] List available wireless interfaces
+
+[\] sudo kismet_cap_linux_wifi --capture-source=wlan0
+[/] Start capture on wlan0
+
+[\] sudo kismet_cap_linux_wifi --channel=6
+[/] Set channel manually
+
+[\] sudo kismet_cap_linux_wifi --channels=1,6,11
+[/] Hop between channels
+
+[\] sudo kismet_cap_linux_wifi --monitor
+[/] Force monitor mode on interface
+
+[\] sudo nano /etc/kismet/kismet.conf
+[/] Edit main Kismet configuration
+
+[\] sudo nano /etc/kismet/kismet_site.conf
+[/] Edit site‑specific overrides
+
+[\] sudo nano ~/.kismet/kismet.conf
+[/] User‑level configuration
+
+[\] source=wlan0
+[/] Add capture source
+
+[\] source=wlan0:name=wifi0
+[/] Add source with custom name
+
+[\] log_prefix=logs/
+[/] Set log directory
+
+[\] log_types=pcapng,netxml,nettxt
+[/] Enable specific log formats
+
+[\] channel_hop=true
+[/] Enable channel hopping
+
+[\] channel_hop_speed=5
+[/] Set hop speed (seconds)
+
+[\] kismetdb_stats log.kismet
+[/] Show statistics for a Kismet DB
+
+[\] kismetdb_dump log.kismet
+[/] Dump all captured data
+
+[\] kismetdb_dump --records
+[/] List all records in DB
+
+[\] kismetdb_to_pcap log.kismet output.pcap
+[/] Convert Kismet DB to PCAP
+
+[\] kismetdb_to_wiglecsv log.kismet output.csv
+[/] Export Wi‑Fi data to Wigle CSV
+
+[\] s
+[/] Start/stop capture sources (Inside Kismet UI)
+
+[\] c
+[/] Channel control menu (Inside Kismet UI)
+
+[\] l
+[/] Logging menu (Inside Kismet UI)
+
+[\] f
+[/] Filter networks/devices (Inside Kismet UI)
+
+[\] d
+[/] Device details (Inside Kismet UI)
+
+[\] n
+[/] Network list (Inside Kismet UI)
+
+[\] p
+[/] Packet view (if enabled) (Inside Kismet UI)
+
+[\] q
+[/] Quit Kismet UI (Inside Kismet UI)
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Set monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo iw dev wlan0 set channel 6
+[/] Set channel manually
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode
+
+[\] curl http://localhost:2501/system/status
+[/] Get server status (Kismet REST API (Basic))
+
+[\] curl http://localhost:2501/devices/all_devices.json
+[/] List all detected devices (Kismet REST API (Basic))
+
+[\] curl http://localhost:2501/channels/set_channel?source=wlan0&channel=11
+[/] Change channel via API (Kismet REST API (Basic))
+
+[\] *.kismet
+[/] Main Kismet database (Log File Types)
+
+[\] *.pcapng
+[/] Packet capture logs (Log File Types)
+
+[\] *.netxml
+[/] Network metadata (XML) (Log File Types)
+
+[\] *.nettxt
+[/] Human‑readable network list (Log File Types)

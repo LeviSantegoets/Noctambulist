@@ -1,0 +1,118 @@
+# John the Ripper Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] John the Ripper Command List
+
+[\] john --list=formats
+[/] List all supported hash formats
+
+[\] john --list=rules
+[/] List available cracking rules
+
+[\] john --list=encodings
+[/] List supported character encodings
+
+[\] john hash.txt
+[/] Run default cracking mode on hash file
+
+[\] john --format=raw-md5 hash.txt
+[/] Specify hash format manually
+
+[\] john --format=bcrypt hash.txt
+[/] Crack bcrypt hashes
+
+[\] john --wordlist=wordlist.txt hash.txt
+[/] Use a wordlist for cracking
+
+[\] john --wordlist --rules hash.txt
+[/] Wordlist + rules-based mutation
+
+[\] john --rules=Jumbo hash.txt
+[/] Use a specific ruleset
+
+[\] john --incremental hash.txt
+[/] Incremental brute-force mode
+
+[\] john --incremental=All hash.txt
+[/] Full incremental brute-force
+
+[\] john --mask=?l?l?l?l hash.txt
+[/] Mask attack (4 lowercase letters)
+
+[\] john --mask=?d?d?d?d hash.txt
+[/] Mask attack (4 digits)
+
+[\] john --mask='?l?l?l?l?d?d'
+[/] Hybrid mask attack
+
+[\] john --session=mycrack hash.txt
+[/] Start a named cracking session
+
+[\] john --restore=mycrack
+[/] Restore a paused session
+
+[\] john --show hash.txt
+[/] Show cracked passwords
+
+[\] john --show --format=raw-md5 hash.txt
+[/] Show cracked passwords for a specific format
+
+[\] john --pot=custom.pot hash.txt
+[/] Use a custom potfile
+
+[\] john --no-log hash.txt
+[/] Disable logging
+
+[\] john --fork=4 hash.txt
+[/] Run cracking using 4 CPU processes
+
+[\] john --single hash.txt
+[/] Single crack mode (fast, username-based)
+
+[\] john --single --rules hash.txt
+[/] Single mode with rules
+
+[\] john --stdout --wordlist=wordlist.txt
+[/] Output wordlist after applying rules
+
+[\] john --test
+[/] Benchmark cracking performance
+
+[\] john --test=10
+[/] Benchmark for 10 seconds
+
+[\] unshadow /etc/passwd /etc/shadow > hash.txt
+[/] Combine passwd + shadow for cracking
+
+[\] zip2john file.zip > hash.txt
+[/] Extract hash from ZIP file
+
+[\] rar2john file.rar > hash.txt
+[/] Extract hash from RAR file
+
+[\] pdf2john file.pdf > hash.txt
+[/] Extract hash from PDF file
+
+[\] ssh2john id_rsa > hash.txt
+[/] Extract hash from SSH private key
+
+[\] keepass2john database.kdbx > hash.txt
+[/] Extract hash from KeePass database
+
+[\] truecrypt2john volume.tc > hash.txt
+[/] Extract hash from TrueCrypt/VeraCrypt volume
+
+[\] john --format=ssh hash.txt
+[/] Crack SSH private key passphrases
+
+[\] john --format=zip hash.txt
+[/] Crack ZIP passwords
+
+[\] john --format=rar hash.txt
+[/] Crack RAR passwords
+
+[\] john --format=pdf hash.txt
+[/] Crack PDF passwords
+
+[\] john --format=keepass hash.txt
+[/] Crack KeePass database passwords

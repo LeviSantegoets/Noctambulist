@@ -1,0 +1,389 @@
+# PowerShell Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] PowerShell Command List
+
+[\] Get-Help
+[/] Show PowerShell help
+
+[\] Get-Help Get-Process -Full
+[/] Show detailed help for a command
+
+[\] Get-Command
+[/] List all available commands
+
+[\] Get-Command *network*
+[/] Search commands by keyword
+
+[\] Get-Alias
+[/] List all aliases
+
+[\] Set-ExecutionPolicy RemoteSigned
+[/] Allow running local scripts
+
+[\] Get-ExecutionPolicy
+[/] Show current execution policy
+
+[\] Get-Service
+[/] List all services
+
+[\] Get-Service -Name wuauserv
+[/] Show specific service
+
+[\] Start-Service wuauserv
+[/] Start a service
+
+[\] Stop-Service wuauserv
+[/] Stop a service
+
+[\] Restart-Service wuauserv
+[/] Restart a service
+
+[\] Get-Process
+[/] List running processes
+
+[\] Get-Process chrome
+[/] Show specific process
+
+[\] Stop-Process -Name chrome -Force
+[/] Kill a process
+
+[\] Get-EventLog -LogName System -Newest 50
+[/] Show last 50 system log entries
+
+[\] Clear-EventLog -LogName Application
+[/] Clear event logs
+
+[\] Get-NetIPAddress
+[/] Show IP configuration
+
+[\] Test-Connection google.com
+[/] Ping a host
+
+[\] Get-NetTCPConnection
+[/] Show active TCP connections
+
+[\] Get-NetAdapter
+[/] Show network adapters
+
+[\] Restart-NetAdapter -Name Ethernet
+[/] Restart a network adapter
+
+[\] Get-LocalUser
+[/] List local users
+
+[\] New-LocalUser -Name user -Password (Read-Host -AsSecureString)
+[/] Create a new local user
+
+[\] Remove-LocalUser -Name user
+[/] Delete a local user
+
+[\] Add-LocalGroupMember -Group Administrators -Member user
+[/] Add user to Administrators group
+
+[\] Get-LocalGroupMember Administrators
+[/] Show admin group members
+
+[\] Get-ChildItem
+[/] List files and folders
+
+[\] Get-ChildItem -Recurse
+[/] Recursive directory listing
+
+[\] Copy-Item file.txt C:\Backup\
+[/] Copy a file
+
+[\] Move-Item file.txt C:\Backup\
+[/] Move a file
+
+[\] Remove-Item file.txt
+[/] Delete a file
+
+[\] New-Item -ItemType Directory -Name Logs
+[/] Create a folder
+
+[\] Set-Location C:\Windows
+[/] Change directory
+
+[\] Get-Content file.txt
+[/] Read file contents
+
+[\] Set-Content file.txt "Hello"
+[/] Write text to a file
+
+[\] Add-Content file.txt "More text"
+[/] Append text to a file
+
+[\] Get-WmiObject Win32_OperatingSystem
+[/] Query system information
+
+[\] Get-WmiObject Win32_Process
+[/] Query running processes
+
+[\] Get-WmiObject Win32_LogicalDisk
+[/] Show disk information
+
+[\] Get-HotFix
+[/] List installed updates
+
+[\] Get-WindowsFeature
+[/] List Windows features
+
+[\] Install-WindowsFeature Web-Server
+[/] Install IIS web server
+
+[\] Uninstall-WindowsFeature Web-Server
+[/] Remove IIS
+
+[\] Get-ScheduledTask
+[/] List scheduled tasks
+
+[\] Start-ScheduledTask -TaskName "Backup"
+[/] Run a scheduled task
+
+[\] Get-Clipboard
+[/] Read clipboard contents
+
+[\] Set-Clipboard "Hello"
+[/] Write to clipboard
+
+[\] Get-Date
+[/] Show current date/time
+
+[\] Get-Random
+[/] Generate a random number
+
+[\] Start-Job -ScriptBlock { Get-Process }
+[/] Run a background job
+
+[\] Get-Job
+[/] List background jobs
+
+[\] Receive-Job -Id 1
+[/] Get job output
+
+[\] Remove-Job -Id 1
+[/] Delete a job
+
+[\] powershell.exe -ExecutionPolicy Bypass -File script.ps1
+[/] Run a script bypassing restrictions
+
+[\] $PSVersionTable
+[/] Show PowerShell version info
+
+[\] Get-ChildItem
+[/] List files and folders in current directory
+
+[\] Get-ChildItem -Recurse
+[/] List all items recursively
+
+[\] Get-ChildItem -Filter *.txt
+[/] Find all .txt files
+
+[\] Get-ChildItem -Path C:\ -Include *.log -Recurse
+[/] Search for .log files across drive
+
+[\] Get-ChildItem -Hidden
+[/] Show hidden files
+
+[\] Get-ChildItem -Directory
+[/] Show only folders
+
+[\] Get-ChildItem -File
+[/] Show only files
+
+[\] Get-Item <path>
+[/] Get a specific file or folder
+
+[\] Get-ItemProperty <path>
+[/] Show item properties
+
+[\] Get-Content <file>
+[/] View file contents
+
+[\] New-Item -ItemType File -Name file.txt
+[/] Create a new file
+
+[\] New-Item -ItemType Directory -Name Folder1
+[/] Create a new folder
+
+[\] New-Item -Path . -Name script.ps1 -ItemType File
+[/] Create file in current directory
+
+[\] Set-Content file.txt "Hello"
+[/] Create file with text
+
+[\] Add-Content file.txt "More text"
+[/] Append text to file
+
+[\] Copy-Item file.txt C:\Backup
+[/] Copy file to another location
+
+[\] Copy-Item *.txt C:\Backup
+[/] Copy all .txt files
+
+[\] Move-Item file.txt C:\NewFolder
+[/] Move file
+
+[\] Rename-Item old.txt new.txt
+[/] Rename file or folder
+
+[\] Copy-Item -Recurse Folder1 C:\Backup
+[/] Copy folder with contents
+
+[\] Remove-Item file.txt
+[/] Delete file
+
+[\] Remove-Item Folder1 -Recurse
+[/] Delete folder and contents
+
+[\] Remove-Item *.log
+[/] Delete all .log files
+
+[\] Clear-Content file.txt
+[/] Empty file without deleting it
+
+[\] Get-ChildItem | Sort-Object Length
+[/] Sort files by size
+
+[\] Get-ChildItem | Sort-Object LastWriteTime
+[/] Sort by last modified
+
+[\] Get-ChildItem | Where-Object {$_.Length -gt 1MB}
+[/] Show files larger than 1MB
+
+[\] Get-ChildItem | Select-Object Name, Length
+[/] Show only name + size
+
+[\] Get-ChildItem -Recurse | Select-String "keyword"
+[/] Search inside files for text
+
+[\] Get-Location
+[/] Show current directory
+
+[\] Set-Location C:\Users
+[/] Change directory
+
+[\] Push-Location
+[/] Save current location
+
+[\] Pop-Location
+[/] Return to saved location
+
+[\] Resolve-Path .
+[/] Show full path of current directory
+
+[\] Get-Content file.txt
+[/] Read file
+
+[\] Set-Content file.txt "text"
+[/] Overwrite file
+
+[\] Add-Content file.txt "text"
+[/] Append to file
+
+[\] Get-Content file.txt -Tail 20
+[/] Show last 20 lines
+
+[\] Get-Content file.txt -Wait
+[/] Live‑monitor file (like tail -f)
+
+[\] Get-Acl file.txt
+[/] Show file permissions
+
+[\] Set-Acl file.txt $acl
+[/] Apply permissions
+
+[\] attrib +h file.txt
+[/] Make file hidden (Windows attribute)
+
+[\] attrib -h file.txt
+[/] Unhide file
+
+[\] Get-NetAdapter
+[/] List all network adapters
+
+[\] Get-NetAdapter -Physical
+[/] Show only physical adapters
+
+[\] Get-NetAdapter -Name "Ethernet"
+[/] Show specific adapter
+
+[\] Get-NetIPAddress
+[/] Show all IP addresses
+
+[\] Get-NetIPConfiguration
+[/] Show full network configuration
+
+[\] Get-DnsClientServerAddress
+[/] Show DNS servers
+
+[\] Disable-NetAdapter -Name "Ethernet" -Confirm:$false
+[/] Disable adapter
+
+[\] Enable-NetAdapter -Name "Ethernet"
+[/] Enable adapter
+
+[\] Restart-NetAdapter -Name "Ethernet"
+[/] Restart adapter
+
+[\] Rename-NetAdapter -Name "Ethernet" -NewName "LAN1" 
+[/] Rename network adapter
+
+[\] Set-NetConnectionProfile -Name "Ethernet" -NetworkCategory Private
+[/] Set adapter to Private
+
+[\] Set-NetConnectionProfile -Name "Ethernet" -NetworkCategory Public
+[/] Set adapter to Public
+
+[\] Get-NetConnectionProfile
+[/] Show current network profile
+
+[\] New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.1.50 -PrefixLength 24 -DefaultGateway 192.168.1.1
+[/] Assign static IP + gateway
+
+[\] Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 8.8.8.8
+[/] Set DNS server
+
+[\] Remove-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.1.50 -Confirm:$false
+[/] Remove static IP
+
+[\] Set-NetIPInterface -InterfaceAlias "Ethernet" -Dhcp Enabled
+[/] Enable DHCP for IP
+
+[\] Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ResetServerAddresses
+[/] Reset DNS to DHCP
+
+[\] Get-NetConnectionProfile
+[/] View profiles
+
+[\] Set-NetConnectionProfile -InterfaceAlias "Ethernet" -NetworkCategory Private
+[/] Switch profile to Private
+
+[\] Set-NetConnectionProfile -InterfaceAlias "Ethernet" -NetworkCategory Public
+[/] Switch profile to Public
+
+[\] Test-Connection google.com
+[/] Ping test
+
+[\] Test-NetConnection
+[/] Show network diagnostics
+
+[\] Test-NetConnection -Port 80 -ComputerName google.com
+[/] Test specific port
+
+[\] Resolve-DnsName microsoft.com
+[/] DNS lookup
+
+[\] Get-NetAdapterAdvancedProperty -Name "Ethernet"
+[/] Show advanced NIC settings
+
+[\] Set-NetAdapterAdvancedProperty -Name "Ethernet" -DisplayName "Speed & Duplex" -DisplayValue "Auto Negotiation"
+[/] Change NIC advanced property
+
+[\] netsh wlan export profile key=clear
+[/] Export Wi‑Fi profiles
+
+[\] netsh wlan add profile filename="WiFi.xml"
+[/] Import Wi‑Fi profile
+

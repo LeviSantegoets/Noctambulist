@@ -1,0 +1,103 @@
+[X] Python PIP3 Command List
+
+[\] pip3 --version
+[/] Show installed pip3 version
+
+[\] pip3 install package_name
+[/] Install a package for Python 3
+
+[\] pip3 install package_name==1.0.0
+[/] Install specific version
+
+[\] pip3 install --upgrade package_name
+[/] Upgrade package
+
+[\] pip3 uninstall package_name
+[/] Remove a package
+
+[\] pip3 list
+[/] List installed packages
+
+[\] pip3 freeze
+[/] List packages (requirements format)
+
+[\] pip3 show package_name
+[/] Show package details
+
+[\] pip3 check
+[/] Check for dependency issues
+
+[\] pip3 install -r requirements.txt
+[/] Install from requirements file
+
+[\] pip3 freeze > requirements.txt
+[/] Export installed packages
+
+[\] pip3 install --user package_name
+[/] Install package for current user
+
+[\] pip3 install --no-cache-dir package_name
+[/] Install without cache
+
+[\] pip3 cache dir
+[/] Show cache directory
+
+[\] pip3 cache purge
+[/] Clear pip cache
+
+[\] pip3 config list
+[/] Show configuration
+
+[\] pip3 config set global.index-url https://example.com/simple
+[/] Set custom package index
+
+[\] pip3 install --index-url https://example.com/simple package_name
+[/] Install from custom repo
+
+[\] pip3 download package_name
+[/] Download package only
+
+[\] pip3 wheel package_name
+[/] Build wheel file
+
+[\] pip3 install package_name --force-reinstall
+[/] Force reinstall package
+
+[\] pip3 install package_name --ignore-installed
+[/] Ignore existing installs
+
+[\] pip3 install package_name --no-deps
+[/] Install without dependencies
+
+[\] pip3 install package_name --pre
+[/] Allow pre-release versions
+
+[\] pip3 list --outdated
+[/] Show outdated packages
+
+[\] pip3 install --upgrade pip
+[/] Upgrade pip3 itself
+
+[\] pip3 debug
+[/] Show debug info
+
+[\] pip3 help
+[/] Show help
+
+[\] pip3 install git+https://github.com/user/repo.git
+[/] Install from Git repository
+
+[\] pip3 install .
+[/] Install from current directory
+
+[\] pip3 install -e .
+[/] Editable install (development mode)
+
+[\] pip3 uninstall -y package_name
+[/] Uninstall without confirmation
+
+[\] pip3 cache info
+[/] Show cache info
+
+[\] pip3 cache remove package_name
+[/] Remove cached package

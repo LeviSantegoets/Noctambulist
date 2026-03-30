@@ -1,0 +1,79 @@
+# Masscan Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Masscan Command List
+
+[\] masscan -p80 192.168.1.0/24
+[/] Scan port 80 on a subnet
+
+[\] masscan -p1-65535 192.168.1.10
+[/] Scan all ports on a single host
+
+[\] masscan -p0-65535 192.168.1.0/24
+[/] Full port scan on a subnet
+
+[\] masscan 0.0.0.0/0 -p80
+[/] Scan the entire Internet for port 80 (be careful)
+
+[\] masscan -p22,80,443 192.168.1.0/24
+[/] Scan multiple ports
+
+[\] masscan -pU:53 192.168.1.0/24
+[/] Scan UDP port 53
+
+[\] masscan -pT:80,U:53 192.168.1.0/24
+[/] Scan TCP 80 and UDP 53
+
+[\] masscan -p80 192.168.1.0/24 --rate=1000
+[/] Limit scan rate to 1000 packets per second
+
+[\] masscan -p80 192.168.1.0/24 --rate=100000
+[/] High‑speed scan (100k pps)
+
+[\] masscan -p80 192.168.1.0/24 --router-ip 192.168.1.1
+[/] Specify router/gateway IP
+
+[\] masscan -p80 192.168.1.0/24 --source-ip 192.168.1.50
+[/] Spoof source IP (advanced)
+
+[\] masscan -p80 192.168.1.0/24 --source-port 60000
+[/] Use a custom source port
+
+[\] masscan -p80 192.168.1.0/24 --banners
+[/] Grab service banners
+
+[\] masscan -p80,443 192.168.1.0/24 --banners
+[/] Banner grab on multiple ports
+
+[\] masscan -p80 192.168.1.0/24 -oX results.xml
+[/] Output results in XML format
+
+[\] masscan -p80 192.168.1.0/24 -oJ results.json
+[/] Output results in JSON format
+
+[\] masscan -p80 192.168.1.0/24 -oL results.txt
+[/] Output results in list format
+
+[\] masscan -p80 192.168.1.0/24 --resume results.conf
+[/] Resume a previous scan
+
+[\] masscan --echo > scan.conf
+[/] Generate a config file template
+
+[\] masscan -c scan.conf
+[/] Run scan from config file
+
+[\] masscan -p80 192.168.1.0/24 --excludefile exclude.txt
+[/] Exclude IPs/subnets from scan
+
+[\] masscan -p80 192.168.1.0/24 --wait=5
+[/] Wait 5 seconds for late responses
+
+[\] masscan --iflist
+[/] List network interfaces
+
+[\] masscan --regress
+[/] Run internal regression tests
+
+[\] masscan --debug
+[/] Enable debug output

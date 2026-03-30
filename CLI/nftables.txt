@@ -1,0 +1,115 @@
+[X] nftables Firewall Command List
+
+[\] nft list ruleset
+[/] Show full active ruleset
+
+[\] nft list tables
+[/] List all tables
+
+[\] nft list table inet filter
+[/] Show rules in specific table
+
+[\] nft list chains
+[/] List all chains
+
+[\] nft list chain inet filter input
+[/] Show specific chain rules
+
+[\] nft add table inet filter
+[/] Create new table
+
+[\] nft delete table inet filter
+[/] Delete table
+
+[\] nft flush table inet filter
+[/] Remove all rules from table
+
+[\] nft add chain inet filter input { type filter hook input priority 0 \; }
+[/] Create input chain with hook
+
+[\] nft delete chain inet filter input
+[/] Delete chain
+
+[\] nft flush chain inet filter input
+[/] Clear all rules in chain
+
+[\] nft add rule inet filter input accept
+[/] Add rule to accept traffic
+
+[\] nft add rule inet filter input drop
+[/] Add rule to drop traffic
+
+[\] nft add rule inet filter input ip saddr 192.168.1.1 accept
+[/] Allow specific IP
+
+[\] nft add rule inet filter input tcp dport 22 accept
+[/] Allow SSH traffic
+
+[\] nft add rule inet filter input ct state established,related accept
+[/] Allow established connections
+
+[\] nft add rule inet filter input iif lo accept
+[/] Allow loopback traffic
+
+[\] nft delete rule inet filter input handle 5
+[/] Delete rule by handle ID
+
+[\] nft list ruleset -a
+[/] Show rules with handle numbers
+
+[\] nft flush ruleset
+[/] Remove all firewall rules
+
+[\] nft add set inet filter blacklist { type ipv4_addr \; }
+[/] Create IP set
+
+[\] nft add element inet filter blacklist { 1.2.3.4 }
+[/] Add IP to set
+
+[\] nft add rule inet filter input ip saddr @blacklist drop
+[/] Block IPs in set
+
+[\] nft monitor
+[/] Monitor nftables changes live
+
+[\] nft -f /etc/nftables.conf
+[/] Load rules from config file
+
+[\] nft -c -f /etc/nftables.conf
+[/] Check config without applying
+
+[\] nft export json
+[/] Export ruleset as JSON
+
+[\] nft list ruleset > rules.nft
+[/] Backup ruleset to file
+
+[\] nft -f rules.nft
+[/] Restore ruleset from file
+
+[\] systemctl start nftables
+[/] Start nftables service
+
+[\] systemctl stop nftables
+[/] Stop nftables service
+
+[\] systemctl restart nftables
+[/] Restart nftables service
+
+[\] systemctl status nftables
+[/] Show service status
+
+[\] systemctl enable nftables
+[/] Enable at boot
+
+[\] systemctl disable nftables
+[/] Disable at boot
+
+[\] ip link show
+[/] List network interfaces
+
+[\] ss -tuln
+[/] Show listening ports
+
+[\] ping 8.8.8.8
+[/] Test network connectivity

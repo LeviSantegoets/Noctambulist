@@ -1,0 +1,124 @@
+# Nmap Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Nmap Command List
+
+[\] nmap 192.168.1.1
+[/] Basic scan of a single host
+
+[\] nmap 192.168.1.0/24
+[/] Scan an entire subnet
+
+[\] nmap -sn 192.168.1.0/24
+[/] Ping scan (host discovery only)
+
+[\] nmap -Pn 192.168.1.1
+[/] Scan host without pinging (treat as online)
+
+[\] nmap -sS 192.168.1.1
+[/] Stealth SYN scan
+
+[\] nmap -sT 192.168.1.1
+[/] TCP connect scan
+
+[\] nmap -sU 192.168.1.1
+[/] UDP scan
+
+[\] nmap -sV 192.168.1.1
+[/] Detect service versions
+
+[\] nmap -O 192.168.1.1
+[/] Detect operating system
+
+[\] nmap -A 192.168.1.1
+[/] Aggressive scan (OS, version, scripts, traceroute)
+
+[\] nmap -p 80 192.168.1.1
+[/] Scan a specific port
+
+[\] nmap -p 1-1000 192.168.1.1
+[/] Scan a range of ports
+
+[\] nmap -p- 192.168.1.1
+[/] Scan all 65535 ports
+
+[\] nmap --top-ports 100 192.168.1.1
+[/] Scan the top 100 most common ports
+
+[\] nmap --open 192.168.1.1
+[/] Show only open ports
+
+[\] nmap -sC 192.168.1.1
+[/] Run default NSE scripts
+
+[\] nmap --script vuln 192.168.1.1
+[/] Run vulnerability detection scripts
+
+[\] nmap --script safe 192.168.1.1
+[/] Run safe scripts only
+
+[\] nmap --script http-enum 192.168.1.1
+[/] Enumerate web server directories
+
+[\] nmap --script smb-os-discovery 192.168.1.1
+[/] Discover SMB OS information
+
+[\] nmap -T4 192.168.1.1
+[/] Faster scan timing
+
+[\] nmap -T1 192.168.1.1
+[/] Slow, stealthy scan timing
+
+[\] nmap -v 192.168.1.1
+[/] Increase verbosity
+
+[\] nmap -vv 192.168.1.1
+[/] Very verbose output
+
+[\] nmap -oN scan.txt 192.168.1.1
+[/] Save output to a normal text file
+
+[\] nmap -oX scan.xml 192.168.1.1
+[/] Save output as XML
+
+[\] nmap -oG scan.grep 192.168.1.1
+[/] Save output in grepable format
+
+[\] nmap --reason 192.168.1.1
+[/] Show reasons why ports are in a specific state
+
+[\] nmap --traceroute 192.168.1.1
+[/] Perform traceroute during scan
+
+[\] nmap -6 2001:db8::1
+[/] Scan an IPv6 host
+
+[\] nmap -sA 192.168.1.1
+[/] ACK scan (firewall rule discovery)
+
+[\] nmap -sN 192.168.1.1
+[/] Null scan (stealthy)
+
+[\] nmap -sF 192.168.1.1
+[/] FIN scan (stealthy)
+
+[\] nmap -sX 192.168.1.1
+[/] Xmas scan (stealthy)
+
+[\] nmap --script dns-brute 192.168.1.1
+[/] DNS brute-force enumeration
+
+[\] nmap --script ftp-anon 192.168.1.1
+[/] Check for anonymous FTP access
+
+[\] nmap --script ssh-hostkey 192.168.1.1
+[/] Retrieve SSH host keys
+
+[\] nmap --script smb-enum-shares 192.168.1.1
+[/] Enumerate SMB shares
+
+[\] nmap --script http-title 192.168.1.1
+[/] Get webpage titles from HTTP servers
+
+[\] nmap -A -T4 192.168.1.1
+[/] Fast aggressive scan with OS and version detection

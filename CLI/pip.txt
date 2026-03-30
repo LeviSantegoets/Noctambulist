@@ -1,0 +1,109 @@
+[X] Python PIP Command List
+
+[\] pip --version
+[/] Show installed pip version
+
+[\] pip install package_name
+[/] Install a package
+
+[\] pip install package_name==1.0.0
+[/] Install specific package version
+
+[\] pip install --upgrade package_name
+[/] Upgrade package to latest version
+
+[\] pip uninstall package_name
+[/] Remove a package
+
+[\] pip list
+[/] List installed packages
+
+[\] pip freeze
+[/] List installed packages (requirements format)
+
+[\] pip show package_name
+[/] Show package details
+
+[\] pip search package_name
+[/] Search for a package (deprecated in newer versions)
+
+[\] pip check
+[/] Check for broken dependencies
+
+[\] pip install -r requirements.txt
+[/] Install packages from requirements file
+
+[\] pip freeze > requirements.txt
+[/] Save installed packages to file
+
+[\] pip install --user package_name
+[/] Install package for current user only
+
+[\] pip install --no-cache-dir package_name
+[/] Install without using cache
+
+[\] pip cache dir
+[/] Show pip cache directory
+
+[\] pip cache purge
+[/] Clear pip cache
+
+[\] pip config list
+[/] Show pip configuration
+
+[\] pip config set global.index-url https://example.com/simple
+[/] Set custom package index
+
+[\] pip install --index-url https://example.com/simple package_name
+[/] Install from custom repository
+
+[\] pip download package_name
+[/] Download package without installing
+
+[\] pip wheel package_name
+[/] Build wheel package
+
+[\] pip install package_name --force-reinstall
+[/] Reinstall package
+
+[\] pip install package_name --ignore-installed
+[/] Ignore installed packages and install fresh
+
+[\] pip install package_name --no-deps
+[/] Install without dependencies
+
+[\] pip install package_name --pre
+[/] Install pre-release versions
+
+[\] pip install package_name --upgrade-strategy eager
+[/] Upgrade dependencies aggressively
+
+[\] pip list --outdated
+[/] Show outdated packages
+
+[\] pip install --upgrade pip
+[/] Upgrade pip itself
+
+[\] pip debug
+[/] Show debug information
+
+[\] pip help
+[/] Show help menu
+
+[\] pip install git+https://github.com/user/repo.git
+[/] Install package from Git repository
+
+[\] pip install .
+[/] Install package from current directory
+
+[\] pip install -e .
+[/] Install package in editable (dev) mode
+
+[\] pip uninstall -y package_name
+[/] Uninstall without confirmation
+
+[\] pip cache info
+[/] Show cache info
+
+[\] pip cache remove package_name
+[/] Remove specific cached package

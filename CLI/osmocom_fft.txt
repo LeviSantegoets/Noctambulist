@@ -1,0 +1,98 @@
+[X] Osmocom FFT Command List
+
+[\] osmocom_fft
+[/] Launch FFT spectrum viewer for RTL-SDR or compatible SDR devices
+
+[\] osmocom_fft -h
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] osmocom_fft -d 0
+[/] Use first SDR device
+
+[\] osmocom_fft -d 1
+[/] Use second SDR device
+
+[\] osmocom_fft -d rtl=0
+[/] Select RTL-SDR device by index
+
+# -------------------------
+# FREQUENCY CONTROL
+# -------------------------
+
+[\] osmocom_fft -f 100M
+[/] Set center frequency to 100 MHz
+
+[\] osmocom_fft -f 433.92M
+[/] Tune to 433.92 MHz ISM band
+
+[\] osmocom_fft -f 1090M
+[/] Tune to ADS-B aircraft band
+
+# -------------------------
+# SAMPLE RATE
+# -------------------------
+
+[\] osmocom_fft -s 2048000
+[/] Set sample rate to 2.048 MSPS
+
+[\] osmocom_fft -s 1000000
+[/] Set sample rate to 1 MSPS
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] osmocom_fft -g 20
+[/] Set tuner gain to 20 dB
+
+[\] osmocom_fft -g 40
+[/] Set high gain for weak signals
+
+[\] osmocom_fft -g 0
+[/] Enable automatic gain
+
+# -------------------------
+# FREQUENCY CORRECTION
+# -------------------------
+
+[\] osmocom_fft -p 0
+[/] Apply no PPM correction
+
+[\] osmocom_fft -p 25
+[/] Apply 25 PPM frequency correction
+
+# -------------------------
+# FFT / DISPLAY SETTINGS
+# -------------------------
+
+[\] osmocom_fft -n 1024
+[/] Set FFT size to 1024 bins
+
+[\] osmocom_fft -n 2048
+[/] Use larger FFT size for higher resolution
+
+[\] osmocom_fft -W
+[/] Enable waterfall display
+
+[\] osmocom_fft -F
+[/] Use fast FFT processing
+
+# -------------------------
+# COMMON SDR MONITORING
+# -------------------------
+
+[\] osmocom_fft -f 88M -s 2e6
+[/] Monitor FM broadcast band
+
+[\] osmocom_fft -f 433M -s 1e6
+[/] Monitor 433 MHz ISM devices
+
+[\] osmocom_fft -f 137M -s 2e6
+[/] Monitor weather satellite signals
+
+[\] osmocom_fft -f 850M -s 2e6
+[/] Monitor GSM cellular frequencies

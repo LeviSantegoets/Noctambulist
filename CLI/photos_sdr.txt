@@ -1,0 +1,115 @@
+[X] Pothos SDR Command List
+
+[\] pothos-flow
+[/] Launch Pothos graphical flowgraph environment
+
+[\] pothos-flow -h
+[/] Show help and command-line options
+
+# -------------------------
+# FLOWGRAPH MANAGEMENT
+# -------------------------
+
+[\] pothos-flow my_flowgraph.pfg
+[/] Open a specific Pothos flowgraph file
+
+[\] pothos-flow -r my_flowgraph.pfg
+[/] Run a flowgraph from the command line
+
+[\] pothos-flow -s
+[/] Show block library browser
+
+[\] pothos-flow -v
+[/] Enable verbose output
+
+# -------------------------
+# BLOCK UTILITIES
+# -------------------------
+
+[\] PothosGui
+[/] Launch GUI for block editing and creation
+
+[\] PothosUtilListBlocks
+[/] List all available Pothos blocks
+
+[\] PothosUtilBlockInfo <blockname>
+[/] Show detailed information about a specific block
+
+[\] PothosUtilGraphViz <flowgraph.pfg>
+[/] Generate visual representation of flowgraph
+
+# -------------------------
+# DEVICE MANAGEMENT
+# -------------------------
+
+[\] PothosSDRProbe
+[/] Detect available SDR devices
+
+[\] PothosSDRProbe -v
+[/] Verbose device information
+
+[\] PothosSDRProbe -d <device index>
+[/] Probe specific SDR device
+
+[\] PothosSDRProbe --args <driver args>
+[/] Probe device with driver-specific arguments
+
+# -------------------------
+# STREAMING & SINKS
+# -------------------------
+
+[\] PothosSDRSource
+[/] Add SDR source block to flowgraph
+
+[\] PothosSDRSource --freq 100e6
+[/] Set SDR source center frequency
+
+[\] PothosSDRSource --rate 2e6
+[/] Set sample rate
+
+[\] PothosSDRSink
+[/] Add SDR sink block for transmission
+
+[\] PothosSDRSink --freq 433.92e6
+[/] Set transmit frequency
+
+[\] PothosSDRSink --rate 1e6
+[/] Set transmit sample rate
+
+[\] PothosSDRSink --gain 20
+[/] Set TX gain
+
+# -------------------------
+# ANALYSIS BLOCKS
+# -------------------------
+
+[\] PothosFFT
+[/] Add FFT block for spectral analysis
+
+[\] PothosWaterfallSink
+[/] Add waterfall visualization sink
+
+[\] PothosScopeSink
+[/] Add oscilloscope time-domain sink
+
+[\] PothosFileSink
+[/] Save output data to file
+
+[\] PothosFileSource
+[/] Load data from file for processing
+
+# -------------------------
+# SCRIPTING / AUTOMATION
+# -------------------------
+
+[\] pothos-flow -x <flowgraph.pfg>
+[/] Execute flowgraph headless
+
+[\] pothos-flow -c <flowgraph.pfg>
+[/] Check flowgraph for errors without running
+
+[\] PothosPythonBlock
+[/] Create custom block with Python
+
+[\] PothosScript
+[/] Run flowgraph automation scripts

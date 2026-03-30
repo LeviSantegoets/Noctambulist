@@ -1,0 +1,19 @@
+[X] LDD Command List (Shared Library Dependencies)
+
+[\] ldd file
+[/] Show shared library dependencies of executable
+
+[\] ldd --version
+[/] Show ldd version
+
+[\] ldd --help
+[/] Show help menu
+
+[\] ldd /bin/ls
+[/] Example: check libraries used by `ls`
+
+[\] ldd -v file
+[/] Verbose output (list versions of libraries)
+
+[\] LD_TRACE_LOADED_OBJECTS=1 file
+[/] Alternative method to list shared libraries

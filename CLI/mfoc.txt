@@ -1,0 +1,121 @@
+[X] MFOC Command List
+
+[\] mfoc
+[/] Run MFOC with default settings
+
+[\] mfoc -h
+[/] Show help menu
+
+[\] mfoc -V
+[/] Show version information
+
+[\] mfoc -O dump.mfd
+[/] Save full card dump to file
+
+[\] mfoc -o dump.mfd
+[/] Alternate syntax for output file
+
+[\] mfoc -P
+[/] Enable partial dump mode (dump only recovered sectors)
+
+[\] mfoc -T 5
+[/] Set timeout to 5 seconds
+
+[\] mfoc -t 2
+[/] Set nested attack timeout to 2 seconds
+
+[\] mfoc -k A0A1A2A3A4A5
+[/] Provide known key A for faster cracking
+
+[\] mfoc -K B0B1B2B3B4B5
+[/] Provide known key B for faster cracking
+
+[\] mfoc -S
+[/] Skip sectors already recovered
+
+[\] mfoc -R
+[/] Retry failed sectors
+
+[\] mfoc -C
+[/] Continue even if some sectors fail
+
+[\] mfoc -D
+[/] Enable debug output
+
+[\] mfoc -v
+[/] Verbose mode
+
+[\] mfoc -VV
+[/] Extra verbose mode
+
+[\] mfoc -s 0
+[/] Start attack at sector 0
+
+[\] mfoc -e 15
+[/] End attack at sector 15
+
+[\] mfoc -n
+[/] Disable nested attack (use only hardnested if available)
+
+[\] mfoc -N
+[/] Force nested attack only
+
+[\] mfoc -m
+[/] Use minimal number of nonces
+
+[\] mfoc -p 100
+[/] Set probe count to 100
+
+[\] mfoc -r 5
+[/] Retry failed keys 5 times
+
+[\] mfoc -O dump.mfd -k A0A1A2A3A4A5 -k B0B1B2B3B4B5
+[/] Run with multiple known keys
+
+[\] mfoc -O dump.mfd -T 10 -v
+[/] Dump card with 10‑second timeout and verbose output
+
+[\] mfoc -O dump.mfd -C -R
+[/] Continue on errors and retry failed sectors
+
+[\] mfoc -O dump.mfd -s 1 -e 5
+[/] Dump only sectors 1 through 5
+
+[\] mfoc -O dump.mfd -P
+[/] Partial dump (only recovered sectors)
+
+[\] mfoc -O dump.mfd -D
+[/] Debug mode for troubleshooting
+
+[\] mfoc -O dump.mfd -VV
+[/] Maximum verbosity
+
+[\] mfoc -O dump.mfd -n
+[/] Disable nested attack (rare use case)
+
+[\] mfoc -O dump.mfd -N
+[/] Force nested attack only
+
+[\] mfoc -O dump.mfd -m
+[/] Minimal nonce mode
+
+[\] mfoc -O dump.mfd -p 200
+[/] Increase probe count for difficult cards
+
+[\] mfoc -O dump.mfd -r 10
+[/] Retry failed sectors 10 times
+
+[\] sudo apt install mfoc
+[/] Install MFOC on Debian‑based systems
+
+[\] hf mf nested
+[/] Proxmark3 nested attack (companion tool)
+
+[\] hf mf hardnested
+[/] Hardnested attack (companion tool)
+
+[\] nfc-list
+[/] Verify NFC reader detection (libnfc)
+
+[\] nfc-mfclassic r a dump.mfd
+[/] Read MIFARE Classic using libnfc (alternative workflow)

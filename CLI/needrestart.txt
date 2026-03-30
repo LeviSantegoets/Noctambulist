@@ -1,0 +1,31 @@
+[X] Needrestart Command List (Check Services for Restarts)
+
+[\] needrestart
+[/] Scan system for services requiring restart after updates
+
+[\] needrestart -r a
+[/] Automatically restart all services if needed
+
+[\] needrestart -r l
+[/] List only services that need restarting
+
+[\] needrestart -r n
+[/] Do not restart any services, just report
+
+[\] needrestart -p
+[/] Show processes using old versions of libraries
+
+[\] needrestart -v
+[/] Verbose output
+
+[\] needrestart -f
+[/] Force check even if not running as root
+
+[\] needrestart -h
+[/] Show help menu
+
+[\] needrestart --version
+[/] Show version
+
+[\] needrestart -b
+[/] Brief summary output

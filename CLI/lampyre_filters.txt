@@ -1,0 +1,219 @@
+# Lampyre Filters
+# Format: [\] filter [/] description [X] menutitlename
+
+[X] Lampyre (Filters)
+
+# -------------------------
+# ENTITY TYPE FILTERS
+# -------------------------
+
+[\] type:person
+[/] Show only person entities
+
+[\] type:organization
+[/] Show only organizations
+
+[\] type:email
+[/] Show only email addresses
+
+[\] type:phone
+[/] Show only phone numbers
+
+[\] type:domain
+[/] Show only domains
+
+[\] type:ip
+[/] Show only IP addresses
+
+[\] type:url
+[/] Show only URLs
+
+[\] type:username
+[/] Show only usernames
+
+[\] type:cryptocurrency
+[/] Show only crypto wallets
+
+[\] type:location
+[/] Show only geographic locations
+
+# -------------------------
+# DATA SOURCE FILTERS
+# -------------------------
+
+[\] source:whois
+[/] Data originating from WHOIS
+
+[\] source:dns
+[/] Data from DNS lookups
+
+[\] source:breach
+[/] Data from breach datasets
+
+[\] source:social
+[/] Data from social media sources
+
+[\] source:darkweb
+[/] Data from dark web sources
+
+[\] source:blockchain
+[/] Data from blockchain analysis
+
+[\] source:certificate
+[/] Data from SSL certificate records
+
+# -------------------------
+# DOMAIN / INTERNET FILTERS
+# -------------------------
+
+[\] domain:example.com
+[/] Show entities related to a specific domain
+
+[\] -domain:google.com
+[/] Exclude a domain
+
+[\] tld:.onion
+[/] Show only onion domains
+
+[\] tld:.ru
+[/] Show domains with .ru TLD
+
+[\] extension:php
+[/] URLs ending in .php
+
+[\] extension:js
+[/] URLs ending in .js
+
+[\] -extension:png
+[/] Exclude PNG files
+
+[\] -extension:jpg
+[/] Exclude JPG images
+
+# -------------------------
+# EMAIL FILTERS
+# -------------------------
+
+[\] email:gmail.com
+[/] Show Gmail addresses
+
+[\] email:yahoo.com
+[/] Show Yahoo addresses
+
+[\] email-domain:example.com
+[/] Emails from specific domain
+
+[\] -email-domain:spam.com
+[/] Exclude email domain
+
+[\] breach:true
+[/] Emails found in breaches
+
+# -------------------------
+# PHONE FILTERS
+# -------------------------
+
+[\] phone:+1
+[/] Show US numbers
+
+[\] phone:+44
+[/] Show UK numbers
+
+[\] phone:+31
+[/] Show Netherlands numbers
+
+[\] -phone:+86
+[/] Exclude Chinese numbers
+
+# -------------------------
+# CRYPTOCURRENCY FILTERS
+# -------------------------
+
+[\] crypto:bitcoin
+[/] Bitcoin wallet addresses
+
+[\] crypto:ethereum
+[/] Ethereum wallet addresses
+
+[\] crypto:transaction
+[/] Show blockchain transactions
+
+[\] amount:>1btc
+[/] Transactions larger than 1 BTC
+
+[\] amount:<0.1btc
+[/] Small crypto transactions
+
+# -------------------------
+# GEO / LOCATION FILTERS
+# -------------------------
+
+[\] country:US
+[/] Entities linked to United States
+
+[\] country:NL
+[/] Entities linked to Netherlands
+
+[\] city:London
+[/] Entities associated with London
+
+[\] -country:CN
+[/] Exclude China
+
+# -------------------------
+# RELATIONSHIP GRAPH FILTERS
+# -------------------------
+
+[\] relation:owns
+[/] Ownership relationships
+
+[\] relation:registered-to
+[/] Registration relationships
+
+[\] relation:linked
+[/] Linked entities
+
+[\] relation:hosted-on
+[/] Hosting relationships
+
+[\] relation:communicates-with
+[/] Communication relationships
+
+# -------------------------
+# TEXT SEARCH FILTERS
+# -------------------------
+
+[\] contains:"admin"
+[/] Entities containing “admin”
+
+[\] contains:"login"
+[/] Entities containing “login”
+
+[\] contains:"password"
+[/] Entities containing “password”
+
+[\] -contains:"test"
+[/] Exclude entries containing “test”
+
+# -------------------------
+# ADVANCED FILTERS
+# -------------------------
+
+[\] regex:admin.*
+[/] Regex search for admin patterns
+
+[\] regex:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}
+[/] Regex email pattern
+
+[\] date:>2023
+[/] Data newer than 2023
+
+[\] date:<2020
+[/] Data older than 2020
+
+[\] confidence:high
+[/] Show only high-confidence intelligence
+
+[\] score:>80
+[/] Show high scoring results
+```

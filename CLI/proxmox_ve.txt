@@ -1,0 +1,184 @@
+# Proxmox VE Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Proxmox VE Command List
+
+[\] pveversion
+[/] Show Proxmox VE version
+
+[\] pveversion -v
+[/] Show detailed Proxmox package versions
+
+[\] systemctl status pvedaemon
+[/] Check PVE daemon status
+
+[\] systemctl restart pvedaemon
+[/] Restart PVE daemon
+
+[\] systemctl restart pveproxy
+[/] Restart web interface
+
+[\] systemctl restart pvestatd
+[/] Restart Proxmox statistics service
+
+[\] systemctl restart pve-cluster
+[/] Restart cluster service
+
+[\] systemctl restart corosync
+[/] Restart Corosync (cluster communication)
+
+[\] pvecm status
+[/] Show cluster status
+
+[\] pvecm nodes
+[/] List cluster nodes
+
+[\] pvecm add <IP>
+[/] Join a node to a cluster
+
+[\] pvecm delnode <node>
+[/] Remove a node from cluster
+
+[\] pvecm expected <number>
+[/] Set expected quorum votes
+
+[\] qm list
+[/] List all virtual machines
+
+[\] qm start <VMID>
+[/] Start a VM
+
+[\] qm stop <VMID>
+[/] Stop a VM
+
+[\] qm shutdown <VMID>
+[/] Gracefully shut down a VM
+
+[\] qm reboot <VMID>
+[/] Reboot a VM
+
+[\] qm suspend <VMID>
+[/] Suspend a VM
+
+[\] qm resume <VMID>
+[/] Resume a VM
+
+[\] qm create <VMID> --name testvm --memory 2048
+[/] Create a new VM
+
+[\] qm destroy <VMID>
+[/] Delete a VM
+
+[\] qm config <VMID>
+[/] Show VM configuration
+
+[\] qm set <VMID> --memory 4096
+[/] Change VM memory
+
+[\] qm set <VMID> --cores 4
+[/] Change VM CPU cores
+
+[\] qm set <VMID> --net0 virtio,bridge=vmbr0
+[/] Add or modify network interface
+
+[\] qm set <VMID> --scsi0 local-lvm:32
+[/] Add a disk to VM
+
+[\] qm resize <VMID> scsi0 +20G
+[/] Resize VM disk
+
+[\] qm migrate <VMID> <target-node>
+[/] Migrate VM to another node
+
+[\] qm snapshot <VMID> snap1
+[/] Create a snapshot
+
+[\] qm listsnapshot <VMID>
+[/] List snapshots
+
+[\] qm delsnapshot <VMID> snap1
+[/] Delete a snapshot
+
+[\] pct list
+[/] List LXC containers
+
+[\] pct start <CTID>
+[/] Start a container
+
+[\] pct stop <CTID>
+[/] Stop a container
+
+[\] pct shutdown <CTID>
+[/] Gracefully shut down container
+
+[\] pct enter <CTID>
+[/] Enter container shell
+
+[\] pct exec <CTID> -- bash -c "command"
+[/] Run command inside container
+
+[\] pct create <CTID> template.tar.gz -storage local-lvm
+[/] Create a new container
+
+[\] pct destroy <CTID>
+[/] Delete a container
+
+[\] pct config <CTID>
+[/] Show container configuration
+
+[\] pct set <CTID> -memory 2048
+[/] Change container memory
+
+[\] pct set <CTID> -cores 2
+[/] Change container CPU cores
+
+[\] vzdump <VMID>
+[/] Backup a VM or container
+
+[\] vzdump <VMID> --storage local --mode snapshot
+[/] Snapshot backup
+
+[\] vzdump <VMID> --compress zstd
+[/] Backup with ZSTD compression
+
+[\] qmrestore backup.vma.zst <VMID>
+[/] Restore a VM from backup
+
+[\] pct restore <CTID> backup.tar.zst
+[/] Restore a container from backup
+
+[\] pvesh get /nodes
+[/] Query API: list nodes
+
+[\] pvesh get /nodes/<node>/qemu
+[/] Query API: list VMs on a node
+
+[\] pvesh get /cluster/resources
+[/] Query API: cluster resources
+
+[\] pvesh set /nodes/<node>/qemu/<VMID>/status/start
+[/] Start VM via API
+
+[\] df -h
+[/] Show storage usage
+
+[\] pvesm status
+[/] Show storage status
+
+[\] pvesm list local
+[/] List storage content
+
+[\] pvesm add dir shared /mnt/shared
+[/] Add directory storage
+
+[\] pvesm add lvm thinpool local-lvm
+[/] Add LVM thinpool storage
+
+[\] journalctl -u pvedaemon
+[/] View PVE daemon logs
+
+[\] journalctl -u pveproxy
+[/] View web interface logs
+
+[\] tail -f /var/log/syslog
+[/] Watch system logs in real time

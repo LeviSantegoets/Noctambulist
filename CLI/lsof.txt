@@ -1,0 +1,46 @@
+[X] LSOF Command List (List Open Files)
+
+[\] lsof
+[/] List all open files
+
+[\] lsof -i
+[/] List all network connections
+
+[\] lsof -i :80
+[/] Show processes using port 80
+
+[\] lsof -i TCP
+[/] List only TCP connections
+
+[\] lsof -i UDP
+[/] List only UDP connections
+
+[\] lsof -u username
+[/] Show files opened by specific user
+
+[\] lsof -p PID
+[/] Show files opened by a specific process
+
+[\] lsof +D /path/to/dir
+[/] Show files opened under a directory
+
+[\] lsof -c processname
+[/] Show files opened by processes matching name
+
+[\] lsof -n
+[/] Do not resolve IP addresses to hostnames
+
+[\] lsof -P
+[/] Do not resolve port numbers to service names
+
+[\] lsof -t
+[/] Output only PIDs
+
+[\] lsof -r 5
+[/] Repeat output every 5 seconds
+
+[\] lsof --help
+[/] Show help menu
+
+[\] lsof --version
+[/] Show lsof version

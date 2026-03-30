@@ -1,0 +1,34 @@
+[X] PV Command List (Pipe Viewer / Monitor Data Throughput)
+
+[\] pv file.txt > /dev/null
+[/] Show progress while reading file
+
+[\] cat file.txt | pv | gzip > file.txt.gz
+[/] Monitor progress of a pipeline
+
+[\] pv -p -t -e file.txt > /dev/null
+[/] Show progress, ETA, and elapsed time
+
+[\] pv -r file.txt > /dev/null
+[/] Show data transfer rate
+
+[\] pv -s 100M file.txt > /dev/null
+[/] Set total size for ETA calculation
+
+[\] pv -f file.txt > /dev/null
+[/] Force output to terminal even if stdout is redirected
+
+[\] dd if=file.txt | pv | dd of=file2.txt
+[/] Monitor dd data transfer
+
+[\] pv -q file.txt > /dev/null
+[/] Quiet mode (suppress output)
+
+[\] pv -N "Copying" file.txt > /dev/null
+[/] Set custom name label for progress
+
+[\] pv --help
+[/] Show help menu
+
+[\] pv --version
+[/] Show version

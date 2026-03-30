@@ -1,0 +1,135 @@
+# Mirage Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Mirage Command List (DragonOS Focal)
+
+[\] mirage --help
+[/] Show help menu
+
+[\] mirage --list
+[/] List all available attack modules
+
+[\] mirage --interfaces
+[/] Show available wireless interfaces
+
+[\] mirage --monitor wlan0
+[/] Enable monitor mode on wlan0
+
+[\] mirage --restore wlan0
+[/] Restore wlan0 to managed mode
+
+# -------------------------
+# SCANNING & DISCOVERY
+# -------------------------
+
+[\] mirage scan --iface wlan0mon
+[/] Scan for nearby Wi-Fi networks
+
+[\] mirage scan --iface wlan0mon --channel 6
+[/] Scan a specific channel
+
+[\] mirage scan --iface wlan0mon --wps
+[/] Scan for WPS-enabled APs
+
+# -------------------------
+# DEAUTH / DISASSOC ATTACKS
+# -------------------------
+
+[\] mirage deauth --iface wlan0mon --bssid <AP_MAC>
+[/] Deauth all clients from AP
+
+[\] mirage deauth --iface wlan0mon --bssid <AP_MAC> --client <CLIENT_MAC>
+[/] Deauth a specific client
+
+[\] mirage deauth --iface wlan0mon --bssid <AP_MAC> --count 50
+[/] Send 50 deauth frames
+
+# -------------------------
+# BEACON FLOODING
+# -------------------------
+
+[\] mirage beacon --iface wlan0mon
+[/] Random SSID beacon flood
+
+[\] mirage beacon --iface wlan0mon --ssid-list ssids.txt
+[/] Beacon flood using custom SSID list
+
+[\] mirage beacon --iface wlan0mon --clone <AP_MAC>
+[/] Clone AP beacons
+
+# -------------------------
+# PROBE REQUEST FLOOD
+# -------------------------
+
+[\] mirage probe --iface wlan0mon
+[/] Random probe request flood
+
+[\] mirage probe --iface wlan0mon --ssid-list ssids.txt
+[/] Probe flood using SSID list
+
+# -------------------------
+# AUTHENTICATION FLOOD
+# -------------------------
+
+[\] mirage auth --iface wlan0mon --bssid <AP_MAC>
+[/] Authentication flood attack
+
+[\] mirage auth --iface wlan0mon --bssid <AP_MAC> --rate 100
+[/] Send 100 auth frames per second
+
+# -------------------------
+# EAPOL / WPA HANDSHAKE ATTACKS
+# -------------------------
+
+[\] mirage eapol --iface wlan0mon --bssid <AP_MAC>
+[/] EAPOL handshake stress test
+
+[\] mirage eapol --iface wlan0mon --bssid <AP_MAC> --force
+[/] Force EAPOL flood
+
+# -------------------------
+# HIDDEN SSID REVEAL
+# -------------------------
+
+[\] mirage hidden --iface wlan0mon --bssid <AP_MAC>
+[/] Attempt to reveal hidden SSID
+
+# -------------------------
+# WIDS / WIPS CONFUSION
+# -------------------------
+
+[\] mirage wids --iface wlan0mon
+[/] Confuse wireless intrusion detection systems
+
+# -------------------------
+# CUSTOM FRAME INJECTION
+# -------------------------
+
+[\] mirage inject --iface wlan0mon --frame frame.hex
+[/] Inject custom 802.11 frame from hex file
+
+[\] mirage inject --iface wlan0mon --repeat 100
+[/] Inject frame 100 times
+
+# -------------------------
+# CHANNEL CONTROL
+# -------------------------
+
+[\] mirage --channel 1
+[/] Lock interface to channel 1
+
+[\] mirage --channel-hop
+[/] Enable channel hopping
+
+# -------------------------
+# LOGGING & OUTPUT
+# -------------------------
+
+[\] mirage --log output.log
+[/] Save output to log file
+
+[\] mirage --verbose
+[/] Enable verbose mode
+
+[\] mirage --debug
+[/] Enable debug mode

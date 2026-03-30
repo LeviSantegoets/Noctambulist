@@ -1,0 +1,148 @@
+[X] libnfc Command List
+
+[\] nfc-list
+[/] List all detected NFC devices and supported modes
+
+[\] nfc-list -v
+[/] Verbose device listing
+
+[\] nfc-list -t
+[/] Show supported NFC technologies
+
+[\] nfc-list -s
+[/] Show device capabilities
+
+[\] nfc-poll
+[/] Poll for nearby NFC tags
+
+[\] nfc-poll -v
+[/] Verbose polling output
+
+[\] nfc-poll -t 5
+[/] Poll for 5 seconds then stop
+
+[\] nfc-poll -k
+[/] Keep polling until manually stopped
+
+[\] nfc-mfclassic r a dump.mfd
+[/] Read MIFARE Classic using key A
+
+[\] nfc-mfclassic r b dump.mfd
+[/] Read using key B
+
+[\] nfc-mfclassic w a dump.mfd
+[/] Write dump to card using key A
+
+[\] nfc-mfclassic w b dump.mfd
+[/] Write using key B
+
+[\] nfc-mfclassic R a dump.mfd
+[/] Restore card from dump (key A)
+
+[\] nfc-mfclassic R b dump.mfd
+[/] Restore card from dump (key B)
+
+[\] nfc-mfclassic r a -o sector4.bin
+[/] Read only sector 4
+
+[\] nfc-mfclassic r a -f
+[/] Force read even if some sectors fail
+
+[\] nfc-mfclassic w a -f
+[/] Force write even if errors occur
+
+[\] nfc-mful info
+[/] Show Ultralight/NTAG tag info
+
+[\] nfc-mful read
+[/] Read full Ultralight/NTAG memory
+
+[\] nfc-mful write 4 11223344
+[/] Write page 4 with data
+
+[\] nfc-mful dump dump.bin
+[/] Dump entire tag to file
+
+[\] nfc-mful restore dump.bin
+[/] Restore tag from dump
+
+[\] nfc-anticol
+[/] Perform anti‑collision and show UID
+
+[\] nfc-anticol -v
+[/] Verbose anti‑collision
+
+[\] nfc-anticol -t 14443a
+[/] Force ISO14443‑A mode
+
+[\] nfc-anticol -t 15693
+[/] Force ISO15693 mode
+
+[\] nfc-anticol -n
+[/] No anti‑collision loop (single attempt)
+
+[\] nfc-emulate-forum-tag2
+[/] Emulate a Type 2 NFC tag
+
+[\] nfc-emulate-forum-tag2 -f tag.bin
+[/] Emulate tag using binary file
+
+[\] nfc-emulate-forum-tag2 -v
+[/] Verbose emulation output
+
+[\] nfc-emulate-forum-tag4
+[/] Emulate a Type 4 NFC tag
+
+[\] nfc-relay
+[/] Start NFC relay mode (reader ↔ tag)
+
+[\] nfc-relay -v
+[/] Verbose relay mode
+
+[\] nfc-relay -t
+[/] Test relay without forwarding
+
+[\] nfc-relay -o log.txt
+[/] Log relay traffic to file
+
+[\] nfc-sniff
+[/] Sniff NFC communication (limited support)
+
+[\] nfc-sniff -v
+[/] Verbose sniffing
+
+[\] nfc-sniff -o sniff.log
+[/] Save sniffed frames to file
+
+[\] nfc-scan-device
+[/] Scan for NFC devices and show details
+
+[\] nfc-scan-device -v
+[/] Verbose scan
+
+[\] nfc-scan-device -g
+[/] Show supported drivers
+
+[\] nfc-scan-device -u
+[/] Show USB device info
+
+[\] sudo nano /etc/nfc/libnfc.conf
+[/] Edit global libnfc configuration
+
+[\] export LIBNFC_LOG_LEVEL=3
+[/] Set log level (0–3)
+
+[\] export LIBNFC_DEVICE=pn532_uart:/dev/ttyUSB0
+[/] Force specific NFC device
+
+[\] export LIBNFC_DEVICE=acr122_usb
+[/] Force ACR122U reader
+
+[\] sudo apt install libnfc-bin libnfc-examples
+[/] Install libnfc tools on Debian‑based systems
+
+[\] sudo apt install libnfc-dev
+[/] Install development headers
+
+[\] nfc-list
+[/] Verify installation and device detection

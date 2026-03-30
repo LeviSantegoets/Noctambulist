@@ -1,0 +1,103 @@
+[X] QSpectrumAnalyzer Command List
+
+[\] qspectrumanalyzer
+[/] Launch QSpectrumAnalyzer GUI for real-time spectrum analysis
+
+[\] qspectrumanalyzer --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] qspectrumanalyzer --device rtl
+[/] Use RTL-SDR for spectrum analysis
+
+[\] qspectrumanalyzer --device hackrf
+[/] Use HackRF SDR
+
+[\] qspectrumanalyzer --device usrp
+[/] Use USRP SDR
+
+[\] qspectrumanalyzer --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] qspectrumanalyzer -f 100e6
+[/] Set center frequency to 100 MHz
+
+[\] qspectrumanalyzer -s 2e6
+[/] Set SDR sample rate to 2 MSPS
+
+[\] qspectrumanalyzer -g 30
+[/] Set SDR gain to 30 dB
+
+[\] qspectrumanalyzer --freq-min 88e6 --freq-max 108e6
+[/] Set frequency range to 88–108 MHz
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] qspectrumanalyzer --file capture.iq
+[/] Load recorded IQ file for analysis
+
+[\] qspectrumanalyzer --audio
+[/] Enable audio demodulation for audio signals
+
+[\] qspectrumanalyzer --save-screenshot spectrum.png
+[/] Save current spectrum view as PNG
+
+# -------------------------
+# SIGNAL PROCESSING / ANALYSIS
+# -------------------------
+
+[\] qspectrumanalyzer --fft-size 16384
+[/] Set FFT size
+
+[\] qspectrumanalyzer --fft-window hamming
+[/] Apply Hamming window
+
+[\] qspectrumanalyzer --averaging 10
+[/] Average 10 FFT frames
+
+[\] qspectrumanalyzer --sweep 1
+[/] Perform real-time frequency sweep
+
+[\] qspectrumanalyzer --filter lowpass 50e3
+[/] Apply lowpass filter at 50 kHz
+
+[\] qspectrumanalyzer --filter highpass 1e3
+[/] Apply highpass filter at 1 kHz
+
+# -------------------------
+# VISUALIZATION / MONITORING
+# -------------------------
+
+[\] qspectrumanalyzer --waterfall
+[/] Enable waterfall display
+
+[\] qspectrumanalyzer --color jet
+[/] Set color map for waterfall
+
+[\] qspectrumanalyzer --markers 5
+[/] Display 5 frequency markers
+
+[\] qspectrumanalyzer --cursor
+[/] Enable frequency/time cursor
+
+[\] qspectrumanalyzer --annotate "Test Signal"
+[/] Add annotation to display
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 100e6 -s 2e6 - | qspectrumanalyzer --stdin
+[/] Analyze live 100 MHz signal from RTL-SDR
+
+[\] rtl_sdr -f 137.1e6 -s 2e6 - | csdr convert_u8_f | qspectrumanalyzer --stdin
+[/] Process SDR IQ stream through CSDR before spectrum analysis

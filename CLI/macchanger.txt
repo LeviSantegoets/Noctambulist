@@ -1,0 +1,34 @@
+[X] macchanger Command List
+
+[\] macchanger -s eth0
+[/] Show current MAC address
+
+[\] macchanger -r eth0
+[/] Set a fully random MAC address
+
+[\] macchanger -a eth0
+[/] Set a random MAC from the same vendor
+
+[\] macchanger -A eth0
+[/] Set a random MAC from a different vendor
+
+[\] macchanger -m 00:11:22:33:44:55 eth0
+[/] Set a specific MAC address
+
+[\] macchanger -p eth0
+[/] Reset MAC to permanent hardware address
+
+[\] macchanger -l
+[/] List all known vendors
+
+[\] ip link set eth0 down
+[/] Bring interface down (required before changing MAC)
+
+[\] ip link set eth0 up
+[/] Bring interface back up
+
+[\] ifconfig eth0 down
+[/] Alternative: bring interface down
+
+[\] ifconfig eth0 up
+[/] Alternative: bring interface up

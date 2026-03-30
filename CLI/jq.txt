@@ -1,0 +1,46 @@
+[X] JQ Command List (JSON Processor)
+
+[\] jq . file.json
+[/] Pretty-print JSON file
+
+[\] jq '.key' file.json
+[/] Extract value of a key
+
+[\] jq '.key | .subkey' file.json
+[/] Extract nested keys
+
+[\] jq '.[]' file.json
+[/] Iterate over array elements
+
+[\] jq 'map(.key)' file.json
+[/] Apply transformation to all elements in array
+
+[\] jq 'select(.key=="value")' file.json
+[/] Filter objects by key=value
+
+[\] jq -r '.key' file.json
+[/] Output raw strings (no quotes)
+
+[\] jq 'length' file.json
+[/] Get number of elements in array or keys in object
+
+[\] jq 'sort_by(.key)' file.json
+[/] Sort array of objects by key
+
+[\] jq 'del(.key)' file.json
+[/] Delete a key from object
+
+[\] jq '. + {"newkey":"newvalue"}' file.json
+[/] Add new key-value pair
+
+[\] jq --slurp '.' *.json
+[/] Combine multiple JSON files into an array
+
+[\] jq -c '.[]' file.json
+[/] Compact output (one object per line)
+
+[\] jq --help
+[/] Show help menu
+
+[\] jq --version
+[/] Show jq version

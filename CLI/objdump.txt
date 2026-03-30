@@ -1,0 +1,43 @@
+[X] Objdump Command List (Binary Analysis and Disassembly)
+
+[\] objdump -f file
+[/] Display file header info
+
+[\] objdump -h file
+[/] Display section headers
+
+[\] objdump -s file
+[/] Display full contents of all sections
+
+[\] objdump -d file
+[/] Disassemble executable sections
+
+[\] objdump -D file
+[/] Disassemble all sections
+
+[\] objdump -t file
+[/] Display symbol table
+
+[\] objdump -T file
+[/] Display dynamic symbol table
+
+[\] objdump -r file
+[/] Display relocation entries
+
+[\] objdump -x file
+[/] Display all headers (verbose)
+
+[\] objdump -p file
+[/] Display private header info (program headers)
+
+[\] objdump -S file
+[/] Disassemble with source code (if available)
+
+[\] objdump -j .text file
+[/] Display specific section only
+
+[\] objdump --help
+[/] Show help menu
+
+[\] objdump --version
+[/] Show objdump version

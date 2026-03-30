@@ -1,0 +1,121 @@
+[X] pf (Packet Filter) Command List
+
+[\] pfctl -e
+[/] Enable pf firewall
+
+[\] pfctl -d
+[/] Disable pf firewall
+
+[\] pfctl -f /etc/pf.conf
+[/] Load/reload configuration file
+
+[\] pfctl -nf /etc/pf.conf
+[/] Check config syntax without applying
+
+[\] pfctl -sr
+[/] Show active filter rules
+
+[\] pfctl -sn
+[/] Show NAT rules
+
+[\] pfctl -sa
+[/] Show all rules and info
+
+[\] pfctl -s info
+[/] Show general pf status
+
+[\] pfctl -s states
+[/] Show active connection states
+
+[\] pfctl -s rules
+[/] Show filter rules
+
+[\] pfctl -s nat
+[/] Show NAT rules
+
+[\] pfctl -s tables
+[/] Show tables
+
+[\] pfctl -s memory
+[/] Show memory usage
+
+[\] pfctl -s interfaces
+[/] Show interface statistics
+
+[\] pfctl -s timeouts
+[/] Show timeout values
+
+[\] pfctl -s labels
+[/] Show rule labels and counters
+
+[\] pfctl -t blacklist -T show
+[/] Show table contents
+
+[\] pfctl -t blacklist -T add 1.2.3.4
+[/] Add IP to table
+
+[\] pfctl -t blacklist -T delete 1.2.3.4
+[/] Remove IP from table
+
+[\] pfctl -t blacklist -T flush
+[/] Clear table entries
+
+[\] pfctl -F all
+[/] Flush all rules and states (dangerous)
+
+[\] pfctl -F rules
+[/] Flush all rules
+
+[\] pfctl -F states
+[/] Clear connection states
+
+[\] pfctl -F nat
+[/] Flush NAT rules
+
+[\] pfctl -k 192.168.1.10
+[/] Kill states from IP
+
+[\] pfctl -k 192.168.1.10 -k 8.8.8.8
+[/] Kill connection between two hosts
+
+[\] tcpdump -n -e -ttt -i pflog0
+[/] View pf logs (OpenBSD)
+
+[\] tcpdump -i pflog0
+[/] Monitor firewall log interface
+
+[\] ifconfig pflog0 up
+[/] Enable logging interface
+
+[\] rcctl enable pf
+[/] Enable pf at boot (OpenBSD)
+
+[\] rcctl start pf
+[/] Start pf service
+
+[\] rcctl stop pf
+[/] Stop pf service
+
+[\] rcctl restart pf
+[/] Restart pf service
+
+[\] rcctl status pf
+[/] Show pf service status
+
+[\] nano /etc/pf.conf
+[/] Edit pf configuration file
+
+[\] pfctl -vvsr
+[/] Show rules with counters (verbose)
+
+[\] pfctl -vvss
+[/] Show states with details
+
+[\] pfctl -vvsn
+[/] Show NAT rules with counters
+
+[\] sysctl net.pf.states
+[/] Show number of active states
+
+[\] sysctl net.pf.default_rule
+[/] Show default rule behavior

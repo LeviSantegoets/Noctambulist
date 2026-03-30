@@ -1,0 +1,148 @@
+# MariaDB Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] MariaDB Command List
+
+[\] mariadb -u root -p
+[/] Log in to MariaDB (newer CLI)
+
+[\] mysql -u root -p
+[/] Log in using legacy MySQL client
+
+[\] SHOW DATABASES;
+[/] List all databases
+
+[\] CREATE DATABASE dbname;
+[/] Create a new database
+
+[\] DROP DATABASE dbname;
+[/] Delete a database
+
+[\] USE dbname;
+[/] Select a database
+
+[\] SHOW TABLES;
+[/] List all tables in the selected database
+
+[\] DESCRIBE tablename;
+[/] Show table structure
+
+[\] CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
+[/] Create a new table
+
+[\] DROP TABLE tablename;
+[/] Delete a table
+
+[\] ALTER TABLE tablename ADD COLUMN age INT;
+[/] Add a column to a table
+
+[\] ALTER TABLE tablename DROP COLUMN age;
+[/] Remove a column from a table
+
+[\] INSERT INTO users (id, name) VALUES (1, 'John');
+[/] Insert a new row
+
+[\] SELECT * FROM users;
+[/] Select all rows from a table
+
+[\] SELECT name FROM users WHERE id=1;
+[/] Select rows with a condition
+
+[\] UPDATE users SET name='Mike' WHERE id=1;
+[/] Update data in a table
+
+[\] DELETE FROM users WHERE id=1;
+[/] Delete rows from a table
+
+[\] CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+[/] Create a new MariaDB user
+
+[\] DROP USER 'user'@'localhost';
+[/] Delete a user
+
+[\] GRANT ALL PRIVILEGES ON dbname.* TO 'user'@'localhost';
+[/] Grant privileges to a user
+
+[\] REVOKE ALL PRIVILEGES ON dbname.* FROM 'user'@'localhost';
+[/] Revoke privileges
+
+[\] FLUSH PRIVILEGES;
+[/] Reload privilege tables
+
+[\] SHOW GRANTS FOR 'user'@'localhost';
+[/] Show user privileges
+
+[\] SET PASSWORD FOR 'user'@'localhost' = PASSWORD('newpass');
+[/] Change a user password
+
+[\] mariadb-dump dbname > backup.sql
+[/] Export a database (MariaDB dump tool)
+
+[\] mariadb-dump --all-databases > fullbackup.sql
+[/] Backup all databases
+
+[\] mariadb -u root -p dbname < backup.sql
+[/] Import a database
+
+[\] SHOW PROCESSLIST;
+[/] Show running MariaDB processes
+
+[\] KILL process_id;
+[/] Kill a MariaDB process
+
+[\] SHOW VARIABLES;
+[/] Show MariaDB configuration variables
+
+[\] SHOW STATUS;
+[/] Show server status information
+
+[\] SHOW ENGINE INNODB STATUS;
+[/] Show InnoDB engine diagnostics
+
+[\] SHOW PLUGINS;
+[/] List installed MariaDB plugins
+
+[\] SHOW STORAGE ENGINES;
+[/] List available storage engines
+
+[\] SHOW OPEN TABLES;
+[/] Show open tables
+
+[\] SHOW FULL PROCESSLIST;
+[/] Show detailed process list
+
+[\] SHOW BINLOG EVENTS;
+[/] Show binary log events
+
+[\] RESET MASTER;
+[/] Reset binary logs (replication)
+
+[\] SHOW SLAVE STATUS\G
+[/] Show replication slave status
+
+[\] SHOW MASTER STATUS;
+[/] Show replication master status
+
+[\] START SLAVE;
+[/] Start replication slave
+
+[\] STOP SLAVE;
+[/] Stop replication slave
+
+[\] SET GLOBAL max_connections = 500;
+[/] Change global server variable
+
+[\] SELECT VERSION();
+[/] Show MariaDB version
+
+[\] systemctl status mariadb
+[/] Check MariaDB service status
+
+[\] systemctl restart mariadb
+[/] Restart MariaDB service
+
+[\] galera_new_cluster
+[/] Start a new Galera cluster (MariaDB cluster)
+
+[\] SHOW STATUS LIKE 'wsrep%';
+[/] Show Galera cluster status

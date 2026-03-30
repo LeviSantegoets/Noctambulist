@@ -1,0 +1,110 @@
+[X] PDW Pager Decoder Command List
+
+[\] pdw
+[/] Launch PDW pager decoder GUI
+
+[\] pdw.exe
+[/] Start PDW on Windows
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] rtl_fm -f 929M -M nfm -s 22050 | pdw
+[/] Pipe RTL-SDR pager audio into PDW decoder
+
+[\] rtl_fm -f 931M -M nfm -s 22050 | pdw
+[/] Receive pager traffic on 931 MHz band
+
+[\] audio cable (Virtual Audio Cable)
+[/] Route SDR audio output to PDW input
+
+# -------------------------
+# DECODER TYPES
+# -------------------------
+
+[\] POCSAG 512
+[/] Decode POCSAG 512 baud pager messages
+
+[\] POCSAG 1200
+[/] Decode POCSAG 1200 baud pager messages
+
+[\] POCSAG 2400
+[/] Decode POCSAG 2400 baud pager messages
+
+[\] FLEX
+[/] Decode FLEX pager signals
+
+[\] ERMES
+[/] Decode ERMES pager protocol
+
+# -------------------------
+# AUDIO SETTINGS
+# -------------------------
+
+[\] Options → Soundcard → Input
+[/] Select audio input device
+
+[\] Options → Soundcard → Output
+[/] Select audio output device
+
+[\] Options → Signal Level
+[/] Adjust input signal level
+
+[\] Options → Invert Signal
+[/] Invert audio polarity if decoding fails
+
+# -------------------------
+# FILTER / SIGNAL OPTIONS
+# -------------------------
+
+[\] Options → Filter
+[/] Enable audio filtering for pager signals
+
+[\] Options → Auto Baud
+[/] Automatically detect pager baud rate
+
+[\] Options → AFC
+[/] Enable automatic frequency control
+
+# -------------------------
+# MESSAGE DISPLAY
+# -------------------------
+
+[\] Monitor Window
+[/] View decoded pager messages in real time
+
+[\] Address Column
+[/] Shows pager capcode
+
+[\] Message Column
+[/] Shows decoded pager text message
+
+[\] Timestamp Column
+[/] Displays message reception time
+
+# -------------------------
+# LOGGING
+# -------------------------
+
+[\] Options → Log Messages
+[/] Enable logging of pager messages
+
+[\] File → Save Log
+[/] Save pager messages to file
+
+[\] File → Export
+[/] Export decoded messages
+
+# -------------------------
+# COMMON SDR SETUPS
+# -------------------------
+
+[\] SDR# → Virtual Audio Cable → PDW
+[/] Use SDR# as receiver and route audio to PDW
+
+[\] SDR++ → Virtual Audio Cable → PDW
+[/] Use SDR++ with virtual audio routing
+
+[\] HDSDR → VAC → PDW
+[/] Use HDSDR with Virtual Audio Cable to decode pagers

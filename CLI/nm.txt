@@ -1,0 +1,37 @@
+[X] NM Command List (Symbol Table Inspection)
+
+[\] nm file
+[/] Display symbols from object or executable file
+
+[\] nm -a file
+[/] Display all symbols, including debugger-only
+
+[\] nm -g file
+[/] Display only external (global) symbols
+
+[\] nm -n file
+[/] Sort symbols by address
+
+[\] nm -C file
+[/] Demangle C++ symbol names
+
+[\] nm -S file
+[/] Display size of each symbol
+
+[\] nm -u file
+[/] Display undefined symbols
+
+[\] nm -D file
+[/] Display dynamic symbols (shared libraries)
+
+[\] nm --defined-only file
+[/] Show only defined symbols
+
+[\] nm --extern-only file
+[/] Show only external symbols
+
+[\] nm --help
+[/] Show help menu
+
+[\] nm --version
+[/] Show nm version

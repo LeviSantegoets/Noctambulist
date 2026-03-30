@@ -1,0 +1,40 @@
+[X] ldapdomaindump Command List
+
+[\] ldapdomaindump ldap://192.168.1.10
+[/] Dump LDAP information anonymously
+
+[\] ldapdomaindump -u user@example.com -p password ldap://192.168.1.10
+[/] Authenticate and dump LDAP domain data
+
+[\] ldapdomaindump -u user -p password -d example.local ldap://192.168.1.10
+[/] Specify domain explicitly
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 -o output/
+[/] Save output to directory
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --no-html
+[/] Disable HTML report generation
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --no-json
+[/] Disable JSON output
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --no-grep
+[/] Disable grep-friendly output
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --grouped-json
+[/] Group JSON output by object type
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --minimal
+[/] Minimal output (faster scan)
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --resolve-sids
+[/] Resolve SIDs to names
+
+[\] ldapdomaindump -u user -p password ldap://192.168.1.10 --verbose
+[/] Enable verbose output
+
+[\] ldapdomaindump --help
+[/] Show help menu
+
+[\] ldapdomaindump --version
+[/] Show version

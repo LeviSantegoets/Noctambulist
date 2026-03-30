@@ -1,0 +1,40 @@
+[X] Inotifywatch Command List (Monitor File System Events Summary)
+
+[\] inotifywatch /path/to/dir
+[/] Monitor events in directory and print summary at exit
+
+[\] inotifywatch -r /path/to/dir
+[/] Monitor directory recursively
+
+[\] inotifywatch -t 10 /path/to/dir
+[/] Monitor for 10 seconds and then exit
+
+[\] inotifywatch -v /path/to/dir
+[/] Verbose mode (show detailed event info)
+
+[\] inotifywatch -q /path/to/dir
+[/] Quiet mode (less verbose output)
+
+[\] inotifywatch -e modify /path/to/file
+[/] Watch for file modifications
+
+[\] inotifywatch -e create /path/to/dir
+[/] Watch for creation of files or directories
+
+[\] inotifywatch -e delete /path/to/dir
+[/] Watch for deletions
+
+[\] inotifywatch -e move /path/to/dir
+[/] Watch for moves/renames
+
+[\] inotifywatch -e attrib /path/to/dir
+[/] Watch for attribute changes (permissions, timestamps)
+
+[\] inotifywatch --format '%w %f %e' /path/to/dir
+[/] Custom output format (directory, filename, event)
+
+[\] inotifywatch --help
+[/] Show help menu
+
+[\] inotifywatch --version
+[/] Show version

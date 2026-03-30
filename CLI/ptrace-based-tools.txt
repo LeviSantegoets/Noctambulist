@@ -1,0 +1,55 @@
+[X] Ptrace-Based Tools Command List (Debugging and Process Tracing)
+
+[\] strace -p 1234
+[/] Trace system calls of process with PID 1234
+
+[\] strace -e open,read,write ./program
+[/] Trace only specific system calls
+
+[\] strace -o output.log ./program
+[/] Save strace output to file
+
+[\] ltrace -p 1234
+[/] Trace library calls of process with PID 1234
+
+[\] ltrace ./program
+[/] Trace library calls of a program
+
+[\] ltrace -S ./program
+[/] Show system calls in ltrace output
+
+[\] gdb -p 1234
+[/] Attach GDB to running process for ptrace debugging
+
+[\] gdb ./program
+[/] Debug program using ptrace under the hood
+
+[\] pstack 1234
+[/] Show stack trace of a running process
+
+[\] pmap 1234
+[/] Show memory map of a process
+
+[\] lsof -p 1234
+[/] List open files of process (often ptrace-aware)
+
+[\] strace -c ./program
+[/] Show system call summary statistics
+
+[\] strace -f ./program
+[/] Trace child processes as well
+
+[\] perf record -p 1234
+[/] Profile process using perf (ptrace-based sampling)
+
+[\] perf report
+[/] Show collected performance report
+
+[\] ptrace --help
+[/] Show help menu (direct ptrace utility if available)
+
+[\] strace --version
+[/] Show strace version
+
+[\] ltrace --version
+[/] Show ltrace version

@@ -1,0 +1,46 @@
+[X] Lynis Command List (Security Auditing Tool)
+
+[\] lynis audit system
+[/] Perform a full system security audit
+
+[\] lynis show details
+[/] Display detailed information about checks
+
+[\] lynis show modules
+[/] List all available auditing modules
+
+[\] lynis show plugins
+[/] List loaded plugins
+
+[\] lynis update info
+[/] Check for the latest version and update info
+
+[\] lynis --tests-category malware
+[/] Run only tests related to malware detection
+
+[\] lynis --tests-category authentication
+[/] Run only authentication-related checks
+
+[\] lynis --tests-category network
+[/] Run network-related security checks
+
+[\] lynis --check-update
+[/] Check if Lynis has updates available
+
+[\] lynis --quick
+[/] Run a shorter, faster audit
+
+[\] lynis --pentest
+[/] Run tests useful for penetration testing
+
+[\] lynis --log-file /var/log/lynis.log
+[/] Specify custom log file location
+
+[\] lynis --report-file /tmp/report.txt
+[/] Output report to a specific file
+
+[\] lynis --help
+[/] Show help menu
+
+[\] lynis --version
+[/] Show Lynis version

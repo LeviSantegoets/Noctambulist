@@ -1,0 +1,100 @@
+[X] Meteor-Demod Command List
+
+[\] meteor_demod
+[/] Start Meteor-M2 satellite image demodulator
+
+[\] meteor_demod --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] meteor_demod --device rtl
+[/] Use RTL-SDR for Meteor-M2 reception
+
+[\] meteor_demod --device hackrf
+[/] Use HackRF SDR
+
+[\] meteor_demod --device usrp
+[/] Use USRP device
+
+[\] meteor_demod --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] meteor_demod -f 137.1e6
+[/] Tune to 137.1 MHz NOAA/Meteor satellite
+
+[\] meteor_demod -f 137.62e6
+[/] Tune to 137.62 MHz for Meteor-M2
+
+[\] meteor_demod -s 2e6
+[/] Set sample rate to 2 MSPS
+
+[\] meteor_demod -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] meteor_demod --file capture.iq
+[/] Decode satellite signal from recorded IQ file
+
+[\] meteor_demod --audio
+[/] Output demodulated audio
+
+[\] meteor_demod --save output.wav
+[/] Save demodulated audio to WAV file
+
+[\] meteor_demod --image output.png
+[/] Save processed Meteor satellite image
+
+# -------------------------
+# SIGNAL PROCESSING / DEMODULATION
+# -------------------------
+
+[\] meteor_demod --fm
+[/] FM demodulation for APT/Meteor signals
+
+[\] meteor_demod --am
+[/] AM demodulation (if needed)
+
+[\] meteor_demod --filter
+[/] Apply lowpass or bandpass filtering
+
+[\] meteor_demod --agc
+[/] Enable automatic gain control
+
+[\] meteor_demod --satellite meteor-m2
+[/] Select satellite type for optimized decoding
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] meteor_demod --spectrum
+[/] Display signal spectrum
+
+[\] meteor_demod --waterfall
+[/] Show waterfall of received signal
+
+[\] meteor_demod --verbose
+[/] Enable verbose output
+
+[\] meteor_demod --stats
+[/] Show decoding statistics
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_sdr -f 137.1e6 -s 2e6 - | meteor_demod --stdin
+[/] Receive Meteor-M2 signal from RTL-SDR and demodulate
+
+[\] rtl_sdr -f 137.62e6 -s 2e6 - | csdr convert_u8_f | meteor_demod --stdin
+[/] Process IQ stream through CSDR before demodulation

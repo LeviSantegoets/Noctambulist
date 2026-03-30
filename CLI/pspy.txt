@@ -1,0 +1,61 @@
+[X] pspy Command List
+
+[\] ./pspy64
+[/] Run pspy (64-bit binary)
+
+[\] ./pspy32
+[/] Run pspy (32-bit binary)
+
+[\] ./pspy64 -h
+[/] Show help menu
+
+[\] ./pspy64 -v
+[/] Show version
+
+[\] ./pspy64 -pf
+[/] Print file system events
+
+[\] ./pspy64 -pp
+[/] Print process events (default)
+
+[\] ./pspy64 -p
+[/] Show only process execution events
+
+[\] ./pspy64 -f
+[/] Show file system events only
+
+[\] ./pspy64 -i 1000
+[/] Set scan interval in milliseconds
+
+[\] ./pspy64 -r /tmp
+[/] Watch specific directory for activity
+
+[\] ./pspy64 -d
+[/] Enable debug output
+
+[\] ./pspy64 -s
+[/] Short output (less verbose)
+
+[\] ./pspy64 -t
+[/] Show timestamps
+
+[\] ./pspy64 -c
+[/] Colorize output
+
+[\] ./pspy64 -n
+[/] Disable colored output
+
+[\] ./pspy64 -l
+[/] Log output to file
+
+[\] ./pspy64 -o output.txt
+[/] Save output to file
+
+[\] ./pspy64 -r /var/www
+[/] Monitor web directory activity
+
+[\] ./pspy64 -r /etc
+[/] Monitor system configuration changes
+
+[\] ./pspy64 -r /home
+[/] Monitor user directory activity

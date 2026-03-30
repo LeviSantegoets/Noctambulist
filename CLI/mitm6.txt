@@ -1,0 +1,28 @@
+[X] Mitm6 Command List
+
+[\] mitm6
+[/] Launch mitm6 with default settings on current network
+
+[\] mitm6 -i eth0
+[/] Specify network interface to use
+
+[\] mitm6 -d example.local
+[/] Set target domain for attack
+
+[\] mitm6 -r 10.0.0.0/24
+[/] Restrict attack to a specific subnet
+
+[\] mitm6 --kill-dhcp
+[/] Kill rogue DHCPv6 servers
+
+[\] mitm6 --no-rogue-dhcp
+[/] Disable rogue DHCPv6 responses
+
+[\] mitm6 --verbose
+[/] Enable verbose logging
+
+[\] mitm6 --help
+[/] Show help menu
+
+[\] mitm6 --version
+[/] Show version
