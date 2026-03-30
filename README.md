@@ -17,32 +17,43 @@ From pentesting to DevOps, networking, system monitoring, reverse engineering, a
 Commands are presented in a clean format:
 
 [\\] command
+
 [/] description
+
 [X] tool/category
+
 Click → command is automatically copied
+
 Clear explanation of each command
+
 Organized for speed and clarity
+
 🔍 Filtering & Search
-Filter by tool, category, or keyword
+Filter by tool, just press the key of the first letter to search for.
 Quickly find exactly what you need in seconds
+
 💻 Clean UI
 Lightweight WinForms interface
 Fast, responsive, and minimalistic
 Works seamlessly on Windows
+
 ⚡ Benefits
 Stop searching documentation constantly
 Reduce copy/paste errors
 Instantly execute commands
 Organize hundreds of tools in one interface
+
 🛠️ Tech Stack
 Language: C#
 Framework: .NET WinForms
 Editor: Visual Studio Code
+
 🎯 Use Cases
 Red Teaming / Pentesting
 Linux & Windows Administration
 Cloud Operations & Security Testing
 Research, Automation & Testing
+
 👨‍💻 Author
 
 Levi Santegoets
