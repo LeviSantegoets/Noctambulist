@@ -3,6 +3,8 @@
 
 🌙 Noctambulist – The Ultimate CLI Command Hub
 
+[X] [\\] [/] #
+
 Noctambulist is a powerful command management tool supporting 300+ CLI utilities, designed to make your workflow faster, easier, and error-free. Built in C# using .NET WinForms and developed in VS Code by Levi Santegoets, it provides an intuitive interface for accessing, understanding, and copying commands instantly.
 
 🔹 Key Features
