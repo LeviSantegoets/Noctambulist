@@ -1,0 +1,73 @@
+[X] boofuzz Command List
+
+[\] python3 fuzz.py
+[/] Run a basic boofuzz fuzzing script
+
+[\] python3 fuzz.py --help
+[/] Show script help (if implemented)
+
+[\] from boofuzz import *
+[/] Import boofuzz library in Python script
+
+[\] session = Session(target=Target(connection=SocketConnection("127.0.0.1", 9999)))
+[/] Create fuzzing session targeting host/port
+
+[\] s_initialize("Request")
+[/] Initialize fuzzing request
+
+[\] s_string("FUZZ")
+[/] Define fuzzable string field
+
+[\] s_static("GET ")
+[/] Define static (non-fuzzed) data
+
+[\] s_delim(" ")
+[/] Define delimiter in request
+
+[\] s_block_start("header")
+[/] Start a block of fuzzable data
+
+[\] s_block_end("header")
+[/] End block
+
+[\] s_repeat("header", min_reps=1, max_reps=10)
+[/] Repeat a block multiple times
+
+[\] s_get("Request")
+[/] Retrieve defined request
+
+[\] session.connect(s_get("Request"))
+[/] Connect session to request definition
+
+[\] session.fuzz()
+[/] Start fuzzing process
+
+[\] session = Session(sleep_time=1)
+[/] Set delay between test cases
+
+[\] session = Session(crash_threshold=5)
+[/] Set crash detection threshold
+
+[\] SocketConnection("127.0.0.1", 9999, proto='tcp')
+[/] Define TCP connection target
+
+[\] SocketConnection("127.0.0.1", 9999, proto='udp')
+[/] Define UDP connection target
+
+[\] ProcessMonitor("target_binary")
+[/] Monitor target process for crashes
+
+[\] session = Session(target=Target(connection=SocketConnection("127.0.0.1", 9999)), monitors=[ProcessMonitor("binary")])
+[/] Attach process monitor to session
+
+[\] session = Session(web_port=26000)
+[/] Enable web interface for monitoring
+
+[\] session.render_graphviz()
+[/] Generate graph visualization of fuzzing structure
+
+[\] python3 -m boofuzz
+[/] Run boofuzz module directly (if available)
+
+[\] pip install boofuzz
+[/] Install boofuzz via pip

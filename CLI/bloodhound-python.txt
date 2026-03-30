@@ -1,0 +1,43 @@
+[X] bloodhound-python Command List
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c all
+[/] Collect all AD data using credentials
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c DCOnly
+[/] Collect only domain controller data
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --zip
+[/] Collect data and compress into ZIP for BloodHound
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All -ns 192.168.1.10
+[/] Specify DNS server
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --disable-autogc
+[/] Disable automatic Global Catalog resolution
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --dns-timeout 10
+[/] Set DNS timeout
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --workers 20
+[/] Set number of worker threads
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --exclude-dcs
+[/] Exclude domain controllers from collection
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All --kerberos
+[/] Use Kerberos authentication
+
+[\] bloodhound-python -u user -hashes LMHASH:NTHASH -d example.local -dc dc.example.local -c All
+[/] Authenticate using NTLM hashes
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c Group,LocalAdmin
+[/] Collect specific data types
+
+[\] bloodhound-python -u user -p password -d example.local -dc dc.example.local -c All -o output_dir
+[/] Save output to directory
+
+[\] bloodhound-python --help
+[/] Show help menu
+
+[\] bloodhound-python --version
+[/] Show version

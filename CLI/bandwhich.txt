@@ -1,0 +1,88 @@
+[X] bandwhich Command List
+
+[\] bandwhich
+[/] Run bandwhich (may require root)
+
+[\] sudo bandwhich
+[/] Run with root privileges (recommended)
+
+[\] bandwhich -h
+[/] Show help menu
+
+[\] bandwhich --help
+[/] Show detailed help
+
+[\] bandwhich --version
+[/] Show version
+
+[\] bandwhich -i eth0
+[/] Monitor specific interface
+
+[\] bandwhich --interface eth0
+[/] Specify network interface
+
+[\] bandwhich -n
+[/] Disable DNS resolution (show IPs only)
+
+[\] bandwhich --no-resolve
+[/] Do not resolve IP addresses to domains
+
+[\] bandwhich -r
+[/] Reverse DNS lookup
+
+[\] bandwhich --raw
+[/] Output raw data
+
+[\] bandwhich -p
+[/] Show processes using bandwidth
+
+[\] bandwhich --processes
+[/] Display per-process usage
+
+[\] bandwhich -t
+[/] Show total bandwidth usage
+
+[\] bandwhich --total
+[/] Display totals view
+
+[\] bandwhich -c
+[/] Show connections view
+
+[\] bandwhich --connections
+[/] Display active connections
+
+[\] bandwhich -s
+[/] Show strict mode (less aggregation)
+
+[\] bandwhich --strict
+[/] Enable strict mode
+
+[\] bandwhich -d
+[/] Debug mode
+
+[\] bandwhich --debug
+[/] Show debug information
+
+[\] bandwhich --log-to file.log
+[/] Log output to file
+
+[\] bandwhich --no-color
+[/] Disable colored output
+
+[\] bandwhich --color always
+[/] Force colored output
+
+[\] bandwhich --units bytes
+[/] Show bandwidth in bytes
+
+[\] bandwhich --units bits
+[/] Show bandwidth in bits
+
+[\] ip link show
+[/] List available network interfaces
+
+[\] ss -tup
+[/] Show active connections with processes
+
+[\] netstat -tulnp
+[/] Show listening ports and processes

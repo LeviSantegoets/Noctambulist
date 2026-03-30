@@ -1,0 +1,88 @@
+[X] Btlejack Command List
+
+[\] btlejack
+[/] Launch Btlejack with default settings
+
+[\] btlejack -h
+[/] Show help menu
+
+[\] btlejack -i
+[/] List available sniffing interfaces (Micro:Bit, etc.)
+
+[\] btlejack -d /dev/ttyACM0
+[/] Use specific hardware interface
+
+[\] btlejack -s
+[/] Start BLE sniffing mode
+
+[\] btlejack -s -d /dev/ttyACM0
+[/] Sniff BLE traffic using a specific device
+
+[\] btlejack -c 37
+[/] Sniff only on advertising channel 37
+
+[\] btlejack -c 37,38,39
+[/] Sniff on all BLE advertising channels
+
+[\] btlejack -t AA:BB:CC:DD:EE:FF
+[/] Target a specific BLE device
+
+[\] btlejack -f capture.pcap
+[/] Save sniffed packets to PCAP file
+
+[\] btlejack -w
+[/] Enable Wireshark live capture mode
+
+[\] btlejack -x
+[/] Enable extended BLE packet capture
+
+[\] btlejack -j
+[/] Enable jamming mode (authorized testing only)
+
+[\] btlejack -j -t AA:BB:CC:DD:EE:FF
+[/] Jam a specific BLE connection (authorized testing only)
+
+[\] btlejack -k
+[/] Kill active BLE connections (authorized testing only)
+
+[\] btlejack -r
+[/] Attempt BLE connection recovery
+
+[\] btlejack -p
+[/] Passive mode (no active interference)
+
+[\] btlejack -v
+[/] Enable verbose output
+
+[\] btlejack -vv
+[/] Extra verbose output
+
+[\] btlejack --version
+[/] Show Btlejack version
+
+[\] btlejack --check
+[/] Check hardware compatibility
+
+[\] btlejack --scan
+[/] Scan for nearby BLE devices
+
+[\] btlejack --follow AA:BB:CC:DD:EE:FF
+[/] Follow a BLE connection
+
+[\] btlejack --pcapng capture.pcapng
+[/] Save output in PCAPNG format
+
+[\] btlejack --raw raw.bin
+[/] Save raw BLE packets
+
+[\] sudo systemctl start bluetooth
+[/] Start Bluetooth service
+
+[\] sudo systemctl stop bluetooth
+[/] Stop Bluetooth service (recommended before sniffing)
+
+[\] sudo hciconfig hci0 down
+[/] Bring host Bluetooth interface down to avoid interference
+
+[\] sudo hciconfig hci0 up
+[/] Bring Bluetooth interface back up after testing

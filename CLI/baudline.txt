@@ -1,0 +1,112 @@
+[X] Baudline Command List
+
+[\] baudline
+[/] Launch Baudline signal analysis software
+
+[\] baudline --help
+[/] Show help and available command options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] baudline
+[/] Start GUI for real-time signal analysis
+
+[\] baudline -i input.wav
+[/] Load WAV file for analysis
+
+[\] baudline -r 48000
+[/] Set input sample rate to 48 kHz
+
+[\] baudline -c 2
+[/] Set number of channels (e.g., stereo = 2)
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] baudline -i /dev/audio
+[/] Use live audio input
+
+[\] baudline -i rtl_fm -f 137.1M -M fm
+[/] Pipe SDR audio into Baudline for analysis
+
+[\] baudline -i sox input.raw -t raw -r 44100 -e signed-integer -b 16 -c 1 -
+[/] Use SoX pipeline for raw audio input
+
+# -------------------------
+# SIGNAL PROCESSING
+# -------------------------
+
+[\] baudline -fft
+[/] Display FFT spectrum
+
+[\] baudline -wf
+[/] Show waterfall view
+
+[\] baudline -psd
+[/] Show power spectral density
+
+[\] baudline -xcorr
+[/] Perform cross-correlation analysis
+
+[\] baudline -zoom 10k:50k
+[/] Zoom into frequency range 10 kHz to 50 kHz
+
+[\] baudline -decimate 2
+[/] Downsample signal by factor of 2
+
+[\] baudline -detrend
+[/] Remove DC offset from signal
+
+[\] baudline -window hamming
+[/] Apply Hamming window function
+
+[\] baudline -filter lowpass 5k
+[/] Apply lowpass filter at 5 kHz
+
+[\] baudline -filter highpass 500
+[/] Apply highpass filter at 500 Hz
+
+# -------------------------
+# OUTPUT / LOGGING
+# -------------------------
+
+[\] baudline -o output.png
+[/] Save current view to PNG image
+
+[\] baudline -record output.wav
+[/] Record processed signal to WAV file
+
+[\] baudline -logfile analysis.log
+[/] Save analysis data to log file
+
+# -------------------------
+# VISUALIZATION / MONITORING
+# -------------------------
+
+[\] baudline -color jet
+[/] Set color map for waterfall and spectrogram
+
+[\] baudline -grid on
+[/] Enable grid overlay
+
+[\] baudline -markers 5
+[/] Show 5 frequency markers
+
+[\] baudline -cursor
+[/] Enable frequency/time cursor
+
+[\] baudline -annotate "Test Signal"
+[/] Add annotation to current display
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 137.1M -M fm -s 22050 - | baudline -i -
+[/] Analyze NOAA weather satellite audio in real-time
+
+[\] sox input.wav -t wav - | baudline -i -
+[/] Load and analyze WAV file

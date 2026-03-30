@@ -1,0 +1,121 @@
+[X] BlackArch OS Command List
+
+[\] sudo pacman -Syu
+[/] Update system packages
+
+[\] sudo pacman -S blackarch
+[/] Install the entire BlackArch toolset
+
+[\] sudo pacman -S blackarch-keyring
+[/] Install BlackArch signing keys
+
+[\] sudo pacman -S blackarch-mirrorlist
+[/] Install BlackArch mirror list
+
+[\] sudo pacman -Syy
+[/] Force refresh all package databases
+
+[\] sudo pacman -S blackarch-installer
+[/] Install the BlackArch installer
+
+[\] pacman -Sgg | grep blackarch
+[/] List all BlackArch tools
+
+[\] pacman -Ss blackarch
+[/] Search for BlackArch packages
+
+[\] pacman -Qi <tool>
+[/] Show detailed info about a tool
+
+[\] pacman -Ql <tool>
+[/] List files installed by a tool
+
+[\] pacman -Qs <keyword>
+[/] Search for tools by keyword
+
+[\] sudo pacman -S blackarch-recon
+[/] Install reconnaissance tools
+
+[\] sudo pacman -S blackarch-exploitation
+[/] Install exploitation tools
+
+[\] sudo pacman -S blackarch-crypto
+[/] Install cryptography tools
+
+[\] sudo pacman -S blackarch-wireless
+[/] Install wireless attack tools
+
+[\] sudo pacman -S blackarch-forensic
+[/] Install forensic tools
+
+[\] sudo pacman -S blackarch-webapp
+[/] Install web application testing tools
+
+[\] sudo pacman -S blackarch-malware
+[/] Install malware analysis tools
+
+[\] sudo pacman -S blackarch-fuzzer
+[/] Install fuzzing tools
+
+[\] sudo pacman -S blackarch-database
+[/] Install database assessment tools
+
+[\] sudo pacman -S blackarch-social
+[/] Install social engineering tools
+
+[\] sudo pacman -S <tool>
+[/] Install a specific tool
+
+[\] sudo pacman -R <tool>
+[/] Remove a tool
+
+[\] sudo pacman -Rns <tool>
+[/] Remove tool + configs + dependencies
+
+[\] sudo pacman -U <package.pkg.tar.zst>
+[/] Install a local package
+
+[\] sudo pacman -Sc
+[/] Clean old package cache
+
+[\] sudo pacman -Scc
+[/] Clean all cached packages
+
+[\] sudo systemctl enable NetworkManager
+[/] Enable NetworkManager
+
+[\] sudo systemctl start NetworkManager
+[/] Start NetworkManager
+
+[\] sudo timedatectl set-ntp true
+[/] Enable NTP time sync
+
+[\] ip link
+[/] Show network interfaces
+
+[\] ip a
+[/] Show IP addresses
+
+[\] iwconfig
+[/] Show wireless interface info
+
+[\] sudo blackarch-install
+[/] Start the guided installer
+
+[\] lsblk
+[/] List disks for partitioning
+
+[\] cfdisk /dev/sda
+[/] Partition disk
+
+[\] mkfs.ext4 /dev/sda1
+[/] Format partition
+
+[\] mount /dev/sda1 /mnt
+[/] Mount root partition
+
+[\] pacstrap /mnt base linux linux-firmware
+[/] Install base system
+
+[\] genfstab -U /mnt >> /mnt/etc/fstab
+[/] Generate fstab

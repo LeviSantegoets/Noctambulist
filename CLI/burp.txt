@@ -1,0 +1,106 @@
+[X] Burp Backup Command List
+
+[\] burp -a b
+[/] Run backup (client mode)
+
+[\] burp -a r
+[/] Run restore
+
+[\] burp -a l
+[/] List backups
+
+[\] burp -a t
+[/] Run test backup (dry run)
+
+[\] burp -a v
+[/] Verify backups
+
+[\] burp -a S
+[/] Run server mode
+
+[\] burp -a s
+[/] Run status monitor
+
+[\] burp -a m
+[/] Monitor running backup
+
+[\] burp -a c
+[/] Show client configuration
+
+[\] burp -a d
+[/] Delete backups
+
+[\] burp -a i
+[/] Show backup information
+
+[\] burp -a e
+[/] Estimate backup size
+
+[\] burp -c /etc/burp/burp.conf -a b
+[/] Run backup with specific config
+
+[\] burp -c /etc/burp/burp.conf -a r
+[/] Restore using config file
+
+[\] burp -c /etc/burp/burp.conf -a l
+[/] List backups using config
+
+[\] burp -c /etc/burp/burp-server.conf -a S
+[/] Start server with config
+
+[\] burp -c /etc/burp/burp-server.conf -a s
+[/] Show server status
+
+[\] burp -c /etc/burp/burp.conf -a t
+[/] Test backup configuration
+
+[\] burp -c /etc/burp/burp.conf -a v
+[/] Verify backups using config
+
+[\] burp -d /var/spool/burp
+[/] Specify backup directory
+
+[\] burp -f
+[/] Run in foreground
+
+[\] burp -g
+[/] Enable verbose logging
+
+[\] burp -h
+[/] Show help menu
+
+[\] burp -V
+[/] Show version
+
+[\] systemctl start burp
+[/] Start Burp service
+
+[\] systemctl stop burp
+[/] Stop Burp service
+
+[\] systemctl restart burp
+[/] Restart Burp service
+
+[\] systemctl status burp
+[/] Show service status
+
+[\] systemctl enable burp
+[/] Enable at boot
+
+[\] systemctl disable burp
+[/] Disable at boot
+
+[\] nano /etc/burp/burp.conf
+[/] Edit client config
+
+[\] nano /etc/burp/burp-server.conf
+[/] Edit server config
+
+[\] ls /var/spool/burp
+[/] View backup storage
+
+[\] du -sh /var/spool/burp
+[/] Check storage usage
+
+[\] journalctl -u burp
+[/] View service logs

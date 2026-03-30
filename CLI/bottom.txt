@@ -1,0 +1,61 @@
+[X] Bottom (btm) Command List
+
+[\] bottom
+[/] Launch bottom (btm) interactive system monitor
+
+[\] bottom -h
+[/] Show help menu
+
+[\] bottom -V
+[/] Show version
+
+[\] bottom -p
+[/] Show only processes
+
+[\] bottom -P
+[/] Show only process summary
+
+[\] bottom -c
+[/] Show CPU stats only
+
+[\] bottom -m
+[/] Show memory stats only
+
+[\] bottom -d
+[/] Show disk I/O stats only
+
+[\] bottom -n
+[/] Show network stats only
+
+[\] bottom -C
+[/] Enable color mode
+
+[\] bottom -s 2
+[/] Set refresh interval in seconds (e.g., 2s)
+
+[\] bottom -r
+[/] Reverse sort order for columns
+
+[\] bottom -S pid
+[/] Sort by PID
+
+[\] bottom -S cpu
+[/] Sort by CPU usage
+
+[\] bottom -S mem
+[/] Sort by memory usage
+
+[\] bottom -S net
+[/] Sort by network usage
+
+[\] bottom -S disk
+[/] Sort by disk I/O
+
+[\] bottom --tree
+[/] Show process tree view
+
+[\] bottom --no-header
+[/] Hide header row
+
+[\] bottom --help
+[/] Show full help menu

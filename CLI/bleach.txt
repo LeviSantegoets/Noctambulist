@@ -1,0 +1,49 @@
+[X] Bleach Command List
+
+[\] bleach file.txt
+[/] View a file in the terminal
+
+[\] bleach -h
+[/] Show help menu
+
+[\] bleach -v
+[/] Show version
+
+[\] bleach -n
+[/] Disable line numbers
+
+[\] bleach -N
+[/] Show line numbers
+
+[\] bleach -c
+[/] Enable colorized output
+
+[\] bleach -C
+[/] Disable colorized output
+
+[\] bleach -x
+[/] View file as hex dump
+
+[\] bleach -X
+[/] View file as hex dump with ASCII
+
+[\] bleach -r
+[/] Reverse the order of lines
+
+[\] bleach -l 100
+[/] Limit display to first 100 lines
+
+[\] bleach -f
+[/] Follow file (like tail -f)
+
+[\] bleach -s
+[/] Silent mode (minimal output)
+
+[\] bleach -p
+[/] Page through file interactively
+
+[\] bleach --help
+[/] Show full help menu
+
+[\] bleach --version
+[/] Show version

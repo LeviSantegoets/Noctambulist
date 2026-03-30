@@ -1,0 +1,34 @@
+[X] Binwalk Command List (Firmware and Binary Analysis)
+
+[\] binwalk file.bin
+[/] Scan file for embedded files and signatures
+
+[\] binwalk -e file.bin
+[/] Extract embedded files automatically
+
+[\] binwalk -Me file.bin
+[/] Extract files and use entropy analysis
+
+[\] binwalk -D=".*" file.bin
+[/] Extract files matching regex pattern
+
+[\] binwalk -r file.bin
+[/] Recursive scan of extracted files
+
+[\] binwalk -A file.bin
+[/] Perform automatic analysis (disassembly) on executable code
+
+[\] binwalk -B file.bin
+[/] Scan binary signatures only
+
+[\] binwalk -E file.bin
+[/] Perform entropy analysis only
+
+[\] binwalk -v file.bin
+[/] Verbose output
+
+[\] binwalk --help
+[/] Show help menu
+
+[\] binwalk --version
+[/] Show binwalk version

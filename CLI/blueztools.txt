@@ -1,0 +1,190 @@
+[X] BlueZ Tools Command List
+
+[\] bluetoothctl
+[/] Launch interactive Bluetooth control shell
+
+[\] bluetoothctl power on
+[/] Turn Bluetooth adapter on
+
+[\] bluetoothctl power off
+[/] Turn Bluetooth adapter off
+
+[\] bluetoothctl scan on
+[/] Start scanning for nearby Bluetooth devices
+
+[\] bluetoothctl scan off
+[/] Stop scanning
+
+[\] bluetoothctl devices
+[/] List discovered devices
+
+[\] bluetoothctl paired-devices
+[/] List paired devices
+
+[\] bluetoothctl pair AA:BB:CC:DD:EE:FF
+[/] Pair with device
+
+[\] bluetoothctl connect AA:BB:CC:DD:EE:FF
+[/] Connect to device
+
+[\] bluetoothctl disconnect AA:BB:CC:DD:EE:FF
+[/] Disconnect from device
+
+[\] bluetoothctl remove AA:BB:CC:DD:EE:FF
+[/] Remove paired device
+
+[\] bluetoothctl agent on
+[/] Enable pairing agent
+
+[\] bluetoothctl default-agent
+[/] Set default agent
+
+[\] bluetoothctl trust AA:BB:CC:DD:EE:FF
+[/] Mark device as trusted
+
+[\] bluetoothctl untrust AA:BB:CC:DD:EE:FF
+[/] Remove trust from device
+
+[\] hciconfig
+[/] Show Bluetooth adapter status
+
+[\] hciconfig hci0 up
+[/] Bring Bluetooth interface up
+
+[\] hciconfig hci0 down
+[/] Bring Bluetooth interface down
+
+[\] hciconfig hci0 reset
+[/] Reset Bluetooth interface
+
+[\] hciconfig hci0 piscan
+[/] Enable page and inquiry scan (discoverable)
+
+[\] hciconfig hci0 noscan
+[/] Disable scanning
+
+[\] hciconfig hci0 name "MyDevice"
+[/] Change Bluetooth device name
+
+[\] hcitool dev
+[/] List Bluetooth interfaces
+
+[\] hcitool scan
+[/] Scan for classic Bluetooth devices
+
+[\] hcitool lescan
+[/] Scan for BLE devices
+
+[\] hcitool info AA:BB:CC:DD:EE:FF
+[/] Get device information
+
+[\] hcitool rssi AA:BB:CC:DD:EE:FF
+[/] Read RSSI from device
+
+[\] hcitool lq AA:BB:CC:DD:EE:FF
+[/] Read link quality
+
+[\] hcitool cmd <OGF> <OCF>
+[/] Send raw HCI command
+
+[\] btmgmt
+[/] BlueZ management tool
+
+[\] btmgmt info
+[/] Show controller information
+
+[\] btmgmt power on
+[/] Enable Bluetooth controller
+
+[\] btmgmt power off
+[/] Disable Bluetooth controller
+
+[\] btmgmt connectable on
+[/] Make device connectable
+
+[\] btmgmt discoverable on
+[/] Make device discoverable
+
+[\] btmgmt find
+[/] Start discovery
+
+[\] btmgmt stop-find
+[/] Stop discovery
+
+[\] btmgmt name "MyDevice"
+[/] Set controller name
+
+[\] btmgmt bredr off
+[/] Disable BR/EDR (classic Bluetooth)
+
+[\] btmgmt le on
+[/] Enable BLE mode
+
+[\] btmgmt advertising on
+[/] Enable BLE advertising
+
+[\] btmgmt connect AA:BB:CC:DD:EE:FF
+[/] Connect to BLE device
+
+[\] gatttool -I
+[/] Start interactive GATT shell
+
+[\] gatttool -b AA:BB:CC:DD:EE:FF -I
+[/] Connect to specific BLE device (interactive)
+
+[\] connect AA:BB:CC:DD:EE:FF
+[/] Connect inside gatttool
+
+[\] primary
+[/] List primary services
+
+[\] characteristics
+[/] List characteristics
+
+[\] char-read-hnd 0x0025
+[/] Read characteristic by handle
+
+[\] char-write-req 0x0025 0100
+[/] Write characteristic (request)
+
+[\] char-write-cmd 0x0025 0100
+[/] Write characteristic (command)
+
+[\] l2ping AA:BB:CC:DD:EE:FF
+[/] Ping a Bluetooth device (L2CAP)
+
+[\] l2ping -s 600 AA:BB:CC:DD:EE:FF
+[/] Send large L2CAP ping packets
+
+[\] sdptool browse
+[/] Browse local SDP records
+
+[\] sdptool browse AA:BB:CC:DD:EE:FF
+[/] Browse remote SDP records
+
+[\] sdptool search OPUSH
+[/] Search for specific service
+
+[\] sdptool add SP
+[/] Add Serial Port Profile service
+
+[\] rfcomm scan
+[/] Scan for RFCOMM channels
+
+[\] rfcomm connect 0 AA:BB:CC:DD:EE:FF 1
+[/] Connect RFCOMM channel 1 to /dev/rfcomm0
+
+[\] rfcomm release 0
+[/] Release RFCOMM device
+
+[\] sudo systemctl start bluetooth
+[/] Start Bluetooth service
+
+[\] sudo systemctl stop bluetooth
+[/] Stop Bluetooth service
+
+[\] sudo systemctl restart bluetooth
+[/] Restart Bluetooth service
+
+[\] sudo systemctl status bluetooth
+[/] Check Bluetooth service status

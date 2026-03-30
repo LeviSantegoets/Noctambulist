@@ -1,0 +1,58 @@
+[X] BlackEye Command List
+
+[\] blackeye
+[/] Launch BlackEye main menu
+
+[\] blackeye --help
+[/] Show help menu
+
+[\] blackeye -p all
+[/] Show all available phishing templates
+
+[\] blackeye -p facebook
+[/] Start Facebook phishing page
+
+[\] blackeye -p instagram
+[/] Start Instagram phishing page
+
+[\] blackeye -p google
+[/] Start Google phishing page
+
+[\] blackeye -p snapchat
+[/] Start Snapchat phishing page
+
+[\] blackeye -p paypal
+[/] Start PayPal phishing page
+
+[\] blackeye -p github
+[/] Start GitHub phishing page
+
+[\] blackeye -p twitter
+[/] Start Twitter phishing page
+
+[\] blackeye -p linkedin
+[/] Start LinkedIn phishing page
+
+[\] blackeye -p spotify
+[/] Start Spotify phishing page
+
+[\] blackeye -p netflix
+[/] Start Netflix phishing page
+
+[\] blackeye -p custom
+[/] Use custom phishing template
+
+[\] blackeye -o logs/
+[/] Save captured credentials
+
+[\] blackeye --port 8080
+[/] Run server on custom port
+
+[\] blackeye --ssl
+[/] Enable HTTPS mode
+
+[\] blackeye --cert cert.pem --key key.pem
+[/] Use custom SSL certificate
+
+[\] blackeye --update
+[/] Update BlackEye

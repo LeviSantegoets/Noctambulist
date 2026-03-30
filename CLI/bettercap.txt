@@ -1,0 +1,169 @@
+# Bettercap Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Bettercap Command List
+
+[\] help
+[/] Show all available commands
+
+[\] help modules
+[/] List all modules
+
+[\] help <module>
+[/] Show help for a specific module
+
+[\] clear
+[/] Clear the terminal screen
+
+[\] quit
+[/] Exit Bettercap
+
+[\] net.probe on
+[/] Enable network probing
+
+[\] net.probe off
+[/] Disable network probing
+
+[\] net.show
+[/] Show discovered hosts on the network
+
+[\] net.recon on
+[/] Enable network reconnaissance
+
+[\] net.recon off
+[/] Disable network reconnaissance
+
+[\] net.sniff on
+[/] Enable packet sniffer
+
+[\] net.sniff off
+[/] Disable packet sniffer
+
+[\] net.sniff.filter tcp port 80
+[/] Set sniffer filter (example: HTTP traffic)
+
+[\] net.sniff.verbose true
+[/] Enable verbose packet output
+
+[\] arp.spoof on
+[/] Enable ARP spoofing
+
+[\] arp.spoof off
+[/] Disable ARP spoofing
+
+[\] arp.spoof.targets <IP>
+[/] Set ARP spoofing target
+
+[\] arp.spoof.internal true
+[/] Enable internal spoofing between hosts
+
+[\] set arp.spoof.fullduplex true
+[/] Enable full duplex ARP spoofing
+
+[\] set arp.spoof.whitelist <IP>
+[/] Add IP to ARP spoof whitelist
+
+[\] set arp.spoof.blacklist <IP>
+[/] Add IP to ARP spoof blacklist
+
+[\] wifi.recon on
+[/] Enable Wi‑Fi reconnaissance
+
+[\] wifi.recon off
+[/] Disable Wi‑Fi reconnaissance
+
+[\] wifi.show
+[/] Show discovered Wi‑Fi networks and clients
+
+[\] wifi.assoc <BSSID>
+[/] Associate with a Wi‑Fi access point
+
+[\] wifi.deauth <BSSID>
+[/] Send deauthentication packets to a target
+
+[\] wifi.deauth all
+[/] Deauth all clients on a network
+
+[\] wifi.ap on
+[/] Enable fake access point
+
+[\] wifi.ap.ssid <name>
+[/] Set fake AP SSID
+
+[\] wifi.ap.channel <number>
+[/] Set fake AP channel
+
+[\] wifi.ap.off
+[/] Disable fake access point
+
+[\] ble.recon on
+[/] Enable Bluetooth LE scanning
+
+[\] ble.recon off
+[/] Disable Bluetooth LE scanning
+
+[\] ble.show
+[/] Show discovered BLE devices
+
+[\] ble.enum <MAC>
+[/] Enumerate BLE services on a device
+
+[\] ble.write <MAC> <handle> <value>
+[/] Write data to a BLE characteristic
+
+[\] hstshijack on
+[/] Enable HSTS hijacking
+
+[\] hstshijack off
+[/] Disable HSTS hijacking
+
+[\] https.proxy on
+[/] Enable HTTPS proxy for MITM attacks
+
+[\] https.proxy off
+[/] Disable HTTPS proxy
+
+[\] https.proxy.sslstrip true
+[/] Enable SSL stripping
+
+[\] dns.spoof on
+[/] Enable DNS spoofing
+
+[\] dns.spoof off
+[/] Disable DNS spoofing
+
+[\] dns.spoof.domains example.com
+[/] Spoof DNS responses for a domain
+
+[\] dns.spoof.address 192.168.1.100
+[/] Set spoofed DNS response IP
+
+[\] set net.sniff.output packets.pcap
+[/] Save sniffed packets to a PCAP file
+
+[\] script <file>
+[/] Run a Bettercap script
+
+[\] ui.update
+[/] Refresh the Bettercap web UI
+
+[\] api.rest on
+[/] Enable REST API server
+
+[\] api.rest off
+[/] Disable REST API server
+
+[\] api.rest.address 0.0.0.0
+[/] Set REST API bind address
+
+[\] api.rest.port 8081
+[/] Set REST API port
+
+[\] events.stream on
+[/] Enable event streaming
+
+[\] events.stream off
+[/] Disable event streaming
+
+[\] events.show
+[/] Show event history

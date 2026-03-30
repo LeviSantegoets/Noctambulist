@@ -1,0 +1,91 @@
+[X] bup Backup Command List
+
+[\] bup init
+[/] Initialize a new bup repository
+
+[\] bup index /home/user
+[/] Index files for backup
+
+[\] bup save -n backup /home/user
+[/] Create snapshot (branch name "backup")
+
+[\] bup save -n backup -r user@host:/repo /home/user
+[/] Save backup to remote repository
+
+[\] bup ls
+[/] List available backups
+
+[\] bup ls backup
+[/] List snapshots in branch
+
+[\] bup ls backup/latest
+[/] List latest snapshot contents
+
+[\] bup restore -C /restore backup/latest
+[/] Restore latest snapshot
+
+[\] bup restore -C /restore backup/2024-01-01
+[/] Restore specific snapshot
+
+[\] bup fsck
+[/] Check repository integrity
+
+[\] bup gc
+[/] Garbage collect unused data
+
+[\] bup prune
+[/] Remove old backups
+
+[\] bup join backup/latest/path/file
+[/] Extract file contents to stdout
+
+[\] bup tag mytag backup/latest
+[/] Tag snapshot
+
+[\] bup tag
+[/] List tags
+
+[\] bup on user@host bup init
+[/] Initialize repo on remote host
+
+[\] bup on user@host bup gc
+[/] Run garbage collection remotely
+
+[\] bup ftp
+[/] Browse backups via FTP-like interface
+
+[\] bup fuse /mnt/bup
+[/] Mount repository as filesystem
+
+[\] bup web
+[/] Start web interface
+
+[\] bup split -b 1M file
+[/] Split file into chunks
+
+[\] bup split -n name file
+[/] Split and name backup stream
+
+[\] bup index -u /home/user
+[/] Update index
+
+[\] bup index --exclude "*.log" /home
+[/] Exclude files during indexing
+
+[\] bup save -n backup --strip /home/user
+[/] Strip path prefix
+
+[\] bup save -n backup --compress 9 /home/user
+[/] Use maximum compression
+
+[\] bup save -n backup --smaller 10M /home/user
+[/] Skip large files
+
+[\] bup config
+[/] Show configuration
+
+[\] bup version
+[/] Show version
+
+[\] bup help
+[/] Show help menu

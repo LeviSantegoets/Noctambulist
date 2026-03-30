@@ -1,0 +1,172 @@
+# Burp Suite Filters
+# Format: [\] filter [/] description [X] menutitlename
+
+[X] Burp Suite (Filters)
+
+# -------------------------
+# PROXY → HTTP HISTORY
+# -------------------------
+
+[\] mime-type:html
+[/] Show only HTML responses
+
+[\] mime-type:json
+[/] Show only JSON responses
+
+[\] mime-type:xml
+[/] Show only XML responses
+
+[\] status-code:200
+[/] Filter by HTTP status code
+
+[\] status-code:4*
+[/] Show only 4xx errors
+
+[\] status-code:5*
+[/] Show only 5xx server errors
+
+[\] method:POST
+[/] Show only POST requests
+
+[\] method:GET
+[/] Show only GET requests
+
+[\] domain:example.com
+[/] Show only traffic to a specific domain
+
+[\] -domain:google.com
+[/] Exclude a domain
+
+[\] url:login
+[/] Show only URLs containing “login”
+
+[\] -url:logout
+[/] Exclude URLs containing “logout”
+
+[\] req-header:Authorization
+[/] Requests containing Authorization header
+
+[\] req-body:password
+[/] Requests containing “password” in body
+
+[\] resp-body:"error"
+[/] Responses containing “error”
+
+[\] resp-header:Set-Cookie
+[/] Responses setting cookies
+
+# -------------------------
+# TARGET → SITE MAP
+# -------------------------
+
+[\] type:parameter
+[/] Show only endpoints with parameters
+
+[\] type:folder
+[/] Show only folders
+
+[\] type:file
+[/] Show only files
+
+[\] param:token
+[/] Endpoints containing parameter “token”
+
+[\] extension:php
+[/] Only .php endpoints
+
+[\] extension:js
+[/] Only .js files
+
+[\] -extension:css
+[/] Exclude CSS files
+
+[\] status:404
+[/] Show only 404 endpoints
+
+# -------------------------
+# REPEATER FILTERS
+# -------------------------
+
+[\] changed:request
+[/] Show only modified requests
+
+[\] changed:response
+[/] Show only modified responses
+
+[\] contains:"session"
+[/] Requests/responses containing “session”
+
+[\] header:Content-Type
+[/] Show only requests with this header
+
+# -------------------------
+# INTRUDER FILTERS
+# -------------------------
+
+[\] grep-match:"success"
+[/] Show only successful matches
+
+[\] grep-match:"invalid"
+[/] Show only failed attempts
+
+[\] length:>500
+[/] Responses larger than 500 bytes
+
+[\] length:<200
+[/] Responses smaller than 200 bytes
+
+[\] status:302
+[/] Show only redirects
+
+[\] time:>2000
+[/] Responses slower than 2 seconds
+
+# -------------------------
+# LOGGER++ STYLE FILTERS
+# -------------------------
+
+[\] req:"Authorization"
+[/] Requests containing Authorization header
+
+[\] resp:"Set-Cookie"
+[/] Responses setting cookies
+
+[\] ip:192.168.1.10
+[/] Traffic to/from specific IP
+
+[\] port:443
+[/] Only HTTPS traffic
+
+[\] -mime:css
+[/] Exclude CSS responses
+
+[\] -mime:image
+[/] Exclude images
+
+[\] contains:"jwt"
+[/] Requests/responses containing JWT tokens
+
+# -------------------------
+# ADVANCED FILTERS
+# -------------------------
+
+[\] regex:password=.*?
+[/] Regex match for password parameters
+
+[\] regex:token=[A-Za-z0-9-_]+
+[/] Regex match for tokens
+
+[\] req-body:({|})
+[/] JSON bodies only
+
+[\] resp-body:"<script"
+[/] Possible XSS indicators
+
+[\] resp-header:"Location:"
+[/] Redirect responses
+
+[\] url:admin|dashboard
+[/] OR filter (admin OR dashboard)
+
+[\] -url:\.png|\.jpg|\.gif
+[/] Exclude images via regex

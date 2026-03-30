@@ -1,0 +1,40 @@
+[X] BruteSpray Command List
+
+[\] brutespray -h
+[/] Show help menu
+
+[\] brutespray --file nmap.xml
+[/] Parse Nmap XML and brute‑force discovered services
+
+[\] brutespray --file nmap.xml --threads 5
+[/] Set number of threads
+
+[\] brutespray --file nmap.xml --hosts 10
+[/] Limit brute‑forcing to 10 hosts
+
+[\] brutespray --file nmap.xml --services ssh
+[/] Brute‑force only SSH services
+
+[\] brutespray --file nmap.xml --services ftp,smb
+[/] Brute‑force multiple service types
+
+[\] brutespray --file nmap.xml --userlist users.txt --passlist passwords.txt
+[/] Use custom username and password lists
+
+[\] brutespray --file nmap.xml --output results/
+[/] Save results to directory
+
+[\] brutespray --file nmap.xml --timeout 5
+[/] Set connection timeout
+
+[\] brutespray --file nmap.xml --delay 1
+[/] Add delay between attempts
+
+[\] brutespray --file nmap.xml --verbose
+[/] Enable verbose output
+
+[\] brutespray --file nmap.xml --force
+[/] Force brute‑forcing even if service detection is incomplete
+
+[\] brutespray --file nmap.xml --threads 20 --services ssh --userlist u.txt --passlist p.txt
+[/] Example combined usage

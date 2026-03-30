@@ -1,0 +1,94 @@
+[X] Bluelog Command List
+
+[\] bluelog
+[/] Start Bluelog with default settings
+
+[\] sudo bluelog
+[/] Run Bluelog with required privileges
+
+[\] bluelog -h
+[/] Show help menu
+
+[\] bluelog -i hci0
+[/] Use specific Bluetooth interface
+
+[\] bluelog -v
+[/] Enable verbose output
+
+[\] bluelog -q
+[/] Quiet mode (minimal output)
+
+[\] bluelog -d
+[/] Daemon mode (run in background)
+
+[\] bluelog -f /path/log.txt
+[/] Save log output to file
+
+[\] bluelog -o /path/
+[/] Set output directory for logs
+
+[\] bluelog -t 5
+[/] Set scan interval to 5 seconds
+
+[\] bluelog -m
+[/] Log manufacturer information (if available)
+
+[\] bluelog -r
+[/] Resolve device names (may be slower)
+
+[\] bluelog -n
+[/] Disable name resolution
+
+[\] bluelog -s
+[/] Log RSSI signal strength
+
+[\] bluelog -p
+[/] Log device class (CoD)
+
+[\] bluelog -x
+[/] Log extended information
+
+[\] bluelog -b
+[/] Log only Bluetooth Classic devices
+
+[\] bluelog -l
+[/] Log only BLE devices (if supported)
+
+[\] bluelog -w whitelist.txt
+[/] Only log devices in whitelist
+
+[\] bluelog -k blacklist.txt
+[/] Ignore devices in blacklist
+
+[\] bluelog -u
+[/] Output in Unix‑friendly format
+
+[\] bluelog -j
+[/] Output in JSON format
+
+[\] bluelog -c
+[/] Clear screen between scans
+
+[\] bluelog -a
+[/] Append to existing log instead of overwriting
+
+[\] bluelog -V
+[/] Show Bluelog version
+
+[\] bluelog -H
+[/] Show extended help
+
+[\] sudo hciconfig hci0 up
+[/] Bring Bluetooth interface up (required for scanning)
+
+[\] sudo hciconfig hci0 down
+[/] Bring Bluetooth interface down
+
+[\] sudo systemctl start bluetooth
+[/] Start Bluetooth service
+
+[\] sudo systemctl restart bluetooth
+[/] Restart Bluetooth service
+
+[\] sudo systemctl status bluetooth
+[/] Check Bluetooth service status

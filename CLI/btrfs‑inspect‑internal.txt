@@ -1,0 +1,31 @@
+[X] BTRFS-INSPECT-INTERNAL Command List  
+
+[\] btrfs‑inspect‑internal dump-tree /dev/sdX
+[/] Dump Btrfs tree structure from device  
+
+[\] btrfs‑inspect‑internal block-tree /dev/sdX
+[/] Show block tree layout  
+
+[\] btrfs‑inspect‑internal check-super /dev/sdX
+[/] Inspect superblock information  
+
+[\] btrfs‑inspect‑internal check-device /dev/sdX
+[/] Check device metadata  
+
+[\] btrfs‑inspect‑internal dump-root /dev/sdX
+[/] Dump root tree information  
+
+[\] btrfs‑inspect‑internal dump-extent-tree /dev/sdX
+[/] Dump extent tree (file extents)  
+
+[\] btrfs‑inspect‑internal dump-uuid-tree /dev/sdX
+[/] Show UUID tree structure  
+
+[\] btrfs‑inspect‑internal scan /dev/sdX
+[/] Scan and display all Btrfs objects  
+
+[\] btrfs‑inspect‑internal --help
+[/] Show help menu  
+
+[\] btrfs‑inspect‑internal --version
+[/] Show version information  

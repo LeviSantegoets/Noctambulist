@@ -1,0 +1,76 @@
+[X] Bat Command List (Rust Cat Replacement with Syntax Highlighting)
+
+[\] bat file.txt
+[/] Display file with syntax highlighting
+
+[\] bat -n file.txt
+[/] Show line numbers
+
+[\] bat -p file.txt
+[/] Plain output (no decorations)
+
+[\] bat -l rust file.rs
+[/] Force syntax highlighting for specific language
+
+[\] bat --color=always file.txt
+[/] Force color output
+
+[\] bat --color=auto file.txt
+[/] Automatic color output
+
+[\] bat --color=never file.txt
+[/] Disable color output
+
+[\] bat -A file.txt
+[/] Show non-printable characters
+
+[\] bat -r 10:20 file.txt
+[/] Display only lines 10 to 20
+
+[\] bat -f file.txt
+[/] Follow file like `tail -f`
+
+[\] bat --paging=always file.txt
+[/] Always use pager (less)
+
+[\] bat --paging=never file.txt
+[/] Disable pager
+
+[\] bat --paging=quit-if-one-screen file.txt
+[/] Pager only if content exceeds one screen
+
+[\] bat --theme=TwoDark file.txt
+[/] Use specific color theme
+
+[\] bat --list-themes
+[/] List all available themes
+
+[\] bat --style=numbers,changes file.txt
+[/] Customize decorations (line numbers, grid, syntax, etc.)
+
+[\] bat --terminal-width=80 file.txt
+[/] Set terminal width for output
+
+[\] bat --map-syntax *.txt:Markdown file.txt
+[/] Map file extension to syntax
+
+[\] bat --map-theme *.txt:GitHub file.txt
+[/] Map file extension to theme
+
+[\] bat --decorations=always file.txt
+[/] Always show decorations
+
+[\] bat --decorations=never file.txt
+[/] Never show decorations
+
+[\] bat --diff file1 file2
+[/] Show syntax-highlighted diff between files
+
+[\] bat --paging=never --style=plain file.txt
+[/] Output plain text (similar to `cat`)
+
+[\] bat --help
+[/] Show help menu
+
+[\] bat --version
+[/] Show bat version

@@ -1,0 +1,76 @@
+[X] BpyTOP Command List
+
+[\] bpytop
+[/] Launch BpyTOP main interface
+
+[\] bpytop -h
+[/] Show help menu
+
+[\] bpytop -v
+[/] Show version
+
+[\] bpytop -c /path/to/config
+[/] Use custom configuration file
+
+[\] bpytop -o /path/to/logfile
+[/] Output logs to file
+
+[\] bpytop -w 3
+[/] Set update interval to 3 seconds
+
+[\] bpytop -r
+[/] Reset configuration to default
+
+[\] bpytop -g
+[/] Enable graphical mode (ASCII/Unicode bars)
+
+[\] bpytop -l
+[/] Show system load averages
+
+[\] bpytop -m
+[/] Show memory usage details
+
+[\] bpytop -d
+[/] Show disk usage
+
+[\] bpytop -n
+[/] Show network activity
+
+[\] bpytop -p PID
+[/] Monitor specific process by PID
+
+[\] bpytop -t
+[/] Toggle theme selection
+
+[\] bpytop -k
+[/] Kill selected process (from interactive menu)
+
+[\] bpytop -u
+[/] Sort processes by CPU usage
+
+[\] bpytop -m
+[/] Sort processes by memory usage
+
+[\] bpytop -h
+[/] Toggle help overlay in interface
+
+[\] bpytop --debug
+[/] Enable debug mode
+
+[\] bpytop --no-color
+[/] Disable colored output
+
+[\] bpytop --theme <theme_name>
+[/] Apply specific theme
+
+[\] bpytop --autoscale
+[/] Auto scale graphs based on maximum value
+
+[\] bpytop --no-bars
+[/] Disable usage bars
+
+[\] bpytop --help
+[/] Show help menu
+
+[\] bpytop --version
+[/] Show version
