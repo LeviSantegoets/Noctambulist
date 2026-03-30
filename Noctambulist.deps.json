@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Noctambulist/1.0.0": {
+        "runtime": {
+          "Noctambulist.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Noctambulist/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
