@@ -1,7 +1,7 @@
 
 <img width="1291" height="780" alt="{F32E35C4-BE45-4272-87E5-3AEC7E2303B7}" src="https://github.com/user-attachments/assets/2c083c49-018e-47ab-b68b-786663a32167" />
 
-🌙 Noctambulist – The Ultimate CLI Command Hub
+🌙 Noctambulist     The Ultimate CLI Command Hub
 
 [X] [\\] [/] #
 
