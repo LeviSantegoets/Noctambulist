@@ -1,0 +1,127 @@
+[X] ripgrep (rg) Command List
+
+[\] rg pattern
+[/] Search for pattern recursively in current directory
+
+[\] rg "hello world"
+[/] Search for exact phrase
+
+[\] rg pattern file.txt
+[/] Search in specific file
+
+[\] rg pattern dir/
+[/] Search inside directory
+
+[\] rg -i pattern
+[/] Case-insensitive search
+
+[\] rg -s pattern
+[/] Case-sensitive search
+
+[\] rg -w pattern
+[/] Match whole words only
+
+[\] rg -x pattern
+[/] Match entire line
+
+[\] rg -v pattern
+[/] Invert match (exclude pattern)
+
+[\] rg -n pattern
+[/] Show line numbers
+
+[\] rg -c pattern
+[/] Count matches per file
+
+[\] rg -l pattern
+[/] Show only filenames with matches
+
+[\] rg -L pattern
+[/] Show filenames without matches
+
+[\] rg -o pattern
+[/] Print only matched parts
+
+[\] rg -A 3 pattern
+[/] Show 3 lines after match
+
+[\] rg -B 3 pattern
+[/] Show 3 lines before match
+
+[\] rg -C 3 pattern
+[/] Show 3 lines before and after
+
+[\] rg -e foo -e bar
+[/] Search multiple patterns
+
+[\] rg -f patterns.txt
+[/] Read patterns from file
+
+[\] rg --hidden pattern
+[/] Search hidden files
+
+[\] rg --no-ignore pattern
+[/] Ignore .gitignore and other ignore files
+
+[\] rg --glob "*.py" pattern
+[/] Search only Python files
+
+[\] rg --glob "!node_modules/*" pattern
+[/] Exclude directory
+
+[\] rg -g "*.log" error
+[/] Search only .log files
+
+[\] rg -t py pattern
+[/] Search by file type (Python)
+
+[\] rg -T js pattern
+[/] Exclude file type (JavaScript)
+
+[\] rg --files
+[/] List files ripgrep would search
+
+[\] rg --files-with-matches pattern
+[/] List files that contain matches
+
+[\] rg --stats pattern
+[/] Show search statistics
+
+[\] rg --json pattern
+[/] Output results in JSON format
+
+[\] rg --color always pattern
+[/] Force colored output
+
+[\] rg --no-heading pattern
+[/] Disable file headers in output
+
+[\] rg --line-number pattern
+[/] Always show line numbers
+
+[\] rg --max-count 10 pattern
+[/] Stop after 10 matches
+
+[\] rg --max-filesize 1M pattern
+[/] Skip files larger than 1MB
+
+[\] rg --follow pattern
+[/] Follow symlinks
+
+[\] rg --multiline pattern
+[/] Enable multiline search
+
+[\] rg --pcre2 pattern
+[/] Use PCRE2 regex engine
+
+[\] rg --replace "new" pattern
+[/] Replace matched text (preview)
+
+[\] rg --debug pattern
+[/] Show debug info
+
+[\] rg --help
+[/] Show help menu
+
+[\] rg --version
+[/] Show ripgrep version

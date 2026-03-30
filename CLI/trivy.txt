@@ -1,0 +1,58 @@
+[X] Trivy Command List
+
+[\] trivy image ubuntu:latest
+[/] Scan a Docker image for vulnerabilities
+
+[\] trivy fs /path/to/project
+[/] Scan local filesystem/project for vulnerabilities
+
+[\] trivy repo https://github.com/user/repo
+[/] Scan a GitHub repository
+
+[\] trivy k8s cluster
+[/] Scan Kubernetes cluster for vulnerabilities
+
+[\] trivy client --version
+[/] Show Trivy client version
+
+[\] trivy image --severity HIGH,CRITICAL ubuntu:latest
+[/] Scan only high/critical vulnerabilities
+
+[\] trivy image --ignore-unfixed ubuntu:latest
+[/] Ignore vulnerabilities without fixes
+
+[\] trivy image --security-checks vuln ubuntu:latest
+[/] Scan only for vulnerabilities
+
+[\] trivy image --security-checks config ubuntu:latest
+[/] Scan only for misconfigurations
+
+[\] trivy image --format table ubuntu:latest
+[/] Output results in table format
+
+[\] trivy image --format json ubuntu:latest
+[/] Output results in JSON
+
+[\] trivy image --format template --template "@/path/to/template.tpl" ubuntu:latest
+[/] Output using custom Go template
+
+[\] trivy image --quiet ubuntu:latest
+[/] Suppress non-essential output
+
+[\] trivy image --ignorefile .trivyignore ubuntu:latest
+[/] Use ignore file to skip vulnerabilities
+
+[\] trivy image --exit-code 1 ubuntu:latest
+[/] Set exit code if vulnerabilities found
+
+[\] trivy image --cache-dir /path/to/cache ubuntu:latest
+[/] Specify cache directory
+
+[\] trivy image --offline-scan ubuntu:latest
+[/] Scan without updating vulnerability DB
+
+[\] trivy --download-db-only
+[/] Download/update vulnerability database only
+
+[\] trivy --help
+[/] Show help menu

@@ -1,0 +1,46 @@
+[X] Rizin Command List (Reverse Engineering & Binary Analysis, Radare2 Fork)
+
+[\] rizin file
+[/] Open file in Rizin interactive shell
+
+[\] rizin -A file
+[/] Open and analyze binary automatically
+
+[\] aaa
+[/] Perform full analysis of binary
+
+[\] afl
+[/] List all functions
+
+[\] pdf
+[/] Print disassembly of current function
+
+[\] pd 10
+[/] Print 10 instructions at current offset
+
+[\] s main
+[/] Seek to main function
+
+[\] iI
+[/] Show binary info (headers, entry point, etc.)
+
+[\] iz
+[/] List strings in binary
+
+[\] izz
+[/] Show strings in hex view
+
+[\] e scr.color=true
+[/] Enable color output
+
+[\] q
+[/] Quit Rizin
+
+[\] !command
+[/] Run shell command from Rizin prompt
+
+[\] ?v
+[/] Show help menu
+
+[\] rizin -v
+[/] Show Rizin version

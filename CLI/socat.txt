@@ -1,0 +1,43 @@
+[X] Socat Command List (SOcket CAT / Multipurpose Relay)
+
+[\] socat TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Forward local port 8080 to remote host port 80
+
+[\] socat TCP-LISTEN:8080,fork,reuseaddr FILE:/tmp/log.txt,append
+[/] Log incoming TCP connections to file
+
+[\] socat UDP-LISTEN:5000,fork UDP:example.com:5000
+[/] Forward UDP port 5000 to remote host
+
+[\] socat TCP-LISTEN:1234,reuseaddr,fork EXEC:/bin/cat
+[/] Serve an interactive shell (dangerous, testing only)
+
+[\] socat TCP:example.com:22 STDIO
+[/] Connect TCP to stdin/stdout (simple client)
+
+[\] socat -d -d TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Enable debug output for connection
+
+[\] socat PTY,link=/tmp/ttyV0,raw,echo=0 TCP:example.com:23
+[/] Create virtual serial port and connect to TCP
+
+[\] socat OPENSSL-LISTEN:443,reuseaddr,fork OPENSSL:example.com:443
+[/] Forward SSL connections
+
+[\] socat STDIO TCP-LISTEN:8080,fork
+[/] Interactive TCP server using stdin/stdout
+
+[\] socat UNIX-LISTEN:/tmp/socket,fork TCP:example.com:80
+[/] Forward UNIX socket to TCP
+
+[\] socat -u FILE:/dev/zero TCP:example.com:1234
+[/] Unidirectional data transfer
+
+[\] socat -u TCP-LISTEN:1234,fork FILE:/dev/null
+[/] Discard incoming TCP data
+
+[\] socat -h
+[/] Show help menu
+
+[\] socat -V
+[/] Show version

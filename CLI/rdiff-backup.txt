@@ -1,0 +1,91 @@
+[X] rdiff-backup Command List
+
+[\] rdiff-backup /source /backup
+[/] Create or update backup
+
+[\] rdiff-backup /home/user /mnt/backup
+[/] Backup local directory
+
+[\] rdiff-backup /home user@host::/backup
+[/] Backup to remote host (SSH)
+
+[\] rdiff-backup --exclude /home/user/tmp /home/user /backup
+[/] Exclude directory from backup
+
+[\] rdiff-backup --include /home/user/docs --exclude '**' /home/user /backup
+[/] Include only specific directory
+
+[\] rdiff-backup --print-statistics /home /backup
+[/] Show backup statistics
+
+[\] rdiff-backup --list-increments /backup
+[/] List available backup increments
+
+[\] rdiff-backup --list-increments /backup/path
+[/] List increments for specific path
+
+[\] rdiff-backup --restore-as-of now /backup /restore
+[/] Restore latest backup
+
+[\] rdiff-backup --restore-as-of 2024-01-01 /backup /restore
+[/] Restore to specific date
+
+[\] rdiff-backup --restore-as-of 3D /backup /restore
+[/] Restore to 3 days ago
+
+[\] rdiff-backup --force --restore-as-of now /backup/file /restore/file
+[/] Restore specific file
+
+[\] rdiff-backup --verify /backup
+[/] Verify backup integrity
+
+[\] rdiff-backup --check-destination-dir /backup
+[/] Check destination directory
+
+[\] rdiff-backup --remove-older-than 30D /backup
+[/] Remove increments older than 30 days
+
+[\] rdiff-backup --remove-older-than 6M /backup
+[/] Remove increments older than 6 months
+
+[\] rdiff-backup --remove-older-than 1Y /backup
+[/] Remove increments older than 1 year
+
+[\] rdiff-backup --compare /source /backup
+[/] Compare source and backup
+
+[\] rdiff-backup --compare-at-time 2D /source /backup
+[/] Compare with backup from 2 days ago
+
+[\] rdiff-backup --list-changed-since 7D /backup
+[/] List files changed in last 7 days
+
+[\] rdiff-backup --calculate-average
+[/] Calculate average statistics
+
+[\] rdiff-backup --terminal-verbosity 5 /source /backup
+[/] Increase verbosity level
+
+[\] rdiff-backup --api-version
+[/] Show API version
+
+[\] rdiff-backup --version
+[/] Show version
+
+[\] rdiff-backup --help
+[/] Show help menu
+
+[\] ssh-keygen -t rsa
+[/] Generate SSH key for remote backups
+
+[\] ssh-copy-id user@host
+[/] Copy SSH key to remote host
+
+[\] crontab -e
+[/] Schedule automated backups
+
+[\] du -sh /backup
+[/] Check backup size
+
+[\] ls /backup/rdiff-backup-data
+[/] Inspect backup metadata

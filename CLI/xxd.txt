@@ -1,0 +1,40 @@
+[X] XXD Command List (Hex Dump and Reverse Tool)
+
+[\] xxd file
+[/] Create hex dump of file
+
+[\] xxd -l 64 file
+[/] Show first 64 bytes
+
+[\] xxd -s 16 file
+[/] Start dump at byte offset 16
+
+[\] xxd -c 8 file
+[/] Show 8 bytes per line
+
+[\] xxd -g 2 file
+[/] Group bytes in 2-byte units
+
+[\] xxd -b file
+[/] Output in binary format
+
+[\] xxd -p file
+[/] Plain continuous hex dump (no formatting)
+
+[\] xxd -r hex.txt > file
+[/] Reverse hex dump back to binary
+
+[\] xxd -r -p hex.txt > file
+[/] Reverse plain hex dump to binary
+
+[\] xxd -i file
+[/] Output as C include (array)
+
+[\] xxd -u file
+[/] Use uppercase hex letters
+
+[\] xxd -h
+[/] Show help menu
+
+[\] xxd -v
+[/] Show version

@@ -1,0 +1,130 @@
+[X] REDHAWK SDR Command List
+
+[\] rh
+[/] Launch REDHAWK IDE or CLI tools
+
+[\] rh -h
+[/] Show help and available commands
+
+# -------------------------
+# DOMAIN / CORE MANAGEMENT
+# -------------------------
+
+[\] rh-domains
+[/] List available REDHAWK domains
+
+[\] rh-domain-create <domain_name>
+[/] Create a new REDHAWK domain
+
+[\] rh-domain-start <domain_name>
+[/] Start a REDHAWK domain
+
+[\] rh-domain-stop <domain_name>
+[/] Stop a REDHAWK domain
+
+[\] rh-domain-delete <domain_name>
+[/] Delete a REDHAWK domain
+
+# -------------------------
+# NODE / DEVICE MANAGEMENT
+# -------------------------
+
+[\] rh-nodes
+[/] List nodes in the current domain
+
+[\] rh-node-start <node_name>
+[/] Start a node
+
+[\] rh-node-stop <node_name>
+[/] Stop a node
+
+[\] rh-node-status <node_name>
+[/] Check node status
+
+[\] rh-node-add <device_type>
+[/] Add device to node
+
+[\] rh-node-remove <device_name>
+[/] Remove device from node
+
+# -------------------------
+# COMPONENT MANAGEMENT
+# -------------------------
+
+[\] rh-components
+[/] List all deployed components
+
+[\] rh-component-deploy <component_name>
+[/] Deploy a component
+
+[\] rh-component-start <component_name>
+[/] Start a component
+
+[\] rh-component-stop <component_name>
+[/] Stop a component
+
+[\] rh-component-undeploy <component_name>
+[/] Remove a deployed component
+
+[\] rh-component-config <component_name>
+[/] Show or edit component configuration
+
+# -------------------------
+# DEVICE / STREAM CONTROL
+# -------------------------
+
+[\] rh-devices
+[/] List available devices
+
+[\] rh-device-start <device_name>
+[/] Start SDR device
+
+[\] rh-device-stop <device_name>
+[/] Stop SDR device
+
+[\] rh-device-config <device_name>
+[/] Configure device parameters (frequency, gain, rate)
+
+[\] rh-stream-connect <source> <sink>
+[/] Connect source and sink ports
+
+[\] rh-stream-disconnect <source> <sink>
+[/] Disconnect streaming path
+
+# -------------------------
+# MONITORING & DEBUG
+# -------------------------
+
+[\] rh-logs <component_name>
+[/] View component logs
+
+[\] rh-monitor
+[/] Monitor domain status, nodes, and components
+
+[\] rh-stats <component_name>
+[/] Display runtime statistics
+
+[\] rh-bench <component_name>
+[/] Benchmark component performance
+
+[\] rh-debug <component_name>
+[/] Enable debug mode for a component
+
+# -------------------------
+# FLOWGRAPH / IDE
+# -------------------------
+
+[\] rh-flowgraph-create <name>
+[/] Create a new flowgraph
+
+[\] rh-flowgraph-open <name>
+[/] Open existing flowgraph
+
+[\] rh-flowgraph-run <name>
+[/] Run a flowgraph
+
+[\] rh-flowgraph-stop <name>
+[/] Stop a flowgraph
+
+[\] rh-flowgraph-export <name>
+[/] Export flowgraph configuration

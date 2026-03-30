@@ -1,0 +1,109 @@
+# Samba Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Samba Command List
+
+[\] sudo systemctl start smbd
+[/] Start Samba service
+
+[\] sudo systemctl stop smbd
+[/] Stop Samba service
+
+[\] sudo systemctl restart smbd
+[/] Restart Samba service
+
+[\] sudo systemctl status smbd
+[/] Check Samba service status
+
+[\] sudo systemctl enable smbd
+[/] Enable Samba at boot
+
+[\] sudo systemctl disable smbd
+[/] Disable Samba at boot
+
+[\] testparm
+[/] Validate Samba configuration file (smb.conf)
+
+[\] sudo nano /etc/samba/smb.conf
+[/] Edit Samba configuration file
+
+[\] smbstatus
+[/] Show current Samba connections and open files
+
+[\] smbpasswd -a username
+[/] Add a Samba user
+
+[\] smbpasswd -x username
+[/] Remove a Samba user
+
+[\] smbpasswd username
+[/] Change Samba user password
+
+[\] pdbedit -L
+[/] List Samba users
+
+[\] pdbedit -Lv username
+[/] Show detailed info for a Samba user
+
+[\] sudo mkdir -p /srv/samba/share
+[/] Create a Samba share directory
+
+[\] sudo chown -R username:username /srv/samba/share
+[/] Set ownership for Samba share
+
+[\] sudo chmod -R 775 /srv/samba/share
+[/] Set permissions for Samba share
+
+[\] smbclient -L //server
+[/] List available shares on a Samba server
+
+[\] smbclient -L //192.168.1.10
+[/] List shares by IP
+
+[\] smbclient //server/share
+[/] Connect to a Samba share
+
+[\] smbclient //server/share -U username
+[/] Connect with a specific user
+
+[\] smbclient //server/share -U username%password
+[/] Connect with username and password
+
+[\] smbclient //server/share -c "ls"
+[/] Run a command on a Samba share
+
+[\] smbclient //server/share -c "put file.txt"
+[/] Upload a file to a share
+
+[\] smbclient //server/share -c "get file.txt"
+[/] Download a file from a share
+
+[\] mount -t cifs //server/share /mnt
+[/] Mount a Samba share
+
+[\] mount -t cifs //server/share /mnt -o username=user
+[/] Mount with username
+
+[\] mount -t cifs //server/share /mnt -o username=user,password=pass
+[/] Mount with username and password
+
+[\] umount /mnt
+[/] Unmount a Samba share
+
+[\] sudo net usershare info
+[/] Show user-created shares
+
+[\] sudo net usershare add sharename /path "Description" everyone:r
+[/] Create a user-level Samba share
+
+[\] sudo net usershare delete sharename
+[/] Delete a user-level share
+
+[\] nmblookup -A <IP>
+[/] Query NetBIOS names
+
+[\] nmblookup <hostname>
+[/] Resolve NetBIOS hostname
+
+[\] smbtree
+[/] Browse the network for Samba shares

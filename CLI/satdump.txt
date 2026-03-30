@@ -1,0 +1,96 @@
+[X] SatDump Command List
+
+[\] satdump -h
+[/] Show help and command options
+
+# -------------------------
+# BASIC SATELLITE RECEIVING
+# -------------------------
+
+[\] satdump -f 137100000
+[/] Receive signals at 137.1 MHz (NOAA satellite example)
+
+[\] satdump -s 2400000
+[/] Set sample rate to 2.4 MSPS
+
+[\] satdump -g 40
+[/] Set SDR gain to 40 dB
+
+[\] satdump -d 0
+[/] Use first SDR device
+
+[\] satdump -d 1
+[/] Use second SDR device
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] satdump -o capture.raw
+[/] Save IQ samples to file
+
+[\] satdump -O capture.wav
+[/] Save demodulated audio to WAV
+
+[\] satdump -p
+[/] Enable PPM frequency correction
+
+[\] satdump -v
+[/] Enable verbose output
+
+# -------------------------
+# SATELLITE TRACKING / TLE
+# -------------------------
+
+[\] satdump -t tle.txt
+[/] Use TLE file for satellite tracking
+
+[\] satdump -T 5
+[/] Track satellite every 5 seconds
+
+[\] satdump -a
+[/] Auto-track satellites using TLE data
+
+[\] satdump -A 1
+[/] Track all satellites in TLE file
+
+# -------------------------
+# DEMODULATION / DECODING
+# -------------------------
+
+[\] satdump -m fm
+[/] Demodulate FM signals
+
+[\] satdump -m am
+[/] Demodulate AM signals
+
+[\] satdump -m lsb
+[/] Demodulate LSB signals
+
+[\] satdump -m usb
+[/] Demodulate USB signals
+
+[\] satdump -m noaa
+[/] Decode NOAA APT images
+
+[\] satdump -m meteor
+[/] Decode Meteor M2 LRPT images
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] satdump -b 16384
+[/] Set buffer size
+
+[\] satdump -i 10
+[/] Integrate measurements every 10 seconds
+
+[\] satdump -r 5e6
+[/] Set sample rate to 5 MSPS
+
+[\] satdump -c 0
+[/] Center frequency offset correction
+
+[\] satdump --gain-auto
+[/] Enable automatic gain

@@ -1,0 +1,103 @@
+[X] Wget Command List
+
+[\] wget https://example.com/file
+[/] Download file from URL
+
+[\] wget -O output.file https://example.com/file
+[/] Save file with custom name
+
+[\] wget -c https://example.com/file
+[/] Resume interrupted download
+
+[\] wget -q https://example.com/file
+[/] Quiet mode (no output)
+
+[\] wget -v https://example.com/file
+[/] Verbose output
+
+[\] wget -nv https://example.com/file
+[/] Less verbose output
+
+[\] wget -i urls.txt
+[/] Download multiple URLs from file
+
+[\] wget -P /path/to/folder https://example.com/file
+[/] Save file to specific directory
+
+[\] wget --limit-rate=200k https://example.com/file
+[/] Limit download speed
+
+[\] wget --timeout=30 https://example.com/file
+[/] Set network timeout
+
+[\] wget --tries=5 https://example.com/file
+[/] Retry download 5 times
+
+[\] wget --no-check-certificate https://example.com/file
+[/] Ignore SSL certificate errors
+
+[\] wget --user=username --password=password https://example.com/file
+[/] Download with authentication
+
+[\] wget --ftp-user=username --ftp-password=password ftp://example.com/file
+[/] Download from FTP with login
+
+[\] wget -r https://example.com
+[/] Recursive download (entire site)
+
+[\] wget -r -l 2 https://example.com
+[/] Recursive download with depth limit
+
+[\] wget -np https://example.com/folder/
+[/] Do not ascend to parent directories
+
+[\] wget -k https://example.com
+[/] Convert links for offline viewing
+
+[\] wget -m https://example.com
+[/] Mirror entire website
+
+[\] wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://example.com
+[/] Full website mirror with proper links
+
+[\] wget -A pdf https://example.com
+[/] Download only specific file types
+
+[\] wget -R jpg,png https://example.com
+[/] Reject specific file types
+
+[\] wget --spider https://example.com
+[/] Check if URL is reachable
+
+[\] wget --background https://example.com/file
+[/] Download in background
+
+[\] wget -o log.txt https://example.com/file
+[/] Log output to file
+
+[\] wget -S https://example.com/file
+[/] Show server response headers
+
+[\] wget --random-wait -r https://example.com
+[/] Add random delays (anti-blocking)
+
+[\] wget --user-agent="Mozilla/5.0" https://example.com
+[/] Set custom user agent
+
+[\] wget -4 https://example.com/file
+[/] Force IPv4
+
+[\] wget -6 https://example.com/file
+[/] Force IPv6
+
+[\] wget --no-clobber https://example.com/file
+[/] Skip downloads if file exists
+
+[\] wget --timestamping https://example.com/file
+[/] Download only if newer than local file
+
+[\] wget -h
+[/] Show help menu
+
+[\] wget --version
+[/] Show wget version

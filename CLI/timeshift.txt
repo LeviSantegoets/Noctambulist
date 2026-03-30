@@ -1,0 +1,75 @@
+[X] Timeshift Command List
+
+[\] timeshift --help  
+[/] Toon helpmenu en beschikbare opties
+
+[\] timeshift --version  
+[/] Toon Timeshift‑versie
+
+[\] timeshift --list  
+[/] Toon alle beschikbare snapshots
+
+[\] timeshift --create  
+[/] Maak een nieuwe snapshot met standaardinstellingen
+
+[\] timeshift --create --comments "Voor update"  
+[/] Maak snapshot met een opmerking
+
+[\] timeshift --create --tags D  
+[/] Maak snapshot met tag (D = Daily, W = Weekly, M = Monthly, O = On-demand, B = Boot)
+
+[\] timeshift --restore  
+[/] Start herstelproces via CLI (interactief)
+
+[\] timeshift --restore --snapshot '2024-01-15_12-00-00'  
+[/] Herstel een specifieke snapshot
+
+[\] timeshift --restore --snapshot '2024-01-15_12-00-00' --yes  
+[/] Herstel snapshot zonder bevestiging (niet-interactief)
+
+[\] timeshift --check  
+[/] Controleer Timeshift‑configuratie en snapshotlocaties
+
+[\] timeshift --check --scripted  
+[/] Controleer configuratie zonder interactieve prompts
+
+[\] timeshift --delete --snapshot '2024-01-15_12-00-00'  
+[/] Verwijder een specifieke snapshot
+
+[\] timeshift --delete-all  
+[/] Verwijder alle snapshots (gevaarlijk)
+
+[\] timeshift --btrfs  
+[/] Forceer BTRFS‑modus
+
+[\] timeshift --rsync  
+[/] Forceer RSYNC‑modus
+
+[\] timeshift --clone --target /mnt/backupdrive  
+[/] Clone systeem naar een andere schijf (RSYNC)
+
+[\] timeshift --scripted  
+[/] Voer Timeshift uit zonder interactieve vragen (voor automatisering)
+
+[\] timeshift --snapshot-device /dev/sdb1  
+[/] Specificeer snapshot‑opslaglocatie
+
+[\] timeshift --backup-device /dev/sdc1  
+[/] Specificeer backup‑doellocatie
+
+[\] timeshift --include /home/levi/Documents  
+[/] Voeg extra map toe aan snapshot (RSYNC)
+
+[\] timeshift --exclude /home/levi/Downloads  
+[/] Sluit map uit van snapshot (RSYNC)
+
+[\] timeshift --json  
+[/] Toon uitvoer in JSON‑formaat
+
+[\] sudo apt install timeshift  
+[/] Installeer Timeshift op Debian‑gebaseerde systemen
+
+[\] sudo pacman -S timeshift  
+[/] Installeer Timeshift op Arch‑gebaseerde systemen
+
+[\] sudo dnf install timeshift

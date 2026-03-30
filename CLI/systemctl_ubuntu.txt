@@ -1,0 +1,132 @@
+# systemctl Command List (Ubuntu)
+# Format: [\] command [/] description [X] menutitlename
+
+[X] systemctl Command List (Ubuntu)
+
+# -------------------------
+# SERVICE CONTROL
+# -------------------------
+
+[\] sudo systemctl start <service>
+[/] Start a service
+
+[\] sudo systemctl stop <service>
+[/] Stop a service
+
+[\] sudo systemctl restart <service>
+[/] Restart a service
+
+[\] sudo systemctl reload <service>
+[/] Reload service config without stopping
+
+[\] sudo systemctl try-restart <service>
+[/] Restart only if service is running
+
+[\] sudo systemctl reload-or-restart <service>
+[/] Reload if possible, otherwise restart
+
+# -------------------------
+# SERVICE STATUS
+# -------------------------
+
+[\] systemctl status <service>
+[/] Show service status
+
+[\] systemctl is-active <service>
+[/] Check if service is active
+
+[\] systemctl is-enabled <service>
+[/] Check if service starts at boot
+
+[\] systemctl is-failed <service>
+[/] Check if service has failed
+
+# -------------------------
+# ENABLE / DISABLE SERVICES
+# -------------------------
+
+[\] sudo systemctl enable <service>
+[/] Enable service at boot
+
+[\] sudo systemctl disable <service>
+[/] Disable service at boot
+
+[\] sudo systemctl enable --now <service>
+[/] Enable and start service
+
+[\] sudo systemctl disable --now <service>
+[/] Disable and stop service
+
+# -------------------------
+# LISTING SERVICES
+# -------------------------
+
+[\] systemctl list-units --type=service
+[/] List active services
+
+[\] systemctl list-unit-files --type=service
+[/] List all installed services
+
+[\] systemctl list-units --failed
+[/] List failed services
+
+# -------------------------
+# SYSTEMD DAEMON CONTROL
+# -------------------------
+
+[\] sudo systemctl daemon-reload
+[/] Reload systemd after config changes
+
+[\] sudo systemctl reset-failed
+[/] Clear failed service states
+
+# -------------------------
+# LOGS (JOURNALCTL)
+# -------------------------
+
+[\] journalctl -u <service>
+[/] Show logs for a service
+
+[\] journalctl -u <service> -f
+[/] Follow logs in real time
+
+[\] journalctl -xe
+[/] Show detailed system logs with errors
+
+[\] journalctl --since "1 hour ago"
+[/] Show logs from the last hour
+
+# -------------------------
+# SYSTEM CONTROL
+# -------------------------
+
+[\] sudo systemctl reboot
+[/] Reboot system
+
+[\] sudo systemctl poweroff
+[/] Shut down system
+
+[\] sudo systemctl suspend
+[/] Suspend system
+
+[\] sudo systemctl hibernate
+[/] Hibernate system
+
+# -------------------------
+# TARGETS (RUNLEVELS)
+# -------------------------
+
+[\] systemctl get-default
+[/] Show current boot target
+
+[\] sudo systemctl set-default multi-user.target
+[/] Set CLI-only boot mode
+
+[\] sudo systemctl set-default graphical.target
+[/] Set GUI boot mode
+
+[\] sudo systemctl isolate multi-user.target
+[/] Switch to CLI mode immediately
+
+[\] sudo systemctl isolate graphical.target
+[/] Switch to GUI mode immediately

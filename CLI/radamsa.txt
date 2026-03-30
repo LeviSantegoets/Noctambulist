@@ -1,0 +1,55 @@
+[X] Radamsa Command List
+
+[\] radamsa input.txt
+[/] Generate mutated output from input file
+
+[\] radamsa input.txt > fuzzed.txt
+[/] Save mutated output to file
+
+[\] radamsa input1.txt input2.txt
+[/] Use multiple input files as seed corpus
+
+[\] radamsa -n 10 input.txt
+[/] Generate 10 mutated outputs
+
+[\] radamsa -o output_%n.txt -n 10 input.txt
+[/] Save multiple outputs with numbered filenames
+
+[\] radamsa -s 1234 input.txt
+[/] Set random seed (reproducible fuzzing)
+
+[\] radamsa -m
+[/] List available mutation operations
+
+[\] radamsa -r input_dir/
+[/] Use directory as input corpus
+
+[\] radamsa -o - input.txt | nc 127.0.0.1 9999
+[/] Pipe fuzzed output to network service
+
+[\] radamsa -o - input.txt | ./target_binary
+[/] Pipe fuzzed input into local program
+
+[\] radamsa -n inf input.txt
+[/] Generate infinite fuzzed inputs
+
+[\] radamsa -n 1000 -o out_%n.bin input.txt
+[/] Generate 1000 mutated test cases
+
+[\] radamsa -p 1 input.txt
+[/] Use single processing thread
+
+[\] radamsa -p 4 input.txt
+[/] Use 4 parallel workers
+
+[\] radamsa -d
+[/] Enable debug output
+
+[\] radamsa -v
+[/] Verbose output
+
+[\] radamsa --help
+[/] Show help menu
+
+[\] radamsa --version
+[/] Show version

@@ -1,0 +1,34 @@
+[X] TCPFlow Command List (Capture and Analyze TCP Connections)
+
+[\] tcpflow -i eth0
+[/] Capture TCP traffic on interface eth0
+
+[\] tcpflow -p -i eth0
+[/] Capture without putting interface into promiscuous mode
+
+[\] tcpflow port 80
+[/] Capture only traffic on port 80
+
+[\] tcpflow host 192.168.1.10
+[/] Capture traffic to/from specific host
+
+[\] tcpflow host 192.168.1.10 and port 22
+[/] Capture traffic to/from host and port
+
+[\] tcpflow -c
+[/] Continuous capture (keep capturing)
+
+[\] tcpflow -o /tmp/output
+[/] Save captured flows to /tmp/output directory
+
+[\] tcpflow -r capture.pcap
+[/] Read packets from pcap file
+
+[\] tcpflow -f "tcp and port 443"
+[/] Use BPF filter expression for selective capture
+
+[\] tcpflow -h
+[/] Show help menu
+
+[\] tcpflow --version
+[/] Show version

@@ -1,0 +1,40 @@
+[X] RKHunter Command List (Rootkit Hunter)
+
+[\] rkhunter --check
+[/] Run full system check for rootkits, backdoors, and exploits
+
+[\] rkhunter --update
+[/] Update the program and its definitions
+
+[\] rkhunter --propupd
+[/] Update file properties database (after system changes)
+
+[\] rkhunter --versioncheck
+[/] Check for the latest version of RKHunter
+
+[\] rkhunter --config-check
+[/] Verify configuration file syntax and options
+
+[\] rkhunter --cronjob
+[/] Run checks suitable for automated cron job
+
+[\] rkhunter --disable --check malware
+[/] Disable a specific check (e.g., malware)
+
+[\] rkhunter --enable --check all
+[/] Enable all checks
+
+[\] rkhunter --list-checks
+[/] Show all available checks
+
+[\] rkhunter --help
+[/] Show help menu
+
+[\] rkhunter --version
+[/] Show rkhunter version
+
+[\] rkhunter --report-warnings-only
+[/] Display only warnings in the report
+
+[\] rkhunter --logfile /var/log/rkhunter.log
+[/] Specify a custom log file

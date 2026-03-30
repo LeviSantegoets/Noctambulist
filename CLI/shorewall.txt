@@ -1,0 +1,139 @@
+[X] Shorewall Firewall Command List
+
+[\] shorewall start
+[/] Start Shorewall firewall
+
+[\] shorewall stop
+[/] Stop Shorewall firewall
+
+[\] shorewall restart
+[/] Restart firewall and reload rules
+
+[\] shorewall reload
+[/] Reload configuration without full restart
+
+[\] shorewall status
+[/] Show firewall status
+
+[\] shorewall status -v
+[/] Verbose firewall status
+
+[\] shorewall check
+[/] Check configuration for errors
+
+[\] shorewall try
+[/] Test new configuration safely (auto-revert)
+
+[\] shorewall clear
+[/] Clear all firewall rules
+
+[\] shorewall panic
+[/] Block all traffic (emergency mode)
+
+[\] shorewall enable
+[/] Enable Shorewall at boot
+
+[\] shorewall disable
+[/] Disable Shorewall at boot
+
+[\] shorewall version
+[/] Show Shorewall version
+
+[\] shorewall show
+[/] Display compiled rules
+
+[\] shorewall show zones
+[/] Show configured zones
+
+[\] shorewall show interfaces
+[/] Show interfaces and bindings
+
+[\] shorewall show policies
+[/] Show policy rules
+
+[\] shorewall show rules
+[/] Show firewall rules
+
+[\] shorewall show nat
+[/] Show NAT rules
+
+[\] shorewall show conntrack
+[/] Show connection tracking info
+
+[\] shorewall show mangle
+[/] Show mangle table rules
+
+[\] shorewall show accounting
+[/] Show traffic accounting
+
+[\] shorewall show blacklist
+[/] Show blacklisted IPs
+
+[\] shorewall show capabilities
+[/] Show kernel/netfilter capabilities
+
+[\] shorewall show macros
+[/] Show available macros
+
+[\] shorewall show actions
+[/] Show defined actions
+
+[\] shorewall show helpers
+[/] Show connection helpers
+
+[\] shorewall show params
+[/] Show configuration parameters
+
+[\] shorewall dump
+[/] Dump full compiled configuration
+
+[\] systemctl start shorewall
+[/] Start Shorewall via systemd
+
+[\] systemctl stop shorewall
+[/] Stop Shorewall via systemd
+
+[\] systemctl restart shorewall
+[/] Restart Shorewall via systemd
+
+[\] systemctl status shorewall
+[/] Show Shorewall service status
+
+[\] systemctl enable shorewall
+[/] Enable Shorewall at boot
+
+[\] systemctl disable shorewall
+[/] Disable Shorewall at boot
+
+[\] nano /etc/shorewall/shorewall.conf
+[/] Edit main configuration file
+
+[\] nano /etc/shorewall/rules
+[/] Edit firewall rules
+
+[\] nano /etc/shorewall/policy
+[/] Edit default policies
+
+[\] nano /etc/shorewall/interfaces
+[/] Configure interfaces
+
+[\] nano /etc/shorewall/zones
+[/] Define firewall zones
+
+[\] nano /etc/shorewall/nat
+[/] Configure NAT rules
+
+[\] nano /etc/shorewall/masq
+[/] Configure masquerading
+
+[\] nano /etc/shorewall/params
+[/] Define variables/parameters
+
+[\] iptables -L
+[/] Show underlying iptables rules
+
+[\] iptables -t nat -L
+[/] Show NAT table rules
+
+[\] iptables -F
+[/] Flush iptables rules (dangerous)

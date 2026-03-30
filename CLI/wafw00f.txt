@@ -1,0 +1,61 @@
+# WafW00f Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] WafW00f Command List
+
+[\] wafw00f https://example.com
+[/] Detect if a website is protected by a WAF
+
+[\] wafw00f http://example.com
+[/] Scan a site using HTTP
+
+[\] wafw00f https://example.com -v
+[/] Enable verbose output
+
+[\] wafw00f https://example.com -vv
+[/] Enable very verbose output
+
+[\] wafw00f https://example.com -a
+[/] Aggressive detection mode (more tests)
+
+[\] wafw00f https://example.com -r
+[/] Display the raw detection results
+
+[\] wafw00f https://example.com -o report.txt
+[/] Save results to a text file
+
+[\] wafw00f https://example.com -f json -o report.json
+[/] Save results in JSON format
+
+[\] wafw00f https://example.com -f csv -o report.csv
+[/] Save results in CSV format
+
+[\] wafw00f -i targets.txt
+[/] Scan multiple targets from a file
+
+[\] wafw00f -i targets.txt -o results.txt
+[/] Save multi-target results to a file
+
+[\] wafw00f -l
+[/] List all supported WAFs
+
+[\] wafw00f --findall https://example.com
+[/] Attempt to detect all possible WAFs
+
+[\] wafw00f --no-colors https://example.com
+[/] Disable colored output
+
+[\] wafw00f --timeout 10 https://example.com
+[/] Set request timeout to 10 seconds
+
+[\] wafw00f --proxy http://127.0.0.1:8080 https://example.com
+[/] Use a proxy for scanning
+
+[\] wafw00f --user-agent "Mozilla/5.0" https://example.com
+[/] Use a custom User-Agent header
+
+[\] wafw00f --version
+[/] Show WafW00f version
+
+[\] wafw00f --help
+[/] Display help menu

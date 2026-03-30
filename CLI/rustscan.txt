@@ -1,0 +1,76 @@
+[X] RustScan Command List
+
+[\] rustscan -a 192.168.1.1
+[/] Scan all ports on target IP
+
+[\] rustscan -a example.com
+[/] Scan all ports on target hostname
+
+[\] rustscan -p 80,443
+[/] Scan specific ports
+
+[\] rustscan -b 1000
+[/] Set batch size (concurrent connections)
+
+[\] rustscan -t 1000
+[/] Set timeout in milliseconds
+
+[\] rustscan -g 50
+[/] Set max number of open connections
+
+[\] rustscan -r
+[/] Randomize ports
+
+[\] rustscan --ulimit 5000
+[/] Set max open file descriptors
+
+[\] rustscan -o output.txt
+[/] Save scan results to file
+
+[\] rustscan --accessible
+[/] Show only open ports
+
+[\] rustscan -j
+[/] Output results in JSON
+
+[\] rustscan -V
+[/] Show version
+
+[\] rustscan -h
+[/] Show help menu
+
+[\] rustscan -- -A
+[/] Pass arguments to nmap (e.g., -A for OS & version detection)
+
+[\] rustscan -- -sV
+[/] Pass nmap version detection
+
+[\] rustscan -- -Pn
+[/] Pass nmap “no ping” option
+
+[\] rustscan -- -p 1-65535
+[/] Use RustScan for discovery, nmap for full scan
+
+[\] rustscan --range 192.168.1.0/24
+[/] Scan IP range
+
+[\] rustscan --ulimit-max
+[/] Automatically set max ulimit
+
+[\] rustscan --no-nmap
+[/] Only run RustScan, skip nmap
+
+[\] rustscan --timeout 3000
+[/] Set scan timeout (ms)
+
+[\] rustscan --tcp
+[/] Force TCP scan
+
+[\] rustscan --udp
+[/] Force UDP scan
+
+[\] rustscan --list-ports
+[/] Show default port list
+
+[\] rustscan --help
+[/] Show full help

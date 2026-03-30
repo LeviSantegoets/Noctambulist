@@ -1,0 +1,106 @@
+# Snort Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Snort Command List
+
+[\] snort -V
+[/] Show Snort version
+
+[\] snort -T -c /etc/snort/snort.conf
+[/] Test Snort configuration for errors
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf
+[/] Run Snort in IDS mode and print alerts to console
+
+[\] snort -i eth0 -A fast -c /etc/snort/snort.conf
+[/] Fast alert mode (minimal output)
+
+[\] snort -i eth0 -A full -c /etc/snort/snort.conf
+[/] Full alert mode (detailed output)
+
+[\] snort -i eth0 -A console -q -c /etc/snort/snort.conf
+[/] Quiet mode (no banner, only alerts)
+
+[\] snort -i eth0 -l /var/log/snort
+[/] Log packets to directory
+
+[\] snort -i eth0 -b -l /var/log/snort
+[/] Log packets in tcpdump (pcap) format
+
+[\] snort -r file.pcap
+[/] Read and analyze a pcap file
+
+[\] snort -r file.pcap -c /etc/snort/snort.conf
+[/] Analyze pcap using Snort rules
+
+[\] snort -i eth0 -c /etc/snort/snort.conf -K ascii
+[/] Log alerts in ASCII format
+
+[\] snort -i eth0 -c /etc/snort/snort.conf -K pcap
+[/] Log alerts in PCAP format
+
+[\] snort -i eth0 -Q --daq afpacket -c /etc/snort/snort.conf
+[/] Run Snort in inline IPS mode
+
+[\] snort -Q --daq nfq -c /etc/snort/snort.conf
+[/] Inline mode using NFQUEUE (Linux firewall integration)
+
+[\] snort -i eth0 -A console -k none -c /etc/snort/snort.conf
+[/] Disable checksum verification
+
+[\] snort -i eth0 -A console -n 100 -c /etc/snort/snort.conf
+[/] Capture and analyze only 100 packets
+
+[\] snort -i eth0 -A console -d -e -c /etc/snort/snort.conf
+[/] Show full packet payload and headers
+
+[\] snort -i eth0 -X -c /etc/snort/snort.conf
+[/] Show packet payload in hex and ASCII
+
+[\] snort -i eth0 -y -c /etc/snort/snort.conf
+[/] Show only packet headers
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf -s 65535
+[/] Set snap length (max packet size)
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf -u snort -g snort
+[/] Run Snort as user/group snort
+
+[\] snort -c /etc/snort/snort.conf --dump-daq
+[/] Show available DAQ modules
+
+[\] snort -c /etc/snort/snort.conf --daq-list
+[/] List DAQ modules and capabilities
+
+[\] snort -c /etc/snort/snort.conf --daq-dir /usr/lib/daq
+[/] Specify custom DAQ directory
+
+[\] snort -T -c /etc/snort/snort.conf --treat-drop-as-alert
+[/] Test config and treat drop rules as alerts
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --enable-inline-test
+[/] Test inline rules without blocking traffic
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --pcap-single=packet.pcap
+[/] Analyze a single packet file
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --pcap-list=list.txt
+[/] Analyze multiple pcap files
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --create-pcap=out.pcap
+[/] Save captured packets to a pcap file
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --dump-config
+[/] Dump full Snort configuration
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --plugin-path /usr/lib/snort
+[/] Specify plugin directory
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --logdir /var/log/snort
+[/] Set log directory
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --alert-before-pass
+[/] Alert even if packet matches a pass rule
+
+[\] snort -i eth0 -A console -c /etc/snort/snort.conf --alert-after-pass
+[/] Alert only after pass rules

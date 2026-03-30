@@ -1,0 +1,130 @@
+# Recon-ng Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Recon-ng Command List
+
+[\] recon-ng
+[/] Start the Recon-ng framework
+
+[\] help
+[/] Show global help menu
+
+[\] help <module>
+[/] Show help for a specific module
+
+[\] marketplace search <keyword>
+[/] Search for modules in the marketplace
+
+[\] marketplace install <module>
+[/] Install a module from the marketplace
+
+[\] marketplace remove <module>
+[/] Remove an installed module
+
+[\] modules search <keyword>
+[/] Search installed modules
+
+[\] modules load <module>
+[/] Load a module for use
+
+[\] modules info
+[/] Show information about the loaded module
+
+[\] show options
+[/] Display module options
+
+[\] set <option> <value>
+[/] Set a module option
+
+[\] unset <option>
+[/] Clear a module option
+
+[\] run
+[/] Execute the loaded module
+
+[\] workspaces list
+[/] List all workspaces
+
+[\] workspaces create <name>
+[/] Create a new workspace
+
+[\] workspaces select <name>
+[/] Switch to a workspace
+
+[\] workspaces remove <name>
+[/] Delete a workspace
+
+[\] db schema
+[/] Show database schema
+
+[\] db insert <table>
+[/] Insert data manually into a table
+
+[\] db delete <table>
+[/] Delete data from a table
+
+[\] db query <SQL>
+[/] Run a raw SQL query
+
+[\] show hosts
+[/] Display discovered hosts
+
+[\] show contacts
+[/] Display discovered contacts
+
+[\] show domains
+[/] Display discovered domains
+
+[\] show creds
+[/] Display discovered credentials
+
+[\] show leaks
+[/] Display discovered data leaks
+
+[\] show vulnerabilities
+[/] Display discovered vulnerabilities
+
+[\] show ports
+[/] Display discovered open ports
+
+[\] show companies
+[/] Display discovered companies
+
+[\] show locations
+[/] Display discovered locations
+
+[\] show profiles
+[/] Display discovered social profiles
+
+[\] show pushpins
+[/] Display discovered geolocation pushpins
+
+[\] show netblocks
+[/] Display discovered netblocks
+
+[\] show certificates
+[/] Display discovered SSL certificates
+
+[\] show repositories
+[/] Display discovered code repositories
+
+[\] show results
+[/] Display all collected data
+
+[\] report create <file.html>
+[/] Generate an HTML report
+
+[\] report create <file.csv>
+[/] Export data to CSV
+
+[\] keys list
+[/] List all stored API keys
+
+[\] keys add <name> <value>
+[/] Add an API key
+
+[\] keys remove <name>
+[/] Remove an API key
+
+[\] exit
+[/] Exit Recon-ng

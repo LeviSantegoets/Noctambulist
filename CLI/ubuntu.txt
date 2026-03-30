@@ -1,0 +1,190 @@
+# Ubuntu Linux Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Ubuntu Linux Command List
+
+[\] ls
+[/] List files and directories
+
+[\] ls -la
+[/] List all files with detailed information
+
+[\] cd /path
+[/] Change directory
+
+[\] pwd
+[/] Show current working directory
+
+[\] mkdir foldername
+[/] Create a new directory
+
+[\] rm file
+[/] Remove a file
+
+[\] rm -r folder
+[/] Remove a directory and its contents
+
+[\] cp source destination
+[/] Copy a file
+
+[\] cp -r source destination
+[/] Copy a directory recursively
+
+[\] mv source destination
+[/] Move or rename a file or directory
+
+[\] cat file
+[/] Display file contents
+
+[\] nano file
+[/] Edit a file using nano editor
+
+[\] sudo apt update
+[/] Update package lists
+
+[\] sudo apt upgrade -y
+[/] Upgrade installed packages
+
+[\] sudo apt install packagename
+[/] Install a package
+
+[\] sudo apt remove packagename
+[/] Remove a package
+
+[\] sudo apt autoremove
+[/] Remove unused packages
+
+[\] sudo reboot
+[/] Restart the system
+
+[\] sudo shutdown now
+[/] Shut down the system immediately
+
+[\] sudo shutdown -r now
+[/] Restart the system immediately
+
+[\] top
+[/] Display running processes
+
+[\] htop
+[/] Interactive process viewer (if installed)
+
+[\] ps aux
+[/] Show all running processes
+
+[\] kill PID
+[/] Terminate a process by PID
+
+[\] df -h
+[/] Show disk usage in human-readable format
+
+[\] du -sh *
+[/] Show size of files and folders
+
+[\] free -h
+[/] Display memory usage
+
+[\] uname -a
+[/] Show system information
+
+[\] hostnamectl
+[/] Display hostname and OS details
+
+[\] ip a
+[/] Show network interfaces and IP addresses
+
+[\] ip r
+[/] Show routing table
+
+[\] ping 8.8.8.8
+[/] Test network connectivity
+
+[\] traceroute 8.8.8.8
+[/] Trace route to a destination
+
+[\] curl https://example.com
+[/] Fetch a URL using curl
+
+[\] wget https://example.com/file
+[/] Download a file
+
+[\] systemctl status servicename
+[/] Show service status
+
+[\] sudo systemctl start servicename
+[/] Start a service
+
+[\] sudo systemctl stop servicename
+[/] Stop a service
+
+[\] sudo systemctl restart servicename
+[/] Restart a service
+
+[\] sudo systemctl enable servicename
+[/] Enable service at boot
+
+[\] sudo systemctl disable servicename
+[/] Disable service at boot
+
+[\] journalctl -xe
+[/] View system logs
+
+[\] tail -f /var/log/syslog
+[/] Follow system log output
+
+[\] ifconfig
+[/] Display network configuration (net-tools package)
+
+[\] netstat -tulnp
+[/] Show listening ports (net-tools package)
+
+[\] ss -tulnp
+[/] Show listening ports (modern replacement for netstat)
+
+[\] adduser username
+[/] Create a new user
+
+[\] passwd username
+[/] Change a user password
+
+[\] sudo visudo
+[/] Edit sudoers file safely
+
+[\] chmod 755 file
+[/] Change file permissions
+
+[\] chown user:group file
+[/] Change file owner and group
+
+[\] mount
+[/] Show mounted filesystems
+
+[\] sudo mount /dev/sdX /mnt
+[/] Mount a device
+
+[\] sudo umount /mnt
+[/] Unmount a device
+
+[\] apt search keyword
+[/] Search for a package
+
+[\] dpkg -i package.deb
+[/] Install a .deb package manually
+
+[\] dpkg -l
+[/] List installed packages
+
+[\] grep "text" file
+[/] Search for text inside a file
+
+[\] find /path -name filename
+[/] Search for a file by name
+
+[\] tar -xzvf file.tar.gz
+[/] Extract a tar.gz archive
+
+[\] zip -r archive.zip folder
+[/] Create a zip archive
+
+[\] unzip archive.zip
+[/] Extract a zip archive

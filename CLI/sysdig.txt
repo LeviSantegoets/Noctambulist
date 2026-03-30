@@ -1,0 +1,49 @@
+[X] Sysdig Command List (System Exploration and Troubleshooting)
+
+[\] sysdig
+[/] Capture and display system events in real time
+
+[\] sysdig -c topprocs_cpu
+[/] Show processes consuming most CPU
+
+[\] sysdig -c topprocs_mem
+[/] Show processes consuming most memory
+
+[\] sysdig -c fdcount
+[/] Show number of file descriptors per process
+
+[\] sysdig -c netstat
+[/] Display network connections
+
+[\] sysdig -c spy_users
+[/] Show commands executed by users
+
+[\] sysdig -c spy_file
+[/] Trace file read/write operations
+
+[\] sysdig -p "%evt.time %proc.name %evt.args"
+[/] Customize output format
+
+[\] sysdig -w capture.scap
+[/] Write capture to file
+
+[\] sysdig -r capture.scap
+[/] Read events from capture file
+
+[\] sysdig -s 4096
+[/] Set snaplen (max bytes per event)
+
+[\] sysdig -A
+[/] Print full event content (ASCII)
+
+[\] sysdig -v
+[/] Verbose output
+
+[\] sysdig --list-cs
+[/] List available chisels (predefined scripts)
+
+[\] sysdig --help
+[/] Show help menu
+
+[\] sysdig --version
+[/] Show sysdig version

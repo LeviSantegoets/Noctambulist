@@ -1,0 +1,79 @@
+[X] r2pipe Command List
+
+[\] import r2pipe
+[/] Import r2pipe library in Python
+
+[\] r2 = r2pipe.open("binary")
+[/] Open binary for analysis
+
+[\] r2.cmd("aaa")
+[/] Perform auto-analysis
+
+[\] r2.cmd("afl")
+[/] List all functions
+
+[\] r2.cmd("pdf @main")
+[/] Print disassembly of `main` function
+
+[\] r2.cmd("iI")
+[/] Show binary info (architecture, bits, etc.)
+
+[\] r2.cmd("iS")
+[/] Show sections
+
+[\] r2.cmd("iz")
+[/] Show strings in binary
+
+[\] r2.cmd("ic")
+[/] Show comments
+
+[\] r2.cmd("e dbg.profile=true")
+[/] Enable debugging profile
+
+[\] r2.cmd("ood")
+[/] Open binary in debug mode
+
+[\] r2.cmd("db main")
+[/] Set breakpoint at `main`
+
+[\] r2.cmd("dc")
+[/] Continue execution
+
+[\] r2.cmd("dr eax")
+[/] Read CPU register
+
+[\] r2.cmd("wx 9090 @0x401000")
+[/] Write bytes at specific address
+
+[\] r2.cmd("s 0x401000")
+[/] Seek to address
+
+[\] r2.cmd("af @sym.func")
+[/] Analyze function
+
+[\] r2.cmd("aap")
+[/] Analyze all procedures
+
+[\] r2.cmd("pd 20")
+[/] Print 20 instructions
+
+[\] r2.cmd("VV")
+[/] Open visual mode (if using CLI)
+
+[\] r2.quit()
+[/] Exit r2pipe session
+
+[\] r2pipe.open_sync("binary")
+[/] Synchronous mode
+
+[\] r2.cmdj("aflj")
+[/] Get JSON output of functions
+
+[\] r2.cmdj("iIj")
+[/] Get JSON output of binary info
+
+[\] r2.cmdj("izj")
+[/] Get JSON strings
+
+[\] r2pipe --help
+[/] Show help menu

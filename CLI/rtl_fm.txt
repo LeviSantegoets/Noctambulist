@@ -1,0 +1,116 @@
+[X] RTL_FM Command List
+
+[\] rtl_fm
+[/] Start RTL-SDR FM receiver
+
+[\] rtl_fm -h
+[/] Show help and available options
+
+# -------------------------
+# FREQUENCY CONTROL
+# -------------------------
+
+[\] rtl_fm -f 100M
+[/] Tune to 100 MHz
+
+[\] rtl_fm -f 433.92M
+[/] Tune to 433.92 MHz ISM band
+
+[\] rtl_fm -f 162.550M
+[/] Tune to NOAA weather radio frequency
+
+[\] rtl_fm -f 118M:136M
+[/] Scan aircraft band frequencies
+
+# -------------------------
+# SAMPLE RATE
+# -------------------------
+
+[\] rtl_fm -s 200000
+[/] Set output sample rate to 200 kHz
+
+[\] rtl_fm -s 48000
+[/] Set output sample rate to 48 kHz (audio)
+
+[\] rtl_fm -s 171k
+[/] Sample rate used for RDS decoding
+
+# -------------------------
+# DEMODULATION MODES
+# -------------------------
+
+[\] rtl_fm -M fm
+[/] Wideband FM demodulation
+
+[\] rtl_fm -M wbfm
+[/] Wideband FM broadcast demodulation
+
+[\] rtl_fm -M nfm
+[/] Narrowband FM demodulation
+
+[\] rtl_fm -M am
+[/] AM demodulation
+
+[\] rtl_fm -M usb
+[/] Upper sideband demodulation
+
+[\] rtl_fm -M lsb
+[/] Lower sideband demodulation
+
+[\] rtl_fm -M raw
+[/] Raw IQ output
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] rtl_fm -g 20
+[/] Set tuner gain to 20 dB
+
+[\] rtl_fm -g 0
+[/] Enable automatic gain control
+
+# -------------------------
+# FILTER / SIGNAL OPTIONS
+# -------------------------
+
+[\] rtl_fm -l 0
+[/] Disable squelch
+
+[\] rtl_fm -l 30
+[/] Set squelch level to 30
+
+[\] rtl_fm -E deemp
+[/] Enable FM de-emphasis filter
+
+[\] rtl_fm -E dc
+[/] Remove DC offset
+
+[\] rtl_fm -E edge
+[/] Enable edge tuning
+
+# -------------------------
+# DEVICE SETTINGS
+# -------------------------
+
+[\] rtl_fm -d 0
+[/] Use first RTL-SDR device
+
+[\] rtl_fm -p 20
+[/] Apply 20 PPM frequency correction
+
+# -------------------------
+# OUTPUT / PIPELINES
+# -------------------------
+
+[\] rtl_fm -f 100M -M wbfm -s 48000 | aplay -r 48000 -f S16_LE
+[/] Listen to FM broadcast through speakers
+
+[\] rtl_fm -f 162.550M -M nfm -s 22050 | aplay -r 22050 -f S16_LE
+[/] Listen to NOAA weather radio
+
+[\] rtl_fm -f 100M -M fm -s 171k -A std - | redsea
+[/] Pipe FM multiplex to RDS decoder
+
+[\] rtl_fm -f 433.92M -M nfm -s 22050 > output.raw
+[/] Save demodulated audio to file

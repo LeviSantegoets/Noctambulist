@@ -1,0 +1,91 @@
+[X] testssl.sh Command List
+
+[\] ./testssl.sh example.com
+[/] Run default SSL/TLS scan on a host
+
+[\] ./testssl.sh -h
+[/] Show help menu
+
+[\] ./testssl.sh --help
+[/] Show help menu (alternative)
+
+[\] ./testssl.sh -V
+[/] Show version
+
+[\] ./testssl.sh -p 443
+[/] Specify port for scanning
+
+[\] ./testssl.sh --full
+[/] Run full suite of tests
+
+[\] ./testssl.sh --openssl=openssl
+[/] Use a specific OpenSSL binary
+
+[\] ./testssl.sh --sneaky
+[/] Run scan with minimal network footprint
+
+[\] ./testssl.sh --parallel
+[/] Enable parallel scanning
+
+[\] ./testssl.sh --fast
+[/] Run faster scan (fewer tests)
+
+[\] ./testssl.sh --grade
+[/] Show overall grade of host
+
+[\] ./testssl.sh --protocols
+[/] Show supported SSL/TLS protocols
+
+[\] ./testssl.sh --cipher
+[/] Show supported ciphers
+
+[\] ./testssl.sh --reneg
+[/] Test for TLS renegotiation vulnerabilities
+
+[\] ./testssl.sh --heartbleed
+[/] Test for Heartbleed vulnerability
+
+[\] ./testssl.sh --poodle
+[/] Test for POODLE vulnerability
+
+[\] ./testssl.sh --ccs
+[/] Test for CCS Injection
+
+[\] ./testssl.sh --ticket
+[/] Test for session ticket support
+
+[\] ./testssl.sh --dh
+[/] Check Diffie-Hellman parameters
+
+[\] ./testssl.sh --cert
+[/] Show certificate information
+
+[\] ./testssl.sh --http
+[/] Scan via HTTPS headers
+
+[\] ./testssl.sh --openssl-min-ver=1.0.1
+[/] Set minimum OpenSSL version for tests
+
+[\] ./testssl.sh --quiet
+[/] Suppress non-critical output
+
+[\] ./testssl.sh --json
+[/] Output results in JSON
+
+[\] ./testssl.sh --csv
+[/] Output results in CSV
+
+[\] ./testssl.sh --log logfile.txt
+[/] Save output to a log file
+
+[\] ./testssl.sh --color
+[/] Enable colored output
+
+[\] ./testssl.sh --no-color
+[/] Disable colored output
+
+[\] ./testssl.sh --version
+[/] Show version again
+
+[\] ./testssl.sh --update
+[/] Update testssl.sh scripts

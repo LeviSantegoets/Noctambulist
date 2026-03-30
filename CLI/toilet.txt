@@ -1,0 +1,82 @@
+[X] toilet Command List
+
+[\] toilet Hello
+[/] Print text as ASCII art
+
+[\] toilet "Hello World"
+[/] Print phrase as ASCII art
+
+[\] toilet -f mono12 Hello
+[/] Use specific font
+
+[\] toilet -f future Hello
+[/] Use “future” font
+
+[\] toilet -f big Hello
+[/] Use large font
+
+[\] toilet -f term Hello
+[/] Use terminal-friendly font
+
+[\] toilet -F border Hello
+[/] Add border filter
+
+[\] toilet -F metal Hello
+[/] Apply metallic style
+
+[\] toilet -F gay Hello
+[/] Apply rainbow colors
+
+[\] toilet -F crop Hello
+[/] Crop excess whitespace
+
+[\] toilet -F rotate Hello
+[/] Rotate text
+
+[\] toilet -F flip Hello
+[/] Flip text vertically
+
+[\] toilet -F flop Hello
+[/] Flip text horizontally
+
+[\] toilet -F border:metal Hello
+[/] Combine filters
+
+[\] toilet -w 80 Hello
+[/] Set output width
+
+[\] toilet -k Hello
+[/] Enable kerning (improved spacing)
+
+[\] toilet -s Hello
+[/] Disable smushing (separate characters)
+
+[\] toilet -o output.txt Hello
+[/] Save output to file
+
+[\] toilet -d /usr/share/figlet Hello
+[/] Use custom font directory
+
+[\] toilet -l
+[/] List available fonts
+
+[\] toilet -h
+[/] Show help menu
+
+[\] toilet --help
+[/] Show detailed help
+
+[\] toilet --version
+[/] Show version
+
+[\] echo "Hello" | toilet
+[/] Pipe input into toilet
+
+[\] printf "Hello\nWorld" | toilet
+[/] Multi-line input
+
+[\] toilet -f mono12 -F border "Neofetch"
+[/] Styled banner for terminal
+
+[\] toilet -f future -F gay "Hack the Planet"
+[/] Colored stylized output

@@ -1,0 +1,64 @@
+[X] SharpHound Command List
+
+[\] SharpHound.exe -c All
+[/] Collect all data for BloodHound
+
+[\] SharpHound.exe -c DCOnly
+[/] Collect only domain controller data
+
+[\] SharpHound.exe -c Session
+[/] Collect active session data
+
+[\] SharpHound.exe -c LocalAdmin
+[/] Collect local administrator data
+
+[\] SharpHound.exe -c Group
+[/] Collect group membership data
+
+[\] SharpHound.exe -c Trusts
+[/] Collect domain trust relationships
+
+[\] SharpHound.exe -c ACL
+[/] Collect ACL (permissions) data
+
+[\] SharpHound.exe -c ObjectProps
+[/] Collect object properties
+
+[\] SharpHound.exe -c All -d example.local
+[/] Specify target domain
+
+[\] SharpHound.exe -c All -u user -p password
+[/] Run with alternate credentials
+
+[\] SharpHound.exe -c All --ldapusername user --ldappassword password
+[/] Use LDAP credentials explicitly
+
+[\] SharpHound.exe -c All --domain example.local --domaincontroller dc.example.local
+[/] Specify domain controller
+
+[\] SharpHound.exe -c All --zip
+[/] Compress output into ZIP file
+
+[\] SharpHound.exe -c All --outputdirectory C:\Temp
+[/] Set output directory
+
+[\] SharpHound.exe -c All --randomfilenames
+[/] Use random output filenames (OPSEC)
+
+[\] SharpHound.exe -c All --throttle 2000
+[/] Add delay between requests (ms)
+
+[\] SharpHound.exe -c All --stealth
+[/] Enable stealth collection mode
+
+[\] SharpHound.exe -c All --excludeDCs
+[/] Exclude domain controllers from collection
+
+[\] SharpHound.exe -c All --loop
+[/] Run continuously (loop mode)
+
+[\] SharpHound.exe --help
+[/] Show help menu
+
+[\] SharpHound.exe --version
+[/] Show version

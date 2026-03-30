@@ -1,0 +1,115 @@
+[X] restic Backup Command List
+
+[\] restic init
+[/] Initialize a new repository
+
+[\] restic init --repo /backup
+[/] Initialize repository at specific path
+
+[\] restic init --repo sftp:user@host:/repo
+[/] Initialize remote repository (SFTP)
+
+[\] restic backup /home/user
+[/] Backup directory
+
+[\] restic backup /etc /var/www
+[/] Backup multiple paths
+
+[\] restic backup /home --exclude "*.log"
+[/] Exclude files from backup
+
+[\] restic backup /home --tag daily
+[/] Add tag to snapshot
+
+[\] restic backup /home --one-file-system
+[/] Stay within one filesystem
+
+[\] restic snapshots
+[/] List all snapshots
+
+[\] restic snapshots --tag daily
+[/] Filter snapshots by tag
+
+[\] restic ls latest
+[/] List files in latest snapshot
+
+[\] restic ls <snapshotID>
+[/] List files in specific snapshot
+
+[\] restic restore latest --target /restore
+[/] Restore latest snapshot
+
+[\] restic restore <snapshotID> --target /restore
+[/] Restore specific snapshot
+
+[\] restic restore latest --include /home/user/file.txt --target /restore
+[/] Restore specific file
+
+[\] restic mount /mnt/restic
+[/] Mount repository as filesystem
+
+[\] restic diff <snap1> <snap2>
+[/] Compare two snapshots
+
+[\] restic check
+[/] Verify repository integrity
+
+[\] restic check --read-data
+[/] Verify data integrity
+
+[\] restic forget --keep-last 7
+[/] Keep last 7 snapshots
+
+[\] restic forget --keep-daily 7 --keep-weekly 4 --keep-monthly 6
+[/] Apply retention policy
+
+[\] restic prune
+[/] Remove unused data
+
+[\] restic forget --prune --keep-last 5
+[/] Forget old snapshots and prune
+
+[\] restic stats
+[/] Show repository statistics
+
+[\] restic stats --mode raw-data
+[/] Show raw data stats
+
+[\] restic cat config
+[/] Show repository config
+
+[\] restic unlock
+[/] Remove stale locks
+
+[\] restic rebuild-index
+[/] Rebuild repository index
+
+[\] restic key list
+[/] List repository keys
+
+[\] restic key add
+[/] Add new encryption key
+
+[\] restic key remove <keyID>
+[/] Remove key
+
+[\] restic generate --random-key
+[/] Generate random key
+
+[\] export RESTIC_REPOSITORY=/backup
+[/] Set repository environment variable
+
+[\] export RESTIC_PASSWORD=secret
+[/] Set repository password
+
+[\] export RESTIC_PASSWORD_FILE=/path/pass.txt
+[/] Use password file
+
+[\] restic cache --cleanup
+[/] Clean local cache
+
+[\] restic version
+[/] Show restic version
+
+[\] restic help
+[/] Show help menu

@@ -1,0 +1,73 @@
+[X] SigMF-Tools Command List
+
+[\] sigmf_info
+[/] Display metadata of a SigMF (Signal Metadata Format) file
+
+[\] sigmf_validate
+[/] Validate SigMF file and associated metadata
+
+[\] sigmf_convert
+[/] Convert data between different formats while preserving SigMF metadata
+
+[\] sigmf_merge
+[/] Merge multiple SigMF files into one
+
+[\] sigmf_split
+[/] Split a SigMF file into smaller segments
+
+[\] sigmf_to_wav
+[/] Convert SigMF data to WAV audio file
+
+[\] wav_to_sigmf
+[/] Convert WAV file to SigMF format with metadata
+
+[\] sigmf_plot
+[/] Plot signals from SigMF file (spectrum/waterfall)
+
+[\] sigmf_extract
+[/] Extract specific frequency range or channel from SigMF file
+
+[\] sigmf_info --json
+[/] Output SigMF metadata in JSON format
+
+[\] sigmf_info --verbose
+[/] Show detailed metadata and annotations
+
+[\] sigmf_validate --strict
+[/] Perform strict validation of metadata and data consistency
+
+[\] sigmf_convert --format i16
+[/] Convert samples to signed 16-bit integer format
+
+[\] sigmf_convert --format f32
+[/] Convert samples to 32-bit float format
+
+[\] sigmf_plot --spectrum
+[/] Show signal spectrum plot
+
+[\] sigmf_plot --waterfall
+[/] Show waterfall plot of signal
+
+[\] sigmf_extract --freq-min 100e3 --freq-max 200e3
+[/] Extract signal from 100–200 kHz frequency range
+
+[\] sigmf_merge file1.sigmf file2.sigmf
+[/] Merge two SigMF files together
+
+[\] sigmf_split --samples 1000000
+[/] Split SigMF file every 1,000,000 samples
+
+[\] sigmf_to_wav --scale
+[/] Scale signal to fit WAV format when converting
+
+[\] wav_to_sigmf --rate 44100
+[/] Set sample rate for conversion to SigMF
+
+[\] sigmf_extract --channel 1
+[/] Extract specific channel from multi-channel SigMF file
+
+[\] sigmf_plot --annotate
+[/] Show annotations from SigMF metadata on plots
+
+[\] sigmf_info --summary
+[/] Display a summary of the SigMF file contents

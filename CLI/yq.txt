@@ -1,0 +1,43 @@
+[X] YQ Command List (YAML Processor)
+
+[\] yq eval . file.yaml
+[/] Pretty-print YAML file
+
+[\] yq eval '.key' file.yaml
+[/] Extract value of a key
+
+[\] yq eval '.key.subkey' file.yaml
+[/] Extract nested keys
+
+[\] yq eval '.items[]' file.yaml
+[/] Iterate over array elements
+
+[\] yq eval '(.items[] | select(.name=="foo"))' file.yaml
+[/] Filter array elements by condition
+
+[\] yq eval '. + {"newkey":"newvalue"}' file.yaml
+[/] Add a new key-value pair
+
+[\] yq eval 'del(.key)' file.yaml
+[/] Delete a key
+
+[\] yq eval 'sort_by(.name)' file.yaml
+[/] Sort array of objects by key
+
+[\] yq eval --inplace '.key="newvalue"' file.yaml
+[/] Modify file in place
+
+[\] yq eval-all 'select(filename == "file.yaml")' *.yaml
+[/] Evaluate multiple files
+
+[\] yq eval --tojson file.yaml
+[/] Convert YAML to JSON
+
+[\] yq eval --yaml-output file.json
+[/] Convert JSON to YAML
+
+[\] yq eval --help
+[/] Show help menu
+
+[\] yq --version
+[/] Show yq version

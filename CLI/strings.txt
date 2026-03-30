@@ -1,0 +1,34 @@
+[X] Strings Command List (Extract Printable Strings from Files)
+
+[\] strings filename
+[/] Show all printable strings in a file
+
+[\] strings -n 5 filename
+[/] Show strings with minimum length of 5 characters
+
+[\] strings -t x filename
+[/] Show offset in hexadecimal
+
+[\] strings -t d filename
+[/] Show offset in decimal
+
+[\] strings -t o filename
+[/] Show offset in octal
+
+[\] strings -e l filename
+[/] Treat as little-endian 16-bit Unicode
+
+[\] strings -e b filename
+[/] Treat as big-endian 16-bit Unicode
+
+[\] strings -a filename
+[/] Scan the entire file, not just the data section
+
+[\] strings file1 file2
+[/] Scan multiple files
+
+[\] strings --help
+[/] Show help menu
+
+[\] strings --version
+[/] Show version

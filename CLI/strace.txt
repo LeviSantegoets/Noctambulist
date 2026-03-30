@@ -1,0 +1,49 @@
+[X] Strace Command List (System Call Tracer)
+
+[\] strace ls
+[/] Trace system calls of `ls` command
+
+[\] strace -p 1234
+[/] Attach to running process with PID 1234
+
+[\] strace -f ls
+[/] Trace child processes as well
+
+[\] strace -o output.txt ls
+[/] Save strace output to file
+
+[\] strace -e open,read,write ls
+[/] Trace only specific system calls
+
+[\] strace -e trace=file ls
+[/] Trace all file-related system calls
+
+[\] strace -e trace=network curl example.com
+[/] Trace only network-related system calls
+
+[\] strace -e signal=SIGINT -p 1234
+[/] Trace signals delivered to process
+
+[\] strace -c ls
+[/] Summary of system call usage and counts
+
+[\] strace -tt ls
+[/] Include timestamp for each system call
+
+[\] strace -T ls
+[/] Show time spent in each system call
+
+[\] strace -v ls
+[/] Print all strings and structures in full
+
+[\] strace -s 100 ls
+[/] Increase string size to print in output
+
+[\] strace -k ls
+[/] Print stack trace for each system call
+
+[\] strace --help
+[/] Show help menu
+
+[\] strace --version
+[/] Show strace version

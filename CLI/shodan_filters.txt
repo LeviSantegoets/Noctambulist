@@ -1,0 +1,148 @@
+# Shodan Filters Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Shodan (Filters)
+
+[\] port:80
+[/] Find hosts with port 80 open
+
+[\] port:443
+[/] Find HTTPS servers
+
+[\] port:22
+[/] Find SSH servers
+
+[\] port:21
+[/] Find FTP servers
+
+[\] port:3389
+[/] Find RDP servers
+
+[\] port:3306
+[/] Find MySQL servers
+
+[\] port:27017
+[/] Find MongoDB servers
+
+[\] org:"Microsoft"
+[/] Search for assets belonging to an organization
+
+[\] org:"Amazon"
+[/] Search for AWS-owned infrastructure
+
+[\] hostname:"example.com"
+[/] Search by hostname
+
+[\] domain:"example.com"
+[/] Search by domain
+
+[\] ssl:"example.com"
+[/] Search SSL certificates containing a domain
+
+[\] ssl.cert.subject.cn:"example.com"
+[/] Search certificate common names
+
+[\] ssl.cert.issuer.cn:"Let's Encrypt"
+[/] Search by certificate issuer
+
+[\] ssl.version:"TLSv1.2"
+[/] Filter by TLS version
+
+[\] country:"NL"
+[/] Filter results by country
+
+[\] country:"US"
+[/] Filter results by United States
+
+[\] city:"Amsterdam"
+[/] Filter results by city
+
+[\] geo:52.3702,4.8952
+[/] Search near specific coordinates
+
+[\] geo:52.3702,4.8952,50
+[/] Search within 50 km radius
+
+[\] asn:AS15169
+[/] Search by ASN (example: Google)
+
+[\] os:"Windows"
+[/] Filter by operating system
+
+[\] os:"Linux"
+[/] Filter Linux hosts
+
+[\] product:"Apache"
+[/] Search for Apache servers
+
+[\] product:"nginx"
+[/] Search for Nginx servers
+
+[\] product:"OpenSSH"
+[/] Search for OpenSSH services
+
+[\] product:"Microsoft-IIS"
+[/] Search for IIS servers
+
+[\] version:"1.0"
+[/] Filter by software version
+
+[\] before:2024-01-01
+[/] Results last seen before a date
+
+[\] after:2025-01-01
+[/] Results last seen after a date
+
+[\] vuln:CVE-2021-44228
+[/] Search for Log4Shell vulnerable hosts
+
+[\] vuln:CVE-2019-0708
+[/] Search for BlueKeep vulnerable hosts
+
+[\] has_screenshot:true
+[/] Only show hosts with screenshots
+
+[\] screenshot.label:"login"
+[/] Search screenshots containing login pages
+
+[\] screenshot.label:"camera"
+[/] Find exposed cameras
+
+[\] screenshot.label:"industrial"
+[/] Find ICS/SCADA interfaces
+
+[\] http.title:"Login"
+[/] Search by webpage title
+
+[\] http.favicon.hash:116323821
+[/] Search by favicon hash (useful for fingerprinting)
+
+[\] http.html:"admin"
+[/] Search HTML content for keywords
+
+[\] http.component:"WordPress"
+[/] Find WordPress sites
+
+[\] http.component:"Drupal"
+[/] Find Drupal sites
+
+[\] tag:"ics"
+[/] Find industrial control systems
+
+[\] tag:"vpn"
+[/] Find VPN endpoints
+
+[\] tag:"database"
+[/] Find exposed databases
+
+[\] tag:"malware"
+[/] Hosts associated with malware activity
+
+[\] shodan-apikey <key>
+[/] Set your Shodan API key (CLI)
+
+[\] shodan search "port:80 country:NL"
+[/] CLI example: search for Dutch web servers
+
+[\] shodan host <IP>
+[/] Get full details about a specific host

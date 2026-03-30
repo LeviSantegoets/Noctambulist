@@ -1,0 +1,115 @@
+[X] Tmux Command List
+
+[\] tmux
+[/] Start new tmux session
+
+[\] tmux new -s session_name
+[/] Create new named session
+
+[\] tmux ls
+[/] List sessions
+
+[\] tmux attach -t session_name
+[/] Attach to session
+
+[\] tmux detach
+[/] Detach from current session
+
+[\] tmux kill-session -t session_name
+[/] Kill specific session
+
+[\] tmux kill-server
+[/] Kill all sessions
+
+[\] tmux rename-session -t old new
+[/] Rename session
+
+[\] tmux new -s session_name -d
+[/] Start session in detached mode
+
+[\] tmux switch -t session_name
+[/] Switch session
+
+[\] tmux list-windows
+[/] List windows
+
+[\] tmux new-window
+[/] Create new window
+
+[\] tmux new-window -n name
+[/] Create named window
+
+[\] tmux rename-window new_name
+[/] Rename window
+
+[\] tmux kill-window
+[/] Close current window
+
+[\] tmux select-window -t 1
+[/] Switch to window by index
+
+[\] tmux split-window -h
+[/] Split pane horizontally
+
+[\] tmux split-window -v
+[/] Split pane vertically
+
+[\] tmux select-pane -t 1
+[/] Switch to pane
+
+[\] tmux kill-pane
+[/] Close current pane
+
+[\] tmux resize-pane -U 10
+[/] Resize pane up
+
+[\] tmux resize-pane -D 10
+[/] Resize pane down
+
+[\] tmux resize-pane -L 10
+[/] Resize pane left
+
+[\] tmux resize-pane -R 10
+[/] Resize pane right
+
+[\] tmux select-layout tiled
+[/] Arrange panes in tiled layout
+
+[\] tmux select-layout even-horizontal
+[/] Horizontal layout
+
+[\] tmux select-layout even-vertical
+[/] Vertical layout
+
+[\] tmux copy-mode
+[/] Enter copy mode
+
+[\] tmux paste-buffer
+[/] Paste copied content
+
+[\] tmux show-options -g
+[/] Show global options
+
+[\] tmux set-option -g mouse on
+[/] Enable mouse support
+
+[\] tmux source-file ~/.tmux.conf
+[/] Reload config file
+
+[\] tmux display-message "Hello"
+[/] Show message in status bar
+
+[\] tmux list-keys
+[/] Show key bindings
+
+[\] tmux unbind-key key
+[/] Remove key binding
+
+[\] tmux bind-key key command
+[/] Add key binding
+
+[\] tmux info
+[/] Show tmux info
+
+[\] tmux -V
+[/] Show tmux version

@@ -1,0 +1,178 @@
+[X] Ripgrep (rg) Full Command List
+
+[\] rg pattern
+[/] Search for pattern recursively in current directory
+
+[\] rg pattern file.txt
+[/] Search pattern in a specific file
+
+[\] rg -i pattern
+[/] Case-insensitive search
+
+[\] rg -v pattern
+[/] Invert match (show lines that do not match)
+
+[\] rg -w pattern
+[/] Match whole words only
+
+[\] rg -x pattern
+[/] Match whole line exactly
+
+[\] rg -n pattern
+[/] Show line numbers with matches
+
+[\] rg -H pattern
+[/] Show filename for each match
+
+[\] rg -h pattern
+[/] Suppress filenames in output
+
+[\] rg -C 3 pattern
+[/] Show 3 lines of context before and after match
+
+[\] rg -A 3 pattern
+[/] Show 3 lines after match
+
+[\] rg -B 3 pattern
+[/] Show 3 lines before match
+
+[\] rg --color=always pattern
+[/] Force colored output
+
+[\] rg --color=auto pattern
+[/] Auto color matches
+
+[\] rg --color=never pattern
+[/] Disable colored output
+
+[\] rg -l pattern
+[/] List files containing the pattern
+
+[\] rg -L pattern
+[/] List files not containing the pattern
+
+[\] rg --files
+[/] List all files that would be searched
+
+[\] rg -g "*.rs" pattern
+[/] Search only files matching glob pattern
+
+[\] rg --type rust pattern
+[/] Search only files of specific type (built-in types)
+
+[\] rg --type-add 'js:*.js' -tjs pattern
+[/] Define custom file type and search
+
+[\] rg --max-depth 2 pattern
+[/] Limit search recursion depth
+
+[\] rg --hidden pattern
+[/] Include hidden files
+
+[\] rg --follow pattern
+[/] Follow symbolic links
+
+[\] rg --threads 4 pattern
+[/] Use 4 threads for searching
+
+[\] rg --stats pattern
+[/] Show search statistics
+
+[\] rg --no-ignore pattern
+[/] Do not respect .gitignore or other ignore files
+
+[\] rg --no-ignore-global pattern
+[/] Ignore global ignore files
+
+[\] rg --no-ignore-vcs pattern
+[/] Do not ignore VCS ignored files
+
+[\] rg --ignore-file .ignore pattern
+[/] Respect custom ignore file
+
+[\] rg --binary pattern
+[/] Search binary files as if text
+
+[\] rg --text pattern
+[/] Force text search even in binary files
+
+[\] rg --pcre2 pattern
+[/] Enable PCRE2 regex engine
+
+[\] rg --multiline pattern
+[/] Enable multiline matching
+
+[\] rg --multiline-dotall pattern
+[/] Dot matches newline in multiline mode
+
+[\] rg --word-regexp pattern
+[/] Match only whole words (same as -w)
+
+[\] rg --max-columns 200 pattern
+[/] Limit matching to first 200 columns per line
+
+[\] rg --max-columns-preview pattern
+[/] Preview only first N columns
+
+[\] rg --ignore-case pattern
+[/] Case-insensitive search (same as -i)
+
+[\] rg --case-sensitive pattern
+[/] Force case-sensitive search
+
+[\] rg --smart-case pattern
+[/] Case-insensitive unless pattern contains uppercase
+
+[\] rg --invert-match pattern
+[/] Invert match (same as -v)
+
+[\] rg --count pattern
+[/] Show count of matches per file
+
+[\] rg --count-matches pattern
+[/] Show number of matches per file and per line
+
+[\] rg --files-with-matches pattern
+[/] Only list files with matches (-l)
+
+[\] rg --files-without-match pattern
+[/] Only list files without matches (-L)
+
+[\] rg --line-number pattern
+[/] Show line numbers (-n)
+
+[\] rg --line-buffered pattern
+[/] Line-buffered output
+
+[\] rg --max-filesize 1M pattern
+[/] Skip files larger than 1MB
+
+[\] rg --min-file-size 10K pattern
+[/] Search only files larger than 10KB
+
+[\] rg --sort-files pattern
+[/] Sort files before searching
+
+[\] rg --sort-files=alpha pattern
+[/] Alphabetical sort
+
+[\] rg --sort-files=mtime pattern
+[/] Sort by modification time
+
+[\] rg --sort-files=size pattern
+[/] Sort by file size
+
+[\] rg --replace "replacement" pattern
+[/] Replace matches in output
+
+[\] rg --color=auto --colors 'match:fg:green' pattern
+[/] Customize highlight colors
+
+[\] rg --follow --hidden --glob '!*.log' pattern
+[/] Example: follow symlinks, include hidden, exclude .log files
+
+[\] rg --help
+[/] Show help menu
+
+[\] rg --version
+[/] Show rg version

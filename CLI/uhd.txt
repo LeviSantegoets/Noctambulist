@@ -1,0 +1,87 @@
+[X] UHD (USRP Hardware Driver) Command List
+
+[\] uhd_find_devices
+[/] List all connected USRP devices
+
+[\] uhd_usrp_probe
+[/] Probe a USRP device and display detailed information
+
+[\] uhd_usrp_probe --args "addr=192.168.10.2"
+[/] Probe remote USRP by IP address
+
+[\] uhd_usrp_probe -v
+[/] Verbose device information
+
+# -------------------------
+# TRANSMIT / RECEIVE STREAMING
+# -------------------------
+
+[\] uhd_rx_cfile --args "addr=192.168.10.2" -f 1e9 -s 2e6 -n 1000000 -o capture.iq
+[/] Capture 1M samples at 1 GHz with 2 MSPS sample rate
+
+[\] uhd_tx_cfile --args "addr=192.168.10.2" -f 2.4e9 -s 1e6 -i signal.iq
+[/] Transmit IQ samples at 2.4 GHz with 1 MSPS
+
+[\] uhd_rx_streamer
+[/] Start interactive RX streamer
+
+[\] uhd_tx_streamer
+[/] Start interactive TX streamer
+
+# -------------------------
+# FREQUENCY / GAIN CONTROL
+# -------------------------
+
+[\] uhd_usrp_probe --args="type=b200" -v
+[/] Probe USRP B200 device
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --rx-gain 30
+[/] Set RX gain to 30 dB
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --tx-gain 20
+[/] Set TX gain to 20 dB
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --freq 915e6
+[/] Set center frequency to 915 MHz
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --rate 2e6
+[/] Set sample rate to 2 MSPS
+
+# -------------------------
+# STREAM / BUFFER CONTROL
+# -------------------------
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --stream-mode=burst
+[/] Enable burst streaming
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --stream-mode=continuous
+[/] Enable continuous streaming
+
+[\] uhd_usrp_probe --args="addr=192.168.10.2" --num-samps=1000000
+[/] Set number of samples for burst mode
+
+# -------------------------
+# NETWORK / REMOTE DEVICES
+# -------------------------
+
+[\] uhd_find_devices --args "addr=192.168.10.2"
+[/] Find USRP device on network
+
+[\] uhd_usrp_probe --args "addr=192.168.10.2"
+[/] Probe remote USRP device
+
+[\] uhd_usrp_probe --args "serial=30F1B3F"
+[/] Probe USRP device by serial number
+
+# -------------------------
+# DEBUG / VERBOSE
+# -------------------------
+
+[\] uhd_usrp_probe -v
+[/] Verbose device information
+
+[\] uhd_usrp_probe --args "addr=192.168.10.2" -v
+[/] Verbose output for remote device
+
+[\] uhd_usrp_probe --args "addr=192.168.10.2" --debug
+[/] Enable debug mode

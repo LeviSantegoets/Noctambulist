@@ -1,0 +1,98 @@
+[X] SoapyPower Command List
+
+[\] soapy_power -h
+[/] Show help and available options
+
+# -------------------------
+# BASIC POWER MEASUREMENTS
+# -------------------------
+
+[\] soapy_power -f 100e6
+[/] Measure power at 100 MHz
+
+[\] soapy_power -f 433.92e6
+[/] Measure power at 433.92 MHz (ISM band)
+
+[\] soapy_power -f 2.4e9
+[/] Measure power at 2.4 GHz (WiFi/Bluetooth band)
+
+[\] soapy_power -f 900e6
+[/] Measure power at 900 MHz (GSM band)
+
+# -------------------------
+# BAND / FREQUENCY SCANS
+# -------------------------
+
+[\] soapy_power -f 100e6:200e6
+[/] Scan frequency range from 100 MHz to 200 MHz
+
+[\] soapy_power -f 400e6:500e6 -r 2e6
+[/] Scan UHF band with 2 MHz step resolution
+
+[\] soapy_power -f 88e6:108e6 -r 100e3
+[/] Scan FM band with 100 kHz step
+
+# -------------------------
+# SAMPLE RATE & DURATION
+# -------------------------
+
+[\] soapy_power -f 100e6 -s 2e6
+[/] Set sample rate to 2 MSPS
+
+[\] soapy_power -f 100e6 -t 10
+[/] Measure power for 10 seconds
+
+[\] soapy_power -f 433.92e6 -t 5
+[/] Measure power for 5 seconds
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] soapy_power -f 100e6 -o power.csv
+[/] Save measurement results to CSV file
+
+[\] soapy_power -f 100e6 -O power.txt
+[/] Save results to text file
+
+[\] soapy_power -f 88e6:108e6 -o fm_scan.csv
+[/] Scan FM band and save results
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] soapy_power -d 0 -f 100e6
+[/] Use first SoapySDR device
+
+[\] soapy_power -d 1 -f 100e6
+[/] Use second SDR device
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] soapy_power -g 20 -f 100e6
+[/] Set RX gain to 20 dB
+
+[\] soapy_power -g 0 -f 100e6
+[/] Enable automatic gain
+
+[\] soapy_power -g 40 -f 433.92e6
+[/] Use high gain for weak signals
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] soapy_power -p 10 -f 100e6
+[/] Apply PPM frequency correction
+
+[\] soapy_power -b 16384 -f 100e6
+[/] Set buffer size
+
+[\] soapy_power -v -f 100e6
+[/] Enable verbose output
+
+[\] soapy_power -a 0.0.0.0
+[/] Bind device for network access (if supported)

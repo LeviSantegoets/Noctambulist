@@ -1,0 +1,148 @@
+# Windows 11 CMD Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Windows 11 CMD Command List
+
+[\] dir
+[/] List files and directories in the current folder
+
+[\] cd
+[/] Change directory
+
+[\] cd ..
+[/] Move up one directory level
+
+[\] cls
+[/] Clear the command prompt screen
+
+[\] copy file1 file2
+[/] Copy a file to another location
+
+[\] xcopy source destination /E
+[/] Copy directories including subdirectories
+
+[\] robocopy source destination /MIR
+[/] Mirror copy directories
+
+[\] del filename
+[/] Delete a file
+
+[\] rmdir folder /S /Q
+[/] Remove a directory and its contents
+
+[\] mkdir foldername
+[/] Create a new directory
+
+[\] move file destination
+[/] Move a file to another location
+
+[\] rename oldname newname
+[/] Rename a file or folder
+
+[\] ipconfig
+[/] Display network configuration
+
+[\] ipconfig /all
+[/] Display full network details
+
+[\] ipconfig /flushdns
+[/] Clear DNS resolver cache
+
+[\] ping 8.8.8.8
+[/] Test network connectivity
+
+[\] tracert 8.8.8.8
+[/] Trace route to a destination
+
+[\] netstat -ano
+[/] Display active connections and ports
+
+[\] tasklist
+[/] List running processes
+
+[\] taskkill /PID 1234 /F
+[/] Force‑kill a process by PID
+
+[\] systeminfo
+[/] Display detailed system information
+
+[\] wmic cpu get name
+[/] Display CPU model
+
+[\] wmic logicaldisk get size,freespace,caption
+[/] Display disk usage
+
+[\] sfc /scannow
+[/] Scan and repair system files
+
+[\] DISM /Online /Cleanup-Image /RestoreHealth
+[/] Repair Windows image
+
+[\] chkdsk C: /F
+[/] Check and fix disk errors
+
+[\] shutdown /s /t 0
+[/] Shut down the computer immediately
+
+[\] shutdown /r /t 0
+[/] Restart the computer immediately
+
+[\] shutdown /a
+[/] Abort a shutdown
+
+[\] whoami
+[/] Display current username
+
+[\] hostname
+[/] Display computer name
+
+[\] set
+[/] Display environment variables
+
+[\] setx VAR VALUE
+[/] Set a permanent environment variable
+
+[\] path
+[/] Display system PATH variable
+
+[\] assoc
+[/] Display file associations
+
+[\] driverquery
+[/] List installed drivers
+
+[\] net user
+[/] List local users
+
+[\] net user username password /add
+[/] Create a new local user
+
+[\] net localgroup administrators username /add
+[/] Add user to administrators group
+
+[\] net start
+[/] List running services
+
+[\] net stop servicename
+[/] Stop a service
+
+[\] netsh advfirewall show allprofiles
+[/] Show firewall status
+
+[\] netsh advfirewall reset
+[/] Reset firewall to default
+
+[\] arp -a
+[/] Display ARP table
+
+[\] powercfg /batteryreport
+[/] Generate battery health report
+
+[\] powercfg /energy
+[/] Generate energy diagnostics report
+
+[\] wmic product get name,version
+[/] List installed programs
+
+[\] tree
+[/] Display directory structure as a tree

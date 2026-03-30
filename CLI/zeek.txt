@@ -1,0 +1,91 @@
+[X] Zeek Command List
+
+[\] zeek
+[/] Launch Zeek (without arguments, defaults to reading stdin)
+
+[\] zeek -h
+[/] Show help menu
+
+[\] zeek --help
+[/] Show help menu (alternative)
+
+[\] zeek -v
+[/] Show Zeek version
+
+[\] zeek -i eth0
+[/] Monitor live traffic on interface eth0
+
+[\] zeek -r capture.pcap
+[/] Analyze packets from a pcap file
+
+[\] zeek -C
+[/] Ignore checksums (useful for pcap with bad checksums)
+
+[\] zeek -n
+[/] Disable DNS lookups
+
+[\] zeek -N
+[/] Show network interfaces
+
+[\] zeek -b
+[/] Run in background (daemon mode)
+
+[\] zeek -D
+[/] Debug mode (foreground, verbose)
+
+[\] zeek -s 1500
+[/] Set snaplen (maximum packet size to capture)
+
+[\] zeek --load-script policy.zeek
+[/] Load a specific Zeek script
+
+[\] zeek --help-scripts
+[/] Show available scripts
+
+[\] zeek --print-logs
+[/] Print logs to stdout
+
+[\] zeek -o /path/to/logs
+[/] Specify output directory for logs
+
+[\] zeek -p 80
+[/] Set specific port(s) to monitor
+
+[\] zeekctl deploy
+[/] Deploy Zeek configuration (ZeekControl)
+
+[\] zeekctl start
+[/] Start Zeek nodes
+
+[\] zeekctl stop
+[/] Stop Zeek nodes
+
+[\] zeekctl restart
+[/] Restart Zeek nodes
+
+[\] zeekctl status
+[/] Show Zeek nodes status
+
+[\] zeekctl check
+[/] Check configuration for errors
+
+[\] zeek-cut <field>
+[/] Extract specific log fields from Zeek logs
+
+[\] zeek -r capture.pcap http
+[/] Analyze pcap and load HTTP analysis script
+
+[\] zeek -r capture.pcap dns
+[/] Analyze pcap and load DNS analysis script
+
+[\] zeek -r capture.pcap ssl
+[/] Analyze pcap and load SSL/TLS analysis script
+
+[\] zeek -X
+[/] Show active connections (live stats)
+
+[\] zeek --version
+[/] Show Zeek version (alternative)
+
+[\] journalctl -u zeek
+[/] View Zeek service logs

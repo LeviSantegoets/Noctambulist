@@ -1,0 +1,87 @@
+[X] YSF-Tools Command List
+
+[\] ysfparrot
+[/] Start YSFParrot digital voice repeater
+
+[\] ysfparrot --help
+[/] Show help and available options
+
+[\] ysf2dmr
+[/] Convert YSF digital voice to DMR
+
+[\] ysf2nxdn
+[/] Convert YSF digital voice to NXDN
+
+[\] ysf2p25
+[/] Convert YSF digital voice to P25
+
+[\] ysf2m17
+[/] Convert YSF digital voice to M17
+
+# -------------------------
+# BASIC RECEIVING
+# -------------------------
+
+[\] ysfparrot -r 433.5625M
+[/] Receive YSF signals on 433.5625 MHz
+
+[\] ysfparrot -f input.wav
+[/] Decode recorded YSF audio from file
+
+[\] ysfparrot -a
+[/] Play decoded YSF audio live
+
+# -------------------------
+# TRANSMISSION
+# -------------------------
+
+[\] ysfparrot -t 433.5625M
+[/] Transmit YSF digital voice on 433.5625 MHz
+
+[\] ysfparrot --mic /dev/audio
+[/] Use microphone input for transmission
+
+[\] ysfparrot -o output.wav
+[/] Save transmitted or received audio to file
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] ysfparrot --device rtl
+[/] Use RTL-SDR for reception
+
+[\] ysfparrot --device hackrf
+[/] Use HackRF SDR
+
+[\] ysfparrot --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# NETWORK / REFLECTORS
+# -------------------------
+
+[\] ysfparrot -R reflect.example.com:42000
+[/] Connect to YSF reflector
+
+[\] ysfparrot --server
+[/] Run YSF network server
+
+[\] ysfparrot --client
+[/] Connect as client to YSF network
+
+# -------------------------
+# LOGGING / DEBUG
+# -------------------------
+
+[\] ysfparrot -v
+[/] Enable verbose output
+
+[\] ysfparrot --logfile ysf.log
+[/] Log decoded messages and events
+
+[\] ysfparrot --stats
+[/] Show decoding statistics and signal quality
+
+[\] ysfparrot --monitor
+[/] Monitor live traffic and network connections

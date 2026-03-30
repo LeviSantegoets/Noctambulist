@@ -1,0 +1,112 @@
+[X] tcpdump Command List
+
+[\] tcpdump
+[/] Capture packets on default interface
+
+[\] tcpdump -i eth0
+[/] Capture on interface eth0
+
+[\] tcpdump -D
+[/] List available interfaces
+
+[\] tcpdump -n
+[/] Disable hostname resolution
+
+[\] tcpdump -nn
+[/] Disable hostname and port resolution
+
+[\] tcpdump -v
+[/] Verbose output
+
+[\] tcpdump -vv
+[/] Extra verbose output
+
+[\] tcpdump -c 100
+[/] Capture 100 packets then stop
+
+[\] tcpdump -w capture.pcap
+[/] Write packets to file
+
+[\] tcpdump -r capture.pcap
+[/] Read packets from file
+
+[\] tcpdump -i wlan0 port 80
+[/] Capture HTTP traffic
+
+[\] tcpdump -i eth0 tcp
+[/] Capture only TCP packets
+
+[\] tcpdump -i eth0 udp
+[/] Capture only UDP packets
+
+[\] tcpdump -i eth0 icmp
+[/] Capture ICMP (ping) packets
+
+[\] tcpdump host 192.168.1.10
+[/] Capture traffic to/from a specific host
+
+[\] tcpdump src 192.168.1.10
+[/] Capture packets from a source IP
+
+[\] tcpdump dst 192.168.1.10
+[/] Capture packets to a destination IP
+
+[\] tcpdump net 192.168.1.0/24
+[/] Capture traffic for a subnet
+
+[\] tcpdump port 22
+[/] Capture SSH traffic
+
+[\] tcpdump portrange 20-80
+[/] Capture traffic on port range
+
+[\] tcpdump tcp port 443
+[/] Capture HTTPS traffic
+
+[\] tcpdump -A
+[/] Show packet contents in ASCII
+
+[\] tcpdump -X
+[/] Show packet contents in hex + ASCII
+
+[\] tcpdump -XX
+[/] Show packet contents with link‑layer headers
+
+[\] tcpdump -s 0
+[/] Capture full packet (no truncation)
+
+[\] tcpdump -i eth0 'tcp[tcpflags] & tcp-syn != 0'
+[/] Capture TCP SYN packets
+
+[\] tcpdump -i eth0 'tcp[tcpflags] & tcp-fin != 0'
+[/] Capture TCP FIN packets
+
+[\] tcpdump -i eth0 'tcp[tcpflags] & tcp-rst != 0'
+[/] Capture TCP RST packets
+
+[\] tcpdump -i eth0 'udp and port 53'
+[/] Capture DNS queries
+
+[\] tcpdump -i eth0 'port 67 or port 68'
+[/] Capture DHCP traffic
+
+[\] tcpdump -i eth0 arp
+[/] Capture ARP packets
+
+[\] tcpdump -i eth0 vlan
+[/] Capture VLAN‑tagged packets
+
+[\] tcpdump -i eth0 ether host aa:bb:cc:dd:ee:ff
+[/] Capture traffic for a MAC address
+
+[\] tcpdump -i eth0 not port 22
+[/] Capture everything except SSH
+
+[\] tcpdump -i eth0 'tcp and not port 443'
+[/] Capture TCP except HTTPS
+
+[\] tcpdump -i eth0 -G 60 -w file-%Y-%m-%d_%H:%M:%S.pcap
+[/] Rotate capture files every 60 seconds
+
+[\] tcpdump -i eth0 -W 10 -G 60 -w file.pcap
+[/] Keep only 10 rotating capture files

@@ -1,0 +1,34 @@
+[X] Steghide Command List (Steganography Tool)
+
+[\] steghide embed -cf cover.jpg -ef secret.txt
+[/] Embed `secret.txt` into `cover.jpg`
+
+[\] steghide extract -sf cover.jpg
+[/] Extract hidden file from `cover.jpg`
+
+[\] steghide info cover.jpg
+[/] Display info about embedded data in cover file
+
+[\] steghide embed -cf cover.png -ef secret.txt -p mypass
+[/] Embed file with password protection
+
+[\] steghide extract -sf cover.png -p mypass
+[/] Extract file using password
+
+[\] steghide embed -cf cover.wav -ef secret.txt
+[/] Embed data into audio file
+
+[\] steghide extract -sf cover.wav
+[/] Extract data from audio file
+
+[\] steghide -v embed -cf cover.jpg -ef secret.txt
+[/] Verbose output during embedding
+
+[\] steghide -v extract -sf cover.jpg
+[/] Verbose output during extraction
+
+[\] steghide --help
+[/] Show help menu
+
+[\] steghide --version
+[/] Show version

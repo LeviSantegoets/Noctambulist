@@ -1,0 +1,148 @@
+[X] RTL_433 Command List
+
+[\] rtl_433
+[/] Start RTL_433 with default settings (433.92 MHz, auto‑detect protocols)
+
+[\] rtl_433 -h
+[/] Show help menu
+
+[\] rtl_433 -v
+[/] Enable verbose output
+
+[\] rtl_433 -V
+[/] Show RTL_433 version
+
+[\] rtl_433 -d 0
+[/] Use RTL‑SDR device index 0
+
+[\] rtl_433 -f 433.92M
+[/] Set frequency to 433.92 MHz
+
+[\] rtl_433 -f 315M
+[/] Set frequency to 315 MHz
+
+[\] rtl_433 -f 868M
+[/] Set frequency to 868 MHz
+
+[\] rtl_433 -f 915M
+[/] Set frequency to 915 MHz
+
+[\] rtl_433 -F json
+[/] Output decoded data in JSON format
+
+[\] rtl_433 -F csv
+[/] Output decoded data in CSV format
+
+[\] rtl_433 -F kv
+[/] Output key‑value format
+
+[\] rtl_433 -F syslog
+[/] Send output to syslog
+
+[\] rtl_433 -F mqtt://localhost:1883
+[/] Publish decoded data to MQTT broker
+
+[\] rtl_433 -F influx://localhost:8086
+[/] Send data to InfluxDB
+
+[\] rtl_433 -F http://localhost:8000
+[/] Send data to HTTP endpoint
+
+[\] rtl_433 -M time
+[/] Add timestamp to output
+
+[\] rtl_433 -M protocol
+[/] Add protocol name to output
+
+[\] rtl_433 -M level
+[/] Add signal level to output
+
+[\] rtl_433 -M stats
+[/] Show statistics for each protocol
+
+[\] rtl_433 -M bits
+[/] Show raw bits of received signal
+
+[\] rtl_433 -M pretty
+[/] Pretty‑print JSON output
+
+[\] rtl_433 -R 0
+[/] Disable all protocols
+
+[\] rtl_433 -R 19
+[/] Enable only protocol 19
+
+[\] rtl_433 -R 19 -R 20
+[/] Enable multiple specific protocols
+
+[\] rtl_433 -G
+[/] Enable all experimental protocols
+
+[\] rtl_433 -l 0
+[/] Set gain to auto
+
+[\] rtl_433 -g 30
+[/] Set manual gain to 30 dB
+
+[\] rtl_433 -s 2.4e6
+[/] Set sample rate to 2.4 MS/s
+
+[\] rtl_433 -p 0
+[/] Disable PPM correction
+
+[\] rtl_433 -p 40
+[/] Apply 40 ppm correction
+
+[\] rtl_433 -Y auto
+[/] Enable automatic demodulation
+
+[\] rtl_433 -Y classic
+[/] Use classic demodulation mode
+
+[\] rtl_433 -Y minmax
+[/] Use min/max demodulation
+
+[\] rtl_433 -Y adaptive
+[/] Use adaptive demodulation
+
+[\] rtl_433 -C si
+[/] Output SI units
+
+[\] rtl_433 -C customary
+[/] Output US customary units
+
+[\] rtl_433 -C native
+[/] Output native device units
+
+[\] rtl_433 -w capture.bin
+[/] Write raw IQ samples to file
+
+[\] rtl_433 -r capture.bin
+[/] Read raw IQ samples from file
+
+[\] rtl_433 -W dump
+[/] Dump all received messages (debug)
+
+[\] rtl_433 -t 10
+[/] Run for 10 seconds then exit
+
+[\] rtl_433 -T 60
+[/] Timeout after 60 seconds of no signal
+
+[\] rtl_433 -q
+[/] Quiet mode (minimal output)
+
+[\] rtl_433 -H
+[/] Show extended help
+
+[\] rtl_test
+[/] Test RTL‑SDR dongle (companion tool)
+
+[\] rtl_eeprom
+[/] Read/write RTL‑SDR EEPROM
+
+[\] rtl_power
+[/] Scan RF spectrum over time
+
+[\] sudo apt install rtl-433
+[/] Install RTL_433 on Debian‑based systems

@@ -1,0 +1,142 @@
+# RTL-SDR Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] RTL-SDR Command List
+
+# -------------------------
+# DEVICE TESTING
+# -------------------------
+
+[\] rtl_test
+[/] Test RTL-SDR device functionality
+
+[\] rtl_test -t
+[/] Test tuner only
+
+[\] rtl_test -p
+[/] Check for sample drift (PPM)
+
+[\] rtl_test -d 0
+[/] Test specific device index
+
+# -------------------------
+# RAW IQ CAPTURE
+# -------------------------
+
+[\] rtl_sdr -f 100000000 -s 2048000 out.bin
+[/] Capture raw IQ at 100 MHz, 2.048 MS/s
+
+[\] rtl_sdr -f 433920000 -s 1024000 -g 40 out.bin
+[/] Capture 433.92 MHz with gain 40 dB
+
+[\] rtl_sdr -f 1090000000 -s 2000000 -n 10000000 out.bin
+[/] Capture 10M samples at 1.09 GHz
+
+[\] rtl_sdr -f 137100000 -s 2400000 -g 30 weather.bin
+[/] Capture NOAA APT weather satellite signal
+
+# -------------------------
+# FM RADIO RECEIVING
+# -------------------------
+
+[\] rtl_fm -f 100.7M -M wbfm -s 200k -r 48k - | aplay -r 48k -f S16_LE
+[/] Listen to wideband FM radio (100.7 MHz)
+
+[\] rtl_fm -f 98.0M -M wbfm -s 200k -r 44.1k - | sox -t raw -r 44.1k -e signed -b 16 -c 1 - -t wav fm.wav
+[/] Record FM radio to WAV file
+
+[\] rtl_fm -f 162.55M -M nbfm -s 12k -r 12k - | aplay -r 12k -f S16_LE
+[/] Listen to NOAA weather radio
+
+# -------------------------
+# ADS-B (AIRCRAFT TRACKING)
+# -------------------------
+
+[\] dump1090 --interactive --net
+[/] Decode ADS-B aircraft signals
+
+[\] dump1090 --gain 40 --net --interactive
+[/] ADS-B with manual gain
+
+[\] dump1090 --net --net-http-port 8080
+[/] View aircraft map in browser
+
+# -------------------------
+# RTL_TCP (REMOTE SDR SERVER)
+# -------------------------
+
+[\] rtl_tcp
+[/] Start RTL-SDR TCP server on port 1234
+
+[\] rtl_tcp -a 0.0.0.0
+[/] Listen on all interfaces
+
+[\] rtl_tcp -a 192.168.1.50 -p 1234
+[/] Bind to specific IP and port
+
+[\] rtl_tcp -d 0
+[/] Use specific device index
+
+[\] gqrx tcp://192.168.1.50:1234
+[/] Connect GQRX to rtl_tcp server
+
+# -------------------------
+# SPECTRUM SCANNING
+# -------------------------
+
+[\] rtl_power -f 88M:108M:100k fm.csv
+[/] Scan FM broadcast band
+
+[\] rtl_power -f 400M:500M:10k scan.csv
+[/] Scan 400–500 MHz
+
+[\] rtl_power -f 24M:1766M:1M wideband.csv
+[/] Full RTL-SDR frequency sweep
+
+[\] rtl_power -i 10 -f 433M:434M:2k 433.csv
+[/] Scan 433 MHz ISM band every 10 seconds
+
+# -------------------------
+# AIS (MARINE SHIP TRACKING)
+# -------------------------
+
+[\] rtl_ais -n
+[/] Decode AIS ship signals
+
+[\] rtl_ais -h
+[/] Show AIS help
+
+# -------------------------
+# PPM CALIBRATION
+# -------------------------
+
+[\] kal -s GSM900
+[/] Calibrate PPM using GSM signals
+
+[\] kal -s GSM900 -g 40
+[/] Calibration with manual gain
+
+# -------------------------
+# MISC / UTILITIES
+# -------------------------
+
+[\] rtl_eeprom
+[/] Read RTL-SDR EEPROM
+
+[\] rtl_eeprom -w
+[/] Write to EEPROM (advanced)
+
+[\] rtl_biast -b 1
+[/] Enable bias‑tee (if supported)
+
+[\] rtl_biast -b 0
+[/] Disable bias‑tee
+
+[\] rtl_adsb
+[/] Simple ADS-B decoder
+
+[\] rtl_fm --help
+[/] Show FM receiver options
+
+[\] rtl_sdr --help
+[/] Show raw capture options

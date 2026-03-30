@@ -1,0 +1,82 @@
+[X] Seatbelt Command List
+
+[\] Seatbelt.exe
+[/] Run all default checks
+
+[\] Seatbelt.exe -group=all
+[/] Run all enumeration groups
+
+[\] Seatbelt.exe -group=user
+[/] Run user-related checks
+
+[\] Seatbelt.exe -group=system
+[/] Run system-related checks
+
+[\] Seatbelt.exe -group=browser
+[/] Enumerate browser data
+
+[\] Seatbelt.exe -group=network
+[/] Run network-related checks
+
+[\] Seatbelt.exe -group=creds
+[/] Enumerate credential-related data
+
+[\] Seatbelt.exe -group=security
+[/] Run security-related checks
+
+[\] Seatbelt.exe -group=process
+[/] Enumerate running processes
+
+[\] Seatbelt.exe -group=services
+[/] Enumerate services
+
+[\] Seatbelt.exe -group=files
+[/] Search for interesting files
+
+[\] Seatbelt.exe -group=registry
+[/] Enumerate registry-based data
+
+[\] Seatbelt.exe -group=privesc
+[/] Check for privilege escalation vectors
+
+[\] Seatbelt.exe -check UserAccounts
+[/] Run specific check (user accounts)
+
+[\] Seatbelt.exe -check UAC
+[/] Check UAC settings
+
+[\] Seatbelt.exe -check InstalledPrograms
+[/] List installed software
+
+[\] Seatbelt.exe -check AutoRuns
+[/] Enumerate autoruns
+
+[\] Seatbelt.exe -check WindowsDefender
+[/] Check Defender configuration
+
+[\] Seatbelt.exe -check LAPS
+[/] Check for LAPS usage
+
+[\] Seatbelt.exe -check CredGuard
+[/] Check Credential Guard status
+
+[\] Seatbelt.exe -check AMSI
+[/] Check AMSI status
+
+[\] Seatbelt.exe -check RDP
+[/] Check RDP configuration
+
+[\] Seatbelt.exe -full
+[/] Run full, verbose enumeration
+
+[\] Seatbelt.exe -outputfile results.txt
+[/] Save output to file
+
+[\] Seatbelt.exe -q
+[/] Quiet mode
+
+[\] Seatbelt.exe -h
+[/] Show help menu
+
+[\] Seatbelt.exe --version
+[/] Show version

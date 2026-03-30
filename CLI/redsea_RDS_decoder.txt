@@ -1,0 +1,78 @@
+[X] Redsea RDS Decoder Command List
+
+[\] redsea --help
+[/] Show help and available options
+
+[\] redsea
+[/] Start RDS decoder and read FM multiplex input from stdin
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] rtl_fm -f 100M -M fm -s 171k -A std - | redsea
+[/] Decode RDS from FM station at 100 MHz using RTL-SDR
+
+[\] rtl_fm -f 101.1M -M fm -s 171k -A std - | redsea
+[/] Decode RDS data from FM broadcast station
+
+[\] rtl_fm -f 99.5M -M fm -s 171k -A std - | redsea -r
+[/] Decode RDS with raw group output
+
+# -------------------------
+# INPUT / OUTPUT OPTIONS
+# -------------------------
+
+[\] redsea -i input.wav
+[/] Decode RDS data from WAV file
+
+[\] redsea -o output.json
+[/] Save decoded RDS messages to JSON file
+
+[\] redsea -r
+[/] Show raw RDS group data
+
+[\] redsea -v
+[/] Enable verbose decoding output
+
+# -------------------------
+# JSON / STRUCTURED OUTPUT
+# -------------------------
+
+[\] redsea -j
+[/] Output decoded RDS data in JSON format
+
+[\] redsea -j -o rds.json
+[/] Save JSON formatted RDS messages
+
+[\] redsea -p
+[/] Display program service name (station name)
+
+[\] redsea -t
+[/] Display radio text messages
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 98.7M -M fm -s 171k -A std - | redsea -j
+[/] Decode RDS and output JSON
+
+[\] rtl_fm -f 104.3M -M fm -s 171k -A std - | csdr convert_s16_f | redsea
+[/] Decode RDS using csdr processing pipeline
+
+[\] rtl_sdr -f 100M -s 250k - | redsea
+[/] Decode RDS directly from RTL-SDR IQ stream
+
+# -------------------------
+# DEBUG / ANALYSIS
+# -------------------------
+
+[\] redsea -v -r
+[/] Enable verbose output with raw RDS group data
+
+[\] redsea --stats
+[/] Display RDS decoding statistics
+
+[\] redsea --log
+[/] Log RDS messages during decoding

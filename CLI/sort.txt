@@ -1,0 +1,28 @@
+[X] Sort Command List
+
+[\] sort file.txt
+[/] Sort file alphabetically
+
+[\] sort -r file.txt
+[/] Sort in reverse order
+
+[\] sort -n file.txt
+[/] Sort numerically
+
+[\] sort -k 2 file.txt
+[/] Sort by second column
+
+[\] sort -t "," -k 2 file.csv
+[/] Sort CSV by second column using comma as delimiter
+
+[\] sort -u file.txt
+[/] Sort and remove duplicates
+
+[\] sort -c file.txt
+[/] Check if file is sorted
+
+[\] sort -M file.txt
+[/] Sort by month names
+
+[\] sort --help
+[/] Show sort help

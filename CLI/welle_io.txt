@@ -1,0 +1,102 @@
+[X] Welle.io Command List
+
+[\] welle-io
+[/] Launch Welle.io Digital Audio Broadcasting (DAB/DAB+) receiver GUI
+
+[\] welle-io --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] welle-io --device rtl
+[/] Use RTL-SDR as input device
+
+[\] welle-io --device airspy
+[/] Use Airspy SDR device
+
+[\] welle-io --device hackrf
+[/] Use HackRF SDR device
+
+[\] welle-io --device soapy
+[/] Use SoapySDR compatible device
+
+# -------------------------
+# FREQUENCY / CHANNEL
+# -------------------------
+
+[\] welle-io --channel 5A
+[/] Tune to DAB channel 5A (174.928 MHz)
+
+[\] welle-io --channel 11D
+[/] Tune to DAB channel 11D
+
+[\] welle-io --frequency 220.352M
+[/] Tune directly to specific DAB frequency
+
+# -------------------------
+# INPUT OPTIONS
+# -------------------------
+
+[\] welle-io --input rtl
+[/] Use RTL-SDR input
+
+[\] welle-io --input file
+[/] Use recorded IQ file as input
+
+[\] welle-io --file capture.iq
+[/] Load IQ recording for DAB decoding
+
+# -------------------------
+# AUDIO OUTPUT
+# -------------------------
+
+[\] welle-io --audio pulse
+[/] Use PulseAudio output
+
+[\] welle-io --audio alsa
+[/] Use ALSA audio output
+
+[\] welle-io --audio file
+[/] Save decoded audio to file
+
+# -------------------------
+# RECORDING
+# -------------------------
+
+[\] welle-io --record
+[/] Record current DAB audio stream
+
+[\] welle-io --record-file dab_audio.wav
+[/] Save recorded DAB audio to WAV file
+
+# -------------------------
+# NETWORK / STREAMING
+# -------------------------
+
+[\] welle-io --http-server
+[/] Enable built-in HTTP streaming server
+
+[\] welle-io --http-port 7979
+[/] Set HTTP server port
+
+[\] welle-io --rtmp
+[/] Enable RTMP streaming output
+
+# -------------------------
+# DISPLAY / DEBUG
+# -------------------------
+
+[\] welle-io --verbose
+[/] Enable verbose logging output
+
+[\] welle-io --spectrum
+[/] Show signal spectrum view
+
+[\] welle-io --waterfall
+[/] Show waterfall display
+
+[\] welle-io --no-gui
+[/] Run Welle.io without graphical interface
+[/] Useful for headless decoding or server setups

@@ -1,0 +1,92 @@
+# Telnet Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Telnet Command List
+
+[\] telnet <host>
+[/] Connect to a host on default port 23
+
+[\] telnet <host> <port>
+[/] Connect to a host on a specific port
+
+[\] telnet 192.168.1.10 80
+[/] Connect to a web server on port 80
+
+[\] telnet google.com 443
+[/] Test HTTPS port (no encryption, but checks connectivity)
+
+[\] telnet smtp.example.com 25
+[/] Connect to an SMTP mail server
+
+[\] telnet ftp.example.com 21
+[/] Connect to an FTP server
+
+[\] telnet <host> 110
+[/] Connect to a POP3 server
+
+[\] telnet <host> 143
+[/] Connect to an IMAP server
+
+[\] telnet <host> 53
+[/] Test DNS TCP connectivity
+
+[\] telnet <host> 3306
+[/] Test MySQL port connectivity
+
+[\] telnet <host> 3389
+[/] Test RDP port connectivity
+
+[\] GET / HTTP/1.1
+Host: example.com
+[/] Manual HTTP request after connecting to port 80
+
+[\] EHLO example.com
+[/] SMTP handshake test
+
+[\] QUIT
+[/] Exit SMTP/POP3/IMAP session
+
+[\] ^]
+[/] Escape to Telnet command prompt (Ctrl + ])
+
+[\] quit
+[/] Quit Telnet from command prompt
+
+[\] open <host> <port>
+[/] Open a new connection from Telnet prompt
+
+[\] close
+[/] Close current connection
+
+[\] status
+[/] Show current Telnet connection status
+
+[\] display
+[/] Show Telnet settings
+
+[\] mode line
+[/] Switch to line mode
+
+[\] mode character
+[/] Switch to character mode
+
+[\] set localecho
+[/] Enable local echo (see what you type)
+
+[\] unset localecho
+[/] Disable local echo
+
+[\] set logfile <file>
+[/] Log Telnet session to a file
+
+[\] unset logfile
+[/] Stop logging
+
+[\] telnet -l <user> <host>
+[/] Attempt login with a username (if supported)
+
+[\] telnet -a <host>
+[/] Attempt automatic login (Windows only)
+
+[\] telnet -f log.txt <host>
+[/] Log session to a file (Windows)

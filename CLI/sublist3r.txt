@@ -1,0 +1,40 @@
+# Sublist3r Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Sublist3r Command List
+
+[\] sublist3r -d example.com
+[/] Basic subdomain enumeration
+
+[\] sublist3r -d example.com -o subs.txt
+[/] Save results to a file
+
+[\] sublist3r -d example.com -v
+[/] Verbose output
+
+[\] sublist3r -d example.com -t 50
+[/] Use 50 threads (faster scanning)
+
+[\] sublist3r -d example.com -p 80,443
+[/] Check if discovered subdomains have open ports
+
+[\] sublist3r -d example.com -b
+[/] Enable brute‑forcing mode
+
+[\] sublist3r -d example.com -b -w wordlist.txt
+[/] Brute‑force using a custom wordlist
+
+[\] sublist3r -d example.com -e google,yahoo,bing
+[/] Use specific search engines only
+
+[\] sublist3r -d example.com -e all
+[/] Use all supported search engines
+
+[\] sublist3r -d example.com -n
+[/] Disable DNS resolution
+
+[\] sublist3r -d example.com -o output.txt -t 100 -v
+[/] High‑speed verbose scan with output file
+
+[\] sublist3r -h
+[/] Show help menu

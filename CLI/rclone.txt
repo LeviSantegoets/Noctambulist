@@ -1,0 +1,103 @@
+[X] rclone Command List
+
+[\] rclone config
+[/] Configure remotes interactively
+
+[\] rclone listremotes
+[/] List all configured remotes
+
+[\] rclone mkdir remote:backup
+[/] Create directory on remote
+
+[\] rclone rmdir remote:backup
+[/] Remove directory on remote
+
+[\] rclone copy /local/path remote:backup
+[/] Copy files to remote
+
+[\] rclone copy remote:backup /local/path
+[/] Copy files from remote
+
+[\] rclone sync /local/path remote:backup
+[/] Sync local to remote (mirror)
+
+[\] rclone sync remote:backup /local/path
+[/] Sync remote to local
+
+[\] rclone move /local/path remote:backup
+[/] Move files to remote (delete local)
+
+[\] rclone move remote:backup /local/path
+[/] Move files from remote (delete remote)
+
+[\] rclone delete remote:backup
+[/] Delete files in remote directory
+
+[\] rclone purge remote:backup
+[/] Delete directory and contents on remote
+
+[\] rclone ls remote:backup
+[/] List files on remote
+
+[\] rclone lsl remote:backup
+[/] List files with size and timestamp
+
+[\] rclone lsd remote:backup
+[/] List directories on remote
+
+[\] rclone lsf remote:backup
+[/] List files only
+
+[\] rclone check /local/path remote:backup
+[/] Verify file integrity
+
+[\] rclone dedupe remote:backup
+[/] Remove duplicate files
+
+[\] rclone mount remote:backup /mnt/remote
+[/] Mount remote as filesystem
+
+[\] rclone unmount /mnt/remote
+[/] Unmount remote filesystem
+
+[\] rclone config file
+[/] Show config file location
+
+[\] rclone about remote:
+[/] Show remote storage info
+
+[\] rclone size remote:backup
+[/] Show total size of remote
+
+[\] rclone md5sum /local/path
+[/] Calculate MD5 checksums locally
+
+[\] rclone md5sum remote:backup
+[/] Calculate MD5 on remote
+
+[\] rclone sha1sum /local/path
+[/] Calculate SHA1 checksums locally
+
+[\] rclone sha1sum remote:backup
+[/] Calculate SHA1 on remote
+
+[\] rclone version
+[/] Show rclone version
+
+[\] rclone help
+[/] Show help menu
+
+[\] rclone copy /local/path remote:backup --progress
+[/] Show progress bar during copy
+
+[\] rclone sync /local/path remote:backup --dry-run
+[/] Test sync without making changes
+
+[\] rclone config create myremote s3 env_auth true bucket mybucket
+[/] Create S3 remote via CLI
+
+[\] rclone config update myremote key value
+[/] Update remote configuration
+
+[\] crontab -e
+[/] Schedule automated rclone tasks

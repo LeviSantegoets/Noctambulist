@@ -1,0 +1,237 @@
+# Windows Server PowerShell Admin Commands
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Windows Server PowerShell Admin Commands
+
+# -------------------------
+# SYSTEM INFORMATION
+# -------------------------
+
+[\] Get-ComputerInfo
+[/] Show detailed system information
+
+[\] Get-WindowsEdition
+[/] Display Windows Server edition
+
+[\] Get-Process
+[/] List running processes
+
+[\] Stop-Process -Id <id>
+[/] Kill a process by PID
+
+[\] Get-Service
+[/] List all services
+
+[\] Start-Service <name>
+[/] Start a service
+
+[\] Stop-Service <name>
+[/] Stop a service
+
+[\] Restart-Service <name>
+[/] Restart a service
+
+# -------------------------
+# ROLES & FEATURES
+# -------------------------
+
+[\] Get-WindowsFeature
+[/] List all roles and features
+
+[\] Install-WindowsFeature <feature>
+[/] Install a server role or feature
+
+[\] Uninstall-WindowsFeature <feature>
+[/] Remove a server role or feature
+
+[\] Install-WindowsFeature AD-Domain-Services
+[/] Install Active Directory Domain Services
+
+[\] Install-WindowsFeature DNS
+[/] Install DNS Server role
+
+[\] Install-WindowsFeature DHCP
+[/] Install DHCP Server role
+
+[\] Install-WindowsFeature Web-Server
+[/] Install IIS Web Server
+
+# -------------------------
+# ACTIVE DIRECTORY (AD DS)
+# -------------------------
+
+[\] Install-ADDSForest -DomainName "example.local"
+[/] Create a new AD forest
+
+[\] Install-ADDSDomainController
+[/] Add a domain controller to an existing domain
+
+[\] Get-ADUser -Filter *
+[/] List all AD users
+
+[\] New-ADUser -Name "John Doe"
+[/] Create a new AD user
+
+[\] Set-ADAccountPassword <user>
+[/] Reset an AD user password
+
+[\] Unlock-ADAccount <user>
+[/] Unlock a locked AD account
+
+[\] Disable-ADAccount <user>
+[/] Disable an AD account
+
+[\] Enable-ADAccount <user>
+[/] Enable an AD account
+
+[\] Remove-ADUser <user>
+[/] Delete an AD user
+
+[\] Get-ADGroup -Filter *
+[/] List AD groups
+
+[\] Add-ADGroupMember "Group" <user>
+[/] Add user to AD group
+
+[\] Remove-ADGroupMember "Group" <user>
+[/] Remove user from AD group
+
+# -------------------------
+# DNS SERVER
+# -------------------------
+
+[\] Add-DnsServerPrimaryZone -Name "example.local"
+[/] Create a new DNS zone
+
+[\] Add-DnsServerResourceRecordA -Name "www" -ZoneName "example.local" -IPv4Address 192.168.1.10
+[/] Add an A record
+
+[\] Add-DnsServerResourceRecordCName -Name "alias" -HostNameAlias "server.example.local" -ZoneName "example.local"
+[/] Add a CNAME record
+
+[\] Get-DnsServerResourceRecord -ZoneName "example.local"
+[/] List DNS records
+
+[\] Remove-DnsServerResourceRecord -ZoneName "example.local" -RRType A -Name "www" -Force
+[/] Remove a DNS record
+
+# -------------------------
+# DHCP SERVER
+# -------------------------
+
+[\] Add-DhcpServerv4Scope -Name "LAN" -StartRange 192.168.1.100 -EndRange 192.168.1.200 -SubnetMask 255.255.255.0
+[/] Create a DHCP scope
+
+[\] Set-DhcpServerv4OptionValue -DnsServer 192.168.1.10
+[/] Set DHCP DNS option
+
+[\] Get-DhcpServerv4Lease
+[/] List DHCP leases
+
+[\] Add-DhcpServerv4Reservation -ScopeId 192.168.1.0 -IPAddress 192.168.1.50 -ClientId "MAC" -Description "Device"
+[/] Add a DHCP reservation
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] Get-NetIPAddress
+[/] List all IP addresses
+
+[\] New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.1.10 -PrefixLength 24 -DefaultGateway 192.168.1.1
+[/] Assign a static IP address
+
+[\] Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.1.10
+[/] Set DNS server address
+
+[\] Get-NetAdapter
+[/] List network adapters
+
+[\] Restart-NetAdapter -Name "Ethernet"
+[/] Restart a network adapter
+
+[\] Test-NetConnection <host>
+[/] Test connectivity (ping + port)
+
+[\] Test-NetConnection -Port 80 <host>
+[/] Test a specific port
+
+# -------------------------
+# FIREWALL
+# -------------------------
+
+[\] Get-NetFirewallProfile
+[/] Show firewall profiles
+
+[\] Set-NetFirewallProfile -Profile Domain -Enabled False
+[/] Disable firewall for domain profile
+
+[\] New-NetFirewallRule -DisplayName "Allow80" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow
+[/] Create firewall rule to allow port 80
+
+[\] Remove-NetFirewallRule -DisplayName "Allow80"
+[/] Remove firewall rule
+
+# -------------------------
+# HYPER-V
+# -------------------------
+
+[\] New-VM -Name "Server01" -MemoryStartupBytes 4GB -Generation 2
+[/] Create a new virtual machine
+
+[\] Set-VMProcessor "Server01" -Count 4
+[/] Assign CPU cores to VM
+
+[\] Add-VMHardDiskDrive -VMName "Server01" -Path "C:\VMs\disk.vhdx"
+[/] Attach a virtual disk
+
+[\] Set-VMMemory "Server01" -DynamicMemoryEnabled $true
+[/] Enable dynamic memory
+
+[\] Start-VM "Server01"
+[/] Start a virtual machine
+
+[\] Stop-VM "Server01"
+[/] Stop a virtual machine
+
+[\] Get-VM
+[/] List all virtual machines
+
+# -------------------------
+# STORAGE & DISKS
+# -------------------------
+
+[\] Get-Disk
+[/] List disks
+
+[\] Initialize-Disk -Number 1 -PartitionStyle GPT
+[/] Initialize a disk
+
+[\] New-Partition -DiskNumber 1 -UseMaximumSize -AssignDriveLetter
+[/] Create a new partition
+
+[\] Format-Volume -DriveLetter E -FileSystem NTFS -NewFileSystemLabel "Data"
+[/] Format a volume
+
+[\] Get-Volume
+[/] List volumes
+
+# -------------------------
+# WINDOWS UPDATE
+# -------------------------
+
+[\] Install-WindowsUpdate
+[/] Install all available updates (PSWindowsUpdate module)
+
+[\] Get-WindowsUpdateLog
+[/] Generate Windows Update log
+
+# -------------------------
+# SYSTEM CONTROL
+# -------------------------
+
+[\] Restart-Computer
+[/] Restart the server
+
+[\] Stop-Computer
+[/] Shut down the server

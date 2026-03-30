@@ -1,0 +1,43 @@
+[X] Readelf Command List (ELF File Analysis)
+
+[\] readelf -h file
+[/] Display ELF header
+
+[\] readelf -l file
+[/] Display program headers
+
+[\] readelf -S file
+[/] Display section headers
+
+[\] readelf -s file
+[/] Display symbol table
+
+[\] readelf -r file
+[/] Display relocation entries
+
+[\] readelf -d file
+[/] Display dynamic section
+
+[\] readelf -V file
+[/] Display version info
+
+[\] readelf -x .text file
+[/] Hex dump of a section
+
+[\] readelf --debug-dump=info file
+[/] Dump debug info
+
+[\] readelf --all file
+[/] Show all information
+
+[\] readelf --string-dump=.rodata file
+[/] Dump strings from section
+
+[\] readelf -a file
+[/] Shortcut to show all major info
+
+[\] readelf --help
+[/] Show help menu
+
+[\] readelf --version
+[/] Show readelf version

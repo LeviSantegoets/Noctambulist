@@ -1,0 +1,73 @@
+[X] sed Command List
+
+[\] sed 's/foo/bar/' file.txt
+[/] Replace first occurrence of "foo" with "bar" per line
+
+[\] sed 's/foo/bar/g' file.txt
+[/] Replace all occurrences of "foo" with "bar" per line
+
+[\] sed 's/foo/bar/2' file.txt
+[/] Replace only the 2nd occurrence of "foo" per line
+
+[\] sed -i 's/foo/bar/' file.txt
+[/] Replace in-place (modify file)
+
+[\] sed -i.bak 's/foo/bar/' file.txt
+[/] Replace in-place and create backup
+
+[\] sed 's/^/prefix-/' file.txt
+[/] Add prefix to each line
+
+[\] sed 's/$/-suffix/' file.txt
+[/] Add suffix to each line
+
+[\] sed '/pattern/d' file.txt
+[/] Delete lines matching pattern
+
+[\] sed -n '1,5p' file.txt
+[/] Print lines 1 through 5
+
+[\] sed -n '/pattern/p' file.txt
+[/] Print only lines matching pattern
+
+[\] sed '5d' file.txt
+[/] Delete line 5
+
+[\] sed '1,5d' file.txt
+[/] Delete lines 1 through 5
+
+[\] sed '5q' file.txt
+[/] Quit after line 5
+
+[\] sed -n '5p' file.txt
+[/] Print only line 5
+
+[\] sed '/start/,/end/p' file.txt
+[/] Print lines from "start" to "end"
+
+[\] sed 's/[0-9]/#/g' file.txt
+[/] Replace all digits with #
+
+[\] sed 'y/abc/ABC/' file.txt
+[/] Transliterate characters (a→A, b→B, c→C)
+
+[\] sed 's/foo/&bar/' file.txt
+[/] Append text after match
+
+[\] sed 's/\(foo\)/[\1]/' file.txt
+[/] Use grouping and backreference
+
+[\] sed -e 's/foo/bar/' -e 's/baz/qux/' file.txt
+[/] Multiple commands in one sed invocation
+
+[\] sed -f script.sed file.txt
+[/] Execute sed script file
+
+[\] sed -n 'l' file.txt
+[/] Show line with unprintable characters visible
+
+[\] sed --help
+[/] Show help menu
+
+[\] sed --version
+[/] Show version

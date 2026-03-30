@@ -1,0 +1,22 @@
+[X] Tail Command List
+
+[\] tail file.txt
+[/] Show last 10 lines
+
+[\] tail -n 20 file.txt
+[/] Show last 20 lines
+
+[\] tail -c 100 file.txt
+[/] Show last 100 bytes
+
+[\] tail -f file.txt
+[/] Follow file in real time (log monitoring)
+
+[\] tail -F file.txt
+[/] Follow file, retry if file is rotated
+
+[\] tail --max-unchanged-stats=5 file.txt
+[/] Advanced follow options
+
+[\] tail --help
+[/] Show tail help menu

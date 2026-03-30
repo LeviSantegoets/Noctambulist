@@ -1,0 +1,76 @@
+[X] WPScan Command List
+
+[\] wpscan --url https://example.com
+[/] Scan a WordPress site
+
+[\] wpscan --url https://example.com --enumerate u
+[/] Enumerate users
+
+[\] wpscan --url https://example.com --enumerate p
+[/] Enumerate plugins
+
+[\] wpscan --url https://example.com --enumerate t
+[/] Enumerate themes
+
+[\] wpscan --url https://example.com --enumerate vp
+[/] Enumerate vulnerable plugins
+
+[\] wpscan --url https://example.com --enumerate vt
+[/] Enumerate vulnerable themes
+
+[\] wpscan --url https://example.com --enumerate ap
+[/] Enumerate all plugins
+
+[\] wpscan --url https://example.com --enumerate at
+[/] Enumerate all themes
+
+[\] wpscan --url https://example.com --enumerate u,p,t
+[/] Enumerate users, plugins, and themes together
+
+[\] wpscan --url https://example.com --plugins-detection aggressive
+[/] Use aggressive plugin detection
+
+[\] wpscan --url https://example.com --random-user-agent
+[/] Use random User-Agent
+
+[\] wpscan --url https://example.com --api-token YOUR_TOKEN
+[/] Use WPScan API for vulnerability data
+
+[\] wpscan --url https://example.com --output report.txt
+[/] Save results to file
+
+[\] wpscan --url https://example.com --format json
+[/] Output results in JSON
+
+[\] wpscan --url https://example.com --disable-tls-checks
+[/] Disable SSL verification
+
+[\] wpscan --url https://example.com --force
+[/] Force scan even if WP not detected
+
+[\] wpscan --url https://example.com --proxy http://127.0.0.1:8080
+[/] Route scan through proxy
+
+[\] wpscan --url https://example.com --throttle 200
+[/] Delay requests (ms)
+
+[\] wpscan --url https://example.com --max-threads 10
+[/] Set concurrency level
+
+[\] wpscan --url https://example.com --usernames admin
+[/] Specify usernames
+
+[\] wpscan --url https://example.com --passwords passwords.txt
+[/] Use password wordlist
+
+[\] wpscan --url https://example.com --usernames admin --passwords passwords.txt
+[/] Perform brute-force login test
+
+[\] wpscan --update
+[/] Update WPScan database
+
+[\] wpscan --help
+[/] Show help menu
+
+[\] wpscan --version
+[/] Show version

@@ -1,0 +1,82 @@
+# theHarvester Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] theHarvester Command List
+
+[\] theHarvester -d example.com -b google
+[/] Search for emails and hosts using Google
+
+[\] theHarvester -d example.com -b bing
+[/] Search using Bing engine
+
+[\] theHarvester -d example.com -b duckduckgo
+[/] Search using DuckDuckGo
+
+[\] theHarvester -d example.com -b yahoo
+[/] Search using Yahoo engine
+
+[\] theHarvester -d example.com -b crtsh
+[/] Search SSL certificate transparency logs
+
+[\] theHarvester -d example.com -b linkedin
+[/] Search LinkedIn for employee names
+
+[\] theHarvester -d example.com -b twitter
+[/] Search Twitter for domain references
+
+[\] theHarvester -d example.com -b all
+[/] Use all available data sources
+
+[\] theHarvester -d example.com -b google -l 500
+[/] Limit results to 500 entries
+
+[\] theHarvester -d example.com -b google -s 200
+[/] Start results from index 200
+
+[\] theHarvester -d example.com -b google -f report.html
+[/] Save results to an HTML report
+
+[\] theHarvester -d example.com -b google -f report.xml
+[/] Save results to an XML report
+
+[\] theHarvester -d example.com -b google -v
+[/] Enable verbose output
+
+[\] theHarvester -d example.com -b google -n
+[/] Disable DNS resolution
+
+[\] theHarvester -d example.com -b google -c
+[/] Perform DNS brute force
+
+[\] theHarvester -d example.com -b google -t
+[/] Perform DNS TLD expansion
+
+[\] theHarvester -d example.com -b google -e dns1.example.com
+[/] Use a custom DNS server
+
+[\] theHarvester -d example.com -b google -g
+[/] Use Google dorking mode
+
+[\] theHarvester -d example.com -b google -h
+[/] Display help menu
+
+[\] theHarvester -d example.com -b google --dns-lookup
+[/] Perform DNS lookups on discovered hosts
+
+[\] theHarvester -d example.com -b google --dns-brute
+[/] Perform DNS brute forcing on subdomains
+
+[\] theHarvester -d example.com -b google --virtual-host
+[/] Perform virtual host discovery
+
+[\] theHarvester -d example.com -b google --take-over
+[/] Check for subdomain takeover vulnerabilities
+
+[\] theHarvester -d example.com -b google --shodan
+[/] Use Shodan API (requires API key)
+
+[\] theHarvester -d example.com -b google --dns-tld
+[/] Expand TLD brute forcing
+
+[\] theHarvester -d example.com -b google --screenshot
+[/] Take screenshots of discovered hosts (requires EyeWitness)

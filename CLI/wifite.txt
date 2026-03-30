@@ -1,0 +1,130 @@
+# Wifite Command List
+# Format: [\] command [/] description
+
+[X] Wifite Command List
+
+[\] wifite
+[/] Launch Wifite with default settings
+
+[\] sudo wifite
+[/] Run Wifite with required privileges
+
+[\] wifite -h
+[/] Show help menu
+
+[\] wifite -i wlan0
+[/] Use specific wireless interface
+
+[\] wifite -i wlan0mon
+[/] Use monitor‑mode interface
+
+[\] wifite -mac
+[/] Randomize MAC address before attacks
+
+[\] wifite -p
+[/] Only show access points with connected clients
+
+[\] wifite -showb
+[/] Show 5GHz networks
+
+[\] wifite -wps
+[/] Enable WPS attacks only
+
+[\] wifite -wpa
+[/] Enable WPA/WPA2 handshake attacks only
+
+[\] wifite -wep
+[/] Enable WEP attacks only
+
+[\] wifite -pmkid
+[/] Capture PMKID hashes (WPA/WPA2)
+
+[\] wifite -no-wps
+[/] Disable WPS attacks
+
+[\] wifite -no-wpa
+[/] Disable WPA attacks
+
+[\] wifite -no-wep
+[/] Disable WEP attacks
+
+[\] wifite -timeout 60
+[/] Set global attack timeout (seconds)
+
+[\] wifite -wps-time 300
+[/] Set WPS attack timeout
+
+[\] wifite -wpa-time 600
+[/] Set WPA handshake timeout
+
+[\] wifite -wep-time 900
+[/] Set WEP attack timeout
+
+[\] wifite -handshake
+[/] Capture WPA handshake
+
+[\] wifite -dict /path/wordlist.txt
+[/] Use custom dictionary for cracking
+
+[\] wifite -aircrack
+[/] Use Aircrack‑NG for cracking
+
+[\] wifite -hashcat
+[/] Use Hashcat for cracking
+
+[\] wifite -reaver
+[/] Use Reaver for WPS attacks
+
+[\] wifite -bully
+[/] Use Bully for WPS attacks
+
+[\] wifite -power 50
+[/] Only attack APs stronger than 50 dBm
+
+[\] wifite -channel 1
+[/] Only attack APs on channel 1
+
+[\] wifite -channels 1,6,11
+[/] Limit scanning to specific channels
+
+[\] wifite -essid MyNetwork
+[/] Target a specific ESSID
+
+[\] wifite -bssid AA:BB:CC:DD:EE:FF
+[/] Target a specific BSSID
+
+[\] wifite -quiet
+[/] Reduce output noise
+
+[\] wifite -verbose
+[/] Show detailed output
+
+[\] wifite -log
+[/] Save logs to default directory
+
+[\] wifite -logdir /path/logs
+[/] Save logs to custom directory
+
+[\] wifite -automate
+[/] Fully automated mode (no prompts)
+
+[\] wifite -skip-crack
+[/] Capture handshakes but do not crack
+
+[\] wifite -no-deauth
+[/] Disable deauthentication attacks
+
+[\] wifite -no-pmkid
+[/] Disable PMKID capture
+
+[\] wifite -kill
+[/] Kill processes interfering with monitor mode
+
+[\] wifite -check
+[/] Check system for required tools
+
+[\] wifite -mon-iface wlan0
+[/] Force monitor mode on wlan0
+
+[\] wifite -no-mon
+[/] Do not enable monitor mode automatically

@@ -1,0 +1,52 @@
+[X] Zoxide Command List (Smart Directory Jumper)
+
+[\] z
+[/] Jump to the most recently used directory matching pattern
+
+[\] z pattern
+[/] Jump to directory matching "pattern"
+
+[\] z -l
+[/] List all tracked directories
+
+[\] z -t
+[/] Show recent directories sorted by frecency (frequency + recency)
+
+[\] z -r
+[/] Remove a directory from the database
+
+[\] z -c
+[/] Clear the zoxide database
+
+[\] z -a /path/to/dir
+[/] Add a directory manually to the database
+
+[\] z -e pattern
+[/] Edit a directory in your editor
+
+[\] z -i pattern
+[/] Interactive selection for pattern match
+
+[\] z -L
+[/] Show full path of matching directory
+
+[\] z --list
+[/] Same as -l, list all tracked directories
+
+[\] z --help
+[/] Show help menu
+
+[\] z --version
+[/] Show zoxide version
+
+[\] z --init bash
+[/] Initialize zoxide for Bash shell
+
+[\] z --init zsh
+[/] Initialize zoxide for Zsh shell
+
+[\] z --init fish
+[/] Initialize zoxide for Fish shell
+
+[\] z --init powershell
+[/] Initialize zoxide for PowerShell

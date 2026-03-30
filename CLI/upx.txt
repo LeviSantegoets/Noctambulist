@@ -1,0 +1,58 @@
+[X] UPX Command List
+
+[\] upx file.exe
+[/] Compress executable file
+
+[\] upx -d file.exe
+[/] Decompress (unpack) executable
+
+[\] upx -t file.exe
+[/] Test compressed file integrity
+
+[\] upx -l file.exe
+[/] List information about compressed file
+
+[\] upx -9 file.exe
+[/] Maximum compression level
+
+[\] upx -1 file.exe
+[/] Fast compression (lower ratio)
+
+[\] upx --best file.exe
+[/] Use best compression settings
+
+[\] upx --ultra-brute file.exe
+[/] Try all compression methods (slowest, best ratio)
+
+[\] upx -o packed.exe file.exe
+[/] Output compressed file to new file
+
+[\] upx -f file.exe
+[/] Force compression even if not recommended
+
+[\] upx --backup file.exe
+[/] Create backup before compressing
+
+[\] upx --overlay=strip file.exe
+[/] Remove overlay data
+
+[\] upx --overlay=copy file.exe
+[/] Preserve overlay data
+
+[\] upx --overlay=skip file.exe
+[/] Skip files with overlays
+
+[\] upx --no-color file.exe
+[/] Disable colored output
+
+[\] upx --quiet file.exe
+[/] Quiet mode (minimal output)
+
+[\] upx --verbose file.exe
+[/] Verbose output
+
+[\] upx -V
+[/] Show version
+
+[\] upx -h
+[/] Show help menu

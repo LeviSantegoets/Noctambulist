@@ -1,0 +1,82 @@
+[X] zbackup Command List
+
+[\] zbackup init --non-encrypted /backup
+[/] Initialize repository (no encryption)
+
+[\] zbackup init /backup
+[/] Initialize encrypted repository
+
+[\] zbackup backup /backup/data < file.tar
+[/] Backup data from stdin
+
+[\] tar -cf - /home/user | zbackup backup /backup/home.tar
+[/] Backup directory via tar pipe
+
+[\] zbackup restore /backup/home.tar > file.tar
+[/] Restore backup to file
+
+[\] zbackup restore /backup/home.tar | tar -xf -
+[/] Restore and extract archive
+
+[\] zbackup list /backup
+[/] List backup files
+
+[\] zbackup info /backup/home.tar
+[/] Show backup metadata
+
+[\] zbackup inspect /backup/home.tar
+[/] Inspect backup contents
+
+[\] zbackup gc /backup
+[/] Garbage collect unused data
+
+[\] zbackup gc --deep /backup
+[/] Deep garbage collection
+
+[\] zbackup export /backup /exported
+[/] Export repository
+
+[\] zbackup import /imported /backup
+[/] Import repository
+
+[\] zbackup passwd /backup
+[/] Change repository password
+
+[\] zbackup config /backup
+[/] Show repository configuration
+
+[\] zbackup config /backup --set chunk_size=1M
+[/] Set chunk size
+
+[\] zbackup config /backup --set compression=lzma
+[/] Set compression method
+
+[\] zbackup config /backup --set encryption=aes
+[/] Set encryption method
+
+[\] zbackup config /backup --set threads=4
+[/] Set number of threads
+
+[\] zbackup --silent backup /backup/file < input
+[/] Run backup quietly
+
+[\] zbackup --verbose backup /backup/file < input
+[/] Enable verbose output
+
+[\] zbackup --help
+[/] Show help menu
+
+[\] zbackup --version
+[/] Show version
+
+[\] du -sh /backup
+[/] Check repository size
+
+[\] ls /backup
+[/] List repository files
+
+[\] tar -tf file.tar
+[/] Inspect tar archive contents
+
+[\] crontab -e
+[/] Schedule automated backups

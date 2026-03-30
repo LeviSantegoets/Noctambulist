@@ -1,0 +1,94 @@
+[X] TShark Command List
+
+[\] tshark
+[/] Start live packet capture on default interface
+
+[\] tshark -i eth0
+[/] Capture packets on specific interface
+
+[\] tshark -D
+[/] List available interfaces
+
+[\] tshark -c 100
+[/] Capture only 100 packets
+
+[\] tshark -a duration:60
+[/] Capture for 60 seconds
+
+[\] tshark -f "tcp port 80"
+[/] Capture with BPF filter (TCP port 80)
+
+[\] tshark -Y "http"
+[/] Display filter to show only HTTP packets
+
+[\] tshark -w capture.pcap
+[/] Write captured packets to a file
+
+[\] tshark -r capture.pcap
+[/] Read packets from a file
+
+[\] tshark -T json
+[/] Export capture in JSON format
+
+[\] tshark -T pdml
+[/] Export capture in PDML format (XML)
+
+[\] tshark -T text
+[/] Export capture in plain text
+
+[\] tshark -z io,stat,0,COUNT
+[/] Show packet statistics
+
+[\] tshark -z conv,tcp
+[/] Show TCP conversations
+
+[\] tshark -z endpoints
+[/] Show endpoint statistics
+
+[\] tshark -z proto,colinfo,http
+[/] Show protocol-specific info (HTTP example)
+
+[\] tshark -n
+[/] Disable DNS resolution
+
+[\] tshark -N n
+[/] Disable name resolution for hosts, ports, and protocols
+
+[\] tshark -V
+[/] Show detailed packet info
+
+[\] tshark -x
+[/] Show packet hex and ASCII dump
+
+[\] tshark -q
+[/] Run quietly (minimal output)
+
+[\] tshark --color
+[/] Enable colored output
+
+[\] tshark --no-color
+[/] Disable colored output
+
+[\] tshark -F pcapng
+[/] Save capture in PCAPNG format
+
+[\] tshark -F pcap
+[/] Save capture in legacy PCAP format
+
+[\] tshark -G protocols
+[/] List all supported protocols
+
+[\] tshark -h
+[/] Show help menu
+
+[\] tshark -v
+[/] Show version
+
+[\] tshark -i eth0 -f "port 22" -c 50 -w ssh.pcap
+[/] Capture 50 SSH packets on eth0 and save to file
+
+[\] tshark -r capture.pcap -Y "ip.src==192.168.1.10"
+[/] Filter packets by source IP
+
+[\] tshark -r capture.pcap -Y "tcp.port==443"
+[/] Filter packets by TCP port

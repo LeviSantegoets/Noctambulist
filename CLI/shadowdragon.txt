@@ -1,0 +1,155 @@
+[X] ShadowDragon Command List
+
+[\] shadowdragon
+[/] Launch ShadowDragon platform
+
+[\] shadowdragon -h
+[/] Show help menu
+
+[\] shadowdragon --help
+[/] Display extended help information
+
+[\] shadowdragon --version
+[/] Show ShadowDragon version
+
+[\] shadowdragon login
+[/] Authenticate to ShadowDragon services
+
+[\] shadowdragon logout
+[/] Logout from current session
+
+[\] shadowdragon account info
+[/] Display account information and usage
+
+# -------------------------
+# SEARCH COMMANDS
+# -------------------------
+
+[\] shadowdragon search "<query>"
+[/] Perform a general OSINT search
+
+[\] shadowdragon search username <username>
+[/] Search for a username across platforms
+
+[\] shadowdragon search email <email>
+[/] Investigate an email address
+
+[\] shadowdragon search phone <number>
+[/] Investigate a phone number
+
+[\] shadowdragon search domain <domain>
+[/] Investigate a domain
+
+[\] shadowdragon search ip <ip>
+[/] Investigate an IP address
+
+[\] shadowdragon search name "<full name>"
+[/] Search for a person by full name
+
+# -------------------------
+# SOCIAL MEDIA INVESTIGATION
+# -------------------------
+
+[\] shadowdragon social <username>
+[/] Search social media accounts for a username
+
+[\] shadowdragon social twitter <username>
+[/] Search Twitter/X profile data
+
+[\] shadowdragon social facebook <username>
+[/] Search Facebook profiles
+
+[\] shadowdragon social instagram <username>
+[/] Search Instagram accounts
+
+[\] shadowdragon social linkedin "<name>"
+[/] Search LinkedIn profiles
+
+[\] shadowdragon social reddit <username>
+[/] Search Reddit accounts
+
+# -------------------------
+# DATA ENRICHMENT
+# -------------------------
+
+[\] shadowdragon enrich email <email>
+[/] Enrich an email with OSINT data
+
+[\] shadowdragon enrich domain <domain>
+[/] Enrich domain intelligence
+
+[\] shadowdragon enrich ip <ip>
+[/] Enrich IP intelligence
+
+[\] shadowdragon enrich phone <number>
+[/] Enrich phone number intelligence
+
+[\] shadowdragon enrich username <username>
+[/] Enrich username data across platforms
+
+# -------------------------
+# GRAPH / RELATIONSHIP ANALYSIS
+# -------------------------
+
+[\] shadowdragon graph <entity>
+[/] Build relationship graph for an entity
+
+[\] shadowdragon graph username <username>
+[/] Build connection graph for a username
+
+[\] shadowdragon graph email <email>
+[/] Build graph based on email connections
+
+[\] shadowdragon graph domain <domain>
+[/] Build graph of domain relationships
+
+# -------------------------
+# PROJECT / CASE MANAGEMENT
+# -------------------------
+
+[\] shadowdragon project create "<name>"
+[/] Create a new investigation project
+
+[\] shadowdragon project list
+[/] List all projects
+
+[\] shadowdragon project open "<name>"
+[/] Open an investigation project
+
+[\] shadowdragon project delete "<name>"
+[/] Delete a project
+
+[\] shadowdragon project export "<name>"
+[/] Export project investigation data
+
+# -------------------------
+# DATA IMPORT / EXPORT
+# -------------------------
+
+[\] shadowdragon import csv <file.csv>
+[/] Import CSV investigation data
+
+[\] shadowdragon import json <file.json>
+[/] Import JSON investigation data
+
+[\] shadowdragon export json <file.json>
+[/] Export results to JSON
+
+[\] shadowdragon export csv <file.csv>
+[/] Export results to CSV
+
+# -------------------------
+# UTILITY COMMANDS
+# -------------------------
+
+[\] shadowdragon update
+[/] Update ShadowDragon tools
+
+[\] shadowdragon status
+[/] Show system and connection status
+
+[\] shadowdragon config
+[/] Show current configuration settings
+
+[\] shadowdragon config set <key> <value>
+[/] Set configuration option

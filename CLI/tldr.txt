@@ -1,0 +1,85 @@
+[X] tldr Command List
+
+[\] tldr tar
+[/] Show simplified help for tar command
+
+[\] tldr ls
+[/] Show examples for ls command
+
+[\] tldr grep
+[/] Show usage examples for grep
+
+[\] tldr --help
+[/] Show help menu
+
+[\] tldr --version
+[/] Show tldr version
+
+[\] tldr --update
+[/] Update local cache
+
+[\] tldr -u
+[/] Update cache (short flag)
+
+[\] tldr --list
+[/] List all available pages
+
+[\] tldr -l
+[/] List pages (short flag)
+
+[\] tldr --search pattern
+[/] Search for command pages
+
+[\] tldr -s pattern
+[/] Search pages (short flag)
+
+[\] tldr --platform linux tar
+[/] Show examples for specific platform
+
+[\] tldr --platform osx ls
+[/] Show macOS-specific examples
+
+[\] tldr --platform windows dir
+[/] Show Windows command examples
+
+[\] tldr --render markdown tar
+[/] Output raw markdown
+
+[\] tldr --color always tar
+[/] Force colored output
+
+[\] tldr --no-color tar
+[/] Disable colored output
+
+[\] tldr --quiet tar
+[/] Suppress extra output
+
+[\] tldr --verbose tar
+[/] Show more detailed output
+
+[\] tldr --pager less tar
+[/] Pipe output through pager
+
+[\] tldr --config
+[/] Show config file location
+
+[\] tldr --editor
+[/] Open page for editing (if supported)
+
+[\] tldr --language en
+[/] Set language
+
+[\] tldr --language nl
+[/] Use Dutch pages (if available)
+
+[\] tldr --clear-cache
+[/] Clear local cache
+
+[\] tldr --source tar
+[/] Show source of tldr page
+
+[\] tldr --offline tar
+[/] Use cached pages only
+
+[\] tldr --debug tar
+[/] Show debug information

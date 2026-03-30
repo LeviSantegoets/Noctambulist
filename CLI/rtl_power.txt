@@ -1,0 +1,113 @@
+[X] RTL Power Command List
+
+[\] rtl_power
+[/] Start spectrum scanning using RTL-SDR
+
+[\] rtl_power -h
+[/] Show help and command options
+
+# -------------------------
+# BASIC SCANNING
+# -------------------------
+
+[\] rtl_power -f 88M:108M
+[/] Scan FM radio band
+
+[\] rtl_power -f 100M:200M
+[/] Scan frequency range from 100 MHz to 200 MHz
+
+[\] rtl_power -f 50M:1700M
+[/] Scan wide frequency range
+
+[\] rtl_power -f 24M:1766M
+[/] Scan full RTL-SDR supported range
+
+# -------------------------
+# OUTPUT FILES
+# -------------------------
+
+[\] rtl_power -f 88M:108M fm_scan.csv
+[/] Save scan results to CSV file
+
+[\] rtl_power -f 400M:500M scan.csv
+[/] Save scan results for UHF band
+
+[\] rtl_power -f 900M:1000M gsm_scan.csv
+[/] Scan GSM band and save results
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] rtl_power -g 20 -f 100M:200M scan.csv
+[/] Set receiver gain to 20 dB
+
+[\] rtl_power -g 40 -f 400M:500M scan.csv
+[/] Use higher gain for weak signals
+
+[\] rtl_power -g 0 -f 88M:108M scan.csv
+[/] Use automatic gain
+
+# -------------------------
+# BIN SIZE / RESOLUTION
+# -------------------------
+
+[\] rtl_power -b 100k -f 88M:108M scan.csv
+[/] Set bin size to 100 kHz
+
+[\] rtl_power -b 10k -f 100M:200M scan.csv
+[/] Higher frequency resolution
+
+# -------------------------
+# INTEGRATION / TIME
+# -------------------------
+
+[\] rtl_power -i 10 -f 88M:108M scan.csv
+[/] Integrate measurements every 10 seconds
+
+[\] rtl_power -i 1 -f 400M:500M scan.csv
+[/] Fast updates every second
+
+[\] rtl_power -e 1h -f 88M:108M scan.csv
+[/] Run scan for 1 hour
+
+[\] rtl_power -e 10m -f 100M:200M scan.csv
+[/] Run scan for 10 minutes
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] rtl_power -c 50% -f 100M:200M scan.csv
+[/] Crop edges of FFT bins
+
+[\] rtl_power -p 0
+[/] Apply PPM frequency correction
+
+[\] rtl_power -p 20 -f 400M:500M scan.csv
+[/] Correct SDR oscillator by 20 PPM
+
+[\] rtl_power -d 0
+[/] Select RTL-SDR device index
+
+[\] rtl_power -d 1
+[/] Use second RTL-SDR device
+
+# -------------------------
+# COMMON SDR SCANS
+# -------------------------
+
+[\] rtl_power -f 118M:137M airband.csv
+[/] Scan aircraft communications band
+
+[\] rtl_power -f 400M:470M uhf_scan.csv
+[/] Scan UHF communications
+
+[\] rtl_power -f 850M:960M cellular.csv
+[/] Scan cellular GSM bands
+
+[\] rtl_power -f 433M:435M ism433.csv
+[/] Scan 433 MHz ISM band
+
+[\] rtl_power -f 2400M:2485M wifi_scan.csv
+[/] Scan 2.4 GHz WiFi band

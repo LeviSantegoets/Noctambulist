@@ -1,0 +1,85 @@
+[X] TRACE Command List
+
+[\] TRACE example.com
+[/] Perform a basic HTTP TRACE request to a host
+
+[\] curl -X TRACE http://example.com
+[/] Send a TRACE request using curl
+
+[\] curl -v -X TRACE http://example.com
+[/] Send TRACE request with verbose output
+
+[\] curl -i -X TRACE http://example.com
+[/] Send TRACE request and show response headers
+
+[\] curl -X TRACE https://example.com
+[/] Send TRACE request over HTTPS
+
+[\] curl -X TRACE http://example.com/test
+[/] TRACE request to a specific path
+
+[\] curl -H "Max-Forwards: 0" -X TRACE http://example.com
+[/] TRACE request with Max-Forwards header
+
+[\] curl -H "Cookie: session=test" -X TRACE http://example.com
+[/] TRACE request including cookies
+
+[\] curl -H "Authorization: Basic dXNlcjpwYXNz" -X TRACE http://example.com
+[/] TRACE request with Authorization header
+
+[\] curl -H "User-Agent: test-agent" -X TRACE http://example.com
+[/] TRACE request with custom User-Agent
+
+[\] curl -H "X-Forwarded-For: 127.0.0.1" -X TRACE http://example.com
+[/] TRACE request with spoofed client IP
+
+[\] curl -X TRACE http://example.com -d "test=data"
+[/] TRACE request with request body
+
+[\] curl -L -X TRACE http://example.com
+[/] Follow redirects during TRACE request
+
+[\] curl --proxy http://127.0.0.1:8080 -X TRACE http://example.com
+[/] Send TRACE request through proxy (e.g. Burp)
+
+[\] curl --http1.1 -X TRACE http://example.com
+[/] Force HTTP/1.1 TRACE request
+
+[\] curl --http2 -X TRACE https://example.com
+[/] Send TRACE request using HTTP/2
+
+[\] nc example.com 80
+[/] Manually send TRACE request using netcat
+
+[\] printf "TRACE / HTTP/1.1\r\nHost: example.com\r\n\r\n" | nc example.com 80
+[/] Raw HTTP TRACE request via netcat
+
+[\] telnet example.com 80
+[/] Manually interact with server to test TRACE
+
+[\] TRACE / HTTP/1.1
+[/] Raw HTTP TRACE request line (manual testing)
+
+[\] TRACE /test HTTP/1.1
+[/] Raw TRACE request to specific path
+
+[\] OPTIONS / HTTP/1.1
+[/] Check if server supports TRACE method
+
+[\] nmap --script http-trace -p80 example.com
+[/] Scan server for enabled HTTP TRACE method
+
+[\] nmap -p80 --script=http-methods example.com
+[/] Enumerate allowed HTTP methods including TRACE
+
+[\] nikto -h http://example.com -Tuning 6
+[/] Scan for HTTP TRACE vulnerabilities (XST)
+
+[\] burpsuite → Repeater → Method: TRACE
+[/] Send TRACE request manually using Burp Suite
+
+[\] python3 -m http.server 8000
+[/] Start local HTTP server to test TRACE behavior
+
+[\] curl -X TRACE http://127.0.0.1:8000
+[/] Test TRACE against local server

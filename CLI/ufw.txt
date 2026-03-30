@@ -1,0 +1,103 @@
+# UFW Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] UFW Command List
+
+[\] sudo ufw status
+[/] Show UFW status and active rules
+
+[\] sudo ufw status verbose
+[/] Show detailed UFW status
+
+[\] sudo ufw enable
+[/] Enable the firewall
+
+[\] sudo ufw disable
+[/] Disable the firewall
+
+[\] sudo ufw default deny incoming
+[/] Block all incoming connections by default
+
+[\] sudo ufw default allow outgoing
+[/] Allow all outgoing connections by default
+
+[\] sudo ufw allow 22
+[/] Allow SSH on port 22
+
+[\] sudo ufw allow 80
+[/] Allow HTTP traffic
+
+[\] sudo ufw allow 443
+[/] Allow HTTPS traffic
+
+[\] sudo ufw allow 8080
+[/] Allow port 8080
+
+[\] sudo ufw allow from 192.168.1.10
+[/] Allow traffic from a specific IP
+
+[\] sudo ufw allow from 192.168.1.0/24
+[/] Allow traffic from a subnet
+
+[\] sudo ufw allow from 192.168.1.10 to any port 22
+[/] Allow SSH only from a specific IP
+
+[\] sudo ufw deny 23
+[/] Deny Telnet (port 23)
+
+[\] sudo ufw deny 3389
+[/] Deny RDP (port 3389)
+
+[\] sudo ufw delete allow 22
+[/] Remove rule allowing port 22
+
+[\] sudo ufw delete deny 23
+[/] Remove rule denying port 23
+
+[\] sudo ufw reset
+[/] Reset UFW to default settings
+
+[\] sudo ufw reload
+[/] Reload UFW rules
+
+[\] sudo ufw show raw
+[/] Show raw iptables rules used by UFW
+
+[\] sudo ufw logging on
+[/] Enable logging
+
+[\] sudo ufw logging off
+[/] Disable logging
+
+[\] sudo ufw logging low
+[/] Set logging level to low
+
+[\] sudo ufw logging medium
+[/] Set logging level to medium
+
+[\] sudo ufw logging high
+[/] Set logging level to high
+
+[\] sudo ufw logging full
+[/] Set logging level to full
+
+[\] sudo ufw app list
+[/] List available application profiles
+
+[\] sudo ufw app info "Apache"
+[/] Show details about an application profile
+
+[\] sudo ufw allow "Apache Full"
+[/] Allow all Apache-related ports
+
+[\] sudo ufw allow proto tcp from any to any port 22
+[/] Allow only TCP traffic on port 22
+
+[\] sudo ufw allow proto udp from any to any port 53
+[/] Allow only UDP traffic on port 53
+
+[\] sudo ufw route allow in on eth0 out on eth1
+[/] Allow routed traffic between interfaces
+
+[\] sudo ufw route deny in on eth0 out on eth1
+[/] Deny routed traffic between interfaces

@@ -1,0 +1,109 @@
+# SSH Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] SSH Command List
+
+[\] ssh user@host
+[/] Connect to a remote host
+
+[\] ssh user@192.168.1.10
+[/] Connect using an IP address
+
+[\] ssh -p 2222 user@host
+[/] Connect using a custom port
+
+[\] ssh -i key.pem user@host
+[/] Connect using a private key
+
+[\] ssh -v user@host
+[/] Verbose connection output
+
+[\] ssh -vvv user@host
+[/] Maximum debug output
+
+[\] ssh-copy-id user@host
+[/] Copy your public key to a remote host
+
+[\] ssh-keygen
+[/] Generate a new SSH key pair
+
+[\] ssh-keygen -t rsa -b 4096
+[/] Generate a 4096‑bit RSA key
+
+[\] ssh-keygen -t ed25519
+[/] Generate an Ed25519 key
+
+[\] ssh-add key.pem
+[/] Add a private key to the SSH agent
+
+[\] eval $(ssh-agent)
+[/] Start the SSH agent
+
+[\] ssh user@host 'command'
+[/] Run a command on a remote host
+
+[\] ssh user@host 'ls -la'
+[/] Example: list files remotely
+
+[\] scp file.txt user@host:/home/user/
+[/] Copy a file to a remote host
+
+[\] scp user@host:/home/user/file.txt .
+[/] Copy a file from a remote host
+
+[\] scp -r folder user@host:/home/user/
+[/] Copy a folder recursively
+
+[\] scp -i key.pem file.txt user@host:/path/
+[/] Copy using a private key
+
+[\] sftp user@host
+[/] Start an SFTP session
+
+[\] sftp> put file.txt
+[/] Upload a file in SFTP
+
+[\] sftp> get file.txt
+[/] Download a file in SFTP
+
+[\] ssh -L 8080:localhost:80 user@host
+[/] Local port forwarding (local → remote)
+
+[\] ssh -R 8080:localhost:80 user@host
+[/] Remote port forwarding (remote → local)
+
+[\] ssh -D 9050 user@host
+[/] Dynamic SOCKS proxy (Tor‑like)
+
+[\] ssh -N -L 3306:localhost:3306 user@host
+[/] Forward MySQL port without opening a shell
+
+[\] ssh -t user@host "sudo systemctl restart apache2"
+[/] Run a remote command with a pseudo‑terminal
+
+[\] ssh -o StrictHostKeyChecking=no user@host
+[/] Disable host key checking (not recommended)
+
+[\] ssh -o ConnectTimeout=5 user@host
+[/] Set connection timeout to 5 seconds
+
+[\] ssh -F ~/.ssh/config user@host
+[/] Use a custom SSH config file
+
+[\] nano ~/.ssh/config
+[/] Edit SSH config file
+
+[\] ssh myserver
+[/] Connect using SSH config alias
+
+[\] ssh-keyscan host >> ~/.ssh/known_hosts
+[/] Add a host key manually
+
+[\] ssh -Q cipher
+[/] List supported ciphers
+
+[\] ssh -Q key
+[/] List supported key types
+
+[\] ssh -Q mac
+[/] List supported MAC algorithms

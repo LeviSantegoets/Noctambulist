@@ -1,0 +1,104 @@
+[X] Searchsploit Command List
+
+[\] searchsploit
+[/] Show help menu
+
+[\] searchsploit apache
+[/] Search for exploits related to “apache”
+
+[\] searchsploit windows 10
+[/] Search multiple keywords
+
+[\] searchsploit -t apache
+[/] Title‑only search (faster, cleaner)
+
+[\] searchsploit -w apache
+[/] Search Exploit‑DB website instead of local DB
+
+[\] searchsploit -x 12345
+[/] Examine exploit file with ID 12345
+
+[\] searchsploit -p 12345
+[/] Show full path to exploit file
+
+[\] searchsploit -m 12345
+[/] Mirror (copy) exploit to current directory
+
+[\] searchsploit -m 12345 -o exploits/
+[/] Mirror exploit to specific directory
+
+[\] searchsploit -c apache
+[/] Case‑sensitive search
+
+[\] searchsploit -e apache
+[/] Exact match search
+
+[\] searchsploit -s apache
+[/] Strict search (all terms must match)
+
+[\] searchsploit -j apache
+[/] Output results in JSON format
+
+[\] searchsploit -o apache
+[/] Output results in CSV format
+
+[\] searchsploit -v apache
+[/] Verbose output
+
+[\] searchsploit -t linux kernel privilege
+[/] Title‑only multi‑keyword search
+
+[\] searchsploit -t --exclude="dos" apache
+[/] Exclude specific terms
+
+[\] searchsploit -m 12345
+[/] Copy exploit to current directory
+
+[\] searchsploit -m 12345 --path=/tmp
+[/] Copy exploit to /tmp
+
+[\] searchsploit -m 12345 -j
+[/] Mirror exploit and output JSON metadata
+
+[\] searchsploit -m 12345 -o exploit.c
+[/] Mirror exploit and rename output file
+
+[\] searchsploit -u
+[/] Update local exploit database
+
+[\] searchsploit -u --force
+[/] Force full database update
+
+[\] searchsploit -u --mirror
+[/] Update and mirror exploit files
+
+[\] searchsploit -u --clean
+[/] Clean old exploit files
+
+[\] searchsploit -x 12345
+[/] Open exploit in default editor
+
+[\] searchsploit -p 12345
+[/] Show exploit file path
+
+[\] searchsploit -p 12345 | xargs cat
+[/] Print exploit file contents
+
+[\] searchsploit -p 12345 | xargs cp -t ./
+[/] Copy exploit using shell tools
+
+[\] nmap --script vuln -oN scan.txt
+[/] Run Nmap vuln scripts (companion workflow)
+
+[\] searchsploit --nmap scan.xml
+[/] Parse Nmap XML and match vulnerabilities
+
+[\] searchsploit --nmap scan.xml -j
+[/] JSON output for Nmap integration
+
+[\] searchsploit --nmap scan.xml -o results.txt
+[/] Save Nmap‑matched exploits to file
+
+[\] sudo apt install exploitdb
+[/] Install Searchsploit on Debian‑based systems
+

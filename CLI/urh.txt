@@ -1,0 +1,145 @@
+[X] Universal Radio Hacker Command List
+
+[\] urh
+[/] Launch Universal Radio Hacker GUI
+
+[\] urh --help
+[/] Show help menu
+
+[\] urh --version
+[/] Show URH version
+
+[\] urh --no-splash
+[/] Disable splash screen on startup
+
+[\] urh --debug
+[/] Enable debug output
+
+[\] urh --log-level info
+[/] Set log level (debug, info, warning, error)
+
+[\] urh --theme dark
+[/] Launch URH with dark theme
+
+[\] urh --theme light
+[/] Launch URH with light theme
+
+[\] urh --file capture.urh
+[/] Open a URH project file
+
+[\] urh --import capture.wav
+[/] Import raw IQ/audio file into URH
+
+[\] urh --import capture.cfile
+[/] Import GNU Radio / USRP capture
+
+[\] urh --import capture.bin
+[/] Import raw binary RF capture
+
+[\] urh --device-list
+[/] List supported SDR devices
+
+[\] urh --device rtl
+[/] Select RTL‑SDR as input device
+
+[\] urh --device hackrf
+[/] Select HackRF as input device
+
+[\] urh --device bladerf
+[/] Select BladeRF as input device
+
+[\] urh --device uhd
+[/] Select USRP (UHD) device
+
+[\] urh --rx
+[/] Start receive mode immediately
+
+[\] urh --tx
+[/] Start transmit mode immediately (authorized testing only)
+
+[\] urh --freq 433.92e6
+[/] Set center frequency
+
+[\] urh --rate 2e6
+[/] Set sample rate
+
+[\] urh --gain 30
+[/] Set SDR gain
+
+[\] urh --bandwidth 200000
+[/] Set SDR bandwidth
+
+[\] urh --iq-file input.iq
+[/] Load IQ file directly
+
+[\] urh --export output.iq
+[/] Export capture to IQ file
+
+[\] urh --export-bits bits.txt
+[/] Export demodulated bits to text file
+
+[\] urh --export-protocol proto.json
+[/] Export protocol analysis to JSON
+
+[\] urh --analyze
+[/] Automatically analyze imported capture
+
+[\] urh --decode
+[/] Attempt automatic decoding of protocol
+
+[\] urh --demod ask
+[/] Use ASK demodulation
+
+[\] urh --demod fsk
+[/] Use FSK demodulation
+
+[\] urh --demod oqpsk
+[/] Use OQPSK demodulation
+
+[\] urh --mod ask
+[/] Use ASK modulation for transmit mode
+
+[\] urh --mod fsk
+[/] Use FSK modulation for transmit mode
+
+[\] urh --mod oqpsk
+[/] Use OQPSK modulation for transmit mode
+
+[\] urh --tx-file replay.iq
+[/] Transmit IQ file (authorized testing only)
+
+[\] urh --tx-repeat
+[/] Repeat transmission indefinitely (authorized testing only)
+
+[\] urh --tx-delay 100
+[/] Delay between transmissions (ms)
+
+[\] urh --cli
+[/] Launch URH in command‑line mode (no GUI)
+
+[\] urh --cli --import capture.iq --analyze
+[/] Perform analysis entirely via CLI
+
+[\] urh --cli --export-bits bits.txt
+[/] Export bits via CLI
+
+[\] urh --cli --export output.iq
+[/] Export IQ via CLI
+
+[\] sudo apt install urh
+[/] Install URH on Debian‑based systems
+
+[\] pip install urh
+[/] Install URH via Python/pip
+
+[\] rtl_test
+[/] Test RTL‑SDR dongle (common URH companion tool)
+
+[\] hackrf_info
+[/] Show HackRF device info
+
+[\] uhd_find_devices
+[/] Detect USRP devices
+
+[\] bladeRF-cli
+[/] Control BladeRF SDR

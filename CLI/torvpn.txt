@@ -1,0 +1,100 @@
+[X] Tor + VPN Command List
+
+[\] sudo apt install tor
+[/] Install Tor service (Debian/Ubuntu)
+
+[\] sudo pacman -S tor
+[/] Install Tor (Arch/Manjaro)
+
+[\] sudo systemctl start tor
+[/] Start Tor service
+
+[\] sudo systemctl enable tor
+[/] Enable Tor at boot
+
+[\] systemctl status tor
+[/] Check Tor status
+
+[\] tor --version
+[/] Show Tor version
+
+[\] sudo apt install torbrowser-launcher
+[/] Install Tor Browser launcher
+
+[\] torbrowser-launcher
+[/] Start Tor Browser
+
+[\] torsocks curl https://check.torproject.org
+[/] Check if traffic is routed through Tor
+
+[\] torsocks <command>
+[/] Run a command through Tor
+
+[\] sudo nano /etc/tor/torrc
+[/] Edit Tor configuration file
+
+[\] sudo systemctl restart tor
+[/] Restart Tor after config changes
+
+[\] sudo apt install openvpn
+[/] Install OpenVPN (Debian/Ubuntu)
+
+[\] sudo pacman -S openvpn
+[/] Install OpenVPN (Arch/Manjaro)
+
+[\] openvpn --version
+[/] Show OpenVPN version
+
+[\] sudo openvpn --config myvpn.ovpn
+[/] Connect using a .ovpn file
+
+[\] sudo systemctl start openvpn
+[/] Start OpenVPN service
+
+[\] sudo systemctl enable openvpn
+[/] Enable OpenVPN at boot
+
+[\] sudo systemctl stop openvpn
+[/] Stop OpenVPN
+
+[\] sudo apt install wireguard
+[/] Install WireGuard (Debian/Ubuntu)
+
+[\] sudo pacman -S wireguard-tools
+[/] Install WireGuard tools (Arch/Manjaro)
+
+[\] wg --version
+[/] Show WireGuard version
+
+[\] sudo wg-quick up wg0
+[/] Start WireGuard interface
+
+[\] sudo wg-quick down wg0
+[/] Stop WireGuard interface
+
+[\] sudo systemctl enable wg-quick@wg0
+[/] Enable WireGuard at boot
+
+[\] sudo systemctl status wg-quick@wg0
+[/] Check WireGuard status
+
+[\] ip a
+[/] Show IP addresses
+
+[\] curl ifconfig.me
+[/] Show public IP
+
+[\] nmcli connection show
+[/] List network connections
+
+[\] sudo systemctl restart NetworkManager
+[/] Restart network manager
+
+[\] sudo systemctl start tor
+[/] Start Tor first (VPN over Tor)
+
+[\] sudo openvpn --config vpn.ovpn
+[/] Then start VPN
+
+[\] torsocks curl https://check.torproject.org
+[/] Verify Tor routing

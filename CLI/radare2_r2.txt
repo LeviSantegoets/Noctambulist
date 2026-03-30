@@ -1,0 +1,49 @@
+[X] Radare2 (r2) Command List (Reverse Engineering & Binary Analysis)
+
+[\] r2 file
+[/] Open file in radare2 interactive shell
+
+[\] r2 -A file
+[/] Open and analyze automatically (basic analysis)
+
+[\] r2 -qc "aaa; s main; pdf" file
+[/] Run commands on startup: analyze all, seek main, print function disassembly
+
+[\] aaa
+[/] Perform full analysis of binary
+
+[\] afl
+[/] List all functions
+
+[\] pdf
+[/] Print disassembly of current function
+
+[\] pd 10
+[/] Print 10 instructions at current offset
+
+[\] s main
+[/] Seek to main function
+
+[\] iI
+[/] Show binary info (headers, entry point, etc.)
+
+[\] iz
+[/] List strings in binary
+
+[\] izz
+[/] Show strings in hex view
+
+[\] e scr.color=true
+[/] Enable color output
+
+[\] q
+[/] Quit radare2
+
+[\] !command
+[/] Run shell command from r2 prompt
+
+[\] ?v
+[/] Show help menu
+
+[\] r2 -v
+[/] Show radare2 version

@@ -1,0 +1,73 @@
+[X] WinPEAS Command List
+
+[\] winPEAS.exe
+[/] Run standard enumeration
+
+[\] winPEAS.exe all
+[/] Run all checks (full enumeration)
+
+[\] winPEAS.exe fast
+[/] Run quick/fast checks only
+
+[\] winPEAS.exe quiet
+[/] Quiet mode (less output)
+
+[\] winPEAS.exe cmd
+[/] Format output for CMD
+
+[\] winPEAS.exe powershell
+[/] Format output for PowerShell
+
+[\] winPEAS.exe searchfast
+[/] Fast search for sensitive files
+
+[\] winPEAS.exe searchall
+[/] Deep search for sensitive files
+
+[\] winPEAS.exe systeminfo
+[/] Show system information only
+
+[\] winPEAS.exe usersinfo
+[/] Enumerate user information
+
+[\] winPEAS.exe servicesinfo
+[/] Enumerate services
+
+[\] winPEAS.exe processinfo
+[/] Enumerate running processes
+
+[\] winPEAS.exe networkinfo
+[/] Enumerate network configuration
+
+[\] winPEAS.exe filesinfo
+[/] Search interesting files
+
+[\] winPEAS.exe registryinfo
+[/] Enumerate registry keys
+
+[\] winPEAS.exe credentials
+[/] Search for credentials
+
+[\] winPEAS.exe privesc
+[/] Focus on privilege escalation vectors
+
+[\] winPEAS.exe applicationsinfo
+[/] List installed applications
+
+[\] winPEAS.exe eventsinfo
+[/] Analyze event logs
+
+[\] winPEAS.exe windowscreds
+[/] Search Windows credential stores
+
+[\] winPEAS.exe browserinfo
+[/] Extract browser data
+
+[\] winPEAS.exe servicesinfo quiet
+[/] Enumerate services quietly
+
+[\] winPEAS.exe all > output.txt
+[/] Save output to file
+
+[\] winPEAS.exe help
+[/] Show help menu

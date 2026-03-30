@@ -1,0 +1,98 @@
+[X] RTL-TCP Command List
+
+[\] rtl_tcp
+[/] Start RTL-SDR TCP server
+
+[\] rtl_tcp -h
+[/] Show help and available options
+
+# -------------------------
+# BASIC SERVER SETUP
+# -------------------------
+
+[\] rtl_tcp -a 0.0.0.0
+[/] Allow connections from all network interfaces
+
+[\] rtl_tcp -a 127.0.0.1
+[/] Allow only local connections
+
+[\] rtl_tcp -p 1234
+[/] Set TCP server port (default is 1234)
+
+[\] rtl_tcp -d 0
+[/] Use first RTL-SDR device
+
+[\] rtl_tcp -d 1
+[/] Use second RTL-SDR device
+
+# -------------------------
+# FREQUENCY & SAMPLE RATE
+# -------------------------
+
+[\] rtl_tcp -f 100000000
+[/] Set initial center frequency to 100 MHz
+
+[\] rtl_tcp -s 2048000
+[/] Set sample rate to 2.048 MSPS
+
+[\] rtl_tcp -s 1000000
+[/] Set sample rate to 1 MSPS
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] rtl_tcp -g 0
+[/] Enable automatic tuner gain
+
+[\] rtl_tcp -g 20
+[/] Set tuner gain to 20 dB
+
+[\] rtl_tcp -g 40
+[/] Use high gain for weak signals
+
+# -------------------------
+# FREQUENCY CORRECTION
+# -------------------------
+
+[\] rtl_tcp -P 0
+[/] Apply no PPM correction
+
+[\] rtl_tcp -P 25
+[/] Correct frequency offset by 25 PPM
+
+# -------------------------
+# BUFFER / PERFORMANCE
+# -------------------------
+
+[\] rtl_tcp -b 16384
+[/] Set buffer size
+
+[\] rtl_tcp -n 32
+[/] Set number of buffers
+
+# -------------------------
+# NETWORK STREAMING
+# -------------------------
+
+[\] rtl_tcp -a 192.168.1.10
+[/] Bind server to specific IP address
+
+[\] rtl_tcp -a 0.0.0.0 -p 1234
+[/] Allow remote clients on port 1234
+
+# -------------------------
+# CLIENT CONNECTION EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 100M - | aplay
+[/] Listen to FM radio locally
+
+[\] rtl_tcp (server) + SDR# (client)
+[/] Use SDR# remotely via TCP stream
+
+[\] rtl_tcp + gqrx
+[/] Connect GQRX to remote RTL-SDR server
+
+[\] rtl_tcp + CubicSDR
+[/] Use CubicSDR as remote SDR client

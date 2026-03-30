@@ -1,0 +1,193 @@
+# ShadowDragon Filters
+# Format: [\] filter [/] description [X] menutitlename
+
+[X] ShadowDragon (Filters)
+
+# -------------------------
+# ENTITY TYPE FILTERS
+# -------------------------
+
+[\] type:person
+[/] Show only individual profiles
+
+[\] type:organization
+[/] Show only companies or organizations
+
+[\] type:username
+[/] Show only usernames
+
+[\] type:email
+[/] Show only email addresses
+
+[\] type:phone
+[/] Show only phone numbers
+
+[\] type:domain
+[/] Show only domains
+
+[\] type:ip
+[/] Show only IP addresses
+
+[\] type:crypto
+[/] Show cryptocurrency wallets
+
+[\] type:image
+[/] Show image results
+
+# -------------------------
+# PLATFORM FILTERS
+# -------------------------
+
+[\] platform:twitter
+[/] Show results from Twitter/X
+
+[\] platform:facebook
+[/] Show results from Facebook
+
+[\] platform:instagram
+[/] Show results from Instagram
+
+[\] platform:linkedin
+[/] Show results from LinkedIn
+
+[\] platform:youtube
+[/] Show results from YouTube
+
+[\] platform:tiktok
+[/] Show results from TikTok
+
+[\] platform:reddit
+[/] Show results from Reddit
+
+[\] -platform:pinterest
+[/] Exclude Pinterest results
+
+# -------------------------
+# ACCOUNT INFORMATION
+# -------------------------
+
+[\] verified:true
+[/] Show verified accounts
+
+[\] followers:>1000
+[/] Accounts with more than 1000 followers
+
+[\] followers:<100
+[/] Accounts with fewer than 100 followers
+
+[\] posts:>500
+[/] Accounts with more than 500 posts
+
+[\] activity:recent
+[/] Recently active accounts
+
+# -------------------------
+# CONTENT FILTERS
+# -------------------------
+
+[\] text:"admin"
+[/] Posts containing the word “admin”
+
+[\] text:"password"
+[/] Posts containing the word “password”
+
+[\] text:"crypto"
+[/] Posts mentioning cryptocurrency
+
+[\] hashtag:#osint
+[/] Posts containing hashtag #osint
+
+[\] mention:@username
+[/] Posts mentioning a specific account
+
+[\] link:example.com
+[/] Posts linking to a specific domain
+
+# -------------------------
+# MEDIA FILTERS
+# -------------------------
+
+[\] media:image
+[/] Results containing images
+
+[\] media:video
+[/] Results containing videos
+
+[\] media:audio
+[/] Results containing audio
+
+[\] media:document
+[/] Results containing documents
+
+# -------------------------
+# GEOLOCATION FILTERS
+# -------------------------
+
+[\] country:US
+[/] Results associated with United States
+
+[\] country:NL
+[/] Results associated with Netherlands
+
+[\] city:London
+[/] Results associated with London
+
+[\] location:"New York"
+[/] Results referencing New York
+
+[\] -country:CN
+[/] Exclude China
+
+# -------------------------
+# TIME FILTERS
+# -------------------------
+
+[\] date:>2024
+[/] Content posted after 2024
+
+[\] date:<2022
+[/] Content posted before 2022
+
+[\] last-active:<30d
+[/] Accounts active within last 30 days
+
+[\] last-active:>365d
+[/] Accounts inactive for over a year
+
+# -------------------------
+# DATA SOURCE FILTERS
+# -------------------------
+
+[\] source:social
+[/] Social media sources
+
+[\] source:breach
+[/] Data breach datasets
+
+[\] source:darkweb
+[/] Dark web sources
+
+[\] source:forum
+[/] Online forums
+
+[\] source:marketplace
+[/] Online marketplaces
+
+# -------------------------
+# ADVANCED FILTERS
+# -------------------------
+
+[\] contains:"login"
+[/] Results containing login keyword
+
+[\] contains:"token"
+[/] Results containing token keyword
+
+[\] regex:admin.*
+[/] Regex search for admin-related text
+
+[\] regex:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}
+[/] Regex email pattern
+
+[\] -text:"test"
+[/] Exclude results containing “test”

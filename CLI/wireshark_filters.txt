@@ -1,0 +1,154 @@
+# Wireshark Display Filters Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Wireshark (Filters)
+
+[\] ip
+[/] Show only IPv4 traffic
+
+[\] ipv6
+[/] Show only IPv6 traffic
+
+[\] tcp
+[/] Show only TCP packets
+
+[\] udp
+[/] Show only UDP packets
+
+[\] arp
+[/] Show only ARP packets
+
+[\] icmp
+[/] Show only ICMP packets (ping)
+
+[\] dns
+[/] Show only DNS traffic
+
+[\] http
+[/] Show only HTTP traffic
+
+[\] http.request
+[/] Show only HTTP requests
+
+[\] http.response
+[/] Show only HTTP responses
+
+[\] http.host == "example.com"
+[/] Filter HTTP traffic by host
+
+[\] http.request.method == "POST"
+[/] Show only HTTP POST requests
+
+[\] tcp.port == 80
+[/] Filter packets where TCP port is 80
+
+[\] udp.port == 53
+[/] Filter packets where UDP port is 53 (DNS)
+
+[\] tcp.flags.syn == 1
+[/] Show SYN packets (start of TCP handshake)
+
+[\] tcp.flags.ack == 1
+[/] Show ACK packets
+
+[\] tcp.flags.fin == 1
+[/] Show FIN packets (connection close)
+
+[\] tcp.flags.reset == 1
+[/] Show RST packets (connection reset)
+
+[\] tcp.analysis.retransmission
+[/] Show TCP retransmissions
+
+[\] tcp.analysis.flags
+[/] Show TCP anomalies
+
+[\] ip.addr == 192.168.1.10
+[/] Show packets to/from a specific IP
+
+[\] ip.src == 192.168.1.10
+[/] Show packets from a specific source IP
+
+[\] ip.dst == 192.168.1.10
+[/] Show packets to a specific destination IP
+
+[\] ip.addr == 192.168.1.10 && tcp.port == 443
+[/] Filter HTTPS traffic for a specific host
+
+[\] ssl
+[/] Show SSL/TLS traffic (older versions)
+
+[\] tls
+[/] Show TLS traffic
+
+[\] tls.handshake
+[/] Show TLS handshake packets
+
+[\] tls.handshake.type == 1
+[/] Show ClientHello packets
+
+[\] tls.handshake.type == 2
+[/] Show ServerHello packets
+
+[\] dhcp
+[/] Show DHCP traffic
+
+[\] bootp
+[/] DHCP/BOOTP traffic (legacy filter)
+
+[\] smb
+[/] Show SMB traffic (Windows file sharing)
+
+[\] ftp
+[/] Show FTP traffic
+
+[\] ssh
+[/] Show SSH traffic
+
+[\] frame contains "password"
+[/] Search packets containing a keyword
+
+[\] tcp contains "GET"
+[/] Search TCP payload for a string
+
+[\] tcp.len > 0
+[/] Show packets with TCP payload
+
+[\] wlan
+[/] Show Wi-Fi traffic
+
+[\] wlan.fc.type_subtype == 0x08
+[/] Show Wi-Fi beacon frames
+
+[\] wlan.addr == aa:bb:cc:dd:ee:ff
+[/] Filter by MAC address
+
+[\] eth.addr == aa:bb:cc:dd:ee:ff
+[/] Filter Ethernet frames by MAC
+
+[\] not arp
+[/] Exclude ARP packets
+
+[\] !(tcp || udp)
+[/] Show non‑TCP/UDP traffic
+
+[\] tcp.stream eq 5
+[/] Follow a specific TCP stream
+
+[\] frame.number == 100
+[/] Jump to a specific packet number
+
+[\] frame.time >= "2025-01-01 12:00:00"
+[/] Filter packets by timestamp
+
+[\] tcp.window_size < 1000
+[/] Show packets with small TCP window (possible congestion)
+
+[\] tcp.analysis.zero_window
+[/] Show zero‑window events
+
+[\] tcp.analysis.duplicate_ack
+[/] Show duplicate ACKs
+
+[\] tcp.analysis.out_of_order
+[/] Show out‑of‑order packets

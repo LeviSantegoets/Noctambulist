@@ -1,0 +1,101 @@
+[X] RX Tools Command List
+
+[\] rx_sdr
+[/] Launch RX Tools SDR receiver
+
+[\] rx_sdr -h
+[/] Show help and available options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] rx_sdr -d 0
+[/] Use first SDR device
+
+[\] rx_sdr -d 1
+[/] Use second SDR device
+
+[\] rx_sdr --device-type rtl
+[/] Select RTL-SDR device
+
+[\] rx_sdr --device-type hackrf
+[/] Select HackRF device
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] rx_sdr -f 100e6
+[/] Set center frequency to 100 MHz
+
+[\] rx_sdr -s 2e6
+[/] Set sample rate to 2 MSPS
+
+[\] rx_sdr --ppm 20
+[/] Apply PPM frequency correction
+
+# -------------------------
+# GAIN CONTROL
+# -------------------------
+
+[\] rx_sdr -g 20
+[/] Set receiver gain to 20 dB
+
+[\] rx_sdr --agc
+[/] Enable automatic gain control
+
+# -------------------------
+# CAPTURE OPTIONS
+# -------------------------
+
+[\] rx_sdr -n 1000000
+[/] Capture 1 million samples
+
+[\] rx_sdr -o capture.iq
+[/] Save captured samples to file
+
+[\] rx_sdr -v
+[/] Enable verbose output
+
+# -------------------------
+# DEMODULATION
+# -------------------------
+
+[\] rx_sdr --fm
+[/] FM demodulation
+
+[\] rx_sdr --am
+[/] AM demodulation
+
+[\] rx_sdr --lsb
+[/] LSB demodulation
+
+[\] rx_sdr --usb
+[/] USB demodulation
+
+# -------------------------
+# STREAMING / NETWORK
+# -------------------------
+
+[\] rx_sdr --tcp 1234
+[/] Stream samples over TCP port 1234
+
+[\] rx_sdr --udp 1234
+[/] Stream samples over UDP port 1234
+
+[\] rx_sdr --client 192.168.1.100:1234
+[/] Connect to remote SDR server
+
+# -------------------------
+# FILTERING / PROCESSING
+# -------------------------
+
+[\] rx_sdr --lowpass 0.1
+[/] Apply low-pass filter
+
+[\] rx_sdr --highpass 0.1
+[/] Apply high-pass filter
+
+[\] rx_sdr --bandpass 0.1 0.2
+[/] Apply band-pass filtera
