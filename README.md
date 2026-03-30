@@ -14,7 +14,7 @@ From pentesting to DevOps, networking, system monitoring, reverse engineering, a
 
 Commands are presented in a clean format:
 
-[\] command
+[^\] command
 [/] description
 [X] tool/category
 Click → command is automatically copied
