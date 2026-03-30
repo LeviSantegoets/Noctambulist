@@ -1,0 +1,91 @@
+[X] awk Command List
+
+[\] awk '{print $1}' file.txt
+[/] Print first column of each line
+
+[\] awk '{print $1, $3}' file.txt
+[/] Print multiple columns
+
+[\] awk -F: '{print $1}' /etc/passwd
+[/] Use custom delimiter (:)
+
+[\] awk '{print NF}' file.txt
+[/] Print number of fields per line
+
+[\] awk '{print NR}' file.txt
+[/] Print line numbers
+
+[\] awk '{print $NF}' file.txt
+[/] Print last field of each line
+
+[\] awk 'NR==1' file.txt
+[/] Print first line
+
+[\] awk 'NR>1' file.txt
+[/] Skip first line
+
+[\] awk '/pattern/' file.txt
+[/] Print lines matching pattern
+
+[\] awk '!/pattern/' file.txt
+[/] Print lines NOT matching pattern
+
+[\] awk '{sum += $1} END {print sum}' file.txt
+[/] Sum values in first column
+
+[\] awk '{print length($0)}' file.txt
+[/] Print line length
+
+[\] awk '{if ($1 > 10) print $0}' file.txt
+[/] Conditional filtering
+
+[\] awk '{print toupper($0)}' file.txt
+[/] Convert to uppercase
+
+[\] awk '{print tolower($0)}' file.txt
+[/] Convert to lowercase
+
+[\] awk '{print substr($0,1,5)}' file.txt
+[/] Extract substring
+
+[\] awk '{gsub(/foo/,"bar"); print}' file.txt
+[/] Replace text globally
+
+[\] awk 'BEGIN {print "Start"} {print} END {print "End"}' file.txt
+[/] Use BEGIN and END blocks
+
+[\] awk -v var=10 '{print $1+var}' file.txt
+[/] Pass variable to awk
+
+[\] awk '{print $1,$2}' OFS=',' file.txt
+[/] Set output field separator
+
+[\] awk -F, '{print $1}' file.csv
+[/] Parse CSV file
+
+[\] awk '{print > "out.txt"}' file.txt
+[/] Write output to file
+
+[\] awk '{system("echo " $1)}' file.txt
+[/] Execute shell command
+
+[\] awk 'length($0) > 20' file.txt
+[/] Filter lines by length
+
+[\] awk '{a[$1]++} END {for (i in a) print i, a[i]}' file.txt
+[/] Count occurrences of values
+
+[\] awk 'BEGIN {FS=","; OFS=":"} {print $1,$2}' file.csv
+[/] Set input/output delimiters
+
+[\] awk '{print NR ":" $0}' file.txt
+[/] Prefix lines with line numbers
+
+[\] awk -f script.awk file.txt
+[/] Run awk script file
+
+[\] awk --help
+[/] Show help menu
+
+[\] awk --version
+[/] Show version

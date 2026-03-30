@@ -1,0 +1,100 @@
+[X] ACARSDec Command List
+
+[\] acarsdec
+[/] Start ACARSDec aircraft ACARS decoder
+
+[\] acarsdec --help
+[/] Show help and available command options
+
+# -------------------------
+# DEVICE SELECTION
+# -------------------------
+
+[\] acarsdec --device rtl
+[/] Use RTL-SDR for ACARS reception
+
+[\] acarsdec --device hackrf
+[/] Use HackRF SDR
+
+[\] acarsdec --device usrp
+[/] Use USRP SDR device
+
+[\] acarsdec --device soapy
+[/] Use SoapySDR-compatible SDR
+
+# -------------------------
+# FREQUENCY / SAMPLE RATE
+# -------------------------
+
+[\] acarsdec -f 131.550e6
+[/] Tune to 131.550 MHz VHF ACARS channel
+
+[\] acarsdec -f 131.725e6
+[/] Tune to 131.725 MHz ACARS channel
+
+[\] acarsdec -s 24k
+[/] Set audio sample rate to 24 kHz
+
+[\] acarsdec -g 40
+[/] Set SDR gain to 40 dB
+
+# -------------------------
+# INPUT / OUTPUT
+# -------------------------
+
+[\] acarsdec --file capture.wav
+[/] Decode ACARS from recorded audio file
+
+[\] acarsdec --stdin
+[/] Read audio stream from standard input
+
+[\] acarsdec --stdout
+[/] Output decoded messages to standard output
+
+[\] acarsdec --logfile acars.log
+[/] Save decoded messages to log file
+
+[\] acarsdec --json
+[/] Output decoded ACARS messages in JSON format
+
+# -------------------------
+# SIGNAL PROCESSING / DEMODULATION
+# -------------------------
+
+[\] acarsdec --nfm
+[/] Narrowband FM demodulation for ACARS
+
+[\] acarsdec --filter
+[/] Apply bandpass filtering
+
+[\] acarsdec --agc
+[/] Enable automatic gain control
+
+[\] acarsdec --invert
+[/] Invert audio polarity if needed
+
+# -------------------------
+# DISPLAY / MONITORING
+# -------------------------
+
+[\] acarsdec --verbose
+[/] Enable verbose decoding output
+
+[\] acarsdec --stats
+[/] Show decoding statistics
+
+[\] acarsdec --spectrum
+[/] Show signal spectrum
+
+[\] acarsdec --waterfall
+[/] Display waterfall of received signal
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rtl_fm -f 131.550e6 -M nfm -s 24k - | acarsdec --stdin
+[/] Decode live ACARS from RTL-SDR
+
+[\] rtl_sdr -f 131.550e6 -s 240k - | csdr convert_u8_f | acarsdec --stdin
+[/] Process SDR IQ stream through CSDR before decoding

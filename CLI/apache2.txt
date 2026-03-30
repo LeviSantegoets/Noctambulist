@@ -1,0 +1,159 @@
+# Apache2 Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Apache2 Command List
+
+# -------------------------
+# INSTALLATION & SERVICE CONTROL
+# -------------------------
+
+[\] sudo apt install apache2
+[/] Install Apache2
+
+[\] sudo systemctl start apache2
+[/] Start Apache service
+
+[\] sudo systemctl stop apache2
+[/] Stop Apache service
+
+[\] sudo systemctl restart apache2
+[/] Restart Apache service
+
+[\] sudo systemctl reload apache2
+[/] Reload config without dropping connections
+
+[\] sudo systemctl status apache2
+[/] Show Apache service status
+
+[\] sudo systemctl enable apache2
+[/] Enable Apache at boot
+
+[\] sudo systemctl disable apache2
+[/] Disable Apache at boot
+
+# -------------------------
+# CONFIGURATION TESTING
+# -------------------------
+
+[\] sudo apache2ctl configtest
+[/] Test Apache configuration syntax
+
+[\] sudo apache2ctl -S
+[/] Show virtual hosts and config layout
+
+# -------------------------
+# MODULE MANAGEMENT
+# -------------------------
+
+[\] sudo a2enmod <module>
+[/] Enable an Apache module
+
+[\] sudo a2dismod <module>
+[/] Disable an Apache module
+
+[\] apache2ctl -M
+[/] List loaded modules
+
+# -------------------------
+# SITE MANAGEMENT (VHOSTS)
+# -------------------------
+
+[\] sudo a2ensite <site>
+[/] Enable a virtual host
+
+[\] sudo a2dissite <site>
+[/] Disable a virtual host
+
+[\] ls /etc/apache2/sites-available/
+[/] List available sites
+
+[\] ls /etc/apache2/sites-enabled/
+[/] List enabled sites
+
+# -------------------------
+# MAIN CONFIG FILES
+# -------------------------
+
+[\] /etc/apache2/apache2.conf
+[/] Main Apache configuration file
+
+[\] /etc/apache2/ports.conf
+[/] Port configuration file
+
+[\] /etc/apache2/sites-available/*.conf
+[/] Virtual host definitions
+
+[\] /etc/apache2/mods-enabled/
+[/] Enabled modules
+
+# -------------------------
+# LOGS
+# -------------------------
+
+[\] tail -f /var/log/apache2/access.log
+[/] Live access log
+
+[\] tail -f /var/log/apache2/error.log
+[/] Live error log
+
+[\] cat /var/log/apache2/error.log
+[/] View error log
+
+# -------------------------
+# FIREWALL (UFW)
+# -------------------------
+
+[\] sudo ufw allow 'Apache'
+[/] Allow Apache default ports
+
+[\] sudo ufw allow 'Apache Full'
+[/] Allow HTTP + HTTPS
+
+[\] sudo ufw status
+[/] Check firewall rules
+
+# -------------------------
+# SSL / HTTPS
+# -------------------------
+
+[\] sudo a2enmod ssl
+[/] Enable SSL module
+
+[\] sudo a2ensite default-ssl
+[/] Enable default SSL site
+
+[\] sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache.key -out /etc/ssl/certs/apache.crt
+[/] Generate self-signed SSL certificate
+
+# -------------------------
+# PERFORMANCE & SECURITY
+# -------------------------
+
+[\] sudo a2enmod rewrite
+[/] Enable URL rewriting
+
+[\] sudo a2enmod headers
+[/] Enable security headers
+
+[\] sudo a2enmod deflate
+[/] Enable compression
+
+[\] sudo a2enmod security2
+[/] Enable ModSecurity (if installed)
+
+# -------------------------
+# DOCUMENT ROOT
+# -------------------------
+
+[\] /var/www/html/
+[/] Default web root directory
+
+[\] sudo chown -R $USER:$USER /var/www/html
+[/] Change ownership of web root
+
+# -------------------------
+# RELOAD AFTER CHANGES
+# -------------------------
+
+[\] sudo systemctl reload apache2
+[/] Apply config changes safely

@@ -1,0 +1,58 @@
+[X] Asciiquarium Command List
+
+[\] asciiquarium
+[/] Launch Asciiquarium in terminal
+
+[\] asciiquarium -h
+[/] Show help menu
+
+[\] asciiquarium --help
+[/] Show help menu (alternative)
+
+[\] asciiquarium -v
+[/] Show version
+
+[\] asciiquarium -f /path/to/fishfile
+[/] Use custom fish configuration file
+
+[\] asciiquarium -s 2
+[/] Set simulation speed (higher = faster)
+
+[\] asciiquarium -b
+[/] Enable bold characters
+
+[\] asciiquarium -c
+[/] Enable color output (default)
+
+[\] asciiquarium -C
+[/] Disable color output
+
+[\] asciiquarium -r
+[/] Reset to default settings
+
+[\] asciiquarium -d
+[/] Show debug information
+
+[\] asciiquarium -w 80
+[/] Set terminal width
+
+[\] asciiquarium -l
+[/] List all available fish/creatures
+
+[\] asciiquarium -S
+[/] Show status info (like fish count)
+
+[\] asciiquarium --no-banner
+[/] Hide the banner
+
+[\] asciiquarium --help-all
+[/] Show all command line options
+
+[\] crontab -e
+[/] Schedule automatic launch (fun screensaver)
+
+[\] clear
+[/] Clear terminal before launch for cleaner view
+
+[\] tput reset
+[/] Reset terminal for full-screen display

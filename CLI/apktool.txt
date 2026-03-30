@@ -1,0 +1,37 @@
+[X] APKTool Command List (Android APK Reverse Engineering)
+
+[\] apktool d app.apk
+[/] Decompile APK into smali code and resources
+
+[\] apktool d app.apk -o output_dir
+[/] Decompile APK to specific output directory
+
+[\] apktool b output_dir
+[/] Rebuild APK from decompiled directory
+
+[\] apktool b output_dir -o new.apk
+[/] Build APK and specify output file
+
+[\] apktool if framework-res.apk
+[/] Install framework files (required for some APKs)
+
+[\] apktool d app.apk -r
+[/] Do not decode resources (faster decompile)
+
+[\] apktool d app.apk -s
+[/] Do not decode source code (only resources)
+
+[\] apktool d app.apk --no-debug-info
+[/] Remove debug info from smali
+
+[\] apktool b output_dir --use-aapt2
+[/] Use AAPT2 for building APK
+
+[\] apktool empty-framework-dir
+[/] Clear installed framework files
+
+[\] apktool --help
+[/] Show help menu
+
+[\] apktool --version
+[/] Show apktool version

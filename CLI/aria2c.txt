@@ -1,0 +1,106 @@
+[X] Aria2 Command List
+
+[\] aria2c https://example.com/file
+[/] Download file from URL
+
+[\] aria2c -o output.file https://example.com/file
+[/] Save file with custom name
+
+[\] aria2c -d /path/to/folder https://example.com/file
+[/] Set download directory
+
+[\] aria2c -c https://example.com/file
+[/] Resume interrupted download
+
+[\] aria2c -x 16 https://example.com/file
+[/] Use 16 connections per server
+
+[\] aria2c -s 16 https://example.com/file
+[/] Split file into 16 segments
+
+[\] aria2c -j 5 https://example.com/file
+[/] Download 5 files in parallel
+
+[\] aria2c -i urls.txt
+[/] Download multiple URLs from file
+
+[\] aria2c --limit-rate=500K https://example.com/file
+[/] Limit download speed
+
+[\] aria2c --max-download-limit=1M https://example.com/file
+[/] Set max download speed
+
+[\] aria2c --timeout=30 https://example.com/file
+[/] Set timeout
+
+[\] aria2c --max-tries=5 https://example.com/file
+[/] Retry download 5 times
+
+[\] aria2c --http-user=username --http-passwd=password https://example.com/file
+[/] HTTP authentication
+
+[\] aria2c --ftp-user=username --ftp-passwd=password ftp://example.com/file
+[/] FTP authentication
+
+[\] aria2c --check-certificate=false https://example.com/file
+[/] Ignore SSL certificate errors
+
+[\] aria2c --user-agent="Mozilla/5.0" https://example.com/file
+[/] Set custom user agent
+
+[\] aria2c --file-allocation=none https://example.com/file
+[/] Disable file pre-allocation
+
+[\] aria2c --continue=true https://example.com/file
+[/] Continue download if possible
+
+[\] aria2c --summary-interval=0 https://example.com/file
+[/] Disable summary output
+
+[\] aria2c --console-log-level=warn https://example.com/file
+[/] Reduce log verbosity
+
+[\] aria2c --log=aria2.log https://example.com/file
+[/] Save logs to file
+
+[\] aria2c --enable-rpc
+[/] Enable RPC interface
+
+[\] aria2c --rpc-listen-port=6800
+[/] Set RPC port
+
+[\] aria2c --rpc-secret=token
+[/] Set RPC authentication token
+
+[\] aria2c --seed-time=0 torrent.torrent
+[/] Stop seeding immediately after download
+
+[\] aria2c torrent.torrent
+[/] Download using torrent file
+
+[\] aria2c magnet:?xt=urn:btih:HASH
+[/] Download using magnet link
+
+[\] aria2c --bt-max-peers=50 torrent.torrent
+[/] Limit torrent peers
+
+[\] aria2c --seed-ratio=1.0 torrent.torrent
+[/] Stop seeding after ratio reached
+
+[\] aria2c --dir=/downloads --input-file=urls.txt
+[/] Set directory and input file together
+
+[\] aria2c --pause
+[/] Start downloads in paused state
+
+[\] aria2c --pause-metadata
+[/] Pause after fetching metadata (torrent)
+
+[\] aria2c --dry-run https://example.com/file
+[/] Validate download without saving
+
+[\] aria2c --help
+[/] Show help menu
+
+[\] aria2c --version
+[/] Show aria2 version

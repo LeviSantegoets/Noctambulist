@@ -1,0 +1,61 @@
+[X] arpwatch Command List
+
+[\] arpwatch -i eth0
+[/] Monitor ARP activity on specific interface
+
+[\] arpwatch -d
+[/] Run in debug mode (foreground)
+
+[\] arpwatch -f /etc/arpwatch.hosts
+[/] Use specific hosts file
+
+[\] arpwatch -l /var/log/arpwatch.log
+[/] Log activity to specific file
+
+[\] arpwatch -a
+[/] Monitor all interfaces
+
+[\] arpwatch -N
+[/] Disable name resolution (IP only)
+
+[\] arpwatch -p
+[/] Enable promiscuous mode
+
+[\] arpwatch -t
+[/] Include timestamps in log
+
+[\] arpwatch -m 10
+[/] Merge multiple messages (threshold count)
+
+[\] arpwatch -e
+[/] Send email alerts for ARP changes
+
+[\] arpwatch -w user@example.com
+[/] Set recipient email for alerts
+
+[\] arpwatch -s /etc/arpwatch.hosts
+[/] Specify hosts database file
+
+[\] arpwatch -v
+[/] Show version
+
+[\] arpwatch -h
+[/] Show help menu
+
+[\] systemctl start arpwatch
+[/] Start arpwatch service
+
+[\] systemctl stop arpwatch
+[/] Stop arpwatch service
+
+[\] systemctl restart arpwatch
+[/] Restart arpwatch service
+
+[\] systemctl status arpwatch
+[/] Show arpwatch service status
+
+[\] journalctl -u arpwatch
+[/] View arpwatch logs
+
+[\] arpwatch -I eth0 -d
+[/] Run debug mode on specific interface

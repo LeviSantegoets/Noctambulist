@@ -1,0 +1,151 @@
+# Arch Linux Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Arch Linux Command List
+
+[\] pacman -Syu
+[/] Update system packages (sync, refresh, upgrade)
+
+[\] pacman -S package
+[/] Install a package
+
+[\] pacman -R package
+[/] Remove a package
+
+[\] pacman -Rs package
+[/] Remove package and unused dependencies
+
+[\] pacman -Rns package
+[/] Remove package, dependencies, and config files
+
+[\] pacman -Ss keyword
+[/] Search for a package in repositories
+
+[\] pacman -Qs keyword
+[/] Search installed packages
+
+[\] pacman -Qi package
+[/] Show package information
+
+[\] pacman -Ql package
+[/] List files installed by a package
+
+[\] pacman -U file.pkg.tar.zst
+[/] Install a local package file
+
+[\] pacman -Sc
+[/] Clean old package cache
+
+[\] pacman -Scc
+[/] Clean entire package cache
+
+[\] yay -S package
+[/] Install package from AUR (yay)
+
+[\] yay -R package
+[/] Remove AUR package
+
+[\] yay -Ss keyword
+[/] Search AUR packages
+
+[\] yay -Syu
+[/] Update system + AUR packages
+
+[\] makepkg -si
+[/] Build and install package from PKGBUILD
+
+[\] systemctl status service
+[/] Show service status
+
+[\] systemctl start service
+[/] Start a service
+
+[\] systemctl stop service
+[/] Stop a service
+
+[\] systemctl restart service
+[/] Restart a service
+
+[\] systemctl enable service
+[/] Enable service at boot
+
+[\] systemctl disable service
+[/] Disable service at boot
+
+[\] systemctl list-units --type=service
+[/] List active services
+
+[\] ip a
+[/] Show network interfaces and IP addresses
+
+[\] ip r
+[/] Show routing table
+
+[\] ping archlinux.org
+[/] Test network connectivity
+
+[\] systemctl restart NetworkManager
+[/] Restart NetworkManager
+
+[\] nmcli device status
+[/] Show network device status
+
+[\] nmcli connection show
+[/] List saved network connections
+
+[\] useradd -m username
+[/] Create a new user with home directory
+
+[\] passwd username
+[/] Set user password
+
+[\] userdel -r username
+[/] Delete user and home directory
+
+[\] usermod -aG wheel username
+[/] Add user to sudo group
+
+[\] visudo
+[/] Edit sudoers file safely
+
+[\] timedatectl
+[/] Show system time settings
+
+[\] timedatectl set-timezone Europe/Amsterdam
+[/] Set system timezone
+
+[\] locale-gen
+[/] Generate system locales
+
+[\] hwclock --systohc
+[/] Sync hardware clock to system time
+
+[\] mount /dev/sdX /mnt
+[/] Mount a device
+
+[\] umount /mnt
+[/] Unmount a device
+
+[\] lsblk
+[/] List block devices
+
+[\] mkfs.ext4 /dev/sdX
+[/] Format disk as ext4
+
+[\] pacman -Qdt
+[/] List orphaned packages
+
+[\] pacman -Rns $(pacman -Qdtq)
+[/] Remove all orphaned packages
+
+[\] journalctl -xe
+[/] View system logs
+
+[\] journalctl -u service
+[/] View logs for a specific service
+
+[\] reboot
+[/] Restart the system
+
+[\] shutdown now
+[/] Shut down the system immediately

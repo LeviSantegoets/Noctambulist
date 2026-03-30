@@ -1,0 +1,25 @@
+[X] ACLPwn Command List
+
+[\] aclpwn -u user -p Password123 -d example.local -t target.domain.com
+[/] Enumerate ACLs using credentials
+
+[\] aclpwn -U users.txt -d example.local -t target.domain.com
+[/] Enumerate ACLs for multiple users from a file
+
+[\] aclpwn -u user -p Password123 -d example.local -t target.domain.com --list-all
+[/] List all permissions and ACEs
+
+[\] aclpwn -u user -p Password123 -d example.local -t target.domain.com --find-write
+[/] Identify accounts with write permissions
+
+[\] aclpwn -u user -p Password123 -d example.local -t target.domain.com --find-admin
+[/] Identify accounts with administrative privileges
+
+[\] aclpwn -u user -p Password123 -d example.local -t target.domain.com --export results.json
+[/] Export findings to JSON
+
+[\] aclpwn --help
+[/] Show help menu
+
+[\] aclpwn --version
+[/] Show version

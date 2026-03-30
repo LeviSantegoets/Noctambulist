@@ -1,0 +1,97 @@
+[X] Attic Backup Command List
+
+[\] attic init /backup
+[/] Initialize new repository
+
+[\] attic init user@host:/backup
+[/] Initialize remote repository (SSH)
+
+[\] attic create /backup::snapshot /home/user
+[/] Create backup archive
+
+[\] attic create /backup::daily-$(date +%F) /home/user
+[/] Create dated snapshot
+
+[\] attic create /backup::snapshot /home --exclude "*.log"
+[/] Exclude files from backup
+
+[\] attic list /backup
+[/] List all archives
+
+[\] attic list /backup::snapshot
+[/] List contents of archive
+
+[\] attic extract /backup::snapshot
+[/] Extract full archive
+
+[\] attic extract /backup::snapshot home/user/file.txt
+[/] Extract specific file
+
+[\] attic mount /backup /mnt/attic
+[/] Mount repository as filesystem
+
+[\] attic info /backup
+[/] Show repository info
+
+[\] attic info /backup::snapshot
+[/] Show archive details
+
+[\] attic verify /backup
+[/] Verify repository integrity
+
+[\] attic prune /backup --keep-last 7
+[/] Keep last 7 backups
+
+[\] attic prune /backup --keep-daily 7 --keep-weekly 4 --keep-monthly 6
+[/] Apply retention policy
+
+[\] attic delete /backup::snapshot
+[/] Delete specific archive
+
+[\] attic delete /backup
+[/] Delete entire repository (dangerous)
+
+[\] attic check /backup
+[/] Check repository consistency
+
+[\] attic change-passphrase /backup
+[/] Change repository passphrase
+
+[\] attic migrate-to-borg /backup
+[/] Migrate repository to Borg
+
+[\] attic key export /backup > keyfile
+[/] Export encryption key
+
+[\] attic key import /backup < keyfile
+[/] Import encryption key
+
+[\] attic help
+[/] Show help menu
+
+[\] attic help create
+[/] Show help for specific command
+
+[\] attic --version
+[/] Show version
+
+[\] export ATTIC_REPO=/backup
+[/] Set repository environment variable
+
+[\] export ATTIC_PASSPHRASE=secret
+[/] Set repository passphrase
+
+[\] attic create ::snapshot /home/user
+[/] Use repo from environment variable
+
+[\] attic list
+[/] List archives using env variable
+
+[\] attic info
+[/] Show info using env variable
+
+[\] ssh-keygen -t rsa
+[/] Generate SSH key for remote backups
+
+[\] ssh-copy-id user@host
+[/] Setup SSH access

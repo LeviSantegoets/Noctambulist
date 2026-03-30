@@ -1,0 +1,49 @@
+[X] AutoRDPwn Command List
+
+[\] AutoRDPwn.exe
+[/] Launch AutoRDPwn menu
+
+[\] AutoRDPwn.exe /help
+[/] Show help menu
+
+[\] AutoRDPwn.exe /scan
+[/] Scan network for vulnerable RDP hosts
+
+[\] AutoRDPwn.exe /target 192.168.1.10
+[/] Target a specific host
+
+[\] AutoRDPwn.exe /target targets.txt
+[/] Target multiple hosts from file
+
+[\] AutoRDPwn.exe /check
+[/] Check if target is vulnerable to RDP exploits
+
+[\] AutoRDPwn.exe /exploit
+[/] Attempt RDP exploit on detected vulnerable hosts (authorized testing only)
+
+[\] AutoRDPwn.exe /user admin /pass password123
+[/] Provide credentials for exploitation (authorized testing only)
+
+[\] AutoRDPwn.exe /hash <NTLMHASH>
+[/] Use NTLM hash for authentication (authorized testing only)
+
+[\] AutoRDPwn.exe /bruteforce
+[/] Attempt RDP brute‑force (authorized testing only)
+
+[\] AutoRDPwn.exe /dictionary users.txt passwords.txt
+[/] Use custom username/password lists
+
+[\] AutoRDPwn.exe /timeout 5
+[/] Set connection timeout
+
+[\] AutoRDPwn.exe /threads 20
+[/] Use 20 threads
+
+[\] AutoRDPwn.exe /log output.txt
+[/] Save results to file
+
+[\] AutoRDPwn.exe /update
+[/] Update AutoRDPwn
+
+[\] AutoRDPwn.exe /clean
+[/] Remove temporary files and reset environment

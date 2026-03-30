@@ -1,0 +1,43 @@
+[X] adidnsdump Command List
+
+[\] adidnsdump -u user -p password example.com
+[/] Dump AD-integrated DNS records using credentials
+
+[\] adidnsdump -u user@example.com -p password -d example.com
+[/] Specify domain explicitly
+
+[\] adidnsdump -u user -p password -r 192.168.1.10 example.com
+[/] Specify DNS server / domain controller
+
+[\] adidnsdump -u user -p password --print-zones example.com
+[/] List available DNS zones
+
+[\] adidnsdump -u user -p password --resolve example.com
+[/] Resolve records to IP addresses
+
+[\] adidnsdump -u user -p password --dns-tcp example.com
+[/] Use TCP instead of UDP for DNS queries
+
+[\] adidnsdump -u user -p password --include-tombstoned example.com
+[/] Include deleted (tombstoned) DNS records
+
+[\] adidnsdump -u user -p password --legacy example.com
+[/] Use legacy LDAP queries
+
+[\] adidnsdump -u user -p password --no-ldap example.com
+[/] Skip LDAP, use DNS only
+
+[\] adidnsdump -u user -hashes LMHASH:NTHASH example.com
+[/] Authenticate using NTLM hashes
+
+[\] adidnsdump -u user -p password -o records.csv example.com
+[/] Save output to CSV file
+
+[\] adidnsdump -u user -p password -o records.json example.com
+[/] Save output to JSON file
+
+[\] adidnsdump --help
+[/] Show help menu
+
+[\] adidnsdump --version
+[/] Show version

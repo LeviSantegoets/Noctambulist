@@ -1,0 +1,118 @@
+[X] Airprobe Command List
+
+[\] git clone https://github.com/airprobe/airprobe.git
+[/] Clone Airprobe source repository
+
+[\] cd airprobe
+[/] Enter Airprobe directory
+
+[\] mkdir build
+[/] Create build directory
+
+[\] cd build
+[/] Enter build directory
+
+[\] cmake ..
+[/] Configure build system
+
+[\] make
+[/] Compile Airprobe tools
+
+[\] sudo make install
+[/] Install Airprobe binaries
+
+# -------------------------
+# GSM CAPTURE
+# -------------------------
+
+[\] gsm_receive_rtl
+[/] Capture GSM bursts using RTL-SDR
+
+[\] gsm_receive_rtl -f <frequency>
+[/] Capture GSM channel at specified frequency
+
+[\] gsm_receive_rtl -s 2000000
+[/] Set sampling rate
+
+[\] gsm_receive_rtl -g 40
+[/] Set RTL-SDR gain
+
+[\] gsm_receive_rtl -o capture.cfile
+[/] Save captured raw samples to file
+
+# -------------------------
+# GSM DECODING
+# -------------------------
+
+[\] gsm_decode
+[/] Decode captured GSM bursts
+
+[\] gsm_decode capture.cfile
+[/] Decode bursts from recorded capture
+
+[\] gsm_decode -c
+[/] Decode control channel bursts
+
+[\] gsm_decode -v
+[/] Enable verbose decoding output
+
+# -------------------------
+# BURST FILE HANDLING
+# -------------------------
+
+[\] gsm_burst
+[/] Convert captured samples to GSM burst format
+
+[\] gsm_burst capture.cfile
+[/] Process raw capture file into burst file
+
+[\] gsm_burst -o bursts.txt
+[/] Save burst data to file
+
+# -------------------------
+# CHANNEL DECODING
+# -------------------------
+
+[\] gsm_control
+[/] Decode GSM control channel messages
+
+[\] gsm_control bursts.txt
+[/] Parse control channel bursts
+
+[\] gsm_ccch
+[/] Decode Common Control Channel
+
+[\] gsm_sdcch
+[/] Decode Standalone Dedicated Control Channel
+
+[\] gsm_tch
+[/] Decode Traffic Channel bursts
+
+# -------------------------
+# GSM ANALYSIS
+# -------------------------
+
+[\] gsm_extract_imsi
+[/] Extract IMSI identifiers from GSM traffic
+
+[\] gsm_extract_tmsi
+[/] Extract TMSI identifiers
+
+[\] gsm_extract_sms
+[/] Extract SMS messages from decoded GSM bursts
+
+# -------------------------
+# DEBUG / UTILITIES
+# -------------------------
+
+[\] gsm_print
+[/] Print decoded GSM frames
+
+[\] gsm_verify
+[/] Verify GSM burst integrity
+
+[\] gsm_stats
+[/] Show decoding statistics
+
+[\] gsm_channelize
+[/] Split wideband capture into GSM channels

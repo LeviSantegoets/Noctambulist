@@ -1,0 +1,152 @@
+[X] Amass Command List
+
+[\] amass
+[/] Show Amass help menu
+
+[\] amass -version
+[/] Show Amass version
+
+[\] amass enum
+[/] Run enumeration mode
+
+[\] amass intel
+[/] Run intel‑gathering mode
+
+[\] amass viz
+[/] Generate visualizations (graphs)
+
+[\] amass db
+[/] Interact with Amass local database
+
+[\] amass track
+[/] Track changes between enumerations
+
+[\] amass enum -d example.com
+[/] Basic subdomain enumeration
+
+[\] amass enum -d example.com  -o results.txt
+[/] Save results to file
+
+[\] amass enum -d example.com  -oA output
+[/] Save results in all formats (TXT, JSON, GraphDB)
+
+[\] amass enum -d example.com  -src
+[/] Show data sources for each discovery
+
+[\] amass enum -d example.com  -ip
+[/] Include IP addresses in output
+
+[\] amass enum -d example.com  -brute
+[/] Enable brute‑force subdomain enumeration
+
+[\] amass enum -d example.com  -brute -w wordlist.txt
+[/] Use custom brute‑force wordlist
+
+[\] amass enum -d example.com  -active
+[/] Enable active enumeration (DNS probing)
+
+[\] amass enum -d example.com  -passive
+[/] Passive enumeration only
+
+[\] amass enum -d example.com  -asn 12345
+[/] Enumerate domains from ASN
+
+[\] amass enum -d example.com  -cidr 192.168.0.0/24
+[/] Enumerate hosts in CIDR range
+
+[\] amass enum -d example.com  -timeout 10
+[/] Set timeout for DNS queries
+
+[\] amass enum -d example.com  -max-dns-queries 20000
+[/] Limit DNS query count
+
+[\] amass enum -d example.com  -ipv4
+[/] Only return IPv4 results
+
+[\] amass enum -d example.com  -ipv6
+[/] Only return IPv6 results
+
+[\] amass enum -d example.com  -r 8.8.8.8
+[/] Use custom DNS resolver
+
+[\] amass enum -d example.com  -rf resolvers.txt
+[/] Use resolver list file
+
+[\] amass intel -d example.com
+[/] Discover related domains
+
+[\] amass intel -whois -d example.com
+[/] Use WHOIS data for intel
+
+[\] amass intel -org "Example Corp"
+[/] Find domains owned by an organization
+
+[\] amass intel -asn 12345
+[/] Discover domains from ASN
+
+[\] amass intel -ip 1.2.3.4
+[/] Discover domains hosted on an IP
+
+[\] amass intel -cidr 10.0.0.0/8
+[/] Discover domains in a CIDR block
+
+[\] amass db -list
+[/] List all enumeration results in database
+
+[\] amass db -names
+[/] List discovered domain names
+
+[\] amass db -ips
+[/] List discovered IPs
+
+[\] amass db -show example.com
+[/] Show all data for a domain
+
+[\] amass db -d example.com  -names
+[/] Show names for a specific domain
+
+[\] amass db -d example.com  -ips
+[/] Show IPs for a specific domain
+
+[\] amass db -d example.com  -json
+[/] Export domain data in JSON
+
+[\] amass viz -d3 -o graph.json
+[/] Generate D3.js graph
+
+[\] amass viz -dot -o graph.dot
+[/] Generate Graphviz DOT file
+
+[\] amass viz -gexf -o graph.gexf
+[/] Generate GEXF graph (Gephi)
+
+[\] amass viz -maltego
+[/] Generate Maltego transform files
+
+[\] amass track -d example.com
+[/] Track changes since last enumeration
+
+[\] amass track -d example.com  -o changes.txt
+[/] Save change report
+
+[\] amass track -d example.com  -last 5
+[/] Compare last 5 enumerations
+
+[\] amass enum -config config.ini
+[/] Use custom configuration file
+
+[\] amass enum -config ~/.config/amass/config.ini
+[/] Default config path
+
+[\] amass intel -config config.ini
+[/] Use config for intel mode
+
+[\] amass enum -src
+[/] Show which API source found each result
+
+[\] sudo apt install amass
+[/] Install Amass on Debian‑based systems
+
+[\] snap install amass
+[/] Install via Snap
+
