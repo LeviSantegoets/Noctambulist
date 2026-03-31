@@ -60,4 +60,4 @@ Levi Santegoets
 
 Noctambulist is more than a reference tool—it’s a workflow enhancer, designed to save time and make working with CLI tools effortless.
 
-🚀 300+ tools, interactive interface, instant copy, and clear explanations—all in one powerful app.
+🚀 400 tools, interactive interface, instant copy, and clear explanations—all in one powerful app.
