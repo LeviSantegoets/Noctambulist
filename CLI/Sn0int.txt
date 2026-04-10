@@ -1,0 +1,160 @@
+[X] sn0int OSINT Framework Command List (CLI Only)
+
+[\] sn0int
+[/] Start sn0int interactive shell
+
+[\] sn0int --help
+[/] Show help menu and available flags
+
+[\] sn0int --version
+[/] Display sn0int version
+
+# -------------------------
+# PROJECT / DATABASE
+# -------------------------
+
+[\] sn0int init myproject
+[/] Initialize a new sn0int project database
+
+[\] sn0int open myproject
+[/] Open an existing sn0int project
+
+[\] sn0int db
+[/] Open interactive database shell
+
+[\] sn0int export
+[/] Export collected OSINT data
+
+[\] sn0int import
+[/] Import data into project database
+
+# -------------------------
+# MODULE MANAGEMENT
+# -------------------------
+
+[\] sn0int update
+[/] Update module registry
+
+[\] sn0int search email
+[/] Search available modules related to email OSINT
+
+[\] sn0int search domain
+[/] Search modules related to domains
+
+[\] sn0int search username
+[/] Search modules related to usernames
+
+[\] sn0int install <module>
+[/] Install a specific OSINT module
+
+[\] sn0int uninstall <module>
+[/] Remove installed module
+
+[\] sn0int list
+[/] List installed modules
+
+# -------------------------
+# MODULE EXECUTION
+# -------------------------
+
+[\] sn0int run <module>
+[/] Execute a specific OSINT module
+
+[\] sn0int run email/resolve
+[/] Resolve email-related metadata
+
+[\] sn0int run domain/whois
+[/] Perform WHOIS lookup on domain
+
+[\] sn0int run username/search
+[/] Search username across platforms
+
+[\] sn0int run ip/geoip
+[/] Perform IP geolocation lookup
+
+# -------------------------
+# DATA COLLECTION / STORAGE
+# -------------------------
+
+[\] sn0int add email user@example.com
+[/] Add email target to database
+
+[\] sn0int add domain example.com
+[/] Add domain target to database
+
+[\] sn0int add ip 8.8.8.8
+[/] Add IP address to project
+
+[\] sn0int add username johndoe
+[/] Add username to investigation scope
+
+# -------------------------
+# QUERY / ANALYSIS
+# -------------------------
+
+[\] sn0int query email
+[/] Query stored email data
+
+[\] sn0int query domain
+[/] Query domain intelligence
+
+[\] sn0int query ip
+[/] Query IP intelligence data
+
+[\] sn0int query username
+[/] Query username intelligence data
+
+# -------------------------
+# DATABASE OPERATIONS
+# -------------------------
+
+[\] sn0int db show
+[/] Display stored entities
+
+[\] sn0int db search <term>
+[/] Search database entries
+
+[\] sn0int db delete <id>
+[/] Remove database record
+
+[\] sn0int db clear
+[/] Clear project database
+
+# -------------------------
+# EXPORT / REPORTING
+# -------------------------
+
+[\] sn0int export json
+[/] Export results in JSON format
+
+[\] sn0int export csv
+[/] Export results in CSV format
+
+[\] sn0int export html
+[/] Export results as HTML report
+
+# -------------------------
+# AUTOMATION / PIPELINES
+# -------------------------
+
+[\] sn0int init project && sn0int add domain example.com
+[/] Create project and add domain target
+
+[\] sn0int run domain/whois && sn0int export json
+[/] Run WHOIS module and export results
+
+[\] sn0int add username johndoe && sn0int run username/search
+[/] Add username and run OSINT scan
+
+# -------------------------
+# SYSTEM / MAINTENANCE
+# -------------------------
+
+[\] sn0int update && sn0int list
+[/] Update modules and list installed ones
+
+[\] sn0int clean
+[/] Clean temporary/cache data
+
+[\] sn0int reset
+[/] Reset sn0int environment (if supported)
