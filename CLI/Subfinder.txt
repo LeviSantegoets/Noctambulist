@@ -1,0 +1,123 @@
+[X] Subfinder Command List (CLI Only)
+
+[\] subfinder
+[/] Run Subfinder with default settings
+
+[\] subfinder --help
+[/] Show help menu and available flags
+
+[\] subfinder -version
+[/] Display installed Subfinder version
+
+# -------------------------
+# BASIC ENUMERATION
+# -------------------------
+
+[\] subfinder -d example.com
+[/] Enumerate subdomains for a single domain
+
+[\] subfinder -d example.com -silent
+[/] Output only discovered subdomains
+
+[\] subfinder -d example.com -v
+[/] Enable verbose output
+
+[\] subfinder -dL domains.txt
+[/] Scan multiple domains from a file
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] subfinder -d example.com -o output.txt
+[/] Save results to file
+
+[\] subfinder -d example.com -o output.txt -silent
+[/] Save clean output to file
+
+[\] subfinder -d example.com -json
+[/] Output results in JSON format
+
+[\] subfinder -d example.com -csv
+[/] Output results in CSV format
+
+# -------------------------
+# PROBES / FILTERING
+# -------------------------
+
+[\] subfinder -d example.com -nW
+[/] Show only live/valid subdomains (no wildcard filtering noise)
+
+[\] subfinder -d example.com -timeout 10
+[/] Set request timeout to 10 seconds
+
+[\] subfinder -d example.com -t 50
+[/] Set number of concurrent threads
+
+[\] subfinder -d example.com -all
+[/] Use all available data sources
+
+# -------------------------
+# SOURCES CONTROL
+# -------------------------
+
+[\] subfinder -d example.com -active
+[/] Use active enumeration techniques
+
+[\] subfinder -d example.com -sources crtsh,virustotal
+[/] Use specific data sources
+
+[\] subfinder -d example.com -es subdomain.brute
+[/] Enable specific enumeration source set
+
+# -------------------------
+# RESOLVING / VALIDATION
+# -------------------------
+
+[\] subfinder -d example.com -resolve
+[/] Resolve DNS for discovered subdomains
+
+[\] subfinder -d example.com -ip
+[/] Show IP addresses of subdomains
+
+[\] subfinder -d example.com -recursive
+[/] Enable recursive subdomain enumeration
+
+# -------------------------
+# PIPE OUTPUT / INTEGRATION
+# -------------------------
+
+[\] subfinder -d example.com | httpx
+[/] Pipe results into http probing tool
+
+[\] subfinder -d example.com | dnsx
+[/] Resolve DNS records for discovered subdomains
+
+[\] subfinder -dL domains.txt | tee subs.txt
+[/] Save output while displaying results
+
+# -------------------------
+# PERFORMANCE / TUNING
+# -------------------------
+
+[\] subfinder -d example.com -t 100
+[/] Increase thread count for faster scanning
+
+[\] subfinder -d example.com -timeout 5
+[/] Reduce timeout for faster but less reliable results
+
+[\] subfinder -d example.com -max-time 2m
+[/] Limit total scan duration
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] subfinder -d example.com -silent -o subs.txt
+[/] Clean subdomain discovery and save output
+
+[\] subfinder -dL domains.txt | httpx -silent
+[/] Enumerate subdomains and probe for live hosts
+
+[\] subfinder -d example.com -all -recursive | tee allsubs.txt
+[/] Full deep enumeration with saving results
