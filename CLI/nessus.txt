@@ -1,0 +1,70 @@
+[X] Nessus Command List
+
+[\] nessus --help
+[/] Show help menu
+
+[\] nessus --version
+[/] Show Nessus version
+
+[\] nessud -D -d
+[/] Start Nessus daemon
+
+[\] nessusctl status
+[/] Check Nessus service status
+
+[\] nessusctl start
+[/] Start Nessus service
+
+[\] nessusctl stop
+[/] Stop Nessus service
+
+[\] nessusctl restart
+[/] Restart Nessus service
+
+[\] nasl -t target.nessus
+[/] Execute NASL script against target
+
+[\] nessuscli adduser -u username
+[/] Add new Nessus user
+
+[\] nessuscli deluser -u username
+[/] Delete Nessus user
+
+[\] nessuscli chpasswd -u username
+[/] Change user password
+
+[\] nessuscli show policies
+[/] List all scan policies
+
+[\] nessuscli add_policy policy_name
+[/] Create new scan policy
+
+[\] nessuscli delete_policy policy_id
+[/] Delete scan policy
+
+[\] nessus -i 192.168.1.0/24
+[/] Scan subnet for vulnerabilities
+
+[\] nessus -i target.com -p 443
+[/] Scan specific port on target
+
+[\] nessus -i target.com --template basic-network-scan
+[/] Use specific scan template
+
+[\] nessus -i target.com -o results.nessus
+[/] Save scan results to file
+
+[\] nessus -i target.com --max-hosts 50
+[/] Set maximum hosts to scan
+
+[\] nessus -i target.com --max-checks 5
+[/] Set maximum checks per host
+
+[\] nessuscli lsscans
+[/] List all scans
+
+[\] nessuscli exportscans
+[/] Export scan results
+
+[\] nessus --log-dir /var/log/nessus
+[/] Set custom log directory
