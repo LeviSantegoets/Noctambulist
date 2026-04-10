@@ -1,0 +1,123 @@
+[X] MITRE CALDERA Command List
+
+[\] git clone https://github.com/mitre/caldera.git
+[/] Download CALDERA source code from GitHub
+
+[\] cd caldera
+[/] Enter CALDERA project directory
+
+[\] pip install -r requirements.txt
+[/] Install Python dependencies
+
+[\] python3 server.py
+[/] Start CALDERA server
+
+[\] python server.py
+[/] Alternative command to start CALDERA (depending on system)
+
+# -------------------------
+# DOCKER DEPLOYMENT
+# -------------------------
+
+[\] docker build -t caldera .
+[/] Build CALDERA Docker image
+
+[\] docker run -p 8888:8888 caldera
+[/] Run CALDERA container and expose web server
+
+[\] docker ps
+[/] List running CALDERA containers
+
+[\] docker logs <container_id>
+[/] View CALDERA container logs
+
+# -------------------------
+# PROCESS MANAGEMENT
+# -------------------------
+
+[\] ps aux | grep caldera
+[/] Check if CALDERA server is running
+
+[\] kill -9 <pid>
+[/] Stop CALDERA server process
+
+[\] netstat -tulnp | grep 8888
+[/] Check CALDERA listening port
+
+# -------------------------
+# ENVIRONMENT CONFIGURATION
+# -------------------------
+
+[\] export CALDERA_ENV=production
+[/] Set CALDERA runtime environment
+
+[\] export PYTHONUNBUFFERED=1
+[/] Force real-time logging output
+
+[\] export FLASK_ENV=development
+[/] Run CALDERA in development mode (legacy setups)
+
+# -------------------------
+# LOGGING / DEBUGGING
+# -------------------------
+
+[\] tail -f logs/*.log
+[/] View live CALDERA logs
+
+[\] python3 server.py --debug
+[/] Run server in debug mode (if supported)
+
+# -------------------------
+# API / HEALTH CHECK
+# -------------------------
+
+[\] curl http://127.0.0.1:8888
+[/] Check if CALDERA server is reachable
+
+[\] curl http://127.0.0.1:8888/api/v2/health
+[/] Check CALDERA API health status
+
+[\] curl http://127.0.0.1:8888/api/docs
+[/] View API documentation endpoint
+
+# -------------------------
+# UPDATES / MAINTENANCE
+# -------------------------
+
+[\] git pull origin master
+[/] Update CALDERA to latest version
+
+[\] pip install --upgrade -r requirements.txt
+[/] Update dependencies
+
+[\] python3 server.py --reset
+[/] Reset server state (if supported in config-based setups)
+
+# -------------------------
+# SYSTEM CHECKS
+# -------------------------
+
+[\] python3 --version
+[/] Check Python version compatibility
+
+[\] pip --version
+[/] Check pip installation
+
+[\] uname -a
+[/] Display system information (Linux/macOS)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] git clone https://github.com/mitre/caldera.git && cd caldera && pip install -r requirements.txt
+[/] Full setup pipeline
+
+[\] python3 server.py &
+[/] Start CALDERA server in background
+
+[\] docker build -t caldera . && docker run -p 8888:8888 caldera
+[/] Build and run CALDERA in container
+
+[\] tail -f logs/*.log
+[/] Monitor CALDERA activity in real time
