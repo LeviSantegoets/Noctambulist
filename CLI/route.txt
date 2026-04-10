@@ -1,0 +1,127 @@
+[X] route (Routing Table) Command List – CLI Only
+
+[\] route
+[/] Show kernel routing table (legacy command)
+
+[\] route -n
+[/] Show routing table with numeric IPs (no DNS resolution)
+
+[\] route -h
+[/] Show help for route command
+
+# -------------------------
+# VIEW ROUTES
+# -------------------------
+
+[\] route -n
+[/] Display full routing table in numeric format
+
+[\] route
+[/] Show routing table with hostnames resolved
+
+[\] netstat -r
+[/] Show routing table (alternative method)
+
+[\] ip route show
+[/] Modern replacement for route command
+
+# -------------------------
+# ADD ROUTES
+# -------------------------
+
+[\] route add default gw 192.168.1.1
+[/] Set default gateway
+
+[\] route add -net 10.0.0.0 netmask 255.255.255.0 gw 192.168.1.1
+[/] Add static route to network
+
+[\] route add -host 192.168.1.50 gw 192.168.1.1
+[/] Route specific host through gateway
+
+[\] route add default gw 192.168.1.1 dev eth0
+[/] Set default gateway via specific interface
+
+# -------------------------
+# DELETE ROUTES
+# -------------------------
+
+[\] route del default
+[/] Remove default gateway
+
+[\] route del -net 10.0.0.0 netmask 255.255.255.0
+[/] Delete network route
+
+[\] route del -host 192.168.1.50
+[/] Remove host route
+
+# -------------------------
+# MODIFY ROUTES
+# -------------------------
+
+[\] route change default gw 192.168.1.254
+[/] Change default gateway
+
+[\] route add default gw 192.168.1.1 metric 100
+[/] Add route with priority metric
+
+# -------------------------
+# METRICS / PRIORITY
+# -------------------------
+
+[\] route add default gw 192.168.1.1 metric 1
+[/] High priority route
+
+[\] route add default gw 192.168.1.254 metric 200
+[/] Lower priority fallback route
+
+# -------------------------
+# INTERFACE-BASED ROUTING
+# -------------------------
+
+[\] route add -net 10.0.0.0 netmask 255.0.0.0 dev eth0
+[/] Route traffic via interface eth0
+
+[\] route add default dev wlan0
+[/] Set default route via wireless interface
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] route -n
+[/] Verify routing without DNS delays
+
+[\] netstat -rn
+[/] Check routing table (alternative tool)
+
+[\] ip route
+[/] Modern routing table view
+
+[\] traceroute 8.8.8.8
+[/] Trace packet path through routing hops
+
+# -------------------------
+# CLEANUP / RESET
+# -------------------------
+
+[\] route del default
+[/] Remove default gateway
+
+[\] ip route flush table main
+[/] Clear routing table (modern equivalent)
+
+[\] systemctl restart networking
+[/] Restart networking service
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] route -n | grep UG
+[/] Show active gateway routes only
+
+[\] route -n | column -t
+[/] Format routing table for readability
+
+[\] ip route show && route -n
+[/] Compare modern and legacy routing tables
