@@ -1,0 +1,21 @@
+[X] Burpsuite Command List
+[\] burpsuite [/] Start Burp Suite with GUI
+[\] burpsuite --help [/] Show help menu
+[\] burpsuite --version [/] Show Burp Suite version
+[\] burpsuite --config-file=config.json [/] Load custom configuration file
+[\] burpsuite --project-file=project.burp [/] Open existing project file
+[\] burpsuite --unpause [/] Start with unpaused intercept
+[\] java -jar burpsuite_community.jar [/] Run Burp Suite Community Edition
+[\] burpsuite --batch-mode [/] Run in batch/headless mode
+[\] burpsuite --user-config-file=burp_config.json [/] Load user-specific configuration
+[\] burpsuite --portable [/] Run in portable mode
+[\] burpsuite --listen=127.0.0.1:8080 [/] Set proxy listener address
+[\] burpsuite --disable-html-editing [/] Disable HTML editing features
+[\] burpsuite --temp-workdir=/tmp/burp [/] Set temporary work directory
+[\] burpsuite --restart-after-crash [/] Auto-restart after crash
+[\] burpsuite --exit-on-policy-violation [/] Exit when policy violation detected
+[\] burpsuite --no-browser [/] Start without embedded browser
+[\] burpsuite --debug [/] Enable debug logging
+[\] burpsuite --socks-port=1080 [/] Set SOCKS proxy port
+[\] burpsuite -Xmx4g -jar burpsuite_pro.jar [/] Set maximum heap memory to 4GB
+[\] burpsuite --config-file-only [/] Use only config file settings
