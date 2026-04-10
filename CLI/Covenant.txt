@@ -1,0 +1,107 @@
+[X] Covenant (CLI / Startup) Command List
+
+[\] dotnet run
+[/] Start Covenant server from source
+
+[\] dotnet run --project Covenant
+[/] Run Covenant specifying project directory
+
+[\] dotnet build
+[/] Build Covenant project
+
+[\] dotnet publish -c Release -o out
+[/] Compile Covenant for production deployment
+
+[\] ./Covenant
+[/] Run compiled Covenant binary
+
+# -------------------------
+# SERVER CONFIGURATION
+# -------------------------
+
+[\] dotnet run --urls http://0.0.0.0:7443
+[/] Bind Covenant web server to all interfaces on port 7443
+
+[\] dotnet run --urls https://0.0.0.0:7443
+[/] Start Covenant with HTTPS binding
+
+[\] ASPNETCORE_URLS=http://0.0.0.0:7443 dotnet run
+[/] Set listening URL via environment variable
+
+[\] ASPNETCORE_ENVIRONMENT=Production dotnet run
+[/] Run Covenant in production mode
+
+[\] export ASPNETCORE_URLS=http://0.0.0.0:7443
+[/] Set URL binding (Linux/macOS)
+
+[\] set ASPNETCORE_URLS=http://0.0.0.0:7443
+[/] Set URL binding (Windows CMD)
+
+# -------------------------
+# CERTIFICATES / HTTPS
+# -------------------------
+
+[\] dotnet dev-certs https --trust
+[/] Generate and trust development HTTPS certificate
+
+[\] dotnet dev-certs https --clean
+[/] Remove existing dev certificates
+
+# -------------------------
+# DEPENDENCIES / SETUP
+# -------------------------
+
+[\] dotnet restore
+[/] Install required .NET dependencies
+
+[\] git clone https://github.com/cobbr/Covenant.git
+[/] Clone Covenant repository
+
+[\] cd Covenant/Covenant
+[/] Navigate to Covenant project directory
+
+# -------------------------
+# DOCKER (OPTIONAL)
+# -------------------------
+
+[\] docker build -t covenant .
+[/] Build Covenant Docker image
+
+[\] docker run -p 7443:7443 covenant
+[/] Run Covenant in Docker
+
+# -------------------------
+# PROCESS / MANAGEMENT
+# -------------------------
+
+[\] ps aux | grep Covenant
+[/] Find running Covenant process
+
+[\] kill -9 <pid>
+[/] Force stop Covenant process
+
+[\] netstat -tulnp | grep 7443
+[/] Check if Covenant is listening on port 7443
+
+# -------------------------
+# LOGGING / DEBUGGING
+# -------------------------
+
+[\] dotnet run --verbosity diagnostic
+[/] Run with detailed debug output
+
+[\] journalctl -u covenant
+[/] View logs if running as a service
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] git clone https://github.com/cobbr/Covenant.git && cd Covenant/Covenant && dotnet run
+[/] Quick setup and start Covenant
+
+[\] dotnet restore && dotnet build && dotnet run --urls http://0.0.0.0:7443
+[/] Full build and run pipeline
+
+[\] docker build -t covenant . && docker run -p 7443:7443 covenant
+[/] Build and run Covenant in Docker
