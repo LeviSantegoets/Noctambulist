@@ -1,0 +1,126 @@
+[X] ss Command List
+
+[\] ss
+[/] Show all active network connections (TCP/UDP)
+
+[\] ss -h
+[/] Show help for ss command
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] ss -t
+[/] Show TCP connections only
+
+[\] ss -u
+[/] Show UDP connections only
+
+[\] ss -l
+[/] Show listening sockets
+
+[\] ss -a
+[/] Show all sockets (listening + established)
+
+[\] ss -s
+[/] Show summary statistics of sockets
+
+# -------------------------
+# FILTERING CONNECTIONS
+# -------------------------
+
+[\] ss -t state established
+[/] Show only established TCP connections
+
+[\] ss -t state listening
+[/] Show listening TCP ports
+
+[\] ss dst 192.168.1.1
+[/] Show connections to a specific destination
+
+[\] ss src 192.168.1.10
+[/] Show connections from a specific source IP
+
+# -------------------------
+# PORT FILTERING
+# -------------------------
+
+[\] ss -tln
+[/] Show listening TCP ports with numeric output
+
+[\] ss -tulpn
+[/] Show listening TCP/UDP ports with process info
+
+[\] ss -t sport = :80
+[/] Show connections using source port 80
+
+[\] ss -t dport = :443
+[/] Show connections using destination port 443
+
+# -------------------------
+# PROCESS MAPPING
+# -------------------------
+
+[\] ss -tulpn
+[/] Show processes using network ports (PID included)
+
+[\] ss -p
+[/] Show process using each socket
+
+[\] ss -tp
+[/] Show TCP connections with process info
+
+# -------------------------
+# ADVANCED FILTERING
+# -------------------------
+
+[\] ss -o
+[/] Show timer information for connections
+
+[\] ss -e
+[/] Show extended socket information
+
+[\] ss -m
+[/] Show socket memory usage
+
+[\] ss -i
+[/] Show internal TCP information
+
+# -------------------------
+# PROTOCOL SPECIFIC
+# -------------------------
+
+[\] ss -4
+[/] Show IPv4 sockets only
+
+[\] ss -6
+[/] Show IPv6 sockets only
+
+[\] ss -x
+[/] Show UNIX domain sockets
+
+# -------------------------
+# PIPE / ANALYSIS
+# -------------------------
+
+[\] ss -tulpn | grep :22
+[/] Find SSH service and process
+
+[\] ss -tulpn | grep LISTEN
+[/] List all listening services
+
+[\] ss -s | grep TCP
+[/] Filter socket summary for TCP
+
+# -------------------------
+# MONITORING EXAMPLES
+# -------------------------
+
+[\] watch ss -tulpn
+[/] Continuously monitor active connections
+
+[\] ss -tulpn > connections.txt
+[/] Save active connections to file
+
+[\] ss -t state established | wc -l
+[/] Count active connections
