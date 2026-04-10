@@ -1,0 +1,37 @@
+[X] SQLNinja Command List
+
+[\] sqlninja -f config.conf
+[/] Run SQLNinja with configuration file
+
+[\] sqlninja -m test
+[/] Test database connectivity
+
+[\] sqlninja -m fingerprint
+[/] Fingerprint SQL injection vulnerability
+
+[\] sqlninja -m bruteforce
+[/] Bruteforce database credentials
+
+[\] sqlninja -m data
+[/] Extract data from database
+
+[\] sqlninja -m revshell
+[/] Establish reverse shell
+
+[\] sqlninja -m fileread
+[/] Read files from target system
+
+[\] sqlninja -m filewrite
+[/] Write files to target system
+
+[\] sqlninja -m udf
+[/] User-defined function exploitation
+
+[\] sqlninja -m oscommand
+[/] Execute OS commands on target
+
+[\] sqlninja -h
+[/] Show help menu
+
+[\] sqlninja --version
+[/] Show SQLNinja version
