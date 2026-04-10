@@ -1,0 +1,113 @@
+[X] Aquatone Command List
+
+[\] aquatone
+[/] Run Aquatone with default settings (if installed correctly)
+
+[\] aquatone --help
+[/] Show help menu and available options
+
+[\] aquatone -version
+[/] Display Aquatone version
+
+# -------------------------
+# INPUT SOURCES
+# -------------------------
+
+[\] aquatone -ports file.txt
+[/] Scan targets from file containing URLs or IPs
+
+[\] cat subs.txt | aquatone
+[/] Pipe subdomains into Aquatone for processing
+
+[\] aquatone -stdin
+[/] Read input targets from standard input
+
+# -------------------------
+# SCREENSHOTTING
+# -------------------------
+
+[\] cat subs.txt | aquatone -screenshots
+[/] Take screenshots of all live web services
+
+[\] aquatone -screenshot-timeout 10000
+[/] Set screenshot timeout (milliseconds)
+
+[\] aquatone -threads 10
+[/] Set number of concurrent threads
+
+[\] aquatone -delay 0
+[/] Set delay between requests
+
+# -------------------------
+# HTTP PROBING
+# -------------------------
+
+[\] aquatone -ports 80,443,8080
+[/] Probe specific ports for HTTP services
+
+[\] aquatone -http-timeout 5000
+[/] Set HTTP request timeout
+
+[\] aquatone -scan-timeout 5m
+[/] Limit total scan time
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] cat subs.txt | aquatone -out results/
+[/] Save output to specified directory
+
+[\] aquatone -out ./aquatone-output
+[/] Define output folder for results
+
+[\] aquatone -html
+[/] Generate HTML report dashboard
+
+[\] aquatone -json
+[/] Export results in JSON format
+
+[\] aquatone -csv
+[/] Export results in CSV format
+
+# -------------------------
+# SCREENSHOT OUTPUT
+# -------------------------
+
+[\] open aquatone_report.html
+[/] View generated HTML report
+
+[\] ls aquatone-output/screenshots/
+[/] View captured screenshots directory
+
+[\] aquatone -screen-width 1440
+[/] Set screenshot width resolution
+
+[\] aquatone -screen-height 900
+[/] Set screenshot height resolution
+
+# -------------------------
+# PIPELINE INTEGRATION
+# -------------------------
+
+[\] subfinder -d example.com | httpx -silent | aquatone
+[/] Full pipeline: subdomain discovery → live host check → screenshots
+
+[\] cat livehosts.txt | aquatone -out results/
+[/] Generate visual reconnaissance report from live hosts
+
+[\] echo example.com | aquatone
+[/] Quick single-domain reconnaissance
+
+# -------------------------
+# PERFORMANCE TUNING
+# -------------------------
+
+[\] aquatone -threads 20
+[/] Increase parallel processing speed
+
+[\] aquatone -timeout 3000
+[/] Reduce timeout for faster scanning
+
+[\] aquatone -delay 1
+[/] Add delay between requests for stability
