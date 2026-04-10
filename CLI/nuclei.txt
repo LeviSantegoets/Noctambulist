@@ -1,0 +1,52 @@
+[X] Nuclei Command List
+
+[\] nuclei -u https://target.com
+[/] Scan target URL for vulnerabilities
+
+[\] nuclei -l targets.txt
+[/] Scan list of targets from file
+
+[\] nuclei -u https://target.com -t /path/to/templates
+[/] Use custom template directory
+
+[\] nuclei -u https://target.com -t cves/
+[/] Scan with CVE templates
+
+[\] nuclei -u https://target.com -t web-vulnerabilities/
+[/] Scan with web vulnerability templates
+
+[\] nuclei -u https://target.com -severity critical
+[/] Only show critical severity findings
+
+[\] nuclei -u https://target.com -severity high,critical
+[/] Show high and critical severity findings
+
+[\] nuclei -u https://target.com -t template.yaml
+[/] Run specific template against target
+
+[\] nuclei -u https://target.com -o results.txt
+[/] Save output to file
+
+[\] nuclei -u https://target.com -json -o results.json
+[/] Save output in JSON format
+
+[\] nuclei -u https://target.com -c 50
+[/] Set concurrency to 50 threads
+
+[\] nuclei -u https://target.com -timeout 5
+[/] Set timeout to 5 seconds
+
+[\] nuclei -u https://target.com -H "Authorization: Bearer token"
+[/] Add custom header to requests
+
+[\] nuclei -update
+[/] Update templates to latest version
+
+[\] nuclei -tl
+[/] List all available templates
+
+[\] nuclei -h
+[/] Show help menu
+
+[\] nuclei -version
+[/] Show Nuclei version
