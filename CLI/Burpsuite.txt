@@ -1,0 +1,168 @@
+[X] Burp Suite Command List
+
+[\] burpsuite
+[/] Start Burp Suite (GUI version)
+
+[\] java -jar burpsuite.jar
+[/] Launch Burp Suite from JAR file
+
+[\] burpsuite --help
+[/] Show help options (if supported by wrapper/launcher)
+
+# -------------------------
+# PROJECT / STARTUP OPTIONS
+# -------------------------
+
+[\] java -jar burpsuite.jar --project-file=project.burp
+[/] Open a specific Burp project file
+
+[\] java -jar burpsuite.jar --config-file=config.json
+[/] Load Burp configuration from JSON file
+
+[\] java -jar burpsuite.jar --user-config-file=user-options.json
+[/] Load user-level configuration options
+
+[\] java -jar burpsuite.jar --disable-auto-update
+[/] Disable automatic updates
+
+# -------------------------
+# PROXY / INTERCEPTION
+# -------------------------
+
+[\] Set proxy to 127.0.0.1:8080
+[/] Configure browser/system to use Burp proxy
+
+[\] iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to-port 8080
+[/] Redirect HTTP traffic to Burp proxy (Linux)
+
+[\] iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDIRECT --to-port 8080
+[/] Redirect HTTPS traffic to Burp proxy
+
+[\] proxychains burpsuite
+[/] Run Burp through proxychains
+
+# -------------------------
+# SSL / CERTIFICATE
+# -------------------------
+
+[\] Export Burp CA certificate
+[/] Export certificate from Proxy → Options → Import/export CA cert
+
+[\] Install Burp CA in browser
+[/] Trust Burp certificate to intercept HTTPS traffic
+
+[\] keytool -importcert -keystore cacerts -storepass changeit -file burpca.der
+[/] Add Burp CA to Java trust store
+
+# -------------------------
+# SCANNING (PRO / ENTERPRISE)
+# -------------------------
+
+[\] Start scan from Dashboard
+[/] Launch automated scan (GUI action)
+
+[\] burpsuite --scan-target https://example.com
+[/] Example CLI-style scan (Enterprise Edition)
+
+[\] burpsuite --scan-config scan-config.json
+[/] Use predefined scan configuration
+
+# -------------------------
+# INTRUDER / ATTACKS
+# -------------------------
+
+[\] Send request to Intruder
+[/] Right-click request → Send to Intruder
+
+[\] Sniper attack
+[/] Single payload position attack
+
+[\] Battering ram attack
+[/] Same payload applied to multiple positions
+
+[\] Pitchfork attack
+[/] Multiple payload sets used in parallel
+
+[\] Cluster bomb attack
+[/] All payload combinations across positions
+
+# -------------------------
+# REPEATER / TESTING
+# -------------------------
+
+[\] Send to Repeater
+[/] Manually modify and resend HTTP requests
+
+[\] Ctrl + R
+[/] Shortcut to send request to Repeater
+
+[\] Ctrl + Shift + R
+[/] Send request and open in Repeater
+
+# -------------------------
+# DECODER / ENCODING
+# -------------------------
+
+[\] Send to Decoder
+[/] Encode/decode data (Base64, URL, etc.)
+
+[\] Base64 encode/decode
+[/] Transform data using Base64
+
+[\] URL encode/decode
+[/] Encode or decode URL parameters
+
+# -------------------------
+# EXTENSIONS / BAPP STORE
+# -------------------------
+
+[\] Install extension from BApp Store
+[/] Add plugins from official repository
+
+[\] Load extension (JAR/Python)
+[/] Add custom extension manually
+
+[\] java -jar burpsuite.jar --add-extension=extension.jar
+[/] Load extension at startup
+
+# -------------------------
+# LOGGING / OUTPUT
+# -------------------------
+
+[\] Save project
+[/] Save current work to .burp file
+
+[\] Export site map
+[/] Export discovered URLs and endpoints
+
+[\] Logger++ extension
+[/] Advanced logging of HTTP traffic
+
+# -------------------------
+# AUTOMATION / HEADLESS (ENTERPRISE)
+# -------------------------
+
+[\] burp-rest-api
+[/] Use REST API for automation (via extension)
+
+[\] curl http://127.0.0.1:1337/v0.1/scan
+[/] Trigger scan via REST API
+
+[\] docker run burpsuite-enterprise
+[/] Run Burp Suite Enterprise in Docker
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] firefox --proxy-server=127.0.0.1:8080
+[/] Launch Firefox with Burp proxy
+
+[\] google-chrome --proxy-server="127.0.0.1:8080"
+[/] Launch Chrome with Burp proxy
+
+[\] curl -x http://127.0.0.1:8080 http://example.com
+[/] Send traffic through Burp proxy using curl
+
+[\] sqlmap -u "http://target.com?id=1" --proxy=http://127.0.0.1:8080
+[/] Use sqlmap through Burp proxy for inspection
