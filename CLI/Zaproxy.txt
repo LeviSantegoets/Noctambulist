@@ -1,0 +1,174 @@
+[X] OWASP ZAP (ZAPROXY) Command List
+
+[\] zaproxy
+[/] Start OWASP ZAP (GUI mode)
+
+[\] zap.sh
+[/] Launch ZAP on Linux/macOS
+
+[\] zap.bat
+[/] Launch ZAP on Windows
+
+[\] zaproxy --help
+[/] Show available command-line options
+
+# -------------------------
+# DAEMON / HEADLESS MODE
+# -------------------------
+
+[\] zap.sh -daemon
+[/] Start ZAP in headless (daemon) mode
+
+[\] zap.sh -daemon -port 8090
+[/] Run ZAP daemon on port 8090
+
+[\] zap.sh -daemon -host 0.0.0.0 -port 8080
+[/] Allow remote connections to ZAP API
+
+[\] zap.sh -daemon -config api.disablekey=true
+[/] Disable API key (NOT recommended for production)
+
+# -------------------------
+# SESSION / PROJECT
+# -------------------------
+
+[\] zap.sh -session session.session
+[/] Load an existing ZAP session
+
+[\] zap.sh -newsession new.session
+[/] Create a new session file
+
+[\] zap.sh -session session.session -daemon
+[/] Run a saved session in daemon mode
+
+# -------------------------
+# PROXY CONFIGURATION
+# -------------------------
+
+[\] Set proxy to 127.0.0.1:8080
+[/] Configure browser/system to use ZAP proxy
+
+[\] zap.sh -config proxy.port=8081
+[/] Change proxy listening port
+
+[\] zap.sh -config proxy.ip=127.0.0.1
+[/] Bind proxy to specific IP
+
+# -------------------------
+# SCANNING (AUTOMATED)
+# -------------------------
+
+[\] zap-baseline.py -t https://example.com
+[/] Passive scan of target (baseline scan)
+
+[\] zap-full-scan.py -t https://example.com
+[/] Full active scan of target
+
+[\] zap-api-scan.py -t https://example.com/openapi.json -f openapi
+[/] Scan API using OpenAPI definition
+
+[\] zap.sh -cmd -quickurl https://example.com
+[/] Quick scan from CLI
+
+[\] zap.sh -cmd -quickout report.html -quickurl https://example.com
+[/] Quick scan with HTML report output
+
+# -------------------------
+# AUTHENTICATION / CONTEXT
+# -------------------------
+
+[\] zap.sh -config context.name=example
+[/] Define scanning context
+
+[\] zap.sh -config context.include=http://example.com.*
+[/] Include URLs in context
+
+[\] zap.sh -config context.exclude=http://example.com/logout.*
+[/] Exclude URLs from scan
+
+# -------------------------
+# API USAGE
+# -------------------------
+
+[\] curl http://127.0.0.1:8080/JSON/core/view/version/
+[/] Get ZAP version via API
+
+[\] curl "http://127.0.0.1:8080/JSON/spider/action/scan/?url=http://example.com"
+[/] Start spider scan via API
+
+[\] curl "http://127.0.0.1:8080/JSON/ascan/action/scan/?url=http://example.com"
+[/] Start active scan via API
+
+[\] curl "http://127.0.0.1:8080/JSON/core/view/alerts/"
+[/] Retrieve alerts from scan
+
+# -------------------------
+# SPIDER / CRAWLING
+# -------------------------
+
+[\] Start spider from GUI
+[/] Crawl target application
+
+[\] curl "http://127.0.0.1:8080/JSON/spider/action/scan/?url=https://example.com"
+[/] Start spider via API
+
+[\] curl "http://127.0.0.1:8080/JSON/ajaxSpider/action/scan/?url=https://example.com"
+[/] Start AJAX spider (for JS-heavy apps)
+
+# -------------------------
+# ACTIVE / PASSIVE SCANNING
+# -------------------------
+
+[\] Enable passive scanning
+[/] Automatically analyze traffic
+
+[\] Start active scan
+[/] Launch attack-based vulnerability scan
+
+[\] zap.sh -config scanner.attackOnStart=true
+[/] Start active scan automatically
+
+# -------------------------
+# REPORTING
+# -------------------------
+
+[\] zap.sh -cmd -quickout report.html -quickurl https://example.com
+[/] Generate HTML report
+
+[\] zap.sh -cmd -quickout report.json -quickurl https://example.com
+[/] Generate JSON report
+
+[\] curl "http://127.0.0.1:8080/OTHER/core/other/htmlreport/"
+[/] Download HTML report via API
+
+# -------------------------
+# ADD-ONS / EXTENSIONS
+# -------------------------
+
+[\] zap.sh -addoninstall ascanrules
+[/] Install active scan rules add-on
+
+[\] zap.sh -addonupdate
+[/] Update all installed add-ons
+
+[\] zap.sh -addonlist
+[/] List installed add-ons
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] firefox --proxy-server=127.0.0.1:8080
+[/] Launch Firefox using ZAP proxy
+
+[\] google-chrome --proxy-server="127.0.0.1:8080"
+[/] Launch Chrome using ZAP proxy
+
+[\] curl -x http://127.0.0.1:8080 http://example.com
+[/] Send traffic through ZAP proxy
+
+[\] docker run -t owasp/zap2docker-stable zap-baseline.py -t https://example.com
+[/] Run ZAP baseline scan via Docker
+
+[\] docker run -t owasp/zap2docker-stable zap-full-scan.py -t https://example.com
+[/] Run full scan via Docker
