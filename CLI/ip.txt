@@ -1,0 +1,170 @@
+[X] ip (iproute2) Command List – Network Configuration (CLI Only)
+
+[\] ip
+[/] Show general help for iproute2 suite
+
+[\] ip -h
+[/] Display help options
+
+[\] ip help
+[/] Show ip command help menu
+
+# -------------------------
+# INTERFACES (LINK)
+# -------------------------
+
+[\] ip link show
+[/] List all network interfaces
+
+[\] ip link
+[/] Show link-layer info for interfaces
+
+[\] ip link set eth0 up
+[/] Enable network interface eth0
+
+[\] ip link set eth0 down
+[/] Disable network interface eth0
+
+[\] ip link set eth0 mtu 1500
+[/] Set MTU size for interface
+
+[\] ip link set eth0 promisc on
+[/] Enable promiscuous mode on interface
+
+# -------------------------
+# IP ADDRESS CONFIGURATION
+# -------------------------
+
+[\] ip addr show
+[/] Display all IP addresses on interfaces
+
+[\] ip a
+[/] Short form of ip addr show
+
+[\] ip addr add 192.168.1.10/24 dev eth0
+[/] Assign IP address to interface
+
+[\] ip addr del 192.168.1.10/24 dev eth0
+[/] Remove IP address from interface
+
+[\] ip addr flush dev eth0
+[/] Remove all IP addresses from interface
+
+# -------------------------
+# ROUTING TABLE
+# -------------------------
+
+[\] ip route show
+[/] Display routing table
+
+[\] ip r
+[/] Short form of ip route show
+
+[\] ip route add default via 192.168.1.1
+[/] Set default gateway
+
+[\] ip route add 10.0.0.0/24 via 192.168.1.1
+[/] Add static route
+
+[\] ip route del 10.0.0.0/24
+[/] Remove route
+
+[\] ip route flush table main
+[/] Clear routing table
+
+# -------------------------
+# NEIGHBOR / ARP TABLE
+# -------------------------
+
+[\] ip neigh show
+[/] Show ARP / neighbor table
+
+[\] ip n
+[/] Short form of ip neigh show
+
+[\] ip neigh add 192.168.1.20 lladdr aa:bb:cc:dd:ee:ff dev eth0
+[/] Add static ARP entry
+
+[\] ip neigh del 192.168.1.20 dev eth0
+[/] Delete ARP entry
+
+# -------------------------
+# NETWORK MONITORING
+# -------------------------
+
+[\] ip monitor
+[/] Live monitor of network changes
+
+[\] ip monitor link
+[/] Monitor interface state changes
+
+[\] ip monitor addr
+[/] Monitor IP address changes
+
+[\] ip monitor route
+[/] Monitor routing changes
+
+# -------------------------
+# TUNNELING / ADVANCED
+# -------------------------
+
+[\] ip tunnel show
+[/] Show tunnels
+
+[\] ip tunnel add tun0 mode gre remote 192.168.1.1 local 192.168.1.2
+[/] Create GRE tunnel
+
+[\] ip link add link eth0 name vlan10 type vlan id 10
+[/] Create VLAN interface
+
+# -------------------------
+# RULES (ADVANCED ROUTING)
+# -------------------------
+
+[\] ip rule show
+[/] Show routing policy rules
+
+[\] ip rule add from 192.168.1.10 table 100
+[/] Add policy routing rule
+
+[\] ip route add default via 192.168.1.1 table 100
+[/] Add route to custom table
+
+# -------------------------
+# STATISTICS / DEBUGGING
+# -------------------------
+
+[\] ip -s link
+[/] Show interface statistics (packets, errors)
+
+[\] ip -s addr
+[/] Show IP stats per interface
+
+[\] ip -d link
+[/] Show detailed link-layer info
+
+# -------------------------
+# CLEANUP / RESET
+# -------------------------
+
+[\] ip addr flush dev eth0
+[/] Remove all IPs from interface
+
+[\] ip route flush cache
+[/] Clear routing cache
+
+[\] ip link set eth0 down && ip link set eth0 up
+[/] Restart network interface
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ip a | grep inet
+[/] Show only IPv4/IPv6 addresses
+
+[\] ip r | column -t
+[/] Format routing table for readability
+
+[\] watch ip -s link
+[/] Live monitor interface traffic stats
