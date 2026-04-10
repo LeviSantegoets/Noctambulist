@@ -1,0 +1,116 @@
+[X] EyeWitness Command List (CLI Only)
+
+[\] EyeWitness.py
+[/] Run EyeWitness with default options
+
+[\] python3 EyeWitness.py -h
+[/] Show help menu and usage options
+
+[\] python EyeWitness.py --help
+[/] Display available command-line arguments
+
+# -------------------------
+# INPUT TARGETS
+# -------------------------
+
+[\] python EyeWitness.py -f targets.txt
+[/] Scan targets from file (URLs/IPs)
+
+[\] python EyeWitness.py -u https://example.com
+[/] Scan a single URL
+
+[\] python EyeWitness.py -f urls.txt --web
+[/] Force web screenshot mode
+
+[\] python EyeWitness.py -f urls.txt --rdp
+[/] Scan RDP services for screenshots
+
+[\] python EyeWitness.py -f urls.txt --vnc
+[/] Scan VNC services for screenshots
+
+# -------------------------
+# SCREENSHOTTING / ENUMERATION
+# -------------------------
+
+[\] python EyeWitness.py -f targets.txt --timeout 7
+[/] Set page load timeout
+
+[\] python EyeWitness.py -f targets.txt --threads 10
+[/] Set number of concurrent threads
+
+[\] python EyeWitness.py -f targets.txt --no-dns
+[/] Skip DNS resolution step
+
+[\] python EyeWitness.py -f targets.txt --resolve
+[/] Force DNS resolution before scanning
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] python EyeWitness.py -f targets.txt -d output/
+[/] Save results to output directory
+
+[\] python EyeWitness.py -f targets.txt --no-prompt
+[/] Run without interactive prompts
+
+[\] python EyeWitness.py -f targets.txt --report-only
+[/] Generate report without opening browser
+
+[\] python EyeWitness.py -f targets.txt --headless
+[/] Run browser in headless mode
+
+# -------------------------
+# REPORTING
+# -------------------------
+
+[\] firefox report.html
+[/] Open EyeWitness HTML report
+
+[\] google-chrome report.html
+[/] View generated reconnaissance report
+
+[\] ls output/screens/
+[/] View captured screenshots
+
+[\] ls output/report/
+[/] View generated HTML report files
+
+# -------------------------
+# PERFORMANCE / STABILITY
+# -------------------------
+
+[\] python EyeWitness.py -f targets.txt --delay 1
+[/] Add delay between requests
+
+[\] python EyeWitness.py -f targets.txt --timeout 10
+[/] Increase request timeout
+
+[\] python EyeWitness.py -f targets.txt --user-agent "Mozilla/5.0"
+[/] Set custom user-agent string
+
+# -------------------------
+# PIPELINE INTEGRATION
+# -------------------------
+
+[\] subfinder -d example.com | httpx -silent | EyeWitness.py --stdin
+[/] Full recon pipeline: subdomains → live hosts → screenshots
+
+[\] cat livehosts.txt | EyeWitness.py --stdin -d output/
+[/] Screenshot live hosts from pipeline input
+
+[\] httpx -l subs.txt -silent | EyeWitness.py --stdin --web
+[/] Web service enumeration + screenshots
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] python EyeWitness.py -f targets.txt --prepend-https
+[/] Force HTTPS before HTTP testing
+
+[\] python EyeWitness.py -f targets.txt --proxy http://127.0.0.1:8080
+[/] Route traffic through proxy (e.g., Burp/ZAP)
+
+[\] python EyeWitness.py -f targets.txt --screenshot-timeout 15
+[/] Increase screenshot capture timeout
