@@ -1,0 +1,102 @@
+[X] ionice Command List
+
+[\] ionice
+[/] Set or display I/O scheduling class and priority
+
+[\] ionice -h
+[/] Show help menu
+
+[\] ionice --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] ionice command
+[/] Run command with default I/O scheduling
+
+[\] ionice -c 2 command
+[/] Run command with best-effort I/O class
+
+[\] ionice -c 3 command
+[/] Run command with idle I/O priority (only when system is idle)
+
+# -------------------------
+# I/O CLASSES
+# -------------------------
+# 0 = none (inherits), 1 = realtime, 2 = best-effort, 3 = idle
+
+[\] ionice -c 1 command
+[/] Set realtime I/O class (highest priority, root only)
+
+[\] ionice -c 2 -n 0 command
+[/] Best-effort with highest priority within class
+
+[\] ionice -c 2 -n 7 command
+[/] Best-effort with lowest priority within class
+
+[\] ionice -c 3 command
+[/] Idle class (lowest I/O priority)
+
+# -------------------------
+# APPLY TO EXISTING PROCESSES
+# -------------------------
+
+[\] ionice -p 1234
+[/] Show I/O scheduling class of process 1234
+
+[\] ionice -c 2 -n 4 -p 1234
+[/] Set best-effort priority for process 1234
+
+[\] ionice -c 3 -p 1234
+[/] Set process 1234 to idle I/O priority
+
+# -------------------------
+# COMBINATION WITH CPU NICE
+# -------------------------
+
+[\] nice -n 10 ionice -c 3 command
+[/] Lower CPU + lowest I/O priority
+
+[\] ionice -c 2 -n 7 nice -n 15 command
+[/] Lower both CPU and I/O priority
+
+# -------------------------
+# MONITORING
+# -------------------------
+
+[\] ionice -p 1234
+[/] Check I/O class of a process
+
+[\] ps -eo pid,ni,cmd
+[/] Show CPU nice values (combine with ionice manually)
+
+[\] iotop
+[/] Real-time I/O usage monitoring tool
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] cat /proc/1234/ionice
+[/] View raw I/O scheduling info for process
+
+[\] ionice -c 2 -n 0 command && iotop
+[/] Run high I/O priority task and monitor disk usage
+
+[\] ionice -c 3 find / -name "*.log"
+[/] Run disk-heavy search with minimal impact
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ionice -c 3 rsync -av /src /backup
+[/] Run backup with low disk priority
+
+[\] ionice -c 2 -n 4 tar -czf backup.tar.gz /data
+[/] Balanced I/O priority compression
+
+[\] ionice -c 3 updatedb
+[/] Run file index update in background-friendly mode
