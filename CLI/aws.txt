@@ -1,0 +1,169 @@
+[X] AWS CLI Command List
+
+[\] aws
+[/] Show AWS CLI general help and command overview
+
+[\] aws help
+[/] Display full AWS CLI help menu
+
+[\] aws --version
+[/] Show installed AWS CLI version
+
+# -------------------------
+# CONFIGURATION
+# -------------------------
+
+[\] aws configure
+[/] Set up AWS credentials, region, and output format
+
+[\] aws configure list
+[/] Show current configuration values
+
+[\] aws configure get region
+[/] Get configured default region
+
+[\] aws configure set region us-east-1
+[/] Set default region
+
+# -------------------------
+# IAM (IDENTITY & ACCESS)
+# -------------------------
+
+[\] aws sts get-caller-identity
+[/] Show current authenticated identity
+
+[\] aws iam list-users
+[/] List IAM users
+
+[\] aws iam list-roles
+[/] List IAM roles
+
+[\] aws iam list-policies
+[/] List IAM policies
+
+# -------------------------
+# S3 (OBJECT STORAGE)
+# -------------------------
+
+[\] aws s3 ls
+[/] List all S3 buckets
+
+[\] aws s3 mb s3://my-bucket
+[/] Create S3 bucket
+
+[\] aws s3 rb s3://my-bucket
+[/] Remove S3 bucket
+
+[\] aws s3 cp file.txt s3://my-bucket/
+[/] Copy file to S3
+
+[\] aws s3 cp s3://my-bucket/file.txt .
+[/] Download file from S3
+
+[\] aws s3 sync ./data s3://my-bucket/data
+[/] Sync local directory with S3
+
+# -------------------------
+# EC2 (VIRTUAL MACHINES)
+# -------------------------
+
+[\] aws ec2 describe-instances
+[/] List all EC2 instances
+
+[\] aws ec2 start-instances --instance-ids i-1234567890abcdef0
+[/] Start EC2 instance
+
+[\] aws ec2 stop-instances --instance-ids i-1234567890abcdef0
+[/] Stop EC2 instance
+
+[\] aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
+[/] Terminate EC2 instance
+
+# -------------------------
+# LAMBDA
+# -------------------------
+
+[\] aws lambda list-functions
+[/] List Lambda functions
+
+[\] aws lambda invoke --function-name myfunc out.json
+[/] Invoke Lambda function
+
+# -------------------------
+# CLOUDWATCH
+# -------------------------
+
+[\] aws logs describe-log-groups
+[/] List CloudWatch log groups
+
+[\] aws logs tail my-log-group --follow
+[/] Stream logs in real time
+
+# -------------------------
+# CLOUDFORMATION
+# -------------------------
+
+[\] aws cloudformation list-stacks
+[/] List CloudFormation stacks
+
+[\] aws cloudformation deploy --template-file template.yaml --stack-name mystack
+[/] Deploy stack from template
+
+# -------------------------
+# EKS (KUBERNETES)
+# -------------------------
+
+[\] aws eks list-clusters
+[/] List Kubernetes clusters
+
+[\] aws eks update-kubeconfig --name mycluster
+[/] Configure kubectl access for EKS
+
+# -------------------------
+# DEBUG / OUTPUT CONTROL
+# -------------------------
+
+[\] aws s3 ls --debug
+[/] Run command with debug output
+
+[\] aws ec2 describe-instances --output json
+[/] Output results in JSON format
+
+[\] aws ec2 describe-instances --query "Reservations[*].Instances[*].InstanceId"
+[/] Filter output using JMESPath query
+
+# -------------------------
+# SECURITY / TOKENS
+# -------------------------
+
+[\] aws sts get-session-token
+[/] Get temporary session credentials
+
+[\] aws sts assume-role --role-arn arn:aws:iam::123456789012:role/MyRole --role-session-name test
+[/] Assume IAM role
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] aws configure list-profiles
+[/] List available AWS CLI profiles
+
+[\] AWS_PROFILE=default aws s3 ls
+[/] Use specific profile for command
+
+[\] aws sts get-caller-identity --debug
+[/] Debug authentication issues
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] aws s3 sync ./build s3://my-bucket --delete
+[/] Deploy static site to S3
+
+[\] aws lambda list-functions | jq
+[/] List and filter Lambda functions
+
+[\] aws ec2 describe-instances --output table
+[/] Show EC2 instances in table format
