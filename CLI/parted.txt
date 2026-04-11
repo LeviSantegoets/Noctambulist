@@ -1,0 +1,134 @@
+[X] parted Command List
+
+[\] parted
+[/] Start interactive parted tool
+
+[\] parted -h
+[/] Show help menu
+
+[\] parted --help
+[/] Display full help options
+
+# -------------------------
+# DISK INSPECTION
+# -------------------------
+
+[\] parted -l
+[/] List all disks and partition layouts
+
+[\] parted /dev/sda print
+[/] Show partition table for /dev/sda
+
+[\] parted /dev/nvme0n1 print
+[/] Show NVMe disk partition layout
+
+[\] parted /dev/sda unit s print
+[/] Display partitions in sectors
+
+# -------------------------
+# INTERACTIVE MODE
+# -------------------------
+
+[\] parted /dev/sda
+[/] Enter interactive mode for disk management
+
+[\] print
+[/] Display current partition table
+
+[\] help
+[/] Show in-tool command help
+
+[\] quit
+[/] Exit parted tool
+
+# -------------------------
+# PARTITION TABLE SETUP
+# -------------------------
+
+[\] parted /dev/sda mklabel gpt
+[/] Create GPT partition table
+
+[\] parted /dev/sda mklabel msdos
+[/] Create MBR (DOS) partition table
+
+# -------------------------
+# PARTITION CREATION
+# -------------------------
+
+[\] parted /dev/sda mkpart primary ext4 1MiB 100%
+[/] Create primary ext4 partition using full disk
+
+[\] parted /dev/sda mkpart primary ext4 1MiB 50%
+[/] Create partition using half disk
+
+[\] parted /dev/sda mkpart primary linux-swap 50% 100%
+[/] Create swap partition
+
+# -------------------------
+# PARTITION MODIFICATION
+# -------------------------
+
+[\] parted /dev/sda resizepart 1 100%
+[/] Resize partition 1 to full disk
+
+[\] parted /dev/sda set 1 boot on
+[/] Set boot flag on partition 1
+
+[\] parted /dev/sda name 1 rootfs
+[/] Set partition label name
+
+# -------------------------
+# PARTITION DELETION
+# -------------------------
+
+[\] parted /dev/sda rm 1
+[/] Delete partition 1
+
+[\] parted /dev/sda rm 2
+[/] Delete partition 2
+
+# -------------------------
+# UNIT CONTROL
+# -------------------------
+
+[\] parted /dev/sda unit GB print
+[/] Display partition sizes in GB
+
+[\] parted /dev/sda unit MiB print
+[/] Display partition sizes in MiB
+
+# -------------------------
+# FILESYSTEM SUPPORT
+# -------------------------
+
+[\] parted /dev/sda mkpart primary ext4 1MiB 100%
+[/] Create ext4 partition (format handled separately)
+
+[\] mkfs.ext4 /dev/sda1
+[/] Format partition as ext4 filesystem
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] parted -l && lsblk
+[/] Cross-check partition and block device layout
+
+[\] parted /dev/sda print && blkid
+[/] Verify partition structure and UUIDs
+
+[\] parted /dev/sda unit s print
+[/] Debug precise sector layout
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] parted -l | tee partitions.txt
+[/] Save disk layout report
+
+[\] parted /dev/sda print | column -t
+[/] Format partition table output
+
+[\] parted -l && fdisk -l
+[/] Compare parted and fdisk views
