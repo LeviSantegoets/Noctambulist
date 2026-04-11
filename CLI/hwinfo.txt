@@ -1,0 +1,150 @@
+[X] hwinfo (Hardware Information Tool) Command List
+
+[\] hwinfo
+[/] Show full hardware information report
+
+[\] hwinfo -h
+[/] Show help menu
+
+[\] hwinfo --help
+[/] Display full help options
+
+# -------------------------
+# BASIC HARDWARE INFO
+# -------------------------
+
+[\] hwinfo
+[/] Full system hardware scan (very detailed output)
+
+[\] hwinfo --short
+[/] Compact summary of hardware components
+
+[\] hwinfo --listmd
+[/] List detected hardware modules
+
+# -------------------------
+# CPU INFORMATION
+# -------------------------
+
+[\] hwinfo --cpu
+[/] Show CPU details
+
+[\] hwinfo --cpu --short
+[/] Show summarized CPU information
+
+# -------------------------
+# MEMORY INFORMATION
+# -------------------------
+
+[\] hwinfo --memory
+[/] Show RAM and memory module details
+
+[\] hwinfo --memory --short
+[/] Show summary of memory information
+
+# -------------------------
+# DISK / STORAGE
+# -------------------------
+
+[\] hwinfo --disk
+[/] Show physical disk information
+
+[\] hwinfo --partition
+[/] Show partition details
+
+[\] hwinfo --block
+[/] Show block device information
+
+# -------------------------
+# NETWORK
+# -------------------------
+
+[\] hwinfo --netcard
+[/] Show network interface cards
+
+[\] hwinfo --network
+[/] Show network hardware details
+
+[\] hwinfo --wlan
+[/] Show wireless adapters
+
+# -------------------------
+# GRAPHICS
+# -------------------------
+
+[\] hwinfo --gfxcard
+[/] Show GPU / graphics card information
+
+[\] hwinfo --display
+[/] Show display hardware info
+
+# -------------------------
+# BUS / SYSTEM COMPONENTS
+# -------------------------
+
+[\] hwinfo --bios
+[/] Show BIOS information
+
+[\] hwinfo --motherboard
+[/] Show motherboard details
+
+[\] hwinfo --usb
+[/] Show USB devices
+
+[\] hwinfo --pci
+[/] Show PCI devices
+
+[\] hwinfo --scsi
+[/] Show SCSI devices
+
+# -------------------------
+# OUTPUT CONTROL
+# -------------------------
+
+[\] hwinfo --short > hw_report.txt
+[/] Save summary report to file
+
+[\] hwinfo | less
+[/] Page through full hardware report
+
+[\] hwinfo --short | column -t
+[/] Format summary output for readability
+
+# -------------------------
+# FILTERING
+# -------------------------
+
+[\] hwinfo --cpu --short | grep -i model
+[/] Filter CPU model information
+
+[\] hwinfo --memory | grep -i size
+[/] Show memory module sizes
+
+[\] hwinfo --disk | grep /dev
+[/] List detected disks
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] sudo hwinfo
+[/] Run full scan with root privileges
+
+[\] hwinfo --short && lscpu
+[/] Compare hwinfo CPU data with system CPU info
+
+[\] hwinfo --memory && free -h
+[/] Cross-check RAM detection vs OS usage
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] hwinfo --short | tee hw_summary.txt
+[/] Save hardware summary report
+
+[\] hwinfo --cpu --memory --disk
+[/] Focused multi-component scan
+
+[\] hwinfo --short | grep -E "CPU|Memory|Disk"
+[/] Extract key system components only
