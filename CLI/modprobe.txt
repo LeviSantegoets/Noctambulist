@@ -1,0 +1,68 @@
+[X] modprobe Command List
+
+[\] modprobe
+[/] Add or remove kernel modules (handles dependencies automatically)
+
+[\] modprobe -h
+[/] Show help menu
+
+[\] modprobe --help
+[/] Display full help options
+
+# -------------------------
+# LOADING MODULES
+# -------------------------
+
+[\] modprobe usb_storage
+[/] Load USB storage kernel module
+
+[\] modprobe e1000e
+[/] Load Intel network driver module
+
+[\] modprobe kvm
+[/] Load KVM virtualization module
+
+[\] modprobe bluetooth
+[/] Load Bluetooth support module
+
+# -------------------------
+# REMOVING MODULES
+# -------------------------
+
+[\] modprobe -r usb_storage
+[/] Remove USB storage module
+
+[\] modprobe -r e1000e
+[/] Unload network driver module
+
+[\] modprobe -r bluetooth
+[/] Remove Bluetooth module
+
+# -------------------------
+# VERBOSE / DEBUG
+# -------------------------
+
+[\] modprobe -v usb_storage
+[/] Verbose module loading output
+
+[\] modprobe -v -r usb_storage
+[/] Verbose module removal output
+
+[\] modprobe -n usb_storage
+[/] Dry run (do not actually load module)
+
+# -------------------------
+# FORCE / SAFETY OPTIONS
+# -------------------------
+
+[\] modprobe --force-vermagic usb_storage
+[/] Force load module despite version mismatch
+
+[\] modprobe --force-modversion usb_storage
+[/] Force module version handling
+
+# -------------------------
+# MODULE INFO / DEPENDENCIES
+# -------------------------
+
+[\] modprobe -c
