@@ -1,0 +1,131 @@
+[X] traceroute (Route Tracing) Command List
+
+[\] traceroute
+[/] Trace network path to a target host
+
+[\] traceroute -h
+[/] Show help options
+
+[\] traceroute -V
+[/] Display traceroute version
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] traceroute 8.8.8.8
+[/] Trace route to Google DNS (IP-based)
+
+[\] traceroute google.com
+[/] Trace route using domain name
+
+[\] traceroute example.com
+[/] Trace network path to a domain
+
+# -------------------------
+# PROTOCOL OPTIONS
+# -------------------------
+
+[\] traceroute -I 8.8.8.8
+[/] Use ICMP packets instead of UDP
+
+[\] traceroute -T 8.8.8.8
+[/] Use TCP SYN packets for tracing
+
+[\] traceroute -U 8.8.8.8
+[/] Use UDP packets (default mode)
+
+# -------------------------
+# PORT CONTROL
+# -------------------------
+
+[\] traceroute -p 443 8.8.8.8
+[/] Trace using specific destination port
+
+[\] traceroute -p 53 8.8.8.8
+[/] Trace using DNS port (UDP 53)
+
+# -------------------------
+# HOP CONTROL
+# -------------------------
+
+[\] traceroute -m 20 8.8.8.8
+[/] Set maximum hop limit to 20
+
+[\] traceroute -f 5 8.8.8.8
+[/] Start tracing from hop 5
+
+[\] traceroute -q 3 8.8.8.8
+[/] Send 3 probes per hop
+
+[\] traceroute -w 2 8.8.8.8
+[/] Set wait time per reply to 2 seconds
+
+# -------------------------
+# INTERFACE / SOURCE CONTROL
+# -------------------------
+
+[\] traceroute -i eth0 8.8.8.8
+[/] Use specific network interface
+
+[\] traceroute -s 192.168.1.10 8.8.8.8
+[/] Set custom source IP address
+
+# -------------------------
+# NUMERIC OUTPUT
+# -------------------------
+
+[\] traceroute -n 8.8.8.8
+[/] Disable DNS resolution (faster output)
+
+[\] traceroute -n google.com
+[/] Show hops using IP addresses only
+
+# -------------------------
+# DEBUG / VERBOSE
+# -------------------------
+
+[\] traceroute -v 8.8.8.8
+[/] Enable verbose output
+
+[\] traceroute -A 8.8.8.8
+[/] Show AS (Autonomous System) numbers
+
+[\] traceroute --help
+[/] Display full help menu
+
+# -------------------------
+# IPV4 / IPV6
+# -------------------------
+
+[\] traceroute -4 google.com
+[/] Force IPv4 tracing
+
+[\] traceroute -6 google.com
+[/] Force IPv6 tracing
+
+# -------------------------
+# TIMING / PERFORMANCE
+# -------------------------
+
+[\] traceroute -w 1 8.8.8.8
+[/] Reduce timeout per hop
+
+[\] traceroute -w 5 8.8.8.8
+[/] Increase timeout per hop
+
+[\] traceroute -z 0.5 8.8.8.8
+[/] Set delay between probes
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] traceroute google.com | tee route.txt
+[/] Save route trace to file
+
+[\] traceroute -n 8.8.8.8 | column -t
+[/] Format output for readability
+
+[\] traceroute -I 8.8.8.8 && ping 8.8.8.8
+[/] Trace route and verify connectivity
