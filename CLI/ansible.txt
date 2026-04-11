@@ -1,0 +1,165 @@
+[X] Ansible Command List
+
+[\] ansible
+[/] Show Ansible ad-hoc command help
+
+[\] ansible --help
+[/] Display full Ansible help menu
+
+[\] ansible --version
+[/] Show installed Ansible version
+
+# -------------------------
+# INVENTORY MANAGEMENT
+# -------------------------
+
+[\] ansible-inventory --list
+[/] Show parsed inventory in JSON format
+
+[\] ansible-inventory --graph
+[/] Display inventory as group graph
+
+[\] ansible-inventory -i hosts.ini --list
+[/] Show inventory from specific file
+
+# -------------------------
+# AD-HOC COMMANDS
+# -------------------------
+
+[\] ansible all -m ping
+[/] Test connectivity to all hosts
+
+[\] ansible webservers -m shell -a "uptime"
+[/] Run shell command on group
+
+[\] ansible dbservers -m command -a "df -h"
+[/] Run command module on DB servers
+
+[\] ansible all -m copy -a "src=file.txt dest=/tmp/file.txt"
+[/] Copy file to remote hosts
+
+[\] ansible all -m apt -a "name=nginx state=present" -b
+[/] Install package with privilege escalation
+
+# -------------------------
+# PLAYBOOK EXECUTION
+# -------------------------
+
+[\] ansible-playbook site.yml
+[/] Run playbook file
+
+[\] ansible-playbook -i hosts.ini site.yml
+[/] Run playbook with specific inventory
+
+[\] ansible-playbook site.yml --check
+[/] Dry-run mode (no changes applied)
+
+[\] ansible-playbook site.yml --diff
+[/] Show configuration differences
+
+[\] ansible-playbook site.yml --syntax-check
+[/] Validate playbook syntax only
+
+# -------------------------
+# LIMIT / TARGET CONTROL
+# -------------------------
+
+[\] ansible-playbook site.yml --limit webservers
+[/] Run only on selected host group
+
+[\] ansible-playbook site.yml --limit host1
+[/] Run only on one host
+
+[\] ansible all --limit host1 -m ping
+[/] Ping single host only
+
+# -------------------------
+# VARIABLES / EXTRA VARS
+# -------------------------
+
+[\] ansible-playbook deploy.yml -e "env=prod"
+[/] Pass inline variable
+
+[\] ansible-playbook deploy.yml -e @vars.yml
+[/] Load variables from file
+
+# -------------------------
+# PRIVILEGE ESCALATION
+# -------------------------
+
+[\] ansible all -m ping -b
+[/] Run module with sudo privileges
+
+[\] ansible-playbook site.yml --become
+[/] Execute playbook with privilege escalation
+
+[\] ansible-playbook site.yml --become-user root
+[/] Become specific user
+
+# -------------------------
+# VAULT
+# -------------------------
+
+[\] ansible-vault create secrets.yml
+[/] Create encrypted vault file
+
+[\] ansible-vault edit secrets.yml
+[/] Edit encrypted file
+
+[\] ansible-vault decrypt secrets.yml
+[/] Decrypt vault file
+
+[\] ansible-vault encrypt secrets.yml
+[/] Encrypt plain file
+
+[\] ansible-playbook site.yml --ask-vault-pass
+[/] Prompt for vault password during run
+
+# -------------------------
+# GALAXY ROLES / COLLECTIONS
+# -------------------------
+
+[\] ansible-galaxy role install geerlingguy.nginx
+[/] Install Galaxy role
+
+[\] ansible-galaxy collection install community.general
+[/] Install collection
+
+[\] ansible-galaxy role list
+[/] List installed roles
+
+# -------------------------
+# FACT GATHERING
+# -------------------------
+
+[\] ansible all -m setup
+[/] Gather full system facts
+
+[\] ansible all -m setup -a "filter=ansible_hostname"
+[/] Gather filtered fact only
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] ansible all -m ping -vvvv
+[/] Run with maximum verbosity
+
+[\] ansible-playbook site.yml -vvv
+[/] Debug playbook execution
+
+[\] ansible-config dump
+[/] Show active configuration values
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ansible all -m ping && ansible webservers -m shell -a "uptime"
+[/] Test connectivity then check uptime
+
+[\] ansible-playbook site.yml --check --diff
+[/] Preview all changes safely
+
+[\] ansible-playbook deploy.yml -i prod.ini -e "env=prod" --become
+[/] Deploy production environment with sudo
