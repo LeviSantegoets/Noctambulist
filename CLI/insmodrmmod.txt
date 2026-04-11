@@ -1,0 +1,101 @@
+[X] insmod / rmmod Command List
+
+[\] insmod
+[/] Insert a kernel module (no dependency resolution)
+
+[\] rmmod
+[/] Remove a kernel module
+
+[\] insmod -h
+[/] Show help menu (if supported)
+
+[\] rmmod -h
+[/] Show help menu (if supported)
+
+# -------------------------
+# LOAD MODULES (INSER T MODULE)
+# -------------------------
+
+[\] insmod usb_storage.ko
+[/] Load kernel module file directly
+
+[\] insmod /lib/modules/$(uname -r)/kernel/drivers/usb/storage/usb-storage.ko
+[/] Load module using full path
+
+[\] insmod e1000e.ko
+[/] Load network driver module
+
+# -------------------------
+# REMOVE MODULES (RMMOD)
+# -------------------------
+
+[\] rmmod usb_storage
+[/] Remove USB storage module
+
+[\] rmmod e1000e
+[/] Remove network driver module
+
+[\] rmmod bluetooth
+[/] Remove Bluetooth kernel module
+
+# -------------------------
+# VERIFICATION
+# -------------------------
+
+[\] lsmod
+[/] List currently loaded kernel modules
+
+[\] lsmod | grep usb_storage
+[/] Check if module is loaded
+
+[\] modinfo usb_storage.ko
+[/] Show module metadata before loading
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] dmesg | tail
+[/] Check kernel messages after loading/unloading module
+
+[\] dmesg | grep usb
+[/] Filter kernel logs for USB-related module activity
+
+[\] rmmod -v usb_storage
+[/] Verbose module removal (if supported)
+
+# -------------------------
+# FORCE / SAFETY
+# -------------------------
+
+[\] rmmod -f usb_storage
+[/] Force remove module (dangerous, may crash system)
+
+[\] insmod usb_storage.ko --force
+[/] Force insert module (if kernel allows)
+
+# -------------------------
+# MODULE PATH WORKFLOW
+# -------------------------
+
+[\] find /lib/modules/$(uname -r) -name "*.ko"
+[/] Locate available kernel modules
+
+[\] insmod ./module.ko && lsmod
+[/] Load local module and verify
+
+[\] rmmod module_name && lsmod
+[/] Remove module and confirm unload
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] insmod usb_storage.ko && dmesg | tail
+[/] Load module and check kernel log
+
+[\] lsmod | tee modules.txt
+[/] Save loaded module list
+
+[\] modinfo usb_storage.ko && insmod usb_storage.ko
+[/] Inspect module then load it
