@@ -1,0 +1,148 @@
+[X] bridge (Linux bridge / iproute2) Command List
+
+[\] bridge
+[/] Show general bridge command usage
+
+[\] bridge help
+[/] Display help menu
+
+[\] bridge -h
+[/] Show available options
+
+# -------------------------
+# BRIDGE OVERVIEW
+# -------------------------
+
+[\] bridge show
+[/] Show all configured bridge devices
+
+[\] bridge link
+[/] Show interfaces attached to bridges
+
+[\] bridge link show
+[/] List all bridge ports and states
+
+[\] bridge vlan show
+[/] Display VLAN configuration on bridges
+
+[\] bridge fdb show
+[/] Show MAC address forwarding database
+
+# -------------------------
+# BRIDGE INTERFACES
+# -------------------------
+
+[\] ip link add br0 type bridge
+[/] Create a new bridge interface (br0)
+
+[\] ip link set br0 up
+[/] Bring bridge interface online
+
+[\] ip link set eth0 master br0
+[/] Attach interface to bridge
+
+[\] ip link set eth0 nomaster
+[/] Remove interface from bridge
+
+[\] ip link show type bridge
+[/] Show all bridge-type interfaces
+
+# -------------------------
+# CLASSIC BRCTL (LEGACY TOOL)
+# -------------------------
+
+[\] brctl show
+[/] Show all bridges and ports
+
+[\] brctl addbr br0
+[/] Create bridge
+
+[\] brctl delbr br0
+[/] Delete bridge
+
+[\] brctl addif br0 eth0
+[/] Add interface to bridge
+
+[\] brctl delif br0 eth0
+[/] Remove interface from bridge
+
+# -------------------------
+# FORWARDING DATABASE (MAC TABLE)
+# -------------------------
+
+[\] bridge fdb show
+[/] Show MAC learning table
+
+[\] bridge fdb add 00:11:22:33:44:55 dev eth0 master br0
+[/] Add static MAC entry
+
+[\] bridge fdb del 00:11:22:33:44:55 dev eth0
+[/] Delete MAC entry
+
+[\] bridge fdb show br0
+[/] Show MAC table for specific bridge
+
+# -------------------------
+# VLAN CONFIGURATION
+# -------------------------
+
+[\] bridge vlan show
+[/] Show VLANs on all bridges
+
+[\] bridge vlan add dev eth0 vid 10
+[/] Add VLAN ID 10 to interface
+
+[\] bridge vlan del dev eth0 vid 10
+[/] Remove VLAN ID 10
+
+# -------------------------
+# STP (SPANNING TREE PROTOCOL)
+# -------------------------
+
+[\] ip link set br0 type bridge stp_state 1
+[/] Enable STP on bridge
+
+[\] ip link set br0 type bridge stp_state 0
+[/] Disable STP
+
+# -------------------------
+# MONITORING
+# -------------------------
+
+[\] bridge monitor
+[/] Live bridge event monitoring
+
+[\] watch bridge link
+[/] Continuously display bridge ports
+
+[\] bridge -s link
+[/] Show interface statistics
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] bridge fdb show | column -t
+[/] Format MAC table output
+
+[\] ip addr show br0
+[/] Check bridge IP configuration
+
+[\] ip link show br0
+[/] Verify bridge state
+
+[\] bridge link show | grep eth0
+[/] Check interface bridge membership
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ip link add br0 type bridge && ip link set br0 up
+[/] Create and activate bridge
+
+[\] ip link set eth0 master br0 && bridge fdb show
+[/] Attach interface and inspect MAC learning
+
+[\] bridge monitor | tee bridge.log
+[/] Log bridge activity in real time
