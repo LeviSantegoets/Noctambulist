@@ -1,0 +1,218 @@
+[X] Azure CLI Command List
+
+[\] az
+[/] Show Azure CLI general help and command overview
+
+[\] az --help
+[/] Display full Azure CLI help menu
+
+[\] az version
+[/] Show installed Azure CLI version
+
+# -------------------------
+# AUTHENTICATION / ACCOUNT
+# -------------------------
+
+[\] az login
+[/] Sign in to Azure account
+
+[\] az login --tenant <tenant-id>
+[/] Login to specific tenant
+
+[\] az account show
+[/] Show current subscription details
+
+[\] az account list
+[/] List all subscriptions
+
+[\] az account set --subscription <id>
+[/] Set active subscription
+
+[\] az logout
+[/] Sign out of Azure session
+
+# -------------------------
+# RESOURCE GROUPS
+# -------------------------
+
+[\] az group list
+[/] List all resource groups
+
+[\] az group create -n myRG -l westeurope
+[/] Create resource group
+
+[\] az group delete -n myRG
+[/] Delete resource group
+
+[\] az group show -n myRG
+[/] Show resource group details
+
+# -------------------------
+# VIRTUAL MACHINES (VM)
+# -------------------------
+
+[\] az vm list
+[/] List virtual machines
+
+[\] az vm create -g myRG -n myVM --image Ubuntu2204
+[/] Create VM instance
+
+[\] az vm start -g myRG -n myVM
+[/] Start VM
+
+[\] az vm stop -g myRG -n myVM
+[/] Stop VM
+
+[\] az vm restart -g myRG -n myVM
+[/] Restart VM
+
+[\] az vm delete -g myRG -n myVM
+[/] Delete VM
+
+[\] az vm show -g myRG -n myVM
+[/] Show VM details
+
+# -------------------------
+# STORAGE
+# -------------------------
+
+[\] az storage account list
+[/] List storage accounts
+
+[\] az storage account create -n mystorage -g myRG -l westeurope
+[/] Create storage account
+
+[\] az storage container list --account-name mystorage
+[/] List blob containers
+
+[\] az storage blob upload --account-name mystorage -c mycontainer -f file.txt
+[/] Upload file to blob storage
+
+[\] az storage blob download --account-name mystorage -c mycontainer -n file.txt
+[/] Download blob file
+
+# -------------------------
+# APP SERVICES
+# -------------------------
+
+[\] az webapp list
+[/] List web applications
+
+[\] az webapp create -g myRG -p myPlan -n myApp
+[/] Create web app
+
+[\] az webapp start -g myRG -n myApp
+[/] Start web app
+
+[\] az webapp stop -g myRG -n myApp
+[/] Stop web app
+
+[\] az webapp browse -g myRG -n myApp
+[/] Open web app in browser
+
+# -------------------------
+# KUBERNETES (AKS)
+# -------------------------
+
+[\] az aks list
+[/] List AKS clusters
+
+[\] az aks create -g myRG -n myAKS --node-count 2
+[/] Create Kubernetes cluster
+
+[\] az aks get-credentials -g myRG -n myAKS
+[/] Configure kubectl access
+
+[\] az aks delete -g myRG -n myAKS
+[/] Delete AKS cluster
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] az network vnet list
+[/] List virtual networks
+
+[\] az network nsg list
+[/] List network security groups
+
+[\] az network public-ip list
+[/] List public IP addresses
+
+# -------------------------
+# IAM / SECURITY
+# -------------------------
+
+[\] az ad user list
+[/] List Azure AD users
+
+[\] az ad group list
+[/] List Azure AD groups
+
+[\] az role assignment list
+[/] List role assignments
+
+# -------------------------
+# MONITORING / LOGS
+# -------------------------
+
+[\] az monitor metrics list
+[/] List available metrics
+
+[\] az monitor activity-log list
+[/] Show activity logs
+
+[\] az monitor log-analytics query
+[/] Run Log Analytics query
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] az vm list --output table
+[/] Show VM list in table format
+
+[\] az vm list --output json
+[/] Output VM list as JSON
+
+[\] az --debug vm list
+[/] Run command with debug output
+
+# -------------------------
+# EXTENSIONS
+# -------------------------
+
+[\] az extension list
+[/] List installed CLI extensions
+
+[\] az extension add --name aks-preview
+[/] Install extension
+
+[\] az extension update --name aks-preview
+[/] Update extension
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] az account show
+[/] Verify current login context
+
+[\] az login --use-device-code
+[/] Login using device code flow
+
+[\] az version
+[/] Check CLI and component versions
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] az login && az account list
+[/] Authenticate and list subscriptions
+
+[\] az group create -n testRG -l westeurope && az vm list
+[/] Create resource group and list VMs
+
+[\] az aks get-credentials -g myRG -n myAKS && kubectl get pods
+[/] Connect to AKS and check workloads6
