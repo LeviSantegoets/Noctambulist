@@ -1,0 +1,161 @@
+[X] Rust Command List
+
+[\] rustc
+[/] Rust compiler command
+
+[\] cargo
+[/] Rust package manager and build system
+
+[\] rustc --version
+[/] Show installed Rust compiler version
+
+[\] cargo --version
+[/] Show installed Cargo version
+
+# -------------------------
+# PROJECT INITIALIZATION
+# -------------------------
+
+[\] cargo new myapp
+[/] Create new Rust binary project
+
+[\] cargo new mylib --lib
+[/] Create new Rust library project
+
+[\] cargo init
+[/] Initialize Rust project in existing directory
+
+# -------------------------
+# BUILDING
+# -------------------------
+
+[\] cargo build
+[/] Compile Rust project
+
+[\] cargo build --release
+[/] Build optimized release binary
+
+[\] cargo check
+[/] Check code without producing binary
+
+# -------------------------
+# RUNNING
+# -------------------------
+
+[\] cargo run
+[/] Build and run project
+
+[\] cargo run --release
+[/] Run optimized build
+
+# -------------------------
+# TESTING
+# -------------------------
+
+[\] cargo test
+[/] Run all tests
+
+[\] cargo test --verbose
+[/] Run tests with detailed output
+
+[\] cargo test test_name
+[/] Run specific test by name
+
+# -------------------------
+# DEPENDENCIES
+# -------------------------
+
+[\] cargo add serde
+[/] Add dependency to Cargo.toml (requires cargo-edit)
+
+[\] cargo update
+[/] Update dependencies
+
+[\] cargo fetch
+[/] Download dependencies without building
+
+[\] cargo tree
+[/] Show dependency tree
+
+# -------------------------
+# CODE QUALITY
+# -------------------------
+
+[\] cargo fmt
+[/] Format Rust code (rustfmt required)
+
+[\] cargo clippy
+[/] Lint Rust code for issues
+
+[\] cargo fix
+[/] Automatically fix compiler warnings
+
+# -------------------------
+# DOCUMENTATION
+# -------------------------
+
+[\] cargo doc
+[/] Generate project documentation
+
+[\] cargo doc --open
+[/] Generate and open docs in browser
+
+# -------------------------
+# CLEANUP
+# -------------------------
+
+[\] cargo clean
+[/] Remove target build directory
+
+# -------------------------
+# BENCHMARKING
+# -------------------------
+
+[\] cargo bench
+[/] Run benchmarks
+
+# -------------------------
+# INSTALLATION
+# -------------------------
+
+[\] cargo install ripgrep
+[/] Install Rust binary crate globally
+
+[\] cargo install --path .
+[/] Install current project as binary
+
+# -------------------------
+# ENVIRONMENT / TOOLCHAIN
+# -------------------------
+
+[\] rustup update
+[/] Update Rust toolchain
+
+[\] rustup show
+[/] Show installed toolchains
+
+[\] rustup default stable
+[/] Set default Rust version
+
+# -------------------------
+# DEBUGGING
+# -------------------------
+
+[\] RUST_BACKTRACE=1 cargo run
+[/] Enable backtrace on crash
+
+[\] cargo run -v
+[/] Verbose build output
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] cargo fmt && cargo clippy
+[/] Format and lint code
+
+[\] cargo test && cargo build --release
+[/] Test then build optimized binary
+
+[\] cargo clean && cargo build
+[/] Full clean rebuild
