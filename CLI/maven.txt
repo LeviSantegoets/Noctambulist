@@ -1,0 +1,167 @@
+[X] Maven Command List
+
+[\] mvn
+[/] Show Maven general help and command overview
+
+[\] mvn -h
+[/] Show help menu
+
+[\] mvn --help
+[/] Display full help options
+
+[\] mvn -v
+[/] Show Maven version and Java details
+
+# -------------------------
+# PROJECT LIFECYCLE
+# -------------------------
+
+[\] mvn validate
+[/] Validate project structure and POM
+
+[\] mvn compile
+[/] Compile source code
+
+[\] mvn test
+[/] Run unit tests
+
+[\] mvn package
+[/] Build project into JAR/WAR
+
+[\] mvn verify
+[/] Run integration checks and verify package
+
+[\] mvn install
+[/] Install artifact into local repository
+
+[\] mvn deploy
+[/] Deploy artifact to remote repository
+
+# -------------------------
+# CLEANING
+# -------------------------
+
+[\] mvn clean
+[/] Remove target build directory
+
+[\] mvn clean compile
+[/] Clean and compile project
+
+[\] mvn clean package
+[/] Clean and build package
+
+[\] mvn clean install
+[/] Clean and install artifact
+
+# -------------------------
+# DEPENDENCIES
+# -------------------------
+
+[\] mvn dependency:tree
+[/] Show full dependency tree
+
+[\] mvn dependency:resolve
+[/] Resolve project dependencies
+
+[\] mvn dependency:analyze
+[/] Analyze unused and used dependencies
+
+[\] mvn dependency:copy-dependencies
+[/] Copy dependencies to target folder
+
+# -------------------------
+# RUNNING APPLICATIONS
+# -------------------------
+
+[\] mvn exec:java
+[/] Run Java main class using Maven Exec plugin
+
+[\] mvn spring-boot:run
+[/] Run Spring Boot application
+
+[\] mvn tomcat7:run
+[/] Run project in embedded Tomcat
+
+# -------------------------
+# TESTING
+# -------------------------
+
+[\] mvn test
+[/] Run all unit tests
+
+[\] mvn -Dtest=MyTest test
+[/] Run specific test class
+
+[\] mvn test -Dtest=MyTest#methodName
+[/] Run specific test method
+
+[\] mvn surefire-report:report
+[/] Generate test report
+
+# -------------------------
+# BUILD OPTIONS
+# -------------------------
+
+[\] mvn clean install -DskipTests
+[/] Build project without running tests
+
+[\] mvn clean package -Pprod
+[/] Build using production profile
+
+[\] mvn clean install -X
+[/] Debug build output
+
+[\] mvn clean install -e
+[/] Show full error stack traces
+
+# -------------------------
+# PLUGINS
+# -------------------------
+
+[\] mvn help:effective-pom
+[/] Show fully resolved POM configuration
+
+[\] mvn help:describe -Dplugin=compiler
+[/] Describe plugin configuration
+
+[\] mvn plugin:goal
+[/] Run specific plugin goal
+
+# -------------------------
+# MULTI-MODULE PROJECTS
+# -------------------------
+
+[\] mvn clean install -pl module1
+[/] Build specific module only
+
+[\] mvn clean install -am
+[/] Also build dependencies of selected module
+
+[\] mvn -pl module1,module2 install
+[/] Build multiple modules
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] mvn dependency:tree | grep conflict
+[/] Detect dependency conflicts
+
+[\] mvn clean install -U
+[/] Force update of snapshots
+
+[\] mvn validate && mvn compile
+[/] Validate and compile project
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] mvn clean install && java -jar target/app.jar
+[/] Build and run application
+
+[\] mvn dependency:tree > deps.txt
+[/] Export dependency graph
+
+[\] mvn clean package -DskipTests && mvn spring-boot:run
+[/] Build quickly and run Spring Boot app
