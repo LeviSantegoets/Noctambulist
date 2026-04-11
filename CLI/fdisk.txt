@@ -1,0 +1,106 @@
+[X] fdisk Command List
+
+[\] fdisk -l
+[/] List all disk partitions and partition tables
+
+[\] fdisk /dev/sda
+[/] Open interactive partition editor for /dev/sda
+
+[\] fdisk /dev/nvme0n1
+[/] Open NVMe disk for partition management
+
+[\] fdisk -h
+[/] Show help menu
+
+[\] fdisk --help
+[/] Display full help options
+
+# -------------------------
+# DISK LISTING
+# -------------------------
+
+[\] fdisk -l /dev/sda
+[/] Show partition table for specific disk
+
+[\] fdisk -l | grep Disk
+[/] Show detected disks only
+
+[\] fdisk -l | less
+[/] Scroll through disk and partition info
+
+# -------------------------
+# INTERACTIVE MODE (INSIDE fdisk)
+# -------------------------
+
+[\] n
+[/] Create new partition
+
+[\] d
+[/] Delete a partition
+
+[\] p
+[/] Print current partition table
+
+[\] t
+[/] Change partition type
+
+[\] w
+[/] Write changes to disk
+
+[\] q
+[/] Quit without saving changes
+
+[\] m
+[/] Show in-tool help menu
+
+# -------------------------
+# PARTITION TYPES
+# -------------------------
+
+[\] fdisk -l -o Name,Type
+[/] Show partition types (basic view)
+
+[\] fdisk -l | grep Linux
+[/] Filter Linux partitions
+
+[\] fdisk -l | grep EFI
+[/] Locate EFI system partitions
+
+# -------------------------
+# GPT / MBR HANDLING
+# -------------------------
+
+[\] fdisk /dev/sda
+[/] Manage MBR or GPT disks interactively
+
+[\] fdisk -l | grep GPT
+[/] Check if disk uses GPT partitioning
+
+[\] fdisk -l | grep DOS
+[/] Check if disk uses MBR (DOS) partitioning
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] fdisk -l && lsblk
+[/] Cross-check partition layout
+
+[\] fdisk -l /dev/sda && blkid
+[/] Compare partition table with filesystem UUIDs
+
+[\] fdisk -l | column -t
+[/] Format output for readability
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] fdisk -l > disk_layout.txt
+[/] Save full partition table to file
+
+[\] fdisk -l | tee fdisk.log
+[/] Log disk partition information
+
+[\] fdisk -l | grep /dev
+[/] List all detected block devices
