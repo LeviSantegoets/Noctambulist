@@ -1,0 +1,126 @@
+[X] tc (Traffic Control) Command List
+
+[\] tc
+[/] Show general tc help
+
+[\] tc -h
+[/] Display help information
+
+# -------------------------
+# QDISC (QUEUE DISCIPLINE)
+# -------------------------
+
+[\] tc qdisc show
+[/] Show current queuing disciplines
+
+[\] tc qdisc add dev eth0 root pfifo_fast
+[/] Add default queue discipline to interface
+
+[\] tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+[/] Limit bandwidth using Token Bucket Filter (TBF)
+
+[\] tc qdisc add dev eth0 root netem delay 100ms
+[/] Add artificial network delay
+
+[\] tc qdisc add dev eth0 root netem loss 1%
+[/] Simulate packet loss
+
+[\] tc qdisc add dev eth0 root netem duplicate 1%
+[/] Simulate packet duplication
+
+[\] tc qdisc del dev eth0 root
+[/] Remove qdisc from interface
+
+# -------------------------
+# CLASS (TRAFFIC SHAPING)
+# -------------------------
+
+[\] tc class show dev eth0
+[/] Show traffic classes for interface
+
+[\] tc class add dev eth0 parent 1: classid 1:1 htb rate 10mbit
+[/] Create traffic class with HTB scheduler
+
+[\] tc class add dev eth0 parent 1:1 classid 1:10 htb rate 5mbit
+[/] Define subclass with rate limit
+
+# -------------------------
+# FILTERS (TRAFFIC MATCHING)
+# -------------------------
+
+[\] tc filter show dev eth0
+[/] Show filters applied to interface
+
+[\] tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 8.8.8.8 flowid 1:1
+[/] Route traffic to class based on destination IP
+
+[\] tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip sport 80 flowid 1:10
+[/] Match traffic based on source port
+
+# -------------------------
+# BANDWIDTH LIMITING
+# -------------------------
+
+[\] tc qdisc add dev eth0 root tbf rate 500kbit burst 32kbit latency 300ms
+[/] Limit interface bandwidth to 500 Kbit/s
+
+[\] tc qdisc add dev eth0 root htb default 10
+[/] Enable hierarchical token bucket scheduling
+
+[\] tc class add dev eth0 parent 1: classid 1:10 htb rate 1mbit ceil 2mbit
+[/] Set guaranteed and maximum bandwidth
+
+# -------------------------
+# NETWORK SIMULATION (NETEM)
+# -------------------------
+
+[\] tc qdisc add dev eth0 root netem delay 50ms 10ms
+[/] Simulate variable latency
+
+[\] tc qdisc add dev eth0 root netem loss 5%
+[/] Simulate packet loss
+
+[\] tc qdisc add dev eth0 root netem reorder 25%
+[/] Simulate packet reordering
+
+[\] tc qdisc add dev eth0 root netem corrupt 1%
+[/] Simulate packet corruption
+
+# -------------------------
+# MONITORING
+# -------------------------
+
+[\] tc -s qdisc show dev eth0
+[/] Show queue statistics
+
+[\] tc -s class show dev eth0
+[/] Show class statistics
+
+[\] tc -s filter show dev eth0
+[/] Show filter statistics
+
+# -------------------------
+# DELETE / RESET
+# -------------------------
+
+[\] tc qdisc del dev eth0 root
+[/] Remove all traffic shaping rules
+
+[\] tc class del dev eth0 parent 1: classid 1:10
+[/] Delete specific traffic class
+
+[\] tc filter del dev eth0 parent 1:0 prio 1
+[/] Remove specific filter
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] tc qdisc add dev eth0 root netem delay 100ms && ping 8.8.8.8
+[/] Simulate latency and test network
+
+[\] tc qdisc show dev eth0 | column -t
+[/] Format traffic control output
+
+[\] tc -s qdisc show dev eth0 && tc -s class show dev eth0
+[/] Full traffic shaping diagnostics
