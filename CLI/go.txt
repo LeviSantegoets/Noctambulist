@@ -1,0 +1,169 @@
+[X] Go Command List
+
+[\] go
+[/] Show Go general help and command overview
+
+[\] go help
+[/] Display full help system
+
+[\] go version
+[/] Show installed Go version
+
+# -------------------------
+# PROJECT INITIALIZATION
+# -------------------------
+
+[\] go mod init example.com/myapp
+[/] Initialize a new Go module
+
+[\] go mod tidy
+[/] Add missing and remove unused dependencies
+
+[\] go mod vendor
+[/] Copy dependencies into vendor folder
+
+# -------------------------
+# BUILDING
+# -------------------------
+
+[\] go build
+[/] Compile current package
+
+[\] go build ./...
+[/] Build all packages in module
+
+[\] go build -o app
+[/] Build output binary named "app"
+
+[\] go install
+[/] Build and install package to GOPATH/bin
+
+# -------------------------
+# RUNNING
+# -------------------------
+
+[\] go run main.go
+[/] Compile and run a Go program
+
+[\] go run .
+[/] Run module in current directory
+
+# -------------------------
+# TESTING
+# -------------------------
+
+[\] go test
+[/] Run tests in current package
+
+[\] go test ./...
+[/] Run all tests in module
+
+[\] go test -v
+[/] Run tests with verbose output
+
+[\] go test -cover
+[/] Show test coverage
+
+# -------------------------
+# FORMATTING / LINTING
+# -------------------------
+
+[\] go fmt
+[/] Format Go source code
+
+[\] go vet
+[/] Analyze code for potential issues
+
+[\] go fmt ./...
+[/] Format all packages recursively
+
+# -------------------------
+# DEPENDENCIES
+# -------------------------
+
+[\] go get example.com/pkg
+[/] Add or update dependency
+
+[\] go get -u ./...
+[/] Update all dependencies
+
+[\] go mod download
+[/] Download dependencies to local cache
+
+[\] go list -m all
+[/] List all module dependencies
+
+# -------------------------
+# DOCUMENTATION
+# -------------------------
+
+[\] go doc fmt
+[/] Show documentation for package
+
+[\] go doc fmt.Println
+[/] Show docs for specific function
+
+[\] godoc -http=:6060
+[/] Start local documentation server
+
+# -------------------------
+# CLEANUP / CACHE
+# -------------------------
+
+[\] go clean
+[/] Remove object files and cache
+
+[\] go clean -modcache
+[/] Clear module download cache
+
+# -------------------------
+# ENVIRONMENT
+# -------------------------
+
+[\] go env
+[/] Show Go environment variables
+
+[\] go env GOPATH
+[/] Show GOPATH value
+
+[\] go env GO111MODULE
+[/] Show module mode setting
+
+# -------------------------
+# DEBUGGING / TOOLING
+# -------------------------
+
+[\] go tool trace trace.out
+[/] Analyze execution trace
+
+[\] go tool pprof
+[/] Profile performance data
+
+[\] go test -run TestName -v
+[/] Run specific test
+
+# -------------------------
+# MODULE MANAGEMENT
+# -------------------------
+
+[\] go mod init
+[/] Create module definition
+
+[\] go mod verify
+[/] Verify dependency integrity
+
+[\] go mod edit -require example.com/pkg@v1.2.3
+[/] Manually edit module requirements
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] go fmt ./... && go test ./...
+[/] Format code and run tests
+
+[\] go mod tidy && go build
+[/] Clean dependencies and build project
+
+[\] go test ./... -cover && go build -o app
+[/] Test with coverage then build binary
