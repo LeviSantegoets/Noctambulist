@@ -1,0 +1,67 @@
+[X] ip6tables Command List
+
+[\] ip6tables -h
+[/] Show help for ip6tables command
+
+[\] ip6tables -L
+[/] List all IPv6 firewall rules
+
+[\] ip6tables -L -v
+[/] List IPv6 rules with verbose counters
+
+[\] ip6tables -L -n
+[/] Show IPv6 rules with numeric output (no DNS)
+
+[\] ip6tables -L -v -n
+[/] Verbose + numeric IPv6 rule listing
+
+# -------------------------
+# TABLES
+# -------------------------
+
+[\] ip6tables -t filter -L
+[/] View IPv6 filter table rules
+
+[\] ip6tables -t mangle -L
+[/] View IPv6 packet modification rules
+
+[\] ip6tables -t raw -L
+[/] View IPv6 raw processing rules
+
+[\] ip6tables -t nat -L
+[/] View IPv6 NAT table (if enabled)
+
+# -------------------------
+# CHAINS
+# -------------------------
+
+[\] ip6tables -L INPUT
+[/] View inbound IPv6 traffic rules
+
+[\] ip6tables -L OUTPUT
+[/] View outbound IPv6 traffic rules
+
+[\] ip6tables -L FORWARD
+[/] View forwarded IPv6 traffic rules
+
+# -------------------------
+# ALLOW TRAFFIC
+# -------------------------
+
+[\] ip6tables -A INPUT -p tcp --dport 22 -j ACCEPT
+[/] Allow SSH over IPv6
+
+[\] ip6tables -A INPUT -p tcp --dport 80 -j ACCEPT
+[/] Allow HTTP over IPv6
+
+[\] ip6tables -A INPUT -p tcp --dport 443 -j ACCEPT
+[/] Allow HTTPS over IPv6
+
+[\] ip6tables -A INPUT -p icmpv6 -j ACCEPT
+[/] Allow IPv6 ICMP (required for networking)
+
+# -------------------------
+# BLOCK TRAFFIC
+# -------------------------
+
+[\] ip6tables -A INPUT -p tcp --
