@@ -1,0 +1,165 @@
+[X] curl Command List
+
+[\] curl
+[/] Transfer data from or to a server
+
+[\] curl -h
+[/] Show help menu
+
+[\] curl --help
+[/] Display full help options
+
+# -------------------------
+# BASIC REQUESTS
+# -------------------------
+
+[\] curl https://example.com
+[/] Fetch web page content
+
+[\] curl http://example.com
+[/] HTTP request to a server
+
+[\] curl -L https://example.com
+[/] Follow redirects
+
+[\] curl -I https://example.com
+[/] Fetch only HTTP headers
+
+# -------------------------
+# OUTPUT CONTROL
+# -------------------------
+
+[\] curl -o file.html https://example.com
+[/] Save output to file
+
+[\] curl -O https://example.com/file.zip
+[/] Save file with original name
+
+[\] curl -s https://example.com
+[/] Silent mode (no progress output)
+
+[\] curl -v https://example.com
+[/] Verbose request/response details
+
+# -------------------------
+# HTTP METHODS
+# -------------------------
+
+[\] curl -X GET https://example.com
+[/] Explicit GET request
+
+[\] curl -X POST https://example.com
+[/] Send POST request
+
+[\] curl -X PUT https://example.com
+[/] Send PUT request
+
+[\] curl -X DELETE https://example.com
+[/] Send DELETE request
+
+# -------------------------
+# HEADERS
+# -------------------------
+
+[\] curl -H "User-Agent: Mozilla" https://example.com
+[/] Set custom HTTP header
+
+[\] curl -H "Authorization: Bearer TOKEN" https://api.example.com
+[/] Add authorization header
+
+[\] curl -I -H "Accept: application/json" https://example.com
+[/] Request headers with custom accept type
+
+# -------------------------
+# DATA / API REQUESTS
+# -------------------------
+
+[\] curl -d "name=test" https://example.com
+[/] Send POST form data
+
+[\] curl -d '{"name":"test"}' -H "Content-Type: application/json" https://example.com
+[/] Send JSON payload
+
+[\] curl -F "file=@test.txt" https://example.com/upload
+[/] Upload file via form
+
+# -------------------------
+# AUTHENTICATION
+# -------------------------
+
+[\] curl -u user:pass https://example.com
+[/] Basic authentication
+
+[\] curl --ntlm -u user:pass https://example.com
+[/] NTLM authentication
+
+[\] curl --digest -u user:pass https://example.com
+[/] Digest authentication
+
+# -------------------------
+# NETWORK / CONNECTION
+# -------------------------
+
+[\] curl --connect-timeout 10 https://example.com
+[/] Set connection timeout
+
+[\] curl --max-time 30 https://example.com
+[/] Set maximum request duration
+
+[\] curl --retry 3 https://example.com
+[/] Retry failed requests
+
+# -------------------------
+# COOKIES
+# -------------------------
+
+[\] curl -c cookies.txt https://example.com
+[/] Save cookies to file
+
+[\] curl -b cookies.txt https://example.com
+[/] Send cookies from file
+
+# -------------------------
+# PROXY
+# -------------------------
+
+[\] curl -x http://127.0.0.1:8080 https://example.com
+[/] Use HTTP proxy
+
+[\] curl -x socks5://127.0.0.1:9050 https://example.com
+[/] Use SOCKS5 proxy
+
+# -------------------------
+# SSL / TLS
+# -------------------------
+
+[\] curl -k https://example.com
+[/] Ignore SSL certificate verification
+
+[\] curl --cert client.pem https://example.com
+[/] Use client certificate
+
+[\] curl --tlsv1.2 https://example.com
+[/] Force TLS version
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] curl -v https://example.com
+[/] Debug full HTTP request/response
+
+[\] curl --trace output.txt https://example.com
+[/] Save full network trace
+
+[\] curl --trace-ascii debug.txt https://example.com
+[/] Save readable trace output
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] curl https://example.com | grep title
+[/] Extract data from webpage
+
+[\] curl -s https://api.example
