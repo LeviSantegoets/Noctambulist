@@ -1,0 +1,171 @@
+[X] journalctl Command List
+
+[\] journalctl
+[/] Show all system logs (from systemd journal)
+
+[\] journalctl -h
+[/] Show help menu
+
+[\] journalctl --help
+[/] Display full help options
+
+# -------------------------
+# BASIC LOG VIEWING
+# -------------------------
+
+[\] journalctl -e
+[/] Jump to end of logs (latest entries)
+
+[\] journalctl -n 50
+[/] Show last 50 log entries
+
+[\] journalctl -f
+[/] Follow logs in real time (like tail -f)
+
+[\] journalctl --no-pager
+[/] Show logs without pager
+
+# -------------------------
+# BOOT LOGS
+# -------------------------
+
+[\] journalctl -b
+[/] Show logs from current boot
+
+[\] journalctl -b -1
+[/] Show logs from previous boot
+
+[\] journalctl --list-boots
+[/] List all recorded boot sessions
+
+[\] journalctl -b 0
+[/] Explicit current boot logs
+
+# -------------------------
+# SERVICE LOGS
+# -------------------------
+
+[\] journalctl -u ssh
+[/] Show logs for SSH service
+
+[\] journalctl -u nginx
+[/] Show logs for Nginx service
+
+[\] journalctl -u ssh -f
+[/] Follow service logs in real time
+
+[\] journalctl -u ssh --since today
+[/] Show today's SSH logs
+
+# -------------------------
+# TIME FILTERING
+# -------------------------
+
+[\] journalctl --since "2026-01-01"
+[/] Show logs since specific date
+
+[\] journalctl --since "1 hour ago"
+[/] Show logs from last hour
+
+[\] journalctl --until "2026-01-02"
+[/] Show logs up to a date
+
+[\] journalctl --since today
+[/] Show logs from today
+
+# -------------------------
+# PRIORITY FILTERING
+# -------------------------
+
+[\] journalctl -p 0
+[/] Show only emergency messages
+
+[\] journalctl -p 3
+[/] Show error-level messages and above
+
+[\] journalctl -p warning
+[/] Show warnings and more severe logs
+
+[\] journalctl -p info
+[/] Show informational logs
+
+# -------------------------
+# KERNEL LOGS
+# -------------------------
+
+[\] journalctl -k
+[/] Show kernel messages only
+
+[\] journalctl -k -b
+[/] Kernel logs for current boot
+
+[\] journalctl -k -f
+[/] Follow kernel logs live
+
+# -------------------------
+# OUTPUT FORMATTING
+# -------------------------
+
+[\] journalctl -o short
+[/] Default concise log format
+
+[\] journalctl -o verbose
+[/] Detailed structured output
+
+[\] journalctl -o json
+[/] JSON formatted logs
+
+[\] journalctl -o cat
+[/] Show only message content
+
+# -------------------------
+# DISK / SIZE CONTROL
+# -------------------------
+
+[\] journalctl --disk-usage
+[/] Show total journal disk usage
+
+[\] journalctl --vacuum-time=7d
+[/] Remove logs older than 7 days
+
+[\] journalctl --vacuum-size=500M
+[/] Limit journal storage size
+
+# -------------------------
+# USERS / BOOT STRATEGY
+# -------------------------
+
+[\] journalctl _UID=1000
+[/] Show logs for a specific user
+
+[\] journalctl _SYSTEMD_UNIT=ssh.service
+[/] Filter by systemd unit
+
+[\] journalctl _PID=1234
+[/] Show logs from specific process
+
+# -------------------------
+# SEARCH / FILTER
+# -------------------------
+
+[\] journalctl | grep error
+[/] Search logs for errors
+
+[\] journalctl -xe
+[/] Show detailed recent error explanations
+
+[\] journalctl --grep "failed"
+[/] Filter logs by keyword
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] journalctl -u ssh -f | tee ssh.log
+[/] Live log capture to file
+
+[\] journalctl -b -1 > previous_boot.log
+[/] Save previous boot logs
+
+[\] journalctl -p 3 -b | column -t
+[/] Format error logs for readability
