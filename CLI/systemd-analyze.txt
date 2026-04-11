@@ -1,0 +1,88 @@
+[X] systemd-analyze Command List
+
+[\] systemd-analyze
+[/] Show overall boot time and kernel/userspace breakdown
+
+[\] systemd-analyze blame
+[/] List services ordered by startup time (slowest first)
+
+[\] systemd-analyze critical-chain
+[/] Show dependency chain of boot-critical services
+
+[\] systemd-analyze time
+[/] Display kernel + userspace boot timing summary
+
+[\] systemd-analyze plot > boot.svg
+[/] Generate boot timeline visualization (SVG)
+
+[\] systemd-analyze dump
+[/] Dump internal systemd state for debugging
+
+# -------------------------
+# SECURITY / VERIFICATION
+# -------------------------
+
+[\] systemd-analyze verify
+[/] Check unit files for errors and misconfigurations
+
+[\] systemd-analyze verify /etc/systemd/system/*.service
+[/] Validate custom service files
+
+# -------------------------
+# CALENDAR / TIMING ANALYSIS
+# -------------------------
+
+[\] systemd-analyze calendar "Mon *-*-* 12:00:00"
+[/] Parse and test calendar event expressions
+
+[\] systemd-analyze timestamp "2026-01-01 12:00:00"
+[/] Convert and validate timestamps
+
+# -------------------------
+# UNIT ANALYSIS
+# -------------------------
+
+[\] systemd-analyze security nginx.service
+[/] Show security exposure score for a service
+
+[\] systemd-analyze security sshd.service
+[/] Analyze service sandboxing/security level
+
+[\] systemd-analyze cat-config systemd/system.conf
+[/] Display merged configuration files
+
+# -------------------------
+# PROFILE / BOOT OPTIMIZATION
+# -------------------------
+
+[\] systemd-analyze blame | head
+[/] Identify top slow boot services
+
+[\] systemd-analyze critical-chain multi-user.target
+[/] Show boot dependency chain to target
+
+[\] systemd-analyze plot > system-boot.svg
+[/] Create full boot performance graph
+
+# -------------------------
+# FILE / UNIT INSPECTION
+# -------------------------
+
+[\] systemd-analyze unit-paths
+[/] Show all systemd unit search paths
+
+[\] systemd-analyze cat-config
+[/] Show effective configuration after overrides
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] systemd-analyze blame | sort -nr | head
+[/] Sort and show slowest boot services
+
+[\] systemd-analyze time && systemd-analyze blame
+[/] Full boot timing breakdown
+
+[\] systemd-analyze plot | display
+[/] Generate and view boot performance graph
