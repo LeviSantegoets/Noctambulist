@@ -1,0 +1,175 @@
+[X] iptables Command List
+
+[\] iptables -h
+[/] Show help for iptables command
+
+[\] iptables -L
+[/] List all firewall rules
+
+[\] iptables -L -v
+[/] List rules with verbose packet/byte counters
+
+[\] iptables -L -n
+[/] Show rules with numeric output (no DNS resolution)
+
+[\] iptables -L -v -n
+[/] Verbose + numeric rule listing
+
+# -------------------------
+# TABLES
+# -------------------------
+
+[\] iptables -t filter -L
+[/] View filter table (default firewall rules)
+
+[\] iptables -t nat -L
+[/] View NAT table (network address translation)
+
+[\] iptables -t mangle -L
+[/] View packet modification rules
+
+[\] iptables -t raw -L
+[/] View raw packet processing rules
+
+# -------------------------
+# CHAINS
+# -------------------------
+
+[\] iptables -L INPUT
+[/] View incoming traffic rules
+
+[\] iptables -L OUTPUT
+[/] View outgoing traffic rules
+
+[\] iptables -L FORWARD
+[/] View forwarded traffic rules
+
+# -------------------------
+# ALLOW TRAFFIC
+# -------------------------
+
+[\] iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+[/] Allow SSH inbound traffic
+
+[\] iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+[/] Allow HTTP inbound traffic
+
+[\] iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+[/] Allow HTTPS inbound traffic
+
+[\] iptables -A OUTPUT -p tcp --dport 53 -j ACCEPT
+[/] Allow DNS outbound traffic (TCP)
+
+# -------------------------
+# BLOCK TRAFFIC
+# -------------------------
+
+[\] iptables -A INPUT -p tcp --dport 23 -j DROP
+[/] Block Telnet inbound traffic
+
+[\] iptables -A INPUT -s 192.168.1.100 -j DROP
+[/] Block specific IP address
+
+[\] iptables -A INPUT -p icmp -j DROP
+[/] Block ping (ICMP)
+
+[\] iptables -A OUTPUT -p tcp --dport 25 -j DROP
+[/] Block SMTP outbound traffic
+
+# -------------------------
+# STATEFUL FIREWALL RULES
+# -------------------------
+
+[\] iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+[/] Allow established connections
+
+[\] iptables -A INPUT -m conntrack --ctstate NEW -p tcp --dport 22 -j ACCEPT
+[/] Allow new SSH connections
+
+# -------------------------
+# NAT (NETWORK ADDRESS TRANSLATION)
+# -------------------------
+
+[\] iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+[/] Enable internet sharing via NAT
+
+[\] iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+[/] Redirect HTTP traffic to local port
+
+# -------------------------
+# PORT FORWARDING
+# -------------------------
+
+[\] iptables -A FORWARD -p tcp -d 192.168.1.10 --dport 80 -j ACCEPT
+[/] Allow forwarded HTTP traffic
+
+[\] iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to 192.168.1.10:22
+[/] Forward external SSH port to internal host
+
+# -------------------------
+# DELETE RULES
+# -------------------------
+
+[\] iptables -D INPUT -p tcp --dport 22 -j ACCEPT
+[/] Delete specific SSH rule
+
+[\] iptables -F
+[/] Flush all rules (clear firewall)
+
+[\] iptables -t nat -F
+[/] Flush NAT table rules
+
+[\] iptables -X
+[/] Delete custom chains
+
+# -------------------------
+# DEFAULT POLICIES
+# -------------------------
+
+[\] iptables -P INPUT DROP
+[/] Drop all incoming traffic by default
+
+[\] iptables -P OUTPUT ACCEPT
+[/] Allow all outgoing traffic
+
+[\] iptables -P FORWARD DROP
+[/] Block forwarded traffic by default
+
+# -------------------------
+# SAVE / RESTORE
+# -------------------------
+
+[\] iptables-save
+[/] Save current firewall configuration
+
+[\] iptables-restore < rules.v4
+[/] Restore firewall rules from file
+
+[\] netfilter-persistent save
+[/] Persist iptables rules across reboot (Debian/Ubuntu)
+
+# -------------------------
+# MONITORING / DEBUGGING
+# -------------------------
+
+[\] iptables -L -v -n --line-numbers
+[/] Show rules with line numbers
+
+[\] watch iptables -L -v -n
+[/] Live monitor firewall activity
+
+[\] iptables -L -v -n | grep DROP
+[/] Show blocked traffic rules
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] iptables -L -v -n | column -t
+[/] Format firewall rules for readability
+
+[\] iptables-save > backup.rules
+[/] Backup firewall configuration
+
+[\] iptables-restore < backup.rules
+[/] Restore firewall from backup
