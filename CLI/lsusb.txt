@@ -1,0 +1,94 @@
+[X] lsusb Command List
+
+[\] lsusb
+[/] List all USB devices
+
+[\] lsusb -h
+[/] Show help menu
+
+[\] lsusb --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] lsusb
+[/] Show connected USB devices (basic view)
+
+[\] lsusb -v
+[/] Show verbose USB device details (requires root for full info)
+
+[\] lsusb -vv
+[/] Extra verbose USB information
+
+[\] lsusb -vvv
+[/] Maximum verbosity (deep device descriptors)
+
+# -------------------------
+# FILTERING
+# -------------------------
+
+[\] lsusb | grep -i mouse
+[/] Filter USB mouse devices
+
+[\] lsusb | grep -i keyboard
+[/] Filter USB keyboards
+
+[\] lsusb | grep -i storage
+[/] Show USB storage devices
+
+[\] lsusb | grep -i hub
+[/] Show USB hubs
+
+# -------------------------
+# DEVICE IDENTIFICATION
+# -------------------------
+
+[\] lsusb -t
+[/] Show USB device tree topology
+
+[\] lsusb -d 8087:0032
+[/] Show specific device by vendor:product ID
+
+[\] lsusb -s 001:002
+[/] Show device at specific bus:device location
+
+# -------------------------
+# DETAILED DEVICE INFO
+# -------------------------
+
+[\] lsusb -v -d 8087:0032
+[/] Show verbose info for specific device
+
+[\] lsusb -v | less
+[/] Page through full USB descriptor dump
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] lsusb && dmesg | grep -i usb
+[/] Check USB devices + kernel logs
+
+[\] lsusb -t && lsusb -v
+[/] Combine topology + detailed device info
+
+[\] lsusb | column -t
+[/] Format output for readability
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] lsusb | tee usb_report.txt
+[/] Save USB device list to file
+
+[\] lsusb -t > usb_tree.txt
+[/] Save USB topology tree
+
+[\] lsusb -v | grep -E "Bus|Device|ID"
+[/] Extract key identification fields
+
+[\] lsusb && lspci
+[/] Compare USB and PCI hardware inventory
