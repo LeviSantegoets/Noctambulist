@@ -1,0 +1,117 @@
+[X] VLAN Command List
+
+[\] ip link show
+[/] Show all network interfaces including VLAN interfaces
+
+[\] ip -d link show
+[/] Show detailed interface info (including VLAN config)
+
+# -------------------------
+# VLAN CREATION (IPROUTE2)
+# -------------------------
+
+[\] ip link add link eth0 name eth0.10 type vlan id 10
+[/] Create VLAN interface 10 on eth0
+
+[\] ip link add link eth0 name eth0.20 type vlan id 20
+[/] Create VLAN interface 20 on eth0
+
+[\] ip link set eth0.10 up
+[/] Bring VLAN interface up
+
+[\] ip link set eth0.20 up
+[/] Activate VLAN interface
+
+# -------------------------
+# IP CONFIGURATION ON VLAN
+# -------------------------
+
+[\] ip addr add 192.168.10.1/24 dev eth0.10
+[/] Assign IP address to VLAN 10 interface
+
+[\] ip addr add 192.168.20.1/24 dev eth0.20
+[/] Assign IP address to VLAN 20 interface
+
+[\] ip addr show eth0.10
+[/] Show VLAN interface IP configuration
+
+# -------------------------
+# VLAN REMOVAL
+# -------------------------
+
+[\] ip link delete eth0.10
+[/] Delete VLAN interface 10
+
+[\] ip link delete eth0.20
+[/] Delete VLAN interface 20
+
+# -------------------------
+# VLAN VIA BRIDGE INTEGRATION
+# -------------------------
+
+[\] bridge vlan add dev eth0 vid 10
+[/] Add VLAN 10 to bridge port
+
+[\] bridge vlan add dev eth0 vid 20
+[/] Add VLAN 20 to bridge port
+
+[\] bridge vlan show
+[/] Show VLAN assignments on bridge
+
+[\] bridge vlan del dev eth0 vid 10
+[/] Remove VLAN 10 from interface
+
+# -------------------------
+# SWITCHPORT / TRUNK CONFIGURATION
+# -------------------------
+
+[\] ip link set eth0 type vlan egress-qos-map 0:0 1:1
+[/] Map VLAN priority to QoS class
+
+[\] ip link set eth0 mtu 1500
+[/] Set MTU for VLAN interface
+
+[\] ip link set eth0 up
+[/] Ensure physical interface is active for VLAN trunking
+
+# -------------------------
+# MONITORING / TROUBLESHOOTING
+# -------------------------
+
+[\] ip -d link show eth0.10
+[/] Show VLAN metadata and configuration
+
+[\] bridge vlan show
+[/] Show VLAN membership in bridges
+
+[\] cat /proc/net/vlan/config
+[/] Display VLAN kernel configuration (if supported)
+
+[\] ip route show
+[/] Verify routing for VLAN networks
+
+# -------------------------
+# ADVANCED VLAN OPERATIONS
+# -------------------------
+
+[\] ip link add link eth0 name eth0.100 type vlan id 100
+[/] Create VLAN 100 interface
+
+[\] ip link set eth0.100 up
+[/] Activate VLAN 100
+
+[\] ip addr add 10.100.0.1/24 dev eth0.100
+[/] Assign IP to VLAN 100
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ip link add link eth0 name eth0.10 type vlan id 10 && ip link set eth0.10 up
+[/] Create and activate VLAN interface
+
+[\] ip -d link show | grep vlan
+[/] Filter VLAN interfaces
+
+[\] ip addr show && bridge vlan show
+[/] Verify VLAN + bridge configuration
