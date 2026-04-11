@@ -1,0 +1,150 @@
+[X] netstat Command List
+
+[\] netstat
+[/] Display basic network statistics
+
+[\] netstat -h
+[/] Show help menu
+
+# -------------------------
+# CONNECTIONS
+# -------------------------
+
+[\] netstat -a
+[/] Show all connections and listening ports
+
+[\] netstat -t
+[/] Show TCP connections only
+
+[\] netstat -u
+[/] Show UDP connections only
+
+[\] netstat -l
+[/] Show listening sockets only
+
+[\] netstat -p
+[/] Show process ID and program name
+
+[\] netstat -at
+[/] Show all TCP connections
+
+[\] netstat -au
+[/] Show all UDP connections
+
+# -------------------------
+# NUMERIC OUTPUT
+# -------------------------
+
+[\] netstat -n
+[/] Show numeric addresses (no DNS resolution)
+
+[\] netstat -an
+[/] Show all connections in numeric format
+
+[\] netstat -tn
+[/] Show TCP connections with numeric output
+
+[\] netstat -un
+[/] Show UDP connections with numeric output
+
+# -------------------------
+# LISTENING PORTS
+# -------------------------
+
+[\] netstat -tuln
+[/] Show all listening TCP/UDP ports (numeric)
+
+[\] netstat -tulpn
+[/] Show listening ports with process info
+
+[\] netstat -ltn
+[/] Show listening TCP ports only
+
+[\] netstat -lun
+[/] Show listening UDP ports only
+
+# -------------------------
+# ROUTING TABLE
+# -------------------------
+
+[\] netstat -r
+[/] Display kernel routing table
+
+[\] netstat -rn
+[/] Show routing table (numeric only)
+
+# -------------------------
+# INTERFACES
+# -------------------------
+
+[\] netstat -i
+[/] Show network interface statistics
+
+[\] netstat -ie
+[/] Show extended interface info
+
+# -------------------------
+# PROTOCOL STATISTICS
+# -------------------------
+
+[\] netstat -s
+[/] Show protocol statistics (TCP/UDP/ICMP)
+
+[\] netstat -st
+[/] Show TCP statistics only
+
+[\] netstat -su
+[/] Show UDP statistics only
+
+# -------------------------
+# RAW SOCKETS
+# -------------------------
+
+[\] netstat -w
+[/] Show raw sockets (if supported)
+
+# -------------------------
+# CONTINUOUS MONITORING
+# -------------------------
+
+[\] watch netstat -tulpn
+[/] Live monitoring of open ports
+
+[\] netstat -c
+[/] Continuously update network statistics
+
+# -------------------------
+# PROCESS MAPPING
+# -------------------------
+
+[\] netstat -p | grep ssh
+[/] Find process using SSH port/service
+
+[\] netstat -tulpn | grep LISTEN
+[/] Show all listening services
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] netstat -an | grep ESTABLISHED
+[/] Show active connections
+
+[\] netstat -rn
+[/] Verify routing configuration
+
+[\] netstat -i
+[/] Check interface packet errors
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] netstat -tulpn | column -t
+[/] Format output into readable table
+
+[\] netstat -an | wc -l
+[/] Count total connections
+
+[\] netstat -tulpn > network.txt
+[/] Save network state to file
