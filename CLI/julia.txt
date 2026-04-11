@@ -1,0 +1,149 @@
+[X] Julia Command List
+
+[\] julia
+[/] Start Julia REPL (interactive shell)
+
+[\] julia --help
+[/] Show Julia help and startup options
+
+[\] julia -v
+[/] Show Julia version
+
+# -------------------------
+# RUNNING SCRIPTS
+# -------------------------
+
+[\] julia script.jl
+[/] Run a Julia script file
+
+[\] julia -e "println(2+2)"
+[/] Execute inline Julia code
+
+[\] julia --project
+[/] Start Julia with project environment
+
+[\] julia --project=.
+[/] Activate current directory project
+
+# -------------------------
+# PACKAGE MANAGEMENT (Pkg)
+# -------------------------
+
+[\] julia -e 'using Pkg; Pkg.add("DataFrames")'
+[/] Add package
+
+[\] julia -e 'using Pkg; Pkg.instantiate()'
+[/] Install project dependencies
+
+[\] julia -e 'using Pkg; Pkg.update()'
+[/] Update all packages
+
+[\] julia -e 'using Pkg; Pkg.status()'
+[/] Show installed packages
+
+[\] julia -e 'using Pkg; Pkg.rm("DataFrames")'
+[/] Remove package
+
+# -------------------------
+# REPL MODE SHORTCUTS
+# -------------------------
+
+[\] ] add DataFrames
+[/] Enter package manager and add package
+
+[\] ] status
+[/] Show package status in Pkg mode
+
+[\] ] update
+[/] Update packages in Pkg mode
+
+[\] ] remove DataFrames
+[/] Remove package in Pkg mode
+
+[\] ] activate .
+[/] Activate local project environment
+
+# -------------------------
+# PERFORMANCE / THREADING
+# -------------------------
+
+[\] julia -t 4
+[/] Run Julia with 4 threads
+
+[\] JULIA_NUM_THREADS=auto julia
+[/] Auto-detect number of threads
+
+[\] julia --check-bounds=yes
+[/] Enable bounds checking (debug mode)
+
+# -------------------------
+# DEBUGGING / DEVELOPMENT
+# -------------------------
+
+[\] julia -g 2 script.jl
+[/] Run with debugging level 2
+
+[\] julia --compile=min script.jl
+[/] Minimize precompilation
+
+[\] julia --trace-compile
+[/] Show compilation trace
+
+# -------------------------
+# ENVIRONMENT / PROJECTS
+# -------------------------
+
+[\] julia --project=MyProject
+[/] Use specific project environment
+
+[\] julia -e 'using Pkg; Pkg.activate(".")'
+[/] Activate current directory project
+
+[\] julia depot status
+[/] Show Julia package depot usage (via commands in REPL)
+
+# -------------------------
+# NOTEBOOK / INTERACTIVE
+# -------------------------
+
+[\] julia -e 'using IJulia; notebook()'
+[/] Start Jupyter notebook server
+
+[\] jupyter notebook
+[/] Launch Jupyter for Julia kernel
+
+# -------------------------
+# COMPILATION / BINARY
+# -------------------------
+
+[\] julia -e 'using PackageCompiler'
+[/] Load PackageCompiler for system images
+
+[\] julia --sysimage sys.so
+[/] Run with custom system image
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] JULIA_DEBUG=all julia script.jl
+[/] Enable full debug logging
+
+[\] julia --startup-file=no
+[/] Run without startup configuration
+
+[\] julia --handle-signals=no
+[/] Disable signal handling (advanced debugging)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] julia --project=. -e 'using Pkg; Pkg.instantiate() && Pkg.precompile()'
+[/] Setup and precompile project
+
+[\] julia script.jl && echo "Done"
+[/] Run script and confirm completion
+
+[\] julia -t auto script.jl
+[/] Run script with automatic threading
