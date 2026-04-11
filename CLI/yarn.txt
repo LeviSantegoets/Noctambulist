@@ -1,0 +1,169 @@
+[X] Yarn Command List
+
+[\] yarn
+[/] Show Yarn general help and command overview
+
+[\] yarn -h
+[/] Show help menu
+
+[\] yarn --help
+[/] Display full help options
+
+[\] yarn -v
+[/] Show installed Yarn version
+
+# -------------------------
+# PROJECT INITIALIZATION
+# -------------------------
+
+[\] yarn init
+[/] Create package.json interactively
+
+[\] yarn init -y
+[/] Initialize project with defaults
+
+# -------------------------
+# INSTALLING PACKAGES
+# -------------------------
+
+[\] yarn add express
+[/] Install package to dependencies
+
+[\] yarn add -D jest
+[/] Install package as dev dependency
+
+[\] yarn add -g typescript
+[/] Install global package
+
+[\] yarn install
+[/] Install all dependencies from lockfile
+
+[\] yarn
+[/] Shortcut for yarn install
+
+# -------------------------
+# REMOVING PACKAGES
+# -------------------------
+
+[\] yarn remove express
+[/] Remove installed package
+
+[\] yarn global remove typescript
+[/] Remove global package
+
+# -------------------------
+# UPDATING PACKAGES
+# -------------------------
+
+[\] yarn upgrade
+[/] Upgrade all dependencies
+
+[\] yarn upgrade express
+[/] Upgrade specific package
+
+[\] yarn outdated
+[/] Show outdated dependencies
+
+# -------------------------
+# RUNNING SCRIPTS
+# -------------------------
+
+[\] yarn start
+[/] Run start script from package.json
+
+[\] yarn build
+[/] Run build script
+
+[\] yarn test
+[/] Run test script
+
+[\] yarn dev
+[/] Run development script
+
+[\] yarn run
+[/] List available scripts
+
+# -------------------------
+# CACHE MANAGEMENT
+# -------------------------
+
+[\] yarn cache clean
+[/] Clear Yarn cache
+
+[\] yarn cache list
+[/] List cached packages
+
+# -------------------------
+# WORKSPACES
+# -------------------------
+
+[\] yarn workspaces list
+[/] List workspace packages
+
+[\] yarn workspaces info
+[/] Show workspace dependency tree
+
+[\] yarn workspace myapp add lodash
+[/] Add dependency to specific workspace
+
+# -------------------------
+# AUDIT / SECURITY
+# -------------------------
+
+[\] yarn audit
+[/] Check for vulnerabilities
+
+[\] yarn audit --level high
+[/] Show high severity issues only
+
+# -------------------------
+# VERSION / INFO
+# -------------------------
+
+[\] yarn info express
+[/] Show package metadata
+
+[\] yarn list
+[/] Show installed dependencies
+
+[\] yarn list --depth=0
+[/] Show top-level dependencies only
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] yarn install --force
+[/] Force reinstall dependencies
+
+[\] yarn install --check-files
+[/] Verify installed files
+
+[\] yarn doctor
+[/] Diagnose Yarn environment
+
+# -------------------------
+# MODERN YARN (BERRY) COMMANDS
+# -------------------------
+
+[\] yarn set version stable
+[/] Switch to stable Yarn Berry version
+
+[\] yarn config set nodeLinker node-modules
+[/] Set dependency resolution mode
+
+[\] yarn plugin list
+[/] List installed Yarn plugins
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] yarn install && yarn build
+[/] Install dependencies and build project
+
+[\] yarn audit && yarn outdated
+[/] Check security and outdated packages
+
+[\] yarn install && yarn test
+[/] Install and run tests
