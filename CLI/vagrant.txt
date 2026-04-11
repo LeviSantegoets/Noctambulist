@@ -1,0 +1,155 @@
+[X] Vagrant Command List
+
+[\] vagrant
+[/] Show Vagrant general help and command overview
+
+[\] vagrant --help
+[/] Display full Vagrant help menu
+
+[\] vagrant version
+[/] Show installed Vagrant version
+
+# -------------------------
+# PROJECT INITIALIZATION
+# -------------------------
+
+[\] vagrant init
+[/] Create default Vagrantfile in current directory
+
+[\] vagrant init hashicorp/bionic64
+[/] Initialize project with specific box
+
+[\] vagrant init ubuntu/focal64
+[/] Create Vagrantfile using Ubuntu box
+
+# -------------------------
+# BOX MANAGEMENT
+# -------------------------
+
+[\] vagrant box list
+[/] List installed Vagrant boxes
+
+[\] vagrant box add hashicorp/bionic64
+[/] Download and add box locally
+
+[\] vagrant box remove hashicorp/bionic64
+[/] Remove installed box
+
+[\] vagrant box update
+[/] Update current box version
+
+# -------------------------
+# VM LIFECYCLE
+# -------------------------
+
+[\] vagrant up
+[/] Start and provision virtual machine
+
+[\] vagrant up --provider=virtualbox
+[/] Start VM with specific provider
+
+[\] vagrant halt
+[/] Gracefully shut down VM
+
+[\] vagrant reload
+[/] Restart VM and reload configuration
+
+[\] vagrant suspend
+[/] Suspend running VM
+
+[\] vagrant resume
+[/] Resume suspended VM
+
+[\] vagrant destroy
+[/] Stop and delete VM
+
+[\] vagrant destroy -f
+[/] Force destroy without confirmation
+
+# -------------------------
+# ACCESS / LOGIN
+# -------------------------
+
+[\] vagrant ssh
+[/] SSH into running VM
+
+[\] vagrant ssh-config
+[/] Show SSH configuration details
+
+# -------------------------
+# STATUS / INFO
+# -------------------------
+
+[\] vagrant status
+[/] Show VM current state
+
+[\] vagrant global-status
+[/] Show all Vagrant environments on system
+
+# -------------------------
+# PROVISIONING
+# -------------------------
+
+[\] vagrant provision
+[/] Run provisioning scripts manually
+
+[\] vagrant reload --provision
+[/] Restart and reprovision VM
+
+[\] vagrant up --provision
+[/] Start VM and force provisioning
+
+# -------------------------
+# SNAPSHOTS
+# -------------------------
+
+[\] vagrant snapshot save cleanstate
+[/] Save VM snapshot
+
+[\] vagrant snapshot list
+[/] List snapshots
+
+[\] vagrant snapshot restore cleanstate
+[/] Restore saved snapshot
+
+[\] vagrant snapshot delete cleanstate
+[/] Delete snapshot
+
+# -------------------------
+# FILE TRANSFER / PLUGINS
+# -------------------------
+
+[\] vagrant plugin list
+[/] List installed plugins
+
+[\] vagrant plugin install vagrant-vbguest
+[/] Install plugin
+
+[\] vagrant plugin uninstall vagrant-vbguest
+[/] Remove plugin
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] vagrant validate
+[/] Validate Vagrantfile syntax
+
+[\] vagrant ssh -c "uptime"
+[/] Run remote command without interactive shell
+
+[\] VAGRANT_LOG=debug vagrant up
+[/] Start VM with debug logging
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] vagrant init ubuntu/focal64 && vagrant up
+[/] Initialize and launch Ubuntu VM
+
+[\] vagrant halt && vagrant reload --provision
+[/] Restart VM with reprovisioning
+
+[\] vagrant destroy -f && vagrant up
+[/] Rebuild VM from scratch
