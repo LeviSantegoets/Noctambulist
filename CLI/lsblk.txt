@@ -1,0 +1,104 @@
+[X] lsblk Command List
+
+[\] lsblk
+[/] Show all block devices in tree format
+
+[\] lsblk -h
+[/] Show help menu
+
+[\] lsblk --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] lsblk
+[/] List disks, partitions, and mount points
+
+[\] lsblk -a
+[/] Show all devices including empty/loop devices
+
+[\] lsblk -e 7
+[/] Exclude loop devices (type 7)
+
+[\] lsblk -d
+[/] Show only physical disks (no partitions)
+
+# -------------------------
+# DETAILED OUTPUT
+# -------------------------
+
+[\] lsblk -f
+[/] Show filesystem information (UUID, type, label)
+
+[\] lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
+[/] Custom output columns
+
+[\] lsblk -o +UUID
+[/] Add UUID column to default output
+
+[\] lsblk -o +MODEL,SERIAL
+[/] Show disk model and serial number
+
+# -------------------------
+# HUMAN READABLE
+# -------------------------
+
+[\] lsblk -b
+[/] Show sizes in bytes
+
+[\] lsblk -m
+[/] Show permissions and ownership info
+
+[\] lsblk -J
+[/] Output in JSON format
+
+# -------------------------
+# FILTERING
+# -------------------------
+
+[\] lsblk /dev/sda
+[/] Show information for specific disk
+
+[\] lsblk /dev/nvme0n1
+[/] Show NVMe disk layout
+
+[\] lsblk -S
+[/] Show SCSI devices only
+
+# -------------------------
+# MOUNT INFORMATION
+# -------------------------
+
+[\] lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT
+[/] Show filesystem and mount points
+
+[\] lsblk -o NAME,MOUNTPOINT | grep "/"
+[/] Show only mounted partitions
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] lsblk -f && df -h
+[/] Combine filesystem + usage info
+
+[\] lsblk -o NAME,SIZE,ROTA,TYPE
+[/] Check disk type (SSD vs HDD)
+
+[\] lsblk -d -o NAME,SIZE,MODEL
+[/] Identify physical disks with model info
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] lsblk -f | column -t
+[/] Format filesystem table for readability
+
+[\] lsblk -J > disks.json
+[/] Export disk layout to JSON
+
+[\] lsblk && blkid
+[/] Show block devices + UUID mapping
