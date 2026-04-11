@@ -1,0 +1,181 @@
+[X] NPM Command List
+
+[\] npm
+[/] Show NPM general help and command overview
+
+[\] npm -h
+[/] Show help menu
+
+[\] npm --help
+[/] Display full help options
+
+[\] npm -v
+[/] Show installed NPM version
+
+# -------------------------
+# PROJECT INITIALIZATION
+# -------------------------
+
+[\] npm init
+[/] Create package.json interactively
+
+[\] npm init -y
+[/] Create default package.json automatically
+
+[\] npm init <package>
+[/] Initialize project using a template initializer
+
+# -------------------------
+# INSTALLING PACKAGES
+# -------------------------
+
+[\] npm install express
+[/] Install package locally
+
+[\] npm i express
+[/] Short form of install
+
+[\] npm install -g typescript
+[/] Install package globally
+
+[\] npm install
+[/] Install all dependencies from package.json
+
+[\] npm ci
+[/] Clean install based on package-lock.json
+
+# -------------------------
+# REMOVING PACKAGES
+# -------------------------
+
+[\] npm uninstall express
+[/] Remove installed package
+
+[\] npm rm express
+[/] Short form of uninstall
+
+[\] npm uninstall -g typescript
+[/] Remove global package
+
+# -------------------------
+# UPDATING PACKAGES
+# -------------------------
+
+[\] npm update
+[/] Update all dependencies
+
+[\] npm update express
+[/] Update specific package
+
+[\] npm outdated
+[/] Show outdated dependencies
+
+# -------------------------
+# RUNNING SCRIPTS
+# -------------------------
+
+[\] npm run start
+[/] Run start script from package.json
+
+[\] npm run build
+[/] Run build script
+
+[\] npm run test
+[/] Run test script
+
+[\] npm run dev
+[/] Run development script
+
+[\] npm run
+[/] List all available scripts
+
+# -------------------------
+# AUDIT / SECURITY
+# -------------------------
+
+[\] npm audit
+[/] Check for vulnerabilities
+
+[\] npm audit fix
+[/] Automatically fix vulnerabilities
+
+[\] npm audit fix --force
+[/] Force fix (may introduce breaking changes)
+
+# -------------------------
+# CACHE MANAGEMENT
+# -------------------------
+
+[\] npm cache verify
+[/] Verify cache integrity
+
+[\] npm cache clean --force
+[/] Clear NPM cache
+
+# -------------------------
+# PACKAGE INFO
+# -------------------------
+
+[\] npm list
+[/] Show installed dependencies tree
+
+[\] npm list -g
+[/] Show globally installed packages
+
+[\] npm info express
+[/] Show package metadata
+
+[\] npm view express versions
+[/] List available versions
+
+# -------------------------
+# PUBLISHING
+# -------------------------
+
+[\] npm login
+[/] Login to NPM registry
+
+[\] npm publish
+[/] Publish package to registry
+
+[\] npm pack
+[/] Create tarball of package
+
+# -------------------------
+# VERSIONING
+# -------------------------
+
+[\] npm version patch
+[/] Increment patch version
+
+[\] npm version minor
+[/] Increment minor version
+
+[\] npm version major
+[/] Increment major version
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] npm doctor
+[/] Check NPM environment health
+
+[\] npm config list
+[/] Show NPM configuration
+
+[\] npm rebuild
+[/] Rebuild installed packages
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] npm install && npm run build
+[/] Install dependencies and build project
+
+[\] npm audit && npm outdated
+[/] Check security issues and outdated packages
+
+[\] npm ci && npm run test
+[/] Clean install and run tests
