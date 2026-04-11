@@ -1,0 +1,77 @@
+[X] uname Command List
+
+[\] uname
+[/] Show kernel name only
+
+[\] uname -h
+[/] Show help menu
+
+[\] uname --help
+[/] Display full help options
+
+# -------------------------
+# BASIC SYSTEM INFO
+# -------------------------
+
+[\] uname -a
+[/] Show all system information (kernel, hostname, architecture, etc.)
+
+[\] uname -s
+[/] Show kernel name (e.g., Linux)
+
+[\] uname -n
+[/] Show network hostname
+
+[\] uname -r
+[/] Show kernel release version
+
+[\] uname -v
+[/] Show kernel version details
+
+[\] uname -m
+[/] Show machine hardware architecture (e.g., x86_64)
+
+[\] uname -p
+[/] Show processor type (if available)
+
+[\] uname -i
+[/] Show hardware platform (if available)
+
+# -------------------------
+# HARDWARE / ARCH INFO
+# -------------------------
+
+[\] uname -m && uname -r
+[/] Show architecture + kernel version
+
+[\] uname -a | column -t
+[/] Format full system info for readability
+
+[\] uname -m && uname -p
+[/] Compare architecture and CPU type
+
+# -------------------------
+# TROUBLESHOOTING / DIAGNOSTICS
+# -------------------------
+
+[\] uname -a > system_info.txt
+[/] Save full system information to file
+
+[\] uname -r | grep "linux"
+[/] Check kernel version context
+
+[\] uname -a && lscpu
+[/] Combine kernel and CPU details (extended diagnostics)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] uname -a | tee system.log
+[/] Log full system info
+
+[\] uname -r && cat /etc/os-release
+[/] Combine kernel version with OS version
+
+[\] uname -m && file /bin/bash
+[/] Check architecture consistency with binaries
