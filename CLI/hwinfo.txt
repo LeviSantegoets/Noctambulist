@@ -1,4 +1,4 @@
-[X] hwinfo (Hardware Information Tool) Command List
+[X] hwinfo Command List
 
 [\] hwinfo
 [/] Show full hardware information report
