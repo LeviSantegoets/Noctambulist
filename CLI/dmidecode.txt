@@ -1,0 +1,132 @@
+[X] dmidecode Command List
+
+[\] dmidecode
+[/] Display full hardware information from BIOS/DMI tables
+
+[\] dmidecode -h
+[/] Show help menu
+
+[\] dmidecode --help
+[/] Display full help options
+
+# -------------------------
+# BASIC SYSTEM INFO
+# -------------------------
+
+[\] dmidecode
+[/] Show complete system hardware details (BIOS, CPU, RAM, motherboard)
+
+[\] dmidecode -q
+[/] Quiet mode (less verbose formatting)
+
+[\] dmidecode -t system
+[/] Show system information (manufacturer, product name)
+
+[\] dmidecode -t bios
+[/] Show BIOS information
+
+# -------------------------
+# HARDWARE COMPONENTS
+# -------------------------
+
+[\] dmidecode -t processor
+[/] Show CPU details (cores, speed, vendor)
+
+[\] dmidecode -t memory
+[/] Show memory device information
+
+[\] dmidecode -t cache
+[/] Show CPU cache information
+
+[\] dmidecode -t baseboard
+[/] Show motherboard details
+
+[\] dmidecode -t chassis
+[/] Show chassis / enclosure information
+
+# -------------------------
+# SPECIFIC DEVICE TYPES
+# -------------------------
+
+[\] dmidecode -t 0
+[/] BIOS information (type ID 0)
+
+[\] dmidecode -t 1
+[/] System information
+
+[\] dmidecode -t 2
+[/] Baseboard information
+
+[\] dmidecode -t 4
+[/] Processor information
+
+[\] dmidecode -t 17
+[/] Memory device information
+
+# -------------------------
+# MEMORY ANALYSIS
+# -------------------------
+
+[\] dmidecode -t memory | less
+[/] View full RAM configuration
+
+[\] dmidecode -t memory | grep -i size
+[/] Show installed memory sizes
+
+[\] dmidecode -t memory | grep -i speed
+[/] Show RAM speed information
+
+# -------------------------
+# SYSTEM IDENTIFICATION
+# -------------------------
+
+[\] dmidecode -s system-manufacturer
+[/] Show system manufacturer
+
+[\] dmidecode -s system-product-name
+[/] Show model name
+
+[\] dmidecode -s system-serial-number
+[/] Show system serial number
+
+[\] dmidecode -s bios-version
+[/] Show BIOS version
+
+[\] dmidecode -s bios-release-date
+[/] Show BIOS release date
+
+# -------------------------
+# CPU DETAILS
+# -------------------------
+
+[\] dmidecode -t processor | grep -i "version"
+[/] Show CPU model/version
+
+[\] dmidecode -t processor | grep -i "core"
+[/] Show core information
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] sudo dmidecode
+[/] Run with root privileges (required)
+
+[\] dmidecode | less
+[/] Page through full hardware dump
+
+[\] dmidecode -t memory && free -h
+[/] Compare BIOS memory info with OS usage
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] dmidecode -t system | tee system_hw.txt
+[/] Save system hardware report
+
+[\] dmidecode -t memory | column -t
+[/] Format memory report
+
+[\] dmidecode -t bios && dmidecode -t processor
+[/] Combined BIOS + CPU hardware overview
