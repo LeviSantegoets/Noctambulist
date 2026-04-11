@@ -1,0 +1,127 @@
+[X] Groovy Command List
+
+[\] groovy
+[/] Start Groovy shell (interactive REPL)
+
+[\] groovy --help
+[/] Show Groovy help and options
+
+[\] groovy -v
+[/] Show Groovy version
+
+# -------------------------
+# SCRIPT EXECUTION
+# -------------------------
+
+[\] groovy script.groovy
+[/] Run Groovy script file
+
+[\] groovy -e "println 'Hello World'"
+[/] Execute inline Groovy code
+
+[\] groovysh
+[/] Start interactive Groovy shell
+
+[\] groovyConsole
+[/] Launch Groovy GUI console (if installed)
+
+# -------------------------
+# CLASS EXECUTION / JAVA INTEROP
+# -------------------------
+
+[\] groovy MyClass.groovy
+[/] Run Groovy class/script directly
+
+[\] groovy -cp lib/* script.groovy
+[/] Run script with external classpath
+
+[\] groovy -Dgroovy.grape.report.downloads=true script.groovy
+[/] Enable dependency download reporting
+
+# -------------------------
+# GRADLE / BUILD INTEGRATION
+# -------------------------
+
+[\] gradle groovyCompile
+[/] Compile Groovy sources via Gradle
+
+[\] gradle test
+[/] Run Groovy-based tests in Gradle project
+
+[\] gradle build
+[/] Build Groovy project
+
+# -------------------------
+# SCRIPT DEBUGGING
+# -------------------------
+
+[\] groovy -d script.groovy
+[/] Enable debugging output
+
+[\] groovy -Dgroovy.debug=true script.groovy
+[/] Enable Groovy debug mode
+
+[\] groovysh -d
+[/] Start Groovy shell with debug mode
+
+# -------------------------
+# DEPENDENCIES (GRAPE)
+# -------------------------
+
+[\] groovy -e "@Grab('org.apache.commons:commons-lang3:3.12.0'); println org.apache.commons.lang3.StringUtils.capitalize('test')"
+[/] Use Grape dependency injection
+
+[\] groovy -Dgrape.root=~/.groovy/grapes script.groovy
+[/] Set custom Grape cache location
+
+# -------------------------
+# REPL USAGE
+# -------------------------
+
+[\] groovysh
+[/] Interactive shell for testing Groovy code
+
+[\] groovysh -cp lib/*
+[/] Start shell with additional classpath
+
+[\] groovysh -d
+[/] Debug interactive shell session
+
+# -------------------------
+# FILE OPERATIONS
+# -------------------------
+
+[\] groovy script.groovy input.txt
+[/] Run script with arguments
+
+[\] groovy -e "new File('test.txt').text = 'Hello'"
+[/] Write file content using Groovy
+
+[\] groovy -e "println new File('.').listFiles()"
+[/] List directory contents
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] groovy -version
+[/] Show detailed Groovy runtime info
+
+[\] groovy -cp . script.groovy
+[/] Run script with current directory classpath
+
+[\] groovy -Dgroovy.inspect=false script.groovy
+[/] Disable object inspection features
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] groovy script.groovy && echo "Done"
+[/] Run script and confirm execution
+
+[\] groovy -e "println new Date()"
+[/] Print current date/time
+
+[\] groovysh && groovy script.groovy
+[/] Interactive testing then script execution
