@@ -1,52 +1,119 @@
-[X] MTR Command List (My Traceroute / Network Diagnostic)
+[X] mtr (My Traceroute) Command List – Network Diagnostics (Fused)
 
 [\] mtr example.com
-[/] Run MTR to host interactively (combine ping + traceroute)
+[/] Run MTR interactively (combines ping + traceroute)
 
-[\] mtr -r example.com
-[/] Report mode (non-interactive, summary after completion)
+[\] mtr 8.8.8.8
+[/] Run MTR to IP address
 
-[\] mtr -c 10 example.com
-[/] Send 10 pings per hop and exit
-
-[\] mtr -w example.com
-[/] Wide output format (full hostnames and IPs)
-
-[\] mtr -b example.com
-[/] Show both hostnames and IP addresses
-
-[\] mtr -n example.com
-[/] Do not resolve hostnames (show only IPs)
-
-[\] mtr -z example.com
-[/] Show compact output (minimal columns)
-
-[\] mtr --report-cycles 20 example.com
-[/] Set number of pings per hop for report
-
-[\] mtr --raw example.com
-[/] Raw output (parseable for scripts)
-
-[\] mtr --json example.com
-[/] Output in JSON format
-
-[\] mtr --tcp example.com
-[/] Use TCP instead of ICMP (for firewalled networks)
-
-[\] mtr --udp example.com
-[/] Use UDP probes (default may vary)
-
-[\] mtr --port 443 example.com
-[/] Specify port for TCP/UDP probes
-
-[\] mtr --interval 1 example.com
-[/] Set interval between pings (1 second)
-
-[\] mtr --ttl 30 example.com
-[/] Set maximum TTL (hops) for traceroute
+[\] mtr google.com
+[/] Diagnose network path and latency to host
 
 [\] mtr --help
 [/] Show help menu
 
 [\] mtr --version
-[/] Show mtr version
+[/] Show MTR version
+
+# -------------------------
+# REPORT / OUTPUT MODES
+# -------------------------
+
+[\] mtr -r example.com
+[/] Report mode (non-interactive summary output)
+
+[\] mtr -rw example.com
+[/] Report mode with wide output formatting
+
+[\] mtr --report example.com
+[/] Explicit report mode execution
+
+[\] mtr -r -c 10 example.com
+[/] Run 10 cycles and generate report
+
+[\] mtr --report-cycles 20 example.com
+[/] Set number of pings per hop in report mode
+
+[\] mtr --raw example.com
+[/] Raw machine-parsable output
+
+[\] mtr --json example.com
+[/] Export results in JSON format
+
+# -------------------------
+# DISPLAY OPTIONS
+# -------------------------
+
+[\] mtr -w example.com
+[/] Wide output (full hostnames + IPs)
+
+[\] mtr -b example.com
+[/] Show both hostnames and IP addresses
+
+[\] mtr -n example.com
+[/] Disable DNS resolution (IP-only output)
+
+[\] mtr -z example.com
+[/] Compact output mode (minimal columns)
+
+# -------------------------
+# PROBES / PROTOCOLS
+# -------------------------
+
+[\] mtr --tcp example.com
+[/] Use TCP probes instead of ICMP
+
+[\] mtr --udp example.com
+[/] Use UDP probes
+
+[\] mtr --port 443 example.com
+[/] Set destination port for TCP/UDP probes
+
+# -------------------------
+# TIMING / CONTROL
+# -------------------------
+
+[\] mtr -c 10 example.com
+[/] Send 10 probes per hop and exit
+
+[\] mtr --interval 1 example.com
+[/] Set 1-second interval between probes
+
+[\] mtr --ttl 30 example.com
+[/] Set maximum hop limit (TTL)
+
+# -------------------------
+# ADVANCED OUTPUT
+# -------------------------
+
+[\] mtr --report-wide --show-ips example.com
+[/] Detailed report with IP visibility
+
+[\] mtr --aslookup example.com
+[/] Show AS (Autonomous System) information (if supported)
+
+[\] mtr -o "LSDR NBAW JMXI" example.com
+[/] Customize output columns
+
+# -------------------------
+# PIPELINE / ANALYSIS
+# -------------------------
+
+[\] mtr -r 8.8.8.8 | tee mtr_report.txt
+[/] Save report while displaying output
+
+[\] mtr -n google.com | column -t
+[/] Format output into readable table
+
+[\] mtr -r -c 10 example.com && ping -c 5 example.com
+[/] Combined MTR + ping diagnostics
+
+# -------------------------
+# NETWORK INTERFACE CONTROL
+# -------------------------
+
+[\] mtr -I eth0 example.com
+[/] Use specific network interface
+
+[\] mtr -a 192.168.1.10 example.com
+[/] Set source IP address
