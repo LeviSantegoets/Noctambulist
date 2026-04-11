@@ -1,0 +1,179 @@
+[X] Terraform Command List
+
+[\] terraform
+[/] Show Terraform general help and command overview
+
+[\] terraform --help
+[/] Display full Terraform help menu
+
+[\] terraform version
+[/] Show installed Terraform version
+
+# -------------------------
+# INITIALIZATION
+# -------------------------
+
+[\] terraform init
+[/] Initialize working directory and download providers
+
+[\] terraform init -upgrade
+[/] Upgrade providers/modules during initialization
+
+[\] terraform init -reconfigure
+[/] Reinitialize backend configuration
+
+# -------------------------
+# VALIDATION / FORMATTING
+# -------------------------
+
+[\] terraform validate
+[/] Validate Terraform configuration syntax
+
+[\] terraform fmt
+[/] Format configuration files
+
+[\] terraform fmt -recursive
+[/] Format all Terraform files recursively
+
+# -------------------------
+# PLANNING
+# -------------------------
+
+[\] terraform plan
+[/] Show execution plan before applying changes
+
+[\] terraform plan -out=tfplan
+[/] Save execution plan to file
+
+[\] terraform plan -var="region=us-east-1"
+[/] Plan with inline variable override
+
+# -------------------------
+# APPLY CHANGES
+# -------------------------
+
+[\] terraform apply
+[/] Apply infrastructure changes interactively
+
+[\] terraform apply -auto-approve
+[/] Apply without confirmation prompt
+
+[\] terraform apply tfplan
+[/] Apply previously saved execution plan
+
+# -------------------------
+# DESTROY INFRASTRUCTURE
+# -------------------------
+
+[\] terraform destroy
+[/] Destroy all managed infrastructure
+
+[\] terraform destroy -auto-approve
+[/] Destroy without confirmation prompt
+
+# -------------------------
+# STATE MANAGEMENT
+# -------------------------
+
+[\] terraform state list
+[/] List resources in Terraform state
+
+[\] terraform state show aws_instance.web
+[/] Show detailed state for one resource
+
+[\] terraform state rm aws_instance.web
+[/] Remove resource from state only
+
+[\] terraform refresh
+[/] Refresh state from real infrastructure
+
+# -------------------------
+# OUTPUTS / VARIABLES
+# -------------------------
+
+[\] terraform output
+[/] Show all defined outputs
+
+[\] terraform output instance_ip
+[/] Show specific output value
+
+[\] terraform console
+[/] Open interactive Terraform expression console
+
+# -------------------------
+# WORKSPACES
+# -------------------------
+
+[\] terraform workspace list
+[/] List all workspaces
+
+[\] terraform workspace new dev
+[/] Create new workspace
+
+[\] terraform workspace select prod
+[/] Switch active workspace
+
+[\] terraform workspace delete dev
+[/] Delete workspace
+
+# -------------------------
+# IMPORT / TAINT
+# -------------------------
+
+[\] terraform import aws_instance.web i-1234567890abcdef0
+[/] Import existing resource into state
+
+[\] terraform taint aws_instance.web
+[/] Mark resource for forced recreation
+
+[\] terraform untaint aws_instance.web
+[/] Remove taint mark
+
+# -------------------------
+# MODULE / GRAPH TOOLS
+# -------------------------
+
+[\] terraform providers
+[/] Show required providers
+
+[\] terraform graph
+[/] Generate dependency graph
+
+[\] terraform graph | dot -Tpng > graph.png
+[/] Export dependency graph as image
+
+# -------------------------
+# LOCK FILE / PROVIDERS
+# -------------------------
+
+[\] terraform providers lock
+[/] Update provider lock file
+
+[\] terraform init -lockfile=readonly
+[/] Use provider lock file without changes
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] terraform show
+[/] Show current state in human-readable format
+
+[\] terraform show tfplan
+[/] Inspect saved execution plan
+
+[\] TF_LOG=DEBUG terraform apply
+[/] Run apply with debug logging
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] terraform init && terraform validate && terraform plan
+[/] Initialize, validate, and preview changes
+
+[\] terraform apply -auto-approve && terraform output
+[/] Deploy infrastructure and show outputs
+
+[\] terraform destroy -auto-approve && terraform state list
+[/] Destroy resources and verify cleanup
