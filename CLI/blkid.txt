@@ -1,0 +1,94 @@
+[X] blkid Command List
+
+[\] blkid
+[/] Show UUID, filesystem type, and labels for block devices
+
+[\] blkid -h
+[/] Show help menu
+
+[\] blkid --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] blkid
+[/] List all block devices with UUID and filesystem info
+
+[\] blkid /dev/sda
+[/] Show info for specific disk
+
+[\] blkid /dev/sda1
+[/] Show info for specific partition
+
+[\] blkid /dev/nvme0n1p1
+[/] Show NVMe partition details
+
+# -------------------------
+# FILTERING OUTPUT
+# -------------------------
+
+[\] blkid -c /dev/null
+[/] Ignore cache and rescan devices
+
+[\] blkid -o list
+[/] Show output in table format
+
+[\] blkid -o value -s UUID /dev/sda1
+[/] Show only UUID value
+
+[\] blkid -o value -s TYPE /dev/sda1
+[/] Show only filesystem type
+
+# -------------------------
+# KEY ATTRIBUTES
+# -------------------------
+
+[\] blkid -s UUID
+[/] Show only UUID fields
+
+[\] blkid -s TYPE
+[/] Show filesystem type only
+
+[\] blkid -s LABEL
+[/] Show partition labels only
+
+[\] blkid -s PARTUUID
+[/] Show partition UUID (GPT systems)
+
+# -------------------------
+# COMBINED EXTRACTION
+# -------------------------
+
+[\] blkid -o export
+[/] Export key=value format for all devices
+
+[\] blkid -o export /dev/sda1
+[/] Export detailed key=value info for one partition
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] blkid && lsblk -f
+[/] Cross-check UUIDs and filesystem info
+
+[\] blkid -c /dev/null && blkid
+[/] Force refresh device metadata
+
+[\] blkid | grep ext4
+[/] Filter ext4 filesystems only
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] blkid -o list | column -t
+[/] Format device list for readability
+
+[\] blkid -o export > disks.txt
+[/] Save filesystem metadata to file
+
+[\] blkid | tee blkid.log
+[/] Log full block device identification output
