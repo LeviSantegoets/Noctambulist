@@ -1,0 +1,110 @@
+[X] lspci Command List
+
+[\] lspci
+[/] List all PCI devices
+
+[\] lspci -h
+[/] Show help menu
+
+[\] lspci --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] lspci
+[/] Show all PCI devices (GPU, NIC, chipset, etc.)
+
+[\] lspci -nn
+[/] Show device IDs alongside names
+
+[\] lspci -v
+[/] Verbose output (more hardware details)
+
+[\] lspci -vv
+[/] Extra verbose output
+
+[\] lspci -vvv
+[/] Maximum verbosity (deep hardware info)
+
+# -------------------------
+# HUMAN READABLE FILTERING
+# -------------------------
+
+[\] lspci | grep -i vga
+[/] Show graphics card (VGA controller)
+
+[\] lspci | grep -i network
+[/] Show network adapters
+
+[\] lspci | grep -i audio
+[/] Show sound devices
+
+[\] lspci | grep -i usb
+[/] Show USB controllers
+
+# -------------------------
+# DEVICE DETAILS
+# -------------------------
+
+[\] lspci -s 00:02.0
+[/] Show specific PCI device details
+
+[\] lspci -s 00:02.0 -v
+[/] Verbose info for specific device
+
+[\] lspci -k
+[/] Show kernel driver in use for each device
+
+[\] lspci -k | grep -A 3 VGA
+[/] Show GPU + driver info
+
+# -------------------------
+# MACHINE READABLE OUTPUT
+# -------------------------
+
+[\] lspci -mm
+[/] Machine-readable format output
+
+[\] lspci -vmm
+[/] Verbose machine-readable format
+
+# -------------------------
+# PCI RESOURCE INFO
+# -------------------------
+
+[\] lspci -t
+[/] Show PCI device tree
+
+[\] lspci -vv | less
+[/] Scroll through full hardware details
+
+[\] lspci -vv | grep -i memory
+[/] Show memory regions used by devices
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] lspci -nnk
+[/] Show devices with IDs and kernel drivers
+
+[\] lspci -k | grep -A 2 Ethernet
+[/] Check network driver status
+
+[\] lspci && lsusb
+[/] Compare PCI and USB hardware lists
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] lspci -nn | tee pci_report.txt
+[/] Save PCI device report
+
+[\] lspci -v | column -t
+[/] Format PCI output for readability
+
+[\] lspci -k | grep -E "VGA|Ethernet|Audio"
+[/] Extract key hardware categories
