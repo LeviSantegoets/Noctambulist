@@ -1,0 +1,172 @@
+[X] Docker Command List
+
+[\] docker
+[/] Show Docker general help and command overview
+
+[\] docker --help
+[/] Display full Docker help menu
+
+[\] docker version
+[/] Show Docker client/server version information
+
+[\] docker info
+[/] Show system-wide Docker information
+
+# -------------------------
+# IMAGE MANAGEMENT
+# -------------------------
+
+[\] docker pull ubuntu
+[/] Download Ubuntu image from Docker Hub
+
+[\] docker images
+[/] List local Docker images
+
+[\] docker rmi ubuntu
+[/] Remove Docker image
+
+[\] docker build -t myapp .
+[/] Build image from Dockerfile in current directory
+
+[\] docker tag myapp myrepo/myapp:v1
+[/] Tag image with repository/version
+
+[\] docker push myrepo/myapp:v1
+[/] Upload image to registry
+
+# -------------------------
+# CONTAINER MANAGEMENT
+# -------------------------
+
+[\] docker run ubuntu
+[/] Run container from Ubuntu image
+
+[\] docker run -it ubuntu bash
+[/] Start interactive Ubuntu shell
+
+[\] docker run -d nginx
+[/] Run Nginx container in detached mode
+
+[\] docker ps
+[/] List running containers
+
+[\] docker ps -a
+[/] List all containers including stopped ones
+
+[\] docker stop container_id
+[/] Stop running container
+
+[\] docker start container_id
+[/] Start stopped container
+
+[\] docker restart container_id
+[/] Restart container
+
+[\] docker rm container_id
+[/] Remove container
+
+# -------------------------
+# EXEC / INTERACTION
+# -------------------------
+
+[\] docker exec -it container_id bash
+[/] Open shell inside running container
+
+[\] docker logs container_id
+[/] Show container logs
+
+[\] docker logs -f container_id
+[/] Follow live logs
+
+[\] docker inspect container_id
+[/] Show detailed container metadata
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] docker network ls
+[/] List Docker networks
+
+[\] docker network create mynet
+[/] Create custom network
+
+[\] docker network inspect mynet
+[/] Show network details
+
+[\] docker run --network mynet nginx
+[/] Run container attached to custom network
+
+# -------------------------
+# VOLUMES
+# -------------------------
+
+[\] docker volume ls
+[/] List Docker volumes
+
+[\] docker volume create mydata
+[/] Create volume
+
+[\] docker volume inspect mydata
+[/] Show volume details
+
+[\] docker run -v mydata:/data ubuntu
+[/] Mount named volume into container
+
+# -------------------------
+# SYSTEM CLEANUP
+# -------------------------
+
+[\] docker system df
+[/] Show Docker disk usage
+
+[\] docker system prune
+[/] Remove unused containers/images/networks
+
+[\] docker container prune
+[/] Remove stopped containers
+
+[\] docker image prune -a
+[/] Remove unused images
+
+# -------------------------
+# DOCKER COMPOSE (PLUGIN)
+# -------------------------
+
+[\] docker compose up
+[/] Start services from docker-compose.yml
+
+[\] docker compose up -d
+[/] Start services in detached mode
+
+[\] docker compose down
+[/] Stop and remove compose services
+
+[\] docker compose ps
+[/] List compose-managed containers
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] docker stats
+[/] Live container resource usage
+
+[\] docker events
+[/] Stream Docker real-time events
+
+[\] docker inspect --format '{{.State.Status}}' container_id
+[/] Check container state only
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] docker pull nginx && docker run -d -p 80:80 nginx
+[/] Pull and launch web server
+
+[\] docker ps | grep nginx
+[/] Filter running Nginx containers
+
+[\] docker logs -f $(docker ps -q)
+[/] Follow logs of running containers
