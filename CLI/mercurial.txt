@@ -1,0 +1,191 @@
+[X] Mercurial Command List
+
+[\] hg
+[/] Show Mercurial general help and command overview
+
+[\] hg --help
+[/] Display full Mercurial help menu
+
+[\] hg version
+[/] Show installed Mercurial version
+
+# -------------------------
+# REPOSITORY SETUP
+# -------------------------
+
+[\] hg init
+[/] Initialize new Mercurial repository in current directory
+
+[\] hg clone https://example.com/repo/project
+[/] Clone remote repository
+
+[\] hg clone https://example.com/repo/project myproject
+[/] Clone into named directory
+
+# -------------------------
+# STATUS / INFO
+# -------------------------
+
+[\] hg status
+[/] Show modified, added, removed, unknown files
+
+[\] hg summary
+[/] Show repository summary status
+
+[\] hg id
+[/] Show current changeset ID
+
+[\] hg paths
+[/] Show configured repository paths
+
+# -------------------------
+# ADD / REMOVE FILES
+# -------------------------
+
+[\] hg add file.txt
+[/] Add file to version control
+
+[\] hg addremove
+[/] Detect new and removed files automatically
+
+[\] hg remove file.txt
+[/] Remove tracked file
+
+[\] hg forget file.txt
+[/] Stop tracking file without deleting it
+
+# -------------------------
+# COMMIT CHANGES
+# -------------------------
+
+[\] hg commit -m "Updated configuration"
+[/] Commit changes with message
+
+[\] hg commit file.txt -m "Updated one file"
+[/] Commit specific file only
+
+[\] hg commit -A -m "Auto add/remove and commit"
+[/] Include add/remove changes automatically
+
+# -------------------------
+# UPDATE / PULL / PUSH
+# -------------------------
+
+[\] hg pull
+[/] Fetch changes from default remote
+
+[\] hg update
+[/] Update working copy to latest pulled revision
+
+[\] hg pull -u
+[/] Pull and update in one command
+
+[\] hg push
+[/] Push local commits to remote repository
+
+# -------------------------
+# LOG / HISTORY
+# -------------------------
+
+[\] hg log
+[/] Show full commit history
+
+[\] hg log -l 10
+[/] Show last 10 changesets
+
+[\] hg log file.txt
+[/] Show history for one file
+
+# -------------------------
+# DIFF / COMPARE
+# -------------------------
+
+[\] hg diff
+[/] Show uncommitted local changes
+
+[\] hg diff -r 10 -r 20
+[/] Compare two revisions
+
+[\] hg diff file.txt
+[/] Show changes for specific file
+
+# -------------------------
+# BRANCHING / TAGGING
+# -------------------------
+
+[\] hg branch feature-x
+[/] Create/switch named branch
+
+[\] hg branches
+[/] List branches
+
+[\] hg tag v1.0
+[/] Create tag
+
+[\] hg tags
+[/] List repository tags
+
+# -------------------------
+# MERGING
+# -------------------------
+
+[\] hg merge
+[/] Merge current branch with another head
+
+[\] hg merge branchname
+[/] Merge named branch into current branch
+
+[\] hg resolve -l
+[/] List merge conflicts
+
+[\] hg resolve -m file.txt
+[/] Mark file conflict as resolved
+
+# -------------------------
+# REVERT / ROLLBACK
+# -------------------------
+
+[\] hg revert file.txt
+[/] Revert file to last committed version
+
+[\] hg revert --all
+[/] Revert all local changes
+
+[\] hg backout REV
+[/] Reverse a committed changeset
+
+# -------------------------
+# STASH / SHELVING
+# -------------------------
+
+[\] hg shelve
+[/] Temporarily store local uncommitted changes
+
+[\] hg unshelve
+[/] Restore shelved changes
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] hg verify
+[/] Check repository integrity
+
+[\] hg outgoing
+[/] Show unpushed local changesets
+
+[\] hg incoming
+[/] Show incoming remote changesets
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] hg pull -u && hg status
+[/] Sync repository and inspect status
+
+[\] hg diff | tee changes.patch
+[/] Save local changes to patch file
+
+[\] hg log -l 20 > history.txt
+[/] Export recent commit history
