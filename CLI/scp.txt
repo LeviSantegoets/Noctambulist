@@ -1,0 +1,109 @@
+[X] scp Command List
+
+[\] scp
+[/] Show basic scp usage (if available)
+
+[\] scp -h
+[/] Show help menu
+
+[\] scp --help
+[/] Display full help options
+
+# -------------------------
+# BASIC COPY
+# -------------------------
+
+[\] scp file.txt user@host:/path/
+[/] Copy file to remote system
+
+[\] scp user@host:/path/file.txt .
+[/] Copy file from remote system to local
+
+[\] scp file.txt user@host:~
+[/] Copy file to remote home directory
+
+# -------------------------
+# DIRECTORY COPY
+# -------------------------
+
+[\] scp -r folder/ user@host:/path/
+[/] Recursively copy directory to remote system
+
+[\] scp -r user@host:/path/folder .
+[/] Recursively copy directory from remote system
+
+# -------------------------
+# VERBOSE / DEBUG
+# -------------------------
+
+[\] scp -v file.txt user@host:/path/
+[/] Verbose output for transfer details
+
+[\] scp -vv file.txt user@host:/path/
+[/] Extra verbose debugging output
+
+# -------------------------
+# PORT / SSH OPTIONS
+# -------------------------
+
+[\] scp -P 2222 file.txt user@host:/path/
+[/] Use custom SSH port
+
+[\] scp -P 22 file.txt user@host:/path/
+[/] Explicit default SSH port
+
+[\] scp -o StrictHostKeyChecking=no file.txt user@host:/path/
+[/] Skip host key verification prompt
+
+# -------------------------
+# PRESERVE ATTRIBUTES
+# -------------------------
+
+[\] scp -p file.txt user@host:/path/
+[/] Preserve modification times and permissions
+
+[\] scp -p -r folder/ user@host:/path/
+[/] Preserve attributes while copying directory
+
+# -------------------------
+# BANDWIDTH / COMPRESSION
+# -------------------------
+
+[\] scp -C file.txt user@host:/path/
+[/] Enable compression during transfer
+
+[\] scp -l 1000 file.txt user@host:/path/
+[/] Limit bandwidth (KB/s)
+
+# -------------------------
+# KEY-BASED AUTHENTICATION
+# -------------------------
+
+[\] scp -i ~/.ssh/id_rsa file.txt user@host:/path/
+[/] Use specific SSH private key
+
+[\] scp -i key.pem file.txt user@host:/path/
+[/] Authenticate using PEM key
+
+# -------------------------
+# MULTIPLE FILES
+# -------------------------
+
+[\] scp file1.txt file2.txt user@host:/path/
+[/] Copy multiple files to remote host
+
+[\] scp user@host:/path/file1.txt user@host:/path/file2.txt .
+[/] Copy multiple files from remote host
+
+# -------------------------
+# PIPELINE / ADVANCED USE
+# -------------------------
+
+[\] tar czf - folder/ | ssh user@host "tar xzf - -C /path/"
+[/] Stream compressed folder over SSH (alternative to scp)
+
+[\] scp -r ./project user@host:/backup/ && echo "Upload complete"
+[/] Copy directory and confirm success
+
+[\] scp -v file.txt user@host:/path/ | tee scp.log
+[/] Log transfer output
