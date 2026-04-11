@@ -1,0 +1,159 @@
+[X] docker-compose / docker compose Command List
+
+[\] docker compose
+[/] Show Docker Compose general help
+
+[\] docker compose --help
+[/] Display full Docker Compose help menu
+
+[\] docker-compose --help
+[/] Show legacy docker-compose help
+
+[\] docker compose version
+[/] Show Docker Compose version
+
+# -------------------------
+# START / STOP SERVICES
+# -------------------------
+
+[\] docker compose up
+[/] Start all services defined in docker-compose.yml
+
+[\] docker compose up -d
+[/] Start services in detached mode
+
+[\] docker compose down
+[/] Stop and remove containers, networks, volumes
+
+[\] docker compose stop
+[/] Stop running services without removing them
+
+[\] docker compose start
+[/] Restart stopped services
+
+[\] docker compose restart
+[/] Restart all services
+
+# -------------------------
+# BUILD / REBUILD
+# -------------------------
+
+[\] docker compose build
+[/] Build or rebuild service images
+
+[\] docker compose build --no-cache
+[/] Rebuild images without cache
+
+[\] docker compose up --build
+[/] Build images before starting services
+
+# -------------------------
+# SERVICE STATUS
+# -------------------------
+
+[\] docker compose ps
+[/] List compose-managed containers
+
+[\] docker compose top
+[/] Show running processes inside containers
+
+[\] docker compose ls
+[/] List running compose projects
+
+# -------------------------
+# LOGS
+# -------------------------
+
+[\] docker compose logs
+[/] Show logs for all services
+
+[\] docker compose logs -f
+[/] Follow live logs
+
+[\] docker compose logs nginx
+[/] Show logs for specific service
+
+# -------------------------
+# EXEC / SHELL ACCESS
+# -------------------------
+
+[\] docker compose exec web bash
+[/] Open bash shell inside running service container
+
+[\] docker compose exec db mysql -u root -p
+[/] Run command inside database container
+
+[\] docker compose run web python app.py
+[/] Run one-time command in service container
+
+# -------------------------
+# SCALING
+# -------------------------
+
+[\] docker compose up --scale web=3
+[/] Scale web service to 3 containers
+
+[\] docker compose up -d --scale worker=5
+[/] Run 5 worker instances in background
+
+# -------------------------
+# IMAGE / CONTAINER CLEANUP
+# -------------------------
+
+[\] docker compose rm
+[/] Remove stopped service containers
+
+[\] docker compose down --volumes
+[/] Remove containers and attached volumes
+
+[\] docker compose down --rmi all
+[/] Remove containers and images
+
+# -------------------------
+# CONFIGURATION
+# -------------------------
+
+[\] docker compose config
+[/] Validate and display merged compose config
+
+[\] docker compose config --services
+[/] List defined service names
+
+[\] docker compose config --volumes
+[/] List defined volumes
+
+# -------------------------
+# MULTIPLE FILES
+# -------------------------
+
+[\] docker compose -f docker-compose.yml -f override.yml up
+[/] Use multiple compose files together
+
+[\] docker compose -f prod.yml up -d
+[/] Start services using alternate config file
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] docker compose events
+[/] Stream real-time service events
+
+[\] docker compose images
+[/] Show images used by services
+
+[\] docker compose port web 80
+[/] Show mapped port for service
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] docker compose up -d && docker compose ps
+[/] Start stack and verify status
+
+[\] docker compose logs -f | tee compose.log
+[/] Follow logs and save to file
+
+[\] docker compose down && docker compose up --build -d
+[/] Rebuild and restart full stack
