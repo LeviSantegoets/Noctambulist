@@ -1,0 +1,167 @@
+[X] Helm (Kubernetes Package Manager) Command List
+
+[\] helm
+[/] Show Helm general help and command overview
+
+[\] helm --help
+[/] Display full Helm help menu
+
+[\] helm version
+[/] Show Helm client version
+
+[\] helm env
+[/] Show Helm environment variables
+
+# -------------------------
+# REPOSITORY MANAGEMENT
+# -------------------------
+
+[\] helm repo list
+[/] List configured chart repositories
+
+[\] helm repo add bitnami https://charts.bitnami.com/bitnami
+[/] Add chart repository
+
+[\] helm repo update
+[/] Update all repository indexes
+
+[\] helm repo remove bitnami
+[/] Remove repository
+
+[\] helm search repo nginx
+[/] Search charts in repositories
+
+# -------------------------
+# CHART SEARCH / INFO
+# -------------------------
+
+[\] helm search hub wordpress
+[/] Search Helm Hub for charts
+
+[\] helm show chart bitnami/nginx
+[/] Show chart metadata
+
+[\] helm show values bitnami/nginx
+[/] Show default chart values
+
+[\] helm show readme bitnami/nginx
+[/] Show chart README
+
+# -------------------------
+# INSTALLATION
+# -------------------------
+
+[\] helm install mynginx bitnami/nginx
+[/] Install chart as release
+
+[\] helm install myapp ./mychart
+[/] Install local chart directory
+
+[\] helm install mynginx bitnami/nginx --namespace web
+[/] Install into specific namespace
+
+[\] helm install mynginx bitnami/nginx --create-namespace
+[/] Create namespace if missing
+
+# -------------------------
+# RELEASE MANAGEMENT
+# -------------------------
+
+[\] helm list
+[/] List installed releases in current namespace
+
+[\] helm list -A
+[/] List releases in all namespaces
+
+[\] helm status mynginx
+[/] Show release status
+
+[\] helm uninstall mynginx
+[/] Remove installed release
+
+# -------------------------
+# UPGRADES / ROLLBACKS
+# -------------------------
+
+[\] helm upgrade mynginx bitnami/nginx
+[/] Upgrade release to latest chart version
+
+[\] helm upgrade mynginx bitnami/nginx -f values.yaml
+[/] Upgrade with custom values file
+
+[\] helm rollback mynginx 1
+[/] Roll back release to revision 1
+
+[\] helm history mynginx
+[/] Show release revision history
+
+# -------------------------
+# VALUES MANAGEMENT
+# -------------------------
+
+[\] helm get values mynginx
+[/] Show user-supplied values
+
+[\] helm get all mynginx
+[/] Show all release information
+
+[\] helm install mynginx bitnami/nginx --set service.type=NodePort
+[/] Override values inline
+
+[\] helm install mynginx bitnami/nginx -f values.yaml
+[/] Install using custom values file
+
+# -------------------------
+# CHART DEVELOPMENT
+# -------------------------
+
+[\] helm create mychart
+[/] Create new chart scaffold
+
+[\] helm lint mychart
+[/] Validate chart syntax and structure
+
+[\] helm package mychart
+[/] Package chart into .tgz archive
+
+[\] helm template mychart
+[/] Render chart templates locally
+
+# -------------------------
+# DEPENDENCIES
+# -------------------------
+
+[\] helm dependency list mychart
+[/] List chart dependencies
+
+[\] helm dependency update mychart
+[/] Download/update chart dependencies
+
+[\] helm dependency build mychart
+[/] Rebuild dependency charts
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] helm status mynginx
+[/] Inspect release problems
+
+[\] helm get manifest mynginx
+[/] View rendered Kubernetes manifests
+
+[\] helm template mychart --debug
+[/] Debug rendered templates
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] helm repo update && helm search repo redis
+[/] Refresh repos and search Redis charts
+
+[\] helm install mydb bitnami/mysql && helm list
+[/] Install MySQL chart and verify release
+
+[\] helm upgrade myapp ./mychart -f values.yaml && kubectl get pods
+[/] Upgrade app and verify Kubernetes pods
