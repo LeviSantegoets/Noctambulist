@@ -1,0 +1,99 @@
+[X] nice / renice Command List
+
+[\] nice
+[/] Start a process with adjusted scheduling priority
+
+[\] renice
+[/] Change priority of an already running process
+
+[\] nice -h
+[/] Show help menu (if supported)
+
+[\] renice -h
+[/] Show help menu (if supported)
+
+# -------------------------
+# NICE VALUES (PRIORITY BASICS)
+# -------------------------
+# Range: -20 (highest priority) to 19 (lowest priority)
+
+[\] nice -n 10 command
+[/] Start command with lower priority (niceness +10)
+
+[\] nice -n 5 ./script.sh
+[/] Run script with reduced CPU priority
+
+[\] nice -n -10 command
+[/] Start command with higher priority (requires privileges)
+
+# -------------------------
+# RENICE (EXISTING PROCESSES)
+# -------------------------
+
+[\] renice 10 -p 1234
+[/] Lower priority of process ID 1234
+
+[\] renice -5 -p 1234
+[/] Increase priority of process ID 1234 (requires privileges)
+
+[\] renice 0 -p 1234
+[/] Reset process priority to default
+
+# -------------------------
+# USER / GROUP CONTROL
+# -------------------------
+
+[\] renice 10 -u username
+[/] Change priority for all processes of a user
+
+[\] renice 15 -g groupname
+[/] Change priority for all processes in a group
+
+# -------------------------
+# MULTIPLE PROCESSES
+# -------------------------
+
+[\] renice 10 -p 1234 5678 9012
+[/] Change priority for multiple processes
+
+[\] renice -5 -p $(pgrep firefox)
+[/] Increase priority of all matching processes
+
+# -------------------------
+# MONITORING PRIORITY
+# -------------------------
+
+[\] ps -eo pid,ni,cmd
+[/] Show process ID, nice value, and command
+
+[\] top
+[/] View live process priorities (NI column)
+
+[\] htop
+[/] Interactive process viewer with priority control
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] renice -n 10 -p 1234
+[/] Adjust syntax variation (some systems require explicit flag usage)
+
+[\] ps -l
+[/] Show detailed process list with nice values
+
+[\] cat /proc/1234/stat
+[/] Inspect raw process scheduling info
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] nice -n 10 tar -czf backup.tar.gz /data
+[/] Run backup with low CPU priority
+
+[\] renice 15 -p $(pidof java)
+[/] Reduce priority of Java process
+
+[\] ps -eo pid,ni,cmd | sort -k2
+[/] Sort processes by priority level
