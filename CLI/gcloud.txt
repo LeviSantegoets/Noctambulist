@@ -1,0 +1,180 @@
+[X] Google Cloud CLI Command List
+
+[\] gcloud
+[/] Show gcloud general help and command overview
+
+[\] gcloud help
+[/] Display full gcloud help menu
+
+[\] gcloud version
+[/] Show installed Google Cloud SDK version
+
+# -------------------------
+# INITIAL CONFIGURATION
+# -------------------------
+
+[\] gcloud init
+[/] Initialize gcloud configuration interactively
+
+[\] gcloud auth login
+[/] Login to Google Cloud account
+
+[\] gcloud auth list
+[/] List authenticated accounts
+
+[\] gcloud config list
+[/] Show active configuration
+
+[\] gcloud config set project my-project
+[/] Set active GCP project
+
+[\] gcloud config set compute/region us-central1
+[/] Set default compute region
+
+# -------------------------
+# PROJECT MANAGEMENT
+# -------------------------
+
+[\] gcloud projects list
+[/] List all accessible projects
+
+[\] gcloud projects describe my-project
+[/] Show project details
+
+[\] gcloud config get-value project
+[/] Show current active project
+
+# -------------------------
+# COMPUTE ENGINE (VMs)
+# -------------------------
+
+[\] gcloud compute instances list
+[/] List VM instances
+
+[\] gcloud compute instances create vm1
+[/] Create VM instance
+
+[\] gcloud compute instances start vm1
+[/] Start VM instance
+
+[\] gcloud compute instances stop vm1
+[/] Stop VM instance
+
+[\] gcloud compute instances delete vm1
+[/] Delete VM instance
+
+[\] gcloud compute ssh vm1
+[/] SSH into VM instance
+
+# -------------------------
+# STORAGE (GCS)
+# -------------------------
+
+[\] gcloud storage buckets list
+[/] List Cloud Storage buckets
+
+[\] gcloud storage buckets create gs://my-bucket
+[/] Create storage bucket
+
+[\] gcloud storage cp file.txt gs://my-bucket/
+[/] Upload file to bucket
+
+[\] gcloud storage cp gs://my-bucket/file.txt .
+[/] Download file from bucket
+
+[\] gcloud storage rm gs://my-bucket/file.txt
+[/] Remove file from bucket
+
+# -------------------------
+# KUBERNETES (GKE)
+# -------------------------
+
+[\] gcloud container clusters list
+[/] List GKE clusters
+
+[\] gcloud container clusters create my-cluster
+[/] Create Kubernetes cluster
+
+[\] gcloud container clusters get-credentials my-cluster
+[/] Configure kubectl for cluster access
+
+[\] gcloud container clusters delete my-cluster
+[/] Delete Kubernetes cluster
+
+# -------------------------
+# IAM / SECURITY
+# -------------------------
+
+[\] gcloud iam service-accounts list
+[/] List service accounts
+
+[\] gcloud iam roles list
+[/] List IAM roles
+
+[\] gcloud auth application-default login
+[/] Authenticate for application default credentials
+
+# -------------------------
+# FUNCTIONS / SERVERLESS
+# -------------------------
+
+[\] gcloud functions list
+[/] List Cloud Functions
+
+[\] gcloud functions deploy myfunc --runtime python311 --trigger-http
+[/] Deploy Cloud Function
+
+[\] gcloud functions describe myfunc
+[/] Show function details
+
+# -------------------------
+# LOGGING / MONITORING
+# -------------------------
+
+[\] gcloud logging read "resource.type=global" --limit 10
+[/] Read recent logs
+
+[\] gcloud logging tail
+[/] Stream logs (if supported)
+
+[\] gcloud monitoring metrics list
+[/] List available metrics
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] gcloud compute instances list --format=json
+[/] Output results as JSON
+
+[\] gcloud compute instances list --format="table(name,status)"
+[/] Output as table format
+
+[\] gcloud --verbosity=debug compute instances list
+[/] Run command with debug output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] gcloud info
+[/] Show SDK and environment diagnostics
+
+[\] gcloud auth revoke
+[/] Revoke authentication credentials
+
+[\] gcloud components update
+[/] Update installed SDK components
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] gcloud config set project my-project && gcloud compute instances list
+[/] Set project and list VMs
+
+[\] gcloud auth login && gcloud storage buckets list
+[/] Authenticate and list buckets
+
+[\] gcloud container clusters get-credentials my-cluster && kubectl get pods
+[/] Connect to cluster and check workloads
