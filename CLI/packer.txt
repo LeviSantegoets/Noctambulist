@@ -1,0 +1,131 @@
+[X] Packer Command List
+
+[\] packer
+[/] Show Packer general help and command overview
+
+[\] packer --help
+[/] Display full Packer help menu
+
+[\] packer version
+[/] Show installed Packer version
+
+# -------------------------
+# TEMPLATE INITIALIZATION
+# -------------------------
+
+[\] packer init .
+[/] Initialize current template directory and download plugins
+
+[\] packer init template.pkr.hcl
+[/] Initialize specific Packer template
+
+# -------------------------
+# TEMPLATE VALIDATION
+# -------------------------
+
+[\] packer validate template.pkr.hcl
+[/] Validate syntax and configuration of template
+
+[\] packer validate -syntax-only template.pkr.hcl
+[/] Check syntax only without full validation
+
+# -------------------------
+# BUILD IMAGES
+# -------------------------
+
+[\] packer build template.pkr.hcl
+[/] Build image from template
+
+[\] packer build -force template.pkr.hcl
+[/] Force overwrite existing builds
+
+[\] packer build -debug template.pkr.hcl
+[/] Run build in debug mode
+
+[\] packer build -on-error=ask template.pkr.hcl
+[/] Pause on error and prompt user
+
+# -------------------------
+# VARIABLE MANAGEMENT
+# -------------------------
+
+[\] packer build -var "aws_region=us-east-1" template.pkr.hcl
+[/] Pass inline variable to build
+
+[\] packer build -var-file=vars.pkrvars.hcl template.pkr.hcl
+[/] Load variables from file
+
+[\] packer inspect template.pkr.hcl
+[/] Show template variables and builders
+
+# -------------------------
+# FORMATTING
+# -------------------------
+
+[\] packer fmt template.pkr.hcl
+[/] Format template file
+
+[\] packer fmt -recursive .
+[/] Format all Packer files recursively
+
+# -------------------------
+# PLUGINS
+# -------------------------
+
+[\] packer plugins installed
+[/] List installed plugins
+
+[\] packer init .
+[/] Download required plugins from template config
+
+# -------------------------
+# TEMPLATE INSPECTION
+# -------------------------
+
+[\] packer inspect template.pkr.hcl
+[/] Inspect builders, provisioners, variables
+
+[\] packer console template.pkr.hcl
+[/] Open interactive template expression console
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] PACKER_LOG=1 packer build template.pkr.hcl
+[/] Enable detailed logging during build
+
+[\] PACKER_LOG=1 PACKER_LOG_PATH=packer.log packer build template.pkr.hcl
+[/] Save debug logs to file
+
+[\] packer build -except=amazon-ebs template.pkr.hcl
+[/] Skip selected builder during build
+
+[\] packer build -only=virtualbox-iso template.pkr.hcl
+[/] Run only one builder target
+
+# -------------------------
+# COMMON WORKFLOWS
+# -------------------------
+
+[\] packer init . && packer validate template.pkr.hcl && packer build template.pkr.hcl
+[/] Initialize, validate, and build image
+
+[\] packer fmt -recursive . && packer validate template.pkr.hcl
+[/] Format and validate templates
+
+[\] packer inspect template.pkr.hcl | tee packer_inspect.txt
+[/] Save template inspection report
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] packer build -var-file=prod.pkrvars.hcl template.pkr.hcl
+[/] Build production image using variable file
+
+[\] packer validate template.pkr.hcl && packer build -force template.pkr.hcl
+[/] Validate then force rebuild image
+
+[\] PACKER_LOG=1 packer build template.pkr.hcl | tee build.log
+[/] Build image and log output
