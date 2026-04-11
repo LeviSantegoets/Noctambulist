@@ -1,0 +1,122 @@
+[X] ping Command List
+
+[\] ping
+[/] Send ICMP echo requests to a host
+
+[\] ping -h
+[/] Show help menu
+
+[\] ping --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] ping google.com
+[/] Ping a domain name continuously
+
+[\] ping 8.8.8.8
+[/] Ping a specific IP address
+
+[\] ping example.com
+[/] Test connectivity to a host
+
+# -------------------------
+# COUNT CONTROL
+# -------------------------
+
+[\] ping -c 4 google.com
+[/] Send exactly 4 packets then stop
+
+[\] ping -c 10 8.8.8.8
+[/] Send 10 ICMP echo requests
+
+# -------------------------
+# INTERVAL CONTROL
+# -------------------------
+
+[\] ping -i 1 google.com
+[/] Send packets every 1 second
+
+[\] ping -i 0.2 google.com
+[/] Send packets every 0.2 seconds
+
+# -------------------------
+# PACKET SIZE
+# -------------------------
+
+[\] ping -s 64 google.com
+[/] Set packet size to 64 bytes
+
+[\] ping -s 1024 8.8.8.8
+[/] Send larger ICMP packets
+
+# -------------------------
+# TIMEOUT / LIMITS
+# -------------------------
+
+[\] ping -W 2 google.com
+[/] Set timeout for each reply to 2 seconds
+
+[\] ping -w 10 google.com
+[/] Stop after 10 seconds
+
+# -------------------------
+# NETWORK OPTIONS
+# -------------------------
+
+[\] ping -4 google.com
+[/] Force IPv4 usage
+
+[\] ping -6 google.com
+[/] Force IPv6 usage
+
+[\] ping -I eth0 google.com
+[/] Use specific network interface
+
+[\] ping -I 192.168.1.10 google.com
+[/] Use specific source IP address
+
+# -------------------------
+# FLOOD / STRESS TESTING
+# -------------------------
+
+[\] ping -f google.com
+[/] Flood ping (high rate, root only)
+
+[\] ping -f 8.8.8.8
+[/] Stress test network latency
+
+# -------------------------
+# OUTPUT CONTROL
+# -------------------------
+
+[\] ping -n google.com
+[/] Do not resolve hostnames
+
+[\] ping -q google.com
+[/] Quiet output (summary only)
+
+[\] ping -v google.com
+[/] Verbose output
+
+# -------------------------
+# TTL CONTROL
+# -------------------------
+
+[\] ping -t 64 google.com
+[/] Set packet TTL to 64
+
+# -------------------------
+# DIAGNOSTIC USE
+# -------------------------
+
+[\] ping -c 4 8.8.8.8 && ping -c 4 google.com
+[/] Test multiple connectivity points
+
+[\] ping google.com | tee ping.log
+[/] Save ping results to file
+
+[\] ping -c 5 8.8.8.8 | column -t
+[/] Format output for readability
