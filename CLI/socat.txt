@@ -1,43 +1,153 @@
-[X] Socat Command List (SOcket CAT / Multipurpose Relay)
-
-[\] socat TCP-LISTEN:8080,fork TCP:example.com:80
-[/] Forward local port 8080 to remote host port 80
-
-[\] socat TCP-LISTEN:8080,fork,reuseaddr FILE:/tmp/log.txt,append
-[/] Log incoming TCP connections to file
-
-[\] socat UDP-LISTEN:5000,fork UDP:example.com:5000
-[/] Forward UDP port 5000 to remote host
-
-[\] socat TCP-LISTEN:1234,reuseaddr,fork EXEC:/bin/cat
-[/] Serve an interactive shell (dangerous, testing only)
-
-[\] socat TCP:example.com:22 STDIO
-[/] Connect TCP to stdin/stdout (simple client)
-
-[\] socat -d -d TCP-LISTEN:8080,fork TCP:example.com:80
-[/] Enable debug output for connection
-
-[\] socat PTY,link=/tmp/ttyV0,raw,echo=0 TCP:example.com:23
-[/] Create virtual serial port and connect to TCP
-
-[\] socat OPENSSL-LISTEN:443,reuseaddr,fork OPENSSL:example.com:443
-[/] Forward SSL connections
-
-[\] socat STDIO TCP-LISTEN:8080,fork
-[/] Interactive TCP server using stdin/stdout
-
-[\] socat UNIX-LISTEN:/tmp/socket,fork TCP:example.com:80
-[/] Forward UNIX socket to TCP
-
-[\] socat -u FILE:/dev/zero TCP:example.com:1234
-[/] Unidirectional data transfer
-
-[\] socat -u TCP-LISTEN:1234,fork FILE:/dev/null
-[/] Discard incoming TCP data
+[X] socat (SOcket CAT) Command List – Connection Utility (Fused)
 
 [\] socat -h
 [/] Show help menu
 
+[\] socat -hh
+[/] Show extended help options
+
 [\] socat -V
-[/] Show version
+[/] Show version information
+
+# -------------------------
+# BASIC CONNECTIONS
+# -------------------------
+
+[\] socat - TCP:example.com:80
+[/] Connect to TCP service on port 80
+
+[\] socat TCP:example.com:22 STDIO
+[/] Connect TCP stream to stdin/stdout
+
+[\] socat - TCP:8.8.8.8:53
+[/] Connect to remote TCP service (DNS example)
+
+[\] socat - UDP:8.8.8.8:53
+[/] Connect using UDP (DNS example)
+
+# -------------------------
+# TCP FORWARDING / PROXY
+# -------------------------
+
+[\] socat TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Forward local port 8080 to remote HTTP server
+
+[\] socat TCP-LISTEN:8080,fork,reuseaddr TCP:example.com:80
+[/] Persistent TCP forwarder with reusable socket
+
+[\] socat TCP-LISTEN:8080,fork,reuseaddr FILE:/tmp/log.txt,append
+[/] Log incoming TCP connections to file
+
+[\] socat TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Simple TCP relay / reverse proxy
+
+# -------------------------
+# UDP FORWARDING
+# -------------------------
+
+[\] socat UDP-LISTEN:5000,fork UDP:example.com:5000
+[/] Forward UDP traffic to remote host
+
+[\] socat -u FILE:/dev/zero UDP:example.com:1234
+[/] Send continuous UDP stream
+
+[\] socat -u UDP-LISTEN:1234,fork FILE:/dev/null
+[/] Discard incoming UDP traffic
+
+# -------------------------
+# FILE TRANSFER / STREAMING
+# -------------------------
+
+[\] socat FILE:/tmp/data.txt TCP:example.com:9000
+[/] Send file over TCP
+
+[\] socat TCP-LISTEN:9000,fork FILE:/tmp/output.txt,create
+[/] Receive TCP data into file
+
+[\] socat -u FILE:input.bin TCP:host:1234
+[/] Unidirectional file upload
+
+[\] socat -u TCP:host:1234 FILE:output.bin
+[/] Unidirectional file download
+
+# -------------------------
+# SHELL / COMMAND EXECUTION
+# -------------------------
+
+[\] socat TCP-LISTEN:1234,reuseaddr,fork EXEC:/bin/cat
+[/] Execute command per connection (testing use)
+
+[\] socat TCP-LISTEN:4444,fork EXEC:/bin/bash
+[/] Spawn shell per incoming connection
+
+[\] socat TCP:host:4444 EXEC:/bin/sh
+[/] Connect remote shell interface
+
+# -------------------------
+# STDIO / INTERACTIVE MODE
+# -------------------------
+
+[\] socat STDIO TCP-LISTEN:8080,fork
+[/] Interactive TCP server using stdin/stdout
+
+[\] socat STDIO TCP:example.com:80
+[/] Interactive TCP client session
+
+# -------------------------
+# UNIX SOCKETS
+# -------------------------
+
+[\] socat UNIX-LISTEN:/tmp/socket,fork TCP:example.com:80
+[/] Forward UNIX socket to TCP service
+
+[\] socat UNIX-CONNECT:/tmp/socket STDIO
+[/] Connect to UNIX socket interactively
+
+# -------------------------
+# SERIAL / PTY BRIDGING
+# -------------------------
+
+[\] socat PTY,link=/tmp/ttyV0,raw,echo=0 TCP:example.com:23
+[/] Create virtual serial port connected to TCP service
+
+[\] socat /dev/ttyUSB0,raw,echo=0 TCP-LISTEN:2000
+[/] Bridge serial device to network
+
+# -------------------------
+# TLS / ENCRYPTED CONNECTIONS
+# -------------------------
+
+[\] socat OPENSSL-LISTEN:443,reuseaddr,fork OPENSSL:example.com:443
+[/] TLS encrypted forwarding tunnel
+
+[\] socat - OPENSSL:example.com:443,verify=0
+[/] Connect to TLS service without certificate validation
+
+# -------------------------
+# DEBUGGING / LOGGING
+# -------------------------
+
+[\] socat -d -d TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Enable debug mode for connection tracing
+
+[\] socat -v TCP-LISTEN:8080,fork
+[/] Verbose traffic output logging
+
+[\] socat -d -d TCP:example.com:80
+[/] Debug outbound TCP connection
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] echo "hello" | socat - TCP:example.com:80
+[/] Send data to remote TCP service
+
+[\] socat TCP:host:1234 | tee output.txt
+[/] Receive stream and log output
+
+[\] socat TCP-LISTEN:8080,fork TCP:example.com:80
+[/] Full TCP relay pipeline
+
+[\] socat -d -d STDIO TCP:example.com:80
+[/] Interactive debug client session
