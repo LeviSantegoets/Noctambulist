@@ -1,0 +1,179 @@
+[X] SVN Command List
+
+[\] svn
+[/] Show SVN general help and command overview
+
+[\] svn --help
+[/] Display full SVN help menu
+
+[\] svn --version
+[/] Show installed SVN version
+
+# -------------------------
+# WORKING COPY SETUP
+# -------------------------
+
+[\] svn checkout https://example.com/repo/project
+[/] Check out repository into current directory
+
+[\] svn checkout https://example.com/repo/project myproject
+[/] Check out repository into named folder
+
+[\] svn co https://example.com/repo/project
+[/] Short form of checkout
+
+# -------------------------
+# STATUS / INFO
+# -------------------------
+
+[\] svn status
+[/] Show local file modifications
+
+[\] svn info
+[/] Show working copy metadata
+
+[\] svn info file.txt
+[/] Show info for specific file
+
+# -------------------------
+# UPDATE / SYNC
+# -------------------------
+
+[\] svn update
+[/] Update working copy to latest revision
+
+[\] svn update file.txt
+[/] Update specific file only
+
+[\] svn up
+[/] Short form of update
+
+# -------------------------
+# ADD / REMOVE FILES
+# -------------------------
+
+[\] svn add file.txt
+[/] Add file to version control
+
+[\] svn add newdir
+[/] Add directory recursively
+
+[\] svn delete file.txt
+[/] Remove file from repository
+
+[\] svn rm oldfile.txt
+[/] Short form of delete
+
+# -------------------------
+# COMMIT CHANGES
+# -------------------------
+
+[\] svn commit -m "Updated configuration"
+[/] Commit changes with message
+
+[\] svn ci -m "Bug fix applied"
+[/] Short form of commit
+
+[\] svn commit file.txt -m "Updated one file"
+[/] Commit specific file only
+
+# -------------------------
+# DIFF / LOG HISTORY
+# -------------------------
+
+[\] svn diff
+[/] Show local uncommitted changes
+
+[\] svn diff file.txt
+[/] Show diff for one file
+
+[\] svn log
+[/] Show revision history
+
+[\] svn log -l 10
+[/] Show last 10 revisions
+
+# -------------------------
+# REVERT / CLEANUP
+# -------------------------
+
+[\] svn revert file.txt
+[/] Undo local changes to file
+
+[\] svn revert -R .
+[/] Revert all local changes recursively
+
+[\] svn cleanup
+[/] Clean interrupted working copy locks
+
+# -------------------------
+# COPY / MOVE / RENAME
+# -------------------------
+
+[\] svn copy file.txt file2.txt
+[/] Copy tracked file in repository
+
+[\] svn move old.txt new.txt
+[/] Rename or move tracked file
+
+[\] svn mv olddir newdir
+[/] Move directory
+
+# -------------------------
+# BRANCH / TAG OPERATIONS
+# -------------------------
+
+[\] svn copy https://repo/trunk https://repo/branches/dev -m "Create dev branch"
+[/] Create branch from trunk
+
+[\] svn copy https://repo/trunk https://repo/tags/v1.0 -m "Tag release v1.0"
+[/] Create tag from trunk
+
+# -------------------------
+# EXPORT / IMPORT
+# -------------------------
+
+[\] svn export https://example.com/repo/project
+[/] Export clean copy without .svn metadata
+
+[\] svn import mydir https://example.com/repo/project -m "Initial import"
+[/] Import directory into repository
+
+# -------------------------
+# PROPERTY MANAGEMENT
+# -------------------------
+
+[\] svn propset svn:ignore "*.log" .
+[/] Ignore matching files
+
+[\] svn propget svn:ignore .
+[/] Show ignore rules
+
+[\] svn proplist -v file.txt
+[/] List properties with values
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] svn status --show-updates
+[/] Compare local copy against server
+
+[\] svn resolved conflictfile.txt
+[/] Mark merge conflict as resolved
+
+[\] svn cleanup && svn update
+[/] Recover locked working copy and sync
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] svn update && svn status
+[/] Update project and inspect changes
+
+[\] svn diff | tee changes.patch
+[/] Save diff output to patch file
+
+[\] svn log -l 20 > history.txt
+[/] Export recent commit history
