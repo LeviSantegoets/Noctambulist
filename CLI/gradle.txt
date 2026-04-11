@@ -1,0 +1,158 @@
+[X] Gradle Command List
+
+[\] gradle
+[/] Show Gradle general help and command overview
+
+[\] gradle -h
+[/] Show help menu
+
+[\] gradle --help
+[/] Display full help options
+
+[\] gradle -v
+[/] Show Gradle version and environment info
+
+# -------------------------
+# PROJECT LIFECYCLE
+# -------------------------
+
+[\] gradle tasks
+[/] List available tasks in project
+
+[\] gradle build
+[/] Build project (compile, test, assemble)
+
+[\] gradle clean
+[/] Remove build outputs
+
+[\] gradle assemble
+[/] Compile and package without running tests
+
+[\] gradle check
+[/] Run tests and verification tasks
+
+[\] gradle test
+[/] Run unit tests
+
+# -------------------------
+# CLEAN + BUILD COMBOS
+# -------------------------
+
+[\] gradle clean build
+[/] Clean and fully build project
+
+[\] gradle clean test
+[/] Clean and run tests
+
+[\] gradle clean assemble
+[/] Clean and build artifacts only
+
+# -------------------------
+# DEPENDENCIES
+# -------------------------
+
+[\] gradle dependencies
+[/] Show full dependency tree
+
+[\] gradle dependencyInsight --dependency log4j
+[/] Inspect specific dependency usage
+
+[\] gradle buildEnvironment
+[/] Show build script classpath dependencies
+
+# -------------------------
+# RUNNING APPLICATIONS
+# -------------------------
+
+[\] gradle run
+[/] Run application (if application plugin is used)
+
+[\] gradle bootRun
+[/] Run Spring Boot application
+
+[\] gradle test --tests MyTest
+[/] Run specific test class
+
+[\] gradle test --tests "MyTest.myMethod"
+[/] Run specific test method
+
+# -------------------------
+# DEBUG / INFO
+# -------------------------
+
+[\] gradle build --info
+[/] Show informational logs during build
+
+[\] gradle build --debug
+[/] Show debug-level logs
+
+[\] gradle build --stacktrace
+[/] Show full error stack trace
+
+[\] gradle build --scan
+[/] Generate build scan report
+
+# -------------------------
+# CONTINUOUS BUILD
+# -------------------------
+
+[\] gradle build --continuous
+[/] Rebuild automatically on file changes
+
+[\] gradle test --continuous
+[/] Continuously run tests on changes
+
+# -------------------------
+# PROJECT SETUP
+# -------------------------
+
+[\] gradle init
+[/] Initialize new Gradle project
+
+[\] gradle init --type java-application
+[/] Create Java application template
+
+[\] gradle wrapper
+[/] Generate Gradle wrapper scripts
+
+[\] ./gradlew build
+[/] Build project using Gradle wrapper
+
+# -------------------------
+# TASK MANAGEMENT
+# -------------------------
+
+[\] gradle tasks --all
+[/] Show all tasks including hidden ones
+
+[\] gradle help --task build
+[/] Show detailed help for a task
+
+[\] gradle properties
+[/] Show project properties
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] gradle clean build --refresh-dependencies
+[/] Force dependency re-download
+
+[\] gradle build --no-daemon
+[/] Run build without daemon
+
+[\] gradle build --offline
+[/] Build using cached dependencies only
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] gradle clean build && java -jar build/libs/app.jar
+[/] Build and run packaged application
+
+[\] gradle dependencies > deps.txt
+[/] Export dependency tree
+
+[\] gradle clean build --stacktrace | tee build.log
+[/] Build with error logging saved to file
