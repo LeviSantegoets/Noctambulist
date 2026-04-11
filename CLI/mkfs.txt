@@ -1,0 +1,137 @@
+[X] mkfs Command List
+
+[\] mkfs
+[/] Generic filesystem creation command
+
+[\] mkfs -h
+[/] Show help menu
+
+[\] mkfs --help
+[/] Display full help options
+
+# -------------------------
+# EXT FILESYSTEMS
+# -------------------------
+
+[\] mkfs.ext4 /dev/sda1
+[/] Create ext4 filesystem on partition
+
+[\] mkfs.ext3 /dev/sda1
+[/] Create ext3 filesystem
+
+[\] mkfs.ext2 /dev/sda1
+[/] Create ext2 filesystem
+
+[\] mkfs -t ext4 /dev/sda1
+[/] Alternative ext4 creation syntax
+
+# -------------------------
+# XFS FILESYSTEM
+# -------------------------
+
+[\] mkfs.xfs /dev/sda1
+[/] Create XFS filesystem
+
+[\] mkfs -t xfs /dev/sda1
+[/] Alternative XFS syntax
+
+# -------------------------
+# BTRFS FILESYSTEM
+# -------------------------
+
+[\] mkfs.btrfs /dev/sda1
+[/] Create Btrfs filesystem
+
+[\] mkfs -t btrfs /dev/sda1
+[/] Alternative Btrfs syntax
+
+# -------------------------
+# FAT / WINDOWS FILESYSTEMS
+# -------------------------
+
+[\] mkfs.vfat /dev/sda1
+[/] Create FAT32 filesystem
+
+[\] mkfs -t vfat /dev/sda1
+[/] FAT filesystem via type flag
+
+[\] mkfs.msdos /dev/sda1
+[/] Create MS-DOS FAT filesystem
+
+# -------------------------
+# SWAP CREATION
+# -------------------------
+
+[\] mkswap /dev/sda2
+[/] Create swap space
+
+[\] swapon /dev/sda2
+[/] Enable swap partition
+
+[\] swapoff /dev/sda2
+[/] Disable swap partition
+
+# -------------------------
+# LABEL / UUID OPTIONS
+# -------------------------
+
+[\] mkfs.ext4 -L DATA /dev/sda1
+[/] Create ext4 filesystem with label
+
+[\] mkfs.xfs -L DATA /dev/sda1
+[/] Create XFS filesystem with label
+
+[\] mkfs.btrfs -L DATA /dev/sda1
+[/] Create Btrfs filesystem with label
+
+# -------------------------
+# FORCE / SAFETY OPTIONS
+# -------------------------
+
+[\] mkfs.ext4 -F /dev/sda1
+[/] Force filesystem creation (overwrite)
+
+[\] mkfs.xfs -f /dev/sda1
+[/] Force XFS creation
+
+[\] mkfs -t ext4 -F /dev/sda1
+[/] Force mkfs operation
+
+# -------------------------
+# ADVANCED OPTIONS
+# -------------------------
+
+[\] mkfs.ext4 -b 4096 /dev/sda1
+[/] Set block size
+
+[\] mkfs.ext4 -m 1 /dev/sda1
+[/] Reserve 1% disk space for root
+
+[\] mkfs.ext4 -E lazy_itable_init=1 /dev/sda1
+[/] Enable performance optimization
+
+# -------------------------
+# VERIFICATION / TROUBLESHOOTING
+# -------------------------
+
+[\] mkfs.ext4 /dev/sda1 && blkid
+[/] Create filesystem and verify UUID
+
+[\] lsblk -f
+[/] Check filesystem after creation
+
+[\] blkid /dev/sda1
+[/] Show filesystem type and UUID
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] mkfs.ext4 /dev/sda1 && mount /dev/sda1 /mnt
+[/] Format and mount filesystem
+
+[\] mkfs -t ext4 /dev/sda1 | tee mkfs.log
+[/] Log filesystem creation output
+
+[\] lsblk && blkid && df -h
+[/] Verify disk, filesystem, and usage status
