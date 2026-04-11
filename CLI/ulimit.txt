@@ -1,0 +1,143 @@
+[X] ulimit Command List
+
+[\] ulimit
+[/] Show or set user process resource limits
+
+[\] ulimit -h
+[/] Show help menu (shell dependent)
+
+[\] ulimit --help
+[/] Display help options (if supported)
+
+# -------------------------
+# VIEW LIMITS
+# -------------------------
+
+[\] ulimit -a
+[/] Show all current resource limits
+
+[\] ulimit -aH
+[/] Show hard limits (maximum allowed)
+
+[\] ulimit -aS
+[/] Show soft limits (current enforced limits)
+
+# -------------------------
+# FILE LIMITS
+# -------------------------
+
+[\] ulimit -n
+[/] Show max number of open file descriptors
+
+[\] ulimit -n 4096
+[/] Set soft limit for open files to 4096
+
+[\] ulimit -Hn
+[/] Show hard limit for open files
+
+# -------------------------
+# PROCESS LIMITS
+# -------------------------
+
+[\] ulimit -u
+[/] Show max user processes
+
+[\] ulimit -u 2048
+[/] Set max number of processes per user
+
+[\] ulimit -Hu
+[/] Show hard process limit
+
+# -------------------------
+# MEMORY LIMITS
+# -------------------------
+
+[\] ulimit -m
+[/] Show max resident memory size (KB)
+
+[\] ulimit -v
+[/] Show max virtual memory size (KB)
+
+[\] ulimit -v 1048576
+[/] Set virtual memory limit (1 GB in KB)
+
+# -------------------------
+# STACK / CORE DUMPS
+# -------------------------
+
+[\] ulimit -s
+[/] Show stack size limit
+
+[\] ulimit -s 8192
+[/] Set stack size limit (KB)
+
+[\] ulimit -c
+[/] Show core dump size limit
+
+[\] ulimit -c unlimited
+[/] Enable unlimited core dumps
+
+# -------------------------
+# CPU TIME
+# -------------------------
+
+[\] ulimit -t
+[/] Show CPU time limit (seconds)
+
+[\] ulimit -t 60
+[/] Limit CPU time to 60 seconds
+
+# -------------------------
+# SOFT VS HARD LIMITS
+# -------------------------
+
+[\] ulimit -Sn
+[/] Show soft file descriptor limit
+
+[\] ulimit -Hn
+[/] Show hard file descriptor limit
+
+[\] ulimit -Su
+[/] Show soft process limit
+
+[\] ulimit -Hu
+[/] Show hard process limit
+
+# -------------------------
+# SAFETY / RESET
+# -------------------------
+
+[\] ulimit -n unlimited
+[/] Remove file descriptor limit (if allowed)
+
+[\] ulimit -u unlimited
+[/] Remove process limit (if allowed)
+
+[\] ulimit -c 0
+[/] Disable core dumps
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] ulimit -a && cat /etc/security/limits.conf
+[/] Check runtime limits and system config
+
+[\] ulimit -n && lsof | wc -l
+[/] Compare limit vs open files
+
+[\] ulimit -u && ps aux | wc -l
+[/] Compare process limit vs active processes
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ulimit -a | tee limits.txt
+[/] Save all user limits to file
+
+[\] ulimit -n 65535 && ulimit -a
+[/] Increase file limit and verify
+
+[\] ulimit -a | grep open
+[/] Filter file descriptor limits
