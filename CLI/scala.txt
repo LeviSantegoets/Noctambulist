@@ -1,0 +1,152 @@
+[X] Scala Command List
+
+[\] scala
+[/] Start Scala REPL (interactive shell)
+
+[\] scala --help
+[/] Show Scala help and options
+
+[\] scala -version
+[/] Show Scala version
+
+# -------------------------
+# SCRIPT EXECUTION
+# -------------------------
+
+[\] scala script.scala
+[/] Run Scala script file
+
+[\] scala -e "println(\"Hello World\")"
+[/] Execute inline Scala code (if supported)
+
+[\] scala-cli run script.scala
+[/] Run Scala script using Scala CLI
+
+# -------------------------
+# COMPILATION
+# -------------------------
+
+[\] scalac Hello.scala
+[/] Compile Scala source file
+
+[\] scalac *.scala
+[/] Compile multiple Scala files
+
+[\] scalac -d out Hello.scala
+[/] Compile and output to directory
+
+# -------------------------
+# RUNNING APPLICATIONS
+# -------------------------
+
+[\] scala Main
+[/] Run compiled Scala main class
+
+[\] scala -cp out Main
+[/] Run with custom classpath
+
+[\] scala -J-Xmx2g Main
+[/] Run with JVM memory settings
+
+# -------------------------
+# SBT (SCALA BUILD TOOL)
+# -------------------------
+
+[\] sbt
+[/] Start interactive SBT shell
+
+[\] sbt compile
+[/] Compile project
+
+[\] sbt run
+[/] Run application
+
+[\] sbt test
+[/] Run tests
+
+[\] sbt clean
+[/] Clean build artifacts
+
+[\] sbt package
+[/] Create JAR package
+
+# -------------------------
+# SCALA CLI (MODERN TOOLING)
+# -------------------------
+
+[\] scala-cli Hello.scala
+[/] Run Scala file directly
+
+[\] scala-cli compile .
+[/] Compile Scala project
+
+[\] scala-cli test .
+[/] Run tests with Scala CLI
+
+[\] scala-cli repl
+[/] Start interactive REPL
+
+# -------------------------
+# DEPENDENCY MANAGEMENT
+# -------------------------
+
+[\] scala-cli run --dependency org.typelevel::cats-core:2.9.0 script.scala
+[/] Run with external dependency
+
+[\] sbt update
+[/] Update dependencies in SBT
+
+[\] sbt dependencyTree
+[/] Show dependency graph
+
+# -------------------------
+# DEBUGGING / JVM OPTIONS
+# -------------------------
+
+[\] scala -J-Xdebug Main
+[/] Run with JVM debugging enabled
+
+[\] scala -J-Xms512m -J-Xmx2g Main
+[/] Set JVM memory limits
+
+[\] sbt -debug
+[/] Run SBT in debug mode
+
+# -------------------------
+# TESTING
+# -------------------------
+
+[\] sbt testOnly com.example.MyTest
+[/] Run specific test suite
+
+[\] sbt testQuick
+[/] Run only failed tests
+
+[\] scala-cli test .
+[/] Run tests via Scala CLI
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] scala -print Hello.scala
+[/] Show compiled output (debug view)
+
+[\] sbt last
+[/] Show last build error
+
+[\] sbt clean compile
+[/] Clean and recompile project
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] scalac Hello.scala && scala Main
+[/] Compile and run Scala program
+
+[\] sbt clean compile test
+[/] Full build and test cycle
+
+[\] scala-cli run . && echo "Done"
+[/] Run project and confirm execution
