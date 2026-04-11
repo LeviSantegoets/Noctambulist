@@ -1,0 +1,121 @@
+[X] fsck Command List
+
+[\] fsck
+[/] Check and repair Linux filesystems
+
+[\] fsck -h
+[/] Show help menu
+
+[\] fsck --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] fsck /dev/sda1
+[/] Check filesystem on partition
+
+[\] fsck /dev/sda
+[/] Check entire disk (all partitions)
+
+[\] fsck -N /dev/sda1
+[/] Show what would be done (no execution)
+
+# -------------------------
+# AUTO REPAIR
+# -------------------------
+
+[\] fsck -y /dev/sda1
+[/] Automatically fix all errors
+
+[\] fsck -a /dev/sda1
+[/] Auto-repair (non-interactive, older mode)
+
+[\] fsck -p /dev/sda1
+[/] Automatically fix safe problems only
+
+# -------------------------
+# FORCE CHECK
+# -------------------------
+
+[\] fsck -f /dev/sda1
+[/] Force filesystem check even if clean
+
+[\] fsck -f /dev/nvme0n1p1
+[/] Force check on NVMe partition
+
+# -------------------------
+# FILESYSTEM SPECIFIC CHECKS
+# -------------------------
+
+[\] fsck.ext4 /dev/sda1
+[/] Run ext4-specific filesystem check
+
+[\] fsck.ext3 /dev/sda1
+[/] Run ext3 check
+
+[\] fsck.xfs /dev/sda1
+[/] XFS filesystem check (uses xfs_repair)
+
+# -------------------------
+# SAFETY OPTIONS
+# -------------------------
+
+[\] fsck -n /dev/sda1
+[/] Read-only check (no changes made)
+
+[\] fsck -r /dev/sda1
+[/] Interactive repair mode
+
+# -------------------------
+# BOOT / SYSTEM USAGE
+# -------------------------
+
+[\] fsck -A
+[/] Check all filesystems listed in /etc/fstab
+
+[\] fsck -AR
+[/] Skip root filesystem
+
+[\] fsck -M
+[/] Skip mounted filesystems
+
+# -------------------------
+# PERFORMANCE / CONTROL
+# -------------------------
+
+[\] fsck -C /dev/sda1
+[/] Show progress bar (if supported)
+
+[\] fsck -V /dev/sda1
+[/] Verbose output
+
+[\] fsck -T
+[/] Suppress title display
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] umount /dev/sda1 && fsck /dev/sda1
+[/] Unmount before checking (recommended)
+
+[\] fsck -f -y /dev/sda1
+[/] Force repair with auto-confirm
+
+[\] fsck -n /dev/sda1 && blkid
+[/] Verify filesystem integrity without changes
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] fsck -f /dev/sda1 | tee fsck.log
+[/] Log filesystem check output
+
+[\] umount /dev/sda1 && fsck -y /dev/sda1 && mount /dev/sda1 /mnt
+[/] Repair and remount filesystem
+
+[\] fsck -A -V
+[/] Check all filesystems with verbose output
