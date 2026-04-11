@@ -1,0 +1,132 @@
+[X] hping3 Command List
+
+[\] hping3
+[/] Show basic usage/help output
+
+[\] hping3 -h
+[/] Display help menu
+
+[\] hping3 --help
+[/] Show full help options
+
+# -------------------------
+# BASIC PING (ICMP)
+# -------------------------
+
+[\] hping3 -1 8.8.8.8
+[/] Send ICMP echo requests (like ping)
+
+[\] hping3 -1 google.com
+[/] ICMP ping using hostname
+
+[\] hping3 -1 -c 4 8.8.8.8
+[/] Send 4 ICMP packets and stop
+
+# -------------------------
+# TCP PROBES
+# -------------------------
+
+[\] hping3 -S 192.168.1.1 -p 80
+[/] Send TCP SYN packets to port 80
+
+[\] hping3 -S example.com -p 443
+[/] TCP SYN probe to HTTPS port
+
+[\] hping3 -S 8.8.8.8 -p 53
+[/] Test DNS port with TCP SYN
+
+[\] hping3 -S -c 5 192.168.1.1 -p 22
+[/] Send 5 SYN packets to SSH port
+
+# -------------------------
+# UDP PROBES
+# -------------------------
+
+[\] hping3 --udp -p 53 8.8.8.8
+[/] Send UDP packets to DNS port
+
+[\] hping3 --udp -p 123 192.168.1.1
+[/] Probe NTP service
+
+# -------------------------
+# SCANNING / PORT RANGE
+# -------------------------
+
+[\] hping3 -S 192.168.1.1 -p 1-100
+[/] Scan TCP ports 1–100 using SYN packets
+
+[\] hping3 -S example.com -p ++1
+[/] Incremental port scan
+
+# -------------------------
+# FLOOD / TRAFFIC GENERATION
+# -------------------------
+
+[\] hping3 -S --flood -p 80 192.168.1.1
+[/] High-speed TCP SYN flood (stress testing only)
+
+[\] hping3 --udp --flood -p 53 8.8.8.8
+[/] UDP flood test
+
+# -------------------------
+# SPOOFING OPTIONS
+# -------------------------
+
+[\] hping3 -S -a 1.2.3.4 192.168.1.1 -p 80
+[/] Spoof source IP address
+
+[\] hping3 -S --rand-source 192.168.1.1 -p 80
+[/] Randomize source IP addresses
+
+# -------------------------
+# FRAGMENTATION / STEALTH
+# -------------------------
+
+[\] hping3 -S -f 192.168.1.1 -p 80
+[/] Send fragmented packets
+
+[\] hping3 -S -c 10 -i u1000 192.168.1.1 -p 80
+[/] Slow packet sending (1ms interval)
+
+# -------------------------
+# NETWORK ANALYSIS
+# -------------------------
+
+[\] hping3 -S --traceroute 8.8.8.8 -p 80
+[/] Perform TCP-based traceroute
+
+[\] hping3 -1 --traceroute 8.8.8.8
+[/] ICMP traceroute mode
+
+# -------------------------
+# TIMING / PERFORMANCE
+# -------------------------
+
+[\] hping3 -S -i u100000 192.168.1.1 -p 80
+[/] Send packets every 100ms
+
+[\] hping3 -S -c 100 192.168.1.1 -p 80
+[/] Send 100 packets total
+
+# -------------------------
+# OUTPUT / DEBUG
+# -------------------------
+
+[\] hping3 -S -V 192.168.1.1 -p 80
+[/] Verbose output mode
+
+[\] hping3 -S -d 120 192.168.1.1 -p 80
+[/] Send packets with custom data size
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] hping3 -S 192.168.1.1 -p 80 && ping 192.168.1.1
+[/] Combine TCP probe with ICMP test
+
+[\] hping3 -1 8.8.8.8 | tee hping.log
+[/] Log ICMP test results
+
+[\] hping3 -S --scan 1-100 192.168.1.1
+[/] Basic SYN scan workflow
