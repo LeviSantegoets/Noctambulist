@@ -1,0 +1,131 @@
+[X] tune2fs Command List
+
+[\] tune2fs
+[/] Modify ext2/ext3/ext4 filesystem parameters
+
+[\] tune2fs -h
+[/] Show help menu
+
+[\] tune2fs --help
+[/] Display full help options
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] tune2fs -l /dev/sda1
+[/] Display filesystem superblock information
+
+[\] tune2fs -l /dev/nvme0n1p1
+[/] Show ext filesystem metadata for NVMe partition
+
+# -------------------------
+# LABEL / IDENTIFICATION
+# -------------------------
+
+[\] tune2fs -L DATA /dev/sda1
+[/] Set filesystem label to "DATA"
+
+[\] tune2fs -l /dev/sda1 | grep volume
+[/] Check volume label and metadata
+
+# -------------------------
+# MOUNT / CHECK INTERVALS
+# -------------------------
+
+[\] tune2fs -c 20 /dev/sda1
+[/] Set maximum mount count before fsck (20 mounts)
+
+[\] tune2fs -c -1 /dev/sda1
+[/] Disable mount count-based fsck checks
+
+[\] tune2fs -i 30d /dev/sda1
+[/] Set time interval between filesystem checks (30 days)
+
+[\] tune2fs -i 0 /dev/sda1
+[/] Disable time-based fsck checks
+
+# -------------------------
+# RESERVED SPACE
+# -------------------------
+
+[\] tune2fs -m 1 /dev/sda1
+[/] Set reserved blocks percentage to 1%
+
+[\] tune2fs -m 5 /dev/sda1
+[/] Reserve 5% of disk for root user
+
+[\] tune2fs -l /dev/sda1 | grep "Reserved block"
+[/] Check reserved space settings
+
+# -------------------------
+# FILESYSTEM FEATURES
+# -------------------------
+
+[\] tune2fs -O extents,uninit_bg /dev/sda1
+[/] Enable filesystem features
+
+[\] tune2fs -O ^has_journal /dev/sda1
+[/] Disable journaling (not recommended)
+
+[\] tune2fs -l /dev/sda1 | grep features
+[/] Show enabled filesystem features
+
+# -------------------------
+# JOURNAL CONTROL
+# -------------------------
+
+[\] tune2fs -j /dev/sda1
+[/] Add journal to ext2 filesystem (convert to ext3)
+
+[\] tune2fs -l /dev/sda1 | grep journal
+[/] Check journaling status
+
+# -------------------------
+# FSCK BEHAVIOR
+# -------------------------
+
+[\] tune2fs -C 100 /dev/sda1
+[/] Set current mount count to 100
+
+[\] tune2fs -c 30 -i 2w /dev/sda1
+[/] Combine mount and time-based checks
+
+# -------------------------
+# DEBUG / INFO
+# -------------------------
+
+[\] tune2fs -l /dev/sda1
+[/] Full filesystem metadata dump
+
+[\] tune2fs -h /dev/sda1
+[/] Show available options (some versions vary)
+
+[\] tune2fs -l /dev/sda1 | column -t
+[/] Format output for readability
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] tune2fs -l /dev/sda1 && blkid /dev/sda1
+[/] Compare metadata with UUID/label info
+
+[\] tune2fs -l /dev/sda1 | grep "state"
+[/] Check filesystem state
+
+[\] fsck -f /dev/sda1 && tune2fs -l /dev/sda1
+[/] Check and then inspect filesystem metadata
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] tune2fs -l /dev/sda1 | tee fs_info.txt
+[/] Save filesystem metadata report
+
+[\] tune2fs -m 2 /dev/sda1 && df -h
+[/] Adjust reserved space and check disk usage
+
+[\] tune2fs -l /dev/sda1 | grep -E "count|interval|state"
+[/] Extract key maintenance parameters
