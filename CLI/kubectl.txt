@@ -1,0 +1,178 @@
+[X] kubectl (Kubernetes CLI) Command List
+
+[\] kubectl
+[/] Show kubectl general help and command overview
+
+[\] kubectl --help
+[/] Display full kubectl help menu
+
+[\] kubectl version
+[/] Show client/server Kubernetes version
+
+[\] kubectl cluster-info
+[/] Show cluster master and service endpoints
+
+# -------------------------
+# CLUSTER / CONTEXT MANAGEMENT
+# -------------------------
+
+[\] kubectl config get-contexts
+[/] List available Kubernetes contexts
+
+[\] kubectl config current-context
+[/] Show active context
+
+[\] kubectl config use-context mycluster
+[/] Switch to another cluster context
+
+[\] kubectl config view
+[/] Show kubeconfig settings
+
+# -------------------------
+# NODES
+# -------------------------
+
+[\] kubectl get nodes
+[/] List all cluster nodes
+
+[\] kubectl describe node node1
+[/] Show detailed node information
+
+# -------------------------
+# POD MANAGEMENT
+# -------------------------
+
+[\] kubectl get pods
+[/] List pods in current namespace
+
+[\] kubectl get pods -A
+[/] List pods in all namespaces
+
+[\] kubectl describe pod mypod
+[/] Show detailed pod information
+
+[\] kubectl delete pod mypod
+[/] Delete a pod
+
+[\] kubectl logs mypod
+[/] Show pod logs
+
+[\] kubectl logs -f mypod
+[/] Follow live pod logs
+
+# -------------------------
+# DEPLOYMENTS
+# -------------------------
+
+[\] kubectl get deployments
+[/] List deployments
+
+[\] kubectl describe deployment myapp
+[/] Show deployment details
+
+[\] kubectl create deployment myapp --image=nginx
+[/] Create deployment from image
+
+[\] kubectl scale deployment myapp --replicas=3
+[/] Scale deployment replicas
+
+[\] kubectl rollout restart deployment myapp
+[/] Restart deployment
+
+# -------------------------
+# SERVICES
+# -------------------------
+
+[\] kubectl get svc
+[/] List services
+
+[\] kubectl describe svc myservice
+[/] Show service details
+
+[\] kubectl expose deployment myapp --port=80 --type=NodePort
+[/] Expose deployment as service
+
+# -------------------------
+# NAMESPACES
+# -------------------------
+
+[\] kubectl get namespaces
+[/] List namespaces
+
+[\] kubectl create namespace dev
+[/] Create namespace
+
+[\] kubectl delete namespace dev
+[/] Delete namespace
+
+# -------------------------
+# APPLY / CONFIG FILES
+# -------------------------
+
+[\] kubectl apply -f app.yaml
+[/] Apply manifest file
+
+[\] kubectl delete -f app.yaml
+[/] Delete resources from manifest
+
+[\] kubectl diff -f app.yaml
+[/] Show changes before applying
+
+# -------------------------
+# EXEC / SHELL ACCESS
+# -------------------------
+
+[\] kubectl exec -it mypod -- bash
+[/] Open shell inside pod
+
+[\] kubectl exec mypod -- ls /app
+[/] Run command inside pod
+
+# -------------------------
+# CONFIGMAPS / SECRETS
+# -------------------------
+
+[\] kubectl get configmaps
+[/] List ConfigMaps
+
+[\] kubectl get secrets
+[/] List Secrets
+
+[\] kubectl create configmap appcfg --from-file=config.ini
+[/] Create ConfigMap from file
+
+# -------------------------
+# RESOURCE MONITORING
+# -------------------------
+
+[\] kubectl top nodes
+[/] Show node CPU/memory usage
+
+[\] kubectl top pods
+[/] Show pod resource usage
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] kubectl get events
+[/] Show cluster events
+
+[\] kubectl describe pod mypod
+[/] Diagnose pod failures
+
+[\] kubectl logs mypod --previous
+[/] Show logs from previous crashed container
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] kubectl apply -f app.yaml && kubectl get pods
+[/] Deploy app and verify pods
+
+[\] kubectl get pods -A | grep CrashLoopBackOff
+[/] Find failing pods
+
+[\] kubectl logs -f $(kubectl get pod -o name | head -1)
+[/] Follow logs from first pod
