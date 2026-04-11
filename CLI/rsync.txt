@@ -1,0 +1,131 @@
+[X] rsync Command List
+
+[\] rsync
+[/] Show basic rsync usage/help (if available)
+
+[\] rsync --help
+[/] Display full help menu
+
+# -------------------------
+# BASIC SYNC
+# -------------------------
+
+[\] rsync file.txt user@host:/path/
+[/] Copy a file to remote system
+
+[\] rsync user@host:/path/file.txt .
+[/] Copy file from remote system to local
+
+[\] rsync -r source/ destination/
+[/] Recursively sync directories
+
+[\] rsync -a source/ destination/
+[/] Archive mode (preserve permissions, timestamps, etc.)
+
+# -------------------------
+# PROGRESS / VERBOSE
+# -------------------------
+
+[\] rsync -v source/ destination/
+[/] Verbose output
+
+[\] rsync -P source/ destination/
+[/] Show progress and partial transfers
+
+[\] rsync -av source/ destination/
+[/] Archive + verbose sync
+
+[\] rsync -avP source/ destination/
+[/] Archive + verbose + progress
+
+# -------------------------
+# DELETION / MIRRORING
+# -------------------------
+
+[\] rsync -av --delete source/ destination/
+[/] Mirror source exactly (delete extra files in destination)
+
+[\] rsync -av --dry-run source/ destination/
+[/] Simulate sync without making changes
+
+# -------------------------
+# REMOTE TRANSFER (SSH)
+# -------------------------
+
+[\] rsync -av -e ssh source/ user@host:/path/
+[/] Sync using SSH
+
+[\] rsync -av -e "ssh -p 2222" source/ user@host:/path/
+[/] Use custom SSH port
+
+[\] rsync user@host:/path/ ./local/
+[/] Pull files from remote system
+
+# -------------------------
+# EXCLUSIONS / FILTERING
+# -------------------------
+
+[\] rsync -av --exclude "*.log" source/ destination/
+[/] Exclude log files
+
+[\] rsync -av --exclude "node_modules/" source/ destination/
+[/] Exclude directories
+
+[\] rsync -av --include "*.txt" --exclude "*" source/ destination/
+[/] Include only specific file types
+
+# -------------------------
+# BANDWIDTH / PERFORMANCE
+# -------------------------
+
+[\] rsync -av --bwlimit=1000 source/ destination/
+[/] Limit bandwidth usage (KB/s)
+
+[\] rsync -av --compress source/ destination/
+[/] Enable compression during transfer
+
+# -------------------------
+# FILE PERMISSIONS
+# -------------------------
+
+[\] rsync -av --chmod=755 source/ destination/
+[/] Set permissions on transferred files
+
+[\] rsync -av --perms source/ destination/
+[/] Preserve permissions
+
+[\] rsync -av --owner --group source/ destination/
+[/] Preserve ownership and group
+
+# -------------------------
+# SYNC SAFETY
+# -------------------------
+
+[\] rsync -av --dry-run source/ destination/
+[/] Test sync before applying changes
+
+[\] rsync -av --progress source/ destination/
+[/] Show file-by-file transfer progress
+
+# -------------------------
+# LOGGING
+# -------------------------
+
+[\] rsync -av --log-file=rsync.log source/ destination/
+[/] Save sync log to file
+
+[\] rsync -avvv source/ destination/
+[/] Very verbose debugging output
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rsync -avP ./data/ user@host:/backup/
+[/] Backup local data to remote server
+
+[\] rsync -av --delete source/ destination/ && echo "Sync complete"
+[/] Mirror directory and confirm completion
+
+[\] rsync -avz source/ user@host:/path/
+[/] Compressed secure transfer over network
