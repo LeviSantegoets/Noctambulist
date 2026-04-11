@@ -1,4 +1,4 @@
-[X] socat (SOcket CAT) Command List – Connection Utility (Fused)
+[X] socat (SOcket CAT) Command List
 
 [\] socat -h
 [/] Show help menu
