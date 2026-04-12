@@ -1,0 +1,243 @@
+[X] Core Impact Command List
+
+[\] core-impact
+[/] Launch Core Impact GUI interface
+
+[\] core-impact --help
+[/] Show Core Impact launcher help menu
+
+[\] core-impact --version
+[/] Show installed Core Impact version
+
+[\] impact-cli
+[/] Launch Core Impact command-line interface (if CLI module installed)
+
+[\] impact-cli --help
+[/] Show CLI usage help
+
+# -------------------------
+# PROJECT MANAGEMENT
+# -------------------------
+
+[\] File > New Workspace
+[/] Create new penetration testing workspace/project
+
+[\] File > Open Workspace
+[/] Open existing workspace
+
+[\] File > Save Workspace
+[/] Save current assessment project
+
+[\] File > Export Report
+[/] Export assessment findings report
+
+# -------------------------
+# TARGET MANAGEMENT
+# -------------------------
+
+[\] Add Host
+[/] Add target host manually
+
+[\] Import Targets
+[/] Import target list from file
+
+[\] Discover Hosts
+[/] Scan and discover live systems
+
+[\] Network Sweep
+[/] Identify active hosts in subnet
+
+# -------------------------
+# RECONNAISSANCE
+# -------------------------
+
+[\] Information Gathering > TCP Port Scan
+[/] Scan target TCP ports
+
+[\] Information Gathering > UDP Port Scan
+[/] Scan UDP ports
+
+[\] Information Gathering > OS Fingerprint
+[/] Detect operating system
+
+[\] Information Gathering > Service Enumeration
+[/] Identify running services
+
+[\] Information Gathering > DNS Lookup
+[/] Resolve DNS records
+
+# -------------------------
+# VULNERABILITY ASSESSMENT
+# -------------------------
+
+[\] Vulnerability Assessment > Vulnerability Scanner
+[/] Scan for known vulnerabilities
+
+[\] Vulnerability Assessment > Web Server Scan
+[/] Assess web service weaknesses
+
+[\] Vulnerability Assessment > SMB Enumeration
+[/] Enumerate SMB shares/services
+
+[\] Vulnerability Assessment > SNMP Enumeration
+[/] Gather SNMP data
+
+# -------------------------
+# EXPLOITATION
+# -------------------------
+
+[\] Exploits > Remote Exploits
+[/] Launch remote exploit modules
+
+[\] Exploits > Client-Side Exploits
+[/] Execute browser/user-side attack vectors
+
+[\] Exploits > Local Privilege Escalation
+[/] Attempt privilege escalation
+
+[\] Exploits > Web Application Exploits
+[/] Launch web exploit modules
+
+# -------------------------
+# AGENT DEPLOYMENT
+# -------------------------
+
+[\] Agents > Deploy Agent
+[/] Install Core Impact agent on target
+
+[\] Agents > Connect Existing Agent
+[/] Connect to previously deployed agent
+
+[\] Agents > List Active Agents
+[/] Show all live agents/sessions
+
+[\] Agents > Remove Agent
+[/] Uninstall deployed agent
+
+# -------------------------
+# POST-EXPLOITATION
+# -------------------------
+
+[\] Post Exploitation > Command Shell
+[/] Open remote shell session
+
+[\] Post Exploitation > File Browser
+[/] Browse remote filesystem
+
+[\] Post Exploitation > Screenshot
+[/] Capture remote desktop screenshot
+
+[\] Post Exploitation > Process List
+[/] View running processes
+
+[\] Post Exploitation > Registry Access
+[/] Browse/edit Windows registry
+
+# -------------------------
+# CREDENTIAL OPERATIONS
+# -------------------------
+
+[\] Credentials > Password Dump
+[/] Dump stored credentials/hashes
+
+[\] Credentials > Hash Capture
+[/] Collect password hashes
+
+[\] Credentials > Pass-the-Hash
+[/] Attempt lateral auth with NTLM hashes
+
+[\] Credentials > Brute Force Login
+[/] Attempt credential guessing attacks
+
+# -------------------------
+# LATERAL MOVEMENT
+# -------------------------
+
+[\] Pivoting > Route Through Agent
+[/] Pivot traffic through compromised host
+
+[\] Pivoting > SMB Lateral Move
+[/] Move laterally via SMB
+
+[\] Pivoting > RDP Session Launch
+[/] Attempt remote desktop pivot
+
+[\] Pivoting > SSH Tunnel
+[/] Establish SSH pivot tunnel
+
+# -------------------------
+# WEB APPLICATION TESTING
+# -------------------------
+
+[\] Web Apps > Spider Site
+[/] Crawl website structure
+
+[\] Web Apps > SQL Injection Test
+[/] Check SQLi vulnerabilities
+
+[\] Web Apps > XSS Test
+[/] Check XSS vulnerabilities
+
+[\] Web Apps > Auth Testing
+[/] Test login/auth weaknesses
+
+# -------------------------
+# REPORTING
+# -------------------------
+
+[\] Reports > Executive Summary
+[/] Generate executive report
+
+[\] Reports > Technical Report
+[/] Generate detailed technical findings
+
+[\] Reports > Exploitation Timeline
+[/] Export attack chain chronology
+
+[\] Reports > Export PDF
+[/] Save report as PDF
+
+# -------------------------
+# AUTOMATION / SCRIPTS
+# -------------------------
+
+[\] Scripts > Run Automation Script
+[/] Execute scripted workflow
+
+[\] Scripts > Load Module Pack
+[/] Import additional exploit modules
+
+[\] Scripts > Schedule Task
+[/] Automate recurring test sequence
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] Help > Logs
+[/] View framework logs
+
+[\] Help > Diagnostics
+[/] Run diagnostic checks
+
+[\] impact-cli --debug
+[/] Launch CLI in debug mode
+
+[\] Restart Agent Service
+[/] Reinitialize remote agent communications
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] Discover Hosts → TCP Port Scan → OS Fingerprint
+[/] Basic reconnaissance chain
+
+[\] Vulnerability Scan → Remote Exploit → Deploy Agent
+[/] Standard exploitation workflow
+
+[\] Deploy Agent → Command Shell → Password Dump
+[/] Post-exploitation credential workflow
+
+[\] Pivot Through Agent → SMB Lateral Move → Remote Shell
+[/] Internal lateral movement chain
