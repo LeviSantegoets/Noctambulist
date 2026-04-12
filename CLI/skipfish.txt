@@ -1,0 +1,127 @@
+[X] Skipfish Command List
+
+[\] skipfish -h
+[/] Show Skipfish help menu
+
+[\] skipfish -V
+[/] Show Skipfish version
+
+# -------------------------
+# BASIC SCANNING
+# -------------------------
+
+[\] skipfish -o output_dir http://example.com
+[/] Run scan and save results to output directory
+
+[\] skipfish -o out http://example.com -I example.com
+[/] Scan while including only target domain
+
+[\] skipfish -o out http://example.com -X logout
+[/] Exclude URLs containing "logout"
+
+[\] skipfish -o out http://example.com -r 100
+[/] Limit number of requests per second
+
+# -------------------------
+# AUTHENTICATION / COOKIES
+# -------------------------
+
+[\] skipfish -o out http://example.com -C "sessionid=abc123"
+[/] Use cookie for authenticated scanning
+
+[\] skipfish -o out http://example.com -A user:pass
+[/] Use HTTP basic authentication
+
+[\] skipfish -o out http://example.com -F /path/to/form.log
+[/] Use form authentication (pre-recorded login flow)
+
+# -------------------------
+# CRAWLING CONTROL
+# -------------------------
+
+[\] skipfish -o out http://example.com -d 3
+[/] Set maximum crawl depth
+
+[\] skipfish -o out http://example.com -g 1000
+[/] Limit number of nodes (URLs) to crawl
+
+[\] skipfish -o out http://example.com -m 10
+[/] Set maximum number of connections per target
+
+[\] skipfish -o out http://example.com -t 20
+[/] Set number of concurrent threads
+
+# -------------------------
+# PERFORMANCE / SPEED
+# -------------------------
+
+[\] skipfish -o out http://example.com -r 50
+[/] Throttle requests per second
+
+[\] skipfish -o out http://example.com -q
+[/] Quiet mode (less output)
+
+[\] skipfish -o out http://example.com -S profile
+[/] Use custom performance profile
+
+# -------------------------
+# FILTERING / SCOPING
+# -------------------------
+
+[\] skipfish -o out http://example.com -I example.com/admin
+[/] Include only admin path
+
+[\] skipfish -o out http://example.com -X ".jpg|.png|.css"
+[/] Exclude static resources
+
+[\] skipfish -o out http://example.com -K
+[/] Skip dictionary-based guessing
+
+# -------------------------
+# DICTIONARY ATTACK / GUESSING
+# -------------------------
+
+[\] skipfish -o out http://example.com -W wordlist.txt
+[/] Use custom wordlist for brute-force discovery
+
+[\] skipfish -o out http://example.com -D dictionary_file
+[/] Use custom dictionary for fuzzing
+
+# -------------------------
+# OUTPUT / REPORTING
+# -------------------------
+
+[\] skipfish -o out http://example.com && firefox out/index.html
+[/] Run scan and open HTML report
+
+[\] skipfish -o out http://example.com && tar -czf report.tar.gz out/
+[/] Archive scan results
+
+[\] skipfish -o out http://example.com -u
+[/] Enable update checks during scan
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] skipfish -o out http://example.com -v
+[/] Verbose output
+
+[\] skipfish -o out http://example.com -VV
+[/] Very verbose debug output
+
+[\] skipfish -o out http://example.com -h
+[/] Show full help with options
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] skipfish -o out http://example.com -I example.com && firefox out/index.html
+[/] Scan target and open report
+
+[\] skipfish -o out http://example.com -W wordlist.txt -t 20
+[/] Brute-force scan with custom wordlist and threads
+
+[\] skipfish -o out http://example.com -C "sessionid=abc123" -I example.com
+[/] Authenticated scan with cookie session
