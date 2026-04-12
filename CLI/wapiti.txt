@@ -1,0 +1,149 @@
+[X] Wapiti Command List
+
+[\] wapiti --help
+[/] Show Wapiti help menu
+
+[\] wapiti --version
+[/] Show installed Wapiti version
+
+# -------------------------
+# BASIC SCAN USAGE
+# -------------------------
+
+[\] wapiti -u http://example.com
+[/] Scan target web application
+
+[\] wapiti -u https://example.com -m sql,xss
+[/] Scan only SQL injection and XSS modules
+
+[\] wapiti -u http://example.com -f html
+[/] Generate HTML report output
+
+[\] wapiti -u http://example.com -f json
+[/] Generate JSON report output
+
+[\] wapiti -u http://example.com -f txt
+[/] Generate plain text report output
+
+# -------------------------
+# SCAN MODES / BEHAVIOR
+# -------------------------
+
+[\] wapiti -u http://example.com --scope domain
+[/] Restrict scan to same domain
+
+[\] wapiti -u http://example.com --scope folder
+[/] Restrict scan to same folder/path
+
+[\] wapiti -u http://example.com --depth 5
+[/] Set crawl depth limit
+
+[\] wapiti -u http://example.com --max-links 500
+[/] Limit number of URLs to crawl
+
+# -------------------------
+# AUTHENTICATION
+# -------------------------
+
+[\] wapiti -u http://example.com --auth-type basic --auth-cred user:pass
+[/] Use HTTP Basic authentication
+
+[\] wapiti -u http://example.com --cookie "sessionid=abc123"
+[/] Use session cookie for authenticated scan
+
+[\] wapiti -u http://example.com --login-url http://example.com/login
+[/] Specify login page for authenticated scan
+
+# -------------------------
+# MODULES / ATTACK VECTORS
+# -------------------------
+
+[\] wapiti -u http://example.com -m sql
+[/] SQL injection testing
+
+[\] wapiti -u http://example.com -m xss
+[/] Cross-site scripting testing
+
+[\] wapiti -u http://example.com -m ssrf
+[/] Server-side request forgery testing
+
+[\] wapiti -u http://example.com -m backup
+[/] Check for exposed backup files
+
+[\] wapiti -u http://example.com -m csp
+[/] Check Content Security Policy issues
+
+# -------------------------
+# PROXY / TRAFFIC CONTROL
+# -------------------------
+
+[\] wapiti -u http://example.com --proxy http://127.0.0.1:8080
+[/] Route traffic through proxy (e.g., Burp Suite)
+
+[\] wapiti -u http://example.com --verify-ssl 0
+[/] Disable SSL verification
+
+[\] wapiti -u http://example.com --timeout 10
+[/] Set request timeout
+
+# -------------------------
+# OUTPUT / REPORTING
+# -------------------------
+
+[\] wapiti -u http://example.com -o report/
+[/] Save full scan report directory
+
+[\] wapiti -u http://example.com -f html -o report.html
+[/] Save HTML report to file
+
+[\] wapiti -u http://example.com -f json -o report.json
+[/] Save JSON report
+
+# -------------------------
+# CRAWLING / FILTERING
+# -------------------------
+
+[\] wapiti -u http://example.com --exclude "*.jpg,*.png"
+[/] Exclude static file types
+
+[\] wapiti -u http://example.com --include "*.php"
+[/] Include only specific file types
+
+[\] wapiti -u http://example.com --blacklist logout
+[/] Avoid crawling logout links
+
+# -------------------------
+# PERFORMANCE / TUNING
+# -------------------------
+
+[\] wapiti -u http://example.com --threads 10
+[/] Increase concurrent scan threads
+
+[\] wapiti -u http://example.com --delay 0.5
+[/] Add delay between requests
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] wapiti -u http://example.com --verbose
+[/] Enable verbose output
+
+[\] wapiti -u http://example.com --debug
+[/] Enable debug mode
+
+[\] wapiti -u http://example.com --log-file scan.log
+[/] Save logs to file
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] wapiti -u http://example.com -f html -o report.html && firefox report.html
+[/] Run scan and open report
+
+[\] wapiti -u http://example.com --proxy http://127.0.0.1:8080 -m xss
+[/] Scan for XSS via intercepting proxy
+
+[\] wapiti -u http://example.com -m sql,xss -o report/ && tar -czf report.tar.gz report/
+[/] Run scan and archive results
