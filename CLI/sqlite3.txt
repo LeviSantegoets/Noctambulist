@@ -1,0 +1,197 @@
+[X] SQLite3 Command List
+
+[\] sqlite3 --help
+[/] Show SQLite3 help menu
+
+[\] sqlite3 --version
+[/] Show installed SQLite version
+
+# -------------------------
+# DATABASE ACCESS
+# -------------------------
+
+[\] sqlite3 mydb.db
+[/] Open or create SQLite database file
+
+[\] sqlite3 :memory:
+[/] Open temporary in-memory database
+
+[\] sqlite3
+[/] Start SQLite shell without database file
+
+# -------------------------
+# DATABASE MANAGEMENT
+# -------------------------
+
+[\] .databases
+[/] List attached/open databases
+
+[\] .open mydb.db
+[/] Open specific database inside shell
+
+[\] .backup backup.db
+[/] Create backup copy of database
+
+[\] .restore backup.db
+[/] Restore database from backup
+
+# -------------------------
+# TABLE OPERATIONS
+# -------------------------
+
+[\] .tables
+[/] List all tables
+
+[\] .schema
+[/] Show schema for entire database
+
+[\] .schema users
+[/] Show schema for specific table
+
+[\] CREATE TABLE users(id INTEGER PRIMARY KEY, name TEXT);
+[/] Create new table
+
+[\] DROP TABLE users;
+[/] Delete table
+
+# -------------------------
+# QUERY EXECUTION
+# -------------------------
+
+[\] SELECT * FROM users;
+[/] Run SQL query
+
+[\] INSERT INTO users(name) VALUES('Alice');
+[/] Insert record
+
+[\] UPDATE users SET name='Bob' WHERE id=1;
+[/] Update record
+
+[\] DELETE FROM users WHERE id=1;
+[/] Delete record
+
+# -------------------------
+# IMPORT / EXPORT
+# -------------------------
+
+[\] .dump
+[/] Export full database as SQL
+
+[\] .dump users
+[/] Export specific table as SQL
+
+[\] sqlite3 mydb.db .dump > backup.sql
+[/] Save SQL dump to file
+
+[\] sqlite3 mydb.db < backup.sql
+[/] Restore database from SQL dump
+
+[\] .import data.csv users
+[/] Import CSV file into table
+
+[\] .mode csv
+[/] Set CSV output/input mode
+
+# -------------------------
+# OUTPUT FORMATTING
+# -------------------------
+
+[\] .headers on
+[/] Show column names in output
+
+[\] .mode column
+[/] Display output in aligned columns
+
+[\] .mode json
+[/] Output query results as JSON
+
+[\] .width 10 20 30
+[/] Set column widths
+
+# -------------------------
+# ATTACH / DETACH DATABASES
+# -------------------------
+
+[\] ATTACH DATABASE 'other.db' AS other;
+[/] Attach another database file
+
+[\] DETACH DATABASE other;
+[/] Detach attached database
+
+# -------------------------
+# TRANSACTIONS
+# -------------------------
+
+[\] BEGIN TRANSACTION;
+[/] Start transaction
+
+[\] COMMIT;
+[/] Commit transaction
+
+[\] ROLLBACK;
+[/] Undo transaction changes
+
+# -------------------------
+# INDEXES
+# -------------------------
+
+[\] CREATE INDEX idx_name ON users(name);
+[/] Create index
+
+[\] DROP INDEX idx_name;
+[/] Remove index
+
+# -------------------------
+# PRAGMA / CONFIGURATION
+# -------------------------
+
+[\] PRAGMA database_list;
+[/] Show attached databases
+
+[\] PRAGMA table_info(users);
+[/] Show table column info
+
+[\] PRAGMA foreign_keys = ON;
+[/] Enable foreign key enforcement
+
+# -------------------------
+# SHELL UTILITIES
+# -------------------------
+
+[\] .read script.sql
+[/] Execute SQL commands from file
+
+[\] .output results.txt
+[/] Redirect output to file
+
+[\] .once output.txt
+[/] Write next query result to file
+
+[\] .quit
+[/] Exit SQLite shell
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] PRAGMA integrity_check;
+[/] Check database integrity
+
+[\] .show
+[/] Show current shell settings
+
+[\] EXPLAIN QUERY PLAN SELECT * FROM users;
+[/] Show query execution plan
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] sqlite3 mydb.db "SELECT * FROM users;"
+[/] Run one-line SQL query from shell
+
+[\] sqlite3 mydb.db ".tables"
+[/] List tables from command line
+
+[\] sqlite3 mydb.db ".dump" > backup.sql
+[/] Export full backup to SQL file
