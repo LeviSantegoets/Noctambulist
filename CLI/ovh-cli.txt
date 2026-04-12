@@ -1,0 +1,210 @@
+[X] OVH CLI Command List
+
+[\] ovh
+[/] Show OVH CLI general help and command overview
+
+[\] ovh --help
+[/] Display full OVH CLI help menu
+
+[\] ovh --version
+[/] Show installed OVH CLI version
+
+# -------------------------
+# AUTHENTICATION / CONFIGURATION
+# -------------------------
+
+[\] ovh login
+[/] Authenticate with OVH account
+
+[\] ovh config list
+[/] Show current OVH CLI configuration
+
+[\] ovh config set endpoint ovh-eu
+[/] Set OVH API endpoint region
+
+[\] ovh logout
+[/] Remove stored authentication credentials
+
+# -------------------------
+# ACCOUNT / PROFILE
+# -------------------------
+
+[\] ovh me
+[/] Show current account profile details
+
+[\] ovh me api credential list
+[/] List API credentials
+
+[\] ovh me api credential get <credential-id>
+[/] Show credential details
+
+# -------------------------
+# CLOUD PROJECTS
+# -------------------------
+
+[\] ovh cloud project list
+[/] List public cloud projects
+
+[\] ovh cloud project get <project-id>
+[/] Show project details
+
+[\] ovh cloud project create
+[/] Create new cloud project (if enabled)
+
+# -------------------------
+# COMPUTE INSTANCES
+# -------------------------
+
+[\] ovh cloud instance list <project-id>
+[/] List cloud instances
+
+[\] ovh cloud instance get <project-id> <instance-id>
+[/] Show instance details
+
+[\] ovh cloud instance create <project-id>
+[/] Create new cloud instance
+
+[\] ovh cloud instance delete <project-id> <instance-id>
+[/] Delete instance
+
+[\] ovh cloud instance reboot <project-id> <instance-id>
+[/] Reboot instance
+
+# -------------------------
+# IMAGES / FLAVORS
+# -------------------------
+
+[\] ovh cloud image list <project-id>
+[/] List available VM images
+
+[\] ovh cloud flavor list <project-id>
+[/] List available instance flavors
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] ovh cloud network private list <project-id>
+[/] List private networks
+
+[\] ovh cloud network private create <project-id>
+[/] Create private network
+
+[\] ovh cloud ip list
+[/] List public IP addresses
+
+[\] ovh cloud ip failover list
+[/] List failover IPs
+
+# -------------------------
+# STORAGE
+# -------------------------
+
+[\] ovh cloud storage container list <project-id>
+[/] List object storage containers
+
+[\] ovh cloud storage container create <project-id>
+[/] Create object storage container
+
+[\] ovh cloud volume list <project-id>
+[/] List block storage volumes
+
+[\] ovh cloud volume create <project-id>
+[/] Create block storage volume
+
+# -------------------------
+# KUBERNETES
+# -------------------------
+
+[\] ovh cloud kube list <project-id>
+[/] List Kubernetes clusters
+
+[\] ovh cloud kube create <project-id>
+[/] Create Kubernetes cluster
+
+[\] ovh cloud kube get <project-id> <cluster-id>
+[/] Show cluster details
+
+[\] ovh cloud kube delete <project-id> <cluster-id>
+[/] Delete Kubernetes cluster
+
+# -------------------------
+# DNS / DOMAINS
+# -------------------------
+
+[\] ovh domain list
+[/] List registered domains
+
+[\] ovh domain zone list
+[/] List DNS zones
+
+[\] ovh domain zone record list <domain>
+[/] List DNS records for domain
+
+[\] ovh domain zone record create <domain>
+[/] Create DNS record
+
+# -------------------------
+# VPS / DEDICATED SERVERS
+# -------------------------
+
+[\] ovh vps list
+[/] List VPS instances
+
+[\] ovh vps get <service-name>
+[/] Show VPS details
+
+[\] ovh dedicated server list
+[/] List dedicated servers
+
+[\] ovh dedicated server reboot <service-name>
+[/] Reboot dedicated server
+
+# -------------------------
+# BILLING / USAGE
+# -------------------------
+
+[\] ovh billing invoices list
+[/] List invoices
+
+[\] ovh billing payment method list
+[/] List payment methods
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] ovh cloud project list --json
+[/] Output project list as JSON
+
+[\] ovh --debug cloud project list
+[/] Run command with debug output
+
+[\] ovh --raw me
+[/] Show raw API response
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] ovh config list
+[/] Verify CLI configuration
+
+[\] ovh me api credential list
+[/] Check active API tokens
+
+[\] ovh --debug me
+[/] Diagnose authentication/API issues
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ovh login && ovh cloud project list
+[/] Authenticate and list cloud projects
+
+[\] ovh cloud instance list <project-id> && ovh cloud image list <project-id>
+[/] Review instances and available images
+
+[\] ovh cloud kube list <project-id> && kubectl get nodes
+[/] Inspect Kubernetes clusters and verify connected nodes
