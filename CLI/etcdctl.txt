@@ -1,0 +1,168 @@
+[X] etcdctl Command List
+
+[\] etcdctl --help
+[/] Show etcdctl help menu
+
+[\] etcdctl version
+[/] Show etcdctl and API version
+
+# -------------------------
+# CONNECTION / ENV CONFIG
+# -------------------------
+
+[\] export ETCDCTL_API=3
+[/] Use v3 API (recommended)
+
+[\] etcdctl --endpoints=localhost:2379 endpoint health
+[/] Check cluster endpoint health
+
+[\] etcdctl --endpoints=localhost:2379 endpoint status
+[/] Show endpoint status and DB size
+
+[\] etcdctl --endpoints=localhost:2379 --cacert=ca.crt --cert=client.crt --key=client.key endpoint health
+[/] Secure TLS connection check
+
+# -------------------------
+# CLUSTER INFO
+# -------------------------
+
+[\] etcdctl member list
+[/] List cluster members
+
+[\] etcdctl endpoint status -w table
+[/] Show endpoints in table format
+
+[\] etcdctl endpoint health -w table
+[/] Show cluster health summary
+
+[\] etcdctl alarm list
+[/] List active alarms
+
+[\] etcdctl alarm disarm
+[/] Clear alarms
+
+# -------------------------
+# KEY-VALUE OPERATIONS
+# -------------------------
+
+[\] etcdctl put key1 value1
+[/] Set key-value pair
+
+[\] etcdctl get key1
+[/] Get value for key
+
+[\] etcdctl get key --prefix
+[/] Get keys with prefix
+
+[\] etcdctl del key1
+[/] Delete key
+
+[\] etcdctl del key --prefix
+[/] Delete keys by prefix
+
+# -------------------------
+# WATCHING CHANGES
+# -------------------------
+
+[\] etcdctl watch key1
+[/] Watch a key for changes
+
+[\] etcdctl watch --prefix /configs/
+[/] Watch all keys under prefix
+
+# -------------------------
+# LEASES (TTL KEYS)
+# -------------------------
+
+[\] etcdctl lease grant 60
+[/] Create lease with 60 seconds TTL
+
+[\] etcdctl lease revoke <lease-id>
+[/] Revoke lease
+
+[\] etcdctl lease keep-alive <lease-id>
+[/] Keep lease alive
+
+[\] etcdctl put key1 value1 --lease=<lease-id>
+[/] Attach key to lease
+
+# -------------------------
+# TRANSACTIONS
+# -------------------------
+
+[\] etcdctl txn
+[/] Start interactive transaction mode
+
+[\] etcdctl txn --interactive
+[/] Run transaction interactively
+
+# -------------------------
+# SNAPSHOTS / BACKUP
+# -------------------------
+
+[\] etcdctl snapshot save backup.db
+[/] Create cluster snapshot
+
+[\] etcdctl snapshot status backup.db
+[/] Show snapshot details
+
+[\] etcdctl snapshot restore backup.db
+[/] Restore cluster from snapshot
+
+# -------------------------
+# MEMBER MANAGEMENT
+# -------------------------
+
+[\] etcdctl member add node2 --peer-urls=http://10.0.0.2:2380
+[/] Add cluster member
+
+[\] etcdctl member remove <member-id>
+[/] Remove cluster member
+
+[\] etcdctl member update <member-id> --peer-urls=http://new-url:2380
+[/] Update member configuration
+
+# -------------------------
+# AUTH / SECURITY
+# -------------------------
+
+[\] etcdctl user add root
+[/] Add user
+
+[\] etcdctl user grant-role root root
+[/] Assign role to user
+
+[\] etcdctl role add admin
+[/] Create role
+
+[\] etcdctl auth enable
+[/] Enable authentication
+
+[\] etcdctl auth status
+[/] Check auth status
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] etcdctl get / --prefix --keys-only
+[/] List all keys
+
+[\] etcdctl --debug get key1
+[/] Run command with debug output
+
+[\] journalctl -u etcd
+[/] View etcd logs (systemd)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] export ETCDCTL_API=3 && etcdctl put app/config "enabled"
+[/] Set config value
+
+[\] etcdctl get /configs --prefix && etcdctl endpoint health
+[/] Inspect config and cluster health
+
+[\] etcdctl snapshot save backup.db && etcdctl snapshot status backup.db
+[/] Backup and verify snapshot
