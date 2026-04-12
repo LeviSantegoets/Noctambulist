@@ -1,0 +1,168 @@
+[X] InfluxDB CLI Command List
+
+[\] influx --help
+[/] Show InfluxDB CLI help menu
+
+[\] influx version
+[/] Show Influx CLI version
+
+[\] influxd version
+[/] Show InfluxDB server version
+
+# -------------------------
+# SERVER CONTROL (influxd)
+# -------------------------
+
+[\] influxd
+[/] Start InfluxDB server with default configuration
+
+[\] influxd --config /etc/influxdb/config.yml
+[/] Start server with custom config
+
+[\] systemctl start influxdb
+[/] Start InfluxDB service (Linux)
+
+[\] systemctl stop influxdb
+[/] Stop InfluxDB service
+
+[\] systemctl status influxdb
+[/] Check InfluxDB service status
+
+# -------------------------
+# CONNECTION / AUTH
+# -------------------------
+
+[\] influx setup
+[/] Initial setup (bucket, org, user, token)
+
+[\] influx login
+[/] Authenticate to InfluxDB Cloud/instance
+
+[\] influx ping
+[/] Check server availability
+
+[\] influx config list
+[/] List saved CLI configs
+
+[\] influx config create
+[/] Create new CLI configuration
+
+# -------------------------
+# ORGANIZATIONS / BUCKETS (InfluxDB 2.x)
+# -------------------------
+
+[\] influx org list
+[/] List organizations
+
+[\] influx org create --name my-org
+[/] Create organization
+
+[\] influx bucket list
+[/] List buckets (databases)
+
+[\] influx bucket create --name my-bucket --org my-org --retention 30d
+[/] Create bucket with retention policy
+
+[\] influx bucket delete --name my-bucket
+[/] Delete bucket
+
+# -------------------------
+# WRITE DATA
+# -------------------------
+
+[\] influx write --bucket my-bucket --org my-org "cpu,host=server1 usage=0.64"
+[/] Write a single line protocol point
+
+[\] influx write --file data.lp
+[/] Write data from file (line protocol)
+
+[\] influx write --bucket my-bucket --precision s "mem,host=s1 used=123"
+[/] Write with timestamp precision
+
+# -------------------------
+# QUERY DATA (FLUX)
+# -------------------------
+
+[\] influx query 'from(bucket:"my-bucket") |> range(start:-1h)'
+[/] Run Flux query from CLI
+
+[\] influx query --org my-org 'from(bucket:"cpu") |> mean()'
+[/] Query with organization context
+
+# -------------------------
+# TASKS / SCHEDULING
+# -------------------------
+
+[\] influx task list
+[/] List scheduled tasks
+
+[\] influx task create --name mytask --flux-file task.flux
+[/] Create scheduled query task
+
+[\] influx task delete <task-id>
+[/] Delete task
+
+# -------------------------
+# USERS / AUTH (InfluxDB OSS / Cloud)
+# -------------------------
+
+[\] influx user list
+[/] List users
+
+[\] influx auth list
+[/] List API tokens
+
+[\] influx auth create --read-buckets --write-buckets
+[/] Create API token with permissions
+
+[\] influx auth delete <auth-id>
+[/] Delete token
+
+# -------------------------
+# EXPORT / IMPORT
+# -------------------------
+
+[\] influx backup /path/to/backup
+[/] Backup InfluxDB data
+
+[\] influx restore /path/to/backup
+[/] Restore from backup
+
+# -------------------------
+# MONITORING / DIAGNOSTICS
+# -------------------------
+
+[\] influx ping
+[/] Check server health
+
+[\] influx bucket list --json
+[/] Output bucket list as JSON
+
+[\] influx org list --json
+[/] Output org list as JSON
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] influx version
+[/] Verify CLI version compatibility
+
+[\] influx config list
+[/] Check active connection settings
+
+[\] journalctl -u influxdb
+[/] View InfluxDB logs (Linux)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] influx setup && influx bucket list
+[/] Initialize and verify setup
+
+[\] influx write --bucket my-bucket --org my-org "cpu,host=s1 usage=0.7" && influx query 'from(bucket:"my-bucket") |> range(start:-5m)'
+[/] Write data and immediately query it
+
+[\] influx task list && influx auth list
+[/] Inspect automation tasks and API tokens
