@@ -1,0 +1,123 @@
+[X] URLCrazy Command List
+
+[\] urlcrazy --help
+[/] Show URLCrazy help menu
+
+[\] urlcrazy --version
+[/] Show installed URLCrazy version
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] urlcrazy example.com
+[/] Generate typo-squatted domain variants for a target domain
+
+[\] urlcrazy -r example.com
+[/] Show only registered domains
+
+[\] urlcrazy -u example.com
+[/] Show only unregistered domains
+
+[\] urlcrazy -a example.com
+[/] Check all variants (registered + unregistered)
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] urlcrazy -o results.txt example.com
+[/] Save results to a text file
+
+[\] urlcrazy --csv example.com
+[/] Output results in CSV format
+
+[\] urlcrazy --json example.com
+[/] Output results in JSON format
+
+[\] urlcrazy --no-color example.com
+[/] Disable colored output for parsing
+
+# -------------------------
+# TYPOSQUATTING TECHNIQUES
+# -------------------------
+
+[\] urlcrazy --keyboard example.com
+[/] Use keyboard-based typos (QWERTY adjacency)
+
+[\] urlcrazy --character-repeat example.com
+[/] Include repeated-character typos (e.g., gooogle.com)
+
+[\] urlcrazy --character-omission example.com
+[/] Include missing-character typos (e.g., gogle.com)
+
+[\] urlcrazy --bit-flip example.com
+[/] Include bit-flip style mutations
+
+[\] urlcrazy --hyphenation example.com
+[/] Add/remove hyphens in domain variants
+
+# -------------------------
+# DOMAIN CHECKING
+# -------------------------
+
+[\] urlcrazy --whois example.com
+[/] Perform WHOIS lookup on generated domains
+
+[\] urlcrazy --dns-check example.com
+[/] Check DNS resolution for variants
+
+[\] urlcrazy --available-only example.com
+[/] Show only available (unregistered) domains
+
+# -------------------------
+# FILTERING / SCOPING
+# -------------------------
+
+[\] urlcrazy --tld com example.com
+[/] Restrict results to specific TLD
+
+[\] urlcrazy --exclude-tld net,org example.com
+[/] Exclude specific TLDs
+
+[\] urlcrazy --similarity 0.8 example.com
+[/] Filter by similarity threshold
+
+# -------------------------
+# PERFORMANCE OPTIONS
+# -------------------------
+
+[\] urlcrazy --threads 20 example.com
+[/] Increase parallel checking speed
+
+[\] urlcrazy --timeout 5 example.com
+[/] Set DNS/WHOIS timeout
+
+# -------------------------
+# DEBUG / VERBOSE
+# -------------------------
+
+[\] urlcrazy --verbose example.com
+[/] Show detailed processing output
+
+[\] urlcrazy --debug example.com
+[/] Enable debug mode
+
+[\] urlcrazy --logfile scan.log example.com
+[/] Save logs to file
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] urlcrazy example.com -u > available.txt
+[/] Extract available domains to file
+
+[\] urlcrazy example.com --dns-check | grep "available"
+[/] Filter DNS results for available domains
+
+[\] urlcrazy example.com && knockpy example.com
+[/] Chain typo generation with subdomain enumeration
+
+[\] urlcrazy example.com --csv | tee results.csv
+[/] Save and display structured results
