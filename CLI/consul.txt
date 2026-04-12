@@ -1,0 +1,169 @@
+[X] Consul CLI Command List
+
+[\] consul --help
+[/] Show Consul CLI help menu
+
+[\] consul version
+[/] Show installed Consul version
+
+# -------------------------
+# AGENT CONTROL
+# -------------------------
+
+[\] consul agent -dev
+[/] Start Consul in development mode (single node)
+
+[\] consul agent -config-dir=/etc/consul.d
+[/] Start Consul agent with config directory
+
+[\] consul agent -server -bootstrap-expect=3
+[/] Start Consul server node for cluster
+
+[\] consul leave
+[/] Gracefully leave cluster
+
+# -------------------------
+# CLUSTER MEMBERSHIP
+# -------------------------
+
+[\] consul members
+[/] List cluster members
+
+[\] consul info
+[/] Show agent and runtime information
+
+[\] consul monitor
+[/] Stream real-time logs from agent
+
+# -------------------------
+# KEY-VALUE STORE (KV)
+# -------------------------
+
+[\] consul kv put key1 value1
+[/] Set key-value pair
+
+[\] consul kv get key1
+[/] Get value for key
+
+[\] consul kv delete key1
+[/] Delete key
+
+[\] consul kv get -recurse
+[/] Get all keys recursively
+
+[\] consul kv put config/app/enabled true
+[/] Store hierarchical config value
+
+# -------------------------
+# SERVICES
+# -------------------------
+
+[\] consul catalog services
+[/] List registered services
+
+[\] consul catalog nodes
+[/] List nodes in cluster
+
+[\] consul catalog service <service-name>
+[/] Show service instances
+
+# -------------------------
+# SERVICE REGISTRATION
+# -------------------------
+
+[\] consul services register service.json
+[/] Register service from JSON definition
+
+[\] consul services deregister service.json
+[/] Deregister service
+
+# -------------------------
+# HEALTH CHECKS
+# -------------------------
+
+[\] consul health checks
+[/] List all health checks
+
+[\] consul health service <service-name>
+[/] Show health status of a service
+
+[\] consul health node <node-name>
+[/] Show health status of a node
+
+# -------------------------
+# DNS INTERFACE
+# -------------------------
+
+[\] dig @127.0.0.1 -p 8600 service.consul
+[/] Query Consul DNS interface for service discovery
+
+[\] dig @127.0.0.1 -p 8600 node.consul
+[/] Query nodes via Consul DNS
+
+# -------------------------
+# ACL / SECURITY
+# -------------------------
+
+[\] consul acl bootstrap
+[/] Initialize ACL system
+
+[\] consul acl policy list
+[/] List ACL policies
+
+[\] consul acl token create -description "my token"
+[/] Create ACL token
+
+[\] consul acl token list
+[/] List ACL tokens
+
+# -------------------------
+# CONNECT (SERVICE MESH)
+# -------------------------
+
+[\] consul connect proxy -sidecar-for web
+[/] Start service mesh sidecar proxy
+
+[\] consul connect envoy -sidecar-for web
+[/] Run Envoy sidecar for service mesh
+
+# -------------------------
+# SNAPSHOT / BACKUP
+# -------------------------
+
+[\] consul snapshot save backup.snap
+[/] Create snapshot backup
+
+[\] consul snapshot restore backup.snap
+[/] Restore snapshot
+
+[\] consul snapshot inspect backup.snap
+[/] Inspect snapshot contents
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] consul validate /etc/consul.d
+[/] Validate configuration files
+
+[\] consul operator raft list-peers
+[/] Show Raft cluster peers
+
+[\] consul operator raft configuration
+[/] Show Raft configuration
+
+[\] journalctl -u consul
+[/] View Consul logs (systemd)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] consul agent -dev & consul members
+[/] Start dev agent and list members
+
+[\] consul kv put config/app true && consul kv get config/app
+[/] Store and retrieve config value
+
+[\] consul snapshot save backup.snap && consul snapshot inspect backup.snap
+[/] Backup and verify snapshot
