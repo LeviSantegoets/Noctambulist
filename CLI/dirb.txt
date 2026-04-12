@@ -1,0 +1,76 @@
+[X] DIRB Command List
+
+[\] dirb
+[/] Show DIRB help menu
+
+[\] dirb http://example.com
+[/] Basic directory brute-force scan
+
+[\] dirb http://example.com /usr/share/wordlists/dirb/common.txt
+[/] Scan using custom wordlist
+
+[\] dirb http://example.com -w
+[/] Do not stop on warning messages
+
+[\] dirb http://example.com -S
+[/] Silent mode (less output noise)
+
+[\] dirb http://example.com -r
+[/] Non-recursive scan
+
+[\] dirb http://example.com -R
+[/] Recursive scan
+
+[\] dirb http://example.com -i
+[/] Show only positive results
+
+[\] dirb http://example.com -o results.txt
+[/] Save output to file
+
+[\] dirb http://example.com -x .php,.html,.bak
+[/] Append file extensions to test
+
+[\] dirb http://example.com -X extensions.txt
+[/] Use extension list file
+
+[\] dirb http://example.com -t 20
+[/] Set number of threads
+
+[\] dirb http://example.com -z 10
+[/] Set delay between requests
+
+[\] dirb http://example.com -H "User-Agent: custom"
+[/] Add custom HTTP header
+
+[\] dirb http://example.com -c "cookie=value"
+[/] Use cookies for session-based scanning
+
+[\] dirb http://example.com -a "Mozilla/5.0"
+[/] Set custom user agent
+
+[\] dirb http://example.com -u
+[/] URL encode payloads
+
+[\] dirb http://example.com -p proxyhost:port
+[/] Use HTTP proxy
+
+[\] dirb http://example.com -N 403
+[/] Ignore specific HTTP status code (e.g., 403)
+
+[\] dirb http://example.com -v
+[/] Enable verbose mode
+
+[\] dirb http://example.com -z 0
+[/] No delay between requests
+
+[\] dirb http://example.com -S -i
+[/] Silent mode with only valid results
+
+[\] dirb http://example.com /usr/share/wordlists/dirb/big.txt -o scan.txt
+[/] Large wordlist scan with output saved
+
+[\] dirb http://example.com -X .php,.txt,.bak -o results.txt
+[/] Scan multiple extensions and save results
+
+[\] dirb http://example.com /usr/share/wordlists/dirb/common.txt -r -o output.txt
+[/] Recursive scan with output file
