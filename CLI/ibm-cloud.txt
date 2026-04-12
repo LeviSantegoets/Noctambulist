@@ -1,0 +1,206 @@
+[X] IBM Cloud CLI Command List
+
+[\] ibmcloud
+[/] Show IBM Cloud CLI general help and command overview
+
+[\] ibmcloud help
+[/] Display full IBM Cloud CLI help menu
+
+[\] ibmcloud version
+[/] Show installed IBM Cloud CLI version
+
+# -------------------------
+# AUTHENTICATION / ACCOUNT
+# -------------------------
+
+[\] ibmcloud login
+[/] Log in to IBM Cloud interactively
+
+[\] ibmcloud login --sso
+[/] Log in using single sign-on
+
+[\] ibmcloud logout
+[/] Log out of IBM Cloud session
+
+[\] ibmcloud account show
+[/] Show current account details
+
+[\] ibmcloud account list
+[/] List available accounts
+
+[\] ibmcloud target -g Default
+[/] Set active resource group
+
+[\] ibmcloud target -r eu-de
+[/] Set active region
+
+# -------------------------
+# RESOURCE GROUPS
+# -------------------------
+
+[\] ibmcloud resource groups
+[/] List resource groups
+
+[\] ibmcloud resource group-create mygroup
+[/] Create resource group
+
+[\] ibmcloud resource group-delete mygroup
+[/] Delete resource group
+
+# -------------------------
+# RESOURCE MANAGEMENT
+# -------------------------
+
+[\] ibmcloud resource service-instances
+[/] List service instances
+
+[\] ibmcloud resource service-instance-create mydb databases-for-postgresql standard eu-de
+[/] Create service instance
+
+[\] ibmcloud resource service-instance-delete mydb
+[/] Delete service instance
+
+[\] ibmcloud resource service-keys
+[/] List service keys
+
+# -------------------------
+# VPC / COMPUTE INSTANCES
+# -------------------------
+
+[\] ibmcloud is instances
+[/] List virtual server instances
+
+[\] ibmcloud is instance-create myvm myvpc eu-de-1 bx2-2x8 ubuntu-22-04-amd64
+[/] Create virtual server instance
+
+[\] ibmcloud is instance <instance-id>
+[/] Show instance details
+
+[\] ibmcloud is instance-stop <instance-id>
+[/] Stop instance
+
+[\] ibmcloud is instance-start <instance-id>
+[/] Start instance
+
+[\] ibmcloud is instance-delete <instance-id>
+[/] Delete instance
+
+# -------------------------
+# KUBERNETES / OPENSHIFT
+# -------------------------
+
+[\] ibmcloud ks clusters
+[/] List Kubernetes clusters
+
+[\] ibmcloud ks cluster create classic --name mycluster
+[/] Create Kubernetes cluster
+
+[\] ibmcloud ks cluster config --cluster mycluster
+[/] Download kubeconfig for cluster
+
+[\] ibmcloud oc clusters
+[/] List OpenShift clusters
+
+# -------------------------
+# STORAGE
+# -------------------------
+
+[\] ibmcloud cos buckets
+[/] List Cloud Object Storage buckets
+
+[\] ibmcloud cos bucket-create --bucket mybucket --region eu-de
+[/] Create object storage bucket
+
+[\] ibmcloud cos object-put --bucket mybucket --key file.txt --body file.txt
+[/] Upload file to bucket
+
+[\] ibmcloud cos object-get --bucket mybucket --key file.txt file.txt
+[/] Download object from bucket
+
+# -------------------------
+# FUNCTIONS / SERVERLESS
+# -------------------------
+
+[\] ibmcloud fn action list
+[/] List Cloud Functions actions
+
+[\] ibmcloud fn action create hello hello.js
+[/] Create serverless action
+
+[\] ibmcloud fn action invoke hello --result
+[/] Invoke action and show result
+
+# -------------------------
+# IAM / ACCESS
+# -------------------------
+
+[\] ibmcloud iam api-keys
+[/] List API keys
+
+[\] ibmcloud iam service-ids
+[/] List service IDs
+
+[\] ibmcloud iam access-groups
+[/] List access groups
+
+# -------------------------
+# PLUGIN MANAGEMENT
+# -------------------------
+
+[\] ibmcloud plugin list
+[/] List installed plugins
+
+[\] ibmcloud plugin install kubernetes-service
+[/] Install plugin
+
+[\] ibmcloud plugin update
+[/] Update all plugins
+
+# -------------------------
+# LOGGING / MONITORING
+# -------------------------
+
+[\] ibmcloud logs instances
+[/] List logging instances
+
+[\] ibmcloud monitoring instances
+[/] List monitoring services
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] ibmcloud is instances --output json
+[/] Output instances in JSON format
+
+[\] ibmcloud --trace true is instances
+[/] Enable debug trace output
+
+[\] ibmcloud target
+[/] Show current target settings
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] ibmcloud regions
+[/] List available regions
+
+[\] ibmcloud login --apikey <API_KEY>
+[/] Authenticate with API key
+
+[\] ibmcloud plugin repo-plugins
+[/] Show available plugins
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] ibmcloud login && ibmcloud account show
+[/] Authenticate and verify account
+
+[\] ibmcloud ks cluster config --cluster mycluster && kubectl get nodes
+[/] Connect to Kubernetes cluster and verify nodes
+
+[\] ibmcloud target -r eu-de -g Default && ibmcloud is instances
+[/] Set region/resource group and list compute instances
