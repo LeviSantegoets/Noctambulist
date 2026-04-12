@@ -1,0 +1,224 @@
+[X] MongoDB Command List
+
+[\] mongod --help
+[/] Show MongoDB server help menu
+
+[\] mongod --version
+[/] Show MongoDB server version
+
+[\] mongosh --help
+[/] Show MongoDB shell help menu
+
+[\] mongosh --version
+[/] Show MongoDB shell version
+
+# -------------------------
+# SERVER CONTROL
+# -------------------------
+
+[\] mongod
+[/] Start MongoDB server with default config
+
+[\] mongod --dbpath /data/db
+[/] Start server with custom data directory
+
+[\] mongod --config /etc/mongod.conf
+[/] Start server using config file
+
+[\] systemctl start mongod
+[/] Start MongoDB service (Linux)
+
+[\] systemctl stop mongod
+[/] Stop MongoDB service
+
+[\] systemctl restart mongod
+[/] Restart MongoDB service
+
+[\] systemctl status mongod
+[/] Check MongoDB service status
+
+# -------------------------
+# CONNECTING TO DATABASE
+# -------------------------
+
+[\] mongosh
+[/] Open MongoDB shell locally
+
+[\] mongosh "mongodb://localhost:27017"
+[/] Connect to local MongoDB instance
+
+[\] mongosh "mongodb://user:pass@localhost:27017/mydb"
+[/] Connect with authentication
+
+[\] mongosh --host localhost --port 27017
+[/] Connect specifying host and port
+
+# -------------------------
+# DATABASE MANAGEMENT
+# -------------------------
+
+[\] show dbs
+[/] List databases
+
+[\] use mydb
+[/] Switch/create database
+
+[\] db.dropDatabase()
+[/] Delete current database
+
+[\] db.getName()
+[/] Show current database name
+
+# -------------------------
+# COLLECTION OPERATIONS
+# -------------------------
+
+[\] show collections
+[/] List collections in current database
+
+[\] db.createCollection("users")
+[/] Create collection
+
+[\] db.users.drop()
+[/] Delete collection
+
+# -------------------------
+# DOCUMENT CRUD
+# -------------------------
+
+[\] db.users.insertOne({name:"Alice", age:25})
+[/] Insert one document
+
+[\] db.users.insertMany([{name:"Bob"}, {name:"Carol"}])
+[/] Insert multiple documents
+
+[\] db.users.find()
+[/] Show all documents
+
+[\] db.users.find({name:"Alice"})
+[/] Query matching documents
+
+[\] db.users.updateOne({name:"Alice"}, {$set:{age:26}})
+[/] Update one document
+
+[\] db.users.updateMany({}, {$set:{active:true}})
+[/] Update multiple documents
+
+[\] db.users.deleteOne({name:"Alice"})
+[/] Delete one document
+
+[\] db.users.deleteMany({})
+[/] Delete all documents
+
+# -------------------------
+# INDEX MANAGEMENT
+# -------------------------
+
+[\] db.users.createIndex({name:1})
+[/] Create ascending index
+
+[\] db.users.getIndexes()
+[/] List indexes
+
+[\] db.users.dropIndex("name_1")
+[/] Remove index
+
+# -------------------------
+# USER / AUTH MANAGEMENT
+# -------------------------
+
+[\] use admin
+[/] Switch to admin database
+
+[\] db.createUser({user:"admin", pwd:"secret", roles:["root"]})
+[/] Create admin user
+
+[\] db.auth("admin","secret")
+[/] Authenticate in shell
+
+[\] db.dropUser("admin")
+[/] Remove user
+
+# -------------------------
+# BACKUP / RESTORE
+# -------------------------
+
+[\] mongodump --db mydb --out /backup/
+[/] Backup database
+
+[\] mongorestore /backup/mydb
+[/] Restore database from backup
+
+[\] mongodump --archive=backup.gz --gzip
+[/] Compressed archive backup
+
+[\] mongorestore --archive=backup.gz --gzip
+[/] Restore compressed archive
+
+# -------------------------
+# IMPORT / EXPORT
+# -------------------------
+
+[\] mongoexport --db mydb --collection users --out users.json
+[/] Export collection to JSON
+
+[\] mongoimport --db mydb --collection users --file users.json
+[/] Import JSON into collection
+
+[\] mongoexport --type=csv --fields name,age --out users.csv
+[/] Export collection as CSV
+
+# -------------------------
+# REPLICATION / STATUS
+# -------------------------
+
+[\] rs.status()
+[/] Show replica set status
+
+[\] rs.initiate()
+[/] Initialize replica set
+
+[\] db.serverStatus()
+[/] Show server statistics
+
+# -------------------------
+# DIAGNOSTICS / MONITORING
+# -------------------------
+
+[\] db.stats()
+[/] Show database statistics
+
+[\] db.users.stats()
+[/] Show collection statistics
+
+[\] db.currentOp()
+[/] Show active operations
+
+[\] db.serverCmdLineOpts()
+[/] Show startup parameters
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] mongosh --eval "db.adminCommand('ping')"
+[/] Test connectivity
+
+[\] tail -f /var/log/mongodb/mongod.log
+[/] Monitor MongoDB logs
+
+[\] db.version()
+[/] Show running server version
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] mongodump --db mydb && tar -czf backup.tar.gz /backup/mydb
+[/] Backup and compress database
+
+[\] mongosh mydb --eval "db.users.find().pretty()"
+[/] Query collection from command line
+
+[\] mongoimport --db mydb --collection users --file users.json && mongosh mydb
+[/] Import data and open shell
