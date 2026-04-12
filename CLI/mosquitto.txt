@@ -1,0 +1,152 @@
+[X] Mosquitto Command List
+
+[\] mosquitto --help
+[/] Show Mosquitto broker help menu
+
+[\] mosquitto -v
+[/] Start broker in verbose mode
+
+[\] mosquitto -c /etc/mosquitto/mosquitto.conf
+[/] Start broker with configuration file
+
+# -------------------------
+# BROKER CONTROL (SYSTEMD)
+# -------------------------
+
+[\] systemctl start mosquitto
+[/] Start Mosquitto MQTT broker
+
+[\] systemctl stop mosquitto
+[/] Stop Mosquitto broker
+
+[\] systemctl restart mosquitto
+[/] Restart broker
+
+[\] systemctl status mosquitto
+[/] Check broker status
+
+# -------------------------
+# PUBLISHING (mosquitto_pub)
+# -------------------------
+
+[\] mosquitto_pub -t "test/topic" -m "hello"
+[/] Publish message to MQTT topic
+
+[\] mosquitto_pub -h localhost -t "home/temp" -m "22.5"
+[/] Publish message to remote broker
+
+[\] mosquitto_pub -t "test/topic" -f message.txt
+[/] Publish message from file
+
+[\] mosquitto_pub -t "secure/topic" -m "data" -u user -P pass
+[/] Publish with username/password auth
+
+[\] mosquitto_pub -t "test/topic" -r -m "retained"
+[/] Publish retained message
+
+# -------------------------
+# SUBSCRIBING (mosquitto_sub)
+# -------------------------
+
+[\] mosquitto_sub -t "test/topic"
+[/] Subscribe to topic
+
+[\] mosquitto_sub -h localhost -t "home/#"
+[/] Subscribe to all subtopics
+
+[\] mosquitto_sub -t "test/topic" -v
+[/] Show topic + message
+
+[\] mosquitto_sub -t "test/topic" -u user -P pass
+[/] Subscribe with authentication
+
+[\] mosquitto_sub -t "test/topic" -C 10
+[/] Exit after receiving 10 messages
+
+# -------------------------
+# TLS / SECURE CONNECTIONS
+# -------------------------
+
+[\] mosquitto_pub --cafile ca.crt -t "secure/topic" -m "data"
+[/] Publish using TLS CA certificate
+
+[\] mosquitto_sub --cafile ca.crt -t "secure/topic"
+[/] Subscribe using TLS CA certificate
+
+[\] mosquitto_pub --capath /etc/ssl/certs -t "topic" -m "msg"
+[/] Use system CA directory
+
+# -------------------------
+# DEBUG / VERBOSE
+# -------------------------
+
+[\] mosquitto_sub -d -t "test/topic"
+[/] Enable debug output for subscriber
+
+[\] mosquitto_pub -d -t "test/topic" -m "msg"
+[/] Enable debug output for publisher
+
+# -------------------------
+# BROKER TESTING / LOCAL TOOLS
+# -------------------------
+
+[\] mosquitto_pub -h localhost -t "test" -m "ping" && mosquitto_sub -t "test"
+[/] Quick publish/subscribe test
+
+[\] mosquitto_sub -v -t "#"
+[/] Subscribe to all topics (wildcard monitor)
+
+# -------------------------
+# CONFIGURATION FILE (BROKER)
+# -------------------------
+
+[\] listener 1883
+[/] Define MQTT TCP listener port
+
+[\] allow_anonymous true
+[/] Allow anonymous connections
+
+[\] password_file /etc/mosquitto/passwd
+[/] Enable authentication file
+
+[\] acl_file /etc/mosquitto/acl
+[/] Set access control rules
+
+# -------------------------
+# USER MANAGEMENT
+# -------------------------
+
+[\] mosquitto_passwd -c passwdfile user1
+[/] Create password file and add user
+
+[\] mosquitto_passwd passwdfile user2
+[/] Add additional user
+
+[\] mosquitto_passwd -D passwdfile user1
+[/] Delete user from password file
+
+# -------------------------
+# LOGGING / TROUBLESHOOTING
+# -------------------------
+
+[\] journalctl -u mosquitto
+[/] View broker logs (systemd)
+
+[\] mosquitto -v
+[/] Run broker in foreground verbose mode
+
+[\] netstat -tulnp | grep mosquitto
+[/] Check if broker is listening on port
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] mosquitto_pub -t "sensor/temp" -m "21.7" && mosquitto_sub -t "sensor/temp"
+[/] Publish and immediately subscribe
+
+[\] mosquitto_sub -v -t "home/#" > log.txt
+[/] Log all home topic messages
+
+[\] systemctl start mosquitto && mosquitto_sub -t "#" -v
+[/] Start broker and monitor all topics
