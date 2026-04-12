@@ -1,0 +1,197 @@
+[X] linode-cli (Linode / Akamai Cloud CLI) Command List
+
+[\] linode-cli
+[/] Show linode-cli general help and command overview
+
+[\] linode-cli --help
+[/] Display full linode-cli help menu
+
+[\] linode-cli --version
+[/] Show installed linode-cli version
+
+# -------------------------
+# AUTHENTICATION / CONFIG
+# -------------------------
+
+[\] linode-cli configure
+[/] Configure API token and default profile
+
+[\] linode-cli profile list
+[/] List configured profiles
+
+[\] linode-cli profile view
+[/] Show active profile configuration
+
+# -------------------------
+# ACCOUNT INFO
+# -------------------------
+
+[\] linode-cli account view
+[/] Show account details
+
+[\] linode-cli account users-list
+[/] List account users
+
+[\] linode-cli account events-list
+[/] Show recent account events
+
+# -------------------------
+# INSTANCES (LINODES)
+# -------------------------
+
+[\] linode-cli linodes list
+[/] List all Linode instances
+
+[\] linode-cli linodes create --region us-east --type g6-standard-1 --image linode/ubuntu22.04 --label myvm
+[/] Create new Linode instance
+
+[\] linode-cli linodes view <id>
+[/] Show instance details
+
+[\] linode-cli linodes reboot <id>
+[/] Reboot instance
+
+[\] linode-cli linodes shutdown <id>
+[/] Shut down instance
+
+[\] linode-cli linodes boot <id>
+[/] Start powered-off instance
+
+[\] linode-cli linodes delete <id>
+[/] Delete instance
+
+# -------------------------
+# IMAGES / BACKUPS
+# -------------------------
+
+[\] linode-cli images list
+[/] List available images
+
+[\] linode-cli linodes backups-enable <id>
+[/] Enable backups for instance
+
+[\] linode-cli linodes snapshot <id> --label backup1
+[/] Create snapshot image
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] linode-cli networking ips-list
+[/] List assigned IP addresses
+
+[\] linode-cli networking firewalls-list
+[/] List firewalls
+
+[\] linode-cli networking firewall-create --label myfw
+[/] Create firewall
+
+[\] linode-cli domains list
+[/] List DNS domains
+
+[\] linode-cli domains records-list <domain-id>
+[/] List DNS records for domain
+
+# -------------------------
+# VOLUMES
+# -------------------------
+
+[\] linode-cli volumes list
+[/] List block storage volumes
+
+[\] linode-cli volumes create --label myvolume --size 20 --region us-east
+[/] Create block storage volume
+
+[\] linode-cli volumes delete <id>
+[/] Delete volume
+
+# -------------------------
+# KUBERNETES (LKE)
+# -------------------------
+
+[\] linode-cli lke clusters-list
+[/] List Kubernetes clusters
+
+[\] linode-cli lke cluster-create --label mycluster --region us-east
+[/] Create Kubernetes cluster
+
+[\] linode-cli lke kubeconfig-view <id>
+[/] Get kubeconfig for cluster
+
+[\] linode-cli lke cluster-delete <id>
+[/] Delete Kubernetes cluster
+
+# -------------------------
+# NODEBALANCERS
+# -------------------------
+
+[\] linode-cli nodebalancers list
+[/] List load balancers
+
+[\] linode-cli nodebalancers create --region us-east --label mylb
+[/] Create NodeBalancer
+
+[\] linode-cli nodebalancers delete <id>
+[/] Delete NodeBalancer
+
+# -------------------------
+# DATABASES
+# -------------------------
+
+[\] linode-cli databases instances-list
+[/] List managed databases
+
+[\] linode-cli databases mysql-create --label mydb --region us-east --type g6-nanode-1
+[/] Create MySQL database
+
+[\] linode-cli databases instance-delete <id>
+[/] Delete managed database
+
+# -------------------------
+# STACKSCRIPTS
+# -------------------------
+
+[\] linode-cli stackscripts list
+[/] List StackScripts
+
+[\] linode-cli stackscripts create --label myscript --script-file deploy.sh
+[/] Create StackScript
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] linode-cli linodes list --json
+[/] Output instance list as JSON
+
+[\] linode-cli linodes list --text
+[/] Output in plain text format
+
+[\] linode-cli --debug linodes list
+[/] Run command with debug output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] linode-cli support tickets-list
+[/] List support tickets
+
+[\] linode-cli profile view
+[/] Verify current API profile settings
+
+[\] linode-cli account events-list
+[/] Check recent failed operations
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] linode-cli configure && linode-cli linodes list
+[/] Configure CLI and list instances
+
+[\] linode-cli lke kubeconfig-view <id> > kubeconfig.yaml && kubectl get nodes
+[/] Export kubeconfig and verify cluster nodes
+
+[\] linode-cli linodes create --region us-east --type g6-standard-1 --image linode/ubuntu22.04 --label testvm && linode-cli linodes list
+[/] Create instance and verify deployment
