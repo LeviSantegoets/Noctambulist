@@ -1,0 +1,127 @@
+[X] Knockpy Command List
+
+[\] knockpy --help
+[/] Show Knockpy help menu
+
+[\] knockpy --version
+[/] Show installed Knockpy version
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] knockpy example.com
+[/] Scan domain for subdomains
+
+[\] knockpy -w wordlist.txt example.com
+[/] Use custom wordlist for brute-force subdomain discovery
+
+[\] knockpy --threads 20 example.com
+[/] Increase scan speed using threads
+
+[\] knockpy --timeout 5 example.com
+[/] Set DNS timeout per request
+
+# -------------------------
+# OUTPUT OPTIONS
+# -------------------------
+
+[\] knockpy -o results.txt example.com
+[/] Save results to file
+
+[\] knockpy --json example.com
+[/] Output results in JSON format
+
+[\] knockpy --csv example.com
+[/] Output results in CSV format
+
+# -------------------------
+# DNS / RESOLVER OPTIONS
+# -------------------------
+
+[\] knockpy --dns 8.8.8.8 example.com
+[/] Use specific DNS resolver
+
+[\] knockpy --resolver-file resolvers.txt example.com
+[/] Use custom DNS resolver list
+
+[\] knockpy --no-recursive example.com
+[/] Disable recursive subdomain enumeration
+
+# -------------------------
+# BRUTE FORCE OPTIONS
+# -------------------------
+
+[\] knockpy --bruteforce example.com
+[/] Enable brute-force subdomain discovery
+
+[\] knockpy --wordlist /usr/share/wordlists/subdomains.txt example.com
+[/] Specify wordlist for brute-force
+
+[\] knockpy --skip-bruteforce example.com
+[/] Skip brute-force phase
+
+# -------------------------
+# FILTERING / SCOPING
+# -------------------------
+
+[\] knockpy --include-subdomains example.com
+[/] Include only valid resolvable subdomains
+
+[\] knockpy --filter-wildcard example.com
+[/] Filter wildcard DNS results
+
+[\] knockpy --only-alive example.com
+[/] Show only responsive subdomains
+
+# -------------------------
+# PERFORMANCE TUNING
+# -------------------------
+
+[\] knockpy --threads 50 example.com
+[/] Increase parallel threads
+
+[\] knockpy --rate-limit 100 example.com
+[/] Limit requests per second
+
+[\] knockpy --delay 0.2 example.com
+[/] Add delay between requests
+
+# -------------------------
+# INTEGRATION / PIPELINE
+# -------------------------
+
+[\] knockpy example.com | tee subdomains.txt
+[/] Scan and save output simultaneously
+
+[\] knockpy -o results.json example.com && cat results.json
+[/] Save and inspect JSON output
+
+[\] knockpy example.com && httpx -l subdomains.txt
+[/] Chain with HTTP probing tool
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] knockpy --verbose example.com
+[/] Enable detailed logging output
+
+[\] knockpy --debug example.com
+[/] Show debug-level information
+
+[\] knockpy --logfile scan.log example.com
+[/] Save logs to file
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] knockpy example.com -o subs.txt && cat subs.txt
+[/] Enumerate subdomains and review results
+
+[\] knockpy --bruteforce -w wordlist.txt example.com && knockpy --json example.com
+[/] Full brute-force scan + structured output
+
+[\] knockpy example.com | grep api
+[/] Scan and filter for API-related subdomains
