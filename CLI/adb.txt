@@ -1,0 +1,186 @@
+[X] Android Debug Bridge Command List
+
+[\] adb version
+[/] Show installed ADB version
+
+[\] adb help
+[/] Show ADB help menu
+
+# -------------------------
+# DEVICE CONNECTION
+# -------------------------
+
+[\] adb devices
+[/] List connected devices (USB/Wi-Fi)
+
+[\] adb devices -l
+[/] List devices with detailed info
+
+[\] adb connect 192.168.1.10:5555
+[/] Connect to device over network
+
+[\] adb disconnect
+[/] Disconnect all network devices
+
+[\] adb kill-server
+[/] Stop ADB server
+
+[\] adb start-server
+[/] Start ADB server
+
+# -------------------------
+# SHELL ACCESS
+# -------------------------
+
+[\] adb shell
+[/] Open interactive shell on device
+
+[\] adb shell ls /sdcard
+[/] Run command on device
+
+[\] adb shell getprop
+[/] Show device properties
+
+[\] adb shell top
+[/] Show running processes
+
+[\] adb root
+[/] Restart adbd as root (if supported)
+
+[\] adb remount
+[/] Remount system partition (root required)
+
+# -------------------------
+# APP MANAGEMENT
+# -------------------------
+
+[\] adb install app.apk
+[/] Install APK on device
+
+[\] adb install -r app.apk
+[/] Reinstall/replace app
+
+[\] adb uninstall com.example.app
+[/] Uninstall app by package name
+
+[\] adb shell pm list packages
+[/] List installed packages
+
+[\] adb shell pm path com.example.app
+[/] Show APK path of app
+
+# -------------------------
+# FILE TRANSFER
+# -------------------------
+
+[\] adb push file.txt /sdcard/
+[/] Copy file to device
+
+[\] adb pull /sdcard/file.txt
+[/] Copy file from device
+
+[\] adb pull /sdcard/file.txt ./file.txt
+[/] Save file locally with name
+
+# -------------------------
+# LOGGING / DEBUGGING
+# -------------------------
+
+[\] adb logcat
+[/] View device logs
+
+[\] adb logcat -d
+[/] Dump logs and exit
+
+[\] adb logcat | grep ActivityManager
+[/] Filter logs
+
+[\] adb bugreport
+[/] Generate full device bug report
+
+# -------------------------
+# SCREEN / INPUT CONTROL
+# -------------------------
+
+[\] adb shell screencap /sdcard/screen.png
+[/] Take screenshot
+
+[\] adb shell screenrecord /sdcard/video.mp4
+[/] Record screen
+
+[\] adb shell input text "hello"
+[/] Send text input
+
+[\] adb shell input tap 500 500
+[/] Simulate screen tap
+
+[\] adb shell input swipe 100 500 100 100
+[/] Simulate swipe gesture
+
+# -------------------------
+# DEVICE INFO / DIAGNOSTICS
+# -------------------------
+
+[\] adb shell getprop ro.product.model
+[/] Get device model
+
+[\] adb shell getprop ro.build.version.release
+[/] Get Android version
+
+[\] adb shell dumpsys battery
+[/] Show battery info
+
+[\] adb shell dumpsys activity
+[/] Show activity manager state
+
+# -------------------------
+# BOOT / REBOOT MODES
+# -------------------------
+
+[\] adb reboot
+[/] Reboot device
+
+[\] adb reboot bootloader
+[/] Reboot into bootloader/fastboot
+
+[\] adb reboot recovery
+[/] Reboot into recovery mode
+
+# -------------------------
+# FASTBOOT INTERFACE (related)
+# -------------------------
+
+[\] fastboot devices
+[/] List devices in fastboot mode
+
+[\] fastboot flash recovery recovery.img
+[/] Flash recovery image
+
+[\] fastboot reboot
+[/] Reboot from fastboot
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] adb usb
+[/] Switch device back to USB mode
+
+[\] adb tcpip 5555
+[/] Enable ADB over TCP/IP
+
+[\] adb kill-server && adb start-server
+[/] Reset ADB service
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] adb devices && adb logcat
+[/] Verify connection and start logging
+
+[\] adb install app.apk && adb shell pm list packages | grep example
+[/] Install app and verify installation
+
+[\] adb pull /sdcard/log.txt && adb logcat -d > logcat.txt
+[/] Collect logs from device and system
