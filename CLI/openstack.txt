@@ -1,0 +1,235 @@
+[X] OpenStack CLI Command List
+
+[\] openstack
+[/] Show OpenStack CLI general help and command overview
+
+[\] openstack --help
+[/] Display full OpenStack help menu
+
+[\] openstack --version
+[/] Show installed OpenStack CLI version
+
+# -------------------------
+# AUTHENTICATION / ENVIRONMENT
+# -------------------------
+
+[\] source openrc.sh
+[/] Load OpenStack authentication environment variables
+
+[\] env | grep OS_
+[/] Show active OpenStack auth variables
+
+[\] openstack token issue
+[/] Verify authentication token
+
+# -------------------------
+# PROJECT / USER MANAGEMENT
+# -------------------------
+
+[\] openstack project list
+[/] List all projects (tenants)
+
+[\] openstack project show <project-id>
+[/] Show project details
+
+[\] openstack user list
+[/] List users
+
+[\] openstack user create --password secret myuser
+[/] Create new user
+
+[\] openstack role list
+[/] List available roles
+
+# -------------------------
+# COMPUTE INSTANCES (NOVA)
+# -------------------------
+
+[\] openstack server list
+[/] List virtual machine instances
+
+[\] openstack server create --image ubuntu --flavor m1.small --network private myvm
+[/] Create new instance
+
+[\] openstack server show myvm
+[/] Show instance details
+
+[\] openstack server start myvm
+[/] Start instance
+
+[\] openstack server stop myvm
+[/] Stop instance
+
+[\] openstack server reboot myvm
+[/] Reboot instance
+
+[\] openstack server delete myvm
+[/] Delete instance
+
+# -------------------------
+# IMAGES (GLANCE)
+# -------------------------
+
+[\] openstack image list
+[/] List available images
+
+[\] openstack image show ubuntu
+[/] Show image details
+
+[\] openstack image create "Ubuntu-22.04" --file ubuntu.qcow2 --disk-format qcow2 --container-format bare --public
+[/] Upload new image
+
+[\] openstack image delete <image-id>
+[/] Delete image
+
+# -------------------------
+# FLAVORS
+# -------------------------
+
+[\] openstack flavor list
+[/] List compute instance flavors
+
+[\] openstack flavor create small --ram 2048 --disk 20 --vcpus 2
+[/] Create new flavor
+
+# -------------------------
+# NETWORKING (NEUTRON)
+# -------------------------
+
+[\] openstack network list
+[/] List networks
+
+[\] openstack network create private-net
+[/] Create network
+
+[\] openstack subnet create --network private-net --subnet-range 192.168.1.0/24 private-subnet
+[/] Create subnet
+
+[\] openstack router list
+[/] List routers
+
+[\] openstack router create myrouter
+[/] Create router
+
+# -------------------------
+# FLOATING IPS
+# -------------------------
+
+[\] openstack floating ip list
+[/] List floating IPs
+
+[\] openstack floating ip create public-net
+[/] Allocate floating IP
+
+[\] openstack server add floating ip myvm <ip-address>
+[/] Assign floating IP to instance
+
+# -------------------------
+# STORAGE (CINDER)
+# -------------------------
+
+[\] openstack volume list
+[/] List block storage volumes
+
+[\] openstack volume create --size 20 myvolume
+[/] Create volume
+
+[\] openstack server add volume myvm myvolume
+[/] Attach volume to instance
+
+[\] openstack volume delete myvolume
+[/] Delete volume
+
+# -------------------------
+# OBJECT STORAGE (SWIFT)
+# -------------------------
+
+[\] openstack container list
+[/] List object storage containers
+
+[\] openstack container create backups
+[/] Create container
+
+[\] openstack object create backups file.txt
+[/] Upload object
+
+[\] openstack object save backups file.txt
+[/] Download object
+
+# -------------------------
+# SECURITY GROUPS
+# -------------------------
+
+[\] openstack security group list
+[/] List security groups
+
+[\] openstack security group create web-sg
+[/] Create security group
+
+[\] openstack security group rule create --proto tcp --dst-port 80 web-sg
+[/] Allow HTTP traffic
+
+# -------------------------
+# KEY PAIRS
+# -------------------------
+
+[\] openstack keypair list
+[/] List SSH keypairs
+
+[\] openstack keypair create mykey > mykey.pem
+[/] Create new SSH keypair
+
+[\] openstack keypair delete mykey
+[/] Delete keypair
+
+# -------------------------
+# ORCHESTRATION (HEAT)
+# -------------------------
+
+[\] openstack stack list
+[/] List orchestration stacks
+
+[\] openstack stack create -t template.yaml mystack
+[/] Create stack from template
+
+[\] openstack stack delete mystack
+[/] Delete stack
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] openstack server list -f json
+[/] Output instance list as JSON
+
+[\] openstack server list -f table
+[/] Output instance list as table
+
+[\] openstack --debug server list
+[/] Run command with debug output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] openstack endpoint list
+[/] List API service endpoints
+
+[\] openstack catalog list
+[/] Show service catalog
+
+[\] openstack token issue
+[/] Verify auth token validity
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] source openrc.sh && openstack server list
+[/] Load credentials and list instances
+
+[\] openstack server create --image ubuntu --flavor m1.small --network private myvm && openstack server list
+[/] Create VM and verify deployment
+
+[\] openstack floating ip create public-net && openstack floating ip list
+[/] Allocate and inspect floating IPs
