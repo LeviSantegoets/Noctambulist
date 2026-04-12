@@ -1,0 +1,133 @@
+[X] Arachni Command List
+
+[\] arachni --help
+[/] Show help menu
+
+[\] arachni --version
+[/] Show version
+
+[\] arachni http://example.com
+[/] Run full scan against target
+
+[\] arachni http://example.com --output-dir=report
+[/] Save full scan output to directory
+
+[\] arachni http://example.com --report-save-path=report.afr
+[/] Save scan in Arachni report format
+
+[\] arachni http://example.com --report-format=html
+[/] Generate HTML report
+
+[\] arachni http://example.com --report-format=json
+[/] Generate JSON report
+
+[\] arachni http://example.com --report-format=xml
+[/] Generate XML report
+
+[\] arachni http://example.com --checks=all
+[/] Run all vulnerability checks
+
+[\] arachni http://example.com --checks=xss
+[/] Run XSS checks only
+
+[\] arachni http://example.com --checks=sql_injection
+[/] Run SQL injection checks only
+
+[\] arachni http://example.com --checks=lfi,rfi
+[/] Run LFI and RFI checks
+
+[\] arachni http://example.com --checks=csrf
+[/] Run CSRF checks
+
+[\] arachni http://example.com --audit-links
+[/] Audit hyperlinks
+
+[\] arachni http://example.com --audit-forms
+[/] Audit forms
+
+[\] arachni http://example.com --audit-cookies
+[/] Audit cookies
+
+[\] arachni http://example.com --audit-headers
+[/] Audit HTTP headers
+
+[\] arachni http://example.com --scope-include-subdomains
+[/] Include subdomains in scan scope
+
+[\] arachni http://example.com --restrict-path=/admin
+[/] Limit scan to path
+
+[\] arachni http://example.com --scope-page-limit=500
+[/] Limit number of pages crawled
+
+[\] arachni http://example.com --depth-limit=5
+[/] Set crawl depth
+
+[\] arachni http://example.com --spider
+[/] Enable crawler
+
+[\] arachni http://example.com --spider-depth-limit=5
+[/] Limit spider depth
+
+[\] arachni http://example.com --spider-page-limit=1000
+[/] Limit spider pages
+
+[\] arachni http://example.com --request-concurrency=5
+[/] Set concurrent requests
+
+[\] arachni http://example.com --threads=10
+[/] Set worker threads
+
+[\] arachni http://example.com --request-timeout=10
+[/] Set request timeout
+
+[\] arachni http://example.com --delay=0.5
+[/] Add delay between requests
+
+[\] arachni http://example.com --redundant=2
+[/] Repeat requests for reliability
+
+[\] arachni http://example.com --http-proxy=http://127.0.0.1:8080
+[/] Use HTTP proxy
+
+[\] arachni http://example.com --https-proxy=http://127.0.0.1:8080
+[/] Use HTTPS proxy
+
+[\] arachni http://example.com --proxy-auth=user:pass
+[/] Proxy authentication
+
+[\] arachni http://example.com --cookie-jar=cookies.txt
+[/] Load session cookies
+
+[\] arachni http://example.com --http-authentication-credentials=user:pass
+[/] Basic HTTP authentication
+
+[\] arachni http://example.com --login-url=http://example.com/login
+[/] Define login URL
+
+[\] arachni http://example.com --login-check-url=http://example.com/dashboard
+[/] Verify login success
+
+[\] arachni http://example.com --login-check-pattern="Logout"
+[/] Verify login via page content
+
+[\] arachni http://example.com --output-only-positives
+[/] Show only confirmed issues
+
+[\] arachni http://example.com --verbose
+[/] Enable verbose output
+
+[\] arachni http://example.com --debug
+[/] Enable debug mode
+
+[\] arachni http://example.com --log-level=debug
+[/] Set logging level
+
+[\] arachni http://example.com --skip-broken-pages
+[/] Skip unreachable pages
+
+[\] arachni http://example.com --no-fingerprinting
+[/] Disable fingerprinting
+
+[\] arachni http://example.com --show-progress
+[/] Display scan progress
