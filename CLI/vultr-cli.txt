@@ -1,0 +1,210 @@
+[X] vultr-cli Command List
+
+[\] vultr-cli
+[/] Show vultr-cli general help and command overview
+
+[\] vultr-cli --help
+[/] Display full Vultr CLI help menu
+
+[\] vultr-cli version
+[/] Show installed vultr-cli version
+
+# -------------------------
+# AUTHENTICATION / CONFIG
+# -------------------------
+
+[\] vultr-cli config set api-key <API_KEY>
+[/] Configure Vultr API key
+
+[\] vultr-cli config view
+[/] Show current CLI configuration
+
+[\] vultr-cli config delete api-key
+[/] Remove stored API key
+
+# -------------------------
+# ACCOUNT INFO
+# -------------------------
+
+[\] vultr-cli account info
+[/] Show account details and balance
+
+[\] vultr-cli plans list
+[/] List available compute plans
+
+[\] vultr-cli regions list
+[/] List available Vultr regions
+
+# -------------------------
+# INSTANCES (COMPUTE)
+# -------------------------
+
+[\] vultr-cli instance list
+[/] List all cloud instances
+
+[\] vultr-cli instance create --region ams --plan vc2-1c-1gb --os 1743
+[/] Create new instance
+
+[\] vultr-cli instance get <instance-id>
+[/] Show instance details
+
+[\] vultr-cli instance start <instance-id>
+[/] Start stopped instance
+
+[\] vultr-cli instance halt <instance-id>
+[/] Stop running instance
+
+[\] vultr-cli instance reboot <instance-id>
+[/] Reboot instance
+
+[\] vultr-cli instance delete <instance-id>
+[/] Delete instance
+
+# -------------------------
+# SSH KEYS
+# -------------------------
+
+[\] vultr-cli ssh-key list
+[/] List SSH keys
+
+[\] vultr-cli ssh-key create --name mykey --key-file ~/.ssh/id_rsa.pub
+[/] Upload SSH public key
+
+[\] vultr-cli ssh-key delete <key-id>
+[/] Delete SSH key
+
+# -------------------------
+# SNAPSHOTS / BACKUPS
+# -------------------------
+
+[\] vultr-cli snapshot list
+[/] List snapshots
+
+[\] vultr-cli snapshot create <instance-id>
+[/] Create snapshot from instance
+
+[\] vultr-cli backup list
+[/] List backups
+
+# -------------------------
+# BLOCK STORAGE
+# -------------------------
+
+[\] vultr-cli block-storage list
+[/] List block storage volumes
+
+[\] vultr-cli block-storage create --region ams --size 10 --label myvolume
+[/] Create block storage volume
+
+[\] vultr-cli block-storage delete <volume-id>
+[/] Delete block storage volume
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] vultr-cli firewall-group list
+[/] List firewall groups
+
+[\] vultr-cli firewall-group create --description "web firewall"
+[/] Create firewall group
+
+[\] vultr-cli network list
+[/] List private networks
+
+[\] vultr-cli network create --region ams --description "private-net"
+[/] Create private network
+
+# -------------------------
+# DNS
+# -------------------------
+
+[\] vultr-cli dns domain list
+[/] List DNS domains
+
+[\] vultr-cli dns domain create example.com
+[/] Create DNS zone
+
+[\] vultr-cli dns record list example.com
+[/] List DNS records
+
+[\] vultr-cli dns record create example.com --type A --name www --data 1.2.3.4
+[/] Create DNS record
+
+# -------------------------
+# KUBERNETES
+# -------------------------
+
+[\] vultr-cli kubernetes list
+[/] List Kubernetes clusters
+
+[\] vultr-cli kubernetes create --region ams --label mycluster --version v1.29.0
+[/] Create Kubernetes cluster
+
+[\] vultr-cli kubernetes config <cluster-id>
+[/] Download kubeconfig for cluster
+
+[\] vultr-cli kubernetes delete <cluster-id>
+[/] Delete Kubernetes cluster
+
+# -------------------------
+# LOAD BALANCERS
+# -------------------------
+
+[\] vultr-cli load-balancer list
+[/] List load balancers
+
+[\] vultr-cli load-balancer create --region ams --label mylb
+[/] Create load balancer
+
+[\] vultr-cli load-balancer delete <lb-id>
+[/] Delete load balancer
+
+# -------------------------
+# OBJECT STORAGE
+# -------------------------
+
+[\] vultr-cli object-storage list
+[/] List object storage subscriptions
+
+[\] vultr-cli object-storage create --cluster ams1 --label mystorage
+[/] Create object storage instance
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] vultr-cli instance list --format json
+[/] Output instance list as JSON
+
+[\] vultr-cli instance list --format table
+[/] Output instance list as table
+
+[\] vultr-cli --debug instance list
+[/] Run command with debug output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] vultr-cli config view
+[/] Verify API key configuration
+
+[\] vultr-cli account info
+[/] Confirm account authentication works
+
+[\] vultr-cli regions list
+[/] Verify API connectivity
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] vultr-cli config set api-key <API_KEY> && vultr-cli instance list
+[/] Configure authentication and list instances
+
+[\] vultr-cli kubernetes config <cluster-id> > kubeconfig.yaml && kubectl get nodes
+[/] Export kubeconfig and verify Kubernetes nodes
+
+[\] vultr-cli instance create --region ams --plan vc2-1c-1gb --os 1743 && vultr-cli instance list
+[/] Create instance and verify deployment
