@@ -1,0 +1,210 @@
+[X] doctl Command List
+
+[\] doctl
+[/] Show doctl general help and command overview
+
+[\] doctl help
+[/] Display full doctl help menu
+
+[\] doctl version
+[/] Show installed doctl version
+
+# -------------------------
+# AUTHENTICATION
+# -------------------------
+
+[\] doctl auth init
+[/] Authenticate using DigitalOcean API token
+
+[\] doctl auth list
+[/] List configured authentication contexts
+
+[\] doctl auth switch --context default
+[/] Switch active authentication context
+
+[\] doctl auth remove --context default
+[/] Remove saved authentication context
+
+# -------------------------
+# ACCOUNT INFO
+# -------------------------
+
+[\] doctl account get
+[/] Show current account details
+
+[\] doctl balance get
+[/] Show account balance and usage
+
+# -------------------------
+# DROPLETS (VIRTUAL MACHINES)
+# -------------------------
+
+[\] doctl compute droplet list
+[/] List all droplets
+
+[\] doctl compute droplet create mydroplet --size s-1vcpu-1gb --image ubuntu-22-04-x64 --region ams3
+[/] Create new droplet
+
+[\] doctl compute droplet get <droplet-id>
+[/] Show droplet details
+
+[\] doctl compute droplet delete <droplet-id>
+[/] Delete droplet
+
+[\] doctl compute droplet reboot <droplet-id>
+[/] Reboot droplet
+
+[\] doctl compute droplet power-off <droplet-id>
+[/] Power off droplet
+
+[\] doctl compute droplet power-on <droplet-id>
+[/] Power on droplet
+
+# -------------------------
+# SSH KEYS
+# -------------------------
+
+[\] doctl compute ssh-key list
+[/] List SSH keys
+
+[\] doctl compute ssh-key create mykey --public-key-file ~/.ssh/id_rsa.pub
+[/] Upload SSH public key
+
+[\] doctl compute ssh-key delete <key-id>
+[/] Delete SSH key
+
+# -------------------------
+# IMAGES / SNAPSHOTS
+# -------------------------
+
+[\] doctl compute image list
+[/] List available images
+
+[\] doctl compute snapshot list
+[/] List snapshots
+
+[\] doctl compute droplet-action snapshot <droplet-id> --snapshot-name backup1
+[/] Create droplet snapshot
+
+# -------------------------
+# VOLUMES
+# -------------------------
+
+[\] doctl compute volume list
+[/] List block storage volumes
+
+[\] doctl compute volume create myvolume --size 10GiB --region ams3
+[/] Create storage volume
+
+[\] doctl compute volume delete <volume-id>
+[/] Delete volume
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] doctl compute floating-ip list
+[/] List floating IPs
+
+[\] doctl compute floating-ip create
+[/] Allocate floating IP
+
+[\] doctl compute domain list
+[/] List DNS domains
+
+[\] doctl compute domain records list example.com
+[/] List DNS records for domain
+
+# -------------------------
+# KUBERNETES
+# -------------------------
+
+[\] doctl kubernetes cluster list
+[/] List Kubernetes clusters
+
+[\] doctl kubernetes cluster create mycluster --region ams3 --count 3 --size s-2vcpu-2gb
+[/] Create Kubernetes cluster
+
+[\] doctl kubernetes cluster kubeconfig save mycluster
+[/] Save kubeconfig for kubectl access
+
+[\] doctl kubernetes cluster delete mycluster
+[/] Delete Kubernetes cluster
+
+# -------------------------
+# DATABASES
+# -------------------------
+
+[\] doctl databases list
+[/] List managed databases
+
+[\] doctl databases create mydb --engine pg --region ams3 --size db-s-1vcpu-1gb
+[/] Create managed database
+
+[\] doctl databases get <db-id>
+[/] Show database details
+
+# -------------------------
+# APPS PLATFORM
+# -------------------------
+
+[\] doctl apps list
+[/] List App Platform apps
+
+[\] doctl apps create --spec app.yaml
+[/] Deploy app from spec file
+
+[\] doctl apps get <app-id>
+[/] Show app details
+
+[\] doctl apps delete <app-id>
+[/] Delete app
+
+# -------------------------
+# MONITORING / LOGS
+# -------------------------
+
+[\] doctl monitoring alert list
+[/] List monitoring alerts
+
+[\] doctl apps logs <app-id>
+[/] Show application logs
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] doctl compute droplet list --output json
+[/] Show droplet list in JSON format
+
+[\] doctl compute droplet list --format ID,Name,PublicIPv4
+[/] Customize output columns
+
+[\] doctl --trace compute droplet list
+[/] Run command with debug trace output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] doctl auth init --context debug
+[/] Reconfigure authentication context
+
+[\] doctl account get
+[/] Verify active account token works
+
+[\] doctl version
+[/] Check installed CLI version
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] doctl auth init && doctl compute droplet list
+[/] Authenticate and list droplets
+
+[\] doctl kubernetes cluster kubeconfig save mycluster && kubectl get nodes
+[/] Connect to cluster and verify nodes
+
+[\] doctl compute droplet create testvm --size s-1vcpu-1gb --image ubuntu-22-04-x64 --region ams3 && doctl compute droplet list
+[/] Create droplet and verify deployment
