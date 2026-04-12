@@ -1,0 +1,225 @@
+[X] hcloud (Hetzner Cloud CLI) Command List
+
+[\] hcloud
+[/] Show hcloud general help and command overview
+
+[\] hcloud --help
+[/] Display full hcloud help menu
+
+[\] hcloud version
+[/] Show installed hcloud CLI version
+
+# -------------------------
+# AUTHENTICATION / CONFIG
+# -------------------------
+
+[\] hcloud context create myctx
+[/] Create new CLI context and configure API token
+
+[\] hcloud context list
+[/] List configured contexts
+
+[\] hcloud context use myctx
+[/] Switch active context
+
+[\] hcloud context delete myctx
+[/] Remove saved context
+
+# -------------------------
+# ACCOUNT / PROJECT INFO
+# -------------------------
+
+[\] hcloud server-type list
+[/] List available server types
+
+[\] hcloud location list
+[/] List datacenter locations
+
+[\] hcloud datacenter list
+[/] List datacenters
+
+[\] hcloud image list
+[/] List available OS snapshots/images
+
+# -------------------------
+# SERVERS (VM INSTANCES)
+# -------------------------
+
+[\] hcloud server list
+[/] List all cloud servers
+
+[\] hcloud server create --name myvm --type cx11 --image ubuntu-22.04
+[/] Create new server instance
+
+[\] hcloud server describe myvm
+[/] Show server details
+
+[\] hcloud server reboot myvm
+[/] Reboot server
+
+[\] hcloud server poweroff myvm
+[/] Power off server
+
+[\] hcloud server poweron myvm
+[/] Power on server
+
+[\] hcloud server delete myvm
+[/] Delete server
+
+[\] hcloud server reset myvm
+[/] Hard reset server
+
+# -------------------------
+# SSH KEYS
+# -------------------------
+
+[\] hcloud ssh-key list
+[/] List uploaded SSH keys
+
+[\] hcloud ssh-key create --name mykey --public-key-from-file ~/.ssh/id_rsa.pub
+[/] Upload SSH public key
+
+[\] hcloud ssh-key delete mykey
+[/] Delete SSH key
+
+# -------------------------
+# VOLUMES
+# -------------------------
+
+[\] hcloud volume list
+[/] List block storage volumes
+
+[\] hcloud volume create --name data1 --size 20
+[/] Create storage volume
+
+[\] hcloud volume attach data1 myvm
+[/] Attach volume to server
+
+[\] hcloud volume detach data1
+[/] Detach volume
+
+[\] hcloud volume delete data1
+[/] Delete volume
+
+# -------------------------
+# NETWORKING
+# -------------------------
+
+[\] hcloud network list
+[/] List private networks
+
+[\] hcloud network create --name privnet --ip-range 10.0.0.0/16
+[/] Create private network
+
+[\] hcloud network add-subnet privnet --network-zone eu-central --type cloud --ip-range 10.0.1.0/24
+[/] Add subnet to network
+
+[\] hcloud network delete privnet
+[/] Delete network
+
+# -------------------------
+# FIREWALLS
+# -------------------------
+
+[\] hcloud firewall list
+[/] List firewalls
+
+[\] hcloud firewall create --name webfw
+[/] Create firewall
+
+[\] hcloud firewall apply-to-resource webfw --server myvm
+[/] Attach firewall to server
+
+[\] hcloud firewall delete webfw
+[/] Delete firewall
+
+# -------------------------
+# LOAD BALANCERS
+# -------------------------
+
+[\] hcloud load-balancer list
+[/] List load balancers
+
+[\] hcloud load-balancer create --name mylb --type lb11 --location nbg1
+[/] Create load balancer
+
+[\] hcloud load-balancer delete mylb
+[/] Delete load balancer
+
+# -------------------------
+# SNAPSHOTS / BACKUPS
+# -------------------------
+
+[\] hcloud image create-from-server myvm --description "backup snapshot"
+[/] Create snapshot from server
+
+[\] hcloud image list
+[/] View snapshots and custom images
+
+# -------------------------
+# ISO / RESCUE MODE
+# -------------------------
+
+[\] hcloud iso list
+[/] List available ISO images
+
+[\] hcloud server enable-rescue myvm
+[/] Enable rescue mode
+
+[\] hcloud server disable-rescue myvm
+[/] Disable rescue mode
+
+# -------------------------
+# PRIMARY IP / FLOATING IP
+# -------------------------
+
+[\] hcloud primary-ip list
+[/] List primary IP addresses
+
+[\] hcloud floating-ip list
+[/] List floating IPs
+
+[\] hcloud floating-ip create --type ipv4 --home-location fsn1
+[/] Allocate floating IP
+
+[\] hcloud floating-ip assign <ip-id> myvm
+[/] Assign floating IP to server
+
+# -------------------------
+# DEBUG / OUTPUT
+# -------------------------
+
+[\] hcloud server list -o json
+[/] Output server list as JSON
+
+[\] hcloud server list -o columns=id,name,status
+[/] Customize displayed columns
+
+[\] hcloud --debug server list
+[/] Run command with debug output
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] hcloud context inspect
+[/] Verify active context configuration
+
+[\] hcloud server describe myvm
+[/] Inspect server state/details
+
+[\] hcloud --debug server create --name test --type cx11 --image ubuntu-22.04
+[/] Debug provisioning issues
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] hcloud context use myctx && hcloud server list
+[/] Switch context and list servers
+
+[\] hcloud server create --name testvm --type cx11 --image ubuntu-22.04 && hcloud server list
+[/] Create server and verify deployment
+
+[\] hcloud volume create --name data1 --size 50 && hcloud volume attach data1 myvm
+[/] Create and attach storage volume
