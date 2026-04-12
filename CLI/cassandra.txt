@@ -1,0 +1,207 @@
+[X] Apache Cassandra Command List
+
+[\] cqlsh --help
+[/] Show Cassandra CQL shell help menu
+
+[\] cqlsh --version
+[/] Show installed cqlsh version
+
+[\] nodetool help
+[/] Show nodetool command help menu
+
+[\] cassandra -v
+[/] Show Cassandra version (varies by install)
+
+# -------------------------
+# CONNECTING TO CLUSTER
+# -------------------------
+
+[\] cqlsh
+[/] Connect to local Cassandra node (default 127.0.0.1:9042)
+
+[\] cqlsh 127.0.0.1 9042
+[/] Connect to specific host and port
+
+[\] cqlsh -u cassandra -p cassandra
+[/] Connect with username and password
+
+[\] cqlsh --ssl
+[/] Connect using SSL encryption
+
+[\] cqlsh <host> -e "SELECT * FROM system.local;"
+[/] Run single CQL query from command line
+
+# -------------------------
+# KEYSPACE MANAGEMENT
+# -------------------------
+
+[\] DESCRIBE KEYSPACES;
+[/] List all keyspaces
+
+[\] CREATE KEYSPACE myks WITH replication = {'class':'SimpleStrategy','replication_factor':1};
+[/] Create keyspace
+
+[\] USE myks;
+[/] Switch to keyspace
+
+[\] DROP KEYSPACE myks;
+[/] Delete keyspace
+
+[\] DESCRIBE KEYSPACE myks;
+[/] Show keyspace definition
+
+# -------------------------
+# TABLE MANAGEMENT
+# -------------------------
+
+[\] CREATE TABLE users (id UUID PRIMARY KEY, name text);
+[/] Create table
+
+[\] DESCRIBE TABLE users;
+[/] Show table schema
+
+[\] DROP TABLE users;
+[/] Delete table
+
+[\] ALTER TABLE users ADD email text;
+[/] Add column to table
+
+[\] ALTER TABLE users DROP email;
+[/] Remove column (limited support)
+
+# -------------------------
+# DATA OPERATIONS (CQL)
+# -------------------------
+
+[\] SELECT * FROM users;
+[/] Query all rows
+
+[\] SELECT * FROM users WHERE id = uuid();
+[/] Query by primary key
+
+[\] INSERT INTO users (id, name) VALUES (uuid(), 'Alice');
+[/] Insert row
+
+[\] UPDATE users SET name='Bob' WHERE id=uuid();
+[/] Update row
+
+[\] DELETE FROM users WHERE id=uuid();
+[/] Delete row
+
+# -------------------------
+# INDEXES
+# -------------------------
+
+[\] CREATE INDEX ON users(name);
+[/] Create secondary index
+
+[\] DROP INDEX users_name_idx;
+[/] Drop index
+
+# -------------------------
+# CQL SHELL UTILITIES
+# -------------------------
+
+[\] HELP;
+[/] Show cqlsh help inside shell
+
+[\] CONSISTENCY QUORUM;
+[/] Set read/write consistency level
+
+[\] SHOW VERSION;
+[/] Show Cassandra version in cqlsh
+
+[\] DESCRIBE CLUSTER;
+[/] Show cluster info
+
+[\] EXIT;
+[/] Exit cqlsh
+
+# -------------------------
+# NODTOOL (CLUSTER MANAGEMENT)
+# -------------------------
+
+[\] nodetool status
+[/] Show cluster node status
+
+[\] nodetool info
+[/] Show node information
+
+[\] nodetool ring
+[/] Show token ring distribution
+
+[\] nodetool tpstats
+[/] Show thread pool stats
+
+[\] nodetool cfstats
+[/] Show column family stats
+
+[\] nodetool compactionstats
+[/] Show compaction status
+
+[\] nodetool flush
+[/] Flush memtables to disk
+
+[\] nodetool repair
+[/] Run data repair across cluster
+
+[\] nodetool cleanup
+[/] Clean up data after topology changes
+
+# -------------------------
+# BACKUP / RESTORE
+# -------------------------
+
+[\] nodetool snapshot
+[/] Create snapshot of data
+
+[\] nodetool clearsnapshot
+[/] Remove snapshots
+
+[\] sstableloader -d <host> <data-dir>
+[/] Load SSTables into cluster
+
+# -------------------------
+# MONITORING / DIAGNOSTICS
+# -------------------------
+
+[\] nodetool netstats
+[/] Show network statistics
+
+[\] nodetool gossipinfo
+[/] Show gossip state
+
+[\] nodetool proxyhistograms
+[/] Show request latency histograms
+
+[\] nodetool tablehistograms <keyspace> <table>
+[/] Show table latency distribution
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] nodetool describecluster
+[/] Show cluster configuration
+
+[\] nodetool compactionstats
+[/] Check compaction backlog issues
+
+[\] nodetool statusbinary
+[/] Check native transport status
+
+[\] journalctl -u cassandra
+[/] View Cassandra service logs (Linux)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] cqlsh -e "DESCRIBE KEYSPACES;" && nodetool status
+[/] Check schema and cluster health
+
+[\] nodetool snapshot && tar -czf backup.tar.gz /var/lib/cassandra/data
+[/] Create snapshot and archive data
+
+[\] cqlsh -e "SELECT * FROM system.local;" && nodetool info
+[/] Verify connectivity and node status
