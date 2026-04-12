@@ -1,0 +1,184 @@
+[X] RabbitMQ Command List
+
+[\] rabbitmqctl --help
+[/] Show RabbitMQ CLI help menu
+
+[\] rabbitmqctl status
+[/] Show broker status and node health
+
+[\] rabbitmqctl version
+[/] Show RabbitMQ version
+
+# -------------------------
+# SERVICE CONTROL
+# -------------------------
+
+[\] systemctl start rabbitmq-server
+[/] Start RabbitMQ service
+
+[\] systemctl stop rabbitmq-server
+[/] Stop RabbitMQ service
+
+[\] systemctl restart rabbitmq-server
+[/] Restart RabbitMQ service
+
+[\] systemctl status rabbitmq-server
+[/] Check RabbitMQ service status
+
+# -------------------------
+# NODE / CLUSTER INFO
+# -------------------------
+
+[\] rabbitmqctl cluster_status
+[/] Show cluster membership and nodes
+
+[\] rabbitmqctl status
+[/] Show node runtime statistics
+
+[\] rabbitmqctl environment
+[/] Show environment configuration
+
+[\] rabbitmqctl report
+[/] Generate detailed diagnostic report
+
+# -------------------------
+# USERS
+# -------------------------
+
+[\] rabbitmqctl list_users
+[/] List all users
+
+[\] rabbitmqctl add_user user pass
+[/] Create new user
+
+[\] rabbitmqctl delete_user user
+[/] Delete user
+
+[\] rabbitmqctl change_password user newpass
+[/] Change user password
+
+[\] rabbitmqctl set_user_tags user administrator
+[/] Assign user roles/tags
+
+# -------------------------
+# VHOSTS (VIRTUAL HOSTS)
+# -------------------------
+
+[\] rabbitmqctl list_vhosts
+[/] List virtual hosts
+
+[\] rabbitmqctl add_vhost myvhost
+[/] Create virtual host
+
+[\] rabbitmqctl delete_vhost myvhost
+[/] Delete virtual host
+
+[\] rabbitmqctl set_permissions -p myvhost user ".*" ".*" ".*"
+[/] Set full permissions for user on vhost
+
+[\] rabbitmqctl list_permissions -p myvhost
+[/] Show permissions in vhost
+
+# -------------------------
+# QUEUES
+# -------------------------
+
+[\] rabbitmqctl list_queues
+[/] List all queues
+
+[\] rabbitmqctl list_queues name messages consumers
+[/] Show queue details
+
+[\] rabbitmqctl purge_queue myqueue
+[/] Remove all messages from queue
+
+# -------------------------
+# EXCHANGES
+# -------------------------
+
+[\] rabbitmqctl list_exchanges
+[/] List exchanges
+
+[\] rabbitmqctl list_bindings
+[/] List bindings between exchanges and queues
+
+# -------------------------
+# CONNECTIONS / CHANNELS
+# -------------------------
+
+[\] rabbitmqctl list_connections
+[/] List active connections
+
+[\] rabbitmqctl list_channels
+[/] List active channels
+
+[\] rabbitmqctl close_connection <connection-id> "reason"
+[/] Force close connection
+
+# -------------------------
+# QUEUE / FLOW CONTROL
+# -------------------------
+
+[\] rabbitmqctl stop_app
+[/] Stop RabbitMQ application (keep node running)
+
+[\] rabbitmqctl start_app
+[/] Start RabbitMQ application
+
+[\] rabbitmqctl reset
+[/] Reset node (removes all data)
+
+[\] rabbitmqctl force_reset
+[/] Force reset node
+
+# -------------------------
+# MIRRORING / CLUSTERING
+# -------------------------
+
+[\] rabbitmqctl join_cluster rabbit@node1
+[/] Join cluster
+
+[\] rabbitmqctl forget_cluster_node rabbit@node2
+[/] Remove node from cluster
+
+[\] rabbitmqctl set_policy ha-all ".*" '{"ha-mode":"all"}'
+[/] Set high availability policy for queues
+
+# -------------------------
+# MONITORING / DIAGNOSTICS
+# -------------------------
+
+[\] rabbitmqctl list_queues name messages_ready messages_unacknowledged
+[/] Monitor queue backlog
+
+[\] rabbitmqctl list_consumers
+[/] List active consumers
+
+[\] rabbitmqctl eval 'rabbit_vm:memory().'
+[/] Evaluate Erlang expression (advanced diagnostics)
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] rabbitmqctl status
+[/] Check node health and memory usage
+
+[\] rabbitmqctl report > report.txt
+[/] Generate full diagnostic report
+
+[\] journalctl -u rabbitmq-server
+[/] View RabbitMQ logs (systemd)
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] rabbitmqctl list_queues && rabbitmqctl list_connections
+[/] Inspect queues and active connections
+
+[\] rabbitmqctl add_user test test && rabbitmqctl set_user_tags test administrator
+[/] Create admin user quickly
+
+[\] rabbitmqctl set_permissions -p / test ".*" ".*" ".*" && rabbitmqctl list_permissions
+[/] Grant permissions and verify
