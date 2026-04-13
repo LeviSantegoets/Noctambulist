@@ -1,0 +1,49 @@
+[X] 0trace Command List
+
+[\] git clone https://github.com/laramies/0trace.git
+[/] Clone 0trace repository
+
+[\] cd 0trace
+[/] Enter project directory
+
+[\] make
+[/] Compile 0trace (requires build tools)
+
+[\] sudo cp 0trace /usr/local/bin/
+[/] Install globally on Linux
+
+[\] sudo 0trace example.com
+[/] Trace route to target using ICMP
+
+[\] sudo 0trace 192.168.1.1
+[/] Trace route to IP address
+
+[\] sudo 0trace -n example.com
+[/] Disable DNS resolution
+
+[\] sudo 0trace -d example.com
+[/] Enable debug output
+
+[\] sudo 0trace -t 5 example.com
+[/] Set TTL (hop limit)
+
+[\] sudo 0trace -s 1 example.com
+[/] Set delay between probes
+
+[\] sudo 0trace -p 80 example.com
+[/] Specify destination port
+
+[\] sudo 0trace -m 30 example.com
+[/] Set max hops
+
+[\] sudo 0trace -r example.com
+[/] Resolve IPs to hostnames
+
+[\] sudo 0trace -v example.com
+[/] Verbose output
+
+[\] sudo 0trace -h
+[/] Show help menu
+
+[\] 0trace --version
+[/] Show version
