@@ -1,0 +1,70 @@
+[X] 0d1n Command List
+
+[\] git clone https://github.com/CoolerVoid/0d1n.git
+[/] Clone 0d1n repository
+
+[\] cd 0d1n
+[/] Enter project directory
+
+[\] go build
+[/] Build 0d1n binary (requires Go)
+
+[\] sudo mv 0d1n /usr/local/bin/
+[/] Install globally on Linux
+
+[\] go install github.com/CoolerVoid/0d1n@latest
+[/] Install via Go (recommended)
+
+[\] 0d1n -u http://example.com
+[/] Scan target URL
+
+[\] 0d1n -u http://example.com -w wordlist.txt
+[/] Use wordlist for fuzzing
+
+[\] 0d1n -u http://example.com -X POST
+[/] Use POST method
+
+[\] 0d1n -u http://example.com -X PUT
+[/] Use PUT method
+
+[\] 0d1n -u http://example.com -H "User-Agent: custom"
+[/] Add custom HTTP header
+
+[\] 0d1n -u http://example.com -d "param=value"
+[/] Send POST data
+
+[\] 0d1n -u http://example.com -c cookies.txt
+[/] Use cookies from file
+
+[\] 0d1n -u http://example.com -p proxy:8080
+[/] Use HTTP proxy
+
+[\] 0d1n -u http://example.com -t 50
+[/] Set number of threads
+
+[\] 0d1n -u http://example.com -timeout 10
+[/] Set request timeout
+
+[\] 0d1n -u http://example.com -o output.txt
+[/] Save output to file
+
+[\] 0d1n -u http://example.com -json
+[/] Output results in JSON format
+
+[\] 0d1n -u http://example.com -status 200,301,302
+[/] Filter by HTTP status codes
+
+[\] 0d1n -u http://example.com -exclude 404
+[/] Exclude specific status codes
+
+[\] 0d1n -u http://example.com -follow
+[/] Follow redirects
+
+[\] 0d1n -u http://example.com -v
+[/] Verbose output
+
+[\] 0d1n --help
+[/] Show help menu
+
+[\] 0d1n --version
+[/] Show version
