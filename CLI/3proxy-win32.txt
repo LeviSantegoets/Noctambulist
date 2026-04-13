@@ -1,0 +1,73 @@
+[X] 3proxy-win32 Command List
+
+[\] git clone https://github.com/z3APA3A/3proxy.git
+[/] Clone 3proxy repository
+
+[\] cd 3proxy\bin\win32
+[/] Navigate to Windows binaries
+
+[\] 3proxy.exe
+[/] Start 3proxy with default config
+
+[\] 3proxy.exe 3proxy.cfg
+[/] Start with configuration file
+
+[\] proxy -p8080
+[/] Start HTTP proxy on port 8080
+
+[\] socks -p1080
+[/] Start SOCKS proxy on port 1080
+
+[\] ftppr -p2121
+[/] Start FTP proxy
+
+[\] pop3p -p1100
+[/] Start POP3 proxy
+
+[\] dnspr -p53
+[/] Start DNS proxy
+
+[\] auth none
+[/] Disable authentication
+
+[\] auth strong
+[/] Enable username/password authentication
+
+[\] users user:CL:password
+[/] Define user credentials
+
+[\] allow user
+[/] Allow access for specific user
+
+[\] deny *
+[/] Deny all other users
+
+[\] log C:\3proxy\logs\3proxy.log
+[/] Enable logging to file
+
+[\] rotate 30
+[/] Keep logs for 30 days
+
+[\] maxconn 100
+[/] Set maximum connections
+
+[\] flush
+[/] Apply configuration changes
+
+[\] daemon
+[/] Run 3proxy in background (if supported)
+
+[\] internal 0.0.0.0
+[/] Bind to all interfaces
+
+[\] external <your_ip>
+[/] Set external IP address
+
+[\] nserver 8.8.8.8
+[/] Set DNS server
+
+[\] config 3proxy.cfg
+[/] Load configuration file
+
+[\] 3proxy.exe --help
+[/] Show help menu
