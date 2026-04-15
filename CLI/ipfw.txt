@@ -1,4 +1,4 @@
-[X] ipfw (FreeBSD Firewall) Command List
+[X] ipfw Command List
 
 [\] ipfw list
 [/] Show all firewall rules
