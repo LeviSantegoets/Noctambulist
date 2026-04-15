@@ -1,4 +1,4 @@
-[X] Dstat Command List (System Resource Monitoring)
+[X] Dstat Command List
 
 [\] dstat
 [/] Show CPU, disk, network, and memory stats in real time
