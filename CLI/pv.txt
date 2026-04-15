@@ -1,4 +1,4 @@
-[X] PV Command List (Pipe Viewer / Monitor Data Throughput)
+[X] PV Command List
 
 [\] pv file.txt > /dev/null
 [/] Show progress while reading file
