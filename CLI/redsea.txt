@@ -1,0 +1,52 @@
+[X] Redsea Command List
+
+[\] redsea --help
+[/] Show help menu
+
+[\] redsea --version
+[/] Show Redsea version
+
+[\] redsea
+[/] Start RDS decoding from default input (stdin/audio device)
+
+[\] redsea -i <input_file_or_device>
+[/] Set input source (file or audio device)
+
+[\] redsea -o <output_file>
+[/] Write decoded RDS data to file
+
+[\] redsea -r <sample_rate>
+[/] Set input sample rate
+
+[\] redsea -a
+[/] Enable automatic decoding mode
+
+[\] redsea -v
+[/] Enable verbose output
+
+[\] redsea -q
+[/] Quiet mode (minimal output)
+
+[\] redsea -d
+[/] Enable debug output
+
+[\] redsea -f <format>
+[/] Set output format (text/json depending on build)
+
+[\] redsea -c
+[/] Continuous decoding mode
+
+[\] redsea -t <seconds>
+[/] Run for a fixed duration then exit
+
+[\] redsea -h <host>
+[/] Send decoded output to network host
+
+[\] redsea -P <port>
+[/] Set network output port
+
+[\] redsea --json
+[/] Output results in JSON format
+
+[\] redsea --help-all
+[/] Show advanced options
