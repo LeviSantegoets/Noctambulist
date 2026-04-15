@@ -1,4 +1,4 @@
-[X] Helm (Kubernetes Package Manager) Command List
+[X] Helm Command List
 
 [\] helm
 [/] Show Helm general help and command overview
