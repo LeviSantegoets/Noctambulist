@@ -1,4 +1,4 @@
-[X] Capstone Command List (Disassembly Framework)
+[X] Capstone Command List
 
 [\] cs_disasm(code, address)
 [/] Disassemble given binary code starting at specified address
