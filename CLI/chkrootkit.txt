@@ -1,4 +1,4 @@
-[X] Chkrootkit Command List (Rootkit Scanner)
+[X] Chkrootkit Command List
 
 [\] chkrootkit
 [/] Run default scan on the local system
