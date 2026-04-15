@@ -1,4 +1,4 @@
-[X] Etckeeper Command List (Version Control for /etc)
+[X] Etckeeper Command List
 
 [\] etckeeper init
 [/] Initialize version control for /etc
