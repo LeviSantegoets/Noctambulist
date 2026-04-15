@@ -1,0 +1,52 @@
+[X] Predict Command List
+
+[\] predict --help
+[/] Show help menu
+
+[\] predict --version
+[/] Show predict version
+
+[\] predict
+[/] Launch interactive satellite prediction mode
+
+[\] predict -q <satellite_name>
+[/] Query a specific satellite pass
+
+[\] predict -t <satellite_name>
+[/] Track a satellite in real time
+
+[\] predict -l
+[/] List all available satellites
+
+[\] predict -s <satellite_name>
+[/] Show detailed orbital pass information
+
+[\] predict -c <callsign>
+[/] Filter satellites by identifier or name
+
+[\] predict -d <date_time>
+[/] Predict passes for a specific date/time
+
+[\] predict -u
+[/] Update satellite TLE data
+
+[\] predict -o <output_file>
+[/] Save prediction results to file
+
+[\] predict -r <latitude,longitude>
+[/] Set observer location
+
+[\] predict -a
+[/] Show all upcoming passes
+
+[\] predict -v
+[/] Enable verbose output
+
+[\] predict -q
+[/] Quiet mode (minimal output)
+
+[\] predict --json
+[/] Output results in JSON format
+
+[\] predict --help-all
+[/] Show advanced options
