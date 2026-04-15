@@ -1,0 +1,46 @@
+[X] Minimodem Command List
+
+[\] minimodem --help
+[/] Show help menu
+
+[\] minimodem --version
+[/] Show minimodem version
+
+[\] minimodem <baudrate>
+[/] Receive modem audio at specified baud rate
+
+[\] minimodem --tx <baudrate>
+[/] Transmit modem audio at specified baud rate
+
+[\] minimodem --rx <baudrate>
+[/] Receive-only mode at specified baud rate
+
+[\] minimodem --tx <baudrate> <file>
+[/] Transmit data from a file
+
+[\] minimodem --rx <baudrate> > <output_file>
+[/] Save received data to a file
+
+[\] minimodem --float-samples
+[/] Use floating-point audio samples
+
+[\] minimodem --8bit-samples
+[/] Use 8-bit audio samples
+
+[\] minimodem --sample-rate <rate>
+[/] Set audio sample rate
+
+[\] minimodem --volume <level>
+[/] Set output volume level
+
+[\] minimodem --carrier <freq>
+[/] Set carrier frequency
+
+[\] minimodem --verbose
+[/] Enable verbose decoding output
+
+[\] minimodem --quiet
+[/] Suppress non-essential output
+
+[\] minimodem --help-all
+[/] Show advanced options
