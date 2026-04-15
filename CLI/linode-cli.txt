@@ -1,4 +1,4 @@
-[X] linode-cli (Linode / Akamai Cloud CLI) Command List
+[X] linode-cli Command List
 
 [\] linode-cli
 [/] Show linode-cli general help and command overview
