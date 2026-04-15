@@ -1,4 +1,4 @@
-[X] GEF Command List (GDB Enhanced Features)
+[X] GEF Command List
 
 [\] gdb program
 [/] Start GDB with GEF loaded
