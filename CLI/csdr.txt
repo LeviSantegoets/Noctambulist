@@ -1,4 +1,4 @@
-[X] CSDR (Command-line SDR) Command List
+[X] CSDR Command List
 
 [\] csdr --help
 [/] Show help and available commands
