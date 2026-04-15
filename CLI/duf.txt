@@ -1,4 +1,4 @@
-[X] DUF Command List (Disk Usage/Filesystem Utility)
+[X] DUF Command List
 
 [\] duf
 [/] Show disk usage summary for all mounted filesystems
