@@ -1,4 +1,4 @@
-[X] Ghidra-Headless Command List (Automated Reverse Engineering)
+[X] Ghidra-Headless Command List
 
 [\] ghidraHeadless /path/to/project projectName -import file
 [/] Import binary into Ghidra project in headless mode
