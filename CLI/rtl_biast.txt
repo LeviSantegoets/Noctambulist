@@ -1,0 +1,40 @@
+[X] RTL_BIAST Command List
+
+[\] rtl_biast --help
+[/] Show help menu
+
+[\] rtl_biast --version
+[/] Show rtl_biast version
+
+[\] rtl_biast -d <index>
+[/] Select RTL-SDR device index
+
+[\] rtl_biast -b 1
+[/] Enable bias tee power (turn ON)
+
+[\] rtl_biast -b 0
+[/] Disable bias tee power (turn OFF)
+
+[\] rtl_biast -g <gain>
+[/] Set tuner gain (if supported by device stack)
+
+[\] rtl_biast -p <ppm>
+[/] Apply frequency correction (PPM)
+
+[\] rtl_biast -V
+[/] Verbose output mode
+
+[\] rtl_biast -q
+[/] Quiet mode (minimal output)
+
+[\] rtl_biast -t <timeout>
+[/] Run for a specific duration then exit
+
+[\] rtl_biast --status
+[/] Show current bias tee state (if supported)
+
+[\] rtl_biast --list-devices
+[/] List available RTL-SDR devices
+
+[\] rtl_biast --help-all
+[/] Show advanced options
