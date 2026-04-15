@@ -1,4 +1,4 @@
-[X] nnn File Manager Command List
+[X] nnn Command List
 
 [\] nnn
 [/] Launch nnn file manager
