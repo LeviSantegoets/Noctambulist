@@ -1,0 +1,49 @@
+[X] GPredict-CLI Command List
+
+[\] gpredict-cli --help
+[/] Show help menu
+
+[\] gpredict-cli --version
+[/] Show gpredict-cli version
+
+[\] gpredict-cli
+[/] Launch command-line satellite tracking interface
+
+[\] gpredict-cli -l
+[/] List all available satellites
+
+[\] gpredict-cli -s <satellite_name>
+[/] Show current tracking info for a satellite
+
+[\] gpredict-cli -t <satellite_name>
+[/] Track a specific satellite in real time
+
+[\] gpredict-cli -p <satellite_name>
+[/] Print next pass predictions
+
+[\] gpredict-cli -d <date_time>
+[/] Predict passes for a specific date/time
+
+[\] gpredict-cli -u
+[/] Update TLE (orbital elements) database
+
+[\] gpredict-cli -o <output_file>
+[/] Save prediction output to file
+
+[\] gpredict-cli -r <lat,lon>
+[/] Set observer location
+
+[\] gpredict-cli -a
+[/] Show all upcoming satellite passes
+
+[\] gpredict-cli -v
+[/] Enable verbose output
+
+[\] gpredict-cli -q
+[/] Quiet mode (minimal output)
+
+[\] gpredict-cli --json
+[/] Output results in JSON format
+
+[\] gpredict-cli --help-all
+[/] Show advanced options
