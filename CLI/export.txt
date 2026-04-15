@@ -1,4 +1,4 @@
-[X] Export Command List (Shell Environment)
+[X] Export Command List
 
 [\] export VAR=value
 [/] Set environment variable
