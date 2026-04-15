@@ -1,0 +1,49 @@
+[X] UHD_TX_Waveforms Command List
+
+[\] uhd_tx_waveforms --help
+[/] Show help menu
+
+[\] uhd_tx_waveforms
+[/] Transmit default waveform with default settings
+
+[\] uhd_tx_waveforms --version
+[/] Show UHD version
+
+[\] uhd_tx_waveforms --args "type=<device_type>"
+[/] Select USRP device type
+
+[\] uhd_tx_waveforms --args "addr=<ip_address>"
+[/] Connect to networked USRP device
+
+[\] uhd_tx_waveforms --freq <frequency>
+[/] Set transmit center frequency (Hz)
+
+[\] uhd_tx_waveforms --rate <sample_rate>
+[/] Set sample rate
+
+[\] uhd_tx_waveforms --gain <value>
+[/] Set TX gain
+
+[\] uhd_tx_waveforms --ant <antenna>
+[/] Select transmit antenna port
+
+[\] uhd_tx_waveforms --waveform <type>
+[/] Select waveform (sine, const, square, ramp)
+
+[\] uhd_tx_waveforms --ampl <value>
+[/] Set waveform amplitude
+
+[\] uhd_tx_waveforms --offset <value>
+[/] Set DC offset
+
+[\] uhd_tx_waveforms --nsamps <count>
+[/] Transmit specific number of samples
+
+[\] uhd_tx_waveforms --duration <seconds>
+[/] Transmit for specific duration
+
+[\] uhd_tx_waveforms --channels <list>
+[/] Select transmit channels
+
+[\] uhd_tx_waveforms --help-all
+[/] Show advanced options
