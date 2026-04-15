@@ -1,4 +1,4 @@
-[X] socat (SOcket CAT) Command List
+[X] socat Command List
 
 [\] socat -h
 [/] Show help menu
