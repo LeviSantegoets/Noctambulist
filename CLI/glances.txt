@@ -1,4 +1,4 @@
-[X] Glances Command List (Comprehensive System Monitoring)
+[X] Glances Command List 
 
 [\] glances
 [/] Launch Glances interactive monitoring dashboard
