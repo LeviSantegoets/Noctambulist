@@ -1,4 +1,4 @@
-[X] Rizin Command List (Reverse Engineering & Binary Analysis, Radare2 Fork)
+[X] Rizin Command List
 
 [\] rizin file
 [/] Open file in Rizin interactive shell
