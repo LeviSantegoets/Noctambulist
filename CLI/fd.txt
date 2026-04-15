@@ -1,4 +1,4 @@
-[X] FD Command List (Rust Fast File Finder)
+[X] FD Command List
 
 [\] fd pattern
 [/] Search for files and directories matching pattern in current directory
