@@ -1,4 +1,4 @@
-[X] Auditd Command List (Linux Audit Daemon)
+[X] Auditd Command List
 
 [\] auditctl -s
 [/] Show current audit system status
