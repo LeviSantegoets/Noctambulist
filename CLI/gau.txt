@@ -1,4 +1,4 @@
-[X] GAU (GetAllUrls) Command List
+[X] GAU Command List
 
 [\] gau <domain>
 [/] Fetch all known URLs for the given domain
