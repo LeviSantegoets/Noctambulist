@@ -1,4 +1,4 @@
-[X] Needrestart Command List (Check Services for Restarts)
+[X] Needrestart Command List
 
 [\] needrestart
 [/] Scan system for services requiring restart after updates
