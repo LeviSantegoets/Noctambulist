@@ -1,4 +1,4 @@
-[X] Strace Command List (System Call Tracer)
+[X] Strace Command List
 
 [\] strace ls
 [/] Trace system calls of `ls` command
