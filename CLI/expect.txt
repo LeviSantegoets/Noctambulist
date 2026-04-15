@@ -1,4 +1,4 @@
-[X] Expect Command List (Automated Interactive Scripts)
+[X] Expect Command List
 
 [\] expect -f script.exp
 [/] Run Expect script from file
