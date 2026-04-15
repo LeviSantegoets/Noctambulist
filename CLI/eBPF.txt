@@ -1,4 +1,4 @@
-[X] eBPF / XDP Firewall Command List (Advanced)
+[X] eBPF / XDP Firewall Command List
 
 [\] ip link show
 [/] List network interfaces
