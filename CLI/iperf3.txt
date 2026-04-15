@@ -1,4 +1,4 @@
-[X] IPerf3 Command List (Network Bandwidth Testing)
+[X] IPerf3 Command List
 
 [\] iperf3 -s
 [/] Start IPerf3 in server mode
