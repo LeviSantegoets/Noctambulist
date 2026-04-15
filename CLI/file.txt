@@ -1,4 +1,4 @@
-[X] File Command List (Determine File Type)
+[X] File Command List
 
 [\] file filename
 [/] Show type of a file
