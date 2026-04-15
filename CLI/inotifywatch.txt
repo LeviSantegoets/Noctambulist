@@ -1,4 +1,4 @@
-[X] Inotifywatch Command List (Monitor File System Events Summary)
+[X] Inotifywatch Command List
 
 [\] inotifywatch /path/to/dir
 [/] Monitor events in directory and print summary at exit
