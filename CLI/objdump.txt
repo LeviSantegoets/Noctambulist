@@ -1,4 +1,4 @@
-[X] Objdump Command List (Binary Analysis and Disassembly)
+[X] Objdump Command List
 
 [\] objdump -f file
 [/] Display file header info
