@@ -1,0 +1,49 @@
+[X] DSD-FME Command List
+
+[\] dsd-fme --help
+[/] Show help menu
+
+[\] dsd-fme --version
+[/] Show dsd-fme version
+
+[\] dsd-fme -i <input_device_or_file>
+[/] Set input source (audio device, pipe, or file)
+
+[\] dsd-fme -o <output_device_or_file>
+[/] Set output destination
+
+[\] dsd-fme -fr <rate>
+[/] Set input sample rate
+
+[\] dsd-fme -fa <rate>
+[/] Set audio output sample rate
+
+[\] dsd-fme -fd <mode>
+[/] Select decoding mode (DMR, P25, NXDN, etc.)
+
+[\] dsd-fme -v
+[/] Enable verbose decoding output
+
+[\] dsd-fme -q
+[/] Quiet mode (minimal output)
+
+[\] dsd-fme -g <gain>
+[/] Set audio/RF gain level
+
+[\] dsd-fme -n
+[/] Disable audio playback (decode-only mode)
+
+[\] dsd-fme -w
+[/] Enable WAV file input/output mode
+
+[\] dsd-fme -d
+[/] Enable debug mode
+
+[\] dsd-fme -p <protocol>
+[/] Force specific digital voice protocol
+
+[\] dsd-fme -c <config_file>
+[/] Load configuration file
+
+[\] dsd-fme --help-all
+[/] Show advanced options
