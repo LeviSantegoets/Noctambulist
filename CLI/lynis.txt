@@ -1,4 +1,4 @@
-[X] Lynis Command List (Security Auditing Tool)
+[X] Lynis Command List
 
 [\] lynis audit system
 [/] Perform a full system security audit
