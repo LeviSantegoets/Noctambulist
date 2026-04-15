@@ -1,4 +1,4 @@
-[X] ipchains (Legacy Linux Firewall) Command List
+[X] ipchains Command List
 
 [\] ipchains -L
 [/] List all rules
