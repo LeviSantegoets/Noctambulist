@@ -1,4 +1,4 @@
-[X] PDW Pager Decoder Command List
+[X] PDW Command List
 
 [\] pdw
 [/] Launch PDW pager decoder GUI
