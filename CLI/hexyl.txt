@@ -1,4 +1,4 @@
-[X] Hexyl Command List (Hex Viewer)
+[X] Hexyl Command List
 
 [\] hexyl file
 [/] View file in hex and ASCII side by side
