@@ -1,0 +1,49 @@
+[X] RTL_ADSB Command List
+
+[\] rtl_adsb --help
+[/] Show help menu
+
+[\] rtl_adsb
+[/] Start ADS-B reception with default RTL-SDR settings
+
+[\] rtl_adsb --version
+[/] Show version information
+
+[\] rtl_adsb -d <index>
+[/] Select RTL-SDR device index
+
+[\] rtl_adsb -g <gain>
+[/] Set tuner gain (dB)
+
+[\] rtl_adsb -p <ppm>
+[/] Set frequency correction (PPM)
+
+[\] rtl_adsb -V
+[/] Enable bias tee power (if supported)
+
+[\] rtl_adsb -S
+[/] Use short output format
+
+[\] rtl_adsb -Q
+[/] Enable quieter/minimal output
+
+[\] rtl_adsb -R
+[/] Output raw ADS-B frames
+
+[\] rtl_adsb -K
+[/] Output messages with CRC checking options
+
+[\] rtl_adsb -h <host>
+[/] Send decoded output to network host
+
+[\] rtl_adsb -P <port>
+[/] Set network destination port
+
+[\] rtl_adsb -f <frequency>
+[/] Set receive frequency (default usually 1090 MHz)
+
+[\] rtl_adsb -s <sample_rate>
+[/] Set sample rate
+
+[\] rtl_adsb --help-all
+[/] Show advanced options
