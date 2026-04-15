@@ -1,4 +1,4 @@
-[X] hcloud (Hetzner Cloud CLI) Command List
+[X] hcloud Command List
 
 [\] hcloud
 [/] Show hcloud general help and command overview
