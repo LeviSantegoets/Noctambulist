@@ -1,4 +1,4 @@
-[X] Entr Command List (Run Commands on File Changes)
+[X] Entr Command List
 
 [\] ls *.txt | entr echo "File changed"
 [/] Run command whenever any .txt file changes
