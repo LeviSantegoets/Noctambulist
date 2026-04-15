@@ -1,4 +1,4 @@
-[X] Glow (Markdown Terminal Viewer) Command List
+[X] Glow Command List
 
 [\] glow README.md
 [/] View a markdown file in terminal
