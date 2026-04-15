@@ -1,4 +1,4 @@
-[X] NM Command List (Symbol Table Inspection)
+[X] NM Command List
 
 [\] nm file
 [/] Display symbols from object or executable file
