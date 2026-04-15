@@ -1,4 +1,4 @@
-[X] NCDU Command List (NCurses Disk Usage)
+[X] NCDU Command List
 
 [\] ncdu
 [/] Open interactive disk usage viewer for current directory
