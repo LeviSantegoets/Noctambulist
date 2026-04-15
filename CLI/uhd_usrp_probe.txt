@@ -1,0 +1,43 @@
+[X] UHD_USRP_Probe Command List
+
+[\] uhd_usrp_probe --help
+[/] Show help menu
+
+[\] uhd_usrp_probe
+[/] Detect connected USRP devices and show full device info
+
+[\] uhd_usrp_probe --version
+[/] Show UHD version information
+
+[\] uhd_usrp_probe --args "type=<device_type>"
+[/] Probe a specific USRP device type
+
+[\] uhd_usrp_probe --args "serial=<serial_number>"
+[/] Probe device by serial number
+
+[\] uhd_usrp_probe --args "addr=<ip_address>"
+[/] Probe network-connected USRP by IP address
+
+[\] uhd_usrp_probe --args "name=<device_name>"
+[/] Probe device by assigned name
+
+[\] uhd_usrp_probe --tree
+[/] Show property tree for device components
+
+[\] uhd_usrp_probe --string
+[/] Show compact string-formatted output
+
+[\] uhd_usrp_probe --init-only
+[/] Initialize device without full probing
+
+[\] uhd_usrp_probe --args "type=b200"
+[/] Probe B200-series device
+
+[\] uhd_usrp_probe --args "type=x300,addr=<ip_address>"
+[/] Probe X300-series device over network
+
+[\] uhd_usrp_probe --args "type=n210,addr=<ip_address>"
+[/] Probe N210 device over network
+
+[\] uhd_usrp_probe --help-all
+[/] Show advanced options
