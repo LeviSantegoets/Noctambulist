@@ -1,4 +1,4 @@
-[X] Ripgrep (rg) Full Command List
+[X] Ripgrep Command List
 
 [\] rg pattern
 [/] Search for pattern recursively in current directory
