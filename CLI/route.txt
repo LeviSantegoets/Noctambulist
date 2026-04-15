@@ -1,4 +1,4 @@
-[X] route (Routing Table) Command List – CLI Only
+[X] route Command List
 
 [\] route
 [/] Show kernel routing table (legacy command)
