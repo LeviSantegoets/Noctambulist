@@ -1,0 +1,49 @@
+[X] RTL_EEPROM Command List
+
+[\] rtl_eeprom --help
+[/] Show help menu
+
+[\] rtl_eeprom --version
+[/] Show rtl_eeprom version
+
+[\] rtl_eeprom
+[/] Read EEPROM information from connected RTL-SDR device
+
+[\] rtl_eeprom -d <index>
+[/] Select RTL-SDR device index
+
+[\] rtl_eeprom -r
+[/] Read and display EEPROM contents
+
+[\] rtl_eeprom -w
+[/] Write configuration to EEPROM (use carefully)
+
+[\] rtl_eeprom -s <serial>
+[/] Set device serial number
+
+[\] rtl_eeprom -t <type>
+[/] Set device type identifier
+
+[\] rtl_eeprom -p <ppm>
+[/] Set frequency correction (PPM)
+
+[\] rtl_eeprom -g <gain>
+[/] Set default gain value
+
+[\] rtl_eeprom -E
+[/] Erase EEPROM contents (device dependent / dangerous)
+
+[\] rtl_eeprom -V
+[/] Enable verbose output
+
+[\] rtl_eeprom -q
+[/] Quiet mode
+
+[\] rtl_eeprom --reset
+[/] Reset EEPROM to factory defaults (if supported)
+
+[\] rtl_eeprom --list-devices
+[/] List available RTL-SDR devices
+
+[\] rtl_eeprom --help-all
+[/] Show advanced options
