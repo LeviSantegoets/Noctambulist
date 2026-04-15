@@ -1,4 +1,4 @@
-[X] Readelf Command List (ELF File Analysis)
+[X] Readelf Command List
 
 [\] readelf -h file
 [/] Display ELF header
