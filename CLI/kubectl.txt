@@ -1,4 +1,4 @@
-[X] kubectl (Kubernetes CLI) Command List
+[X] kubectl Command List
 
 [\] kubectl
 [/] Show kubectl general help and command overview
