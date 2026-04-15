@@ -1,4 +1,4 @@
-[X] JQ Command List (JSON Processor)
+[X] JQ Command List
 
 [\] jq . file.json
 [/] Pretty-print JSON file
