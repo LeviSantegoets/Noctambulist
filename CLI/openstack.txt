@@ -1,4 +1,4 @@
-[X] OpenStack CLI Command List
+[X] OpenStack Command List
 
 [\] openstack
 [/] Show OpenStack CLI general help and command overview
