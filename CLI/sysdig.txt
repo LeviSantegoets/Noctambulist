@@ -1,4 +1,4 @@
-[X] Sysdig Command List (System Exploration and Troubleshooting)
+[X] Sysdig Command List
 
 [\] sysdig
 [/] Capture and display system events in real time
