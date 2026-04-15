@@ -1,4 +1,4 @@
-[X] LSOF Command List (List Open Files)
+[X] LSOF Command List
 
 [\] lsof
 [/] List all open files
