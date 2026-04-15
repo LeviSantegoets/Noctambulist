@@ -1,4 +1,4 @@
-[X] Ptrace-Based Tools Command List (Debugging and Process Tracing)
+[X] Ptrace-Based Tools Command List
 
 [\] strace -p 1234
 [/] Trace system calls of process with PID 1234
