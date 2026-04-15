@@ -1,4 +1,4 @@
-[X] Binwalk Command List (Firmware and Binary Analysis)
+[X] Binwalk Command List
 
 [\] binwalk file.bin
 [/] Scan file for embedded files and signatures
