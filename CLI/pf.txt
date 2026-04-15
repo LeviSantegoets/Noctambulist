@@ -1,4 +1,4 @@
-[X] pf (Packet Filter) Command List
+[X] pf Command List
 
 [\] pfctl -e
 [/] Enable pf firewall
