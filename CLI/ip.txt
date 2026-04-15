@@ -1,4 +1,4 @@
-[X] ip (iproute2) Command List – Network Configuration (CLI Only)
+[X] ip Command List
 
 [\] ip
 [/] Show general help for iproute2 suite
