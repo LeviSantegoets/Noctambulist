@@ -1,4 +1,4 @@
-[X] LDD Command List (Shared Library Dependencies)
+[X] LDD Command List
 
 [\] ldd file
 [/] Show shared library dependencies of executable
