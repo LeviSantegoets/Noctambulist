@@ -1,4 +1,4 @@
-[X] APKTool Command List (Android APK Reverse Engineering)
+[X] APKTool Command List
 
 [\] apktool d app.apk
 [/] Decompile APK into smali code and resources
