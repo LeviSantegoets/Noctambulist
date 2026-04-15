@@ -1,4 +1,4 @@
-[X] RKHunter Command List (Rootkit Hunter)
+[X] RKHunter Command List
 
 [\] rkhunter --check
 [/] Run full system check for rootkits, backdoors, and exploits
