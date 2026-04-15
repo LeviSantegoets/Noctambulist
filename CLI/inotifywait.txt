@@ -1,4 +1,4 @@
-[X] Inotifywait Command List (Monitor File System Events)
+[X] Inotifywait Command List
 
 [\] inotifywait /path/to/dir
 [/] Wait for events in directory (default: one event, then exit)
