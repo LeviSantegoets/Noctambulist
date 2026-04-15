@@ -1,4 +1,4 @@
-[X] PEDA Command List (Python Exploit Development Assistance for GDB)
+[X] PEDA Command List
 
 [\] gdb program
 [/] Start GDB with PEDA loaded
