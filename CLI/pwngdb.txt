@@ -1,4 +1,4 @@
-[X] Pwndbg Command List (GDB Extension for Exploit Development)
+[X] Pwndbg Command List
 
 [\] gdb program
 [/] Start GDB with Pwndbg loaded automatically (if installed)
