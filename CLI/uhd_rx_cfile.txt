@@ -1,0 +1,52 @@
+[X] UHD_RX_CFILE Command List
+
+[\] uhd_rx_cfile --help
+[/] Show help menu
+
+[\] uhd_rx_cfile
+[/] Receive samples from USRP and save to file with defaults
+
+[\] uhd_rx_cfile --version
+[/] Show UHD version
+
+[\] uhd_rx_cfile --args "type=<device_type>"
+[/] Select USRP device type
+
+[\] uhd_rx_cfile --args "addr=<ip_address>"
+[/] Connect to networked USRP device
+
+[\] uhd_rx_cfile --freq <frequency>
+[/] Set receive center frequency (Hz)
+
+[\] uhd_rx_cfile --rate <sample_rate>
+[/] Set sample rate
+
+[\] uhd_rx_cfile --gain <value>
+[/] Set RX gain
+
+[\] uhd_rx_cfile --ant <antenna>
+[/] Select receive antenna port
+
+[\] uhd_rx_cfile --file <output.cfile>
+[/] Save complex IQ samples to output file
+
+[\] uhd_rx_cfile --nsamps <count>
+[/] Capture specific number of samples
+
+[\] uhd_rx_cfile --duration <seconds>
+[/] Capture for specific duration
+
+[\] uhd_rx_cfile --bw <bandwidth>
+[/] Set frontend bandwidth
+
+[\] uhd_rx_cfile --channels <list>
+[/] Select channels to receive from
+
+[\] uhd_rx_cfile --type short
+[/] Save samples as short integers
+
+[\] uhd_rx_cfile --type float
+[/] Save samples as float values
+
+[\] uhd_rx_cfile --help-all
+[/] Show advanced options
