@@ -1,4 +1,4 @@
-[X] FZF Command List (Fuzzy Finder)
+[X] FZF Command List
 
 [\] fzf
 [/] Launch interactive fuzzy finder on stdin input
