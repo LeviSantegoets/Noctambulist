@@ -1,0 +1,52 @@
+[X] Kalibrate-RTL Command List
+
+[\] kal -h
+[/] Show help menu
+
+[\] kal --help
+[/] Show full help menu
+
+[\] kal -v
+[/] Show version information
+
+[\] kal -s <sample_rate>
+[/] Set RTL-SDR sample rate
+
+[\] kal -g <gain>
+[/] Set tuner gain
+
+[\] kal -d <device_index>
+[/] Select RTL-SDR device index
+
+[\] kal -f <frequency>
+[/] Set center frequency to test
+
+[\] kal -b <band>
+[/] Scan GSM band (e.g., GSM900, GSM1800)
+
+[\] kal -e <ppm_error>
+[/] Set initial frequency error estimate
+
+[\] kal -c <channel>
+[/] Focus on specific GSM channel
+
+[\] kal -l
+[/] List detected GSM base stations
+
+[\] kal -A
+[/] Automatic frequency offset calibration
+
+[\] kal -S
+[/] Enable signal strength output
+
+[\] kal -D
+[/] Enable debug output
+
+[\] kal -q
+[/] Quiet mode
+
+[\] kal -p <ppm_output_file>
+[/] Save calculated PPM correction to file
+
+[\] kal --help-all
+[/] Show advanced options
