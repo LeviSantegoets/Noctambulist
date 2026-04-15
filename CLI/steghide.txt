@@ -1,4 +1,4 @@
-[X] Steghide Command List (Steganography Tool)
+[X] Steghide Command List
 
 [\] steghide embed -cf cover.jpg -ef secret.txt
 [/] Embed `secret.txt` into `cover.jpg`
