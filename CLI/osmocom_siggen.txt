@@ -1,0 +1,46 @@
+[X] Osmocom_Siggen Command List
+
+[\] osmocom_siggen --help
+[/] Show help menu
+
+[\] osmocom_siggen
+[/] Start signal generator with default settings
+
+[\] osmocom_siggen --version
+[/] Show version information
+
+[\] osmocom_siggen -a <device_args>
+[/] Set device arguments (hackrf=0, bladerf=0, etc.)
+
+[\] osmocom_siggen -f <frequency>
+[/] Set transmit frequency (Hz)
+
+[\] osmocom_siggen -s <sample_rate>
+[/] Set sample rate
+
+[\] osmocom_siggen -g <gain>
+[/] Set transmit gain
+
+[\] osmocom_siggen -x <amplitude>
+[/] Set output amplitude
+
+[\] osmocom_siggen -t <waveform>
+[/] Select waveform (sine, square, const, noise)
+
+[\] osmocom_siggen -o <offset>
+[/] Set DC offset
+
+[\] osmocom_siggen -p <ppm>
+[/] Set frequency correction (PPM)
+
+[\] osmocom_siggen -A <antenna>
+[/] Select antenna port (if supported)
+
+[\] osmocom_siggen -B <bandwidth>
+[/] Set frontend bandwidth
+
+[\] osmocom_siggen -r <duration>
+[/] Transmit for specific duration (seconds)
+
+[\] osmocom_siggen --help-all
+[/] Show advanced options
