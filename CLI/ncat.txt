@@ -1,4 +1,4 @@
-[X] Ncat Command List (Nmap Netcat Replacement)
+[X] Ncat Command List 
 
 [\] ncat example.com 80
 [/] Connect to remote host on port 80
