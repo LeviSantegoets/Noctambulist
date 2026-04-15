@@ -1,4 +1,4 @@
-[X] mtr (My Traceroute) Command List – Network Diagnostics (Fused)
+[X] mtr Command List
 
 [\] mtr example.com
 [/] Run MTR interactively (combines ping + traceroute)
