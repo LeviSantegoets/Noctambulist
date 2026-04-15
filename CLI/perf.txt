@@ -1,4 +1,4 @@
-[X] Perf Command List (Linux Performance Analysis Tool)
+[X] Perf Command List
 
 [\] perf stat ls
 [/] Gather basic performance statistics while running `ls`
