@@ -1,4 +1,4 @@
-[X] Radare2 (r2) Command List (Reverse Engineering & Binary Analysis)
+[X] Radare2 Command List
 
 [\] r2 file
 [/] Open file in radare2 interactive shell
