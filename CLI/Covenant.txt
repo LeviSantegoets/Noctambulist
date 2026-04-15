@@ -1,4 +1,4 @@
-[X] Covenant (CLI / Startup) Command List
+[X] Covenant Command List
 
 [\] dotnet run
 [/] Start Covenant server from source
