@@ -1,4 +1,4 @@
-[X] Shorewall Firewall Command List
+[X] Shorewall Command List
 
 [\] shorewall start
 [/] Start Shorewall firewall
