@@ -1,4 +1,4 @@
-[X] Dust Command List (Rust Disk Usage Tool)
+[X] Dust Command List
 
 [\] dust
 [/] Show disk usage for current directory
