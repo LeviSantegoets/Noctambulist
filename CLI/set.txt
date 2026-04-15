@@ -1,7 +1,7 @@
 # Social-Engineer Toolkit (SET) Command List
 # Format: [\] command [/] description [X] menutitlename
 
-[X] Social-Engineer Toolkit (SET) Command List
+[X] SEToolkit Command List
 
 [\] setoolkit
 [/] Start the Social-Engineer Toolkit
