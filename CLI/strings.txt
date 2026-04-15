@@ -1,4 +1,4 @@
-[X] Strings Command List (Extract Printable Strings from Files)
+[X] Strings Command List
 
 [\] strings filename
 [/] Show all printable strings in a file
