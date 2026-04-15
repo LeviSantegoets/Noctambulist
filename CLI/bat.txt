@@ -1,4 +1,4 @@
-[X] Bat Command List (Rust Cat Replacement with Syntax Highlighting)
+[X] Bat Command List
 
 [\] bat file.txt
 [/] Display file with syntax highlighting
