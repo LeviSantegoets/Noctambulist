@@ -1,4 +1,4 @@
-[X] Make Command List (GNU Make)
+[X] Make Command List
 
 [\] make
 [/] Build default target (first rule in Makefile)
