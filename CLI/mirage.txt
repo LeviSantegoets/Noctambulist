@@ -1,7 +1,7 @@
 # Mirage Command List
 # Format: [\] command [/] description [X] menutitlename
 
-[X] Mirage Command List (DragonOS Focal)
+[X] Mirage Command List
 
 [\] mirage --help
 [/] Show help menu
