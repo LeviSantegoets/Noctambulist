@@ -1,0 +1,46 @@
+[X] DSD Command List
+
+[\] dsd --help
+[/] Show help menu
+
+[\] dsd --version
+[/] Show DSD version
+
+[\] dsd -i <input_file_or_device>
+[/] Set input source (audio device or file)
+
+[\] dsd -o <output_file_or_device>
+[/] Set output destination (audio or file)
+
+[\] dsd -fr <input_rate>
+[/] Set input sample rate
+
+[\] dsd -fa <output_rate>
+[/] Set audio output sample rate
+
+[\] dsd -fd <decoder_type>
+[/] Select digital voice decoder mode
+
+[\] dsd -w
+[/] Enable wav file input/output mode
+
+[\] dsd -v
+[/] Enable verbose decoding output
+
+[\] dsd -q
+[/] Quiet mode (minimal output)
+
+[\] dsd -g <gain>
+[/] Set audio gain level
+
+[\] dsd -d
+[/] Enable debug mode
+
+[\] dsd -n
+[/] Disable audio output (decode-only mode)
+
+[\] dsd -h
+[/] Show short help
+
+[\] dsd --help-all
+[/] Show advanced options
