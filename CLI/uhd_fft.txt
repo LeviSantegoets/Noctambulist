@@ -1,0 +1,55 @@
+[X] UHD_FFT Command List
+
+[\] uhd_fft --help
+[/] Show help menu
+
+[\] uhd_fft
+[/] Start FFT spectrum display with default USRP settings
+
+[\] uhd_fft --version
+[/] Show UHD/GNU Radio version info
+
+[\] uhd_fft --args "addr=<ip_address>"
+[/] Connect to networked USRP device
+
+[\] uhd_fft --args "type=b200"
+[/] Connect to B200-series device
+
+[\] uhd_fft --freq <frequency>
+[/] Set center frequency in Hz
+
+[\] uhd_fft --gain <value>
+[/] Set RX gain in dB
+
+[\] uhd_fft --rate <sample_rate>
+[/] Set sample rate in samples/sec
+
+[\] uhd_fft --ant <antenna_name>
+[/] Select receive antenna port
+
+[\] uhd_fft --spec <subdevice>
+[/] Select subdevice specification
+
+[\] uhd_fft --fft-size <size>
+[/] Set FFT bin size
+
+[\] uhd_fft --avg-alpha <value>
+[/] Set FFT averaging factor
+
+[\] uhd_fft --ref-level <dB>
+[/] Set top reference power level
+
+[\] uhd_fft --dyn-range <dB>
+[/] Set display dynamic range
+
+[\] uhd_fft --samp-rate <sample_rate>
+[/] Alternate sample-rate option (if supported build)
+
+[\] uhd_fft --waterfall
+[/] Enable waterfall display mode
+
+[\] uhd_fft --pause
+[/] Start with updates paused
+
+[\] uhd_fft --help-all
+[/] Show advanced options
