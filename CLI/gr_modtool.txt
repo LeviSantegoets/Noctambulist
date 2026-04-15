@@ -1,0 +1,55 @@
+[X] gr_modtool Command List
+
+[\] gr_modtool --help
+[/] Show help menu
+
+[\] gr_modtool --version
+[/] Show gr_modtool version
+
+[\] gr_modtool newmod <module_name>
+[/] Create a new GNU Radio out-of-tree module
+
+[\] gr_modtool add <block_name>
+[/] Add a new block to current module
+
+[\] gr_modtool add <block_name> -t general
+[/] Add a general-purpose processing block
+
+[\] gr_modtool add <block_name> -t sync
+[/] Add a synchronous block
+
+[\] gr_modtool add <block_name> -t decimator
+[/] Add a decimator block
+
+[\] gr_modtool add <block_name> -t interpolator
+[/] Add an interpolator block
+
+[\] gr_modtool add <block_name> -t tagged_stream
+[/] Add a tagged stream block
+
+[\] gr_modtool add <block_name> -l python
+[/] Add a Python block
+
+[\] gr_modtool add <block_name> -l cpp
+[/] Add a C++ block
+
+[\] gr_modtool rename <old_name> <new_name>
+[/] Rename an existing block
+
+[\] gr_modtool remove <block_name>
+[/] Remove a block from module
+
+[\] gr_modtool bind
+[/] Regenerate Python bindings
+
+[\] gr_modtool makeyaml
+[/] Generate/update block YAML files
+
+[\] gr_modtool disable <block_name>
+[/] Disable a block without removing it
+
+[\] gr_modtool info
+[/] Show current module information
+
+[\] gr_modtool help <command>
+[/] Show help for a specific subcommand
