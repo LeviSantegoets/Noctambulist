@@ -1,0 +1,55 @@
+[X] NRSC5 Command List
+
+[\] nrsc5 --help
+[/] Show help menu
+
+[\] nrsc5 --version
+[/] Show nrsc5 version
+
+[\] nrsc5 <input_file_or_device>
+[/] Start decoding HD Radio (NRSC-5) from input source
+
+[\] nrsc5 -d <device_index>
+[/] Select SDR device index
+
+[\] nrsc5 -f <frequency>
+[/] Set center frequency (FM band station)
+
+[\] nrsc5 -g <gain>
+[/] Set tuner gain
+
+[\] nrsc5 -p <ppm>
+[/] Set frequency correction (PPM)
+
+[\] nrsc5 -r <sample_rate>
+[/] Set sample rate
+
+[\] nrsc5 -v
+[/] Enable verbose output
+
+[\] nrsc5 -q
+[/] Quiet mode (minimal output)
+
+[\] nrsc5 -o <output_file>
+[/] Save decoded audio to file
+
+[\] nrsc5 -t <seconds>
+[/] Run for a fixed duration then exit
+
+[\] nrsc5 -M
+[/] Enable main program service decoding
+
+[\] nrsc5 -A
+[/] Enable auxiliary audio channel decoding
+
+[\] nrsc5 -D
+[/] Enable debug output
+
+[\] nrsc5 --metadata
+[/] Output station metadata (artist, song, etc.)
+
+[\] nrsc5 --json
+[/] Output decoded data in JSON format
+
+[\] nrsc5 --help-all
+[/] Show advanced options
