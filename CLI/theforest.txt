@@ -1,0 +1,217 @@
+[X] The Forest Command List (PC Game)
+
+[\] developermodeon
+[/] Enable developer console (type in main menu, no prompt shown)
+
+[\] F1
+[/] Open/close console
+
+[\] help
+[/] Show all available commands
+
+# -------------------------
+# PLAYER / STATS
+# -------------------------
+
+[\] godmode on
+[/] Enable invincibility
+
+[\] godmode off
+[/] Disable invincibility
+
+[\] buildhack on
+[/] Build without resource cost
+
+[\] buildhack off
+[/] Disable free building
+
+[\] addallitems
+[/] Give all items
+
+[\] additem <id> <amount>
+[/] Add specific item
+
+[\] removeallitems
+[/] Remove all inventory items
+
+[\] cavelight on
+[/] Enable cave lighting
+
+[\] cavelight off
+[/] Disable cave lighting
+
+[\] invisible on
+[/] Enemies ignore player
+
+[\] invisible off
+[/] Disable invisibility
+
+[\] speedyrun on
+[/] Increase movement speed
+
+[\] speedyrun off
+[/] Disable speed boost
+
+[\] superjump on
+[/] Enable high jump
+
+[\] superjump off
+[/] Disable high jump
+
+# -------------------------
+# ENEMIES / AI
+# -------------------------
+
+[\] enemies on
+[/] Enable enemies
+
+[\] enemies off
+[/] Disable enemies
+
+[\] addallstoryitems
+[/] Unlock all story-related items
+
+[\] spawnenemy
+[/] Spawn random enemy
+
+[\] killallenemies
+[/] Kill all enemies in area
+
+[\] vegetarianmode
+[/] Enemies spawn only at night
+
+[\] veganmode
+[/] Disable all enemies
+
+# -------------------------
+# WORLD / ENVIRONMENT
+# -------------------------
+
+[\] time set day
+[/] Set time to day
+
+[\] time set night
+[/] Set time to night
+
+[\] timescale <value>
+[/] Change time speed
+
+[\] weather sunny
+[/] Set sunny weather
+
+[\] weather rain
+[/] Set rainy weather
+
+[\] cutdowntrees <radius>
+[/] Cut trees in radius
+
+[\] regrowmode
+[/] Enable tree regrowth on sleep
+
+[\] growaloe
+[/] Spawn aloe plants
+
+[\] growall
+[/] Grow all plants instantly
+
+# -------------------------
+# BUILDING / STRUCTURES
+# -------------------------
+
+[\] placebuiltobjects on
+[/] Place built structures freely
+
+[\] placebuiltobjects off
+[/] Disable free placement
+
+[\] destroyall
+[/] Remove all placed structures
+
+[\] buildallghosts
+[/] Complete all blueprints instantly
+
+[\] cancelallghosts
+[/] Remove all blueprints
+
+# -------------------------
+# TELEPORT / MOVEMENT
+# -------------------------
+
+[\] goto <location>
+[/] Teleport to predefined location
+
+[\] gotocoords <x> <y> <z>
+[/] Teleport to coordinates
+
+[\] setplayerpos <x> <y> <z>
+[/] Set player position
+
+# -------------------------
+# DEBUG / VISUALS
+# -------------------------
+
+[\] showhud on
+[/] Show HUD
+
+[\] showhud off
+[/] Hide HUD
+
+[\] showfps on
+[/] Display FPS
+
+[\] showfps off
+[/] Hide FPS
+
+[\] toggledebugconsole
+[/] Toggle debug console visibility
+
+[\] showtriggers
+[/] Show trigger zones
+
+# -------------------------
+# SAVE / GAME CONTROL
+# -------------------------
+
+[\] save
+[/] Save game manually
+
+[\] load
+[/] Load game
+
+[\] resetstats
+[/] Reset player stats
+
+[\] difficulty peaceful
+[/] Set peaceful difficulty
+
+[\] difficulty normal
+[/] Set normal difficulty
+
+[\] difficulty hard
+[/] Set hard difficulty
+
+# -------------------------
+# MULTIPLAYER
+# -------------------------
+
+[\] kick <player>
+[/] Kick player from server
+
+[\] ban <player>
+[/] Ban player
+
+[\] unban <player>
+[/] Remove ban
+
+[\] addplayer <name>
+[/] Add player to whitelist
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] developermodeon → F1 → godmode on
+[/] Enable console and invincibility
+
+[\] buildhack on → buildallghosts
+[/] Inst
