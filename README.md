@@ -5,7 +5,7 @@
 
 [X] [\\] [/] #
 
-Noctambulist is a powerful command management tool supporting 400+ CLI utilities, designed to make your workflow faster, easier, and error-free. Built in C# using .NET WinForms and developed in VS Code by Levi Santegoets, it provides an intuitive interface for accessing, understanding, and copying commands instantly.
+Noctambulist is a powerful command management tool supporting 500+ CLI utilities, designed to make your workflow faster, easier, and error-free. Built in C# using .NET WinForms and developed in VS Code by Levi Santegoets, it provides an intuitive interface for accessing, understanding, and copying commands instantly.
 
 🔹 Key Features
 ✅ 400 Tools Supported
@@ -60,4 +60,4 @@ Levi Santegoets
 
 Noctambulist is more than a reference tool, it’s a workflow enhancer, designed to save time and make working with CLI tools effortless.
 
-🚀 400 tools, interactive interface, instant copy, and clear explanations. All in one powerful app.
+🚀 500 tools, interactive interface, instant copy, and clear explanations. All in one powerful app.
