@@ -1,0 +1,201 @@
+[X] Oblivion Command List (PC Game)
+
+[\] ~
+[/] Open/close console
+
+[\] help
+[/] Show help menu (use: help "item")
+
+# -------------------------
+# PLAYER / GOD MODE
+# -------------------------
+
+[\] tgm
+[/] Toggle god mode (infinite health, magicka, fatigue)
+
+[\] tcl
+[/] Toggle collision (fly / walk through walls)
+
+[\] tim
+[/] Toggle immortal mode (cannot die)
+
+[\] player.setav health 1000
+[/] Set player health
+
+[\] player.setav magicka 1000
+[/] Set magicka
+
+[\] player.setav fatigue 1000
+[/] Set fatigue
+
+[\] player.modav strength 100
+[/] Increase attribute
+
+[\] player.setav speed 100
+[/] Set speed attribute
+
+# -------------------------
+# LEVEL / SKILLS
+# -------------------------
+
+[\] player.setlevel 20
+[/] Set player level
+
+[\] advlevel
+[/] Level up
+
+[\] player.advskill blade 50
+[/] Increase skill XP
+
+[\] player.setav blade 100
+[/] Set skill level
+
+# -------------------------
+# ITEMS / INVENTORY
+# -------------------------
+
+[\] player.additem 0000000F 1000
+[/] Add gold
+
+[\] player.additem <itemID> <amount>
+[/] Add item
+
+[\] player.removeitem <itemID> <amount>
+[/] Remove item
+
+[\] player.equipitem <itemID>
+[/] Equip item
+
+# -------------------------
+# NPC / CREATURES
+# -------------------------
+
+[\] kill
+[/] Kill selected target
+
+[\] killall
+[/] Kill all nearby actors
+
+[\] resurrect
+[/] Resurrect selected target
+
+[\] disable
+[/] Remove selected object/NPC
+
+[\] enable
+[/] Re-enable object/NPC
+
+[\] setessential <baseID> 1
+[/] Make NPC essential
+
+[\] setessential <baseID> 0
+[/] Remove essential status
+
+# -------------------------
+# AI / BEHAVIOR
+# -------------------------
+
+[\] tai
+[/] Toggle AI
+
+[\] tcai
+[/] Toggle combat AI
+
+[\] tdetect
+[/] Toggle detection (stealth)
+
+# -------------------------
+# WORLD / TIME
+# -------------------------
+
+[\] set timescale to 10
+[/] Slow time
+
+[\] set timescale to 30
+[/] Speed time
+
+[\] set gamehour to 12
+[/] Set time of day
+
+[\] fw 38EEE
+[/] Clear weather
+
+[\] sw <weatherID>
+[/] Change weather
+
+# -------------------------
+# TELEPORTATION
+# -------------------------
+
+[\] coc ImperialCityMarketDistrict
+[/] Teleport to location
+
+[\] player.moveto <refID>
+[/] Move player to target
+
+[\] moveto player
+[/] Move target to player
+
+# -------------------------
+# QUESTS
+# -------------------------
+
+[\] showquesttargets
+[/] Show quest IDs
+
+[\] setstage <questID> <stage>
+[/] Advance quest
+
+[\] completequest <questID>
+[/] Complete quest
+
+# -------------------------
+# CAMERA / GRAPHICS
+# -------------------------
+
+[\] tfc
+[/] Free camera
+
+[\] tfc 1
+[/] Free camera + pause
+
+[\] fov 90
+[/] Set field of view
+
+[\] tm
+[/] Toggle menus/UI
+
+# -------------------------
+# DEBUG / SYSTEM
+# -------------------------
+
+[\] save <name>
+[/] Save game
+
+[\] load <name>
+[/] Load game
+
+[\] qqq
+[/] Quit game instantly
+
+[\] showracemenu
+[/] Open character creation
+
+[\] player.setscale 1.5
+[/] Change player size
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] tgm → player.additem 0000000F 9999
+[/] God mode + max gold
+
+[\] tcl → coc ImperialCityMarketDistrict
+[/] Fly and teleport
+
+[\] player.setlevel 20 → player.setav blade 100
+[/] Level + max skill
+
+[\] tfc 1 → tm
+[/] Cinematic free camera mode
