@@ -1,0 +1,225 @@
+[X] Skyrim Command List (PC Game)
+
+[\] ~
+[/] Open/close console
+
+[\] help
+[/] Show help (can filter: help "item" 0)
+
+# -------------------------
+# PLAYER STATS / GOD MODE
+# -------------------------
+
+[\] tgm
+[/] Toggle god mode (infinite health, stamina, magicka)
+
+[\] tcl
+[/] Toggle collision (walk through walls / fly)
+
+[\] tim
+[/] Toggle immortal mode (cannot die, still takes damage)
+
+[\] player.setav health 1000
+[/] Set health value
+
+[\] player.setav stamina 1000
+[/] Set stamina value
+
+[\] player.setav magicka 1000
+[/] Set magicka value
+
+[\] player.modav carryweight 1000
+[/] Increase carry weight
+
+[\] player.forceav carryweight 9999
+[/] Force unlimited carry weight
+
+# -------------------------
+# LEVEL / SKILLS
+# -------------------------
+
+[\] player.setlevel 50
+[/] Set player level
+
+[\] player.advlevel
+[/] Increase level by 1
+
+[\] player.advskill smithing 100
+[/] Increase skill XP
+
+[\] player.setav smithing 100
+[/] Set skill level directly
+
+[\] player.addperk <perkID>
+[/] Add perk
+
+[\] player.removeperk <perkID>
+[/] Remove perk
+
+# -------------------------
+# ITEMS / INVENTORY
+# -------------------------
+
+[\] player.additem 0000000f 1000
+[/] Add gold (1000 septims)
+
+[\] player.additem <itemID> <amount>
+[/] Add item
+
+[\] player.removeitem <itemID> <amount>
+[/] Remove item
+
+[\] player.equipitem <itemID>
+[/] Equip item
+
+[\] player.unequipitem <itemID>
+[/] Unequip item
+
+# -------------------------
+# NPC / ENEMIES
+# -------------------------
+
+[\] kill
+[/] Kill selected target
+
+[\] killall
+[/] Kill all nearby enemies
+
+[\] resurrect
+[/] Resurrect selected NPC
+
+[\] disable
+[/] Remove selected NPC/object
+
+[\] enable
+[/] Re-enable selected NPC/object
+
+[\] setessential <baseID> 1
+[/] Make NPC essential (cannot die)
+
+[\] setessential <baseID> 0
+[/] Remove essential status
+
+# -------------------------
+# AI / BEHAVIOR
+# -------------------------
+
+[\] tcai
+[/] Toggle combat AI
+
+[\] tai
+[/] Toggle all AI
+
+[\] tdetect
+[/] Toggle AI detection (stealth)
+
+[\] tmm 1
+[/] Reveal all map markers
+
+# -------------------------
+# WORLD / TIME
+# -------------------------
+
+[\] set timescale to 10
+[/] Slow down time
+
+[\] set timescale to 30
+[/] Speed up time
+
+[\] set gamehour to 12
+[/] Set time of day
+
+[\] fw 10e1f2
+[/] Set clear weather
+
+[\] sw <weatherID>
+[/] Change weather instantly
+
+# -------------------------
+# TELEPORTATION
+# -------------------------
+
+[\] coc whiterun
+[/] Teleport to location
+
+[\] coc riverwood
+[/] Teleport to Riverwood
+
+[\] player.moveto <refID>
+[/] Move player to target
+
+[\] moveto player
+[/] Move target to player
+
+# -------------------------
+# QUESTS
+# -------------------------
+
+[\] showquesttargets
+[/] Show active quest IDs
+
+[\] sqt
+[/] Show quest targets
+
+[\] setstage <questID> <stage>
+[/] Advance quest stage
+
+[\] completequest <questID>
+[/] Complete quest
+
+[\] resetquest <questID>
+[/] Reset quest
+
+# -------------------------
+# CAMERA / GRAPHICS
+# -------------------------
+
+[\] tfc
+[/] Free camera mode
+
+[\] tfc 1
+[/] Free camera + pause
+
+[\] sucsm 10
+[/] Adjust free camera speed
+
+[\] fov 90
+[/] Set field of view
+
+[\] tm
+[/] Toggle UI
+
+# -------------------------
+# DEBUG / SYSTEM
+# -------------------------
+
+[\] save <name>
+[/] Save game
+
+[\] load <name>
+[/] Load game
+
+[\] qqq
+[/] Quit game instantly
+
+[\] showracemenu
+[/] Open character customization
+
+[\] player.setscale 1.5
+[/] Change player size
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] tgm → player.additem 0000000f 9999
+[/] God mode + max gold
+
+[\] tcl → coc whiterun
+[/] Fly mode and teleport
+
+[\] player.setlevel 50 → player.addperk <perkID>
+[/] Level up and add perks
+
+[\] tfc 1 → sucsm 5 → tm
+[/] Cinematic free camera setup
