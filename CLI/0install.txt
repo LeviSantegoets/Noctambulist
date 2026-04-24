@@ -1,0 +1,52 @@
+[X] 0INSTALL Command List
+
+[\] 0install --help
+[/] Show help menu
+
+[\] 0install --version
+[/] Show 0install version
+
+[\] 0install run <interface.xml>
+[/] Run a program using a Zero Install interface
+
+[\] 0install add <feed-url>
+[/] Add a new software feed/source
+
+[\] 0install remove <feed-url>
+[/] Remove a software feed
+
+[\] 0install list
+[/] List installed feeds and programs
+
+[\] 0install search <name>
+[/] Search available software feeds
+
+[\] 0install update
+[/] Update all installed feeds
+
+[\] 0install update <interface.xml>
+[/] Update a specific program
+
+[\] 0install show <interface.xml>
+[/] Show details of a software feed
+
+[\] 0install digest <file>
+[/] Generate digest for a file
+
+[\] 0install import <feed.xml>
+[/] Import a local feed definition
+
+[\] 0install select <interface.xml>
+[/] Choose implementation for a program
+
+[\] 0install config
+[/] View or modify configuration
+
+[\] 0install store
+[/] Show local cache/store directory
+
+[\] 0install selfupdate
+[/] Update Zero Install itself
+
+[\] 0install --help-all
+[/] Show advanced options
