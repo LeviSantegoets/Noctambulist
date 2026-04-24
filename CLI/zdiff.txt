@@ -1,0 +1,43 @@
+[X] ZDIFF Command List
+
+[\] zdiff --help
+[/] Show help menu
+
+[\] zdiff --version
+[/] Show zdiff version
+
+[\] zdiff <file1.gz> <file2.gz>
+[/] Compare two gzip-compressed files line by line after decompression
+
+[\] zdiff <file1.gz> <file2>
+[/] Compare compressed file with uncompressed file
+
+[\] zdiff <file1> <file2.gz>
+[/] Compare uncompressed file with compressed file
+
+[\] zdiff -u <file1.gz> <file2.gz>
+[/] Show unified diff output
+
+[\] zdiff -c <file1.gz> <file2.gz>
+[/] Show context diff output
+
+[\] zdiff -y <file1.gz> <file2.gz>
+[/] Show side-by-side diff output
+
+[\] zdiff -q <file1.gz> <file2.gz>
+[/] Report only whether files differ
+
+[\] zdiff -i <pattern> <file1.gz> <file2.gz>
+[/] Ignore case differences matching diff options
+
+[\] zdiff -w <file1.gz> <file2.gz>
+[/] Ignore all whitespace differences
+
+[\] zdiff -B <file1.gz> <file2.gz>
+[/] Ignore blank lines
+
+[\] zdiff *.gz <reference.gz>
+[/] Compare multiple compressed files to a reference
+
+[\] zdiff --help-all
+[/] Show advanced options
