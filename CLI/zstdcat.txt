@@ -1,0 +1,43 @@
+[X] ZSTDCAT Command List
+
+[\] zstdcat --help
+[/] Show help menu
+
+[\] zstdcat --version
+[/] Show zstdcat version
+
+[\] zstdcat <file.zst>
+[/] Decompress and print Zstandard-compressed file to stdout
+
+[\] zstdcat <file1.zst> <file2.zst>
+[/] Concatenate and display multiple .zst files
+
+[\] zstdcat *.zst
+[/] Display all Zstandard-compressed files in directory
+
+[\] zstdcat <file.zst> | less
+[/] View decompressed content page by page
+
+[\] zstdcat <file.zst> | grep "<pattern>"
+[/] Search inside a compressed file without extracting
+
+[\] zstdcat <file.zst> > <output_file>
+[/] Decompress file into a normal file
+
+[\] zstdcat -f <file>
+[/] Force output even if file is not compressed
+
+[\] zstdcat -q <file.zst>
+[/] Quiet mode (suppress warnings)
+
+[\] zstdcat -v <file.zst>
+[/] Verbose output while decompressing
+
+[\] zstdcat -T0 <file.zst>
+[/] Use multithreading for faster decompression (if supported)
+
+[\] zstdcat --stdout <file.zst>
+[/] Explicitly write decompressed data to stdout
+
+[\] zstdcat --help-all
+[/] Show advanced options
