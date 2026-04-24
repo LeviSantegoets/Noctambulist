@@ -1,0 +1,146 @@
+[X] less Command List
+
+[\] less file.txt
+[/] Open file in pager
+
+[\] less +F file.txt
+[/] Follow file (like tail -f)
+
+[\] less -N file.txt
+[/] Show line numbers
+
+[\] less -S file.txt
+[/] Disable line wrapping
+
+[\] less -R file.txt
+[/] Display raw control characters (colors)
+
+[\] less -X file.txt
+[/] Prevent screen clearing on exit
+
+[\] less -i file.txt
+[/] Case-insensitive search
+
+[\] less -M file.txt
+[/] Verbose prompt with file info
+
+[\] less -q file.txt
+[/] Quiet mode (less bell noise)
+
+[\] less -f file.txt
+[/] Force open non-regular files
+
+# -------------------------
+# NAVIGATION
+# -------------------------
+
+[\] Space
+[/] Scroll down one page
+
+[\] b
+[/] Scroll up one page
+
+[\] Enter
+[/] Scroll down one line
+
+[\] y
+[/] Scroll up one line
+
+[\] g
+[/] Go to beginning of file
+
+[\] G
+[/] Go to end of file
+
+[\] <number>g
+[/] Jump to specific line
+
+[\] d
+[/] Scroll half page down
+
+[\] u
+[/] Scroll half page up
+
+# -------------------------
+# SEARCHING
+# -------------------------
+
+[\] /pattern
+[/] Search forward
+
+[\] ?pattern
+[/] Search backward
+
+[\] n
+[/] Next match
+
+[\] N
+[/] Previous match
+
+[\] &pattern
+[/] Show only matching lines
+
+# -------------------------
+# MARKS / POSITION
+# -------------------------
+
+[\] m[a-z]
+[/] Set mark
+
+[\] '[a-z]
+[/] Jump to mark
+
+# -------------------------
+# FILE SWITCHING
+# -------------------------
+
+[\] :n
+[/] Next file
+
+[\] :p
+[/] Previous file
+
+[\] :e filename
+[/] Open another file
+
+# -------------------------
+# SHELL / MISC
+# -------------------------
+
+[\] !
+[/] Run shell command
+
+[\] v
+[/] Open file in editor
+
+[\] h
+[/] Show help inside less
+
+[\] q
+[/] Quit less
+
+# -------------------------
+# PIPE USAGE
+# -------------------------
+
+[\] command | less
+[/] View command output interactively
+
+[\] dmesg | less
+[/] View kernel logs
+
+[\] ps aux | less
+[/] Scroll process list
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] cat file.txt | less
+[/] View file via pipe
+
+[\] journalctl | less
+[/] Browse system logs
+
+[\] grep error file.txt | less
+[/] Filtered output viewing
