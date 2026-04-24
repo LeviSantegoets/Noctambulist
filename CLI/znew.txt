@@ -1,0 +1,43 @@
+[X] ZNEW Command List
+
+[\] znew --help
+[/] Show help menu
+
+[\] znew --version
+[/] Show znew version
+
+[\] znew <file.Z>
+[/] Convert legacy .Z (compress) files into .gz format
+
+[\] znew -t <file.Z>
+[/] Test conversion without writing output
+
+[\] znew -f <file.Z>
+[/] Force overwrite existing .gz file
+
+[\] znew -k <file.Z>
+[/] Keep original .Z file after conversion
+
+[\] znew -v <file.Z>
+[/] Enable verbose output during conversion
+
+[\] znew -q <file.Z>
+[/] Quiet mode (minimal output)
+
+[\] znew -P <prefix> <file.Z>
+[/] Set output filename prefix
+
+[\] znew -s <suffix> <file.Z>
+[/] Set output filename suffix
+
+[\] znew -n <file.Z>
+[/] Do not overwrite existing .gz file
+
+[\] znew -T <file.Z>
+[/] Test integrity of compressed file before conversion
+
+[\] znew -r <directory>
+[/] Recursively convert .Z files in a directory
+
+[\] znew --help-all
+[/] Show advanced options
