@@ -1,0 +1,43 @@
+[X] ZIPNOTE Command List
+
+[\] zipnote --help
+[/] Show help menu
+
+[\] zipnote --version
+[/] Show zipnote version
+
+[\] zipnote <archive.zip>
+[/] Display and edit ZIP file comments and entry notes
+
+[\] zipnote -w <archive.zip>
+[/] Write modified notes/comments back into the ZIP archive
+
+[\] zipnote -b <backup.zip> <archive.zip>
+[/] Create a backup before modifying ZIP notes
+
+[\] zipnote -v <archive.zip>
+[/] Enable verbose output for entries and comments
+
+[\] zipnote -h <archive.zip>
+[/] Show per-file header comments
+
+[\] zipnote -c <archive.zip>
+[/] Display central directory comments
+
+[\] zipnote -l <archive.zip>
+[/] List all file notes inside the archive
+
+[\] zipnote -e <archive.zip>
+[/] Extract current notes for editing in text form
+
+[\] zipnote -q <archive.zip>
+[/] Quiet mode (minimal output)
+
+[\] zipnote -f <file> <archive.zip>
+[/] Read/write notes from a specified file
+
+[\] zipnote -z
+[/] Initialize or reset ZIP comment structure
+
+[\] zipnote --help-all
+[/] Show advanced options
