@@ -1,0 +1,43 @@
+[X] ZIPSPLIT Command List
+
+[\] zipsplit --help
+[/] Show help menu
+
+[\] zipsplit --version
+[/] Show zipsplit version
+
+[\] zipsplit <archive.zip>
+[/] Split a ZIP archive into smaller parts
+
+[\] zipsplit -n <size> <archive.zip>
+[/] Set maximum size per split archive
+
+[\] zipsplit -b <directory> <archive.zip>
+[/] Write split archives to specified directory
+
+[\] zipsplit -p <prefix> <archive.zip>
+[/] Set filename prefix for split parts
+
+[\] zipsplit -s <suffix> <archive.zip>
+[/] Set suffix for split parts
+
+[\] zipsplit -v <archive.zip>
+[/] Enable verbose output showing split operations
+
+[\] zipsplit -q <archive.zip>
+[/] Quiet mode (minimal output)
+
+[\] zipsplit -f <archive.zip>
+[/] Force overwrite existing split files
+
+[\] zipsplit -u <archive.zip>
+[/] Update split archive parts if possible
+
+[\] zipsplit -t <archive.zip>
+[/] Test archive integrity before splitting
+
+[\] zipsplit -c <count> <archive.zip>
+[/] Split archive into a fixed number of parts
+
+[\] zipsplit --help-all
+[/] Show advanced options
