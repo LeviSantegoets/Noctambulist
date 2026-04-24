@@ -1,0 +1,46 @@
+[X] ZIPINFO Command List
+
+[\] zipinfo --help
+[/] Show help menu
+
+[\] zipinfo --version
+[/] Show zipinfo version
+
+[\] zipinfo <archive.zip>
+[/] Display general information about a ZIP archive
+
+[\] zipinfo -1 <archive.zip>
+[/] List only file names inside the ZIP
+
+[\] zipinfo -l <archive.zip>
+[/] Show detailed long listing of ZIP contents
+
+[\] zipinfo -v <archive.zip>
+[/] Show verbose information including compression details
+
+[\] zipinfo -h <archive.zip>
+[/] Display header information for each entry
+
+[\] zipinfo -t <archive.zip>
+[/] Show timestamps of files inside archive
+
+[\] zipinfo -T <archive.zip>
+[/] Display total archive statistics
+
+[\] zipinfo -z <archive.zip>
+[/] Show ZIP archive comment
+
+[\] zipinfo -s <archive.zip>
+[/] Show file sizes and compression ratios
+
+[\] zipinfo -M <archive.zip>
+[/] Paginated (more-like) output for large archives
+
+[\] zipinfo -x <pattern> <archive.zip>
+[/] Exclude matching files from listing
+
+[\] zipinfo -y <archive.zip>
+[/] Show raw ZIP structure information
+
+[\] zipinfo --help-all
+[/] Show advanced options
