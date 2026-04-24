@@ -1,0 +1,40 @@
+[X] ZCMP Command List
+
+[\] zcmp --help
+[/] Show help menu
+
+[\] zcmp --version
+[/] Show zcmp version
+
+[\] zcmp <file1.gz> <file2.gz>
+[/] Compare two gzip-compressed files after decompression
+
+[\] zcmp <file1.gz> <file2>
+[/] Compare compressed file with uncompressed file
+
+[\] zcmp <file1> <file2.gz>
+[/] Compare uncompressed file with compressed file
+
+[\] zcmp -s <file1.gz> <file2.gz>
+[/] Silent mode, only return exit status
+
+[\] zcmp -l <file1.gz> <file2.gz>
+[/] Print differing byte positions (via cmp options if supported)
+
+[\] zcmp -i <skip1>:<skip2> <file1.gz> <file2.gz>
+[/] Skip bytes before comparison (cmp-compatible option)
+
+[\] zcmp *.gz <reference.gz>
+[/] Compare multiple compressed files against a reference
+
+[\] zcmp <file1.gz> <file2.gz> && echo same
+[/] Check if files are identical
+
+[\] zcmp <file1.gz> <file2.gz> || echo different
+[/] Check if files differ
+
+[\] zcmp --quiet <file1.gz> <file2.gz>
+[/] Quiet/silent comparison mode
+
+[\] zcmp --help-all
+[/] Show advanced options
