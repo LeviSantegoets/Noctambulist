@@ -1,0 +1,52 @@
+[X] 0X CLI Command List
+
+[\] 0x --help
+[/] Show help menu
+
+[\] 0x --version
+[/] Show 0x CLI version
+
+[\] 0x swap
+[/] Start a token swap via 0x protocol
+
+[\] 0x swap --sell <token> --buy <token>
+[/] Execute a token-to-token swap
+
+[\] 0x swap --amount <value>
+[/] Set swap amount
+
+[\] 0x quote
+[/] Get a price quote for a swap
+
+[\] 0x quote --sell <token> --buy <token>
+[/] Retrieve best available liquidity price
+
+[\] 0x price
+[/] Fetch token price from aggregated liquidity
+
+[\] 0x approve <token>
+[/] Approve token spending for swap execution
+
+[\] 0x balances
+[/] Show wallet token balances
+
+[\] 0x order
+[/] Create a 0x limit order
+
+[\] 0x order fill
+[/] Fill an existing limit order
+
+[\] 0x order cancel
+[/] Cancel an open limit order
+
+[\] 0x tx <tx_hash>
+[/] Inspect a swap transaction
+
+[\] 0x config
+[/] View or edit CLI configuration
+
+[\] 0x networks
+[/] List supported blockchain networks
+
+[\] 0x --help-all
+[/] Show advanced options
