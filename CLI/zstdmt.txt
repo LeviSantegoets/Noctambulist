@@ -1,0 +1,52 @@
+[X] ZSTDMT Command List
+
+[\] zstdmt --help
+[/] Show help menu
+
+[\] zstdmt --version
+[/] Show zstdmt version
+
+[\] zstdmt <file>
+[/] Compress a file using multithreaded Zstandard compression
+
+[\] zstdmt -d <file.zst>
+[/] Decompress a Zstandard file using multithreaded decompression (if supported)
+
+[\] zstdmt -o <output.zst> <file>
+[/] Specify output file name
+
+[\] zstdmt -f <file>
+[/] Force overwrite existing output file
+
+[\] zstdmt -k <file>
+[/] Keep original file after compression
+
+[\] zstdmt -T0 <file>
+[/] Use all available CPU cores for compression
+
+[\] zstdmt -T<n> <file>
+[/] Use N threads for compression
+
+[\] zstdmt -1 <file>
+[/] Fastest compression level
+
+[\] zstdmt -9 <file>
+[/] High compression level
+
+[\] zstdmt --ultra <file>
+[/] Enable ultra compression levels
+
+[\] zstdmt --long <file>
+[/] Enable long distance matching mode
+
+[\] zstdmt -t <file.zst>
+[/] Test integrity of compressed file
+
+[\] zstdmt --quiet <file>
+[/] Suppress output messages
+
+[\] zstdmt --verbose <file>
+[/] Show detailed compression info
+
+[\] zstdmt --help-all
+[/] Show advanced options
