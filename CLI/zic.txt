@@ -1,0 +1,49 @@
+[X] ZIC Command List
+
+[\] zic --help
+[/] Show help menu
+
+[\] zic --version
+[/] Show zic version
+
+[\] zic <source_file>
+[/] Compile timezone source file into binary zoneinfo files
+
+[\] zic -d <directory> <source_file>
+[/] Write compiled timezone files to target directory
+
+[\] zic -L <leap_seconds_file> <source_file>
+[/] Use leap seconds data file
+
+[\] zic -p <timezone>
+[/] Set default local timezone symlink/file
+
+[\] zic -l <timezone>
+[/] Install specified timezone as localtime
+
+[\] zic -v <source_file>
+[/] Verbose mode, warn about questionable data
+
+[\] zic -b slim <source_file>
+[/] Generate compact (slim) TZif files
+
+[\] zic -b fat <source_file>
+[/] Generate full (fat) TZif files
+
+[\] zic -r @<timestamp> <source_file>
+[/] Limit generated transitions to range starting at timestamp
+
+[\] zic -r @<start>/@<end> <source_file>
+[/] Limit generated transitions to specific time range
+
+[\] zic -t <file> <source_file>
+[/] Specify localtime output file path
+
+[\] zic -y <command> <source_file>
+[/] Use custom yearistype command
+
+[\] zic -d /usr/share/zoneinfo africa asia europe northamerica
+[/] Compile multiple timezone source files to zoneinfo dir
+
+[\] zic --help-all
+[/] Show advanced options
