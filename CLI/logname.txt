@@ -1,0 +1,75 @@
+[X] logname Command List (Show Login Name)
+
+[\] logname
+[/] Display the name of the user who originally logged in
+
+[\] logname --help
+[/] Show help information
+
+[\] logname --version
+[/] Show version info
+
+# -------------------------
+# BASIC USAGE
+# -------------------------
+
+[\] logname
+[/] Prints the login username (not affected by sudo)
+
+[\] whoami
+[/] Shows current effective user (can differ from logname)
+
+[\] echo $USER
+[/] Show current user from environment
+
+[\] echo $LOGNAME
+[/] Show login name from environment variable
+
+# -------------------------
+# COMPARISON
+# -------------------------
+
+[\] sudo logname
+[/] Still shows original logged-in user
+
+[\] sudo whoami
+[/] Shows "root" (effective user)
+
+# -------------------------
+# SCRIPTING USE
+# -------------------------
+
+[\] user=$(logname)
+[/] Store login username in variable
+
+[\] echo "Logged in as: $(logname)"
+[/] Print login name in script
+
+[\] cp file /home/$(logname)/
+[/] Copy file to user's home directory
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] logname
+[/] May fail if no login session (e.g., cron, containers)
+
+[\] who am i
+[/] Alternative to get login session info
+
+[\] id -un
+[/] Show current username reliably
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] logname → echo "User: $(logname)"
+[/] Use login name in output
+
+[\] logname → cp file /home/$(logname)/
+[/] Use in file operations
+
+[\] logname → id
+[/] Combine identity commands
