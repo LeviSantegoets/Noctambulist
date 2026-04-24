@@ -1,0 +1,46 @@
+[X] ZSTDLESS Command List
+
+[\] zstdless --help
+[/] Show help menu
+
+[\] zstdless --version
+[/] Show zstdless version
+
+[\] zstdless <file.zst>
+[/] View a Zstandard-compressed file interactively (like less)
+
+[\] zstdless <file1.zst> <file2.zst>
+[/] Open multiple compressed files sequentially
+
+[\] zstdless +F <file.zst>
+[/] Follow mode (like tail -f for compressed streams)
+
+[\] zstdless +/<pattern> <file.zst>
+[/] Start viewing from first match of pattern
+
+[\] zstdless -N <file.zst>
+[/] Show line numbers while viewing
+
+[\] zstdless -S <file.zst>
+[/] Disable line wrapping (horizontal scroll)
+
+[\] zstdless -i <file.zst>
+[/] Ignore case in searches
+
+[\] zstdless -M <file.zst>
+[/] Show detailed prompt (file position, percent, etc.)
+
+[\] zstdless -q <file.zst>
+[/] Suppress terminal bell
+
+[\] zstdless -g <file.zst>
+[/] Highlight only last search match
+
+[\] zstdless -p <pattern> <file.zst>
+[/] Start viewing from first pattern match
+
+[\] zstdless -z
+[/] Auto-detect compressed input handling mode
+
+[\] zstdless --help-all
+[/] Show advanced options
