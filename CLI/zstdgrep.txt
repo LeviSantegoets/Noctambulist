@@ -1,0 +1,49 @@
+[X] ZSTDGREP Command List
+
+[\] zstdgrep --help
+[/] Show help menu
+
+[\] zstdgrep --version
+[/] Show zstdgrep version
+
+[\] zstdgrep "<pattern>" <file.zst>
+[/] Search a Zstandard-compressed file using regular expressions
+
+[\] zstdgrep -i "<pattern>" <file.zst>
+[/] Ignore case while searching
+
+[\] zstdgrep -n "<pattern>" <file.zst>
+[/] Show matching line numbers
+
+[\] zstdgrep -c "<pattern>" <file.zst>
+[/] Count matching lines
+
+[\] zstdgrep -l "<pattern>" *.zst
+[/] List compressed files containing matches
+
+[\] zstdgrep -v "<pattern>" <file.zst>
+[/] Show non-matching lines
+
+[\] zstdgrep -w "<pattern>" <file.zst>
+[/] Match whole words only
+
+[\] zstdgrep -o "<pattern>" <file.zst>
+[/] Print only matched text
+
+[\] zstdgrep -A 3 "<pattern>" <file.zst>
+[/] Show 3 lines after each match
+
+[\] zstdgrep -B 3 "<pattern>" <file.zst>
+[/] Show 3 lines before each match
+
+[\] zstdgrep -C 3 "<pattern>" <file.zst>
+[/] Show 3 lines of surrounding context
+
+[\] zstdgrep -f <pattern_file> <file.zst>
+[/] Read patterns from a file
+
+[\] zstdgrep -q "<pattern>" <file.zst>
+[/] Quiet mode (exit status only)
+
+[\] zstdgrep --help-all
+[/] Show advanced options
