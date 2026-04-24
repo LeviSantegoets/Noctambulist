@@ -1,0 +1,46 @@
+[X] ZSH Command List
+
+[\] zsh --help
+[/] Show help menu
+
+[\] zsh --version
+[/] Show zsh version
+
+[\] zsh
+[/] Start an interactive Z shell session
+
+[\] zsh -l
+[/] Start login shell session
+
+[\] zsh -c "<command>"
+[/] Execute a command using zsh and exit
+
+[\] zsh -i
+[/] Start interactive shell explicitly
+
+[\] zsh -s
+[/] Read commands from standard input
+
+[\] zsh -f
+[/] Start without reading startup files
+
+[\] zsh -d
+[/] Enable debug mode for startup
+
+[\] zsh -x
+[/] Enable execution tracing (debug output)
+
+[\] zsh -v
+[/] Print shell input as it is read
+
+[\] zsh -o <option>
+[/] Set a shell option (e.g., shwordsplit, noclobber)
+
+[\] zsh +o <option>
+[/] Unset a shell option
+
+[\] zsh -l -c "<command>"
+[/] Run command in login shell environment
+
+[\] zsh --help-all
+[/] Show advanced options
