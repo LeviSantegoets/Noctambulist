@@ -1,0 +1,49 @@
+[X] ZIPGREP Command List
+
+[\] zipgrep --help
+[/] Show help menu
+
+[\] zipgrep --version
+[/] Show zipgrep version
+
+[\] zipgrep "<pattern>" <archive.zip>
+[/] Search for a regex pattern inside a ZIP archive
+
+[\] zipgrep -i "<pattern>" <archive.zip>
+[/] Ignore case while searching
+
+[\] zipgrep -n "<pattern>" <archive.zip>
+[/] Show matching line numbers
+
+[\] zipgrep -c "<pattern>" <archive.zip>
+[/] Count matching lines
+
+[\] zipgrep -l "<pattern>" <archive.zip>
+[/] List files inside ZIP containing matches
+
+[\] zipgrep -v "<pattern>" <archive.zip>
+[/] Show non-matching lines
+
+[\] zipgrep -w "<pattern>" <archive.zip>
+[/] Match whole words only
+
+[\] zipgrep -o "<pattern>" <archive.zip>
+[/] Print only matched text
+
+[\] zipgrep -A 3 "<pattern>" <archive.zip>
+[/] Show 3 lines after each match
+
+[\] zipgrep -B 3 "<pattern>" <archive.zip>
+[/] Show 3 lines before each match
+
+[\] zipgrep -C 3 "<pattern>" <archive.zip>
+[/] Show 3 lines of surrounding context
+
+[\] zipgrep -f <pattern_file> <archive.zip>
+[/] Read patterns from a file
+
+[\] zipgrep -q "<pattern>" <archive.zip>
+[/] Quiet mode (only exit status)
+
+[\] zipgrep --help-all
+[/] Show advanced options
