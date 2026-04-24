@@ -1,0 +1,52 @@
+[X] RX_POWER Command List
+
+[\] rx_power --help
+[/] Show help menu
+
+[\] rx_power --version
+[/] Show rx_power version
+
+[\] rx_power
+[/] Start measuring received signal power with default settings
+
+[\] rx_power -f <frequency>
+[/] Set center frequency (Hz)
+
+[\] rx_power -s <sample_rate>
+[/] Set sample rate
+
+[\] rx_power -g <gain>
+[/] Set receiver gain
+
+[\] rx_power -d <device_index>
+[/] Select SDR device index
+
+[\] rx_power -p <ppm>
+[/] Set frequency correction (PPM)
+
+[\] rx_power -i <integration_time>
+[/] Set power measurement integration time
+
+[\] rx_power -r <rate>
+[/] Set reporting interval (updates per second)
+
+[\] rx_power -o <output_file>
+[/] Save power measurements to file
+
+[\] rx_power -b <bandwidth>
+[/] Set measurement bandwidth
+
+[\] rx_power -t <duration>
+[/] Run measurement for a fixed time
+
+[\] rx_power -v
+[/] Enable verbose output
+
+[\] rx_power -q
+[/] Quiet mode (minimal output)
+
+[\] rx_power --json
+[/] Output results in JSON format
+
+[\] rx_power --help-all
+[/] Show advanced options
