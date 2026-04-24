@@ -1,0 +1,49 @@
+[X] ZNAPZEND Command List
+
+[\] znapzend --help
+[/] Show help menu
+
+[\] znapzend --version
+[/] Show znapzend version
+
+[\] znapzend
+[/] Start znapzend daemon for automated ZFS snapshot management
+
+[\] znapzendzetup
+[/] Configure snapshot and replication policies
+
+[\] znapzendzetup create <dataset>
+[/] Create a new snapshot/replication configuration for a dataset
+
+[\] znapzendzetup edit <dataset>
+[/] Edit existing snapshot/replication configuration
+
+[\] znapzendzetup delete <dataset>
+[/] Remove configuration for a dataset
+
+[\] znapzend --debug
+[/] Run in debug mode for troubleshooting
+
+[\] znapzend --noaction
+[/] Simulate actions without making changes
+
+[\] znapzend --foreground
+[/] Run daemon in foreground mode
+
+[\] znapzend --loglevel <level>
+[/] Set logging verbosity level
+
+[\] znapzend --pidfile <file>
+[/] Specify PID file location
+
+[\] znapzend --config <file>
+[/] Use custom configuration file
+
+[\] znapzend --export
+[/] Export current configuration
+
+[\] znapzend --import <file>
+[/] Import configuration from file
+
+[\] znapzend --help-all
+[/] Show advanced options
