@@ -1,0 +1,43 @@
+[X] ZLESS Command List
+
+[\] zless --help
+[/] Show help menu
+
+[\] zless --version
+[/] Show zless version
+
+[\] zless <file.gz>
+[/] View a compressed file interactively (like less, but for gzip files)
+
+[\] zless <file1.gz> <file2.gz>
+[/] Open multiple compressed files sequentially
+
+[\] zless +F <file.gz>
+[/] Follow mode (like tail -f, for compressed streams)
+
+[\] zless +/<pattern> <file.gz>
+[/] Open file and jump to first match of pattern
+
+[\] zless -N <file.gz>
+[/] Show line numbers while viewing
+
+[\] zless -S <file.gz>
+[/] Disable line wrapping for horizontal scrolling
+
+[\] zless -i <file.gz>
+[/] Ignore case when searching inside viewer
+
+[\] zless -M <file.gz>
+[/] Show detailed prompt (filename, position, percent)
+
+[\] zless -q <file.gz>
+[/] Suppress terminal bell for errors
+
+[\] zless -g <file.gz>
+[/] Highlight only last search match
+
+[\] zless -p <pattern> <file.gz>
+[/] Start viewing from first occurrence of pattern
+
+[\] zless --help-all
+[/] Show advanced options
