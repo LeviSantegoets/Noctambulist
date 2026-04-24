@@ -1,0 +1,40 @@
+[X] ZFORCE Command List
+
+[\] zforce --help
+[/] Show help menu
+
+[\] zforce --version
+[/] Show zforce version
+
+[\] zforce <file>
+[/] Force gzip compression of a file and add .gz suffix if needed
+
+[\] zforce <file1> <file2>
+[/] Force compression of multiple files
+
+[\] zforce *.log
+[/] Compress all matching files and add .gz suffix
+
+[\] zforce <file.gz>
+[/] Recompress/normalize an already compressed file if needed
+
+[\] zforce -f <file>
+[/] Force overwrite existing .gz output file
+
+[\] zforce -v <file>
+[/] Verbose mode showing processed files
+
+[\] zforce -q <file>
+[/] Quiet mode with minimal output
+
+[\] zforce -r <directory>
+[/] Recursively compress files in a directory (if supported by wrapper/script)
+
+[\] zforce --keep <file>
+[/] Keep original file after compression (if supported)
+
+[\] zforce --stdout <file>
+[/] Write compressed data to stdout (implementation dependent)
+
+[\] zforce --help-all
+[/] Show advanced options
