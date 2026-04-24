@@ -1,0 +1,55 @@
+[X] ZDB Command List
+
+[\] zdb --help
+[/] Show help menu
+
+[\] zdb --version
+[/] Show zdb version
+
+[\] zdb <pool_name>
+[/] Display basic information about a ZFS storage pool
+
+[\] zdb -C <pool_name>
+[/] Show pool configuration details
+
+[\] zdb -e <pool_name>
+[/] Export pool metadata in readable form
+
+[\] zdb -l <device>
+[/] Display labels and metadata on a ZFS device
+
+[\] zdb -u
+[/] Show uberblock history for pool recovery analysis
+
+[\] zdb -bb <pool_name>
+[/] Dump block pointer tree information
+
+[\] zdb -dddd <dataset>
+[/] Show detailed dataset block information
+
+[\] zdb -ddddddd <dataset>
+[/] Show extremely detailed dataset and block metadata
+
+[\] zdb -m <device>
+[/] Show MOS (Meta Object Set) information
+
+[\] zdb -R <pool>
+[/] Replay intent log (ZIL) for analysis
+
+[\] zdb -S <pool>
+[/] Show space usage statistics
+
+[\] zdb -i <dataset>
+[/] Inspect dataset internals
+
+[\] zdb -O <pool>
+[/] Display object set information
+
+[\] zdb -G <pool>
+[/] Show gang block information
+
+[\] zdb -v <pool>
+[/] Enable verbose output
+
+[\] zdb --help-all
+[/] Show advanced options
