@@ -1,0 +1,46 @@
+[X] ZCAT Command List
+
+[\] zcat --help
+[/] Show help menu
+
+[\] zcat --version
+[/] Show zcat version
+
+[\] zcat <file.gz>
+[/] Decompress and print gzip file contents to stdout
+
+[\] zcat <file1.gz> <file2.gz>
+[/] Concatenate and print multiple gzip files
+
+[\] zcat *.gz
+[/] Print contents of all gzip files in current directory
+
+[\] zcat <file.gz> > <output_file>
+[/] Decompress gzip file into a normal file
+
+[\] zcat <file.gz> | less
+[/] View decompressed contents page by page
+
+[\] zcat <file.gz> | grep "<pattern>"
+[/] Search inside compressed file without extracting
+
+[\] zcat <file.gz> | wc -l
+[/] Count lines in compressed file
+
+[\] zcat <file.gz> | head
+[/] Show first lines of compressed file
+
+[\] zcat <file.gz> | tail
+[/] Show last lines of compressed file
+
+[\] zcat -f <file>
+[/] Force output even if file is not compressed
+
+[\] zcat -q <file.gz>
+[/] Suppress warnings/errors when possible
+
+[\] zcat --stdout <file.gz>
+[/] Explicitly write decompressed data to stdout
+
+[\] zcat --help-all
+[/] Show advanced options
