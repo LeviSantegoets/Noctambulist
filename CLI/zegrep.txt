@@ -1,0 +1,49 @@
+[X] ZEGREP Command List
+
+[\] zegrep --help
+[/] Show help menu
+
+[\] zegrep --version
+[/] Show zegrep version
+
+[\] zegrep "<pattern>" <file.gz>
+[/] Search a gzip-compressed file using extended regular expressions
+
+[\] zegrep "<pattern>" <file1.gz> <file2.gz>
+[/] Search multiple compressed files
+
+[\] zegrep -i "<pattern>" <file.gz>
+[/] Ignore case while searching
+
+[\] zegrep -n "<pattern>" <file.gz>
+[/] Show matching line numbers
+
+[\] zegrep -c "<pattern>" <file.gz>
+[/] Count matching lines
+
+[\] zegrep -l "<pattern>" *.gz
+[/] List compressed files containing matches
+
+[\] zegrep -v "<pattern>" <file.gz>
+[/] Show non-matching lines
+
+[\] zegrep -w "<pattern>" <file.gz>
+[/] Match whole words only
+
+[\] zegrep -o "<pattern>" <file.gz>
+[/] Print only matched text
+
+[\] zegrep -A 3 "<pattern>" <file.gz>
+[/] Show 3 lines after each match
+
+[\] zegrep -B 3 "<pattern>" <file.gz>
+[/] Show 3 lines before each match
+
+[\] zegrep -C 3 "<pattern>" <file.gz>
+[/] Show 3 lines of surrounding context
+
+[\] zegrep -r "<pattern>" <directory>
+[/] Recursively search compressed files in directory (if supported)
+
+[\] zegrep --help-all
+[/] Show advanced options
