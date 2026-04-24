@@ -1,0 +1,43 @@
+[X] ZMORE Command List
+
+[\] zmore --help
+[/] Show help menu
+
+[\] zmore --version
+[/] Show zmore version
+
+[\] zmore <file.gz>
+[/] View a gzip-compressed file page by page
+
+[\] zmore <file1.gz> <file2.gz>
+[/] View multiple compressed files sequentially
+
+[\] zmore +<number> <file.gz>
+[/] Start viewing from a specific line number
+
+[\] zmore +/<pattern> <file.gz>
+[/] Start viewing from the first match of a pattern
+
+[\] zmore -d <file.gz>
+[/] Show helpful prompts for navigation
+
+[\] zmore -p <pattern> <file.gz>
+[/] Search for pattern while viewing
+
+[\] zmore -c <file.gz>
+[/] Clear screen before displaying each page
+
+[\] zmore -s <file.gz>
+[/] Squeeze multiple blank lines into one
+
+[\] zmore -n <file.gz>
+[/] Disable line numbering (if enabled in build)
+
+[\] zmore -q <file.gz>
+[/] Quiet mode (suppress warnings)
+
+[\] zmore -v <file.gz>
+[/] Verbose mode
+
+[\] zmore --help-all
+[/] Show advanced options
