@@ -1,0 +1,55 @@
+[X] ZMAP Command List
+
+[\] zmap --help
+[/] Show help menu
+
+[\] zmap --version
+[/] Show zmap version
+
+[\] zmap -p <port> <target_subnet>
+[/] Scan a subnet for open ports at high speed
+
+[\] zmap -B <bandwidth> <target_subnet>
+[/] Limit scan bandwidth (e.g., 10M, 100M)
+
+[\] zmap -n <count> <target_subnet>
+[/] Limit number of probes sent
+
+[\] zmap -r <rate> <target_subnet>
+[/] Set probe rate (packets per second)
+
+[\] zmap -o <output_file> <target_subnet>
+[/] Save scan results to file
+
+[\] zmap -w <whitelist_file>
+[/] Scan only IPs in whitelist
+
+[\] zmap -b <blacklist_file>
+[/] Exclude IPs in blacklist
+
+[\] zmap -i <interface>
+[/] Select network interface for scanning
+
+[\] zmap -M udp <target_subnet>
+[/] Use UDP probe module
+
+[\] zmap -M tcp_syn <target_subnet>
+[/] Use TCP SYN scan module
+
+[\] zmap -M icmp_echo <target_subnet>
+[/] Use ICMP echo probe module
+
+[\] zmap -s <source_port>
+[/] Set source port for scanning
+
+[\] zmap -G <gateway>
+[/] Set gateway for sending packets
+
+[\] zmap --output-module=json
+[/] Output results in JSON format
+
+[\] zmap --quiet
+[/] Suppress non-essential output
+
+[\] zmap --help-all
+[/] Show advanced options
