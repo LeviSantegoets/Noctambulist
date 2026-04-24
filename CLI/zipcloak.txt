@@ -1,0 +1,43 @@
+[X] ZIPCLOAK Command List
+
+[\] zipcloak --help
+[/] Show help menu
+
+[\] zipcloak --version
+[/] Show zipcloak version
+
+[\] zipcloak <archive.zip>
+[/] Encrypt an existing ZIP archive and prompt for password
+
+[\] zipcloak -P <password> <archive.zip>
+[/] Encrypt ZIP archive using specified password
+
+[\] zipcloak -d <archive.zip>
+[/] Decrypt/remove encryption from ZIP archive (if supported)
+
+[\] zipcloak -O <output.zip> <archive.zip>
+[/] Write encrypted result to a new archive file
+
+[\] zipcloak -b <path> <archive.zip>
+[/] Use temporary working directory path
+
+[\] zipcloak -q <archive.zip>
+[/] Quiet mode with minimal output
+
+[\] zipcloak -v <archive.zip>
+[/] Verbose mode showing processed entries
+
+[\] zipcloak -f <archive.zip>
+[/] Force overwrite existing output/temp files
+
+[\] zipcloak -j <archive.zip>
+[/] Junk path handling / compatibility mode (implementation dependent)
+
+[\] zipcloak -T <archive.zip>
+[/] Test archive after processing (if supported)
+
+[\] zipcloak *.zip
+[/] Encrypt multiple ZIP archives one by one
+
+[\] zipcloak --help-all
+[/] Show advanced options
