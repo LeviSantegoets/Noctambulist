@@ -1,0 +1,46 @@
+[X] ZIPDETAILS Command List
+
+[\] zipdetails --help
+[/] Show help menu
+
+[\] zipdetails --version
+[/] Show zipdetails version
+
+[\] zipdetails <archive.zip>
+[/] Display detailed low-level structure of a ZIP file
+
+[\] zipdetails -v <archive.zip>
+[/] Enable verbose output with extended ZIP metadata
+
+[\] zipdetails -h <archive.zip>
+[/] Show header information for each ZIP entry
+
+[\] zipdetails -l <archive.zip>
+[/] List all ZIP entries with offsets and sizes
+
+[\] zipdetails -t <archive.zip>
+[/] Show timestamp information for entries
+
+[\] zipdetails -s <archive.zip>
+[/] Show compression method and statistics
+
+[\] zipdetails -e <archive.zip>
+[/] Inspect central directory entries in detail
+
+[\] zipdetails -c <archive.zip>
+[/] Show comments stored in ZIP file
+
+[\] zipdetails -x <archive.zip>
+[/] Dump extra field data for entries
+
+[\] zipdetails -q <archive.zip>
+[/] Quiet mode with minimal output
+
+[\] zipdetails -f <archive.zip>
+[/] Force parsing even if archive is partially corrupted
+
+[\] zipdetails -o <file> <archive.zip>
+[/] Write analysis output to file
+
+[\] zipdetails --help-all
+[/] Show advanced options
