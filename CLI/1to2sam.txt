@@ -1,4 +1,4 @@
-[X] 1to2sam Command List (Windows Hash Extraction Utility – Impacket)
+[X] 1to2sam Command List
 
 [\] 1to2sam.py --help
 [/] Show help menu
