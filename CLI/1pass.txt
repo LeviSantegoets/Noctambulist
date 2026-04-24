@@ -1,0 +1,149 @@
+[X] 1Password CLI (op) Command List
+
+[\] op --help
+[/] Show 1Password CLI help menu
+
+[\] op --version
+[/] Show installed version
+
+# -------------------------
+# AUTHENTICATION
+# -------------------------
+
+[\] op account add
+[/] Add a 1Password account
+
+[\] op signin
+[/] Sign in to account
+
+[\] eval $(op signin)
+[/] Export session token to shell
+
+[\] op signout
+[/] Sign out of current session
+
+# -------------------------
+# VAULT MANAGEMENT
+# -------------------------
+
+[\] op vault list
+[/] List all vaults
+
+[\] op vault get <vault>
+[/] Get vault details
+
+[\] op vault create <name>
+[/] Create new vault
+
+[\] op vault delete <vault>
+[/] Delete vault
+
+# -------------------------
+# ITEM MANAGEMENT
+# -------------------------
+
+[\] op item list
+[/] List all items
+
+[\] op item get <item>
+[/] Get item details
+
+[\] op item create --category login --title "Example" --url example.com
+[/] Create login item
+
+[\] op item edit <item>
+[/] Edit existing item
+
+[\] op item delete <item>
+[/] Delete item
+
+[\] op item move <item> --vault <vault>
+[/] Move item to another vault
+
+# -------------------------
+# FIELD / SECRET ACCESS
+# -------------------------
+
+[\] op read op://vault/item/field
+[/] Read specific secret field
+
+[\] op item get <item> --fields username,password
+[/] Get specific fields
+
+[\] op inject -i config.tpl -o config.env
+[/] Inject secrets into template file
+
+# -------------------------
+# DOCUMENTS
+# -------------------------
+
+[\] op document list
+[/] List stored documents
+
+[\] op document get <doc>
+[/] Download document
+
+[\] op document create file.txt
+[/] Upload document
+
+# -------------------------
+# GENERATION / SECURITY
+# -------------------------
+
+[\] op generate password
+[/] Generate secure password
+
+[\] op generate password --length 20
+[/] Generate custom length password
+
+[\] op generate password --symbols
+[/] Include symbols in password
+
+# -------------------------
+# ENVIRONMENT / AUTOMATION
+# -------------------------
+
+[\] op run -- env
+[/] Run command with injected secrets
+
+[\] op run -- npm start
+[/] Run app with secrets loaded
+
+[\] op inject -i .env.tpl -o .env
+[/] Populate environment file
+
+# -------------------------
+# SHARING / ACCESS
+# -------------------------
+
+[\] op share create <item>
+[/] Create share link
+
+[\] op share list
+[/] List shared items
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] op --debug
+[/] Enable debug output
+
+[\] op whoami
+[/] Show current account info
+
+[\] op account list
+[/] List configured accounts
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] eval $(op signin) → op item list
+[/] Authenticate and list items
+
+[\] op read op://vault/app/db_password
+[/] Retrieve database password
+
+[\] op inject -i .env.tpl -o .env → npm start
+[/] Load secrets and run app
