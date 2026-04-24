@@ -1,0 +1,49 @@
+[X] ZUTTY Command List
+
+[\] zutty --help
+[/] Show help menu
+
+[\] zutty --version
+[/] Show zutty version
+
+[\] zutty
+[/] Launch Zutty terminal emulator with default settings
+
+[\] zutty -e <command>
+[/] Run a specific command inside Zutty on launch
+
+[\] zutty -T <title>
+[/] Set window title
+
+[\] zutty -geometry <WxH+X+Y>
+[/] Set terminal window size and position
+
+[\] zutty -font <font_name>
+[/] Set terminal font
+
+[\] zutty -fg <color>
+[/] Set foreground (text) color
+
+[\] zutty -bg <color>
+[/] Set background color
+
+[\] zutty -display <display>
+[/] Connect to a specific X display
+
+[\] zutty -fullscreen
+[/] Launch in fullscreen mode
+
+[\] zutty -iconic
+[/] Start minimized/iconified
+
+[\] zutty -ls
+[/] Start as login shell
+
+[\] zutty -hold
+[/] Keep terminal open after command exits
+
+[\] zutty -rv
+[/] Reverse video mode (swap colors)
+
+[\] zutty -help-all
+[/] Show advanced options
