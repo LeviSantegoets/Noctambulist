@@ -1,0 +1,167 @@
+[X] Suricata Command List (IDS/IPS/NSM Engine)
+
+[\] suricata --help
+[/] Show Suricata help menu
+
+[\] suricata --version
+[/] Show installed version
+
+# -------------------------
+# BASIC RUN MODES
+# -------------------------
+
+[\] sudo suricata -c /etc/suricata/suricata.yaml -i eth0
+[/] Run Suricata on interface eth0
+
+[\] sudo suricata -c suricata.yaml -i eth0 -D
+[/] Run in daemon (background) mode
+
+[\] sudo suricata -c suricata.yaml -i eth0 --af-packet
+[/] Use AF_PACKET capture mode
+
+[\] sudo suricata -c suricata.yaml -r capture.pcap
+[/] Analyze offline PCAP file
+
+# -------------------------
+# INTERFACE / CAPTURE
+# -------------------------
+
+[\] suricata --list-interfaces
+[/] List available network interfaces
+
+[\] suricata -i eth0 --pcap
+[/] Use libpcap capture
+
+[\] suricata -i eth0 --af-packet
+[/] High-performance capture mode
+
+[\] suricata -i eth0 --nfqueue
+[/] Inline IPS mode with NFQUEUE
+
+# -------------------------
+# CONFIGURATION
+# -------------------------
+
+[\] suricata -c /etc/suricata/suricata.yaml
+[/] Specify config file
+
+[\] suricata -T -c suricata.yaml
+[/] Test configuration file
+
+[\] suricata -c suricata.yaml --init-errors-fatal
+[/] Fail on config errors
+
+# -------------------------
+# RULES MANAGEMENT
+# -------------------------
+
+[\] suricata-update
+[/] Update rules (Emerging Threats, etc.)
+
+[\] suricata-update list-sources
+[/] List rule sources
+
+[\] suricata-update enable-source et/open
+[/] Enable ET Open rules
+
+[\] suricata-update disable-source <source>
+[/] Disable rule source
+
+[\] suricata-update update
+[/] Fetch and apply rules
+
+# -------------------------
+# LOGGING / OUTPUT
+# -------------------------
+
+[\] tail -f /var/log/suricata/eve.json
+[/] Monitor JSON alerts/logs
+
+[\] tail -f /var/log/suricata/fast.log
+[/] View fast alert logs
+
+[\] less /var/log/suricata/eve.json
+[/] Browse logs interactively
+
+[\] jq . /var/log/suricata/eve.json
+[/] Pretty-print JSON logs
+
+# -------------------------
+# PERFORMANCE / THREADING
+# -------------------------
+
+[\] suricata --list-runmodes
+[/] Show available run modes
+
+[\] suricata -c suricata.yaml -i eth0 --runmode workers
+[/] Use workers run mode
+
+[\] suricata -c suricata.yaml --engine-analysis
+[/] Analyze detection engine performance
+
+# -------------------------
+# INLINE / IPS MODE
+# -------------------------
+
+[\] iptables -I FORWARD -j NFQUEUE
+[/] Send traffic to Suricata
+
+[\] suricata -c suricata.yaml -q 0
+[/] Bind to NFQUEUE 0
+
+[\] suricata -c suricata.yaml --af-packet=eth0
+[/] Inline mode via AF_PACKET
+
+# -------------------------
+# DEBUG / TROUBLESHOOTING
+# -------------------------
+
+[\] suricata -T -c suricata.yaml
+[/] Validate config before running
+
+[\] suricata -v
+[/] Increase verbosity
+
+[\] suricata -vv
+[/] More verbose output
+
+[\] suricata -vvv
+[/] Debug-level verbosity
+
+[\] systemctl status suricata
+[/] Check service status
+
+[\] journalctl -u suricata
+[/] View service logs
+
+# -------------------------
+# SERVICE MANAGEMENT
+# -------------------------
+
+[\] sudo systemctl start suricata
+[/] Start Suricata service
+
+[\] sudo systemctl stop suricata
+[/] Stop service
+
+[\] sudo systemctl restart suricata
+[/] Restart service
+
+[\] sudo systemctl enable suricata
+[/] Enable at boot
+
+# -------------------------
+# PIPELINE EXAMPLES
+# -------------------------
+
+[\] suricata -c suricata.yaml -i eth0 → tail -f eve.json
+[/] Run IDS and monitor alerts
+
+[\] suricata-update → systemctl restart suricata
+[/] Update rules and reload service
+
+[\] suricata -r traffic.pcap → jq .
+[/] Analyze PCAP and format output
+
+[\] suricata -T → suricata -D
+[/] Test config then run in background
