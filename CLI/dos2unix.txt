@@ -1,0 +1,109 @@
+[X] dos2unix Command List
+
+[\] sudo apt install dos2unix
+[/] Install dos2unix on Debian/Ubuntu
+
+[\] sudo dnf install dos2unix
+[/] Install dos2unix on Fedora
+
+[\] sudo pacman -S dos2unix
+[/] Install dos2unix on Arch Linux
+
+[\] brew install dos2unix
+[/] Install dos2unix on macOS using Homebrew
+
+[\] dos2unix file.txt
+[/] Convert DOS/Windows line endings to Unix
+
+[\] dos2unix -n file.txt output.txt
+[/] Convert and write to new file (original unchanged)
+
+[\] unix2dos file.txt
+[/] Convert Unix line endings to DOS/Windows
+
+[\] unix2dos -n file.txt output.txt
+[/] Convert to DOS and write to new file
+
+[\] dos2unix *.txt
+[/] Convert all .txt files in current directory
+
+[\] dos2unix file1.txt file2.txt file3.txt
+[/] Convert multiple files
+
+[\] dos2unix -f file.txt
+[/] Force conversion (skip binary file check)
+
+[\] dos2unix -o file.txt
+[/] Convert file (old mode, same as default)
+
+[\] dos2unix -q file.txt
+[/] Quiet mode (suppress warnings)
+
+[\] dos2unix -v file.txt
+[/] Verbose mode (show conversion details)
+
+[\] dos2unix -h
+[/] Show help menu
+
+[\] dos2unix --help
+[/] Show full help menu
+
+[\] dos2unix -V
+[/] Show version information
+
+[\] dos2unix -k file.txt
+[/] Keep file timestamp unchanged
+
+[\] dos2unix -b file.txt
+[/] Create backup (file.bak) before conversion
+
+[\] dos2unix -b -n file.txt output.txt
+[/] Create backup of original and save to new file
+
+[\] dos2unix -c mac file.txt
+[/] Convert Mac line endings (CR) to Unix
+
+[\] unix2dos -c mac file.txt
+[/] Convert Unix to Mac line endings
+
+[\] dos2unix -c ascii file.txt
+[/] Convert ASCII files (default)
+
+[\] dos2unix -iso file.txt
+[/] Convert using ISO encoding
+
+[\] dos2unix -437 file.txt
+[/] Convert using CP437 encoding
+
+[\] dos2unix -850 file.txt
+[/] Convert using CP850 encoding
+
+[\] dos2unix -l file.txt
+[/] Convert to Unix line endings (same as default)
+
+[\] mac2unix file.txt
+[/] Convert Mac line endings to Unix
+
+[\] unix2mac file.txt
+[/] Convert Unix line endings to Mac
+
+[\] dos2unix -e file.txt
+[/] Convert to DOS line endings (same as unix2dos)
+
+[\] echo "text" | dos2unix
+[/] Read from stdin, write to stdout
+
+[\] dos2unix < input.txt > output.txt
+[/] Convert with I/O redirection
+
+[\] find . -name "*.txt" -exec dos2unix {} \;
+[/] Convert all .txt files recursively in subdirectories
+
+[\] dos2unix --safe file.txt
+[/] Skip binary files automatically
+
+[\] dos2unix -F file.txt
+[/] Treat file as binary if CR/LF not found
+
+[\] dos2unix -D file.txt
+[/] Keep date/time in output file (same as -k)
