@@ -1,0 +1,67 @@
+[X] tee Command List
+
+[\] sudo apt install coreutils
+[/] Install tee on Debian/Ubuntu
+
+[\] sudo dnf install coreutils
+[/] Install tee on Fedora
+
+[\] sudo pacman -S coreutils
+[/] Install tee on Arch Linux
+
+[\] brew install coreutils
+[/] Install GNU tee on macOS using Homebrew
+
+[\] echo "hello" | tee file.txt
+[/] Write input to file and display on screen
+
+[\] ls -la | tee output.txt
+[/] Save command output while displaying it
+
+[\] dmesg | tee log.txt
+[/] Save kernel messages to file
+
+[\] echo "new line" | tee -a file.txt
+[/] Append output to file
+
+[\] command | tee file1.txt file2.txt
+[/] Write output to multiple files
+
+[\] make 2>&1 | tee build.log
+[/] Capture stdout and stderr to log file
+
+[\] ping google.com | tee ping.log
+[/] Save live ping output
+
+[\] ps aux | tee processes.txt
+[/] Save process list to file
+
+[\] df -h | tee disk.txt
+[/] Save disk usage report
+
+[\] cat file.txt | tee copy.txt
+[/] Copy file contents to another file
+
+[\] echo "config=value" | sudo tee /etc/app.conf
+[/] Write to privileged file using sudo
+
+[\] echo "line" | sudo tee -a /etc/app.conf
+[/] Append to privileged file using sudo
+
+[\] journalctl -f | tee journal.log
+[/] Monitor and save logs in real time
+
+[\] tail -f app.log | tee livecopy.log
+[/] Follow file changes and duplicate output
+
+[\] tee /tmp/out.txt < input.txt
+[/] Read from file and write to another file
+
+[\] tee -i file.txt
+[/] Ignore interrupt signals
+
+[\] tee --help
+[/] Show help menu
+
+[\] tee --version
+[/] Show tee version
