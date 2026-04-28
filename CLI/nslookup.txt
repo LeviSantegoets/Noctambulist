@@ -1,0 +1,130 @@
+[X] nslookup Command List
+
+[\] nslookup domain.com
+[/] Query DNS information for domain
+
+[\] nslookup domain.com 8.8.8.8
+[/] Query using specific DNS server
+
+[\] nslookup -type=A domain.com
+[/] Query A record (IPv4 address)
+
+[\] nslookup -type=AAAA domain.com
+[/] Query AAAA record (IPv6 address)
+
+[\] nslookup -type=CNAME domain.com
+[/] Query CNAME record (canonical name)
+
+[\] nslookup -type=MX domain.com
+[/] Query MX record (mail exchange)
+
+[\] nslookup -type=NS domain.com
+[/] Query NS record (name servers)
+
+[\] nslookup -type=TXT domain.com
+[/] Query TXT record (text information)
+
+[\] nslookup -type=SOA domain.com
+[/] Query SOA record (start of authority)
+
+[\] nslookup -type=PTR 8.8.8.8
+[/] Query PTR record (reverse DNS lookup)
+
+[\] nslookup -type=ANY domain.com
+[/] Query all record types
+
+[\] nslookup -type=SRV _service._proto.domain.com
+[/] Query SRV record (service locator)
+
+[\] nslookup -type=CAA domain.com
+[/] Query CAA record (Certificate Authority Authorization)
+
+[\] nslookup -debug domain.com
+[/] Enable debug mode
+
+[\] nslookup -d2 domain.com
+[/] Enable exhaustive debug mode
+
+[\] nslookup -port=5353 domain.com
+[/] Query on specific port (default 53)
+
+[\] nslookup -timeout=5 domain.com
+[/] Set query timeout in seconds
+
+[\] nslookup -retry=3 domain.com
+[/] Set number of retries
+
+[\] nslookup -vc domain.com
+[/] Use TCP instead of UDP
+
+[\] nslookup -norecurse domain.com
+[/] Disable recursive lookup
+
+[\] nslookup -search domain.com
+[/] Use domain search list
+
+[\] nslookup -domain=mydomain.com
+[/] Set default domain
+
+[\] nslookup -fail
+[/] Fail on non-authoritative responses
+
+[\] nslookup -silent
+[/] Suppress informational messages
+
+[\] nslookup -nodebug
+[/] Disable debug mode
+
+[\] nslookup -norecurse
+[/] Disable recursive query (use authoritative only)
+
+[\] nslookup -version
+[/] Show nslookup version
+
+[\] nslookup
+[/] Enter interactive mode
+
+[\] server 8.8.8.8
+[/] In interactive mode: change DNS server
+
+[\] set type=MX
+[/] In interactive mode: set query type
+
+[\] set debug
+[/] In interactive mode: enable debug
+
+[\] set nodebug
+[/] In interactive mode: disable debug
+
+[\] set recurse
+[/] In interactive mode: enable recursion
+
+[\] set norecurse
+[/] In interactive mode: disable recursion
+
+[\] set retry=3
+[/] In interactive mode: set retry count
+
+[\] set timeout=5
+[/] In interactive mode: set timeout
+
+[\] set domain=mydomain.com
+[/] In interactive mode: set default domain
+
+[\] set search
+[/] In interactive mode: use search list
+
+[\] set nosearch
+[/] In interactive mode: disable search list
+
+[\] set port=53
+[/] In interactive mode: set port number
+
+[\] set all
+[/] In interactive mode: display all settings
+
+[\] exit
+[/] In interactive mode: exit nslookup
+
+[\] help or ?
+[/] In interactive mode: show help
