@@ -1,0 +1,85 @@
+[X] grep Command List
+
+[\] sudo apt install grep
+[/] Install grep on Debian/Ubuntu
+
+[\] sudo dnf install grep
+[/] Install grep on Fedora
+
+[\] sudo pacman -S grep
+[/] Install grep on Arch Linux
+
+[\] brew install grep
+[/] Install grep on macOS using Homebrew
+
+[\] grep "text" file.txt
+[/] Search for text in a file
+
+[\] grep -i "text" file.txt
+[/] Case-insensitive search
+
+[\] grep -v "text" file.txt
+[/] Show lines that do NOT match
+
+[\] grep -n "text" file.txt
+[/] Show matching lines with line numbers
+
+[\] grep -r "text" /path/to/folder
+[/] Recursively search in folders
+
+[\] grep -l "text" *.txt
+[/] Show only filenames with matches
+
+[\] grep -c "text" file.txt
+[/] Count matching lines
+
+[\] grep -w "word" file.txt
+[/] Match whole word only
+
+[\] grep -x "exact line" file.txt
+[/] Match exact line only
+
+[\] grep -E "cat|dog" file.txt
+[/] Extended regex OR search
+
+[\] grep -o "[0-9]*" file.txt
+[/] Show only matched parts
+
+[\] grep -A 3 "error" log.txt
+[/] Show 3 lines after match
+
+[\] grep -B 3 "error" log.txt
+[/] Show 3 lines before match
+
+[\] grep -C 3 "error" log.txt
+[/] Show 3 lines before and after match
+
+[\] grep --color=auto "text" file.txt
+[/] Highlight matches
+
+[\] ps aux | grep nginx
+[/] Find running process
+
+[\] history | grep ssh
+[/] Search command history
+
+[\] netstat -tulpn | grep :80
+[/] Find service using port 80
+
+[\] grep "^root" /etc/passwd
+[/] Match lines starting with root
+
+[\] grep "bash$" /etc/passwd
+[/] Match lines ending with bash
+
+[\] grep -P "\d+" file.txt
+[/] Perl regex digit search
+
+[\] grep -f patterns.txt file.txt
+[/] Use patterns from file
+
+[\] grep --help
+[/] Show help menu
+
+[\] grep --version
+[/] Show grep version
