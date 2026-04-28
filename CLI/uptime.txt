@@ -1,0 +1,16 @@
+[X] uptime Command List
+
+[\] uptime
+[/] Show system uptime, load average, user count
+
+[\] uptime -p
+[/] Show uptime in pretty human-readable format
+
+[\] uptime -s
+[/] Show system start time (boot time)
+
+[\] uptime --help
+[/] Show help menu
+
+[\] uptime --version
+[/] Show uptime version
