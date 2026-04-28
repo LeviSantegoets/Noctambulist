@@ -1,0 +1,52 @@
+[X] free Command List
+
+[\] free
+[/] Show memory usage
+
+[\] free -h
+[/] Show memory in human-readable format
+
+[\] free -m
+[/] Show memory in MB
+
+[\] free -g
+[/] Show memory in GB
+
+[\] free -k
+[/] Show memory in KB (default)
+
+[\] free -b
+[/] Show memory in bytes
+
+[\] free -t
+[/] Show total line (including swap)
+
+[\] free -s 5
+[/] Update every 5 seconds
+
+[\] free -c 10
+[/] Run 10 times then exit
+
+[\] free -h -s 2 -c 5
+[/] Human-readable, update every 2 seconds, 5 times
+
+[\] free -w
+[/] Show wide output (more columns)
+
+[\] free -l
+[/] Show low and high memory statistics
+
+[\] free -o
+[/] Don't show buffer adjusted line (old format)
+
+[\] free --help
+[/] Show help menu
+
+[\] free --version
+[/] Show free version
+
+[\] free -h --si
+[/] Use powers of 1000 (not 1024) for human format
+
+[\] watch -n 1 free -h
+[/] Watch memory in real-time with watch command
