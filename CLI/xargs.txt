@@ -1,0 +1,70 @@
+[X] xargs Command List
+
+[\] sudo apt install findutils
+[/] Install xargs on Debian/Ubuntu
+
+[\] sudo dnf install findutils
+[/] Install xargs on Fedora
+
+[\] sudo pacman -S findutils
+[/] Install xargs on Arch Linux
+
+[\] brew install findutils
+[/] Install GNU xargs on macOS using Homebrew
+
+[\] echo "file1 file2" | xargs rm
+[/] Pass input items as arguments to rm
+
+[\] cat list.txt | xargs mkdir
+[/] Create directories from list
+
+[\] find . -name "*.log" | xargs rm
+[/] Remove found log files
+
+[\] find . -name "*.log" -print0 | xargs -0 rm
+[/] Safely handle spaces/newlines in filenames
+
+[\] ls *.txt | xargs wc -l
+[/] Count lines in multiple files
+
+[\] echo "1 2 3" | xargs -n1
+[/] Use one argument per command run
+
+[\] echo "a b c d" | xargs -n2
+[/] Use two arguments per command run
+
+[\] seq 1 10 | xargs -I{} echo Item:{}
+[/] Replace placeholder with each input item
+
+[\] cat urls.txt | xargs -n1 curl -O
+[/] Download URLs one by one
+
+[\] find . -type f | xargs chmod 644
+[/] Change permissions on files
+
+[\] ps aux | awk '{print $2}' | tail -n +2 | xargs kill
+[/] Kill processes by PID list
+
+[\] cat hosts.txt | xargs -n1 ping -c1
+[/] Ping hosts one at a time
+
+[\] echo "one two three" | xargs printf "%s\n"
+[/] Format each argument with printf
+
+[\] seq 1 20 | xargs -P4 -n1 echo
+[/] Run 4 parallel processes
+
+[\] xargs -a list.txt rm
+[/] Read arguments directly from file
+
+[\] find . -name "*.tmp" | xargs -r rm
+[/] Do nothing if no input is received
+
+[\] echo "abc" | xargs -t echo
+[/] Print command before execution
+
+[\] xargs --help
+[/] Show help menu
+
+[\] xargs --version
+[/] Show xargs version
