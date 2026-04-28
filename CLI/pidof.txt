@@ -1,0 +1,64 @@
+[X] pidof Command List
+
+[\] pidof process_name
+[/] Get PID of running process
+
+[\] pidof firefox
+[/] Get PID of firefox process
+
+[\] pidof -s process_name
+[/] Return only single PID
+
+[\] pidof -c process_name
+[/] Match processes running in same root directory
+
+[\] pidof -x process_name
+[/] Match scripts (interpreters like bash, python)
+
+[\] pidof -o PID process_name
+[/] Omit specified PID from output
+
+[\] pidof -o %PPID process_name
+[/] Omit parent process PID
+
+[\] pidof -o $$ process_name
+[/] Omit current shell PID
+
+[\] pidof -d "," process_name
+[/] Separate PIDs with comma instead of space
+
+[\] pidof -q process_name
+[/] Quiet mode (return exit code only, no output)
+
+[\] pidof -m process_name
+[/] Match process with multiple instances
+
+[\] pidof -n process_name
+[/] Show PIDs without newline (avoid truncation)
+
+[\] pidof -h
+[/] Show help menu
+
+[\] pidof -V
+[/] Show version information
+
+[\] pidof process_name1 process_name2
+[/] Get PIDs for multiple processes
+
+[\] kill $(pidof process_name)
+[/] Kill process using pidof output
+
+[\] pidof -s -x script.sh
+[/] Get single PID of running script
+
+[\] if pidof -q process_name; then echo "Running"; fi
+[/] Check if process is running (quiet mode)
+
+[\] pidof -d " " firefox
+[/] Separate PIDs with space
+
+[\] which pidof
+[/] Show pidof binary location
+
+[\] pidof --help
+[/] Show full help menu
