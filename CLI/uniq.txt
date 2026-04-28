@@ -1,0 +1,73 @@
+[X] uniq Command List
+
+[\] sudo apt install coreutils
+[/] Install uniq on Debian/Ubuntu
+
+[\] sudo dnf install coreutils
+[/] Install uniq on Fedora
+
+[\] sudo pacman -S coreutils
+[/] Install uniq on Arch Linux
+
+[\] brew install coreutils
+[/] Install GNU uniq on macOS using Homebrew
+
+[\] uniq file.txt
+[/] Remove adjacent duplicate lines
+
+[\] sort file.txt | uniq
+[/] Sort then remove all duplicate lines
+
+[\] uniq -c file.txt
+[/] Prefix lines by occurrence count
+
+[\] sort file.txt | uniq -c
+[/] Count all duplicate occurrences
+
+[\] uniq -d file.txt
+[/] Show only duplicated lines
+
+[\] uniq -u file.txt
+[/] Show only unique (non-duplicate) lines
+
+[\] uniq -i file.txt
+[/] Ignore case differences
+
+[\] uniq -f1 file.txt
+[/] Skip first field when comparing
+
+[\] uniq -s3 file.txt
+[/] Skip first 3 characters when comparing
+
+[\] uniq -w5 file.txt
+[/] Compare only first 5 characters
+
+[\] uniq --all-repeated=separate file.txt
+[/] Print duplicate groups separated by blank lines
+
+[\] uniq --all-repeated=prepend file.txt
+[/] Print duplicate groups with blank line before each
+
+[\] uniq -z file.txt
+[/] Use NUL as line delimiter
+
+[\] cat names.txt | uniq
+[/] Remove adjacent duplicates from piped input
+
+[\] history | sort | uniq
+[/] Show unique commands from shell history
+
+[\] ps aux | awk '{print $1}' | sort | uniq
+[/] Show unique process owners
+
+[\] cut -d: -f7 /etc/passwd | sort | uniq
+[/] Show unique login shells
+
+[\] sort words.txt | uniq -d
+[/] Show repeated words only
+
+[\] uniq --help
+[/] Show help menu
+
+[\] uniq --version
+[/] Show uniq version
