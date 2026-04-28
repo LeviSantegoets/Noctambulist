@@ -1,0 +1,70 @@
+[X] rm Command List
+
+[\] rm file.txt
+[/] Remove file
+
+[\] rm file1.txt file2.txt file3.txt
+[/] Remove multiple files
+
+[\] rm -r directory/
+[/] Remove directory and its contents recursively
+
+[\] rm -rf directory/
+[/] Force remove directory and contents (no prompts)
+
+[\] rm -f file.txt
+[/] Force remove (ignore nonexistent files, no prompts)
+
+[\] rm -i file.txt
+[/] Interactive mode (prompt before each removal)
+
+[\] rm -v file.txt
+[/] Verbose output (show what is removed)
+
+[\] rm -rv directory/
+[/] Verbose recursive removal
+
+[\] rm -rfv directory/
+[/] Force, recursive, verbose
+
+[\] rm -d directory/
+[/] Remove empty directory
+
+[\] rm -rd directory/
+[/] Remove directory (if empty) or recursive
+
+[\] rm -- help
+[/] Show help menu
+
+[\] rm --version
+[/] Show rm version
+
+[\] rm --preserve-root file.txt
+[/] Do not remove '/' (default)
+
+[\] rm --no-preserve-root file.txt
+[/] Allow removing '/' (dangerous)
+
+[\] rm -rf --no-preserve-root /
+[/] Remove everything (extremely dangerous)
+
+[\] rm -rf *
+[/] Remove all files in current directory
+
+[\] rm -rf directory/ 2>/dev/null
+[/] Suppress error messages
+
+[\] rm -f -- file.txt
+[/] Remove file with dash in name (-- stops options)
+
+[\] rm -rf ./*
+[/] Remove all files including hidden (safer than rm -rf *)
+
+[\] rm -rf /tmp/temp_* 
+[/] Remove all temp files matching pattern
+
+[\] rm $(find /path -name "*.log")
+[/] Remove all .log files (using command substitution)
+
+[\] find /path -name "*.tmp" -delete
+[/] Remove all .tmp files using find (safer than rm)
