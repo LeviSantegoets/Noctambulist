@@ -1,0 +1,88 @@
+[X] nice Command List
+
+[\] nice -n 10 command
+[/] Run command with priority 10 (lower priority)
+
+[\] nice -10 command
+[/] Run command with priority 10 (alternative syntax)
+
+[\] nice --10 command
+[/] Run command with priority 10 (double dash syntax)
+
+[\] nice -n -5 command
+[/] Run command with priority -5 (higher priority, needs root)
+
+[\] nice --15 command
+[/] Run command with priority -15 (higher priority, needs root)
+
+[\] nice -n 19 command
+[/] Run command with lowest priority (19)
+
+[\] nice -n -20 command
+[/] Run command with highest priority (-20, root only)
+
+[\] nice command
+[/] Run command with default nice value (+10)
+
+[\] nice -n 15 ./script.sh
+[/] Run shell script with lower priority
+
+[\] nice -n 5 rsync -av /source /dest
+[/] Run rsync with moderate priority adjustment
+
+[\] nice -n 19 find / -name "*.log"
+[/] Run find with lowest priority (background)
+
+[\] nice -5 tar -czf backup.tar.gz /home
+[/] Run tar with priority +5 (alternative syntax)
+
+[\] nice -n -1 cp -r large_folder/ /dest/
+[/] Run copy with slightly higher priority (needs root)
+
+[\] renice -n 10 -p PID
+[/] Change priority of existing process
+
+[\] renice -n 15 -u username
+[/] Change priority of all processes for user
+
+[\] renice -n 5 -g groupname
+[/] Change priority of all processes for group
+
+[\] renice +10 -p PID
+[/] Lower priority of existing process
+
+[\] renice -5 -p PID
+[/] Raise priority of existing process (needs root)
+
+[\] renice -n -10 -p 1234
+[/] Raise priority to -10 (root only)
+
+[\] nice --help
+[/] Show nice help menu
+
+[\] nice --version
+[/] Show nice version
+
+[\] renice --help
+[/] Show renice help menu
+
+[\] renice --version
+[/] Show renice version
+
+[\] nice -n 10 bash -c "long_running_command"
+[/] Run long command in shell with lower priority
+
+[\] nice -n 19 ionice -c 3 command
+[/] Combine with ionice for idle I/O priority
+
+[\] nice -n 10 make -j4
+[/] Run make with lower priority (good for background builds)
+
+[\] ps -l -p PID
+[/] Check current nice value of process (NI column)
+
+[\] top -p PID
+[/] Check and change nice value interactively (press r)
+
+[\] renice 0 -u user -p PID
+[/] Reset priority to normal (0) for user and process
