@@ -1,0 +1,73 @@
+[X] whereis Command List
+
+[\] whereis command
+[/] Show binary, source, and man page locations
+
+[\] whereis ls
+[/] Find ls binary, source, and man pages
+
+[\] whereis -b command
+[/] Search only for binaries
+
+[\] whereis -m command
+[/] Search only for man pages
+
+[\] whereis -s command
+[/] Search only for source code
+
+[\] whereis -u command
+[/] Search for unusual entries (not in expected locations)
+
+[\] whereis -B /path/to/dir -f command
+[/] Search for binaries in specific directory
+
+[\] whereis -M /path/to/dir -f command
+[/] Search for man pages in specific directory
+
+[\] whereis -S /path/to/dir -f command
+[/] Search for source code in specific directory
+
+[\] whereis -b -m -s command
+[/] Search for binaries, man pages, and source
+
+[\] whereis -b -m command
+[/] Search for binaries and man pages only
+
+[\] whereis -b -B /usr/local/bin -f command
+[/] Search binaries in custom directory
+
+[\] whereis -m -M /usr/share/man -f command
+[/] Search man pages in custom directory
+
+[\] whereis -b python
+[/] Find all Python binary locations
+
+[\] whereis -m gcc
+[/] Find gcc man page locations
+
+[\] whereis -b -u command
+[/] Find binary in unusual location (not standard paths)
+
+[\] whereis -l
+[/] List all search paths used by whereis
+
+[\] whereis --help
+[/] Show help menu
+
+[\] whereis --version
+[/] Show whereis version
+
+[\] whereis -b -m -s -u command
+[/] Find unusual entries in binaries, man pages, and source
+
+[\] whereis -b -B /opt/bin -f myapp
+[/] Search for myapp binary in /opt/bin directory
+
+[\] whereis -m -M /usr/local/man -f myapp
+[/] Search for myapp man page in /usr/local/man
+
+[\] which command
+[/] Alternative: show only binary path (no man/source)
+
+[\] type -a command
+[/] Show all locations including aliases and builtins
