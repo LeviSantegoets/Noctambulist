@@ -1,0 +1,67 @@
+[X] whois Command List
+
+[\] sudo apt install whois
+[/] Install whois on Debian/Ubuntu
+
+[\] sudo dnf install whois
+[/] Install whois on Fedora
+
+[\] sudo pacman -S whois
+[/] Install whois on Arch Linux
+
+[\] brew install whois
+[/] Install whois on macOS using Homebrew
+
+[\] whois domain.com
+[/] Query WHOIS information for domain
+
+[\] whois 8.8.8.8
+[/] Query WHOIS information for IP address
+
+[\] whois -h whois.server.com domain.com
+[/] Query specific WHOIS server
+
+[\] whois -p 43 domain.com
+[/] Query on specific port (default 43)
+
+[\] whois -H domain.com
+[/] Hide legal disclaimers from output
+
+[\] whois -K domain.com
+[/] Disable primary key lookup
+
+[\] whois -L domain.com
+[/] Do not follow referrals to other WHOIS servers
+
+[\] whois -R domain.com
+[/] Use DNS RWhois server
+
+[\] whois -B domain.com
+[/] Display all available information
+
+[\] whois -a domain.com
+[/] Use ARIN WHOIS server (for IPs)
+
+[\] whois -b domain.com
+[/] Use NSAP WHOIS server
+
+[\] whois -c domain.com
+[/] Use RIPE WHOIS server (Europe)
+
+[\] whois -g domain.com
+[/] Use USG WHOIS server
+
+[\] whois -i domain.com
+[/] Use NIC MIL WHOIS server
+
+[\] whois -p whois.domain.com domain.com
+[/] Query whois on specific host
+
+[\] whois --verbose domain.com
+[/] Show verbose debugging output
+
+[\] whois --help
+[/] Show help menu
+
+[\] whois --version
+[/] Show whois version
