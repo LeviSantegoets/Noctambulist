@@ -1,0 +1,175 @@
+[X] top Command List
+
+[\] top
+[/] Start interactive process viewer
+
+[\] top -d 1
+[/] Update every 1 second (default 3s)
+
+[\] top -n 5
+[/] Run for 5 iterations then exit
+
+[\] top -b
+[/] Batch mode (output to file or pipe)
+
+[\] top -b -n 1 > output.txt
+[/] One iteration to file (batch mode)
+
+[\] top -p PID
+[/] Monitor specific process by PID
+
+[\] top -p PID1,PID2,PID3
+[/] Monitor multiple processes by PID
+
+[\] top -u username
+[/] Show processes for specific user
+
+[\] top -U username
+[/] Show processes by real user
+
+[\] top -i
+[/] Idle processes toggle (show/hide idle)
+
+[\] top -c
+[/] Show absolute command path
+
+[\] top -o %CPU
+[/] Sort by specific column on startup
+
+[\] top -o %MEM
+[/] Sort by memory usage on startup
+
+[\] top -o TIME+
+[/] Sort by CPU time on startup
+
+[\] top -H
+[/] Show threads (individual threads)
+
+[\] top -E k
+[/] Display memory in kilobytes
+
+[\] top -E m
+[/] Display memory in megabytes
+
+[\] top -E g
+[/] Display memory in gigabytes
+
+[\] top -E t
+[/] Display memory in terabytes
+
+[\] h or ?
+[/] Show help menu (interactive)
+
+[\] q
+[/] Quit top (interactive)
+
+[\] M
+[/] Sort by memory usage (interactive)
+
+[\] P
+[/] Sort by CPU usage (interactive)
+
+[\] T
+[/] Sort by running time (interactive)
+
+[\] N
+[/] Sort by PID (interactive)
+
+[\] R
+[/] Reverse sort order (interactive)
+
+[\] k
+[/] Kill process (enter PID and signal, interactive)
+
+[\] r
+[/] Renice process (change priority, interactive)
+
+[\] d
+[/] Change update interval seconds (interactive)
+
+[\] s
+[/] Change update interval (same as d, interactive)
+
+[\] S
+[/] Toggle cumulative time mode (interactive)
+
+[\] I
+[/] Toggle Irix mode (Solaris mode) for CPU (interactive)
+
+[\] u
+[/] Show processes for specific user (interactive)
+
+[\] U
+[/] Show processes by real user (interactive)
+
+[\] l
+[/] Toggle load average display (interactive)
+
+[\] t
+[/] Toggle CPU state display (interactive)
+
+[\] m
+[/] Toggle memory display (interactive)
+
+[\] 1
+[/] Toggle per-CPU usage view (interactive)
+
+[\] V
+[/] Forest view (tree view of processes, interactive)
+
+[\] c
+[/] Toggle command line / program name (interactive)
+
+[\] f
+[/] Fields management (add/remove columns, interactive)
+
+[\] F or O
+[/] Choose sort field (interactive)
+
+[\] W
+[/] Write configuration to ~/.toprc (interactive)
+
+[\] Z
+[/] Change color scheme (interactive)
+
+[\] z
+[/] Toggle color (interactive)
+
+[\] x
+[/] Toggle highlight sort column (interactive)
+
+[\] y
+[/] Toggle highlight running tasks (interactive)
+
+[\] b
+[/] Toggle bold (interactive)
+
+[\] i
+[/] Toggle idle processes (interactive)
+
+[\] p
+[/] Set focus on PID (interactive)
+
+[\] $
+[/] Show last PID (interactive)
+
+[\] < or >
+[/] Move sort field left/right (interactive)
+
+[\] top --help
+[/] Show command line help
+
+[\] top --version
+[/] Show top version
+
+[\] top -b -n 1 | grep "Cpu"
+[/] Capture CPU stats in one iteration
+
+[\] top -b -d 1 -p 1234
+[/] Batch mode monitor single PID
+
+[\] htop
+[/] Alternative interactive process viewer (more user-friendly)
+
+[\] atop
+[/] Advanced system monitor (disk, network, process)
