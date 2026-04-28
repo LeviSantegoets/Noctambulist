@@ -1,0 +1,229 @@
+[X] httrack Command List
+
+[\] sudo apt install httrack
+[/] Install httrack on Debian/Ubuntu
+
+[\] sudo dnf install httrack
+[/] Install httrack on Fedora
+
+[\] sudo pacman -S httrack
+[/] Install httrack on Arch Linux
+
+[\] brew install httrack
+[/] Install httrack on macOS using Homebrew
+
+[\] httrack https://example.com
+[/] Mirror website to current directory
+
+[\] httrack https://example.com -O /path/to/output
+[/] Mirror website to specific output directory
+
+[\] httrack --mirror https://example.com -O ./site
+[/] Mirror website (default action)
+
+[\] httrack --mirror-wizard
+[/] Interactive wizard mode (asks questions)
+
+[\] httrack --get-files https://example.com/file.zip
+[/] Just get files (saved in current directory) without mirror structure
+
+[\] httrack --continue
+[/] Continue interrupted mirror using cache
+
+[\] httrack --update
+[/] Update existing mirror (downloads changed files)
+
+[\] httrack https://example.com -r3
+[/] Set mirror depth to 3 levels
+
+[\] httrack https://example.com -%e2
+[/] Set external links depth to 2
+
+[\] httrack https://example.com -m1000000
+[/] Maximum file length for non-html files (bytes)
+
+[\] httrack https://example.com -M500000000
+[/] Maximum overall size to download (bytes)
+
+[\] httrack https://example.com -E3600
+[/] Maximum mirror time in seconds (3600 = 1 hour)
+
+[\] httrack https://example.com -A102400
+[/] Limit transfer rate to 100KB/s
+
+[\] httrack https://example.com -c16
+[/] Number of simultaneous connections (default 8)
+
+[\] httrack https://example.com -T30
+[/] Timeout after 30 seconds for non-responding links
+
+[\] httrack https://example.com -R3
+[/] Number of retries for failed links
+
+[\] httrack https://example.com --sockets=80
+[/] Open up to 80 sockets for faster downloading
+
+[\] httrack https://example.com --connection-per-second=50
+[/] Allow up to 50 connections per second
+
+[\] httrack https://example.com -%c10
+[/] Maximum connections per second (default 10)
+
+[\] httrack https://example.com -P proxy:8080
+[/] Use proxy server
+
+[\] httrack https://example.com -P user:pass@proxy:8080
+[/] Use proxy with authentication
+
+[\] httrack https://example.com -F "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+[/] Set custom User-Agent header
+
+[\] httrack https://example.com -%R "https://google.com"
+[/] Set custom Referer header
+
+[\] httrack https://example.com -%l "en, fr, *"
+[/] Set preferred language
+
+[\] httrack https://example.com -s0
+[/] Ignore robots.txt (0=never follow)
+
+[\] httrack https://example.com -s2
+[/] Always follow robots.txt (default 2)
+
+[\] httrack https://example.com -n
+[/] Get non-html files 'near' an html file (images outside domain)
+
+[\] httrack https://example.com +*.pdf +*.jpg -*
+[/] Download only PDF and JPG files
+
+[\] httrack https://example.com -*.zip -*.exe
+[/] Exclude ZIP and EXE files
+
+[\] httrack https://example.com -mime:image/jpeg
+[/] Exclude all JPEG images
+
+[\] httrack https://example.com +example.com/* -*
+[/] Mirror only from specific domain
+
+[\] httrack https://example.com --assume *=text/html
+[/] Assume all unknown file types are HTML
+
+[\] httrack https://example.com -%P
+[/] Extended parsing (parse links in JavaScript)
+
+[\] httrack https://example.com -%P0
+[/] Disable extended parsing
+
+[\] httrack https://example.com -K2
+[/] Keep absolute links (K0=relative, K2=absolute)
+
+[\] httrack https://example.com -K4
+[/] Keep original links (unchanged)
+
+[\] httrack https://example.com -x
+[/] Replace external HTML links with error pages
+
+[\] httrack https://example.com -N0
+[/] Use original site structure (default)
+
+[\] httrack https://example.com -N "%h%p/%n%q.%t"
+[/] User-defined file naming structure
+
+[\] httrack https://example.com -b1
+[/] Accept cookies (0=no, 1=yes default)
+
+[\] httrack https://example.com -u1
+[/] Check document type if unknown (cgi, asp, etc.)
+
+[\] httrack https://example.com -j1
+[/] Parse Java/JavaScript (bitmask)
+
+[\] httrack https://example.com -t
+[/] Test all URLs, do not download
+
+[\] httrack https://example.com -Q
+[/] No log - quiet mode
+
+[\] httrack https://example.com -q
+[/] No questions - quiet mode
+
+[\] httrack https://example.com -v
+[/] Verbose output on screen
+
+[\] httrack https://example.com --display
+[/] Show filenames downloaded in realtime
+
+[\] httrack https://example.com -z
+[/] Extra log information
+
+[\] httrack https://example.com -Z
+[/] Debug log
+
+[\] httrack https://example.com -I
+[/] Make an index file
+
+[\] httrack https://example.com -C2
+[/] Use cache (0=no, 1=prioritary, 2=test before default)
+
+[\] httrack https://example.com -%M
+[/] Generate MIME HTML archive (.mht)
+
+[\] httrack https://example.com -L1
+[/] Use long names (L1 default, L0=8-3 conversion, L2=ISO9660)
+
+[\] httrack https://example.com --disable-security-limits
+[/] Disable speed limits for faster downloading
+
+[\] httrack https://example.com -A100000000
+[/] Raise maximum transfer rate to large value
+
+[\] httrack https://example.com -#L500000000
+[/] Raise maximum links queue to 500 million
+
+[\] httrack https://example.com -%q
+[/] Include query string for local files
+
+[\] httrack https://example.com -o
+[/] Generate HTML output file for errors (404 etc.)
+
+[\] httrack https://example.com -X
+[/] Purge old files after update
+
+[\] httrack https://example.com -%p
+[/] Preserve HTML files 'as is' (identical to -K4 -%F "")
+
+[\] httrack https://example.com -%k
+[/] Use Keep-Alive connections
+
+[\] httrack https://example.com -%h
+[/] Force HTTP/1.0 requests
+
+[\] httrack https://example.com -%B
+[/] Tolerant requests (accept bogus responses)
+
+[\] httrack https://example.com -%s
+[/] Update hacks (limit re-transfers on update)
+
+[\] httrack https://example.com -%u
+[/] URL hacks (strip duplicates, www vs non-www)
+
+[\] httrack https://example.com -d
+[/] Stay on same domain (don't go to external domains)
+
+[\] httrack https://example.com -e
+[/] Go everywhere (allow external links)
+
+[\] httrack https://example.com -l
+[/] Stay on same top-level domain
+
+[\] httrack https://example.com -a
+[/] Stay on same IP address
+
+[\] httrack https://example.com -Y
+[/] Mirror ALL links located in first level pages (mirror links)
+
+[\] httrack --help
+[/] Show help menu
+
+[\] httrack --version
+[/] Show httrack version
