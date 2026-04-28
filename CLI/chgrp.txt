@@ -1,0 +1,64 @@
+[X] chgrp Command List
+
+[\] chgrp groupname file.txt
+[/] Change group ownership of file
+
+[\] chgrp groupname file1.txt file2.txt file3.txt
+[/] Change group for multiple files
+
+[\] chgrp -R groupname directory/
+[/] Recursively change group of directory and contents
+
+[\] chgrp -R groupname ./
+[/] Recursively change group for all files in current directory
+
+[\] chgrp -v groupname file.txt
+[/] Verbose output (show what is changed)
+
+[\] chgrp -c groupname file.txt
+[/] Verbose: show changes only (not if no change)
+
+[\] chgrp -f groupname file.txt
+[/] Silent mode: suppress most error messages
+
+[\] chgrp --reference=template.txt target.txt
+[/] Copy group from another file
+
+[\] chgrp -R -v groupname directory/
+[/] Recursive with verbose output
+
+[\] chgrp 1000 file.txt
+[/] Change group by GID (numeric group ID)
+
+[\] chgrp -h groupname symlink
+[/] Change group of symlink itself, not its target
+
+[\] chgrp --dereference groupname symlink
+[/] Change group of symlink target (default)
+
+[\] chgrp -R --preserve-root groupname directory/
+[/] Prevent recursive operation on root (/) directory
+
+[\] chgrp --no-preserve-root groupname /
+[/] Allow operation on root (dangerous)
+
+[\] chgrp -R -c groupname *.txt
+[/] Change group for all .txt files recursively
+
+[\] chgrp -R staff /home/staff
+[/] Set group ownership recursively for staff home dir
+
+[\] chgrp -R www-data /var/www/html
+[/] Set web directory group to web server group
+
+[\] chgrp -R users /shared/data
+[/] Change group of shared directory to 'users'
+
+[\] find . -type f -exec chgrp users {} \;
+[/] Change group of all files in current dir tree (with find)
+
+[\] chgrp --help
+[/] Show help menu
+
+[\] chgrp --version
+[/] Show chgrp version
