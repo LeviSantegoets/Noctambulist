@@ -1,0 +1,151 @@
+[X] nano Command List
+
+[\] sudo apt install nano
+[/] Install nano on Debian/Ubuntu
+
+[\] sudo dnf install nano
+[/] Install nano on Fedora
+
+[\] sudo pacman -S nano
+[/] Install nano on Arch Linux
+
+[\] brew install nano
+[/] Install nano on macOS using Homebrew
+
+[\] nano filename.txt
+[/] Open or create file in nano
+
+[\] nano -l filename.txt
+[/] Show line numbers
+
+[\] nano -c filename.txt
+[/] Constantly show cursor position (line/col)
+
+[\] nano -w filename.txt
+[/] Disable line wrapping
+
+[\] nano -B filename.txt
+[/] Create backup file (.save extension)
+
+[\] nano -C /backup/dir filename.txt
+[/] Save backup to specific directory
+
+[\] nano -m filename.txt
+[/] Enable mouse support
+
+[\] nano -i filename.txt
+[/] Auto indent new lines
+
+[\] nano -T 4 filename.txt
+[/] Set tab size to 4 spaces
+
+[\] nano -E filename.txt
+[/] Convert tabs to spaces
+
+[\] nano -S filename.txt
+[/] Enable soft line wrapping
+
+[\] nano -t filename.txt
+[/] Always show key bindings at bottom
+
+[\] nano -v filename.txt
+[/] View mode (read-only)
+
+[\] nano -? filename.txt
+[/] Show help and exit
+
+[\] Ctrl + G
+[/] Show help menu
+
+[\] Ctrl + O
+[/] Save file
+
+[\] Ctrl + X
+[/] Exit nano
+
+[\] Ctrl + W
+[/] Search forward
+
+[\] Ctrl + Q
+[/] Search backward
+
+[\] Ctrl + K
+[/] Cut current line
+
+[\] Ctrl + U
+[/] Paste cut text
+
+[\] Ctrl + J
+[/] Justify paragraph
+
+[\] Ctrl + T
+[/] Check spelling
+
+[\] Ctrl + C
+[/] Show cursor position (line/col)
+
+[\] Ctrl + R
+[/] Insert file
+
+[\] Ctrl + \
+[/] Replace text
+
+[\] Alt + A
+[/] Select text (mark start)
+
+[\] Alt + 6
+[/] Copy selected text
+
+[\] Ctrl + Y
+[/] Go to previous screen
+
+[\] Ctrl + V
+[/] Go to next screen
+
+[\] Alt + /
+[/] Go to end of file
+
+[\] Alt + \
+[/] Go to beginning of file
+
+[\] Alt + G
+[/] Go to specific line number
+
+[\] Ctrl + _
+[/] Go to specific line and column
+
+[\] Ctrl + F
+[/] Move forward one character
+
+[\] Ctrl + B
+[/] Move backward one character
+
+[\] Ctrl + P
+[/] Move up one line
+
+[\] Ctrl + N
+[/] Move down one line
+
+[\] Alt + ]
+[/] Go to matching bracket
+
+[\] Alt + I
+[/] Auto indent toggle
+
+[\] Alt + X
+[/] Help mode toggle
+
+[\] Alt + P
+[/] Whitespace display toggle
+
+[\] Alt + Y
+[/] Color syntax toggle
+
+[\] Ctrl + L
+[/] Refresh screen
+
+[\] nano --help
+[/] Show command line help
+
+[\] nano --version
+[/] Show nano version
