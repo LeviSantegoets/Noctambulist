@@ -1,0 +1,37 @@
+[X] rmdir Command List
+
+[\] rmdir directory
+[/] Remove empty directory
+
+[\] rmdir dir1 dir2 dir3
+[/] Remove multiple empty directories
+
+[\] rmdir -p parent/child/grandchild
+[/] Remove directory and its parent directories (if empty)
+
+[\] rmdir -v directory
+[/] Verbose output (show what is removed)
+
+[\] rmdir --help
+[/] Show help menu
+
+[\] rmdir --version
+[/] Show rmdir version
+
+[\] rmdir --ignore-fail-on-non-empty directory
+[/] Ignore non-empty directory errors (don't exit with error)
+
+[\] rmdir -p -v parent/child/empty_dir
+[/] Remove directory and parents with verbose
+
+[\] rmdir empty_dir 2>/dev/null
+[/] Suppress error message if directory not empty
+
+[\] rmdir $(find . -type d -empty)
+[/] Remove all empty directories in current tree
+
+[\] find . -type d -empty -delete
+[/] Find and delete all empty directories (safer than rmdir)
+
+[\] rmdir -p --ignore-fail-on-non-empty a/b/c
+[/] Remove path but ignore if any directory not empty
