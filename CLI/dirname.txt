@@ -1,0 +1,34 @@
+[X] dirname Command List
+
+[\] dirname /path/to/file.txt
+[/] Strip last component, output directory path
+
+[\] dirname /path/to/directory/
+[/] Strip last component, output parent directory
+
+[\] dirname /path/to/file1.txt /path/to/file2.txt
+[/] Process multiple arguments
+
+[\] dirname --help
+[/] Show help menu
+
+[\] dirname --version
+[/] Show dirname version
+
+[\] dirname -z /path/to/file.txt
+[/] Separate output with null character (not newline)
+
+[\] var=$(dirname /path/to/file.txt)
+[/] Store directory path in variable
+
+[\] for file in /path/*.txt; do dirname "$file"; done
+[/] Loop through files and get their directories
+
+[\] dirname "$(pwd)"
+[/] Get parent directory of current directory
+
+[\] find . -name "*.txt" -exec dirname {} \;
+[/] List all directories containing .txt files
+
+[\] cd "$(dirname /path/to/file.txt)"
+[/] Change to the directory containing the file
