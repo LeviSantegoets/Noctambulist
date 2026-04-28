@@ -1,0 +1,46 @@
+[X] basename Command List
+
+[\] basename /path/to/file.txt
+[/] Strip directory and suffix, output filename
+
+[\] basename /path/to/directory/
+[/] Strip directory, output last component
+
+[\] basename /path/to/file.txt .txt
+[/] Strip directory and remove suffix
+
+[\] basename -a /path/to/file1.txt /path/to/file2.txt
+[/] Process multiple arguments
+
+[\] basename /path/to/file.tar.gz .gz
+[/] Remove suffix (only at end)
+
+[\] basename /path/to/file.txt .txt > output.txt
+[/] Save output to file
+
+[\] basename --help
+[/] Show help menu
+
+[\] basename --version
+[/] Show basename version
+
+[\] basename -s .txt /path/to/file.txt
+[/] Specify suffix to remove (same as argument)
+
+[\] basename -z /path/to/file.txt
+[/] Separate output with null character (not newline)
+
+[\] var=$(basename /path/to/file.txt)
+[/] Store basename in variable
+
+[\] for file in /path/*.txt; do basename "$file" .txt; done
+[/] Loop through files and strip extensions
+
+[\] basename /path/to/archive.tar.gz .tar.gz
+[/] Remove compound extension
+
+[\] basename "$(pwd)"
+[/] Get current directory name (not full path)
+
+[\] find . -name "*.txt" -exec basename {} \;
+[/] List all .txt files without paths
