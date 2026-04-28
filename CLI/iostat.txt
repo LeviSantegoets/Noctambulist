@@ -1,0 +1,103 @@
+[X] iostat Command List
+
+[\] sudo apt install sysstat
+[/] Install iostat on Debian/Ubuntu
+
+[\] sudo dnf install sysstat
+[/] Install iostat on Fedora
+
+[\] sudo pacman -S sysstat
+[/] Install iostat on Arch Linux
+
+[\] brew install sysstat
+[/] Install iostat on macOS using Homebrew
+
+[\] iostat
+[/] Show single report since boot (CPU + disk stats)
+
+[\] iostat 2
+[/] Update every 2 seconds (continuous)
+
+[\] iostat 2 5
+[/] Update every 2 seconds, 5 times only
+
+[\] iostat -c
+[/] Show only CPU statistics
+
+[\] iostat -d
+[/] Show only device/disk statistics
+
+[\] iostat -x
+[/] Show extended disk statistics (svctm, await, %util)
+
+[\] iostat -xd
+[/] Show extended I/O statistics for devices only
+
+[\] iostat -k
+[/] Show statistics in kilobytes per second
+
+[\] iostat -m
+[/] Show statistics in megabytes per second
+
+[\] iostat -t
+[/] Print timestamp for each report
+
+[\] iostat -p sda
+[/] Show statistics for specific device/partition
+
+[\] iostat -p sda sdb
+[/] Show statistics for multiple devices
+
+[\] iostat -p ALL
+[/] Show statistics for all block devices
+
+[\] iostat -N
+[/] Show LVM2 logical volume names
+
+[\] iostat -n
+[/] Show NFS network filesystem statistics
+
+[\] iostat -h
+[/] Show human-readable output (with units)
+
+[\] iostat -j ID sda
+[/] Show statistics using persistent device name
+
+[\] iostat -g GROUP sda sdb
+[/] Group multiple devices for combined report
+
+[\] iostat -y
+[/] Skip first report (since boot), show only interval data
+
+[\] iostat -o JSON
+[/] Output in JSON format
+
+[\] iostat -z
+[/] Skip lines with zero values
+
+[\] iostat -V
+[/] Show iostat version
+
+[\] iostat -d 2 | grep sda
+[/] Filter output for specific device
+
+[\] iostat -x 1
+[/] Watch extended disk stats every second
+
+[\] iostat -x 2 5
+[/] Extended stats, 2 second intervals, 5 reports
+
+[\] iostat -c 2 3
+[/] CPU stats only, every 2 seconds, 3 reports
+
+[\] iostat -t -d 1
+[/] Timestamp + disk stats every second
+
+[\] iostat -x -m sda 2
+[/] Extended stats in MB/s for sda every 2 seconds
+
+[\] iostat --help
+[/] Show help menu
+
+[\] iostat --version
+[/] Show iostat version
