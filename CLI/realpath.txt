@@ -1,0 +1,76 @@
+[X] realpath Command List
+
+[\] sudo apt install realpath
+[/] Install realpath on Debian/Ubuntu (part of coreutils)
+
+[\] sudo dnf install coreutils
+[/] Install realpath on Fedora (often preinstalled)
+
+[\] sudo pacman -S coreutils
+[/] Install realpath on Arch Linux (part of coreutils)
+
+[\] brew install coreutils
+[/] Install realpath on macOS using Homebrew (as grealpath)
+
+[\] realpath file.txt
+[/] Show absolute path of file
+
+[\] realpath /path/to/file.txt
+[/] Resolve absolute path (canonicalize)
+
+[\] realpath -e file.txt
+[/] Require that all components exist (error if missing)
+
+[\] realpath -m file.txt
+[/] Show path even if components don't exist (missing ok)
+
+[\] realpath -q file.txt
+[/] Quiet mode (suppress most error messages)
+
+[\] realpath -s file.txt
+[/] Don't expand symbolic links (keep symlinks in path)
+
+[\] realpath -L file.txt
+[/] Expand symbolic links (follow symlinks, default)
+
+[\] realpath -P file.txt
+[/] Expand symbolic links (follow all symlinks)
+
+[\] realpath -z file.txt
+[/] Separate output with null character (not newline)
+
+[\] realpath -relative-to=/home file.txt
+[/] Show path relative to specified directory
+
+[\] realpath -relative-base=/home /home/user/file.txt
+[/] Show path relative to base if under base, else absolute
+
+[\] realpath --help
+[/] Show help menu
+
+[\] realpath --version
+[/] Show realpath version
+
+[\] realpath -0 file1.txt file2.txt
+[/] Separate output with null (same as -z)
+
+[\] realpath --strip file.txt
+[/] Remove extra slashes and . components
+
+[\] realpath --no-symlinks file.txt
+[/] Don't expand symbolic links (same as -s)
+
+[\] realpath --canonicalize-existing file.txt
+[/] Same as -e (canonicalize with existence check)
+
+[\] realpath --canonicalize-missing file.txt
+[/] Same as -m (canonicalize allowing missing)
+
+[\] realpath --relative-to . file.txt
+[/] Show path relative to current directory
+
+[\] readlink -f file.txt
+[/] Alternative (readlink) to get absolute path
+
+[\] grealpath file.txt
+[/] On macOS (if coreutils installed via brew)
