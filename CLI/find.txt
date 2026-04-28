@@ -1,0 +1,178 @@
+[X] find Command List
+
+[\] find /path -name "filename.txt"
+[/] Find file by exact name
+
+[\] find /path -iname "filename.txt"
+[/] Find file by name (case insensitive)
+
+[\] find /path -type f
+[/] Find only files
+
+[\] find /path -type d
+[/] Find only directories
+
+[\] find /path -type l
+[/] Find only symbolic links
+
+[\] find /path -size +10M
+[/] Find files larger than 10 MB
+
+[\] find /path -size -1G
+[/] Find files smaller than 1 GB
+
+[\] find /path -size 100k
+[/] Find files of exactly 100 KB
+
+[\] find /path -mtime -7
+[/] Find files modified in last 7 days
+
+[\] find /path -mtime +30
+[/] Find files modified more than 30 days ago
+
+[\] find /path -atime -1
+[/] Find files accessed in last 24 hours
+
+[\] find /path -ctime -5
+[/] Find files changed (metadata) in last 5 days
+
+[\] find /path -mmin -60
+[/] Find files modified in last 60 minutes
+
+[\] find /path -amin -30
+[/] Find files accessed in last 30 minutes
+
+[\] find /path -newer reference.txt
+[/] Find files newer than reference file
+
+[\] find /path -empty
+[/] Find empty files and directories
+
+[\] find /path -user username
+[/] Find files owned by specific user
+
+[\] find /path -group groupname
+[/] Find files owned by specific group
+
+[\] find /path -perm 644
+[/] Find files with exact permissions
+
+[\] find /path -perm -644
+[/] Find files with at least these permissions
+
+[\] find /path -perm /222
+[/] Find files writable by anyone
+
+[\] find /path -executable
+[/] Find executable files
+
+[\] find /path -readable
+[/] Find readable files
+
+[\] find /path -writable
+[/] Find writable files
+
+[\] find /path -name "*.txt" -exec ls -la {} \;
+[/] Execute command on each found file
+
+[\] find /path -name "*.log" -exec rm {} \;
+[/] Delete found files
+
+[\] find /path -name "*.txt" -exec grep "search" {} \;
+[/] Search inside found files
+
+[\] find /path -name "*.jpg" -exec mv {} /images/ \;
+[/] Move found files to another directory
+
+[\] find /path -name "*.tmp" -delete
+[/] Delete found files (faster than -exec rm)
+
+[\] find /path -type f -printf "%p %s\n"
+[/] Print filename and size
+
+[\] find /path -type f -ls
+[/] List files with detailed info (like ls -l)
+
+[\] find /path -name "*.txt" -print0 | xargs -0 grep "search"
+[/] Found files to xargs (handles spaces in names)
+
+[\] find /path -maxdepth 2 -name "*.txt"
+[/] Search only 2 levels deep
+
+[\] find /path -mindepth 3 -type f
+[/] Start search at depth 3
+
+[\] find /path -name "*.txt" -o -name "*.log"
+[/] Find files with OR condition
+
+[\] find /path -name "*.txt" -a -size +1M
+[/] Find files with AND condition (default)
+
+[\] find /path ! -name "*.txt"
+[/] Find files NOT matching pattern
+
+[\] find /path -regex ".*\.txt$"
+[/] Find using regular expression
+
+[\] find /path -iregex ".*\.txt$"
+[/] Find using regex (case insensitive)
+
+[\] find /path -links +1
+[/] Find files with more than 1 hard link
+
+[\] find /path -inum 123456
+[/] Find file by inode number
+
+[\] find /path -samefile /other/file
+[/] Find hard links to same inode
+
+[\] find /path -path "*/temp/*"
+[/] Find files containing 'temp' in path
+
+[\] find /path -size +10M -exec gzip {} \;
+[/] Compress large files
+
+[\] find /path -type f -name "*.sh" -exec chmod +x {} \;
+[/] Make all .sh files executable
+
+[\] find /path -type d -empty -delete
+[/] Delete all empty directories
+
+[\] find /path -type f -name "*.log" -exec truncate -s 0 {} \;
+[/] Empty all log files (keep them)
+
+[\] find /path -type f -printf "%T@ %p\n" | sort -n | tail -1
+[/] Find most recently modified file
+
+[\] find /path -type f -size 0 -delete
+[/] Delete all zero-byte files
+
+[\] find /path -type f -exec file {} \;
+[/] Determine file types in directory
+
+[\] find /path -type f -name "*.mp3" -exec mv {} ~/music/ \;
+[/] Move all MP3 files to music folder
+
+[\] find /path -depth -empty -delete
+[/] Delete empty directories after checking inside
+
+[\] find /usr -type f -perm -u+s
+[/] Find files with SUID bit set
+
+[\] find / -type f -perm -4000 2>/dev/null
+[/] Find SUID files (ignore errors)
+
+[\] find /home -type f -user root
+[/] Find files owned by root in /home
+
+[\] find . -type f -newer file1 ! -newer file2
+[/] Find files between two timestamps
+
+[\] find /path -size +100M -printf "%s %p\n" | sort -n
+[/] Sort large files by size
+
+[\] find --help
+[/] Show help menu
+
+[\] find --version
+[/] Show find version
