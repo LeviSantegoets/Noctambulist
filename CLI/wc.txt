@@ -1,0 +1,64 @@
+[X] wc Command List
+
+[\] sudo apt install coreutils
+[/] Install wc on Debian/Ubuntu
+
+[\] sudo dnf install coreutils
+[/] Install wc on Fedora
+
+[\] sudo pacman -S coreutils
+[/] Install wc on Arch Linux
+
+[\] brew install coreutils
+[/] Install GNU wc on macOS using Homebrew
+
+[\] wc file.txt
+[/] Show lines, words, and bytes in file
+
+[\] wc -l file.txt
+[/] Count lines in file
+
+[\] wc -w file.txt
+[/] Count words in file
+
+[\] wc -c file.txt
+[/] Count bytes in file
+
+[\] wc -m file.txt
+[/] Count characters in file
+
+[\] wc -L file.txt
+[/] Show length of longest line
+
+[\] wc file1.txt file2.txt
+[/] Count multiple files and show totals
+
+[\] cat file.txt | wc -l
+[/] Count lines from piped input
+
+[\] echo "hello world" | wc -w
+[/] Count words from input
+
+[\] ls | wc -l
+[/] Count items in current directory
+
+[\] ps aux | wc -l
+[/] Count running processes listed
+
+[\] grep "error" log.txt | wc -l
+[/] Count matching lines
+
+[\] find . -type f | wc -l
+[/] Count files recursively
+
+[\] du -sh * | wc -l
+[/] Count listed disk usage entries
+
+[\] wc --files0-from=list.txt
+[/] Read NUL-delimited file list
+
+[\] wc --help
+[/] Show help menu
+
+[\] wc --version
+[/] Show wc version
