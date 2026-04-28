@@ -1,0 +1,175 @@
+[X] screen Command List
+
+[\] sudo apt install screen
+[/] Install screen on Debian/Ubuntu
+
+[\] sudo dnf install screen
+[/] Install screen on Fedora
+
+[\] sudo pacman -S screen
+[/] Install screen on Arch Linux
+
+[\] brew install screen
+[/] Install screen on macOS using Homebrew
+
+[\] screen
+[/] Start a new screen session
+
+[\] screen -S sessionname
+[/] Start new session with custom name
+
+[\] screen -ls
+[/] List all screen sessions
+
+[\] screen -r sessionname
+[/] Reattach to a detached session
+
+[\] screen -r 1234
+[/] Reattach to session by PID
+
+[\] screen -d -r sessionname
+[/] Detach running session and reattach (force)
+
+[\] screen -x sessionname
+[/] Attach to session in multi-display mode
+
+[\] screen -S sessionname -X command
+[/] Send command to screen session
+
+[\] screen -dmS sessionname
+[/] Start detached session (background)
+
+[\] screen -dmS sessionname command
+[/] Start detached session and run command
+
+[\] screen -q -r sessionname
+[/] Quietly reattach (no error if not existing)
+
+[\] screen -wipe
+[/] Remove dead/missing sessions
+
+[\] Ctrl + A + C
+[/] Create new window
+
+[\] Ctrl + A + N
+[/] Switch to next window
+
+[\] Ctrl + A + P
+[/] Switch to previous window
+
+[\] Ctrl + A + 0-9
+[/] Switch to window number 0-9
+
+[\] Ctrl + A + "
+[/] List all windows (interactive)
+
+[\] Ctrl + A + W
+[/] Show window list in status bar
+
+[\] Ctrl + A + A
+[/] Switch to previous window (toggle)
+
+[\] Ctrl + A + D
+[/] Detach from session (leave running)
+
+[\] Ctrl + A + K
+[/] Kill current window
+
+[\] Ctrl + A + \
+[/] Kill all windows and terminate session
+
+[\] Ctrl + A + ?
+[/] Show help menu (key bindings)
+
+[\] Ctrl + A + S
+[/] Split screen horizontally
+
+[\] Ctrl + A + |
+[/] Split screen vertically
+
+[\] Ctrl + A + Tab
+[/] Switch to next split region
+
+[\] Ctrl + A + Q
+[/] Remove all splits (keep current region)
+
+[\] Ctrl + A + X
+[/] Remove current split region
+
+[\] Ctrl + A + H
+[/] Toggle logging (create screenlog.0)
+
+[\] Ctrl + A + H
+[/] Start/stop logging to file
+
+[\] Ctrl + A + L
+[/] Refresh screen
+
+[\] Ctrl + A + F
+[/] Enter flow control mode
+
+[\] Ctrl + A + R
+[/] Repeat last command
+
+[\] Ctrl + A + V
+[/] Enter digraph mode
+
+[\] Ctrl + A + T
+[/] Show system info (load, uptime)
+
+[\] Ctrl + A + I
+[/] Show window info
+
+[\] Ctrl + A + M
+[/] Monitor window (alert on activity)
+
+[\] Ctrl + A + _
+[/] Enter monitor mode on window
+
+[\] Ctrl + A + Z
+[/] Suspend screen (fg to resume)
+
+[\] Ctrl + A + (
+[/] Show history buffer (scrollback)
+
+[\] Ctrl + A + ]
+[/] Enter copy/scrollback mode
+
+[\] Ctrl + A + }
+[/] Paste from buffer
+
+[\] Ctrl + A + >
+[/] Write buffer to file
+
+[\] Ctrl + A + <
+[/] Read buffer from file
+
+[\] Ctrl + A + :
+[/] Enter command mode
+
+[\] screen -S sessionname -p windowname -X stuff "command\n"
+[/] Send keystrokes to specific window
+
+[\] screen -S sessionname -X eval 'chdir /path' 'screen command'
+[/] Create window in specific directory
+
+[\] echo 'logfile /tmp/screen.log' > ~/.screenrc
+[/] Set log file location in config
+
+[\] defscrollback 10000
+[/] Set scrollback buffer size (in .screenrc)
+
+[\] terminfo xterm 'hs:tsl=\E[?E\E[?E'
+[/] Hardstatus line configuration
+
+[\] caption always
+[/] Show always-visible caption (in .screenrc)
+
+[\] hardstatus alwayslastline
+[/] Show hardstatus as last line
+
+[\] screen --help
+[/] Show command line help
+
+[\] screen --version
+[/] Show screen version
