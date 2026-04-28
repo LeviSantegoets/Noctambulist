@@ -1,0 +1,109 @@
+[X] stat Command List
+
+[\] stat file.txt
+[/] Show detailed file information
+
+[\] stat /path/to/directory
+[/] Show detailed directory information
+
+[\] stat -f file.txt
+[/] Show filesystem information (not file info)
+
+[\] stat -c "%a" file.txt
+[/] Show file permissions in octal (e.g., 755)
+
+[\] stat -c "%A" file.txt
+[/] Show file permissions in symbolic (e.g., -rw-r--r--)
+
+[\] stat -c "%n %s %y" file.txt
+[/] Show filename, size, and modification time
+
+[\] stat -c "%U %G" file.txt
+[/] Show owner and group name
+
+[\] stat -c "%u %g" file.txt
+[/] Show owner and group ID
+
+[\] stat -c "%F" file.txt
+[/] Show file type (regular file, directory, symlink)
+
+[\] stat -c "%i" file.txt
+[/] Show inode number
+
+[\] stat -c "%h" file.txt
+[/] Show number of hard links
+
+[\] stat -c "%Y" file.txt
+[/] Show modification time as Unix timestamp
+
+[\] stat -c "%X" file.txt
+[/] Show access time as Unix timestamp
+
+[\] stat -c "%Z" file.txt
+[/] Show change time as Unix timestamp
+
+[\] stat -c "%b" file.txt
+[/] Show number of blocks allocated
+
+[\] stat -c "%B" file.txt
+[/] Show block size in bytes
+
+[\] stat -c "%o" file.txt
+[/] Show optimal I/O block size
+
+[\] stat -c "%s" file.txt
+[/] Show total file size in bytes
+
+[\] stat --printf="%n\n" file.txt
+[/] Print format without automatic newline
+
+[\] stat -t file.txt
+[/] Show file info in terse format (one line)
+
+[\] stat -f -c "%T" /dev/sda1
+[/] Show filesystem type (ext4, xfs, etc.)
+
+[\] stat -f -c "%S" /home
+[/] Show fundamental block size of filesystem
+
+[\] stat -f -c "%a" /home
+[/] Show free blocks for unprivileged users
+
+[\] stat -f -c "%f" /home
+[/] Show free blocks for privileged user
+
+[\] stat -f -c "%b" /home
+[/] Show total data blocks
+
+[\] stat -f -c "%u" /home
+[/] Show total inodes
+
+[\] stat -f -c "%d" /home
+[/] Show free inodes for unprivileged users
+
+[\] stat -f -c "%n" /home
+[/] Show mount point name
+
+[\] stat -c "%y" file.txt | cut -d'.' -f1
+[/] Show modification time without nanoseconds
+
+[\] stat -L symlink.txt
+[/] Follow symbolic links (show target info)
+
+[\] stat --help
+[/] Show help menu
+
+[\] stat --version
+[/] Show stat version
+
+[\] stat -c "%w" file.txt
+[/] Show birth/creation time (if supported)
+
+[\] stat -c "%W" file.txt
+[/] Show birth time as Unix timestamp
+
+[\] stat --format="%n: %s bytes" file.txt
+[/] Use long format option
+
+[\] stat --dereference symlink.txt
+[/] Same as -L (follow symlinks)
