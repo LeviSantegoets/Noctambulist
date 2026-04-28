@@ -1,0 +1,76 @@
+[X] unzip Command List
+
+[\] sudo apt install unzip
+[/] Install unzip on Debian/Ubuntu
+
+[\] sudo dnf install unzip
+[/] Install unzip on Fedora
+
+[\] sudo pacman -S unzip
+[/] Install unzip on Arch Linux
+
+[\] brew install unzip
+[/] Install unzip on macOS using Homebrew
+
+[\] unzip archive.zip
+[/] Extract all files from archive
+
+[\] unzip archive.zip -d /target/dir
+[/] Extract to specific directory
+
+[\] unzip archive.zip file.txt
+[/] Extract a single file
+
+[\] unzip archive.zip "*.txt"
+[/] Extract files matching pattern
+
+[\] unzip -l archive.zip
+[/] List contents of archive without extracting
+
+[\] unzip -v archive.zip
+[/] Verbose list of archive contents
+
+[\] unzip -t archive.zip
+[/] Test archive integrity
+
+[\] unzip -j archive.zip
+[/] Junk paths (extract without directory structure)
+
+[\] unzip -n archive.zip
+[/] Never overwrite existing files
+
+[\] unzip -o archive.zip
+[/] Overwrite existing files without prompting
+
+[\] unzip -q archive.zip
+[/] Quiet mode
+
+[\] unzip -p archive.zip file.txt
+[/] Extract to stdout (pipe to another command)
+
+[\] unzip -P password archive.zip
+[/] Extract encrypted zip with password (less secure)
+
+[\] unzip -x archive.zip "*.log"
+[/] Exclude files matching pattern
+
+[\] unzip -d /target/dir -o archive.zip
+[/] Extract to directory and overwrite
+
+[\] unzip -Z archive.zip
+[/] Show zipinfo (like 'ls -l' for zip)
+
+[\] unzip -Z1 archive.zip
+[/] List only filenames (no extra info)
+
+[\] unzip -l archive.zip "*.jpg"
+[/] List specific files matching pattern
+
+[\] unzip -d /backup/ restore.zip -x "*.tmp"
+[/] Extract all except temporary files
+
+[\] unzip --help
+[/] Show help menu
+
+[\] unzip --version
+[/] Show unzip version
