@@ -1,0 +1,79 @@
+[X] df Command List
+
+[\] df
+[/] Show disk space usage for all mounted filesystems
+
+[\] df -h
+[/] Show disk usage in human-readable format (KB, MB, GB)
+
+[\] df -H
+[/] Show disk usage in powers of 1000 (SI units)
+
+[\] df -k
+[/] Show disk usage in kilobytes
+
+[\] df -m
+[/] Show disk usage in megabytes
+
+[\] df -g
+[/] Show disk usage in gigabytes
+
+[\] df -T
+[/] Show filesystem type
+
+[\] df -t ext4
+[/] Show only filesystems of type ext4
+
+[\] df -x tmpfs
+[/] Exclude filesystems of type tmpfs
+
+[\] df -a
+[/] Show all filesystems (including dummy/proc)
+
+[\] df -l
+[/] Show only local filesystems (exclude network)
+
+[\] df -h --total
+[/] Show total summary at bottom
+
+[\] df -i
+[/] Show inode usage instead of block usage
+
+[\] df -P
+[/] Use POSIX output format (no line breaks)
+
+[\] df -B M
+[/] Scale block sizes to 1MB
+
+[\] df -B G
+[/] Scale block sizes to 1GB
+
+[\] df --sync
+[/] Run sync before gathering stats (more accurate)
+
+[\] df --no-sync
+[/] Do not sync before gathering stats (default)
+
+[\] df /dev/sda1
+[/] Show usage for specific partition
+
+[\] df /home
+[/] Show usage for specific mount point
+
+[\] df -h /home /var
+[/] Show usage for multiple directories
+
+[\] df -h --output=source,size,used,avail,pcent
+[/] Show only specified columns
+
+[\] df -h --output=source,size,used,avail,pcent,target
+[/] Show all common columns
+
+[\] df -h --direct
+[/] Show statistics for each directory
+
+[\] df --help
+[/] Show help menu
+
+[\] df --version
+[/] Show df version
