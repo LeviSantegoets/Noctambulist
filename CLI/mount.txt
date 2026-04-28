@@ -1,0 +1,160 @@
+[X] mount Command List
+
+[\] mount
+[/] Show all mounted filesystems
+
+[\] mount -l
+[/] Show all mounts with labels
+
+[\] mount -t ext4
+[/] Show only ext4 filesystems
+
+[\] mount /dev/sda1 /mnt
+[/] Mount partition to directory
+
+[\] mount /dev/sda1
+[/] Mount to default mount point (in /etc/fstab)
+
+[\] umount /mnt
+[/] Unmount filesystem
+
+[\] umount /dev/sda1
+[/] Unmount by device name
+
+[\] mount -o ro /dev/sda1 /mnt
+[/] Mount as read-only
+
+[\] mount -o rw /dev/sda1 /mnt
+[/] Mount as read-write (default)
+
+[\] mount -o noexec /dev/sda1 /mnt
+[/] Prevent execution of binaries
+
+[\] mount -o exec /dev/sda1 /mnt
+[/] Allow execution of binaries
+
+[\] mount -o nosuid /dev/sda1 /mnt
+[/] Disable SUID/SGID bits
+
+[\] mount -o nodev /dev/sda1 /mnt
+[/] Disable device files
+
+[\] mount -o remount,rw /mnt
+[/] Remount already mounted filesystem (change options)
+
+[\] mount -o remount,ro /mnt
+[/] Remount as read-only
+
+[\] mount -o loop image.iso /mnt
+[/] Mount ISO file as loop device
+
+[\] mount -t ntfs-3g /dev/sda1 /mnt
+[/] Mount NTFS partition with read-write support
+
+[\] mount -t vfat /dev/sda1 /mnt
+[/] Mount FAT32 partition
+
+[\] mount -t ext4 /dev/sda1 /mnt
+[/] Mount ext4 partition
+
+[\] mount -t exfat /dev/sda1 /mnt
+[/] Mount exFAT partition
+
+[\] mount -t nfs server:/share /mnt
+[/] Mount NFS share
+
+[\] mount -t cifs //server/share /mnt -o username=user
+[/] Mount CIFS/SMB share with username
+
+[\] mount -t cifs //server/share /mnt -o credentials=/path/creds
+[/] Mount SMB share using credentials file
+
+[\] mount -o uid=1000,gid=1000 /dev/sda1 /mnt
+[/] Set owner UID and GID
+
+[\] mount -o umask=022 /dev/sda1 /mnt
+[/] Set umask for files/directories
+
+[\] mount -o fmask=133,dmask=022 /dev/sda1 /mnt
+[/] Set separate permissions for files and dirs
+
+[\] mount -o sync /dev/sda1 /mnt
+[/] Write changes immediately (slower)
+
+[\] mount -o async /dev/sda1 /mnt
+[/] Write changes asynchronously (default)
+
+[\] mount -o atime /dev/sda1 /mnt
+[/] Update access time (default)
+
+[\] mount -o noatime /dev/sda1 /mnt
+[/] Do not update access time (faster)
+
+[\] mount -o relatime /dev/sda1 /mnt
+[/] Update access time relative to modification
+
+[\] mount -o disk /dev/sda1 /mnt
+[/] Use disk as storage (default for block devices)
+
+[\] mount -o bind /source /dest
+[/] Bind mount existing directory to new location
+
+[\] mount --bind /home/user /mnt/user
+[/] Bind mount directory
+
+[\] mount -o rbind /source /dest
+[/] Recursive bind mount
+
+[\] mount --move /oldpath /newpath
+[/] Move mount to another directory
+
+[\] mount --make-shared /mnt
+[/] Mark mount as shared
+
+[\] mount --make-slave /mnt
+[/] Mark mount as slave
+
+[\] mount --make-private /mnt
+[/] Mark mount as private (default)
+
+[\] mount --make-unbindable /mnt
+[/] Mark mount as unbindable
+
+[\] mount -a
+[/] Mount all filesystems in /etc/fstab
+
+[\] mount -a -t ntfs,vfat
+[/] Mount only specific types from fstab
+
+[\] mount -a -O no_netdev
+[/] Mount only filesystems without no_netdev option
+
+[\] mount -f
+[/] Fake mount (dry run, see what would happen)
+
+[\] mount -n
+[/] Mount without writing to /etc/mtab
+
+[\] mount -v
+[/] Verbose output
+
+[\] mount -w
+[/] Mount read-write (default)
+
+[\] mount -o _netdev /dev/sda1 /mnt
+[/] Mount is network filesystem
+
+[\] mount --help
+[/] Show help menu
+
+[\] mount --version
+[/] Show mount version
+
+[\] umount -l /mnt
+[/] Lazy unmount (detach when no longer busy)
+
+[\] umount -f /mnt
+[/] Force unmount (for NFS or busy devices)
+
+[\] umount -a
+[/] Unmount all filesystems in /etc/mtab
