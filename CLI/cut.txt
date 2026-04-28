@@ -1,0 +1,73 @@
+[X] cut Command List
+
+[\] sudo apt install coreutils
+[/] Install cut on Debian/Ubuntu
+
+[\] sudo dnf install coreutils
+[/] Install cut on Fedora
+
+[\] sudo pacman -S coreutils
+[/] Install cut on Arch Linux
+
+[\] brew install coreutils
+[/] Install GNU cut on macOS using Homebrew
+
+[\] cut -c1-5 file.txt
+[/] Extract characters 1 through 5 from each line
+
+[\] cut -c1,3,5 file.txt
+[/] Extract specific character positions
+
+[\] cut -c3- file.txt
+[/] Extract from character 3 to end
+
+[\] cut -c-4 file.txt
+[/] Extract first 4 characters
+
+[\] cut -d: -f1 /etc/passwd
+[/] Extract first field using colon delimiter
+
+[\] cut -d: -f1,7 /etc/passwd
+[/] Extract multiple fields
+
+[\] cut -d: -f2-4 file.txt
+[/] Extract field range
+
+[\] cut -d, -f1 data.csv
+[/] Extract first CSV column
+
+[\] cut -d, -f2- data.csv
+[/] Extract from second CSV column to end
+
+[\] cut -f1 file.tsv
+[/] Extract first tab-delimited field
+
+[\] cut --complement -d: -f1 /etc/passwd
+[/] Show all fields except first
+
+[\] cut -s -d: -f1 file.txt
+[/] Suppress lines without delimiter
+
+[\] ps aux | cut -d' ' -f1
+[/] Extract first space-delimited field
+
+[\] echo "hello" | cut -c1-2
+[/] Extract first two characters from input
+
+[\] cat file.txt | cut -c1-10
+[/] Extract first 10 characters from each line
+
+[\] netstat -tulpn | cut -c1-20
+[/] Trim output columns by character width
+
+[\] cut --output-delimiter=" | " -d, -f1,2 data.csv
+[/] Use custom output delimiter
+
+[\] cut -z -d: -f1 file.txt
+[/] Use NUL as line delimiter
+
+[\] cut --help
+[/] Show help menu
+
+[\] cut --version
+[/] Show cut version
