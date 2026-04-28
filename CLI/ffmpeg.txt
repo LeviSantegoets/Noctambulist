@@ -1,0 +1,217 @@
+[X] ffmpeg Command List
+
+[\] sudo apt install ffmpeg
+[/] Install ffmpeg on Debian/Ubuntu
+
+[\] sudo dnf install ffmpeg
+[/] Install ffmpeg on Fedora
+
+[\] sudo pacman -S ffmpeg
+[/] Install ffmpeg on Arch Linux
+
+[\] brew install ffmpeg
+[/] Install ffmpeg on macOS using Homebrew
+
+[\] ffmpeg -i input.mp4 output.avi
+[/] Convert video format
+
+[\] ffmpeg -i input.mp4 -c copy output.mp4
+[/] Copy codec without re-encoding
+
+[\] ffmpeg -i input.mp4 -c:v libx264 output.mp4
+[/] Encode video with H.264 codec
+
+[\] ffmpeg -i input.mp4 -c:v libx265 output.mp4
+[/] Encode video with H.265/HEVC codec
+
+[\] ffmpeg -i input.mp4 -crf 23 output.mp4
+[/] Set quality (0-51, lower is better, default 23)
+
+[\] ffmpeg -i input.mp4 -b:v 1M output.mp4
+[/] Set video bitrate to 1 Mbps
+
+[\] ffmpeg -i input.mp4 -preset faster output.mp4
+[/] Set encoding speed (ultrafast to veryslow)
+
+[\] ffmpeg -i input.mp3 output.wav
+[/] Convert audio format
+
+[\] ffmpeg -i input.mp4 -vn output.mp3
+[/] Extract audio from video
+
+[\] ffmpeg -i input.mp4 -c:a libmp3lame -b:a 192k output.mp3
+[/] Extract audio with MP3 codec and bitrate
+
+[\] ffmpeg -i input.mp4 -ss 00:01:30 -to 00:02:30 output.mp4
+[/] Trim video from 1:30 to 2:30
+
+[\] ffmpeg -i input.mp4 -ss 00:01:30 -t 60 output.mp4
+[/] Trim video starting at 1:30 for 60 seconds
+
+[\] ffmpeg -i input.mp4 -vf "scale=1920:1080" output.mp4
+[/] Resize video to 1920x1080
+
+[\] ffmpeg -i input.mp4 -vf "scale=1280:-1" output.mp4
+[/] Resize to 1280 width, keep aspect ratio
+
+[\] ffmpeg -i input.mp4 -vf "fps=30" output.mp4
+[/] Change frame rate to 30 fps
+
+[\] ffmpeg -i input.mp4 -r 24 output.mp4
+[/] Set frame rate to 24 fps (input or output)
+
+[\] ffmpeg -i input.mp4 -vf "rotate=90" output.mp4
+[/] Rotate video 90 degrees
+
+[\] ffmpeg -i input.mp4 -vf "crop=1280:720:100:100" output.mp4
+[/] Crop video (width:height:x:y)
+
+[\] ffmpeg -i input.mp4 -vf "hflip" output.mp4
+[/] Flip video horizontally
+
+[\] ffmpeg -i input.mp4 -vf "vflip" output.mp4
+[/] Flip video vertically
+
+[\] ffmpeg -i input.mp4 -vf "drawtext=text='Hello':x=10:y=10:fontsize=24" output.mp4
+[/] Add text overlay
+
+[\] ffmpeg -i input.mp4 -i logo.png -filter_complex "overlay=10:10" output.mp4
+[/] Overlay image on video
+
+[\] ffmpeg -i input1.mp4 -i input2.mp4 -filter_complex "concat=n=2:v=1:a=1" output.mp4
+[/] Concatenate two videos
+
+[\] ffmpeg -i input.mp4 -vf "thumbnail" -frames:v 1 thumbnail.png
+[/] Extract thumbnail frame
+
+[\] ffmpeg -i input.mp4 -vf "fps=1/60" frame-%03d.jpg
+[/] Extract frame every 60 seconds
+
+[\] ffmpeg -i input.mp4 -vf "fps=1" frame-%04d.png
+[/] Extract 1 frame per second as image sequence
+
+[\] ffmpeg -i input.mp4 -an -vcodec libx264 -preset ultrafast output.mp4
+[/] Remove audio stream
+
+[\] ffmpeg -i input.mp4 -vcodec copy -an output.mp4
+[/] Remove audio without re-encoding
+
+[\] ffmpeg -i input.mp4 -c copy -map 0 -map -0:a:0 output.mp4
+[/] Remove first audio stream
+
+[\] ffmpeg -i input.mp4 -vf "reverse" reversed.mp4
+[/] Reverse video
+
+[\] ffmpeg -i input.mp4 -filter_complex "[0:v]reverse[v];[0:a]areverse[a]" -map "[v]" -map "[a]" reversed.mp4
+[/] Reverse video and audio
+
+[\] ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" fast.mp4
+[/] Speed up video (2x)
+
+[\] ffmpeg -i input.mp4 -vf "setpts=2*PTS" slow.mp4
+[/] Slow down video (0.5x)
+
+[\] ffmpeg -i input.mp4 -loop 1 -i image.jpg -filter_complex "overlay=W-w-10:H-h-10" output.mp4
+[/] Add watermark image
+
+[\] ffmpeg -i input.mp4 -vf "noise=alls=20:allf=t" noisy.mp4
+[/] Add noise effect
+
+[\] ffmpeg -i input.mp4 -vf "blackdetect=d=1" -f null -
+[/] Detect black scenes
+
+[\] ffmpeg -i input.mp4 -vf "silencedetect=noise=-30dB:d=0.5" -f null -
+[/] Detect silence in audio
+
+[\] ffmpeg -i input.mp4 -c:v libx264 -profile:v baseline -level 3.0 -c:a aac output.mp4
+[/] Encode for mobile/browser compatibility
+
+[\] ffmpeg -i input.mp4 -movflags faststart output.mp4
+[/] Enable fast start (metadata at beginning)
+
+[\] ffmpeg -i input.mp4 -fs 10MB output.mp4
+[/] Limit output file size to 10 MB
+
+[\] ffmpeg -i input.mp4 -g 12 -keyint_min 12 -sc_threshold 0 output.mp4
+[/] Set GOP size to 12 frames
+
+[\] ffmpeg -i input.mp4 -map 0:v -c:v copy -bsf h264_mp4toannexb raw.h264
+[/] Extract raw H.264 stream
+
+[\] ffmpeg -i input.mp4 -vsync 0 -vcodec copy -f nut -
+[/] Output to stdout as nut format
+
+[\] ffmpeg -i input.mp4 -ss 00:01:00 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 output.mp4
+[/] Replace audio track with external file
+
+[\] ffmpeg -i input.mp4 -vf "fade=in:0:30,fade=out:150:30" output.mp4
+[/] Add fade in (30 frames) and fade out
+
+[\] ffmpeg -i input.mp4 -af "volume=2.0" loud.mp4
+[/] Double audio volume
+
+[\] ffmpeg -i input.mp4 -af "volume=0.5" quiet.mp4
+[/] Halve audio volume
+
+[\] ffmpeg -i input.mp4 -af "lowpass=3000" filtered.mp4
+[/] Apply lowpass audio filter (3000 Hz)
+
+[\] ffmpeg -i input.mp4 -vf "subtitles=subs.srt" output.mp4
+[/] Burn subtitles into video
+
+[\] ffmpeg -i input.mp4 -i subs.srt -c copy -c:s mov_text output.mp4
+[/] Add soft subtitles (selectable)
+
+[\] ffmpeg -i input.mp4 -an -vcodec copy -f mpegts -
+[/] Output to stdout as MPEG-TS
+
+[\] ffmpeg -i input.mp4 2>&1 | grep "Duration"
+[/] Get video duration without output file
+
+[\] ffmpeg -i input.mp4 -f null -
+[/] Get frame and encoding statistics
+
+[\] ffmpeg -encoders
+[/] List all available encoders
+
+[\] ffmpeg -decoders
+[/] List all available decoders
+
+[\] ffmpeg -muxers
+[/] List all available muxers
+
+[\] ffmpeg -demuxers
+[/] List all available demuxers
+
+[\] ffmpeg -filters
+[/] List all available filters
+
+[\] ffmpeg -formats
+[/] List all supported formats
+
+[\] ffmpeg -codecs
+[/] List all supported codecs
+
+[\] ffmpeg -pix_fmts
+[/] List all supported pixel formats
+
+[\] ffmpeg -h encoder=libx264
+[/] Show help for specific encoder
+
+[\] ffmpeg -h filter=scale
+[/] Show help for specific filter
+
+[\] ffmpeg -version
+[/] Show ffmpeg version information
+
+[\] ffmpeg -loglevel quiet -i input.mp4
+[/] Suppress all log output
+
+[\] ffmpeg -loglevel error -i input.mp4 output.mp4
+[/] Show only errors
+
+[\] ffmpeg -stats -i input.mp4 output.mp4
+[/] Show encoding progress statistics
+
+[\] ffmpeg -progress pipe:1 -i input.mp4 output.mp4
+[/] Output progress info to stdout
