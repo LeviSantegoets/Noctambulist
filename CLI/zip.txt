@@ -1,0 +1,73 @@
+[X] zip Command List
+
+[\] sudo apt install zip
+[/] Install zip on Debian/Ubuntu
+
+[\] sudo dnf install zip
+[/] Install zip on Fedora
+
+[\] sudo pacman -S zip
+[/] Install zip on Arch Linux
+
+[\] brew install zip
+[/] Install zip on macOS using Homebrew
+
+[\] zip archive.zip file.txt
+[/] Create zip archive from file
+
+[\] zip archive.zip file1.txt file2.txt
+[/] Add multiple files to archive
+
+[\] zip -r archive.zip folder/
+[/] Recursively zip a folder
+
+[\] zip -9 archive.zip file.txt
+[/] Use maximum compression
+
+[\] zip -0 archive.zip file.txt
+[/] Store without compression
+
+[\] zip -u archive.zip file.txt
+[/] Update changed file in archive
+
+[\] zip -d archive.zip file.txt
+[/] Delete file from archive
+
+[\] zip -m archive.zip file.txt
+[/] Move file into archive and delete original
+
+[\] zip -j archive.zip folder/file.txt
+[/] Junk paths and store filename only
+
+[\] zip -e archive.zip file.txt
+[/] Encrypt archive with password prompt
+
+[\] zip -P password archive.zip file.txt
+[/] Set password directly (less secure)
+
+[\] zip -r archive.zip folder/ -x "*.log"
+[/] Exclude files by pattern
+
+[\] zip -T archive.zip
+[/] Test archive integrity
+
+[\] zip -sf archive.zip
+[/] Show files inside archive
+
+[\] zip -F broken.zip --out fixed.zip
+[/] Attempt to fix damaged archive
+
+[\] zip -q archive.zip file.txt
+[/] Quiet mode
+
+[\] zip -v archive.zip file.txt
+[/] Verbose output
+
+[\] zip -r backup.zip /home/user
+[/] Create recursive backup archive
+
+[\] zip --help
+[/] Show help menu
+
+[\] zip --version
+[/] Show zip version
