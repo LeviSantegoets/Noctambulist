@@ -1,0 +1,145 @@
+[X] kill Command List
+
+[\] kill PID
+[/] Send SIGTERM (terminate signal) to process
+
+[\] kill -9 PID
+[/] Force kill process (SIGKILL, cannot be caught)
+
+[\] kill -15 PID
+[/] Terminate gracefully (SIGTERM, default)
+
+[\] kill -1 PID
+[/] Send SIGHUP (hangup, often reload config)
+
+[\] kill -2 PID
+[/] Send SIGINT (interrupt, like Ctrl+C)
+
+[\] kill -3 PID
+[/] Send SIGQUIT (quit with core dump)
+
+[\] kill -8 PID
+[/] Send SIGFPE (floating point exception)
+
+[\] kill -11 PID
+[/] Send SIGSEGV (segmentation fault)
+
+[\] kill -18 PID
+[/] Send SIGCONT (continue paused process)
+
+[\] kill -19 PID
+[/] Send SIGSTOP (pause process, cannot be caught)
+
+[\] kill -20 PID
+[/] Send SIGTSTP (stop from terminal, like Ctrl+Z)
+
+[\] kill -TERM PID
+[/] Send SIGTERM using signal name
+
+[\] kill -KILL PID
+[/] Send SIGKILL (force kill) using name
+
+[\] kill -HUP PID
+[/] Send SIGHUP using name
+
+[\] kill -USR1 PID
+[/] Send user-defined signal 1
+
+[\] kill -USR2 PID
+[/] Send user-defined signal 2
+
+[\] kill -l
+[/] List all available signal names
+
+[\] kill -l 9
+[/] Show signal name for signal number 9 (KILL)
+
+[\] kill -L
+[/] List signals in a table format
+
+[\] kill PID1 PID2 PID3
+[/] Send SIGTERM to multiple PIDs
+
+[\] echo $?
+[/] Check exit code of kill (0=success, 1=failure)
+
+[\] kill -0 PID
+[/] Check if process exists (no signal sent)
+
+[\] killall process_name
+[/] Kill all processes by name
+
+[\] killall -9 process_name
+[/] Force kill all processes by name
+
+[\] killall -u username process_name
+[/] Kill process by user and name
+
+[\] killall -s SIGTERM process_name
+[/] Send specific signal to all named processes
+
+[\] killall -i process_name
+[/] Interactive mode (confirm before kill)
+
+[\] killall -v process_name
+[/] Verbose (report success/failure)
+
+[\] killall -w process_name
+[/] Wait until all killed processes die
+
+[\] killall -r "regex_pattern"
+[/] Kill processes by regular expression
+
+[\] killall -o older_than
+[/] Kill processes older than specified time (e.g., 1h)
+
+[\] killall -y younger_than
+[/] Kill processes younger than specified time
+
+[\] pkill process_name
+[/] Kill processes by name (pattern matching)
+
+[\] pkill -f "command pattern"
+[/] Kill by full command line pattern
+
+[\] pkill -u username process_name
+[/] Kill processes by user and pattern
+
+[\] pkill -P parent_pid
+[/] Kill all child processes of parent PID
+
+[\] pkill -t pts/0
+[/] Kill all processes on specific terminal
+
+[\] pkill -n process_name
+[/] Kill only the newest process
+
+[\] pkill -o process_name
+[/] Kill only the oldest process
+
+[\] pkill -x process_name
+[/] Exact match (not partial)
+
+[\] kill --help
+[/] Show help menu
+
+[\] kill --version
+[/] Show kill version
+
+[\] killall --help
+[/] Show killall help menu
+
+[\] kill -SIGPIPE PID
+[/] Send SIGPIPE signal by name
+
+[\] kill -s SIGUSR1 PID
+[/] Send signal using -s option
+
+[\] ps aux | grep process
+[/] Find PID(s) of process to kill
+
+[\] pidof process_name
+[/] Get PID(s) by process name
+
+[\] pgrep -l process_name
+[/] Find PIDs with names for target process
