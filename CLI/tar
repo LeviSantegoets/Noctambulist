@@ -1,0 +1,76 @@
+[X] tar Command List
+
+[\] sudo apt install tar
+[/] Install tar on Debian/Ubuntu
+
+[\] sudo dnf install tar
+[/] Install tar on Fedora
+
+[\] sudo pacman -S tar
+[/] Install tar on Arch Linux
+
+[\] brew install gnu-tar
+[/] Install GNU tar on macOS using Homebrew
+
+[\] tar -cvf archive.tar file.txt
+[/] Create tar archive from file
+
+[\] tar -cvf archive.tar folder/
+[/] Create tar archive from folder
+
+[\] tar -xvf archive.tar
+[/] Extract tar archive
+
+[\] tar -xvf archive.tar -C /path/to/folder
+[/] Extract archive to specific directory
+
+[\] tar -tvf archive.tar
+[/] List contents of archive
+
+[\] tar -rvf archive.tar newfile.txt
+[/] Append file to existing archive
+
+[\] tar -uvf archive.tar file.txt
+[/] Update changed file in archive
+
+[\] tar -cvzf archive.tar.gz folder/
+[/] Create gzip compressed archive
+
+[\] tar -xvzf archive.tar.gz
+[/] Extract gzip archive
+
+[\] tar -cvjf archive.tar.bz2 folder/
+[/] Create bzip2 compressed archive
+
+[\] tar -xvjf archive.tar.bz2
+[/] Extract bzip2 archive
+
+[\] tar -cvJf archive.tar.xz folder/
+[/] Create xz compressed archive
+
+[\] tar -xvJf archive.tar.xz
+[/] Extract xz archive
+
+[\] tar --exclude="*.log" -cvf archive.tar folder/
+[/] Exclude files by pattern
+
+[\] tar -cvf backup.tar /home/user --absolute-names
+[/] Archive with absolute paths
+
+[\] tar -xvf archive.tar file.txt
+[/] Extract specific file from archive
+
+[\] tar -cvf - folder/ | ssh host "cat > backup.tar"
+[/] Stream archive over SSH
+
+[\] tar -xvf - < archive.tar
+[/] Extract from stdin
+
+[\] tar --delete -f archive.tar file.txt
+[/] Remove file from archive
+
+[\] tar --help
+[/] Show help menu
+
+[\] tar --version
+[/] Show tar version
