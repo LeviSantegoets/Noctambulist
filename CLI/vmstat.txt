@@ -1,0 +1,55 @@
+[X] vmstat Command List
+
+[\] vmstat
+[/] Show virtual memory statistics
+
+[\] vmstat 2
+[/] Update every 2 seconds
+
+[\] vmstat 2 5
+[/] Update every 2 seconds, 5 times only
+
+[\] vmstat -a
+[/] Show active and inactive memory
+
+[\] vmstat -d
+[/] Show disk statistics
+
+[\] vmstat -D
+[/] Show total disk statistics summary
+
+[\] vmstat -p /dev/sda1
+[/] Show statistics for specific partition
+
+[\] vmstat -m
+[/] Show slabinfo (kernel memory cache)
+
+[\] vmstat -s
+[/] Show event counters and memory statistics table
+
+[\] vmstat -S M
+[/] Show statistics in megabytes
+
+[\] vmstat -S K
+[/] Show statistics in kilobytes
+
+[\] vmstat -n 2
+[/] Show headers only once (not repeated)
+
+[\] vmstat -t 2
+[/] Show timestamp with each output line
+
+[\] vmstat -f
+[/] Show fork (process creation) count
+
+[\] vmstat --help
+[/] Show help menu
+
+[\] vmstat --version
+[/] Show vmstat version
+
+[\] vmstat -w
+[/] Wide output (more columns)
+
+[\] watch -n 1 vmstat
+[/] Watch vmstat in real-time with watch
