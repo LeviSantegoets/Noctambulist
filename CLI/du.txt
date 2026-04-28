@@ -1,0 +1,106 @@
+[X] du Command List
+
+[\] du
+[/] Show disk usage of current directory
+
+[\] du /path/to/dir
+[/] Show disk usage of specific directory
+
+[\] du -h
+[/] Show disk usage in human-readable format (KB, MB, GB)
+
+[\] du -h /home/user
+[/] Show human-readable usage for directory
+
+[\] du -s
+[/] Show total usage only (summary)
+
+[\] du -sh
+[/] Show total usage in human-readable format
+
+[\] du -sh /home/user
+[/] Show total usage for specific directory
+
+[\] du -ah
+[/] Show usage for all files and directories
+
+[\] du -c
+[/] Show grand total at the end
+
+[\] du -ch
+[/] Show total in human-readable with grand total
+
+[\] du -k
+[/] Show disk usage in kilobytes
+
+[\] du -m
+[/] Show disk usage in megabytes
+
+[\] du -g
+[/] Show disk usage in gigabytes
+
+[\] du -B M
+[/] Show disk usage in 1MB blocks
+
+[\] du -B G
+[/] Show disk usage in 1GB blocks
+
+[\] du -d 1
+[/] Show usage only up to 1 level deep
+
+[\] du -d 2
+[/] Show usage only up to 2 levels deep
+
+[\] du --max-depth=1
+[/] Show usage only up to 1 level deep
+
+[\] du --max-depth=2 | sort -hr
+[/] Show usage up to 2 levels and sort by size
+
+[\] du -h --exclude="*.log"
+[/] Exclude files matching pattern
+
+[\] du -h --exclude-dir="node_modules"
+[/] Exclude directories by name
+
+[\] du -h --time
+[/] Show last modification time
+
+[\] du -h --time --time-style="+%Y-%m-%d %H:%M"
+[/] Show time in custom format
+
+[\] du -L
+[/] Follow symbolic links
+
+[\] du -P
+[/] Do not follow symbolic links (default)
+
+[\] du -x
+[/] Stay on one filesystem (skip mount points)
+
+[\] du -h -t 100M
+[/] Show only items larger than 100MB
+
+[\] du -h -t 1G
+[/] Show only items larger than 1GB
+
+[\] du -a -h -t 50M
+[/] Show files larger than 50MB
+
+[\] du -sh * | sort -h
+[/] Show usage of all items in current dir sorted
+
+[\] du -sh .[!.]* * | sort -h
+[/] Include hidden files in sorted output
+
+[\] du -sh /home/* | sort -hr
+[/] Show all home directories sorted by size
+
+[\] du --apparent-size -h
+[/] Show apparent size instead of disk usage
+
+[\] du --help
+[/] Show help menu
+
+[\] du --version
+[/] Show du version
