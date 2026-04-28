@@ -1,0 +1,115 @@
+[X] 7z Command List
+
+[\] sudo apt install p7zip-full
+[/] Install 7z on Debian/Ubuntu
+
+[\] sudo dnf install p7zip-plugins
+[/] Install 7z on Fedora
+
+[\] sudo pacman -S p7zip
+[/] Install 7z on Arch Linux
+
+[\] brew install p7zip
+[/] Install 7z on macOS using Homebrew
+
+[\] 7z a archive.7z file.txt
+[/] Add file to archive
+
+[\] 7z a archive.7z file1.txt file2.txt
+[/] Add multiple files to archive
+
+[\] 7z a -r archive.7z folder/
+[/] Recursively add folder to archive
+
+[\] 7z x archive.7z
+[/] Extract files with full paths
+
+[\] 7z e archive.7z
+[/] Extract files without paths (junk paths)
+
+[\] 7z x archive.7z -o/target/dir
+[/] Extract to specific directory
+
+[\] 7z l archive.7z
+[/] List contents of archive
+
+[\] 7z t archive.7z
+[/] Test archive integrity
+
+[\] 7z d archive.7z file.txt
+[/] Delete file from archive
+
+[\] 7z u archive.7z file.txt
+[/] Update changed file in archive
+
+[\] 7z a -mx=9 archive.7z file.txt
+[/] Use maximum compression (level 9)
+
+[\] 7z a -mx=0 archive.7z file.txt
+[/] Store without compression (level 0)
+
+[\] 7z a -p archive.7z file.txt
+[/] Encrypt archive with password prompt
+
+[\] 7z a -psecret archive.7z file.txt
+[/] Set password directly (less secure)
+
+[\] 7z a -mhe=on archive.7z file.txt
+[/] Encrypt file headers (hide filenames)
+
+[\] 7z a archive.zip file.txt
+[/] Create zip archive instead of 7z
+
+[\] 7z x -psecret archive.7z
+[/] Extract encrypted archive with password
+
+[\] 7z a -v10m archive.7z file.txt
+[/] Split archive into 10MB volumes
+
+[\] 7z x archive.7z.001
+[/] Extract split/multi-volume archive
+
+[\] 7z a -t7z archive.7z folder/
+[/] Force 7z format
+
+[\] 7z a -tzip archive.zip folder/
+[/] Force zip format
+
+[\] 7z a -tgzip archive.gz file.txt
+[/] Force gzip format
+
+[\] 7z a -tbzip2 archive.bz2 file.txt
+[/] Force bzip2 format
+
+[\] 7z a -so file.txt | 7z e -si archive.7z
+[/] Compress stdin / extract to stdout
+
+[\] 7z rn archive.7z oldname.txt newname.txt
+[/] Rename file inside archive
+
+[\] 7z -bsp1 archive.7z
+[/] Show progress percentage
+
+[\] 7z -bb1 archive.7z
+[/] Show benchmark information
+
+[\] 7z b
+[/] Run compression benchmark
+
+[\] 7z -aoa archive.7z
+[/] Overwrite files without prompt
+
+[\] 7z -aos archive.7z
+[/] Skip existing files
+
+[\] 7z -aou archive.7z
+[/] Auto rename existing files
+
+[\] 7z -ssw archive.7z
+[/] Compress files open for writing
+
+[\] 7z --help
+[/] Show help menu
+
+[\] 7z --version
+[/] Show 7z version
