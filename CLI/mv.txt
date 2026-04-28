@@ -1,0 +1,52 @@
+[X] mv Command List
+
+[\] mv source.txt destination.txt
+[/] Rename file or directory
+
+[\] mv file1.txt file2.txt file3.txt /target/dir/
+[/] Move multiple files to directory
+
+[\] mv source_dir/ target_dir/
+[/] Move directory (rename if target exists)
+
+[\] mv -i source.txt destination.txt
+[/] Prompt before overwrite
+
+[\] mv -n source.txt destination.txt
+[/] Do not overwrite existing file
+
+[\] mv -u source.txt destination.txt
+[/] Move only when source is newer or missing
+
+[\] mv -v source.txt destination.txt
+[/] Verbose output (show what is moved)
+
+[\] mv -b source.txt destination.txt
+[/] Create backup of existing destination
+
+[\] mv --backup source.txt destination.txt
+[/] Create numbered backup of existing destination
+
+[\] mv -f source.txt destination.txt
+[/] Force overwrite (do not prompt)
+
+[\] mv -t /target/dir/ file1.txt file2.txt
+[/] Move files to target directory (target first)
+
+[\] mv -T source_dir/ target_dir/
+[/] Treat target as normal file (rename into not under)
+
+[\] mv -v -i file1.txt /target/dir/
+[/] Verbose and interactive (prompt before overwrite)
+
+[\] mv -n -v file.txt destination.txt
+[/] No overwrite with verbose
+
+[\] mv --strip-trailing-slashes source_dir/ /target/
+[/] Remove trailing slashes from source arguments
+
+[\] mv --help
+[/] Show help menu
+
+[\] mv --version
+[/] Show mv version
