@@ -1,0 +1,130 @@
+[X] chmod Command List
+
+[\] chmod 755 file.txt
+[/] Set rwxr-xr-x permissions (owner:rwx, group:r-x, other:r-x)
+
+[\] chmod 644 file.txt
+[/] Set rw-r--r-- permissions (owner:rw, group:r, other:r)
+
+[\] chmod 600 file.txt
+[/] Set rw------- permissions (owner:rw only)
+
+[\] chmod 700 directory/
+[/] Set rwx------ permissions (owner only)
+
+[\] chmod 777 file.txt
+[/] Set rwxrwxrwx permissions (all read/write/execute, not secure)
+
+[\] chmod 400 file.txt
+[/] Set r-------- permissions (read-only for owner)
+
+[\] chmod 000 file.txt
+[/] Remove all permissions
+
+[\] chmod 666 file.txt
+[/] Set rw-rw-rw- permissions (all read/write, no execute)
+
+[\] chmod u+x file.txt
+[/] Add execute permission for owner/user
+
+[\] chmod u-x file.txt
+[/] Remove execute permission for owner/user
+
+[\] chmod u+rw file.txt
+[/] Add read/write for owner/user
+
+[\] chmod g+w file.txt
+[/] Add write permission for group
+
+[\] chmod g-w file.txt
+[/] Remove write permission for group
+
+[\] chmod o+r file.txt
+[/] Add read permission for others
+
+[\] chmod o-r file.txt
+[/] Remove read permission for others
+
+[\] chmod a+x file.txt
+[/] Add execute permission for all (user+group+others)
+
+[\] chmod a-x file.txt
+[/] Remove execute permission for all
+
+[\] chmod go-w file.txt
+[/] Remove write permission for group and others
+
+[\] chmod ug+rw file.txt
+[/] Add read/write for user and group
+
+[\] chmod u=rwx,g=rx,o=r file.txt
+[/] Set exact permissions with symbolic notation
+
+[\] chmod u=rwx,g=,o= file.txt
+[/] Set owner:rwx, no permissions for group/others
+
+[\] chmod -R 755 directory/
+[/] Recursively change permissions for directory and contents
+
+[\] chmod -R u+rwX directory/
+[/] Recursively add read/write for owner, execute for dirs only
+
+[\] chmod -R a+X directory/
+[/] Recursively add execute for all on directories only
+
+[\] chmod --reference=template.txt target.txt
+[/] Copy permissions from another file
+
+[\] chmod -c file.txt
+[/] Verbose: show changes only (not all files)
+
+[\] chmod -v file.txt
+[/] Verbose: show output for every file
+
+[\] chmod -f file.txt
+[/] Silent mode: suppress most error messages
+
+[\] chmod -R -v 755 directory/
+[/] Recursive with verbose output
+
+[\] chmod 755 /path/to/file 2>/dev/null
+[/] Suppress all error messages
+
+[\] chmod -R 755 ./
+[/] Change permissions for all files in current directory
+
+[\] chmod 751 directory/
+[/] Owner:rwx, group:rx, other:x (for shared directories)
+
+[\] chmod 750 directory/
+[/] Owner:rwx, group:rx, other: none (for group shared)
+
+[\] chmod 640 file.txt
+[/] Owner:rw, group:r, other: none (private group readable)
+
+[\] chmod 755 *.sh
+[/] Make all .sh scripts executable
+
+[\] chmod +x script.sh
+[/] Quick way to make script executable (adds +x for all)
+
+[\] chmod -R 644 *.txt
+[/] Recursively set all .txt files to rw-r--r--
+
+[\] chmod -R 755 /home/user/public_html
+[/] Set web directory permissions
+
+[\] chmod 444 file.txt
+[/] Make file read-only for all
+
+[\] chmod 555 file.txt
+[/] Make file executable and readable only
+
+[\] chmod 311 directory/
+[/] Execute-only for group and others (useful for restricted dirs)
+
+[\] chmod --help
+[/] Show help menu
+
+[\] chmod --version
+[/] Show chmod version
