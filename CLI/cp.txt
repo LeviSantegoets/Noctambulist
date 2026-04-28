@@ -1,0 +1,121 @@
+[X] cp Command List
+
+[\] cp source.txt destination.txt
+[/] Copy file to new file
+
+[\] cp file1.txt file2.txt file3.txt /target/dir/
+[/] Copy multiple files to directory
+
+[\] cp -r source_dir/ target_dir/
+[/] Copy directory recursively
+
+[\] cp -a source_dir/ target_dir/
+[/] Copy with attributes (mode, ownership, timestamps)
+
+[\] cp -p source.txt destination.txt
+[/] Preserve permissions, ownership, timestamps
+
+[\] cp -i source.txt destination.txt
+[/] Prompt before overwrite
+
+[\] cp -n source.txt destination.txt
+[/] Do not overwrite existing file
+
+[\] cp -u source.txt destination.txt
+[/] Copy only when source is newer or missing
+
+[\] cp -v source.txt destination.txt
+[/] Verbose output (show what is copied)
+
+[\] cp -b source.txt destination.txt
+[/] Create backup of existing destination
+
+[\] cp --backup source.txt destination.txt
+[/] Create numbered backup of existing destination
+
+[\] cp -f source.txt destination.txt
+[/] Force overwrite (remove read-only files)
+
+[\] cp -l source.txt destination.txt
+[/] Create hard link instead of copying
+
+[\] cp -s source.txt destination.txt
+[/] Create symbolic link instead of copying
+
+[\] cp -u -r source_dir/ target_dir/
+[/] Update existing files recursively
+
+[\] cp -R source_dir/ target_dir/
+[/] Copy recursively (same as -r)
+
+[\] cp -T source_dir/ target_dir/
+[/] Treat target as normal file (copy into not under)
+
+[\] cp -d source_link.txt destination_link.txt
+[/] Preserve symbolic link (copy link not target)
+
+[\] cp -L source_link.txt destination.txt
+[/] Follow symbolic links (copy target not link)
+
+[\] cp -P source_link.txt destination_link.txt
+[/] Preserve symbolic links (default for -s)
+
+[\] cp -H source_link.txt destination.txt
+[/] Follow command line symlinks, others not
+
+[\] cp --no-dereference source_link.txt destination.txt
+[/] Copy symlink as symlink (same as -P)
+
+[\] cp -t /target/dir/ file1.txt file2.txt
+[/] Copy files to target directory (target first)
+
+[\] cp -T -r source_dir/ target_dir/
+[/] Copy into target_dir/ (not under, as file)
+
+[\] cp -x source_dir/ /target/dir/
+[/] Stay on one filesystem (don't cross mount points)
+
+[\] cp -z source.txt /target/dir/
+[/] Compress data during transfer (over NFS)
+
+[\] cp -a --remove-destination source.txt destination.txt
+[/] Remove destination before copying
+
+[\] cp --parents file1.txt /target/dir/
+[/] Preserve directory structure (create subdirs)
+
+[\] cp --sparse=always source.txt destination.txt
+[/] Create sparse files (efficient for large files)
+
+[\] cp --attributes-only source.txt destination.txt
+[/] Copy only attributes, not file content
+
+[\] cp --preserve=mode,ownership,timestamps source.txt destination.txt
+[/] Preserve specific attributes
+
+[\] cp --no-preserve=mode source.txt destination.txt
+[/] Do not preserve specific attributes
+
+[\] cp --backup=numbered source.txt destination.txt
+[/] Create numbered backups (file.~1~, file.~2~)
+
+[\] cp --backup=simple source.txt destination.txt
+[/] Create simple backup (file~)
+
+[\] cp --backup=existing source.txt destination.txt
+[/] Create backup same as existing numbering style
+
+[\] cp --backup=nil source.txt destination.txt
+[/] Create backup with numbered if already existing
+
+[\] cp -s /source/file.txt /target/symlink.txt
+[/] Create symlink
+
+[\] cp -l /source/file.txt /target/hardlink.txt
+[/] Create hard link
+
+[\] cp --help
+[/] Show help menu
+
+[\] cp --version
+[/] Show cp version
