@@ -1,0 +1,190 @@
+[X] history Command List
+
+[\] history
+[/] Show command history list
+
+[\] history N
+[/] Show last N commands only
+
+[\] history -c
+[/] Clear all history
+
+[\] history -d N
+[/] Delete command at line number N
+
+[\] history -d 10 5
+[/] Delete 5 commands starting at line 10
+
+[\] history -a
+[/] Append current session history to history file
+
+[\] history -n
+[/] Read new commands from history file (not reload all)
+
+[\] history -r
+[/] Read full history file and append to current session
+
+[\] history -w
+[/] Write current session history to history file
+
+[\] history -p "string"
+[/] Perform history expansion but show result (don't execute)
+
+[\] history -s "command"
+[/] Add command to history without executing
+
+[\] !!
+[/] Run last command
+
+[\] !N
+[/] Run command from history line number N
+
+[\] !-N
+[/] Run command N lines back
+
+[\] !string
+[/] Run most recent command starting with 'string'
+
+[\] !?string?
+[/] Run most recent command containing 'string'
+
+[\] ^old^new^
+[/] Run last command replacing 'old' with 'new'
+
+[\] !!:p
+[/] Print last command without running it
+
+[\] !N:p
+[/] Print command at line N without running
+
+[\] !string:p
+[/] Print most recent command starting with string
+
+[\] $_ 
+[/] Last argument of previous command
+
+[\] !$ 
+[/] Last argument of previous command
+
+[\] !!:$
+[/] Last argument of previous command
+
+[\] !:2
+[/] Second argument of previous command
+
+[\] !:0
+[/] Command name of previous command
+
+[\] !:*
+[/] All arguments of previous command
+
+[\] !^
+[/] First argument of previous command
+
+[\] !!:n-m
+[/] Arguments n through m of previous command
+
+[\] history | grep "ssh"
+[/] Search history for commands containing 'ssh'
+
+[\] history | tail -10
+[/] Show last 10 commands
+
+[\] fc -l
+[/] List last 16 commands (fc = fix command)
+
+[\] fc -l 100 110
+[/] List commands from line 100 to 110
+
+[\] fc -s 100
+[/] Execute (repeat) command at line 100
+
+[\] fc -s "ls" "ls -la"
+[/] Repeat last ls command with -la
+
+[\] export HISTFILE=~/.bash_history
+[/] Set custom history file path
+
+[\] export HISTSIZE=1000
+[/] Set max number of commands in memory
+
+[\] export HISTFILESIZE=2000
+[/] Set max number of commands in history file
+
+[\] export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+[/] Show timestamps in history
+
+[\] export HISTIGNORE="ls:cd:exit:history"
+[/] Ignore specific commands from history
+
+[\] echo $HISTSIZE
+[/] Show current history size setting
+
+[\] history -w ~/my_history_backup.txt
+[/] Write history to custom file
+
+[\] history -r ~/my_history_backup.txt
+[/] Read history from custom file
+
+[\] set -o history
+[/] Enable history (if disabled)
+
+[\] set +o history
+[/] Disable history for current session
+
+[\] history -c && history -r
+[/] Clear and reload history from file
+
+[\] HISTFILE=/dev/null
+[/] Temporarily disable writing to history (after setting)
+
+[\] unset HISTFILE
+[/] Stop writing history to file
+
+[\] echo !!:1 > /dev/null
+[/] Get first argument of last command (without printing)
+
+[\] !-2:0
+[/] Command name of 2nd last command
+
+[\] shopt -s histappend
+[/] Append history instead of overwriting
+
+[\] shopt -s cmdhist
+[/] Save multiline commands as single entry
+
+[\] history --help
+[/] Show help (if supported by shell)
+
+[\] help history
+[/] Show bash built-in history help
+
+[\] fc -l -10
+[/] List last 10 commands using fc
+
+[\] fc -e vim 100 110
+[/] Edit commands 100-110 in vim and execute
+
+[\] bind -p | grep history
+[/] Show readline history key bindings (Ctrl+R, Ctrl+P, etc.)
+
+[\] Ctrl + R
+[/] Reverse search history (interactive)
+
+[\] Ctrl + P or Up Arrow
+[/] Go to previous command
+
+[\] Ctrl + N or Down Arrow
+[/] Go to next command
+
+[\] Alt + .
+[/] Insert last argument from previous command
+
+[\] Alt + N + .
+[/] Insert argument N from previous command
+
+[\] Ctrl + O
+[/] Execute current history item and show next
+
+[\] !!:s/old/new/
+[/] Substitute 'old' with 'new' in last command and execute
