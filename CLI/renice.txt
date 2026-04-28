@@ -1,0 +1,79 @@
+[X] renice Command List
+
+[\] renice -n 10 -p PID
+[/] Change priority of running process by PID
+
+[\] renice +5 -p PID
+[/] Lower priority by 5 (increase nice value)
+
+[\] renice -5 -p PID
+[/] Raise priority by 5 (decrease nice value, needs root)
+
+[\] renice -n -10 -p PID
+[/] Raise priority to -10 (higher priority, root only)
+
+[\] renice -n 19 -p PID
+[/] Set lowest priority (nice 19)
+
+[\] renice -n -20 -p PID
+[/] Set highest priority (nice -20, root only)
+
+[\] renice -n 5 -u username
+[/] Change priority of all processes for user
+
+[\] renice -n -3 -u username
+[/] Raise priority for all user processes (root only)
+
+[\] renice -n 10 -g groupname
+[/] Change priority of all processes for group
+
+[\] renice -n 0 -p PID1 PID2 PID3
+[/] Reset multiple PIDs to default priority (0)
+
+[\] renice -n 15 -u 1000
+[/] Change priority by user ID (UID)
+
+[\] renice -n 5 -g 1000
+[/] Change priority by group ID (GID)
+
+[\] renice -n 8 -p PID -u username
+[/] Combine process and user selection
+
+[\] renice --help
+[/] Show renice help menu
+
+[\] renice --version
+[/] Show renice version
+
+[\] ps -l -p PID
+[/] Check current nice value (NI column)
+
+[\] top -p PID
+[/] Interactive priority change (press r then enter PID and nice value)
+
+[\] renice +10 -p $(pidof process_name)
+[/] Lower priority of all processes by name
+
+[\] renice -n 20 -p 1234 2>/dev/null
+[/] Ignore permission errors (no output)
+
+[\] sudo renice -n -5 -u username
+[/] Raise user process priority (requires sudo)
+
+[\] renice -n 12 --pid 1234 --pid 5678
+[/] Use long options with --pid
+
+[\] renice -n 10 --user username
+[/] Use long option for user
+
+[\] renice -n 10 --group groupname
+[/] Use long option for group
+
+[\] renice -h
+[/] Show help (short option)
+
+[\] renice -V
+[/] Show version (short option)
+
+[\] renice 0 -p 1234 -g 1000 -u 1001
+[/] Reset priority for multiple selection types
