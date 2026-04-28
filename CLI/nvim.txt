@@ -1,0 +1,307 @@
+[X] nvim Command List
+
+[\] sudo apt install neovim
+[/] Install Neovim on Debian/Ubuntu
+
+[\] sudo dnf install neovim
+[/] Install Neovim on Fedora
+
+[\] sudo pacman -S neovim
+[/] Install Neovim on Arch Linux
+
+[\] brew install neovim
+[/] Install Neovim on macOS using Homebrew
+
+[\] nvim filename.txt
+[/] Open file in Neovim
+
+[\] nvim -R filename.txt
+[/] Open file read-only
+
+[\] nvim +10 filename.txt
+[/] Open file at line 10
+
+[\] nvim +/search filename.txt
+[/] Open file at first occurrence of search
+
+[\] nvim -O file1.txt file2.txt
+[/] Open files in vertical split
+
+[\] nvim -o file1.txt file2.txt
+[/] Open files in horizontal split
+
+[\] nvim -p file1.txt file2.txt
+[/] Open files in tabs
+
+[\] nvim -d file1.txt file2.txt
+[/] Diff mode (compare two files)
+
+[\] nvim -b filename.bin
+[/] Open file in binary mode
+
+[\] nvim --clean
+[/] Start with factory defaults (no config/plugins)
+
+[\] nvim --noplugin
+[/] Skip loading plugins
+
+[\] nvim -u NONE
+[/] Skip all initialization files and plugins
+
+[\] nvim --headless
+[/] Run without UI (useful for scripting)
+
+[\] nvim --listen /tmp/nvim.sock
+[/] Start RPC server on socket
+
+[\] :q
+[/] Quit (no changes)
+
+[\] :q!
+[/] Quit without saving
+
+[\] :w
+[/] Save file
+
+[\] :w filename.txt
+[/] Save as new file
+
+[\] :wq
+[/] Save and quit
+
+[\] :x
+[/] Save and quit (only if saved)
+
+[\] ZZ
+[/] Save and quit (command mode)
+
+[\] ZQ
+[/] Quit without saving (command mode)
+
+[\] i
+[/] Enter insert mode (before cursor)
+
+[\] a
+[/] Enter insert mode (after cursor)
+
+[\] I
+[/] Insert at beginning of line
+
+[\] A
+[/] Insert at end of line
+
+[\] o
+[/] Insert new line below
+
+[\] O
+[/] Insert new line above
+
+[\] Esc
+[/] Exit insert mode / Cancel command
+
+[\] h
+[/] Move left
+
+[\] j
+[/] Move down
+
+[\] k
+[/] Move up
+
+[\] l
+[/] Move right
+
+[\] w
+[/] Jump to next word
+
+[\] b
+[/] Jump back to previous word
+
+[\] e
+[/] Jump to end of word
+
+[\] 0
+[/] Jump to beginning of line
+
+[\] ^
+[/] Jump to first non-blank character
+
+[\] $
+[/] Jump to end of line
+
+[\] gg
+[/] Jump to first line of file
+
+[\] G
+[/] Jump to last line of file
+
+[\] :10
+[/] Jump to line 10
+
+[\] Ctrl + D
+[/] Scroll down half page
+
+[\] Ctrl + U
+[/] Scroll up half page
+
+[\] Ctrl + F
+[/] Scroll forward full page
+
+[\] Ctrl + B
+[/] Scroll backward full page
+
+[\] :set number
+[/] Show line numbers
+
+[\] :set nonumber
+[/] Hide line numbers
+
+[\] :set relativenumber
+[/] Show relative line numbers
+
+[\] :set tabstop=4
+[/] Set tab size to 4 spaces
+
+[\] :set expandtab
+[/] Convert tabs to spaces
+
+[\] :set autoindent
+[/] Enable auto indent
+
+[\] /search
+[/] Search forward
+
+[\] ?search
+[/] Search backward
+
+[\] n
+[/] Repeat search forward
+
+[\] N
+[/] Repeat search backward
+
+[\] :%s/old/new/g
+[/] Replace all old with new in entire file
+
+[\] :%s/old/new/gc
+[/] Replace with confirmation
+
+[\] :s/old/new
+[/] Replace first match on current line
+
+[\] dd
+[/] Delete current line
+
+[\] 5dd
+[/] Delete 5 lines
+
+[\] dw
+[/] Delete word
+
+[\] d$
+[/] Delete to end of line
+
+[\] x
+[/] Delete character under cursor
+
+[\] X
+[/] Delete character before cursor
+
+[\] yy
+[/] Yank (copy) current line
+
+[\] 5yy
+[/] Yank 5 lines
+
+[\] yw
+[/] Yank word
+
+[\] p
+[/] Paste after cursor
+
+[\] P
+[/] Paste before cursor
+
+[\] u
+[/] Undo
+
+[\] Ctrl + R
+[/] Redo
+
+[\] .
+[/] Repeat last command
+
+[\] v
+[/] Enter visual mode (character)
+
+[\] V
+[/] Enter visual mode (line)
+
+[\] Ctrl + V
+[/] Enter visual block mode
+
+[\] :!command
+[/] Run shell command
+
+[\] :r !command
+[/] Insert output of shell command
+
+[\] :e filename.txt
+[/] Edit another file
+
+[\] :split filename.txt
+[/] Horizontal split
+
+[\] :vsplit filename.txt
+[/] Vertical split
+
+[\] Ctrl + W + W
+[/] Switch between splits
+
+[\] Ctrl + W + Q
+[/] Close current split
+
+[\] :tabnew filename.txt
+[/] Open new tab
+
+[\] gt
+[/] Next tab
+
+[\] gT
+[/] Previous tab
+
+[\] :ls
+[/] List open buffers
+
+[\] :bd
+[/] Close current buffer
+
+[\] :bn
+[/] Next buffer
+
+[\] :bp
+[/] Previous buffer
+
+[\] :e# 
+[/] Switch to previous buffer
+
+[\] zz
+[/] Center view on current line
+
+[\] zt
+[/] Move current line to top of window
+
+[\] zb
+[/] Move current line to bottom of window
+
+[\] ". 
+[/] Repeat last change
+
+[\] :help command
+[/] Open help for command
+
+[\] nvim --help
+[/] Show command line help
+
+[\] nvim --version
+[/] Show Neovim version
