@@ -1,0 +1,133 @@
+[X] pkill Command List
+
+[\] pkill process_name
+[/] Kill process by name
+
+[\] pkill -f "script.py"
+[/] Kill by full command line (arguments included)
+
+[\] pkill -9 process_name
+[/] Force kill (SIGKILL) process by name
+
+[\] pkill -15 process_name
+[/] Terminate gracefully (SIGTERM, default)
+
+[\] pkill -HUP process_name
+[/] Send SIGHUP (hangup) signal
+
+[\] pkill -INT process_name
+[/] Send SIGINT (interrupt, like Ctrl+C)
+
+[\] pkill -TERM process_name
+[/] Send SIGTERM (terminate, default)
+
+[\] pkill -KILL process_name
+[/] Force kill (SIGKILL, same as -9)
+
+[\] pkill -l
+[/] List all available signal names
+
+[\] pkill -u username
+[/] Kill processes owned by specific user
+
+[\] pkill -u uid
+[/] Kill processes owned by user ID
+
+[\] pkill -U username
+[/] Kill real user processes (not effective UID)
+
+[\] pkill -g process_group
+[/] Kill entire process group
+
+[\] pkill -P parent_pid
+[/] Kill child processes of specific parent PID
+
+[\] pkill -t pts/0
+[/] Kill processes on specific terminal
+
+[\] pkill -c process_name
+[/] Count matching processes (do not kill)
+
+[\] pkill -n process_name
+[/] Kill only the newest (most recent) process
+
+[\] pkill -o process_name
+[/] Kill only the oldest (earliest) process
+
+[\] pkill -x process_name
+[/] Exact match (command name only, no partial)
+
+[\] pkill -f -x "python script.py"
+[/] Exact match on full command line
+
+[\] pkill -e process_name
+[/] Echo what was done (show killed PIDs)
+
+[\] pgrep process_name
+[/] List PIDs matching process name (without killing)
+
+[\] pgrep -f "python"
+[/] List PIDs by full command line
+
+[\] pgrep -l process_name
+[/] List PIDs with process names
+
+[\] pgrep -u username -l
+[/] List user processes with names
+
+[\] pkill -SIGUSR1 process_name
+[/] Send SIGUSR1 signal
+
+[\] pkill -SIGUSR2 process_name
+[/] Send SIGUSR2 signal
+
+[\] pkill -CONT process_name
+[/] Send SIGCONT (continue paused process)
+
+[\] pkill -STOP process_name
+[/] Send SIGSTOP (pause process)
+
+[\] pkill -TSTP process_name
+[/] Send SIGTSTP (interactive stop)
+
+[\] pkill -ALRM process_name
+[/] Send SIGALRM (alarm clock)
+
+[\] pkill --signal SIGINT process_name
+[/] Send signal using --signal option
+
+[\] pkill --echo process_name
+[/] Echo killed PIDs (same as -e)
+
+[\] pkill --full "pattern"
+[/] Match full command line (same as -f)
+
+[\] pkill --group proc_group
+[/] Kill by process group ID (same as -g)
+
+[\] pkill --terminal pts/0
+[/] Kill by terminal (same as -t)
+
+[\] pkill --parent parent_pid
+[/] Kill children of parent (same as -P)
+
+[\] pkill --newest process_name
+[/] Kill only newest (same as -n)
+
+[\] pkill --oldest process_name
+[/] Kill only oldest (same as -o)
+
+[\] pkill --exact process_name
+[/] Exact match (same as -x)
+
+[\] pkill --help
+[/] Show help menu
+
+[\] pkill --version
+[/] Show pkill version
+
+[\] pgrep --help
+[/] Show pgrep help menu
+
+[\] pkill -HUP -f "nginx: worker"
+[/] Reload nginx worker processes by pattern
