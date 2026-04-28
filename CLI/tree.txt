@@ -1,0 +1,118 @@
+[X] tree Command List
+
+[\] sudo apt install tree
+[/] Install tree on Debian/Ubuntu
+
+[\] sudo dnf install tree
+[/] Install tree on Fedora
+
+[\] sudo pacman -S tree
+[/] Install tree on Arch Linux
+
+[\] brew install tree
+[/] Install tree on macOS using Homebrew
+
+[\] tree
+[/] Show directory tree (current directory)
+
+[\] tree /path/to/dir
+[/] Show tree of specific directory
+
+[\] tree -L 2
+[/] Limit depth to 2 levels
+
+[\] tree -a
+[/] Show hidden files (starting with .)
+
+[\] tree -d
+[/] Show only directories
+
+[\] tree -f
+[/] Show full path for each file
+
+[\] tree -F
+[/] Append indicator (/) for directories, (*) for executables
+
+[\] tree -h
+[/] Show human-readable file sizes
+
+[\] tree -s
+[/] Show file sizes in bytes
+
+[\] tree -D
+[/] Show last modification date
+
+[\] tree --du
+[/] Show disk usage for directories
+
+[\] tree -u
+[/] Show file owner (username)
+
+[\] tree -g
+[/] Show file group
+
+[\] tree -p
+[/] Show file permissions
+
+[\] tree -i
+[/] Indent without lines (no graphics characters)
+
+[\] tree -l
+[/] Follow symbolic links
+
+[\] tree -o output.txt
+[/] Output tree to file
+
+[\] tree -Q
+[/] Quote filenames with double quotes
+
+[\] tree -N
+[/] Print non-printable characters as-is (not as '?')
+
+[\] tree -P "*.txt"
+[/] Show only files matching pattern
+
+[\] tree -I "*.log"
+[/] Exclude files matching pattern
+
+[\] tree -I "node_modules|.git"
+[/] Exclude multiple patterns
+
+[\] tree --prune
+[/] Prune empty directories from output
+
+[\] tree --noreport
+[/] Omit file/directory count report
+
+[\] tree -C
+[/] Colorize output
+
+[\] tree --dirsfirst
+[/] List directories before files
+
+[\] tree -v
+[/] Sort files by version (alphanumeric)
+
+[\] tree -t
+[/] Sort by last modification time
+
+[\] tree -r
+[/] Reverse sort order
+
+[\] tree -X
+[/] Output as XML
+
+[\] tree -J
+[/] Output as JSON
+
+[\] tree -H ./output
+[/] Output as HTML with base directory
+
+[\] tree -T "Title"
+[/] Set HTML title
+
+[\] tree --help
+[/] Show help menu
+
+[\] tree --version
+[/] Show tree version
