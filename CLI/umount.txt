@@ -1,0 +1,82 @@
+[X] umount Command List
+
+[\] umount /mnt
+[/] Unmount filesystem by mount point
+
+[\] umount /dev/sda1
+[/] Unmount filesystem by device name
+
+[\] umount -l /mnt
+[/] Lazy unmount (detach when no longer busy)
+
+[\] umount -f /mnt
+[/] Force unmount (for NFS or busy devices)
+
+[\] umount -f -l /mnt
+[/] Force lazy unmount
+
+[\] umount -a
+[/] Unmount all filesystems in /etc/mtab
+
+[\] umount -a -t ext4
+[/] Unmount only ext4 filesystems
+
+[\] umount -a -t nfs -f
+[/] Force unmount all NFS filesystems
+
+[\] umount -a -O no_netdev
+[/] Unmount filesystems without no_netdev option
+
+[\] umount -d /mnt
+[/] Detach loop device (if used) after unmount
+
+[\] umount -r /mnt
+[/] Remount read-only if unmount fails
+
+[\] umount -n /mnt
+[/] Unmount without writing to /etc/mtab
+
+[\] umount -v /mnt
+[/] Verbose output (show what is being done)
+
+[\] umount --help
+[/] Show help menu
+
+[\] umount --version
+[/] Show umount version
+
+[\] umount -A
+[/] Unmount all filesystems in /proc/mounts
+
+[\] umount -c /mnt
+[/] No MTAB update (same as -n)
+
+[\] umount -i /mnt
+[/] Do not call filesystem umount helper
+
+[\] umount -O /mnt
+[/] Unmount only filesystems with specified options
+
+[\] umount -t vfat /dev/sda1
+[/] Unmount specifying filesystem type
+
+[\] umount --fake /mnt
+[/] Fake unmount (dry run, show what would happen)
+
+[\] umount -s /mnt
+[/] Do not unmount if filesystem has subtypes
+
+[\] umount -u /mnt
+[/] Unmount and remove mount entry (undocumented)
+
+[\] fuser -m /mnt
+[/] Show which processes are using the mount point
+
+[\] fuser -km /mnt
+[/] Kill processes using the mount point
+
+[\] lsof | grep /mnt
+[/] Show open files on mount point
+
+[\] sudo umount -f /mnt 2>/dev/null
+[/] Force unmount and suppress errors
