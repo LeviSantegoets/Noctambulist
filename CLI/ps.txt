@@ -1,0 +1,125 @@
+[X] ps Command List
+
+[\] ps
+[/] Show processes for current shell
+
+[\] ps -e
+[/] Show all processes
+
+[\] ps -ef
+[/] Show all processes in full format
+
+[\] ps -aux
+[/] Show all processes with BSD format (user, CPU, MEM)
+
+[\] ps aux
+[/] Same as -aux (BSD style)
+
+[\] ps -ely
+[/] Show all processes with extended info
+
+[\] ps -ef --forest
+[/] Show processes in tree format
+
+[\] ps -eF
+[/] Show all processes with extra full format
+
+[\] ps -eo pid,ppid,cmd,%mem,%cpu
+[/] Show custom columns
+
+[\] ps -eo pid,ppid,user,args --sort=-%cpu
+[/] Show sorted by CPU (descending)
+
+[\] ps -eo pid,ppid,user,args --sort=-%mem
+[/] Show sorted by memory (descending)
+
+[\] ps -u username
+[/] Show processes for specific user
+
+[\] ps -U username
+[/] Show processes by real user ID
+
+[\] ps -p PID
+[/] Show process by PID
+
+[\] ps -p PID1,PID2,PID3
+[/] Show multiple PIDs
+
+[\] ps -C process_name
+[/] Show processes by command name
+
+[\] ps -t pts/0
+[/] Show processes on specific terminal
+
+[\] ps -L PID
+[/] Show threads of specific process
+
+[\] ps -T PID
+[/] Show threads (SPID) of specific process
+
+[\] ps -ejH
+[/] Show process tree (forest)
+
+[\] ps -ef --sort=start_time
+[/] Sort by start time
+
+[\] ps -eo pid,comm,pcpu,pmem --sort=-pcpu | head -10
+[/] Show top 10 CPU consuming processes
+
+[\] ps -eo pid,comm,pcpu,pmem --sort=-pmem | head -10
+[/] Show top 10 memory consuming processes
+
+[\] ps -ef | grep process_name
+[/] Filter processes by name with grep
+
+[\] ps -o pid,comm,user,start
+[/] Custom output with start time
+
+[\] ps -o pid,comm,%cpu,%mem
+
+[/] Custom output with CPU and memory
+
+[\] ps -o pid,comm,etime
+[/] Show elapsed time since process start
+
+[\] ps -o pid,comm,pri,nice
+[/] Show priority and nice value
+
+[\] ps -o pid,comm,stat
+[/] Show process state (R=running, S=sleeping, Z=zombie)
+
+[\] ps -e --format pid,comm,pcpu,pmem,user
+[/] Specify format with --format
+
+[\] ps -e --cumulative
+[/] Show cumulative CPU usage
+
+[\] ps -e --deselect
+[/] Show all except specific processes
+
+[\] ps --pid PID --ppid PPID
+[/] Show by PID and parent PID
+
+[\] ps -e --sort=-%cpu -o pid,comm,%cpu,%mem --no-headers
+[/] No headers in output
+
+[\] ps -e www
+[/] Show unlimited output width
+
+[\] ps -efZ
+[/] Show SELinux context
+
+[\] ps -e --forest -o pid,comm,args
+[/] Tree format with custom columns
+
+[\] ps -e --help
+[/] Show help menu
+
+[\] ps --version
+[/] Show ps version
+
+[\] ps -e -o pid,cmd --sort=-%mem --no-headers | head -5
+[/] Top 5 memory consumers (PIDs only)
+
+[\] watch -n 1 'ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -20'
+[/] Real-time process monitor
