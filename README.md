@@ -64,6 +64,10 @@ Noctambulist is more than a reference tool, it’s a workflow enhancer, designed
 
 ## UPDATE!!!
 Check out a handy tool to extend the commandlists their length in content:
+
 A Windows desktop application for merging two Noctambulist.exe command lists into one.
+
+https://github.com/LeviSantegoets/Amalgamate
+
 <img width="1020" height="636" alt="{E1296256-3A5D-4C7B-A0AD-E34635C4A1D1}" src="https://github.com/user-attachments/assets/f90fda79-2753-4bb9-915a-065e232d88a0" />
 
