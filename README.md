@@ -69,5 +69,5 @@ A Windows desktop application for merging two Noctambulist.exe command lists int
 
 https://github.com/LeviSantegoets/Amalgamate
 
-<img width="1020" height="636" alt="{E1296256-3A5D-4C7B-A0AD-E34635C4A1D1}" src="https://github.com/user-attachments/assets/f90fda79-2753-4bb9-915a-065e232d88a0" />
+<img width="1190" height="765" alt="{F23B22B5-C370-4F29-8BD7-9E48EE339242}" src="https://github.com/user-attachments/assets/bb2509b6-7e98-4b73-904f-383ea08134c2" />
 
